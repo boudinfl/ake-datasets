@@ -50,8 +50,8 @@ Below is a an example of reference file format:
 | SemEval-2010 [8]       | en   | Full papers  | 144   | -   | 100  | authors, readers  |
 | Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | indexers          |
 | ACM [4]                | en   | Abstracts    | -     | -   | 2304 | authors           |
-| KDD [8]                | en   | Abstracts    | -     | -   | 755  | authors           |
-| WWW [8]                | en   | Abstracts    | -     | -   | 1330 | authors, extra    |
+| KDD [7]                | en   | Abstracts    | -     | -   | 755  | authors           |
+| WWW [7]                | en   | Abstracts    | -     | -   | 1330 | authors, extra    |
 | DUC-2001 [3]           | en   | News         | -     | -   | 308  | readers           |
 | 500N-KPCrowd [5]       | en   | News         | 450   | -   | 50   | readers           |
 | Wikinews-Keyphrase [6] | fr   | News         | -     | -   | 100  | readers           |
