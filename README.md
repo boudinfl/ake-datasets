@@ -47,12 +47,15 @@ Below is a an example of reference file format:
 | dataset                | lang | nature       | train | dev | test | gold              |
 | ---------------------- | ---- | ------------ | -----:| ---:| ----:| -----------------:|
 | CSTR [1]               | en   | Full papers  | 130   | -   | 500  | authors           |
-| DUC-2001 [3]           | en   | News         | -     | -   | 308  | readers           |
+| SemEval-2010 [8]       | en   | Full papers  | 144   | -   | 100  | authors, readers  |
 | Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | indexers          |
 | ACM [4]                | en   | Abstracts    | -     | -   | 2304 | authors           |
-| SemEval-2010 [7]       | en   | Full papers  | 144   | -   | 100  | authors, readers  |
+| KDD [8]                | en   | Abstracts    | -     | -   | 755  | authors           |
+| WWW [8]                | en   | Abstracts    | -     | -   | 1330 | authors, extra    |
+| DUC-2001 [3]           | en   | News         | -     | -   | 308  | readers           |
 | 500N-KPCrowd [5]       | en   | News         | 450   | -   | 50   | readers           |
 | Wikinews-Keyphrase [6] | fr   | News         | -     | -   | 100  | readers           |
+
 
 ## References
 
@@ -85,6 +88,23 @@ Below is a an example of reference file format:
    *In Proceedings of the International Joint Conference on Natural Language
    Processing (IJCNLP), 2013.*
 
-7. **How Document Pre-processing affects Keyphrase Extraction Performance.**
+7. **Citation-Enhanced Keyphrase Extraction from Research Papers: A Supervised
+   Approach.**
+   Cornelia Caragea, Florin Bulgarov, Andreea Godea and Sujatha Das Gollapalli.
+   *In Proceedings of EMNLP 2014.*
+   pp. 1435-1446.
+
+8. **How Document Pre-processing affects Keyphrase Extraction Performance.**
    Florian Boudin, Hugo Mougard and Damien Cram.
    *COLING 2016 Workshop on Noisy User-generated Text (WNUT).*
+
+
+
+
+
+
+
+
+
+
+
