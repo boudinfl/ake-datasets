@@ -44,17 +44,17 @@ Below is a an example of reference file format:
 
 ## Available datasets
 
-| dataset                | lang | nature       | train | dev | test | gold              |
-| ---------------------- | ---- | ------------ | -----:| ---:| ----:| -----------------:|
-| CSTR [1]               | en   | Full papers  | 130   | -   | 500  | authors           |
-| SemEval-2010 [8]       | en   | Full papers  | 144   | -   | 100  | authors, readers  |
-| Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | indexers          |
-| ACM [4]                | en   | Abstracts    | -     | -   | 2304 | authors           |
-| KDD [7]                | en   | Abstracts    | -     | -   | 755  | authors           |
-| WWW [7]                | en   | Abstracts    | -     | -   | 1330 | authors, extra    |
-| DUC-2001 [3]           | en   | News         | -     | -   | 308  | readers           |
-| 500N-KPCrowd [5]       | en   | News         | 450   | -   | 50   | readers           |
-| Wikinews-Keyphrase [6] | fr   | News         | -     | -   | 100  | readers           |
+| dataset                | lang | nature       | train | dev | test | gold keyphrases            | keys/doc (test) |
+| ---------------------- | ---- | ------------ | -----:| ---:| ----:| --------------------------:| --------------: |
+| CSTR [1]               | en   | Full papers  | 130   | -   | 500  | authors                    | 5.4             |
+| SemEval-2010 [8]       | en   | Full papers  | 144   | -   | 100  | authors, readers, combined | 3.9, 12.0, 14.7 |
+| Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | indexers (contr, uncontr)  | 4.5, 9.8        |
+| ACM [4]                | en   | Abstracts    | -     | -   | 2304 | authors                    | 5.3             |
+| KDD [7]                | en   | Abstracts    | -     | -   | 755  | authors                    | 4.1             |
+| WWW [7]                | en   | Abstracts    | -     | -   | 1330 | authors, extra, combined   | 4.8, 4.2, 6.2   |
+| DUC-2001 [3]           | en   | News         | -     | -   | 308  | readers                    | 8.1             |
+| 500N-KPCrowd [5]       | en   | News         | 450   | -   | 50   | readers                    | 46.2            |
+| Wikinews-Keyphrase [6] | fr   | News         | -     | -   | 100  | readers                    | 9.7             |
 
 
 ## References
