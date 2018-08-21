@@ -54,6 +54,7 @@ Below is a an example of reference file format:
 | ACM [6]                | en   | Abstracts    | -     | -   | 2304 | authors                    | 5.3             |
 | KDD [9]                | en   | Abstracts    | -     | -   | 755  | authors                    | 4.1             |
 | WWW [9]                | en   | Abstracts    | -     | -   | 1330 | authors, extra, combined   | 4.8, 4.2, 6.2   |
+| TermITH-Eval [11]      | fr   | Abstracts    | -     | -   | 400  | indexers                   | 11.8            |
 | DUC-2001 [4]           | en   | News         | -     | -   | 308  | readers                    | 8.1             |
 | 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | readers                    | 46.2            |
 | Wikinews-Keyphrase [8] | fr   | News         | -     | -   | 100  | readers                    | 9.7             |
@@ -109,6 +110,13 @@ Below is a an example of reference file format:
 10. **How Document Pre-processing affects Keyphrase Extraction Performance.**
     Florian Boudin, Hugo Mougard and Damien Cram.
     *COLING 2016 Workshop on Noisy User-generated Text (WNUT).*
+
+11. **TermITH-Eval: a French Standard-Based Resource for Keyphrase Extraction
+    Evaluation.**
+    Adrien Bougouin, Sabine Barreaux, Laurent Romary, Florian Boudin and​
+    Béatrice Daille.
+    *Language Resources and Evaluation Conference (LREC), 2016.*
+
 
 
 
