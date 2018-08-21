@@ -47,15 +47,16 @@ Below is a an example of reference file format:
 | dataset                | lang | nature       | train | dev | test | gold keyphrases            | keys/doc (test) |
 | ---------------------- | ---- | ------------ | -----:| ---:| ----:| --------------------------:| --------------: |
 | CSTR [1]               | en   | Full papers  | 130   | -   | 500  | authors                    | 5.4             |
-| SemEval-2010 [9]       | en   | Full papers  | 144   | -   | 100  | authors, readers, combined | 3.9, 12.0, 14.7 |
-| PubMed [4]             | en   | Full papers  | -     | -   | 1320 | authors                    | 5.4             |
+| SemEval-2010 [10]      | en   | Full papers  | 144   | -   | 100  | authors, readers, combined | 3.9, 12.0, 14.7 |
+| PubMed [5]             | en   | Full papers  | -     | -   | 1320 | authors                    | 5.4             |
+| NUS [3]                | en   | Full papers  | -     | -   | 211  | authors, readers, combined | 4.2, 7.6, 11.0  |
 | Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | indexers (contr, uncontr)  | 4.5, 9.8        |
-| ACM [5]                | en   | Abstracts    | -     | -   | 2304 | authors                    | 5.3             |
-| KDD [8]                | en   | Abstracts    | -     | -   | 755  | authors                    | 4.1             |
-| WWW [8]                | en   | Abstracts    | -     | -   | 1330 | authors, extra, combined   | 4.8, 4.2, 6.2   |
-| DUC-2001 [3]           | en   | News         | -     | -   | 308  | readers                    | 8.1             |
-| 500N-KPCrowd [6]       | en   | News         | 450   | -   | 50   | readers                    | 46.2            |
-| Wikinews-Keyphrase [7] | fr   | News         | -     | -   | 100  | readers                    | 9.7             |
+| ACM [6]                | en   | Abstracts    | -     | -   | 2304 | authors                    | 5.3             |
+| KDD [9]                | en   | Abstracts    | -     | -   | 755  | authors                    | 4.1             |
+| WWW [9]                | en   | Abstracts    | -     | -   | 1330 | authors, extra, combined   | 4.8, 4.2, 6.2   |
+| DUC-2001 [4]           | en   | News         | -     | -   | 308  | readers                    | 8.1             |
+| 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | readers                    | 46.2            |
+| Wikinews-Keyphrase [8] | fr   | News         | -     | -   | 100  | readers                    | 9.7             |
 
 
 ## References
@@ -70,39 +71,44 @@ Below is a an example of reference file format:
    *In Proceedings of EMNLP 2003.*
    p. 216-223.
 
-3. **Single Document Keyphrase Extraction Using Neighborhood Knowledge.**
+3. **Keyphrase Extraction in Scientific Publications.**
+   Thuy Dung Nguyen and Min-Yen Kan.
+   *In Proceedings of International Conference on Asian Digital Libraries 2007.*
+   p. 317-326.
+
+4. **Single Document Keyphrase Extraction Using Neighborhood Knowledge.**
    Xiaojun Wan and Jianguo Xiao.
    *In Proceedings of AAAI 2008.*
    pp. 855-860.
 
-4. **Keyphrase extraction from single documents in the open domain exploiting
+5. **Keyphrase extraction from single documents in the open domain exploiting
    linguistic and statistical methods.**
    Alexander Thorsten Schutz. 
    *Master's thesis, National University of Ireland (2008).*
 
-5. **Large dataset for keyphrases extraction.**
+6. **Large dataset for keyphrases extraction.**
    Krapivin, M., Autaeu, A., & Marchese, M. (2009). 
    *University of Trento.*
 
-6. **Supervised Topical Key Phrase Extraction of News Stories using
+7. **Supervised Topical Key Phrase Extraction of News Stories using
    Crowdsourcing, Light Filtering and Co-reference Normalization.**
    Marujo, L., Gershman, A., Carbonell, J., Frederking, R., & Neto, J. P.
    *In Proceedings of LREC 2012.*
 
-7. **TopicRank: Graph-Based Topic Ranking for Keyphrase Extraction.**
+8. **TopicRank: Graph-Based Topic Ranking for Keyphrase Extraction.**
    Adrien Bougouin, Florian Boudin, Béatrice Daille.
    *In Proceedings of the International Joint Conference on Natural Language
    Processing (IJCNLP), 2013.*
 
-8. **Citation-Enhanced Keyphrase Extraction from Research Papers: A Supervised
+9. **Citation-Enhanced Keyphrase Extraction from Research Papers: A Supervised
    Approach.**
    Cornelia Caragea, Florin Bulgarov, Andreea Godea and Sujatha Das Gollapalli.
    *In Proceedings of EMNLP 2014.*
    pp. 1435-1446.
 
-9. **How Document Pre-processing affects Keyphrase Extraction Performance.**
-   Florian Boudin, Hugo Mougard and Damien Cram.
-   *COLING 2016 Workshop on Noisy User-generated Text (WNUT).*
+10. **How Document Pre-processing affects Keyphrase Extraction Performance.**
+    Florian Boudin, Hugo Mougard and Damien Cram.
+    *COLING 2016 Workshop on Noisy User-generated Text (WNUT).*
 
 
 
