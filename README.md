@@ -44,20 +44,23 @@ Below is a an example of reference file format:
 
 ## Available datasets
 
-| dataset                | lang | nature       | train | dev | test | gold keyphrases            | keys/doc (test) |
-| ---------------------- | ---- | ------------ | -----:| ---:| ----:| --------------------------:| --------------: |
-| CSTR [1]               | en   | Full papers  | 130   | -   | 500  | authors                    | 5.4             |
-| SemEval-2010 [10]      | en   | Full papers  | 144   | -   | 100  | authors, readers, combined | 3.9, 12.0, 14.7 |
-| PubMed [5]             | en   | Full papers  | -     | -   | 1320 | authors                    | 5.4             |
-| NUS [3]                | en   | Full papers  | -     | -   | 211  | authors, readers, combined | 4.2, 7.6, 11.0  |
-| Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | indexers (contr, uncontr)  | 4.5, 9.8        |
-| ACM [6]                | en   | Abstracts    | -     | -   | 2304 | authors                    | 5.3             |
-| KDD [9]                | en   | Abstracts    | -     | -   | 755  | authors                    | 4.1             |
-| WWW [9]                | en   | Abstracts    | -     | -   | 1330 | authors, extra, combined   | 4.8, 4.2, 6.2   |
-| TermITH-Eval [11]      | fr   | Abstracts    | -     | -   | 400  | indexers                   | 11.8            |
-| DUC-2001 [4]           | en   | News         | -     | -   | 308  | readers                    | 8.1             |
-| 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | readers                    | 46.2            |
-| Wikinews-Keyphrase [8] | fr   | News         | -     | -   | 100  | readers                    | 9.7             |
+| dataset                | lang | nature       | train | dev | test | Annotation  | #kp (test) | #words (test) |
+| ---------------------- | ---- | ------------ | ----: | --: | ---: | ----------: | ---------: | ------------: |
+| CSTR [1]               | en   | Full papers  | 130   | -   | 500  | A           | 5.4        | 11501.4       |
+| NUS [3]                | en   | Full papers  | -     | -   | 211  | A+R         | 11.0       | 8398.3        |
+| PubMed [5]             | en   | Full papers  | -     | -   | 1320 | A           | 5.4        | 820.6         |
+| ACM [6]                | en   | Full papers  | -     | -   | 2304 | A           | 5.3        | 9197.6        |
+| SemEval-2010 [10]      | en   | Full papers  | 144   | -   | 100  | A+R         | 14.7       | 7961.2        |
+| Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | I (uncontr) | 9.8        | 134.6         |
+| KDD [9]                | en   | Abstracts    | -     | -   | 755  | A           | 4.1        | 190.7         |
+| WWW [9]                | en   | Abstracts    | -     | -   | 1330 | A           | 4.8        | 163.5         |
+| TermITH-Eval [11]      | fr   | Abstracts    | -     | -   | 400  | I           | 11.8       | 164.7         |
+| DUC-2001 [4]           | en   | News         | -     | -   | 308  | R           | 8.1        | 847.2         |
+| 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | R           | 46.2       | 465.3         |
+| Wikinews-Keyphrase [8] | fr   | News         | -     | -   | 100  | R           | 9.7        | 313.6         |
+
+Annotation for gold keyphrases are performed by authors (A), readers (R) or
+professional indexers (I).
 
 
 ## References
