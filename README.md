@@ -50,8 +50,10 @@ Below is a an example of reference file format:
 | NUS [3]                | en   | Full papers  | -     | -   | 211  | A+R         | 11.0       | 8398.3        |
 | PubMed [5]             | en   | Full papers  | -     | -   | 1320 | A           | 5.4        | 820.6         |
 | ACM [6]                | en   | Full papers  | -     | -   | 2304 | A           | 5.3        | 9197.6        |
+| Citeulike-180 [13]     | en   | Full papers  | -     | -   | 182  | R           | 5.4        | 8589.7        |
 | SemEval-2010 [10]      | en   | Full papers  | 144   | -   | 100  | A+R         | 14.7       | 7961.2        |
 | Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | I (uncontr) | 9.8        | 134.6         |
+| TALN-Archives [14]     | en/fr | Abstracts   | -     | -   | 521/1207 | A       | 4.0/4.1    | 123.1/141.0   |
 | KDD [9]                | en   | Abstracts    | -     | -   | 755  | A           | 4.1        | 190.7         |
 | WWW [9]                | en   | Abstracts    | -     | -   | 1330 | A           | 4.8        | 163.5         |
 | TermITH-Eval [11]      | fr   | Abstracts    | -     | -   | 400  | I           | 11.8       | 164.7         |
@@ -59,6 +61,7 @@ Below is a an example of reference file format:
 | 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | R           | 46.2       | 465.3         |
 | 110-PT-BN-KP [12]      | pt   | News         | 100   | -   | 10   | R           | 27.6       | 439.4         |
 | Wikinews-Keyphrase [8] | fr   | News         | -     | -   | 100  | R           | 9.7        | 313.6         |
+
 
 Annotation for gold keyphrases are performed by authors (A), readers (R) or
 professional indexers (I).
@@ -124,3 +127,12 @@ professional indexers (I).
 12. **Keyphrase Cloud Generation of Broadcast News.**
     Luis Marujo, Márcio Viveiros, João Paulo da Silva Neto.
     *In Proceedings of Interspeech 2011.*
+
+13. **Human-competitive tagging using automatic keyphrase extraction.**
+    O. Medelyan, E. Frank, I. H. Witten.
+    *In Proceedings of EMNLP 2009.*
+
+14. **TALN Archives: a digital archive of French research articles in Natural
+    Language Processing.**
+    Florian Boudin.
+    *In Proceedings of TALN 2013.*
