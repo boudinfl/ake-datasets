@@ -46,7 +46,7 @@ def main(argv):
 	document = re.sub(u'</?[^>]+>', ' ', document)
 	document = re.sub(u'\s+', ' ', document)
 	document = re.sub(u'(?xumsi)[^\w\s.,;:\\/%"\'\’\-«»\(\)\[\]=\+`$€\|<>\n]', '', document)
-	document = re.sub(u' --BREAKLINE-- ', '\n', document)
+	document = re.sub(u' --BREAKLINE-- ', '\n\n', document)
 	document = document.strip()
 
 	handle = codecs.open(fichier_sortie, 'w', 'utf-8')
