@@ -56,6 +56,7 @@ Below is a an example of reference file format:
 | TALN-Archives [14]     | en/fr | Abstracts   | -     | -   | 521/1207 | A       | 4.0/4.1    | 123.1/141.0   |
 | KDD [9]                | en   | Abstracts    | -     | -   | 755  | A           | 4.1        | 190.7         |
 | WWW [9]                | en   | Abstracts    | -     | -   | 1330 | A           | 4.8        | 163.5         |
+| KP20k [15]             | en   | Abstracts    | 530,809 | 20,000 | 20,000 | A    | 5.3        | 158.0         |
 | TermITH-Eval [11]      | fr   | Abstracts    | -     | -   | 400  | I           | 11.8       | 164.7         |
 | DUC-2001 [4]           | en   | News         | -     | -   | 308  | R           | 8.1        | 847.2         |
 | 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | R           | 46.2       | 465.3         |
@@ -136,3 +137,7 @@ professional indexers (I).
     Language Processing.**
     Florian Boudin.
     *In Proceedings of TALN 2013.*
+
+15. **Deep Keyphrase Generation.**
+    R. Meng, S. Zhao, S. Han, D. He, P. Brusilovsky, Y. Chi.
+    *In Proceedings of ACL 2017*
