@@ -1,0 +1,1457 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">BMC Struct Biol</journal-id>
+      <journal-title>BMC Structural Biology</journal-title>
+      <issn pub-type="epub">1472-6807</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">14715087</article-id>
+      <article-id pub-id-type="pmc">331416</article-id>
+      <article-id pub-id-type="publisher-id">1472-6807-4-1</article-id>
+      <article-id pub-id-type="doi">10.1186/1472-6807-4-1</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Consensus structural models for the amino terminal domain of the retrovirus restriction gene <italic>Fv1 </italic>and the Murine Leukaemia Virus capsid proteins</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Taylor</surname>
+            <given-names>William R</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>wtaylor@nimr.mrc.ac.uk</email>
+        </contrib>
+        <contrib id="A2" contrib-type="author">
+          <name>
+            <surname>Stoye</surname>
+            <given-names>Jonathan P</given-names>
+          </name>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <email>jstoye@nimr.mrc.ac.uk</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>Division of Mathematical Biology National Institute for Medical Research, The Ridgeway, Mill Hill, London NW7 1AA, U.K</aff>
+      <aff id="I2"><label>2</label>Division of Virology, National Institute for Medical Research, The Ridgeway, Mill Hill, London NW7 1AA, U.K</aff>
+      <pub-date pub-type="collection">
+        <year>2004</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>12</day>
+        <month>1</month>
+        <year>2004</year>
+      </pub-date>
+      <volume>4</volume>
+      <fpage>1</fpage>
+      <lpage>1</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1472-6807/4/1"/>
+      <history>
+        <date date-type="received">
+          <day>3</day>
+          <month>9</month>
+          <year>2003</year>
+        </date>
+        <date date-type="accepted">
+          <day>12</day>
+          <month>1</month>
+          <year>2004</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2004 Taylor and Stoye; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-statement>
+        <copyright-year>2004</copyright-year>
+        <copyright-holder>Taylor and Stoye; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-holder>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>The mouse Fv1 (friend virus) susceptibility gene inhibits the development of the murine leukaemia virus (MLV) by interacting with its capsid (CA) protein. As no structures are available for these proteins we have constructed molecular models based on distant sequence similarity to other retroviral capsid proteins.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>Molecular models were constructed for the amino terminal domains of the probable capsid-like structure for the mouse Fv1 gene product and the capsid protein of the MLV. The models were based on sequence alignments with a variety of other retrovirus capsid proteins. As the sequence similarity of these proteins with MLV and especially Fv1 is very distant, a threading method was employed that incorporates predicted secondary structure and multiple sequence information. The resulting models were compared with equivalent models constructed using the sequences of the capsid proteins of known structure.</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>These comparisons suggested that the MLV model should be accurate in the core but with significant uncertainty in the loop regions. The Fv1 model may have some additional errors in the core packing of its helices but the resulting model gave some support to the hypothesis that it adopts a capsid-like structure.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>virus capsid protein models threading</kwd>
+        <kwd>Fv1</kwd>
+        <kwd>MLV</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Background</title>
+      <p>The <italic>Fv1 </italic>gene is one of a series of mouse genes that control the susceptibility of mice to murine leukaemia virus (MLV) [<xref ref-type="bibr" rid="B1">1</xref>-<xref ref-type="bibr" rid="B3">3</xref>]. The gene acts in the cell to restrict virus replication [<xref ref-type="bibr" rid="B4">4</xref>] through a mechanism that is still uncertain. Genetic studies suggest that the target for the <italic>Fv1 </italic>gene product is the capsid protein (CA) of MLV [<xref ref-type="bibr" rid="B5">5</xref>,<xref ref-type="bibr" rid="B6">6</xref>] and it is thought to interact with CA after entry of the virus into the cell but before integration and formation of the provirus.</p>
+      <p>When cloned and sequenced [<xref ref-type="bibr" rid="B7">7</xref>], the <italic>Fv1 </italic>gene was found to have sequence similarity to endogenous retroviruses of the HERV-L and MuERV-L families [<xref ref-type="bibr" rid="B7">7</xref>,<xref ref-type="bibr" rid="B8">8</xref>]. Based on its position within the Gag gene of these endogenous elements, it appears that <italic>Fv1 </italic>encodes a capsid-like protein. This structural assignment of the <italic>Fv1 </italic>gene is consistent with its function as it can be postulated that the gene product might act as a dominant negative mutation and interfere with the MLV capsid function [<xref ref-type="bibr" rid="B9">9</xref>]. Sequence alignments have been made between <italic>Fv1 </italic>and other retroviral capsid proteins [<xref ref-type="bibr" rid="B8">8</xref>] but besides one region of clear similarity, called the Major Homology Region (MHR), there is otherwise little that is conserved across the full family of retroviral (and related lenti-virus) CA sequences.</p>
+      <p>There are now several known structures for retroviral capsid proteins in the Protein Databank (PDB). While some of these are only fragmentary, a selection can be extracted that gives a reasonable phylogenetic spread across the retroviruses, with examples from three out of six genera of orthoretroviruses. In all the known structures, the CA protein has an all-&#x3B1; type structure consisting of two domains: a larger N-terminal and smaller C-terminal domain with a short extended linker-region between them. As this linker enters the C-terminal domain it incorporates the MHR. There is considerable variation in the orientation of the domains and in the conformation of the loop-regions between &#x3B1;-helices, particularly in the N-terminal domain.</p>
+      <p>In this work, we have exploited these multiple structures to construct consensus molecular models using threading methods both for the <italic>Fv1 </italic>gene product (FV1) and its target protein, the MVL CA. As threading takes known and predicted structure into account, it should provide better alignments for the regions that lie outside the MHR. However, as these methods are still far from perfect, we have constructed a model based on each known structure and the degree to which these agree has been used to assess the confidence of different parts of the model. As the threading method we have used has some 'free' parameters (such as the gap-penalty) we have introduced a novel modelling strategy in which the parameters are varied to give maximum agreement among the resulting models.</p>
+    </sec>
+    <sec>
+      <title>Results and Discussion</title>
+      <p>The sequence alignments compiled on the proteins of known structure using the &#x3A8;-BLAST/QUEST search strategy (Methods Sect<sup><italic>n</italic></sup>.) were used in the modelling of both the MLV CA and FV1 sequences. These varied from 4 to 7 sequences (Table <xref ref-type="table" rid="T1">1</xref>). Not unexpectedly, the alignments are to some extent similar, in particular each contains the sequence of the HIV-1 CA structure [1e6jP]. (QUEST is biased to retain sequences of known structure). Greatest overlap exists between the sequence sets of the two human viruses, with the HTLV-I sequences being a subset of the HIV-1 sequences (Table 0(d) and Table 0(c)). While it would be possible to extend and realign these sub-families based on structure comparisons, they were left unaltered so as to be equivalent to the MLV and FV1 alignments described below. This allows control modelling tests to be directly comparable to those performed for sequences of unknown structure.</p>
+      <table-wrap position="float" id="T1">
+        <label>Table 1</label>
+        <caption>
+          <p>Template sequences selected for alignment. The &#x3A8;-BLAST/QUEST search strategy (Methods Sect<sup><italic>n</italic></sup>.) when started with the probe sequence of the PDB structure indicated by "SEED" selected the sequences indicated in each subtable: (<italic>a</italic>) EIAV [1eia], (<italic>b</italic>) RSV [1d1dA], (<italic>c</italic>) HIV-1 [1e6jP] and (<italic>d</italic>) HTLV-I [1qrjA]. The sequences are identified by their gene identification (gi) number (first column) and their local source databank identifier. The sequence fragment (automatically extracted by QUEST) is given as a range of residue numbers.</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <td align="center" colspan="3">(a) EIAV</td>
+              <td align="center" colspan="3">(b) RSV</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">SEED</td>
+              <td align="left">1eia</td>
+              <td/>
+              <td align="left">12084543</td>
+              <td align="left">pdb-1E6J</td>
+              <td align="right">0&#x2013;210</td>
+            </tr>
+            <tr>
+              <td align="left">6358699</td>
+              <td align="left">gb-AAF07324</td>
+              <td align="left">131&#x2013;342</td>
+              <td align="left">8072301</td>
+              <td align="left">gb-AAF71968</td>
+              <td align="right">0&#x2013;155</td>
+            </tr>
+            <tr>
+              <td align="left">6815746</td>
+              <td align="left">gb-AAF28696</td>
+              <td align="left">0&#x2013;173</td>
+              <td align="left">6649692</td>
+              <td align="left">gb-AAF21520</td>
+              <td align="right">5&#x2013;224</td>
+            </tr>
+            <tr>
+              <td align="left">12084543</td>
+              <td align="left">pdb-1E6J</td>
+              <td align="left">3&#x2013;210</td>
+              <td align="left">120850</td>
+              <td align="left">sp-P18041</td>
+              <td align="right">97&#x2013;362</td>
+            </tr>
+            <tr>
+              <td align="left">27803398</td>
+              <td align="left">gb-AAO21890</td>
+              <td align="left">120&#x2013;281</td>
+              <td align="left">294961</td>
+              <td align="left">gb-AAA74706</td>
+              <td align="right">116&#x2013;381</td>
+            </tr>
+            <tr>
+              <td/>
+              <td/>
+              <td/>
+              <td align="left">5106563</td>
+              <td align="left">gb-AAD39752</td>
+              <td align="right">81&#x2013;346</td>
+            </tr>
+            <tr>
+              <td/>
+              <td/>
+              <td/>
+              <td align="left">SEED</td>
+              <td align="left">1d1dA</td>
+              <td/>
+            </tr>
+            <tr>
+              <td colspan="6">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" colspan="3">(c) HIV-1</td>
+              <td align="center" colspan="3">(d) HTLV-I</td>
+            </tr>
+            <tr>
+              <td colspan="6">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">6358699</td>
+              <td align="left">gb-AAF07324</td>
+              <td align="left">129&#x2013;340</td>
+              <td align="left">SEED</td>
+              <td align="left">1qrjA</td>
+              <td/>
+            </tr>
+            <tr>
+              <td align="left">22037894</td>
+              <td align="left">gb-AAM90230</td>
+              <td align="left">148&#x2013;359</td>
+              <td align="left">12084543</td>
+              <td align="left">pdb-1E6J</td>
+              <td align="right">0&#x2013;210</td>
+            </tr>
+            <tr>
+              <td align="left">SEED</td>
+              <td align="left">1e6jP</td>
+              <td/>
+              <td align="left">22037894</td>
+              <td align="left">gb-AAM90230</td>
+              <td align="right">144&#x2013;370</td>
+            </tr>
+            <tr>
+              <td align="left">532325</td>
+              <td align="left">gb-AAA99545</td>
+              <td align="left">50&#x2013;224</td>
+              <td align="left">9886907</td>
+              <td align="left">gb-AAG01643</td>
+              <td align="right">0&#x2013;222</td>
+            </tr>
+            <tr>
+              <td align="left">9886907</td>
+              <td align="left">gb-AAG01643</td>
+              <td align="left">0&#x2013;211</td>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <sec>
+        <title>MLV Modelling</title>
+        <p>The databank search using the MLV sequence as a probe provided a useful collection of six sequences (Table <xref ref-type="table" rid="T1">1(a)</xref>) which, with the MLV probe sequence itself, were passed through the PsiPred secondary structure prediction protocol (Methods Sect<sup><italic>n</italic></sup>.). When the predicted secondary structures were viewed on the aligned sequences, several distinct &#x3B1;-helices were apparent, consistent with the protein having an all-&#x3B1; type structure similar to the other capsid proteins of known structure (Figure <xref ref-type="fig" rid="F1">1</xref>).</p>
+        <p>The MLV alignment with predicted secondary structure was matched in the MST program with the four capsid proteins of known structure along with their associated aligned sequences. This was done for each parameter combination specified in Methods Sect<sup><italic>n</italic></sup>. and the quality of the agreement among the four resulting models quantified using both the <italic>F</italic><sub><italic>u </italic></sub>and <italic>F</italic><sub><italic>w </italic></sub>measures defined in Methods Sect<sup><italic>n</italic></sup>. There was reasonable overall agreement between the two measures of the parameter combinations (Figure <xref ref-type="fig" rid="F2">2</xref>) and with otherwise no basis on which to prefer one measure over the other, the combined measure (<italic>F</italic><sub><italic>v</italic></sub>) was used to select the parameters on which the final models were calculated. These were <italic>S </italic>= 7, <italic>G </italic>= 30.</p>
+        <fig position="float" id="F1">
+          <label>Figure 1</label>
+          <caption>
+            <p><bold>MLV sequence alignment </bold>with the sequence of 1qrjA and related sequences. The alignment is displayed twice in different colouring schemes. In the top two panels, (<italic>a</italic>) the amino half is coloured firstly by predicted secondary structure (red = <italic>&#x3B1;</italic>, green = <italic>&#x3B2;</italic>) and then below using a different colour for each amino acid type (Taylor, 1997; black = gap). The known helices (N1&#x2013;N5) marked as red lines (minor helices are orange) between the two blocks. In the lower two panels (<italic>b</italic>) the carboxy half of the alignment is shown in a similar way. The sequence identifiers are given below the alignment in the same order as they are aligned. The mid-line divides the 1qrjA sub-family from the MLV sub-family.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-1"/>
+        </fig>
+        <fig position="float" id="F2">
+          <label>Figure 2</label>
+          <caption>
+            <p><bold>MLV model agreement</bold>. The degree of similarity among the four MLV CA models is plotted for different parameter combinations of MST. Combinations resulting in better agreement have colours towards the red end of the spectrum. (<italic>a</italic>) Using the unweighted RMSd measure (<italic>F</italic><sub><italic>u</italic></sub>) and (<italic>b</italic>) Using the weighted RMSd measure (<italic>F</italic><sub><italic>w</italic></sub>). (See Methods Sect<italic>n</italic>. for details.) (<italic>c</italic>) Combined score (<italic>F</italic><sub><italic>u</italic></sub>&#xB7;<italic>F</italic><sub><italic>u</italic></sub>). The MST parameters varied were X-axis: <italic>S </italic>= 0&#x2192;9 (in steps ofone) and Y-axis: <italic>G </italic>= 10&#x2192;90 (in steps of 10). (See Methods Sect<sup><italic>n</italic></sup>. for details.) The best combined score is at: <italic>S </italic>= 7, <italic>G </italic>= 30.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-2"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>N-terminal domain</title>
+        <p>The multiple structure alignment of the four models showed good agreement. In the N-terminal domain there were two extensive regions over which all models were aligned in register, covering helices N2-N3 and N5 (including the preceding short helix in the loop region). Two alternate registers were observed for helices N1 and N4, with relative shifts of 3 and 4 residues, respectively. The models based on 1qrjA (HTLV-I) and 1d1dA (RSV) were in complete agreement and the summed <italic>F</italic><sub><italic>w </italic></sub>score indicated that 1d1dA provided the best consensus model.</p>
+        <p>Given that the alignment of the capsid protein sequences is ambiguous, the superposition of the models on the structures from which they were derived provides a better way to assess whether there is any significant sequence similarity that could be used as a basis on which any one model might be preferred over the others. The PSId values were: 5.6, 18.5, 10.5, 13.0 for 1d1dA, 1qrjA, 1eia and 1e6jP, respectively. (No differences were observed whether using the standard version or the sequence-biased version of SAP).</p>
+        <p>Although the 1d1dA model was the best consensus representative, it has only 5.6% sequence similarity with MLV and the higher sequence similarity of the 1qrjA based model with its template (18.5%) was considered sufficient to justify its adoption as the preferred model over the 1d1dA model. Structurally, both were very similar (1.4 &#xC5; wRMSd) with the only significant structural difference being a slight reorientation of the helical region in the loop preceeding the final helix. This structure for the 1qrjA based model is shown along with its comparison with the 1d1dA model in Figure <xref ref-type="fig" rid="F3">3</xref>.</p>
+        <fig position="float" id="F3">
+          <label>Figure 3</label>
+          <caption>
+            <p><bold>Consensus model for the MLV N-domain</bold>. (<italic>a</italic>) The model for the MLV CA N-domain based on 1qrjA shown as a &#x3B1;-carbon trace with predicted &#x3B1;-helices coloured red (some fragments of predicted <italic>&#x3B2;</italic>-structure are coloured green). The molecule is in approximately the same orientation as in Figure <xref ref-type="fig" rid="F8">8(a)</xref> and residues identified by Stevens <italic>et al. </italic>(2003) are marked as small spheres. (<italic>b</italic>) The models based on 1qrjA and 1d1dA are shown superposed and coloured from blue (amino) to red (carboxy). Feint dashed lines connect identical residues. The wRMSd = 1.4 (uRMSd = 5.8) over 123 residues.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-3"/>
+        </fig>
+        <p>It can be seen from Figure <xref ref-type="fig" rid="F3">3(a)</xref> that there is good location of the predicted and model helices with deviations occurring only at the ends of some helices and into the loop regions at the 'top' of the molecule. The ends of helices N4 and N5 and the loops at this end of the molecule also encompass the mutations identified as affecting the sensitivity of the virus to <italic>Fv1 </italic>[<xref ref-type="bibr" rid="B29">29</xref>].</p>
+      </sec>
+      <sec>
+        <title>C-terminal domain</title>
+        <p>With its relatively unambiguous MHR, all the models of the C-terminal domain were in complete agreement over the first half of the domain. The more C-terminal half, however, was less consistent due to a combination of its generally less conserved nature combined with uncertainty in the location of the terminus in some of the sequences.</p>
+        <p>As the C-terminal domain has been shown to be less important in determining the property of virus susceptibility, further effort was not expended to try and refine the alignment at the carboxy terminus of the molecule, especially in the more difficult alignment of the FV1 sequence described below.</p>
+      </sec>
+      <sec>
+        <title>FV1 Modelling</title>
+        <p>The databank search using the FV1 sequence as a probe provided a less useful collection of only two distinct sequences (Table <xref ref-type="table" rid="T1">1(b)</xref>). Although other sequences were found these were rejected by QUEST as being too similar to those retained.</p>
+        <p>The FV1 alignment with predicted secondary structure was matched to the four capsid proteins of known structure as described above for each MST parameter combination and agreement among the four models monitored using the <italic>F </italic>scores (Methods Sect<sup><italic>n</italic></sup>.). These were 50.3 and 131.874 for <italic>F</italic><sub><italic>u </italic></sub>and <italic>F</italic><sub><italic>w </italic></sub>while the corresponding score obtained for the MLV models were 78.7 and 188.0, respectively. The greater variation among the FV1 models was undoubtedly due to uncertainty in the placement of the large 'unstructured' region. Nevertheless, there was reasonable overall agreement between the two measures and both found maximal model agreement when <italic>S </italic>= 9, <italic>G </italic>= 20 (Figure <xref ref-type="fig" rid="F4">4</xref>).</p>
+        <fig position="float" id="F4">
+          <label>Figure 4</label>
+          <caption>
+            <p><bold>FV1 model agreement</bold>. The degree of similarity among the four FV1 CA models is plotted for different parameter combinations of MST. (<italic>a</italic>) Using the unweighted RMSd measure (<italic>F</italic><sub><italic>u</italic></sub>) and (<italic>b</italic>) Using the weighted RMSd measure (<italic>F</italic><sub><italic>w</italic></sub>). (See Methods Sect<italic>n</italic>. for details.) (<italic>c</italic>) Combined score (<italic>F</italic><sub><italic>u</italic></sub>&#xB7;<italic>F</italic><sub><italic>u</italic></sub>). The MST parameters varied were X-axis: <italic>S </italic>= 0&#x2192;9 (in steps of one) and Y-axis: <italic>G </italic>= 10&#x2192;90 (in steps of 10). (See Methods Sect<sup><italic>n</italic></sup>. for details.) The best combined score is at: <italic>S </italic>= 9<italic>, G </italic>= 20.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-4"/>
+        </fig>
+        <p>When the predicted secondary structures were viewed on the aligned sequences, although several distinct &#x3B1;-helices were apparent, these had a less direct correspondence with those expected for a capsid protein (Figure <xref ref-type="fig" rid="F5">5</xref>). In particular, there is little predicted &#x3B1;-structure for helix N4 and the alignment around N5 is ambiguous. If the secondary structure prediction were to be believed, this might indicate the introduction of a large insertion, or given that there were less sequences on which to base the predictions, it is possible that the predictions are not as accurate as those obtained for the MLV sequences.</p>
+        <fig position="float" id="F5">
+          <label>Figure 5</label>
+          <caption>
+            <p><bold>FV1 sequence alignment </bold>with the sequence of 1e6jP and related sequences. The alignment is displayed twice in different colouring schemes. In the top two panels, the amino half is coloured by predicted secondary structure (red = &#x3B1;, green = &#x3B2;) and amino acid type (Taylor, 1997). See the legend to Figure <xref ref-type="fig" rid="F2">2</xref> for further details. with the known helices (N1&#x2013;N5) marked as red lines between (minor helices are orange). The carboxy half of the alignment is displayed in a similar way in the lower panels. The sequence identifiers are given below the alignment in the same order as they are aligned. The mid-line divides the 1e6jP sub-family from the FV1 sub-family.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-5"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>N-terminal domain</title>
+        <p>The multiple structure alignment of the four models showed unexpectedly good agreement. As in the MLV models, two regions were aligned in register over all the models. These included most of helix N4 and the following loop region then, after only one shift, the full register was regained for helix N5. The sum-of-<italic>F </italic>scores for each model indicated that 1eia provided the best consensus, followed by 1e6jP (to which it was most similar). The PSId values were: 9.3, 7.8, 6.6, 15.9 for 1d1dA, 1qrjA, 1eia and 1e6jP, respectively. As the 1e6jP model aligns better on its target by almost 10 PSId, this was considered sufficient to justify its adoption as the preferred model over the 1eia based model. Both models are similar in the core region (1.3 &#xC5; wRMSd) but with the significant differences in the extensive loop regions at the 'top' of the molecules. This structure for the 1e6jA based model is shown along with its comparison with the 1eia model in Figure <xref ref-type="fig" rid="F6">6</xref>.</p>
+        <fig position="float" id="F6">
+          <label>Figure 6</label>
+          <caption>
+            <p><bold>Consensus model for the FV1 N-terminal domain</bold>. (<italic>a</italic>) The model for the FV1 N-domain based on 1e6jP shown as a &#x3B1;-carbon trace with predicted &#x3B1;-helices coloured red (some fragments of predicted <italic>&#x3B2;</italic>-structure are coloured green). The molecule is in approximately the same orientation as in Figure <xref ref-type="fig" rid="F8">8(a)</xref>. (<italic>b</italic>) The models based on 1e6jP and 1eia are shown superposed and coloured from blue (amino) to red (carboxy). Feint dashed lines connect identical residues. The wRMSd = 1.3 (uRMSd = 5.4) over 124 residues. Note: the modelling program rescales the secondary structure prediction values so that there is the same proportion of predicted structure as measured secondary structure on the model.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-6"/>
+        </fig>
+        <p>It can be seen from Figure <xref ref-type="fig" rid="F5">5</xref> and Figure <xref ref-type="fig" rid="F6">6(a)</xref> that there is reasonable location of the predicted and model helices except for helix N4 which is almost completely unpredicted. Otherwise deviations occurred at the ends of helices and in the loop regions at the 'top' of the molecule.</p>
+        <table-wrap position="float" id="T2">
+          <label>Table 2</label>
+          <caption>
+            <p>Target sequences selected for alignment. The &#x3A8;-BLAST/QUEST search strategy (Methods Sect<sup><italic>n</italic></sup>.) when started with the two target sequences indicated by "SEED", selected the sequences indicated in each subtable: (<italic>a</italic>) MVL and (<italic>b</italic>) FV1. The sequences are identified as in Table <xref ref-type="table" rid="T1">1</xref>. (* the C-terminal domain of this sequence appears to be replaced by an oncogene.)</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <tbody>
+              <tr>
+                <td align="center" colspan="3">(a) MLV</td>
+              </tr>
+              <tr>
+                <td align="left">SEED</td>
+                <td align="left">AAD55051</td>
+                <td align="right">215&#x2013;432</td>
+              </tr>
+              <tr>
+                <td align="left">gi-120892</td>
+                <td align="left">sp-P03330</td>
+                <td align="right">207&#x2013;423</td>
+              </tr>
+              <tr>
+                <td align="left">gi-2393894</td>
+                <td align="left">gb-AAC58239</td>
+                <td align="right">206&#x2013;434</td>
+              </tr>
+              <tr>
+                <td align="left">gi-419481</td>
+                <td align="left">pir-A46312</td>
+                <td align="right">199&#x2013;423</td>
+              </tr>
+              <tr>
+                <td align="left">gi-323873</td>
+                <td align="left">gb-AAA43041</td>
+                <td align="right">203&#x2013;418*</td>
+              </tr>
+              <tr>
+                <td align="left">gi-7548235</td>
+                <td align="left">gb-AAA4306</td>
+                <td align="right">206&#x2013;422</td>
+              </tr>
+              <tr>
+                <td align="left">gi-5726238</td>
+                <td align="left">gb-AAD48375</td>
+                <td align="right">156&#x2013;352</td>
+              </tr>
+              <tr>
+                <td align="center" colspan="3">(b) FV1</td>
+              </tr>
+              <tr>
+                <td align="left">gi-7521942</td>
+                <td align="left">T29096</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">gi-23485357</td>
+                <td align="left">gb-EAA20381.1</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">gi-3913713</td>
+                <td align="left">sp-P70213</td>
+                <td align="right">FV1 MOUSE</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Control Models</title>
+        <p>To help assess the accuracy of the models constructed above, the protocols described in the Methods sections were applied to each of the sequences of known structure. For each protein, this results in four models based on the other structures (and its own structure). Each of these models, was then compared to the known structure using the modified SAP program and the RMSd/PSId measures reported in Table <xref ref-type="table" rid="T3">3</xref>.</p>
+        <table-wrap position="float" id="T3">
+          <label>Table 3</label>
+          <caption>
+            <p>Control model similarity. The similarity of the capsid protein domains are tabulated as: uRMSd/PSId, both as calculated by the SAP program. The proteins are identified as in Table <xref ref-type="table" rid="T4">4</xref>. The column "params" gives the MST parameter values <italic>S, G </italic>at which the four models in each row had maximum agreement as measured by the combined agreement score <italic>F</italic><sub><italic>v </italic></sub>(Methods Sect <italic>n</italic>.).</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="center">
+                  <italic>str \ seq</italic>
+                </td>
+                <td align="left">D1D</td>
+                <td align="left">QRJ</td>
+                <td align="left">E6J</td>
+                <td align="left">EIA</td>
+                <td align="center">params</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center">D1D</td>
+                <td align="left">0.60/78.9</td>
+                <td align="left">4.14/90.0</td>
+                <td align="left">2.05/56.7</td>
+                <td align="left">2.41/38.3</td>
+                <td align="center">9,10</td>
+              </tr>
+              <tr>
+                <td align="center">QRJ</td>
+                <td align="left">5.58/100.</td>
+                <td align="left">0.32/100.</td>
+                <td align="left">3.58/88.4</td>
+                <td align="left">5.51/100.</td>
+                <td align="center">3,10</td>
+              </tr>
+              <tr>
+                <td align="center">E6J</td>
+                <td align="left">1.88/95.2</td>
+                <td align="left">1.70/84.7</td>
+                <td align="left">0.31/100.</td>
+                <td align="left">1.39/100.</td>
+                <td align="center">7,10</td>
+              </tr>
+              <tr>
+                <td align="center">EIA</td>
+                <td align="left">2.00/93.3</td>
+                <td align="left">2.00/100.</td>
+                <td align="left">1.28/100.</td>
+                <td align="left">0.35/100.</td>
+                <td align="center">8,20</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>With few exceptions, the wRMSd/PSId values indicated generally good models and by visual inspection, all had the correct fold. The models based on their own structures were almost identical to their templates with the exception of 1d1dA. When the uWRMSd values of the models against the known structure are plotted against number of residues ranked by local score (Figure <xref ref-type="fig" rid="F7">7</xref>) it can be seen that for 1d1dA the error rises sharply after 85 positions. Visual inspection revealed that this was due to a misaligned segment in the large loop region. The majority of models exhibited a gradual increase in wRMSd with increased error mounting as the loop regions were introduced. Two models that ran markedly below this trend were those based on 1eia and 1e6jP (22% identity), the two most similar proteins. A few models were also markedly worse. Two of these were derived from the 1qrj alignment based models which had a distinctly lower weight on the structure component (<italic>S </italic>weight) in the MST alignment.</p>
+        <fig position="float" id="F7">
+          <label>Figure 7</label>
+          <caption>
+            <p><bold>Control model uRMSd values</bold>. Each model was compared with its known structure and the local residue matches calculated by SAP were ranked. The uRMSd was calculated for increasingly larger sets of ranked residues and plotted against set size. This means that the best fitted residues in each comparison are found to the left of the plot with increasing divergence towards the right. Four models are plotted for each of four CA proteins of known structure: 1d1dA = red, 1qrjA = green, 1eia = purple, 1e6jP = blue. The best models are those of sequences built on their own structure. Three of these remain low throughout their length while one has poor loops and rises towards the right. Above these are two models for the most similar sequences of 1e6jP and 1eia built on each others structure (22% identity). Most models lie in the mid range with a few accumulating early errors due to shifts in the core regions.</p>
+          </caption>
+          <graphic xlink:href="1472-6807-4-1-7"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec>
+      <title>Conclusions</title>
+      <p>Based on relative degrees of sequence similarity among the control models (Table <xref ref-type="table" rid="T3">3(b)</xref>) and the MLV and FV1 sequences (MLV:1qrj = 18.5%, FV1:1e6jP = 15.9%), it would be expected that the models constructed for the MLV sequence would fall in the mid-range of the spread in quality observed in Figure <xref ref-type="fig" rid="F7">7</xref> &#x2013; typically, a good core model (3 &#xC5; RMS over 80 residues) with increasing divergence in the more variable loop regions. This is where the majority of the control models lie which were all constructed from sequence similarities that are generally lower than either of the above relationships used to model the MLV or FV1 sequences.</p>
+      <p>While a similar confidence might be hoped for the FV1 model, given its overall lower sequence similarity to the proteins of known structure and the less consistent nature of its secondary structure prediction, it is more likely that it will be of lesser quality &#x2013; corresponding more to the poorer models constructed among the control proteins (Figure <xref ref-type="fig" rid="F7">7</xref>). Typically, this would include shifts in the core helices (giving the characteristic immediate rise in the traces in Figure <xref ref-type="fig" rid="F7">7</xref>) with further shifts in the loop regions. Despite this, as with all of the control models, it is likely that the core fold of the protein should remain unaltered.</p>
+      <p>This study has shown that reasonable models can be constructed for both the FV1 and its target MLV protein based on other retroviral capsid proteins. Although this result was suggested by the existence of the MHR in both sequences, the fluid nature of retroviral genomes does not necessarily constrain the preceding domain to remain constant in structure or even remain at all. Despite only weak sequence similarities in this region, the addition of multiple sequences with predicted secondary structure has allowed plausible models to be constructed.</p>
+      <p>These models can now be used in the interpretation of experimental studies on the mode of action of retroviral susceptibility. As will be reported in more detail elsewhere [<xref ref-type="bibr" rid="B29">29</xref>], a series of amino acids in CA affecting the CA &#x2013; FV1 interaction have been identified in the loops at the 'top' of the N-terminal domain (Figure <xref ref-type="fig" rid="F3">3</xref>). Based on the model, they suggest a potential FV1 binding domain in the MLV CA. Experiments are currently under way to test this prediction by crystallographic studies.</p>
+      <p>For many years, the <italic>Fv1 </italic>gene has been the only known intracellular non-immune natural defense against a retroviral infection. Recently, two additional genes, Ref1 and Lv1, with antiviral activity have been described in human cells [<xref ref-type="bibr" rid="B30">30</xref>,<xref ref-type="bibr" rid="B31">31</xref>]. Phenotypically, they resemble Fv1 [<xref ref-type="bibr" rid="B32">32</xref>] but the genes themselves remain to be characterised. Understanding the mechanism of Fv1 action will provide insights into how natural defences to retroviral infection might be deployed against HIV.</p>
+    </sec>
+    <sec>
+      <title>Methods and Data</title>
+      <sec>
+        <title>Data</title>
+        <sec>
+          <title>Sequence Data</title>
+          <p>All sequences were extracted from (and searches were made over) the non-redundant protein sequence databank (NRDB) at the National Centre for Biotechnology Information (NCBI) as it was found on 28<sup><italic>th </italic></sup>of January 2003.</p>
+          <p>The sequence of the MLV used was the gag protein AAD55051 (GI:5881091) [<xref ref-type="bibr" rid="B10">10</xref>] and a region was extracted from residues 215&#x2013;432, corresponding to the CA protein.</p>
+          <p>The sequence of the <italic>Fv1 </italic>gene [<xref ref-type="bibr" rid="B7">7</xref>] was taken from FV1_MOUSE (GI:3913713). The region corresponding to the CA was identified as residues 100/120&#x2013;340/360 where the inner numbers represent the probable core of the protein. This range corresponds to the region of highest similarity to the MuERV-L sequence [<xref ref-type="bibr" rid="B8">8</xref>]. The leading 100 residues of the polyprotein may correspond with a relic matrix protein. Perhaps because of this, there is no obvious protease cleavage motif [<xref ref-type="bibr" rid="B11">11</xref>] to give any indication of the true terminus. However, in other situations this has not always been an accurate guide [<xref ref-type="bibr" rid="B12">12</xref>].</p>
+        </sec>
+        <sec>
+          <title>Structural Data</title>
+          <p>The structures of capsid proteins were extracted from the PDB [<xref ref-type="bibr" rid="B13">13</xref>] with the aid of the FSSP structure comparison database [<xref ref-type="bibr" rid="B14">14</xref>]<ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/dali/fssp/fssp.html"/>. Of the six structures in the FSSP alignment, only four extended over the full length of the two structural domains. There were as follows, with their PDB code (and chain delimiter, if any) shown in brackets: Rous Sarcoma Virus (RSV) [1d1dA] [<xref ref-type="bibr" rid="B15">15</xref>], Human T-cell Leukemia Virus (HTLV-I) [1qrjA] [<xref ref-type="bibr" rid="B16">16</xref>,<xref ref-type="bibr" rid="B17">17</xref>], Equine Infectious Anemia Virus (EIAV) p26 [1eia] [<xref ref-type="bibr" rid="B18">18</xref>] and Human Immunodeficiency Virus (HIV-I) p24 [1e6jP] [<xref ref-type="bibr" rid="B19">19</xref>].</p>
+          <p>The common core of the N-terminal domains of these proteins (in the numbering of the PDB structure) was defined as: 1d1dA 15&#x2013;148, 1qrjA 16&#x2013;129, 1eia 16&#x2013;145 and 1e6jP 16&#x2013;146. These fragments will be distinguished below as: 1d1dAn, 1qrjAn, 1eia-n and 1e6jPn and each terminates 8 or 9 residues before the conserved glutamine of the MHR. The N-terminal domain can be described as having five &#x3B1;-helices (N1...N5) with a long 'disordered', partly helical, loop between helices N4 and N5. For ease of reference below, this region will be called the 'top' of the molecule and its representation in the Figures will preserve this orientation.</p>
+          <p>The C-terminal domains were defined as: 1d1dA 152&#x2013;224, 1qrjA 132&#x2013;204, 1eia 149&#x2013;220, 1e6jP 149&#x2013;220 and were distinguished by the suffix "c". The common core of this domain consists of an extended strand leading into the MHR region followed by four helices designated C1...C4.</p>
+          <p>Despite their different sizes, both the N and the C domains have the same fold, perhaps suggesting an ancient gene duplication. This is most obvious in the HIV structure [1e6jP] where the domains can be superposed with 4.6 (2.0) unweighted (weighted) RMSd over 68 residues.</p>
+          <p>The similarity of sequence and structure over these domains was calculated using the SAP structure comparison program [<xref ref-type="bibr" rid="B20">20</xref>] for each pair of like domains (Table <xref ref-type="table" rid="T4">4</xref>). The N-terminal domains have clearly related structures (3&#x2013;6 &#xC5; RMSd) but have no significant sequence similarity (over 20%) except for the EIAV and HIV-1 structures. The smaller C-terminal domain (which contains the MHR) has greater overall sequence and structural similarity compared to the N-terminal domain (mostly over 20% with 2&#x2013;3 &#xC5; RMSd) and over 40% for the EIAV/HIV-1 pair.</p>
+          <table-wrap position="float" id="T4">
+            <label>Table 4</label>
+            <caption>
+              <p>Capsid protein similarity. The similarity of the capsid protein domains are tabulated as: (<italic>a</italic>) RMSd (unweighted) and (<italic>b</italic>) PSId, both as calculated by the SAP program. <italic>Upper-right triangle</italic>: over the common core of the C-terminal domain and <italic>Lower-left triangle</italic>: over the common core of the N-terminal domain. The proteins are identified as: D1D = RSV [1d1dA], QRJ = HTLV-I [1qrjA], E6J = HIV-I [1e6jP], EIA = EIAV [1eia ].</p>
+            </caption>
+            <table frame="hsides" rules="groups">
+              <tbody>
+                <tr>
+                  <td/>
+                  <td align="center" colspan="4">(a) structure</td>
+                  <td/>
+                  <td align="center" colspan="4">(b) sequence</td>
+                </tr>
+                <tr>
+                  <td align="center"><italic>N </italic>\ <italic>C</italic></td>
+                  <td align="right">D1D</td>
+                  <td align="right">QRJ</td>
+                  <td align="right">E6J</td>
+                  <td align="right">EIA</td>
+                  <td align="center"><italic>N </italic>\ <italic>C</italic></td>
+                  <td align="right">D1D</td>
+                  <td align="right">QRJ</td>
+                  <td align="right">E6J</td>
+                  <td align="right">EIA</td>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    <hr/>
+                  </td>
+                  <td colspan="5">
+                    <hr/>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">D1D</td>
+                  <td/>
+                  <td align="right">2.88</td>
+                  <td align="right">2.64</td>
+                  <td align="right">2.46</td>
+                  <td align="center">D1D</td>
+                  <td/>
+                  <td align="right">21.9</td>
+                  <td align="right">22.2</td>
+                  <td align="right">14.7</td>
+                </tr>
+                <tr>
+                  <td align="center">QRJ</td>
+                  <td align="right">3.83</td>
+                  <td/>
+                  <td align="right">2.11</td>
+                  <td align="right">2.39</td>
+                  <td align="center">QRJ</td>
+                  <td align="right">12.5</td>
+                  <td/>
+                  <td align="right">30.6</td>
+                  <td align="right">26.4</td>
+                </tr>
+                <tr>
+                  <td align="center">E6J</td>
+                  <td align="right">6.21</td>
+                  <td align="right">4.76</td>
+                  <td/>
+                  <td align="right">1.40</td>
+                  <td align="center">E6J</td>
+                  <td align="right">8.6</td>
+                  <td align="right">10.8</td>
+                  <td/>
+                  <td align="right">41.7</td>
+                </tr>
+                <tr>
+                  <td align="center">EIA</td>
+                  <td align="right">5.75</td>
+                  <td align="right">4.31</td>
+                  <td align="right">3.22</td>
+                  <td/>
+                  <td align="center">EIA</td>
+                  <td align="right">11.6</td>
+                  <td align="right">12.5</td>
+                  <td align="right">22.0</td>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+      </sec>
+      <sec>
+        <title>Sequence Databank Searches</title>
+        <p>Initially, each probe sequence was compared against the sequence databank using the &#x3A8;-BLAST program [<xref ref-type="bibr" rid="B21">21</xref>] with a significance level set at 0.001 and 5 cycles of iteration. When the probe is a retroviral sequence, the number of hits found by &#x3A8;-BLAST can be large (typically over 1000). These were reduced to manageable numbers by the use of the search program QUEST which is similar to &#x3A8;-BLAST but incorporates a multiple sequence alignment stage in its iterations to exclude redundant sequences as well as excluding poorly related or incomplete sequences [<xref ref-type="bibr" rid="B22">22</xref>]. The alignments produced by QUEST typically contain between 6&#x2013;12 sequences (including the probe sequences), none of which have more than 60% sequence identity (PSId) with each other.</p>
+        <p>The sequences retained by QUEST are selected on the basis of associated biological information, with those including useful annotation and structural data being given preference over those with no annotation or keywords such as "hypothetical". The filters are part of the MULTAL sequence alignment program [<xref ref-type="bibr" rid="B23">23</xref>] which are fully described in Ref. [<xref ref-type="bibr" rid="B24">24</xref>].</p>
+      </sec>
+      <sec>
+        <title>Secondary Structure Prediction</title>
+        <p>The multiple alignments resulting from the &#x3A8;-BLAST/QUEST search protocol were passed to the program PsiPred <ext-link ext-link-type="uri" xlink:href="http://bioinf.cs.ucl.ac.uk/psipred/"/>, Version 2.3) [<xref ref-type="bibr" rid="B25">25</xref>]. This program normally performs its own databank searches using &#x3A8;-BLAST to build-up an alignment. Given the problems described above that arise when searching with retroviral sequences, the PsiPred program was used locally to search only a database consisting of the sequences that had already been selected by QUEST.</p>
+        <p>Each sequence in the alignment was taken in turn and used as a probe against this small local database. As the &#x3A8;-BLAST parameters used by PsiPred were more restrictive than those used in the full search (only 3 cycles) and there are fewer sequences in the databank, each sequence may only find those to which it is more closely related. This introduces some variation into the predictions which provides a useful indication of the confidence of each predicted secondary structure element (SSE).</p>
+      </sec>
+      <sec>
+        <title>Multiple Sequence Threading</title>
+        <p>The alignment gathered on the probe sequence was then aligned with a protein structure using the multiple sequence threading MST program [<xref ref-type="bibr" rid="B26">26</xref>]. This program uses multiple sequence and structural information to automatically construct an &#x3B1;-carbon molecular model for the probe sequence with some limited remodelling in regions of insertion and deletion.</p>
+        <sec>
+          <title>Template Sequence Alignments</title>
+          <p>The MST program can incorporate multiple aligned sequences along with both the probe sequence and the template structure. The latter were gathered in an identical manner to the probe sequence using the &#x3A8;-BLAST/QUEST search protocol described above. Each search against the NRDB was started with the sequence of the protein of known structure and the resulting multiple alignments examined 'by-eye' in the light of the known secondary structures. If any large insert had been made in a secondary structure element (SSE) then it was assessed whether the gap could be shifted outside the SSE without significant loss of residue matches. Similarly, if a large insert (more than 6 residues) was made by any sequence other than the probe sequence (of known structure) then the insert was reduced to six residues by removing the positions with most gaps.</p>
+        </sec>
+        <sec>
+          <title>Parameter Choice</title>
+          <p>The MST program has parameters that allow different weights to be attached to the matching contribution of the sequences, their secondary structures, residue exposure and the residue packing in the resulting model. There is also a gap-penalty. The best values for these weights depends on the number and degree of relatedness among both the probe and the template sequences [<xref ref-type="bibr" rid="B26">26</xref>]. Rather than vary all these parameters individually, the weights on the structural components (secondary structure, exposure and packing) were 'ganged' together into a single parameter reflecting the contribution of structural terms relative to the sequence matching component. This gave two parameters: <italic>S </italic>(for structure) and <italic>G </italic>(the gap-penalty). Previously, the structural parameters had all been scaled into the same range so a value of <italic>S </italic>= 3 corresponds to a value of 3 for each individual weight. Although the gap-penalty is correlated with <italic>S</italic>, it cannot be linked in the same way without the risk of missing good alignments.</p>
+          <p>In the current application, there was more than one available template structure and advantage was taken of this by constructing models based on all available templates and choosing the MST parameters such that the agreement among the models was greatest. The parameters were varied over the ranges: <italic>S </italic>= 0&#x2192;9 (in steps of one) and <italic>G </italic>= 10&#x2192;90 (in steps of 10).</p>
+        </sec>
+        <sec>
+          <title>Measuring Model Agreement</title>
+          <p>Whatever the parameters for MST, all the models constructed from the same probe have an identical sequence. These might therefore be compared using the &#x3B1;-carbon RMSd based on a one-to-one (100 PSId) sequence equivalence. However, using this simple measure, a 'trivial' shift in space in which, say, an &#x3B1;-helix shifts by one turn relative to another &#x3B1;-helix might result in a large RMSd between what are, topologically, similar models. It is better to allow a local relative shift in sequence of four residues to restore the spatial equivalence at the expense of residue identity.</p>
+          <p>To implement this trade-off between RMSd and PSId, the models constructed for each parameter combination were compared against each other using the program SAP [<xref ref-type="bibr" rid="B20">20</xref>]<ext-link ext-link-type="uri" xlink:href="http://mathbio.nimr.mrc.ac.uk/ftp/wtaylor/sap/"/>. This program calculates both a weighted (<italic>Rw</italic>) and unweghted (<italic>Ru</italic>) RMSd for the two structures being compared and reports the percentage sequence identity of the alignment. The weighted RMSd down-weights regions of weak similarity which are mainly loop regions that can have large relative displacements. Despite its origins [<xref ref-type="bibr" rid="B27">27</xref>], in its current implementation the SAP program <ext-link ext-link-type="uri" xlink:href="http://mathbio.nimr.mrc.ac.uk/ftp/wtaylor/sapid/"/> does not include a sequence matching component and this was restored (for sequence identity only) by doubling the local residue pair score for identical residue types and otherwise halving all other residue match scores in the initial score matrix.</p>
+          <p>A score reflecting match quality (<italic>f</italic>) was calculated as: <italic>f </italic>= <italic>M/</italic>(1+<italic>R</italic>), where <italic>M </italic>is the PSId measured over the positions aligned by SAP and <italic>R </italic>is one of the RMSd measures. Identical structures would score 100. For a set of <italic>N </italic>models, a sum was calculated over the (<italic>N</italic><sup>2 </sup>- <italic>N</italic>)/2 pair combinations giving an overall measure of agreement (<italic>F</italic>) among the set. For a set of four models that align perfectly (100 PSId) with 2 &#xC5; RMSd, the overall score obtained would be 200. This score was calculated for both the wRMSd and uRMSd values (giving <italic>F</italic><sub><italic>w </italic></sub>and <italic>F</italic><sub><italic>u</italic></sub>, respectively) and a combined score (<italic>F</italic><sub><italic>v</italic></sub>) as the product of <italic>F</italic><sub><italic>w </italic></sub>and <italic>F</italic><sub><italic>u</italic></sub>.</p>
+          <p>While this procedure provides a general method for choosing parameter values, in the current application to a multi-domain protein it was not meaningful to calculate the RMSd over the full atomic model (because of relative domain movements). Instead, the agreement was calculated over the more distantly related N-terminal domain.</p>
+        </sec>
+        <sec>
+          <title>Selecting a consensus model</title>
+          <p>Although any model in the set could be taken as a representative, it is best to try and select one that, by some criteria, can be considered to be the most representative. To do this, we compared each pair of models usuing the structure comparison protocol described in the previous section. This provides a pairwise alignment based on structure, and even though each model has an identical sequence, the structural alignment may not match-up identical residues. The pairwise alignment were then combined into a multiple structure alignment [<xref ref-type="bibr" rid="B28">28</xref>] and as the models all have an identical sequence, their relative shifts can be seen easily. Rather than use a pure structure or sequence based measure of similarity between the proteins, the score <italic>F </italic>was devised in the previous section (Methods Sect<sup><italic>n</italic></sup>.) that combines both a sequence and a structural component. This was used to find the model with the greatest sum-of-scores to the others.</p>
+          <p>An alternative selection test was also considered of selecting the model that had greatest sequence similarity when superposed with the template structure from which it was derived. As most of the sequence similarities considered below lie in the 'twilight-zone', the latter option was only used when one model was clearly better than the others. For this, we choose the criterion that it had to be 10 PSId points clear of its 'rivals'.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec>
+      <title>Abbreviations</title>
+      <p><italic>Fv1</italic>/FV1, gene/gene-product of Friend Virus susceptibility locus-1;</p>
+      <p>MLV, Murine Leukaemia Virus;</p>
+      <p>CA, CApsid protein;</p>
+      <p>HERV-L, Human Endogenous RetroVirus (L family);</p>
+      <p>MuERV-L, Murine Endogenous RetroVirus (L family);</p>
+      <p>MHR, Major Homology Region;</p>
+      <p>NCBI, National Centre for Biotechnology Information;</p>
+      <p>NRDB, Non-Redundant DataBank;</p>
+      <p>MST, Multiple Sequence Threading (program);</p>
+      <p>SSE, Secondary Structure Element;</p>
+      <p>PSId, Percent Sequence Identity;</p>
+      <p>PDB, Protein DataBank;</p>
+      <p>RMSd, Root-Mean Square deviation;</p>
+      <p>wRMSd, weighted Root-Mean Square deviation;</p>
+      <p>uRMSd, unweighted Root-Mean Square deviation;</p>
+      <fig position="float" id="F8">
+        <label>Figure 8</label>
+        <caption>
+          <p><bold>Capsid protein domains</bold>. The structures of the common core of the capsid proteins are shown using the RSV protein [1d1dA] as a representative. (<italic>a</italic>) The N-terminal domain, coloured blue&#x2192;red from amino&#x2192;carboxy termini with the five major helices represented by thickened lines. (<italic>b</italic>) The C-terminal domain, represented as in part (<italic>a</italic>) but with the MHR region marked in white.</p>
+        </caption>
+        <graphic xlink:href="1472-6807-4-1-8"/>
+      </fig>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lilly</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>Fv-2</italic>: identification and localation of a second gene governing the spleen focus response of friend leukemia virus in mice</article-title>
+          <source>J Natl Cancer Inst</source>
+          <year>1970</year>
+          <volume>45</volume>
+          <fpage>136</fpage>
+          <lpage>169</lpage>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lilly</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Pincus</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>genetic control of muring viral leukemogenesis</article-title>
+          <source>Adv Cancer Res</source>
+          <year>1973</year>
+          <volume>17</volume>
+          <fpage>231</fpage>
+          <lpage>277</lpage>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hartley</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Rowe</surname>
+              <given-names>WP</given-names>
+            </name>
+            <name>
+              <surname>Huebner</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Host-range restrictions of murine leukemia virus in mouse embryo cell cultures</article-title>
+          <source>J Virol</source>
+          <year>1970</year>
+          <volume>5</volume>
+          <fpage>221</fpage>
+          <lpage>225</lpage>
+          <pub-id pub-id-type="pmid">4317349</pub-id>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rosenberg</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Jolicoeur</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Coffin JM, Hughes SH, Varmus HE</surname>
+            </name>
+          </person-group>
+          <article-title>Retroviral pathenogenisis</article-title>
+          <source>In Retroviruses</source>
+          <year>1997</year>
+          <publisher-name>Cold Spring Harbor Press, Cold Spring Harbor, N.Y</publisher-name>
+          <fpage>475</fpage>
+          <lpage>585</lpage>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hopkins</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Schindler</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hynes</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Six NB-tropic leukemia viruses derived from a b-tropic virus of BALB/c have altered p30</article-title>
+          <source>J Virol</source>
+          <year>1977</year>
+          <volume>21</volume>
+          <fpage>309</fpage>
+          <lpage>318</lpage>
+          <pub-id pub-id-type="pmid">189069</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rommelaere</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Donis-Keller</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Hopkins</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>RNA sequencing provides evidence for allelism of determinants of the N-, B-, or NB-tropism of murine leukemia viruses</article-title>
+          <source>Cell</source>
+          <year>1979</year>
+          <volume>16</volume>
+          <fpage>43</fpage>
+          <lpage>50</lpage>
+          <pub-id pub-id-type="pmid">217545</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Best</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Le Tissier</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Towers</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Stoye</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <article-title>Positional cloning of the mouse retrovirus restriction gene <italic>fv1</italic></article-title>
+          <source>Nature</source>
+          <year>1996</year>
+          <volume>382</volume>
+          <fpage>826</fpage>
+          <lpage>829</lpage>
+          <pub-id pub-id-type="pmid">8752279</pub-id>
+          <pub-id pub-id-type="doi">10.1038/382826a0</pub-id>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>B&#xE9;enit</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>de Parseval</surname>
+              <given-names>J-F</given-names>
+            </name>
+            <name>
+              <surname>Callebaut</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Cordonnier</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Heidmann</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Cloning of a new nurine endogenous retrovirus MuERV-L with strong similarity to the human HERV-L element and a <italic>gag </italic>coding sequence closely related to the <italic>fv1 </italic>restriction gene</article-title>
+          <source>J Virol</source>
+          <year>5657</year>
+          <volume>71</volume>
+          <fpage>5652</fpage>
+          <lpage>1997</lpage>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goff</surname>
+              <given-names>SP</given-names>
+            </name>
+          </person-group>
+          <article-title>Operating under a gag order: a block against incoming virus by the <italic>fv1 </italic>gene</article-title>
+          <source>Cell</source>
+          <year>1996</year>
+          <volume>86</volume>
+          <fpage>691</fpage>
+          <lpage>693</lpage>
+          <pub-id pub-id-type="pmid">8797814</pub-id>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lund</surname>
+              <given-names>AH</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>FS</given-names>
+            </name>
+          </person-group>
+          <article-title>The nucleotide sequence of the high-leukemogenic murine retrovirus SL3-3 reveals a patch of mink cell focus forming-like sequences upstream of the ecotropic envelope gene</article-title>
+          <source>Arch Virol</source>
+          <year>1999</year>
+          <volume>144</volume>
+          <fpage>2207</fpage>
+          <lpage>2212</lpage>
+          <pub-id pub-id-type="pmid">10603174</pub-id>
+          <pub-id pub-id-type="doi">10.1007/s007050050634</pub-id>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pearl</surname>
+              <given-names>LH</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>Sequence specificity of retroviral proteases</article-title>
+          <source>Nature</source>
+          <year>1987</year>
+          <volume>328</volume>
+          <fpage>482</fpage>
+          <comment>(Communication)</comment>
+          <pub-id pub-id-type="pmid">3302723</pub-id>
+          <pub-id pub-id-type="doi">10.1038/328482b0</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pearl</surname>
+              <given-names>LH</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>A structural model for the retroviral proteases</article-title>
+          <source>Nature</source>
+          <year>1987</year>
+          <volume>329</volume>
+          <fpage>351</fpage>
+          <lpage>354</lpage>
+          <pub-id pub-id-type="pmid">3306411</pub-id>
+          <pub-id pub-id-type="doi">10.1038/329351a0</pub-id>
+        </citation>
+      </ref>
+      <ref id="B13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berman</surname>
+              <given-names>HM</given-names>
+            </name>
+            <name>
+              <surname>Westbrook</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Feng</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Gilliland</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Bhat</surname>
+              <given-names>TN</given-names>
+            </name>
+            <name>
+              <surname>Weissig</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Shindyalov</surname>
+              <given-names>IN</given-names>
+            </name>
+            <name>
+              <surname>Bourne</surname>
+              <given-names>PE</given-names>
+            </name>
+          </person-group>
+          <article-title>The protein data bank</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2000</year>
+          <volume>28</volume>
+          <fpage>235</fpage>
+          <lpage>242</lpage>
+          <comment>Each PDB code specifies a protein that can be viewed or downloaded from: <ext-link ext-link-type="uri" xlink:href="http://www.rcsb.org/pdb/"/></comment>
+          <pub-id pub-id-type="pmid">10592235</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/28.1.235</pub-id>
+        </citation>
+      </ref>
+      <ref id="B14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Holm</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Sander</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Dali/FSSP classification of three-dimensional protein folds</article-title>
+          <source>Nucleic acids research</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>231</fpage>
+          <lpage>234</lpage>
+          <pub-id pub-id-type="pmid">9016542</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/25.1.231</pub-id>
+        </citation>
+      </ref>
+      <ref id="B15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Campos-Olivas</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Newman</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Summers</surname>
+              <given-names>MF</given-names>
+            </name>
+          </person-group>
+          <article-title>Solution structure and dynamics of the rous sarcoma virus capsid protein and comparison with capsid proteins of the other retroviruses</article-title>
+          <source>J Molec Biol</source>
+          <year>2000</year>
+          <volume>296</volume>
+          <fpage>633</fpage>
+          <lpage>649</lpage>
+          <pub-id pub-id-type="pmid">10669613</pub-id>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1999.3475</pub-id>
+        </citation>
+      </ref>
+      <ref id="B16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Khorasanizadeh</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Campos-Olivas</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Summers</surname>
+              <given-names>MF</given-names>
+            </name>
+          </person-group>
+          <article-title>Solution structure of the capsid protein from human T-cell leukemia virus type-1</article-title>
+          <source>J Molec Biol</source>
+          <year>1999</year>
+          <volume>291</volume>
+          <fpage>491</fpage>
+          <lpage>505</lpage>
+          <pub-id pub-id-type="pmid">10438634</pub-id>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1999.2986</pub-id>
+        </citation>
+      </ref>
+      <ref id="B17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Khorasanizadeh</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Campos-Olivas</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Clark</surname>
+              <given-names>CA</given-names>
+            </name>
+            <name>
+              <surname>Summers</surname>
+              <given-names>MF</given-names>
+            </name>
+          </person-group>
+          <article-title>Sequence-specific 1H, 13C and 15N chemical shift assignment and secondary structure of the HTLV-I capsid protein</article-title>
+          <source>J Biomol NMR</source>
+          <year>1999</year>
+          <volume>14</volume>
+          <fpage>199</fpage>
+          <lpage>209</lpage>
+          <pub-id pub-id-type="pmid">10427751</pub-id>
+          <pub-id pub-id-type="doi">10.1023/A:1008307507462</pub-id>
+        </citation>
+      </ref>
+      <ref id="B18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jin</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Jin</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Peterson</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Lawson</surname>
+              <given-names>CL</given-names>
+            </name>
+          </person-group>
+          <article-title>Model for lentivirus capsid core assembly based on crystal dimers of EIAV p26</article-title>
+          <source>J Molec Biol</source>
+          <year>1999</year>
+          <volume>286</volume>
+          <fpage>83</fpage>
+          <lpage>93</lpage>
+          <pub-id pub-id-type="pmid">9931251</pub-id>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1998.2443</pub-id>
+        </citation>
+      </ref>
+      <ref id="B19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Monaco-Malbet</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Berthet-Colominas</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Novelli</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Battai</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Piga</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Cheynet</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Mallet</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Cusack</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Mutual conformational adaptations in antigen and antibody upon complex formationr between an fab and HIV-1 capsid protein p24</article-title>
+          <source>Structure Fold Des</source>
+          <year>1079</year>
+          <volume>8</volume>
+          <fpage>1069</fpage>
+          <lpage>2000</lpage>
+          <pub-id pub-id-type="pmid">11080628</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0969-2126(00)00507-4</pub-id>
+        </citation>
+      </ref>
+      <ref id="B20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein structure alignment using iterated double dynamic programming</article-title>
+          <source>Prot Sci</source>
+          <year>1999</year>
+          <volume>8</volume>
+          <fpage>654</fpage>
+          <lpage>665</lpage>
+        </citation>
+      </ref>
+      <ref id="B21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Altschul</surname>
+              <given-names>SF</given-names>
+            </name>
+            <name>
+              <surname>Madden</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Sch&#xE4;ffer</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>JH</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Lipman</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Gapped BLAST and PSI-BLAST: a new generation of protein database search programs</article-title>
+          <source>Nuc Acid Res</source>
+          <year>3402</year>
+          <volume>25</volume>
+          <fpage>3389</fpage>
+          <lpage>1997</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/25.17.3389</pub-id>
+        </citation>
+      </ref>
+      <ref id="B22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic databank searching with templates and multiple alignment</article-title>
+          <source>J Molec Biol</source>
+          <year>1998</year>
+          <volume>280</volume>
+          <fpage>375</fpage>
+          <lpage>406</lpage>
+          <pub-id pub-id-type="pmid">9665844</pub-id>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1998.1853</pub-id>
+        </citation>
+      </ref>
+      <ref id="B23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>A flexible method to align large numbers of biological sequences</article-title>
+          <source>J Molec Evol</source>
+          <year>1988</year>
+          <volume>28</volume>
+          <fpage>161</fpage>
+          <lpage>169</lpage>
+          <pub-id pub-id-type="pmid">3148736</pub-id>
+        </citation>
+      </ref>
+      <ref id="B24">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Higgins</surname>
+              <given-names>DG</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Webster DM, Walker JM</surname>
+            </name>
+          </person-group>
+          <article-title>Multiple sequence alignment</article-title>
+          <source>In Protein structure prediction, Methods in Molecular Biology</source>
+          <year>2000</year>
+          <volume>143</volume>
+          <publisher-name>Humana Press, Totowa, New Jersey, USA</publisher-name>
+          <fpage>1</fpage>
+          <lpage>18</lpage>
+          <pub-id pub-id-type="doi">10.1385/1-59259-368-2:1</pub-id>
+        </citation>
+      </ref>
+      <ref id="B25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jones</surname>
+              <given-names>DT</given-names>
+            </name>
+          </person-group>
+          <article-title>The PSIPRED protein structure prediction server</article-title>
+          <source>Bioinformatics</source>
+          <year>2000</year>
+          <volume>16</volume>
+          <fpage>404</fpage>
+          <lpage>405</lpage>
+          <pub-id pub-id-type="pmid">10869041</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/16.4.404</pub-id>
+        </citation>
+      </ref>
+      <ref id="B26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiple sequence threading: an analysis of alignment quality and stability</article-title>
+          <source>J Molec Biol</source>
+          <year>1997</year>
+          <volume>269</volume>
+          <fpage>902</fpage>
+          <lpage>943</lpage>
+          <pub-id pub-id-type="pmid">9223650</pub-id>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1997.1008</pub-id>
+        </citation>
+      </ref>
+      <ref id="B27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+            <name>
+              <surname>Orengo</surname>
+              <given-names>CA</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein structure alignment</article-title>
+          <source>J Molec Biol</source>
+          <year>1989</year>
+          <volume>208</volume>
+          <fpage>1</fpage>
+          <lpage>22</lpage>
+          <pub-id pub-id-type="pmid">2769748</pub-id>
+        </citation>
+      </ref>
+      <ref id="B28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+            <name>
+              <surname>S&#xE6;lensminde</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Eidhammer</surname>
+              <given-names>I</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiple protein structure alignment using double-dynamic programming</article-title>
+          <source>Comp Chem</source>
+          <year>2000</year>
+          <volume>24</volume>
+          <fpage>3</fpage>
+          <lpage>12</lpage>
+          <pub-id pub-id-type="pmid">10642876</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0097-8485(99)00043-1</pub-id>
+        </citation>
+      </ref>
+      <ref id="B29">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stevens</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Bock</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Ellis</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Le Tissier</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Bishop</surname>
+              <given-names>KN</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>WR</given-names>
+            </name>
+            <name>
+              <surname>Stoye</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <article-title>Retroviral capsid determinants of the Fv1 NB- and NR-tropism</article-title>
+          <year>2003</year>
+          <comment/>
+        </citation>
+      </ref>
+      <ref id="B30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Towers</surname>
+              <given-names>GJ</given-names>
+            </name>
+            <name>
+              <surname>Bock</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Takeuchi</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Stoye</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Danos</surname>
+              <given-names>O</given-names>
+            </name>
+          </person-group>
+          <article-title>A conserved mechanism of retrovirus restriction in mammals</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2000</year>
+          <volume>97</volume>
+          <fpage>12295</fpage>
+          <lpage>12299</lpage>
+          <pub-id pub-id-type="pmid">11027299</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.200286297</pub-id>
+        </citation>
+      </ref>
+      <ref id="B31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cowan</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hatziioannou</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Cunningham</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Muesing</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Gottlinger</surname>
+              <given-names>HG</given-names>
+            </name>
+            <name>
+              <surname>Bieniasz</surname>
+              <given-names>PD</given-names>
+            </name>
+          </person-group>
+          <article-title>Rcellular inhibitors with fv1-like activity restrict human and simian immunodeficiency virus tropism</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2002</year>
+          <volume>99</volume>
+          <fpage>11914</fpage>
+          <lpage>11919</lpage>
+          <pub-id pub-id-type="pmid">12154227</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.162299499</pub-id>
+        </citation>
+      </ref>
+      <ref id="B32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stoye</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <article-title>An intracellular block to primate lentivirus replication</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2002</year>
+          <volume>99</volume>
+          <fpage>11549</fpage>
+          <lpage>11551</lpage>
+          <pub-id pub-id-type="pmid">12195025</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.192449399</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

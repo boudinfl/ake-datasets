@@ -1,0 +1,322 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="other">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18084649</article-id>
+      <article-id pub-id-type="pmc">2139994</article-id>
+      <article-id pub-id-type="publisher-id">000900022007</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Views &amp; Challenges</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Hypo, hype and &#x2018;hyp&#x2019; human proteins</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Suravajhala</surname>
+            <given-names>Prashanth</given-names>
+          </name>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+        <aff>Institute for Science, Systems and Models, Roskilde University, DK 4000 Roskilde, Denmark</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Corresponding author: E-mail: <email>prash@ruc.dk</email>Phone: +45 46742780</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>7</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>2</volume>
+      <issue>1</issue>
+      <fpage>31</fpage>
+      <lpage>33</lpage>
+      <history>
+        <date date-type="received">
+          <day>11</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>12</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>05</day>
+          <month>7</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2007 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2007</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction in any medium, 
+		for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>
+	   Genes with unknown function are called orphan genes while their transcripts and peptides are called hypothetical proteins. There are many genes and their 
+	   associated proteins that remain uncharacterized in the human genome. A database of human hypothetical proteins with ascribed functions could be helpful 
+	   for biologists to search for potential proteins of interest. In recent years, the rapid completion of genome sequences has created essential information 
+	   to link genes to gene products. In order to better explain functions for un-annotated proteins we designed BioinformaTRICKS (an open source project) and 
+	   used it to develop a database called HYPO.         
+       </p>
+        <sec id="sb1e">
+          <title>Availability</title>
+          <p>The database is available for free at <ext-link ext-link-type="uri" xlink:href="http://pc-dugong.ruc.dk:8080">http://pc-dugong.ruc.dk:8080</ext-link>.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>hypothetical proteins</kwd>
+        <kwd>mining</kwd>
+        <kwd>database</kwd>
+        <kwd>networks</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>As the amount of genome sequence data now available is enormous with more than 750 genomes being either finished or in progress, a biologist is thrown into using 
+several databases with increasing attention to find any novel genes or proteins or function. However, various analyses based on sequence, structure, function and &#x201C;Omic&#x201D; 
+data have revealed different annotation criteria leading to different sets of predicted genes. However, more than 50% of proteins in the proteome zone remain un-annotated 
+and un-identified for function (Table 1 in <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>). The human genome contains many different regulatory sequences that have roles in controlling gene expression. 
+The protein-coding sequences is only less than 1.5 percent of the genome and then rest remains as non-coding inter and intra-genic regions with undetermined role. 
+[<xref ref-type="bibr" rid="R01">1</xref>]</p>
+      <p>The annotation of various human chromosomes is well supported by computational predictions where there is no similarity to known proteins or EST sequences. The genes that 
+have unknown function called as orphan genes code for proteins annotated as &#x201C;hypothetical proteins&#x201D;. Hence, there is a need to begin constructing and analyzing protein families 
+clustered as &#x201C;hypothetical proteins&#x201D; with an aim to elucidate function and protein subunit interactions.</p>
+      <p>After several drafts of Human Genome Project, there are many proteins that remain to be characterized. Tools have been developed to utilize evolutionary relationships 
+towards understanding uncharacterized proteins despite the need to generate functional interaction networks. [<xref ref-type="bibr" rid="R02">2</xref>,<xref ref-type="bibr" rid="R03">3</xref>] 
+In particular, these approaches are being used to annotate functions for hypothetical proteins. Although several databases explore protein functions through data-mining, 
+there is a requirement to list all hypothetical proteins. There are reports that address the problem of orphan genes. [<xref ref-type="bibr" rid="R04">4</xref>] 
+However, there is no adequate information to necessitate function of genes that cannot be based on homology alone, except connected to other known gene family. </p>
+      <p>There are several hypothetical proteins such as the KIAA that have remained hype for some time now. [<xref ref-type="bibr" rid="R05">5</xref>] Systems biology 
+integrated with protein-protein interaction (PPI) studies could identify the role of these unknown proteins (<xref ref-type="fig" rid="F1">Figure 1a</xref>). Systems biology is a science of constructing networks of 
+genes and proteins thereby providing a framework for predicting models. [<xref ref-type="bibr" rid="R06">6</xref>] The proteins connected through the networks 
+could perhaps throw light on the plausible function of the hypothetical proteins through the bona fide interactions they are involved with. </p>
+      <p>In the context of PPI networks, we could consider if a model is to be developed from the network or a network is to be generated with an already established model. Precisely, 
+the putative function of a protein could be better known from a PPI network to develop a model from it. We show here an example in finding the putative function of a hypothetical 
+protein (<xref ref-type="fig" rid="F1">figure 1b</xref>, NP_438169 - B3BP <italic>Homo sapiens</italic> Nedd4-binding protein 2) using a PPI network. The nearest interacting partners of the protein B3BP were mapped using the STRING 
+that could show the probable function of the query [<xref ref-type="bibr" rid="R07">7</xref>]. Information on &#x201C;known&#x201D; or &#x201C;unknown&#x201D; protein-protein interactions is 
+still mostly limited but integrating tools such as these could generalize a way to find the function of hypothetical proteins. </p>
+      <p>While we started mining the proteins, it seemed that there are a few hypothetical proteins that have amino acid residues HYP (histidine, tyrosine and proline) in succession. 
+These might have been long-established through the mutations that are introduced into the proteins at one or more predicted non-essential residues. </p>
+      <p>While a few KIAA proteins are conserved and have been known to be identified as novel [<xref ref-type="bibr" rid="R08">8</xref>], functional analysis of the 
+proteins encoded by these KIAA cDNAs could be established from our database of hypothetical proteins. [<xref ref-type="bibr" rid="R05">5</xref>] A &#x201C;conservative 
+amino acid substitution&#x201D; is the one in which the amino acid residue is replaced with an amino acid residue having a similar side chain. The families of amino acid residues having 
+similar side chains are distinct and include conserved amino acids such as histidine (aromatic/basic side chains), tyrosine (polar side chain) and proline (non polar side chains). 
+On the other hand, these might have appeared during annotation through the mutations introduced randomly along all or part of a coding sequence. Our database has over 6362 hypothetical 
+proteins that could be searched for different functions.</p>
+    </sec>
+    <sec id="s2">
+      <title>Observations and challenges</title>
+      <p>We observe in tandem that few hypothetical proteins present on different chromosomal loci are known to have the same putative function. Categorizing several approaches beyond 
+traditional sequence similarity that utilize tremendously large amounts of data that is available for computational prediction of functions is the need of the hour these days. 
+Having said this, one could use a subset of proteins that match from several of the experimental approaches and be used as a predictor to circumvent the use of wet laboratory 
+experiments in the near future.</p>
+      <p>Another concern now is specifically on hypothetical protein domains in intrinsically disordered proteins (IDPs). [<xref ref-type="bibr" rid="R07">7</xref>] With 
+Protein Data Bank (PDB), not accepting theoretical structures, there is an emphasis for experimental approach by researchers to determine the structure and functional relationship 
+of a protein. Nevertheless, carefully considering the functional annotation methods as discussed above could definitely devise selection for proteins that could be experimented. 
+This could be an interesting approach to pursue further.</p>
+      <p>Yet another issue to be noted is the appraisal to understand if any of the hypothetical proteins have proper functional annotations&#x2019; been attributed to sequence: structure: 
+function relationship in case of ordered proteins while sequence: un-structure: function in case of intrinsically disordered proteins. In conclusion, the current methods could 
+play an important role in establishing functions for proteins annotated as hypothetical in the genome.</p>
+    </sec>
+    <sec id="s3">
+      <title>Note</title>
+      <p>The title of the article contains hypo abbreviated for hypothetical proteins.</p>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Supplementary material</title>
+      <supplementary-material content-type="local-data" id="SD1">
+        <caption>
+          <title>Data 1</title>
+        </caption>
+        <media xlink:href="97320630002031S1.pdf" xlink:type="simple" id="N0x1c4a8c0N0x3605f10" position="anchor" mimetype="application" mime-subtype="pdf"/>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>Thanks are due to the following who have contributed in mining the proteins: Renuka Suravajhala, Roskilde University, 
+Denmark; Tarun Gupta, Panjab University, Chandigarh, India, Umesh Roy, Precision Biotech, New Delhi, India; Chandan Badapanda, 
+National Chemical Laboratory, Pune, India; Arun Gupta, Satyabama University, Chennai, India; Shirish Siddamshetty, 
+St. Martin's college, Hyderabad, India. This project is hosted in bioinformatics.org and bioclues.org. All the contributors 
+are graduate students working virtually for a non-profit bioinformatics community: bioclues.org.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Little</surname>
+              <given-names>PF</given-names>
+            </name>
+          </person-group>
+          <source>Genome Res</source>
+          <year>2005</year>
+          <volume>15</volume>
+          <fpage>1759</fpage>
+          <pub-id pub-id-type="pmid">16339374</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yamasaki</surname>
+              <given-names>C</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Gene</source>
+          <year>2005</year>
+          <volume>364</volume>
+          <fpage>99</fpage>
+          <pub-id pub-id-type="pmid">16185827</pub-id>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>F</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Research</source>
+          <year>2006</year>
+          <volume>34</volume>
+          <fpage>D363</fpage>
+          <pub-id pub-id-type="pmid">16381887</pub-id>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Blayo</surname>
+              <given-names>P</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Theoretical Computer Science</source>
+          <year>2003</year>
+          <volume>290</volume>
+          <fpage>1407</fpage>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nagase</surname>
+              <given-names>T</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Brief Funct Genomic Proteomic</source>
+          <year>2006</year>
+          <volume>5</volume>
+          <fpage>4</fpage>
+          <pub-id pub-id-type="pmid">16769670</pub-id>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Evanko</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Nat Methods</source>
+          <year>2006</year>
+          <volume>3</volume>
+          <fpage>964</fpage>
+          <pub-id pub-id-type="pmid">17190009</pub-id>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Radivojac</surname>
+              <given-names>P</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Biophys J</source>
+          <year>2007</year>
+          <volume>92</volume>
+          <fpage>1439</fpage>
+          <pub-id pub-id-type="pmid">17158572</pub-id>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Doerr</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Nat Methods</source>
+          <year>2007</year>
+          <volume>4</volume>
+          <fpage>8</fpage>
+          <pub-id pub-id-type="pmid">17252630</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+  <floats-wrap>
+    <fig id="F1" position="float">
+      <label>Figure 1</label>
+      <caption>
+        <p>(a) Integrating four methods in making up a database of hypothetical proteins viz., sequence based, structure based, 
+association based and omic based. All the protein accessions were mined using a query (keywords hypothetical AND <italic>Homo 
+sapiens</italic>) from NCBI searches (<ext-link ext-link-type="uri" xlink:href="www.ncbi.nlm.nih.gov">www.ncbi.nlm.nih.gov</ext-link>); 
+for complete list of hypothetical proteins, please visit <ext-link ext-link-type="uri" xlink:href="http://pc-dugong.ruc.dk:8080">http://pc-dugong.
+ruc.dk:8080</ext-link>). (b) Interactors of B3BP are associated through different approaches (Please find the legend in different 
+colors for different approaches). The network neighbourhood of B3BP (Marked in red; Accession #NP_438169) is shown as hypothetical 
+when Entrez NCBI query is made. When this accession was queried using STRING, it facilitates in understanding how and what 
+all the other proteins interacting with NP_438169 are doing in a network</p>
+      </caption>
+      <graphic xlink:href="97320630002031F1"/>
+    </fig>
+  </floats-wrap>
+</article>
+</pmc-articleset>

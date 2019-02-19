@@ -1,0 +1,865 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Med Biol Eng Comput</journal-id>
+      <journal-title>Medical &amp; Biological Engineering &amp; Computing</journal-title>
+      <issn pub-type="ppub">0140-0118</issn>
+      <issn pub-type="epub">1741-0444</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17146692</article-id>
+      <article-id pub-id-type="pmc">1820753</article-id>
+      <article-id pub-id-type="publisher-id">130</article-id>
+      <article-id pub-id-type="doi">10.1007/s11517-006-0130-5</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Algorithm for the classification of multi-modulating signals on the electrocardiogram</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Mita</surname>
+            <given-names>Mitsuo</given-names>
+          </name>
+          <address>
+            <email>mmita@abeam.ocn.ne.jp</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Biomedical Engineering, Iwate Medical University, 19-1 Uchimal, Morioka, Iwate 020-8505 Japan </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>5</day>
+        <month>12</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>3</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>45</volume>
+      <issue>3</issue>
+      <fpage>241</fpage>
+      <lpage>250</lpage>
+      <history>
+        <date date-type="received">
+          <day>16</day>
+          <month>4</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>17</day>
+          <month>10</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; International Federation for Medical and Biological Engineering 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>This article discusses the algorithm to measure electrocardiogram (ECG) and respiration simultaneously and to have the diagnostic potentiality for sleep apnoea from ECG recordings. The algorithm is composed by the combination with the three particular scale transform of <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>u</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>o</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>) and the statistical Fourier transform (SFT). Time and magnitude scale transforms of <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>u</italic><sub><italic>j</italic></sub>(<italic>t</italic>) change the source into the periodic signal and <italic>&#x3C4;</italic><sub><italic>j</italic></sub>&#xA0;=&#xA0;<italic>o</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>) confines its harmonics into a few instantaneous components at <italic>&#x3C4;</italic><sub><italic>j</italic></sub> being a common instant on two scales between <italic>t</italic> and <italic>&#x3C4;</italic><sub><italic>j</italic></sub>. As a result, the multi-modulating source is decomposed by the SFT and is reconstructed into ECG, respiration and the other signals by inverse transform. The algorithm is expected to get the partial ventilation and the heart rate variability from scale transforms among <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>a</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and <italic>u</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) joining with each modulation. The algorithm has a high potentiality of the clinical checkup for the diagnosis of sleep apnoea from ECG recordings.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Fourier transform</kwd>
+        <kwd>Scale transform</kwd>
+        <kwd>Electrocardiogram</kwd>
+        <kwd>Respiratory waveform</kwd>
+        <kwd>Heart rate variability</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; International Federation for Medical and Biological Engineering 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The electrocardiogram (ECG) contains well-known PQRST(U) pattern. Its morphology has been extensively studied since the technique of recording was introduced in the beginning of the twentieth century. The use of computers for ECG recording enabled studies of dynamic properties of the ECG. In particular, two important characteristics have been revealed: amplitude and frequency modulation.</p>
+      <p>The modulation of the cardiac cycle is extensively studied based on the signal that is generated from intervals between consecutives R-peaks, known as heart rate variability (HRV). Numerous approaches have been proposed and the signal have been decomposed in various ways&#x2014;analyzing their spectral properties by frequency and time-frequency methods such as Fourier transform [<xref ref-type="bibr" rid="CR2">2</xref>], autoregressive spectral estimation [<xref ref-type="bibr" rid="CR11">11</xref>], wavelet transform [<xref ref-type="bibr" rid="CR9">9</xref>, <xref ref-type="bibr" rid="CR17">17</xref>], or their scaling properties [<xref ref-type="bibr" rid="CR6">6</xref>].</p>
+      <p>The amplitude characteristics and amplitude modulation received less attention, especially because the notion of the ECG amplitude is ambiguous: the heart as a source of the signal is moving and the signal is collected from the surface of the body that is moving as well. In addition, it is usually recorded as a 2-D projection. However, it has long been recognized that one of the sources of the amplitude modulation&#x2014;the respiratory related movement of the thorax can be usefully used to extract the information about the respiration.</p>
+      <p>The influence of respiration on recording cardiac potentials was reported as early as in 1967; Flaherty et al. [<xref ref-type="bibr" rid="CR5">5</xref>] and Moody et al. [<xref ref-type="bibr" rid="CR13">13</xref>] were probably the first to discuss the possibility to derive the respiratory signal from the ECG. Since then several algorithms were proposed to reconstruct respiration by demodulating the ECG signal (e.g. [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR4">4</xref>, <xref ref-type="bibr" rid="CR8">8</xref>, <xref ref-type="bibr" rid="CR10">10</xref>]).</p>
+      <p>The ECG-derived respiration signal either based on changes in heart rate or based on direct effect of respiration on the ECG waveform has been particularly used in studies of obstructive sleep apnoea [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR16">16</xref>].</p>
+      <p>The problem to reconstruct waveform from the discrete Fourier analysis is that the biological signal has complicated properties; being non-stationary wave, including random noise and having interactive components. However, though people rarely notice, the essential problem is that there is no way to gather impartial and statistical samples. That is why samples from an unique sampling frequency are biased for spectral analysis even if fine sampling.</p>
+      <p>The purpose of this study is to introduce an algorithm to classify the multi-modulating waveforms on ECG signals. The algorithm is composed by the three particular scale transforms and the statistical Fourier transform (SFT) with impartial and statistical samples [<xref ref-type="bibr" rid="CR12">12</xref>]. As a result, the multi-modulating source is decomposed by the SFT and is reconstructed into ECG, respiration and the other signals simultaneously by particular transformations.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Algorithm</title>
+      <p>The principle of this algorithm is the selection of three particular scale transforms. Two scales convert modulating waveforms into the periodic signal and the other converts the periodic components into a few terms. The role of the SFT is to hold sample information for any transforms.</p>
+      <sec id="Sec3">
+        <title>Scale transforms <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>u</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>o</italic><sub><italic>j</italic></sub>(<italic>t</italic>) on modulating signal</title>
+        <p>Since a source sample at any instant <italic>t</italic><sub><italic>k</italic></sub> has the mutual phase relationship of instantaneous components on the SFT, any scale transform including permutation expresses the same sample as own instantaneous components by each scale (Appendix 1).</p>
+        <p>Three scale transforms <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>u</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>o</italic><sub><italic>j</italic></sub>(<italic>t</italic>) are adopted to the periodicity and to the reduction of Fourier components.</p>
+        <p><italic>a</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;<italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is a scale to match time intervals in the standard&#x2019;s intervals and is called adaptive scale and <italic>u</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is a scale to match the magnitude spans in the standard&#x2019;s magnitudes. Those scales convert the source <italic>x</italic>&#x2032;(<italic>t</italic>) into the standard <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>) as <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>x</italic>&#x2032;(<italic>a</italic><sub><italic>j</italic></sub>)/<italic>u</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>). <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>u</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>), then, are defined as a join of each <italic>a</italic><sub><italic>kj</italic></sub>(<italic>t</italic>) and <italic>u</italic><sub><italic>kj</italic></sub>(<italic>a</italic><sub><italic>kj</italic></sub>) (<italic>k&#xA0;</italic>=&#xA0;1,..., <italic>k</italic><sub><italic>j</italic></sub><italic>&#xB7;</italic>) when the standard repeats <italic>k</italic><sub><italic>j</italic></sub> times in a window <italic>T</italic><sub><italic>j</italic></sub>.</p>
+        <p><italic>o</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;<italic>o</italic><sub><italic>j</italic></sub>(<italic>t</italic>), called inherent scale, is a timescale to convert the standard <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>) into the Fourier series of <italic>r</italic><sub><italic>j</italic></sub> components passing through 2<italic>r</italic><sub><italic>j</italic></sub> poles of <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>). The scale transform <italic>&#x3C4;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is defined as the composite transform as follows (Appendix 2): <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \tau _{j} (t) = o_{j} (a_{j} (t)) $$\end{document}</tex-math></disp-formula></p>
+        <p>The transformed signal (<italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>))/<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) occupies <italic>r</italic><sub><italic>j</italic></sub> instantaneous components of the skipped <italic>ik</italic><sub><italic>j</italic></sub>th term in a window <italic>T</italic><sub><italic>j</italic></sub>including <italic>k</italic><sub><italic>j</italic></sub> modulations. While, instantaneous components of the <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)/<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) scatters into broad components from the 1st to the <italic>n</italic>th terms. As a result, (<italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>))/<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) fits the scales <italic>&#x3C4;</italic><sub><italic>j</italic></sub>, <italic>u</italic><sub><italic>j</italic></sub> and <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)/<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) unfits scales <italic>&#x3C4;</italic><sub><italic>j</italic></sub>, <italic>u</italic><sub><italic>j</italic></sub>, and then, the source <italic>x</italic>&#x2032;(<italic>t</italic>) is decomposed into two class modulations of <italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) and <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) (Appendix 3).</p>
+        <p>That is, <italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is extracted by <italic>v</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;&#x3A3;<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)<italic>h</italic><sub><italic>ij</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) from the <italic>ik</italic><sub><italic>j</italic></sub>th (<italic>i&#xA0;</italic>=&#xA0;1,.., <italic>r</italic><sub><italic>j</italic></sub>) components and <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is extracted by the other <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;&#x3A3;<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)<italic>h</italic><sub><italic>ij</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) except the <italic>ik</italic><sub><italic>j</italic></sub>th components when <italic>n</italic> instantaneous components of <italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)/<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) are defined as <italic>h</italic><sub><italic>ij</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>). The source <italic>x</italic>&#x2032;(<italic>t</italic>), therefore, is decomposed into <italic>x</italic>&#x2032;(<italic>t</italic>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) by inverse scale transform <italic>t&#xA0;</italic>=&#xA0;<italic>t</italic>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) under an adequate <italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>).</p>
+        <p>The magnitude scale <italic>u</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is defined as an expression of the magnitude pattern in each window <italic>T</italic><sub><italic>kj</italic></sub> when the signals <italic>v</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)(=<italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)), <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) and <italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) are expressed by {<italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)}<sub><italic>k</italic></sub>, {<italic>&#x3B5;</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)}<sub><italic>k</italic></sub> and {<italic>u</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)}<sub><italic>k</italic></sub> (<italic>k&#xA0;</italic>=&#xA0;1,.., <italic>k</italic><sub><italic>j</italic></sub>), and each changes its waveform independently. Especially, <italic>v</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is expressed by a constant value <italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;<italic>u</italic><sub><italic>kj</italic></sub> in each window <italic>T</italic><sub><italic>kj</italic></sub> when its magnitude modulation takes a similar figure with the standard (Appendix 4).</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Iterative scale classification of modulating signals</title>
+        <p>The timescale transform of the residual <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is defined as <italic>&#x3C4;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>o</italic><sub><italic>j</italic>+1</sub>(<italic>a</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>)) when several waves of {<italic>&#x3B5;</italic><sub><italic>kj</italic></sub>(<italic>t</italic>)/<italic>u</italic><sub><italic>kj+</italic>1</sub>(<italic>t</italic>)}<sub><italic>k</italic></sub> in <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>)/<italic>u</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) reappears within a window <italic>T</italic><sub><italic>j+</italic>1</sub>(<italic>T</italic><sub><italic>j+</italic>1</sub>&#xA0;&#x2264;&#xA0;<italic>T</italic><sub><italic>j</italic></sub>). <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is analyzed as the <italic>j&#xA0;</italic>+&#xA0;1th modulation with the iterative algorithm as <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) and <italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) under <italic>a</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>), <italic>o</italic><sub><italic>j+</italic>1</sub>(<italic>a</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>)), <italic>u</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and <italic>x</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) (Appendix 2).</p>
+        <p>When <italic>x&#x2032;</italic>(<italic>t</italic>) is <italic>m</italic> classes of Fourier series with terms of <italic>r</italic><sub>1</sub>, <italic>r</italic><sub>2</sub>,..., <italic>r</italic><sub><italic>m</italic></sub> (<italic>n&#xA0;</italic>=&#xA0;<italic>r</italic><sub>1</sub>&#xA0;+&#xA0;<italic>r</italic><sub>2</sub>&#xA0;+&#xA0;
+<inline-formula id="IEq1"><!-- Alternate image not processed: 11517_2006_130_Article_IEq1.gif --><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \cdots $$\end{document}</tex-math></inline-formula>&#xA0;+&#xA0;<italic>r</italic><sub><italic>m</italic></sub>), it expresses Eq. <xref rid="Equ2" ref-type="">2</xref>. <disp-formula id="Equ2"><label>2</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ x'(t){\text{ }} = {\sum {u_{j} } }(\tau _{j} (t))v_{j} (\tau _{j} (t)) + \varepsilon _{m} (t)\quad (j = 1,...,m) $$\end{document}</tex-math></disp-formula></p>
+        <p>In Eq. <xref rid="Equ2" ref-type="">2</xref>, <italic>t</italic>&#xA0;=&#xA0;<italic>t</italic>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is the inverse scale transform of the <italic>j</italic>th scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub> to scale <italic>t</italic>, <italic>v</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is a Fourier series of the <italic>j</italic>th class modulation, and <italic>&#x3B5;</italic><sub><italic>m</italic></sub>(<italic>t</italic>) is the <italic>m</italic>th residual signal. Equation&#xA0;<xref rid="Equ2" ref-type="">2</xref> shows that <italic>x&#x2032;</italic>(<italic>t</italic>) is reconstructed completely by periodic Fourier series <italic>v</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) on scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub> (<italic>j&#xA0;=&#xA0;</italic>1,2,<italic>..., m</italic>).</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Quantity of information on the modulating signal</title>
+        <p>The relation between the quantity of information (<xref rid="Equ3" ref-type="">3</xref>) and the modulation (<xref rid="Equ4" ref-type="">4</xref>) is derived from formula (<xref rid="Equ2" ref-type="">2</xref>).</p>
+        <p>Since the probability of components on the <italic>j</italic>th class modulation is to be <italic>p</italic><sub><italic>j</italic></sub><italic>&#xA0;=&#xA0;r</italic><sub><italic>j</italic></sub><italic>/n</italic>, the probability to encounter <italic>x&#x2032;</italic>(<italic>t</italic>) with <italic>m</italic> modulations is <italic>p</italic>(<italic>r</italic><sub>1</sub>,<italic>r</italic><sub>2</sub>,..., <italic>r</italic><sub><italic>m</italic></sub>)&#xA0;=&#xA0;<italic>p</italic><sub arrange="stack">1</sub><sup arrange="stack"><italic>r</italic>1</sup>, <italic>p</italic><sub arrange="stack">2</sub><sup arrange="stack"><italic>r</italic>2</sup>,<italic>...</italic>, <italic>p</italic><sub arrange="stack"><italic>m</italic></sub><sup arrange="stack"><italic>rm</italic></sup> which relates to the geometrical mean 
+<inline-formula id="IEq2"><!-- Alternate image not processed: 11517_2006_130_Article_IEq2.gif --><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \sqrt[n]{p}{\left( {r_{1} ,r_{2} , \ldots ,r_{m} } \right)} $$\end{document}</tex-math></inline-formula>. Equation is as follows (Appendix 5). <disp-formula id="Equ3"><label>3</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \sqrt[n]{p}{\text{(}}r_{1} {\text{,}}r_{2} {\text{,}}...r_{m} {\text{) = }}{\prod {p^{{pj}}_{j} = 1/m} } $$\end{document}</tex-math></disp-formula></p>
+        <p>It clearly shows that the quantity of information on multi-modulating signal is <italic>m</italic> itself.</p>
+        <p>When <italic>h</italic><sub><italic>ij</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is the <italic>i</italic>th instantaneous Fourier component of standard <italic>x</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) in scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub> and <italic>h</italic><sub><italic>ij</italic></sub>(<italic>t</italic>) is its modulating component in scale <italic>t</italic>, the morphological relation is given by the following Formula (<xref rid="Equ4" ref-type="">4</xref>): <disp-formula id="Equ4"><label>4</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ h_{{ij}} (t) = u_{j} (\tau _{j} )h_{{ij}} (\tau _{j} )\partial \tau _{j} /\partial t $$\end{document}</tex-math></disp-formula></p>
+        <p>In Eq. <xref rid="Equ4" ref-type="">4</xref>, &#x2202;<italic>&#x3C4;</italic><sub><italic>j</italic></sub>/&#x2202;<italic>t</italic> is the Jacobian. Therefore, formula (<xref rid="Equ4" ref-type="">4</xref>) shows that the modulation of every component at scale <italic>t</italic> is expressed by scale&#x2019;s modulations on its magnitude <italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) and its time <italic>&#x3C4;</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>o</italic><sub><italic>j</italic></sub>(<italic>a</italic>(<italic>t</italic>)). Especially, the adaptive scale <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>) describes composite transform <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>c</italic><sub>1</sub>(<italic>c</italic><sub>2</sub>(
+<inline-formula id="IEq3"><!-- Alternate image not processed: 11517_2006_130_Article_IEq3.gif --><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \cdots $$\end{document}</tex-math></inline-formula><italic>c</italic><sub><italic>n</italic></sub>(<italic>t</italic>))) and that of exchanged orders <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>c</italic><sub><italic>n</italic></sub>(
+<inline-formula id="IEq4"><!-- Alternate image not processed: 11517_2006_130_Article_IEq4.gif --><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \cdots $$\end{document}</tex-math></inline-formula><italic>c</italic><sub>2</sub> (<italic>c</italic><sub>1</sub> (<italic>t</italic>))), so the <italic>s</italic>th scale <italic>c</italic><sub>s</sub>(<italic>t</italic>) will express its specific modulation from the standard such as modulations of PQ, QRS, QT and RR.</p>
+      </sec>
+    </sec>
+    <sec id="Sec6" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <p>The analysis of scale classification of the three modulating signals on V4 lead was carried out by using the statistical Fourier analysis with maximum terms of 256 with A/D converted 16-bit samples of the sampling frequency 20&#xA0;kHz over successive 50&#xA0;s. To gather independent samples with 256 terms, samples needed to be accumulated by the high speed 20&#xA0;kHz of A/D converter with a large dynamic range of 16&#xA0;bit to avoid the deform of a tiny respiratory signal (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>).
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Synchronous frequency samplings on scale <italic>t</italic> and <italic>&#x3C4;</italic></p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig1_HTML" id="MO1"/></fig></p>
+      <p>The ECG standard <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>) was selected from the source <italic>x&#x2032;</italic>(<italic>t</italic>) without breathing. On the other hand, <italic>x&#x2032;</italic>(<italic>t</italic>) with natural breathing and the respiratory flow <inline-formula id="IEq10"><!-- Alternate image not processed: 11517_2006_130_Article_IEq10.gif --><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\dot{V}(t)$$\end{document}</tex-math></inline-formula> are recorded simultaneously by using Number 3 Fleisch pneumotachograph. Both the ECG and the respiratory scale transforms were the same as in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a, b of Appendix 2. The ECG <italic>x&#x2032;</italic>(<italic>t</italic>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and its baseline wander <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) were analyzed when <italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;1 and the respiratory standard <italic>x</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) was selected from stationary sequences of <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) in 16 respiratory cycle. (<italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>)&#xA0;&#x2212;&#xA0;<italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>))/<italic>u</italic><sub><italic>j</italic>+1</sub>(<italic>&#x3C4;</italic><sub><italic>j</italic>+1</sub>) and <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>)/<italic>u</italic><sub><italic>j+</italic>1</sub>(<italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>) were analyzed when <italic>u</italic><sub><italic>j</italic>+1</sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) of the formula (<xref rid="Equ5" ref-type="">5</xref>) in Appendix 4 and lung ventilation <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and its residual <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) were determined.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>ECG and respiratory standard waves and specific points on scale <italic>t</italic>. <bold>a</bold> Cardiac standard, <bold>b</bold> respiratory standard, and <bold>c</bold> detecting dots on a part of the source</p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig2_HTML" id="MO2"/></fig></p>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Results</title>
+      <p>Signals corresponding to every process on the scale classification of<italic> m</italic>&#xA0;=&#xA0;2 under constant magnitude scale of <italic>u</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;1 are illustrated in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> with five cardiac periods. That is, intervals among specific points in source <italic>x&#x2032;</italic>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a are transformed into the same intervals of the standard signal with the adaptive scale <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>) to <italic>x&#x2032;</italic>(<italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>)) of Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b and with the inherent scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) to <italic>x&#x2032;</italic>(<italic>o</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>))) of Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>c. The transformed signal <italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is decomposed into statistical Fourier components on a fundamental period of 53 cardiac intervals. The transformed signal <italic>x</italic><sub><italic>j</italic></sub><italic>&#x2032;</italic>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>d is a reconstructed signal from the 53rd, 106th, 159th and 212th components, and its residual <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>e from all other components. The extracted ECG <italic>x</italic><sub><italic>j</italic></sub>&#x2032;(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>f and the base line wander <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>g are the inverse scale-transformed signals from scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub> to scale <italic>t</italic>. When tiny-leak signals on the <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) synchronized with intervals of QT are replaced with linear trends, the figure of pattern <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) takes that of the lung ventilation in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>i. The smoothing signal, <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>h is a filtered signal of <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) with low-pass filter (LPF) under 30 terms (0.6&#xA0;Hz). <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is illustrated with enlarged four times. The signal <italic>V</italic>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>i is the lung ventilation curve which is an integral signal of the direct measurement of the respiratory flow <inline-formula id="IEq9"><!-- Alternate image not processed: 11517_2006_130_Article_IEq9.gif --><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\dot{V}(t).$$\end{document}</tex-math></inline-formula><fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Classified process of modulating signal of the algorithm</p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig3_HTML" id="MO3"/></fig></p>
+      <p>Any differences of P<italic>&#xA0;</italic>&#x223C;&#xA0;U waveforms between the source <italic>x</italic>&#x2032;(<italic>t</italic>) and reconstructed ECG <italic>x&#x2032;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) bear getting information, and also the differences between ventilation <italic>V</italic>(<italic>t</italic>) and baseline wander <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) are small when frequencies lower than breathing are neglected. <italic>x</italic>&#x2032;<sub><italic>j</italic></sub>(<italic>t</italic>) provides time-interval information on Minnesota codes better than that of <italic>x</italic>&#x2032;(<italic>t</italic>) clearly in visual.</p>
+      <p>Correlation coefficients <italic>&#x3C1;</italic> between the signal <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>) are calculated by each ventilation with scatter plots in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a, and are classified by P&#xA0;&#x223C;&#xA0;U waves of 53 cardiac signals in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>a and by respiratory phases of 16 ventilations in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>b. Total <italic>&#x3C1;</italic> takes even values (<italic>&#x3C1;&#xA0;&#x2248;</italic>&#xA0;0.82) and has less interference between P&#xA0;&#x223C;&#xA0;U waves in cardiac cycles. However, it takes low values (<italic>&#x3C1;&#xA0;&#x2264;&#xA0;</italic>0.5) at the transient regions of I, III between the inspiration and the expiration corresponding to loops in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a. The inspiration and the expiration except transient regions are statistically dominant at higher value (<italic>&#x3C1;&#xA0;&#x2248;&#xA0;</italic>0.95). It is clear that the scale classification extracts the electrical activity of the heart with constant magnitude scale of <italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;1 in hole window of <italic>T</italic><sub><italic>j</italic></sub>. The extracted baseline wander is constructed with lung ventilation and other biological information.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p><italic>X</italic>&#x2013;<italic>Y</italic> loop among modulating <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>)</p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig4_HTML" id="MO4"/></fig><table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Correlation coefficients <italic>&#x3C1;</italic><sub><italic>i</italic></sub> among <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>V</italic><sub><italic>j</italic>+</sub><sub>1</sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>) on cardiac and respiratory stages</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Cardiac stages</th><th align="left">PQ</th><th align="left">QRS</th><th align="left">ST-T</th><th align="left">Base line</th><th align="left"/><th align="left">Total</th></tr></thead><tbody><tr><td align="left" colspan="7">(a) Correlation coefficients <italic>&#x3C1;</italic><sub>i</sub> between <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>) on ECG stages</td></tr><tr><td align="left"><italic>&#xA0;&#x3C1;</italic><sub><italic>i</italic></sub></td><td char="." align="left">0.8328</td><td char="." align="left">0.8243</td><td char="." align="left">0.8149</td><td char="." align="left">0.8151</td><td align="left"/><td char="." align="left">0.8244</td></tr><tr><td align="left">&#xA0;Number of samples</td><td char="." align="left">13,566</td><td char="." align="left">12,690</td><td char="." align="left">33,018</td><td char="." align="left">43,553</td><td align="left"/><td char="." align="left">102,827</td></tr></tbody></table><table frame="hsides" rules="groups"><thead><tr><th align="left">Respiratory stages</th><th char="." align="left">I </th><th char="." align="left">II </th><th char="." align="left">III </th><th char="." align="left">VI </th><th char="." align="left">V </th><th char="." align="left">Total</th></tr></thead><tbody><tr><td align="left" colspan="7">(b) Correlation coefficients <italic>&#x3C1;</italic><sub><italic>i</italic></sub> between <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>) on respiratory stages</td></tr><tr><td align="left"><italic>&#xA0;&#x3C1;</italic><sub><italic>i</italic></sub></td><td align="left">0.3990</td><td align="left">0.9788</td><td align="left">0.5772</td><td align="left">0.9970</td><td align="left">0.9546</td><td align="left">0.7273</td></tr><tr><td align="left">&#xA0;Number of samples</td><td align="left">25,747</td><td align="left">25,210</td><td align="left">25,928</td><td align="left">14,574</td><td align="left">11,558</td><td align="left">103,017</td></tr><tr><td align="left" colspan="7">(c) Correlation coefficients <italic>&#x3C1;</italic><sub><italic>i</italic></sub> between <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>) on respiratory stages</td></tr><tr><td align="left"><italic>&#xA0;&#x3C1;</italic><sub><italic>i</italic></sub></td><td align="left">0.9923</td><td align="left">0.6589</td><td align="left">0.9943</td><td align="left">0.8032</td><td align="left">0.7305</td><td align="left">0.91648</td></tr><tr><td align="left">&#xA0;Number of samples</td><td align="left">25,286</td><td align="left">22,816</td><td align="left">21,163</td><td align="left">15,155</td><td align="left">18,077</td><td align="left">102,497</td></tr></tbody></table><table-wrap-foot><p><italic>I</italic> inspirations before midpoints, <italic>II</italic> inspirations after midpoints, <italic>III</italic> expirations before midpoints, <italic>VI</italic> expirations after midpoints, <italic>V</italic> expirations after inflection points</p></table-wrap-foot></table-wrap></p>
+      <p>The magnitude scale transform is applied to the scale classification of the base line wander <italic>V</italic><sub><italic>j</italic></sub>(<italic>t</italic>) with a respiratory standard in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b. Scale classification of <italic>m</italic>&#xA0;=&#xA0;4 is illustrated in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>, the source <italic>x&#x2032;</italic>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a, the extracted ECG <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b, the extracted respiratory signal <italic>V</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>c, the residual <italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>d, the leak ECG <italic>&#x3B5;</italic>(<italic>t</italic>) over 0.6&#xA0;Hz of <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>e and the ECG of <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;+&#xA0;<italic>&#x3B5;</italic>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>f. The signal <italic>V</italic>(<italic>t</italic>) in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>g is 16 measured respiratory ventilations. The magnitude scale &#x394;<italic>u</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) is illustrated in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>h<italic>.</italic><italic>V</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) and <italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) are displayed in the reverse because the extracted respiratory waveform is a visually reversed <italic>V</italic>(<italic>t</italic>). <italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) is similar to base-line trends of <italic>V</italic>(<italic>t</italic>) which relate to the thoracic gas volume (TGV).
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Scale classification of the four modulating signals in an electro-cardiac signal</p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig5_HTML" id="MO5"/></fig></p>
+      <p>The scatter plots of 15 lung ventilations between <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and <italic>V</italic>(<italic>t</italic>) take the similar pattern as illustrated in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b<italic>.</italic> Correlation coefficients <italic>&#x3C1;</italic> in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>c takes higher value than the others though transient regions change I, III into II, IV.</p>
+      <p>The frequency distributions of the amplitude components on |<italic>V</italic>(<italic>f</italic>)|, |<italic>V</italic><sub><italic>j+</italic>1</sub>(<italic>f</italic>)|, |<italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>f</italic>)| and that of phase shifts &#x394;<italic>&#x3C6;</italic>(<italic>f</italic>) between <italic>V</italic>(<italic>f</italic>) and <italic>V</italic><sub><italic>j+</italic>1</sub>(<italic>f</italic>) are illustrated in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>. On frequency ranges from 0.2 to 0.5&#xA0;Hz, amplitude distribution in |<italic>V</italic>(<italic>f</italic>)| and |<italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>f</italic>)| takes similar pattern and those of phase shifts are invariant near 0&#xB0;. Amplitude distribution in |<italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>f</italic>)| has not only the lower frequency components under 0.06&#xA0;Hz corresponding to the trends of TGV but also the leak components of the lung ventilation from 0.25 to 0.5&#xA0;Hz. The components of |<italic>&#x3B5;</italic><sub><italic>j+</italic>1</sub>(<italic>f</italic>)|, moreover, has the harmonics among 0.04, 0.1, 0.18 and 0.28&#xA0;Hz though those harmonics disappear in |<italic>V</italic>(<italic>f</italic>)| and |<italic>V</italic><sub><italic>j+</italic>1</sub>(<italic>f</italic>)| at least.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Frequency distributions of the measured <italic>V</italic>(<italic>f</italic>) and the extracted <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>f</italic>), <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>f</italic>)</p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig6_HTML" id="MO6"/></fig></p>
+      <p>As a result, the time and magnitude scale is effective to classify modulating signals from the higher frequency <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) to the lower frequency <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) because a residual <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) has less interference of the higher <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) and successive sequential <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) will supply the signal for detecting other lower modulation.</p>
+    </sec>
+    <sec id="Sec8">
+      <title>Discussion and conclusion</title>
+      <p>A discrepancy between time domain and frequency domain analysis happens commonly by using biased samplings for discrete signal processing in various way such as Hilbert transform [<xref ref-type="bibr" rid="CR2">2</xref>] and wavelet analysis [<xref ref-type="bibr" rid="CR9">9</xref>] relating with an unique sampling frequency. Moreover, the mathematical concepts of one-to-one correspondence, <italic>n</italic> unknown amplitudes and phases are derived from 2<italic>n</italic> samples, hinders to orientate the statistics in the signal processing.</p>
+      <p>The SFT, however, has no contradiction between Fourier analysis and the statistics which resolute components with the same signal-to-nose ratio (SNR) for any signal decreasing amplitude components with order 1/<italic>f</italic> such as ECG signal, which is unsatisfied in the autoregressive spectral estimation [<xref ref-type="bibr" rid="CR11">11</xref>]. The SFT component, moreover, is given independently by a time trace of instantaneous components at each instant as shown in Appendix 1. That is, its amplitude and phase are not calculated by the inner products between the source and trigonometric bases but by the extracted traces of instantaneous sin-wave themselves [<xref ref-type="bibr" rid="CR12">12</xref>]. The concepts of signal arrangements at series {<italic>t</italic><sub><italic>k</italic></sub>} is another thing on the SFT because the replacement between <italic>t</italic><sub><italic>i</italic></sub> and <italic>t</italic><sub><italic>j</italic></sub> needs the replacements of all the synchronous frequency samplings between <italic>t</italic><sub><italic>i</italic></sub> and <italic>t</italic><sub><italic>j</italic></sub>to hold the same instantaneous components. The summation of replacements, then, is about 
+<inline-formula id="IEq5"><!-- Alternate image not processed: 11517_2006_130_Article_IEq5.gif --><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ (n - 1)!\,(n - 2)!\, \cdots \,1 $$\end{document}</tex-math></inline-formula>. In other words, the SFT supplies a signal ensemble arranging samples of the series {<italic>t</italic><sub><italic>k</italic></sub>}. In this study, discrete samples from A/D converter of 20&#xA0;kHz satisfy the independency as shown in Appendix 6. As a result, the random noise including a signal is not analyzed as a white noise but as inherent components characterizing arrangements. Therefore, the reconstructed waveform of a baseline wander holds a prototype even if it includes many random noises.</p>
+      <p>The necessary condition of the spectral analysis known as Nyquist&#x2019;s condition [<xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR15">15</xref>] becomes precise on the SFT as shown in Appendix 3, which confirms its condition statistically. The potentiality to scatter the aliased components impartially discriminates the waveforms under the unsatisfied Nyquist&#x2019;s condition. In this algorithm, while the inherent scale transform converges to the standard <italic>x</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) with four skipping components, others <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>), either continuous or random, disperse components into 256 terms.</p>
+      <p>Since the scale-transformed samples on the SFT are gathered from a whole window at any instant, those samples reflect its scale transform better than any local one. The random and leak signal on the extracted ECG <italic>x</italic><sub><italic>j</italic></sub><italic>&#x2032;</italic>(<italic>t</italic>) are reduced into the tiny level under a stable behavior of the random noise. The 256 terms is enough to analyze scale-transformed signal in a window under 53 cardiac cycles because transformed components with the ranges, 8&#xA0;&#x2264;&#xA0;<italic>k</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>&#x2264;&#xA0;53, takes almost the same figures. The high-resolution analysis, therefore, is accomplished by the relative high SNR from those instantaneous components.</p>
+      <p>The problem on the scale transforms is to be adequate scales, not to be expressing the true biological modulation. <italic>a</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) is, however, selected a traditional scale for non-stationary sequences in each respiratory cycle which carry information stored in Fourier phases as already indicated in [<xref ref-type="bibr" rid="CR6">6</xref>] and <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>) is selected from cardiac cycles without breathing in addition to the non-stationary sequences. As a result, <italic>o</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>) and <italic>o</italic><sub><italic>j</italic>+1</sub>(<italic>a</italic><sub><italic>j</italic>+1</sub>) make those mutual relationship of phases more simple relations. Taking own standard characterized with number of poles is also reasonable to determine the waveform reconstruction and to discriminate the own HRV. Moreover, the lost waveform is scattered into the other components without losing the morphologic information such as the leak ECG waveform.</p>
+      <p>It is well known the volume conductivity of the thorax takes inequality and changes the electro cardiac potentials on the thorax&#x2019;s surface with respiratory movements [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR5">5</xref>].</p>
+      <p>In the scale classification of <italic>m</italic>&#xA0;=&#xA0;4, it indicates that a constant magnitude scale <italic>u</italic><sub><italic>kj</italic></sub><italic>&#xA0;</italic>=&#xA0;1 produces unchangeable heart-activity <italic>x</italic><sub><italic>j</italic></sub><italic>&#x2032;</italic>(<italic>t</italic>) so that the signal <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>t</italic>) appears in respiratory modulations from their changes of the conductivity. It suggests that the standard without breathing follows the formula (<xref rid="Equ2" ref-type="">2</xref>) of the signal classification and the source follows the formula (<xref rid="Equ4" ref-type="">4</xref>) which expresses the modulating standard with Jacobian, &#x2202;<italic>&#x3C4;</italic><sub><italic>j</italic></sub>/&#x2202;<italic>t.</italic> A composite scale <italic>c</italic><sub><italic>s</italic></sub>(<italic>t</italic>), therefore, is expected to express the inherent modulation from the standard such as PQ, QT and RR. That is, the spectral analysis of <italic>c</italic><sub><italic>s</italic></sub>(<italic>t</italic>) on RR provides the distribution of the HRV without a tachogram which is expressed in other ways by others [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR9">9</xref>, <xref ref-type="bibr" rid="CR11">11</xref>]. The extracted ECG has the potentiality to detect R&#x2013;R modulations of the heart itself.</p>
+      <p>The algorithm extracts the lung ventilation curves {<italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>)}<sub><italic>k</italic></sub> from V4 lead as changing the thoracic gas volume [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR4">4</xref>]. The difference of amplitude distribution between <italic>V</italic>(<italic>t</italic>) and <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) from spectral analysis takes the same pattern around 0.3&#xA0;Hz [<xref ref-type="bibr" rid="CR8">8</xref>]. The phase difference between <italic>V</italic>(<italic>t</italic>) and <italic>V</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>), however, occurs in the transient regions between the inspiration and the expiration which deduce from inadequate respiratory standards, false respiratory peaks and the gas compression in the thorax [<xref ref-type="bibr" rid="CR7">7</xref>]. It is effective to determine specific components, such as harmonics of <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) around (0.04, 0.1, 0.18 and 0.28&#xA0;Hz) in cardiovascular responses [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR17">17</xref>].</p>
+      <p>Information of the partial ventilation is also expected from other 12 leads [<xref ref-type="bibr" rid="CR8">8</xref>]. The respiratory Jacobian &#x2202;<italic>&#x3C4;</italic><sub><italic>j</italic>+1</sub>/&#x2202;<italic>t</italic>, like that of ECG, has the potentiality to detect respiratory modulation itself as a part of the HRV and <italic>u</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) is expected to detect the amplitude modulation such as sighs distribution. The residual <italic>&#x3B5;</italic><sub><italic>j</italic>+1</sub>(<italic>t</italic>) supplies information of waveforms not only of the thoracic gas volume but also of the blood flow relating to cardiovascular responses [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR17">17</xref>].</p>
+      <p>It can be concluded that this algorithm reveals the simultaneous measurements of ECG and respiration. The comparison with the frequency distribution and the waveform evaluates new modulations clearly, such as <italic>u</italic><sub><italic>kj</italic>+1 </sub>for detecting changes of the tidal volume (TV) and for finding TGV and cardiovascular responses. This contribution of the algorithm indicates diagnostic potentials on the sleep apnoea from ECG recordings [<xref ref-type="bibr" rid="CR16">16</xref>].</p>
+    </sec>
+  </body>
+  <back>
+    <app-group>
+      <app id="App1">
+        <title>Appendix 1</title>
+        <p>Instantaneous Fourier components on the SFT at any instant <italic>t</italic><sub><italic>k</italic></sub> are derived from samples of the synchronous frequency samplings from the source, having maximum components number of <italic>n</italic>, as illustrated in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a. Those samples at any instant <italic>t</italic><sub><italic>k</italic></sub> are independent of each other when the <italic>t</italic><sub><italic>k</italic></sub> is given by <italic>t</italic><sub><italic>k</italic></sub><italic>&#xA0;</italic>=&#xA0;<italic>kT</italic><sub><italic>j</italic></sub><italic>/s</italic> (<italic>k&#xA0;</italic>=&#xA0;0,..., <italic>s&#xA0;</italic>&#x2212;&#xA0;1) in a window <italic>T</italic><sub><italic>j</italic></sub> for a prime number s of <italic>s&#xA0;</italic>&gt;&#xA0;2<italic>n</italic>. Although the sampling timing from the transformed source at scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub> is the same pattern in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a, timing at scale <italic>t</italic> becomes as illustrated in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b. Any source sample, therefore, is expressed by own components on each scale independently.</p>
+      </app>
+      <app id="App2">
+        <title>Appendix 2</title>
+        <p>The ECG standard <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and its scale-transformed signal <italic>x</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) are illustrated in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a and those of the respiratory <italic>x</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) and <italic>x</italic><sub><italic>j+</italic>1</sub>(<italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>) are illustrated in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b<italic>.</italic><italic>x</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is four terms of Fourier series passing eight poles of <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>). <italic>x</italic><sub><italic>j+</italic>1</sub>(<italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>) is a sin wave passing two poles of <italic>x</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>). Inherent scale <italic>&#x3C4;</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;<italic>o</italic><sub><italic>j</italic></sub>(<italic>t</italic>) and <italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>&#xA0;=&#xA0;<italic>o</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) are defined as transforms from <italic>x</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>x</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) into <italic>x</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>), <italic>x</italic><sub><italic>j+</italic>1</sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>).</p>
+        <p>The detected specific points for the source and the ECG standard are illustrated in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a, c as a dot curve. These dots indicate start, pole and end of the P&#xA0;&#x223C;&#xA0;U waves in each cardiac cycle. Specific points of lung ventilation are the poles of inspiration, expiration, midpoints and expiratory inflection point in each respiratory period. The midpoints represent respiratory maximum flows and expiratory inflection points distinguish expirations relating to pleural pressure. Points are determined to divide time interval of the specific-points into 6&#xA0;&#x223C;&#xA0;16 to approximate true signals. Both the ECG and the respiratory standard are line curves of connected points. The adaptive scales <italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>), <italic>a</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>) are coordinated by divided points after adjusting detected specific points to those of the standard. The scale-transformed signal <italic>x&#x2032;</italic>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) and that of the residual <italic>&#x3B5;</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) at scales <italic>&#x3C4;</italic><sub><italic>j</italic></sub>, <italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub> are determined from formula (<xref rid="Equ2" ref-type="">2</xref>), whereas the scale transforms are <italic>&#x3C4;</italic><sub><italic>j</italic></sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>o</italic><sub><italic>j</italic></sub>(<italic>a</italic><sub><italic>j</italic></sub>(<italic>t</italic>)) and <italic>&#x3C4;</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>)&#xA0;=&#xA0;<italic>o</italic><sub><italic>j+</italic>1</sub>(<italic>a</italic><sub><italic>j+</italic>1</sub>(<italic>t</italic>)).</p>
+      </app>
+      <app id="App3">
+        <title>Appendix 3</title>
+        <p>The inherent transform <italic>o</italic><sub><italic>j</italic></sub>(<italic>t</italic>) satisfies the necessary condition of the SFT analysis because Fourier components appear in the skipped <italic>ik</italic><sub><italic>j</italic></sub>th (<italic>i&#xA0;</italic>=&#xA0;1,..,<italic>r</italic><sub><italic>j</italic></sub>) terms under <italic>n&#xA0;</italic>&gt;&#xA0;<italic>r</italic><sub>j</sub><italic>k</italic><sub><italic>j</italic></sub> when <italic>x</italic>&#x2032;(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)/<italic>u</italic><sub><italic>j</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) is periodic waves of <italic>k</italic><sub><italic>j</italic></sub> standard. Contrarily, instantaneous components are scattering into broadband of 1st &#x223C; <italic>n</italic>th components when the source <italic>x</italic>&#x2032;(<italic>t</italic>) unfits scales <italic>&#x3C4;</italic><sub><italic>j</italic></sub>, <italic>u</italic><sub><italic>j</italic></sub>.</p>
+        <p>The necessary condition of the SFT analysis is that the mean <italic>m</italic><sub><italic>i</italic></sub>(<italic>t</italic><sub><italic>k</italic></sub>)(<italic>i&#xA0;</italic>=&#xA0;<italic>n </italic>+&#xA0;1,..., 2<italic>n</italic>) over the (<italic>n</italic>&#xA0;+&#xA0;1)th of synchronous frequency sampling takes the same value at any instant <italic>t</italic><sub><italic>k</italic></sub> as <italic>m</italic><sub><italic>n+</italic>1</sub>(<italic>t</italic><sub><italic>k</italic></sub>)&#xA0;=&#xA0;<italic>m</italic><sub><italic>n+</italic>2</sub>(<italic>t</italic><sub><italic>k</italic></sub>)&#xA0;=&#xA0;
+<inline-formula id="IEq6"><!-- Alternate image not processed: 11517_2006_130_Article_IEq6.gif --><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \cdots $$\end{document}</tex-math></inline-formula>&#xA0;=&#xA0;<italic>m</italic><sub><italic>2n</italic></sub>(<italic>t</italic><sub><italic>k</italic></sub>) which has the same properties with Nyquist&#x2019;s condition. Each instantaneous component includes errors of aliased components under the unsatisfied condition, but the summation of all the instantaneous components comes back to a source sample completely at any instant and the SNR of each component is improved with an adequate <italic>n</italic> value because the aliased errors are scattered into <italic>n</italic> components monotonously than those of the unique-interval samplings.</p>
+      </app>
+      <app id="App4">
+        <title>Appendix 4</title>
+        <p>The <italic>&#x394;u</italic><sub><italic>kj</italic></sub>(=<italic>u</italic><sub><italic>kj</italic></sub>&#xA0;&#x2212;&#xA0;1) is given by the following formula (<xref rid="Equ5" ref-type="">5</xref>) when <italic>x</italic><sub><italic>k</italic></sub><italic>&#x2032;</italic>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;<italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;+&#xA0;<italic>&#x3B5;</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) under <italic>u</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;=&#xA0;1. <disp-formula id="Equ5"><label>5</label><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta u_{{kj}} = (\varepsilon _{{kj}} (\tau _{{{\text{mx}}}} ) - \varepsilon _{{kj}} (\tau _{{{\text{mi}}}} ))/(v_{{kj}} (\tau _{{{\text{mx}}}} ) - v_{{kj}} (\tau _{{{\text{mi}}}} ) $$\end{document}</tex-math></disp-formula><italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub>mx</sub>) and <italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub>mi</sub>) are the maximum and minimum values of <italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) when <italic>u</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub>mx</sub>)&#xA0;=&#xA0;<italic>u</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub>min</sub>). That is, <italic>&#x3B5;</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) takes <italic>&#x3B5;</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>)&#xA0;&#x2212;&#xA0;<italic>&#x394;u</italic><sub><italic>kj</italic></sub><italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) when <italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) changes (1&#xA0;+&#xA0;<italic>&#x394;u</italic><sub><italic>kj</italic></sub>)<italic>v</italic><sub><italic>kj</italic></sub>(<italic>&#x3C4;</italic><sub><italic>j</italic></sub>) in a window <italic>T</italic><sub><italic>kj</italic></sub>.</p>
+        <p>The constant component of each window <italic>T</italic><sub><italic>kj</italic></sub> is compensated under the continuous condition with an end expiratory point at each edge of window <italic>T</italic><sub><italic>kj</italic></sub>.</p>
+      </app>
+      <app id="App5">
+        <title>Appendix 5</title>
+        <p>The cases of modulations take 
+<inline-formula id="IEq7"><!-- Alternate image not processed: 11517_2006_130_Article_IEq7.gif --><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ n!/r_{1} !\,r_{2} !\, \cdots \,r_{m} ! $$\end{document}</tex-math></inline-formula> when the Fourier components of <italic>n&#xA0;</italic>=&#xA0;<italic>r</italic><sub>1</sub>,&#xA0;+&#xA0;<italic>r</italic><sub>2</sub>,&#xA0;+&#xA0;
+<inline-formula id="IEq8"><!-- Alternate image not processed: 11517_2006_130_Article_IEq8.gif --><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \cdots $$\end{document}</tex-math></inline-formula>&#xA0;+&#xA0;<italic>r</italic><sub><italic>m</italic></sub> are distributed into <italic>m</italic> cases. The probability <italic>p</italic>(<italic>r</italic><sub>1</sub>, <italic>r</italic><sub>2</sub>,..., <italic>r</italic><sub><italic>m</italic></sub>) to encounter <italic>x&#x2032;</italic>(<italic>t</italic>) with <italic>m</italic> modulations is given by Starling&#x2019;s formula as below. <disp-formula id="Equa"><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ p(r_{1} ,r_{2} ,...,r_{m} ) = r_{1} ! \cdot r_{2} !\, \cdots \,r_{m} !/n! = p^{{r1}}_{1} p^{{r2}}_{2} \, \cdots \,p^{{rm}}_{m} $$\end{document}</tex-math></disp-formula><italic>ms/n&#xA0;</italic>=&#xA0;1 is derived from the relation <italic>&#x3A3;p</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;1 and <italic>p</italic><sub><italic>j</italic></sub><italic>&#xA0;</italic>=&#xA0;<italic>s/n</italic> when <italic>s</italic> is satisfied with the relation &#x3A0;<italic>p</italic><sub arrange="stack"><italic>j</italic></sub><sup arrange="stack"><italic>rj</italic></sup>&#xA0;=&#xA0;(<italic>s/n</italic>)<sup><italic>n</italic></sup>. That is, the geometrical mean <italic>s/n</italic> is satisfied with the relation of <italic>s/n</italic>&#xA0;=&#xA0;&#x3A0;<italic>p</italic><sub arrange="stack"><italic>j</italic></sub><sup arrange="stack"><italic>pj</italic></sup>, so <italic>m</italic> is given as <italic>m</italic>&#xA0;=&#xA0;&#x3A0;<italic>p</italic><sub arrange="stack"><italic>j</italic></sub><sup arrange="stack"><italic>&#x2212;pj</italic></sup>.</p>
+      </app>
+      <app id="App6">
+        <title>Appendix 6</title>
+        <p>When the random signal in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A-b is a permuted source in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A-a, the amplitude distributions on the SFT are illustrated in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B and on the direct Fourier transform (DFT) in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>C, respectively. While amplitude distributions of the source take the same forms between the SFT in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B-a and the DFT in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>C-a, those of the random signal are different in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B-b and C-b. That is, the distribution takes an exponential form on the SFT but takes an even form on the DFT which is well known as the form of a white noise.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>The comparison between SFT and DFT on a randomized signal. <bold>A</bold> The reconstructed signals from SFT and DFT components on rearranged ECG, <bold>B</bold> amplitude distribution on the SFT, and <bold>C</bold> amplitude distribution on the DFT</p></caption><graphic position="anchor" xlink:href="11517_2006_130_Fig7_HTML" id="MO7"/></fig></p>
+        <p>As amplitude and phase components of the SFT reconstruct the random signal in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A-b completely, the inverse rearrangement of the reconstructed random noise comes back to the source in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A-c. Contrarily, the waveform from the DFT is still a random in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A-d not the source. As a result, the distribution of samples is kept in SFT but lost in DFT. The SFT supplies true instantaneous Fourier components for any scale transform including arrangements. In other words, a signal with any random noise holds far more stable information in the SFT than in any other integral transform.</p>
+      </app>
+    </app-group>
+    <!-- WARNING: Appendix has not been converted -->
+    <!-- WARNING: Appendix has not been converted -->
+    <!-- WARNING: Appendix has not been converted -->
+    <!-- WARNING: Appendix has not been converted -->
+    <!-- WARNING: Appendix has not been converted -->
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abboud</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Witman</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Rosenfeld</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Guber</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Zissin</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>The forced expiratory volume-time curve estimation using the electrocardiogram</article-title>
+          <source>Comput Biol Med</source>
+          <year>1998</year>
+          <volume>28</volume>
+          <fpage>193</fpage>
+          <lpage>206</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0010-4825(98)00012-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Abboud S, Witman S, Rosenfeld M, Guber A, Zissin R (1998) The forced expiratory volume-time curve estimation using the electrocardiogram. Comput Biol Med 28:193&#x2013;206 <pub-id pub-id-type="pmid">9784959</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Akselrod</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Gordon</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Ubel</surname>
+              <given-names>FA</given-names>
+            </name>
+            <name>
+              <surname>Shannon</surname>
+              <given-names>DC</given-names>
+            </name>
+            <name>
+              <surname>Berger</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Cohen</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Power spectrum analysis of heart rate fluctuation: a quantitative probe of beat-to-beat cardiovascular control</article-title>
+          <source>Science</source>
+          <year>1981</year>
+          <volume>213</volume>
+          <fpage>220</fpage>
+          <lpage>222</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.6166045</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Akselrod S, Gordon D, Ubel FA, Shannon DC, Berger AC, Cohen RJ (1981) Power spectrum analysis of heart rate fluctuation: a quantitative probe of beat-to-beat cardiovascular control. Science 213:220&#x2013;222 <pub-id pub-id-type="pmid">6166045</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chazal</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Heneghan</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Reilly</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Nolan</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>O&#x2019;Malley</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Automated processing of the single-lead electrocardiogram for the detection of obstructive sleep, aponea</article-title>
+          <source>IEEE Trans Biomed Eng</source>
+          <year>2003</year>
+          <volume>50</volume>
+          <fpage>686</fpage>
+          <lpage>696</lpage>
+          <pub-id pub-id-type="doi">10.1109/TBME.2003.812203</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chazal P, Heneghan C, Reilly R, Nolan P, O&#x2019;Malley M (2003) Automated processing of the single-lead electrocardiogram for the detection of obstructive sleep, aponea. IEEE Trans Biomed Eng 50:686&#x2013;696 <pub-id pub-id-type="pmid">12814235</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Felblinger</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Boesch</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Amplitude demodulation of the electrocardiogram signal (ECG) for respiration monitoring and compensation during MR examinations</article-title>
+          <source>Magn Reson Med</source>
+          <year>1997</year>
+          <volume>38</volume>
+          <issue>1</issue>
+          <fpage>129</fpage>
+          <lpage>136</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Felblinger J, Boesch C (1997) Amplitude demodulation of the electrocardiogram signal (ECG) for respiration monitoring and compensation during MR examinations. Magn Reson Med 38(1):129&#x2013;136 <pub-id pub-id-type="pmid">9211388</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Flaherty</surname>
+              <given-names>JT</given-names>
+            </name>
+            <name>
+              <surname>Blumenschein</surname>
+              <given-names>SD</given-names>
+            </name>
+            <name>
+              <surname>Alexander</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Gentzler</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Gallie</surname>
+              <given-names>TM</given-names>
+            </name>
+            <name>
+              <surname>Boineau Spach</surname>
+              <given-names>JP MS</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of respiration on recording cardiac potentials</article-title>
+          <source>Am J Cardiol</source>
+          <year>1967</year>
+          <volume>20</volume>
+          <issue>1</issue>
+          <fpage>21</fpage>
+          <lpage>27</lpage>
+          <pub-id pub-id-type="doi">10.1016/0002-9149(67)90106-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Flaherty JT, Blumenschein SD, Alexander AW, Gentzler RD, Gallie TM, Boineau JP Spach MS (1967) Influence of respiration on recording cardiac potentials. Am J Cardiol 20(1):21&#x2013;27 <pub-id pub-id-type="pmid">6026921</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ivanov</surname>
+              <given-names>PC</given-names>
+            </name>
+            <name>
+              <surname>Rosenblum</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Peng</surname>
+              <given-names>CK</given-names>
+            </name>
+            <name>
+              <surname>Rosenblum</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Havlin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Stanley</surname>
+              <given-names>HE</given-names>
+            </name>
+            <name>
+              <surname>Goldberger</surname>
+              <given-names>AL</given-names>
+            </name>
+          </person-group>
+          <article-title>Scaling behaviour of heartbeat intervals obtained by wavelet-based time-series analysis</article-title>
+          <source>Nature</source>
+          <year>1996</year>
+          <volume>386</volume>
+          <fpage>323</fpage>
+          <lpage>327</lpage>
+          <pub-id pub-id-type="doi">10.1038/383323a0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ivanov PC, Rosenblum MG, Peng CK, Rosenblum MJ, Havlin S, Stanley HE, Goldberger AL (1996) Scaling behaviour of heartbeat intervals obtained by wavelet-based time-series analysis. Nature 386:323&#x2013;327 <pub-id pub-id-type="pmid">8848043</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johanson</surname>
+              <given-names>WG</given-names>
+            </name>
+            <name>
+              <surname>Pierce</surname>
+              <given-names>AK</given-names>
+            </name>
+          </person-group>
+          <article-title>A noninvasive technique for measurement of airway conductance in small animals</article-title>
+          <source>J Appl Physiol</source>
+          <year>1971</year>
+          <volume>30</volume>
+          <fpage>146</fpage>
+          <lpage>150</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Johanson WG, Pierce AK (1971) A noninvasive technique for measurement of airway conductance in small animals. J Appl Physiol 30:146&#x2013;150 <pub-id pub-id-type="pmid">5538783</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leanderson</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Laguna</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Sornmo</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Estimation of the respiratory frequency using spatial information in the VCG</article-title>
+          <source>Med Eng Phys</source>
+          <year>2003</year>
+          <volume>25</volume>
+          <fpage>501</fpage>
+          <lpage>507</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1350-4533(03)00017-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Leanderson S, Laguna P, Sornmo L (2003) Estimation of the respiratory frequency using spatial information in the VCG. Med Eng Phys 25:501&#x2013;507 <pub-id pub-id-type="pmid">12787988</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lotric</surname>
+              <given-names>MB</given-names>
+            </name>
+            <name>
+              <surname>Stefanovska</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Stajer</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Rovan</surname>
+              <given-names>VU</given-names>
+            </name>
+          </person-group>
+          <article-title>Spectral components of heart rate variability determined by wavelet analysis</article-title>
+          <source>Physiol Mears</source>
+          <year>2000</year>
+          <volume>21</volume>
+          <issue>4</issue>
+          <fpage>441</fpage>
+          <lpage>457</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/21/4/302</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lotric MB, Stefanovska A, Stajer D, Rovan VU (2000) Spectral components of heart rate variability determined by wavelet analysis. Physiol Mears 21(4):441&#x2013;457 </citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lund</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Christiansen</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Lund</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+            </name>
+          </person-group>
+          <article-title>Recovery of beat-to-beat variations of QRS</article-title>
+          <source>Med Biol Eng Comp</source>
+          <year>1998</year>
+          <volume>36</volume>
+          <issue>4</issue>
+          <fpage>438</fpage>
+          <lpage>444</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02523211</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lund K, Christiansen EH, Lund B, Pedersen (1998) Recovery of beat-to-beat variations of QRS. Med Biol Eng Comp 36(4):438&#x2013;444 </citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Malliani</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Pagani</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Lombardi</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Cerutti</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Cardio vascular neural regulation explored in the frequency domain</article-title>
+          <source>Circulation</source>
+          <year>1991</year>
+          <volume>84</volume>
+          <issue>2</issue>
+          <fpage>482</fpage>
+          <lpage>492</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Malliani A, Pagani M, Lombardi F, Cerutti S (1991) Cardio vascular neural regulation explored in the frequency domain. Circulation 84(2):482&#x2013;492 <pub-id pub-id-type="pmid">1860193</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mita</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive analysis of harmonic oscillation for biological signals</article-title>
+          <source>Med Biol Eng Comp</source>
+          <year>1988</year>
+          <volume>26</volume>
+          <fpage>379</fpage>
+          <lpage>382</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02442295</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mita M (1988) Adaptive analysis of harmonic oscillation for biological signals. Med Biol Eng Comp 26:379&#x2013;382 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moody</surname>
+              <given-names>GB</given-names>
+            </name>
+            <name>
+              <surname>Mark</surname>
+              <given-names>RG</given-names>
+            </name>
+            <name>
+              <surname>Zoccola</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mantero</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Derivation of respiratory signals from multi-lead ECGs</article-title>
+          <source>Comput Cardiol</source>
+          <year>1985</year>
+          <volume>12</volume>
+          <fpage>113</fpage>
+          <lpage>116</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Moody GB, Mark RG, Zoccola A, Mantero S (1985) Derivation of respiratory signals from multi-lead ECGs. Comput Cardiol 12:113&#x2013;116 </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="other">Nyquist H (1928) Certain topics in telegraph transmission theory. AIEE 617&#x2013;644</citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oppenheim</surname>
+              <given-names>AV</given-names>
+            </name>
+            <name>
+              <surname>Schafer</surname>
+              <given-names>RW</given-names>
+            </name>
+          </person-group>
+          <source>Digital signal processing</source>
+          <year>1975</year>
+          <publisher-loc>NJ, USA</publisher-loc>
+          <publisher-name>Prentice-Hall</publisher-name>
+          <fpage>28</fpage>
+          <lpage>30</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Oppenheim AV, Schafer RW (1975) Digital signal processing. Prentice-Hall, NJ, USA pp 28&#x2013;30 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Penzel</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>McNames</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Chazal</surname>
+            </name>
+            <name>
+              <surname>Raymond</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Moody</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Systematic comparison of different algorithms for apnoea detection based on electrocardiogram recordings</article-title>
+          <source>Med Biol Eng Comp</source>
+          <year>2002</year>
+          <volume>40</volume>
+          <fpage>402</fpage>
+          <lpage>407</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02345072</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Penzel T, McNames J, de Chazal, Raymond B, Murray A, Moody G (2002) Systematic comparison of different algorithms for apnoea detection based on electrocardiogram recordings. Med Biol Eng Comp 40:402&#x2013;407 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stefanovska</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Bracic</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Physics of the human cardiovascular system</article-title>
+          <source>Contemp Phys</source>
+          <year>1999</year>
+          <volume>40</volume>
+          <issue>1</issue>
+          <fpage>31</fpage>
+          <lpage>55</lpage>
+          <pub-id pub-id-type="doi">10.1080/001075199181693</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stefanovska A, Bracic M (1999) Physics of the human cardiovascular system. Contemp Phys 40(1):31&#x2013;55 </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

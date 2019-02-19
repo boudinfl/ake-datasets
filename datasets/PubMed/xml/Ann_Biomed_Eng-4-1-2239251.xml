@@ -1,0 +1,1159 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Springer US</publisher-name>
+        <publisher-loc>Boston</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18204902</article-id>
+      <article-id pub-id-type="pmc">2239251</article-id>
+      <article-id pub-id-type="publisher-id">9385</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-007-9385-8</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Biomechanical Analysis of Reducing Sacroiliac Joint Shear Load by Optimization of Pelvic Muscle and Ligament Forces</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Pel</surname>
+            <given-names>J. J. M.</given-names>
+          </name>
+          <address>
+            <email>j.pel@erasmusmc.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Spoor</surname>
+            <given-names>C. W.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Pool-Goudzwaard</surname>
+            <given-names>A. L.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Hoek van Dijke</surname>
+            <given-names>G. A.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Snijders</surname>
+            <given-names>C. J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Department of Biomedical Physics and Technology, Erasmus MC, PO Box 2040, Rotterdam, 3000 CA The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>18</day>
+        <month>1</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>36</volume>
+      <issue>3</issue>
+      <fpage>415</fpage>
+      <lpage>424</lpage>
+      <history>
+        <date date-type="received">
+          <day>5</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>18</day>
+          <month>9</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2008</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Effective stabilization of the sacroiliac joints (SIJ) is essential, since spinal loading is transferred via the SIJ to the coxal bones, and further to the legs. We performed a biomechanical analysis of SIJ stability in terms of reduced SIJ shear force in standing posture using a validated static 3-D simulation model. This model contained 100 muscle elements, 8 ligaments, and 8 joints in trunk, pelvis, and upper legs. Initially, the model was set up to minimize the maximum muscle stress. In this situation, the trunk load was mainly balanced between the coxal bones by vertical SIJ shear force. An imposed reduction of the vertical SIJ shear by 20% resulted in 70% increase of SIJ compression force due to activation of hip flexors and counteracting hip extensors. Another 20% reduction of the vertical SIJ shear force resulted in further increase of SIJ compression force by 400%, due to activation of the transversely oriented M. transversus abdominis and pelvic floor muscles. The M. transversus abdominis crosses the SIJ and clamps the sacrum between the coxal bones. Moreover, the pelvic floor muscles oppose lateral movement of the coxal bones, which stabilizes the position of the sacrum between the coxal bones (the pelvic arc). Our results suggest that training of the M. transversus abdominis and the pelvic floor muscles could help to relieve SI-joint related pelvic pain.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Static forces</kwd>
+        <kwd>Sacroiliac joints</kwd>
+        <kwd>Pelvis</kwd>
+        <kwd>Pelvic floor muscles</kwd>
+        <kwd>Human posture</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1">
+      <title>Introduction</title>
+      <p>The human body uses an ingenious 3-D framework of bones, joints, muscles, and ligaments for posture and movement. In upright posture, the trunk load passes the sacroiliac joints (SIJ). The orientation of the SIJ surfaces, however, is more or less in line with the direction of loading, which induces high shear forces between sacrum and coxal bones.<xref ref-type="bibr" rid="CR34">34</xref> The SIJ have a strong passive, viscoelastic ligamentous system for providing stability. These ligaments are vulnerable for creep during constant trunk load and need to be protected against high SIJ shear forces.<xref ref-type="bibr" rid="CR19">19</xref> From a biomechanical point of view, an active muscle corset that increases the compression force between the coxal bones and the sacrum could protect the ligamentous system and support the transfer of trunk load to the legs and <italic>vice versa</italic>. Interlocking of the SIJ may be promoted by transversely oriented muscles, e.g., M. transversus abdominis, M. piriformis, M. gluteus maximus, M. obliquus externus abdominis, and M. obliquus internus abdominis, which has been described as self-bracing.<xref ref-type="bibr" rid="CR33">33</xref>&#x2013;<xref ref-type="bibr" rid="CR35">35</xref> However, due to the complex lines of action of (counteracting) muscles and ligaments in the pelvic region, it is difficult to demonstrate the contribution of transversely oriented muscles to SIJ stability, <italic>in vitro</italic> as well as <italic>in vivo</italic>.</p>
+      <p>In the past, a number of biomechanical models of the lumbosacral region (spine and pelvis) have been developed to study the aetiology of low back pain (LBP) in relation to (over)loading of the lumbar spine<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR9">9</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR36">36</xref> and the pelvis.<xref ref-type="bibr" rid="CR10">10</xref>,<xref ref-type="bibr" rid="CR27">27</xref> Most of these models dealt with mechanical stability in terms of muscle<xref ref-type="bibr" rid="CR3">3</xref>,<xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR18">18</xref> and compression forces between (lumbar) vertebrae.<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR20">20</xref>,<xref ref-type="bibr" rid="CR22">22</xref>, <xref ref-type="bibr" rid="CR28">28</xref> A different approach is to relate LBP to overloading of SIJ and nearby ligaments, for example the iliolumbar ligaments.<xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR30">30</xref> The load transfer through the SIJ was studied using a static, 3-D biomechanical simulation model based on the musculoskeletal anatomy of the trunk, pelvis, and upper legs.<xref ref-type="bibr" rid="CR15">15</xref> This simulation model calculates forces in muscles, ligaments, and joints that are needed to counterbalance trunk weight and other external forces. It was shown that this simulation model underestimated antagonistic muscle activity, but a good agreement was found for agonist muscle activity. The number of passive structures in the model was small, for example no joint capsules were incorporated. Therefore, the model was only valid for postures in which none of the joints were near an end position. The aim of the present study was to determine which muscles have to become active in the 3-D pelvic simulation model when there is an imposed reduction of the vertical SIJ shear force.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec id="Sec3">
+        <title>The 3-D Simulation Model</title>
+        <p>The present study was performed using the validated, 3-D simulation model as described by Hoek van Dijke <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> The model is based on the musculoskeletal anatomy of the trunk, pelvis, and upper legs, including muscle and ligament attachment sites, cross-sectional areas of muscles and the direction of muscle, ligament, and joint reaction forces. The geometry of this model was based on structures extracted from MRI slices and from previously published data on lumbar spine<xref ref-type="bibr" rid="CR8">8</xref> and upper leg<xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR17">17</xref> geometry. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a illustrates, in frontal and median view, the bones on which muscle and ligament forces act in the simulation model. These are the lowest thoracic vertebra, five lumbar vertebrae, the sacrum, the left and right coxal bones and the left and right femurs. The vertebrae are treated as a single structure. The arrangement of the bones depends on the static posture for which muscle forces are calculated, for example standing with or without trunk flexion. A description of the model equilibrium, its optimization scheme and validation of some of the parameters is presented in the Appendix. In the present study, we focus on the compression and shear forces in the SIJ. These forces are represented as perpendicular vectors. The normal vector of the SIJ surface has an oblique direction (<italic>xyz</italic>&#xA0;=&#xA0;0.365, &#xB1;0.924, 0.114). Compression force is defined along this normal vector and can only vary in magnitude. One of the two components of the SIJ shear force was defined in the <italic>YZ</italic>-plane (<italic>xyz</italic>&#xA0;=&#xA0;0, &#xB1;0.123, 0.992). This force is denoted as the vertical SIJ shear force. Directions of the SIJ compression force and the SIJ vertical shear force in the <italic>YZ</italic>-plane are shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a, left panel. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b shows the vectors representing the most important muscle and ligament forces in the pelvic region superimposed on the bones. Bone shapes are for illustration purpose only; they are not part of the simulation model. In total, the model contains 100 vectors for muscle forces, 8 vectors for ligament forces, and 22 vectors for joint forces; see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> for a list of all the structures.
+<fig id="Fig1"><label>Figure&#xA0;1</label><caption><p>Panel (a) shows the bones on which the muscles, ligaments and joint reaction forces act in the frontal plane (left) and the median plane (right): the lowest thoracic vertebra, five lumbar vertebrae, the sacrum, the left and right coxal bones, and the left and right femurs. The coordinate system is defined with the origin halfway between the rotation centers of the hip joints. Axes: <italic>x</italic> posterior, <italic>y</italic> left, <italic>z</italic> vertical. Panel (b) shows, superimposed on the bones, the vectors representing the most important force components in the frontal plane (left) and the median plane (right), see also Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. The labels in this panel refer to a selection of the muscle structures listed in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref></p></caption><graphic position="anchor" xlink:href="10439_2007_9385_Fig1_HTML" id="MO1"/></fig><table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>List of muscles, ligaments, and joints and the number of vectors describing the forces used in the simulation model on transferring trunk load from lumbar spine via the pelvis to the upper legs (unilateral), see also Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">Name of structure</th><th align="left">Number of elements</th><th align="left">Remark</th></tr></thead><tbody><tr><td align="left">1</td><td align="left">M. adductor brevis</td><td char="." align="char">2</td><td align="left">Upper and lower muscle</td></tr><tr><td align="left">2</td><td align="left">M. adductor longus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">3</td><td align="left">M. adductor magnus</td><td char="." align="char">3</td><td align="left">Upper, middle and lower muscle</td></tr><tr><td align="left">4</td><td align="left">M. biceps femoris</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">5</td><td align="left">M. coccygeus</td><td char="." align="char">1</td><td align="left">Pelvic floor muscle</td></tr><tr><td align="left">6</td><td align="left">M. iliococcygeus</td><td char="." align="char">1</td><td align="left">Pelvic floor muscle</td></tr><tr><td align="left">7</td><td align="left">M. pubococcygeus</td><td char="." align="char">1</td><td align="left">Pelvic floor muscle</td></tr><tr><td align="left">8</td><td align="left">M. gemellus inferior</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">9</td><td align="left">M. gemellus superior</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">10</td><td align="left">M. gluteus maximus</td><td char="." align="char">2</td><td align="left">Femur&#x2014;sacrum and ilium muscle</td></tr><tr><td align="left">11</td><td align="left">M. gluteus maximus facia</td><td char="." align="char">2</td><td align="left">Ilium&#x2014;femur and trunk muscle</td></tr><tr><td align="left">12</td><td align="left">M. gluteus medius</td><td char="." align="char">3</td><td align="left">Upper, middle, and lower muscle</td></tr><tr><td align="left">13</td><td align="left">M. gluteus minimus</td><td char="." align="char">3</td><td align="left">Upper, middle, and lower muscle</td></tr><tr><td align="left">14</td><td align="left">M. gracilis</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">15</td><td align="left">M. iliacus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">16</td><td align="left">M. longissimus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">17</td><td align="left">M. iliocostalis</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">18</td><td align="left">M. multifidus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">19</td><td align="left">M. obliquus externus abdominis</td><td char="." align="char">2</td><td align="left">Ventral and dorsal muscle</td></tr><tr><td align="left">20</td><td align="left">M. obliquus internus abdominis</td><td char="." align="char">2</td><td align="left">Ventral and dorsal muscle</td></tr><tr><td align="left">21</td><td align="left">M. obturatorius externus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">22</td><td align="left">M. obturatorius internus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">23</td><td align="left">M. pectineus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">24</td><td align="left">M. piriformis</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">25</td><td align="left">M. psoas</td><td char="." align="char">2</td><td align="left">Upper and lower muscle</td></tr><tr><td align="left">26</td><td align="left">M. quadratus femoris</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">27</td><td align="left">M. quadratus lumborum</td><td char="." align="char">5</td><td align="left">Sacrum&#x2014;rib12, L1, L2, L3 and L4 muscle</td></tr><tr><td align="left">28</td><td align="left">M. rectus abdominis</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">29</td><td align="left">M. rectus femoris</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">30</td><td align="left">M. sartorius</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">31</td><td align="left">M. semimembranosus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">32</td><td align="left">M. semitendinosus</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">33</td><td align="left">M. tensor fasciae latae</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">34</td><td align="left">M. transversus abdominis</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">A</td><td align="left">Iliolumbar ligament</td><td char="." align="char">1</td><td align="left">Transversal plane</td></tr><tr><td align="left">B</td><td align="left">Posterior sacroiliac ligament</td><td char="." align="char">1</td><td align="left">Transversal plane</td></tr><tr><td align="left">C</td><td align="left">Sacrospinal ligament</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">D</td><td align="left">Sacrotuberous ligament</td><td char="." align="char">1</td><td align="left"/></tr><tr><td align="left">I</td><td align="left">L5-S1 joint</td><td char="." align="char">3</td><td align="left">Shear (two directions) and compression</td></tr><tr><td align="left">II</td><td align="left">SI joint</td><td char="." align="char">3</td><td align="left">Shear (two directions) and compression</td></tr><tr><td align="left">III</td><td align="left">Hip joint</td><td char="." align="char">3</td><td align="left">Shear (two directions) and compression</td></tr><tr><td align="left">IV</td><td align="left">Knee joint</td><td char="." align="char">3</td><td align="left">Shear (two directions) and compression</td></tr><tr><td align="left">V</td><td align="left">Pubic symphysis</td><td char="." align="char">1</td><td align="left">Compression</td></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec4">
+        <title>Simulations and Data Analyses</title>
+        <p>A first simulation, with the model in standing posture and a trunk weight of 500&#xA0;N, showed that the vertical shear SIJ force was 563&#xA0;N on each side of the sacrum. To find the muscles that promote sacroiliac joint stability, the maximum value for the vertical SIJ shear force was decreased in steps of 30&#xA0;N (&#x223C;5% of the initial vertical SIJ shear force). Theoretically, lowering of the imposed vertical SIJ shear force to 0&#xA0;N could induce a non-physiological equilibrium between muscle, ligament, and joint forces. In addition, when the model was set in 30&#xB0; flexion, the force in the iliolumbar, the sacrotuberal, and the posterior sacroiliac ligaments was 250&#xA0;N. This value was set as a maximum physiological ligament force in the simulation model in the upright position to prevent overloading of the pelvic ligaments that were implemented in the model. The following criteria were defined to warrant a physiological solution for muscle and ligament forces.<list list-type="order"><list-item><p>Muscle tension must not exceed 240&#xA0;kPa<xref ref-type="bibr" rid="CR16">16</xref>;</p></list-item><list-item><p>Lowering of the maximum vertical SIJ shear force must result in reduction of the total SIJ shear force (combination of vertical and horizontal shear);</p></list-item><list-item><p>Ligament force must not exceed 250&#xA0;N.</p></list-item></list></p>
+        <p>A muscle was included for further analysis when it produced at least 15% of the maximum muscle stress during the simulation. For all muscles, the maximum muscle stress depended on the calculated minimum muscle stress (see optimization criterion 1 in the Appendix). Two muscle groups were analyzed separately: (1) the muscles that increased at least 80% in force after the first simulation step and (2) the muscles that increased at least 10 times in force after completion of the simulation series.</p>
+      </sec>
+    </sec>
+    <sec id="Sec5" sec-type="results">
+      <title>Results</title>
+      <p>Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> summarizes the muscle (de)activation pattern when the maximum vertical SIJ shear force was stepwise decreased. Initially, vertical SIJ shear force was 563&#xA0;N (on each side of the sacrum) at a trunk load of 500&#xA0;N. The angle between the normal direction of the SIJ surface and the direction of the total SIJ reaction force was 81&#xB0;, indicating that mainly vertical shear force acted through the SIJ, see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a. Force equilibrium was mainly achieved by activation of M. abdominal oblique (internus and externus), M. iliacus, M. psoas, M. rectus abdominis, M. rectus femoris, M. tensor fasciae latae, and loading of the sacrotuberous ligament.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Summary of the structures that stabilize the sacroiliac joints in terms of lowered shear</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Reduction of sacroiliac shear</th><th align="left">Initial</th><th align="left" colspan="8">Preset value (<italic>N</italic>)</th></tr></thead><tbody><tr><td align="left">SIJ (vertical shear)</td><td char="." align="char">563</td><td char="." align="char">533</td><td char="." align="char">503</td><td char="." align="char">473</td><td char="." align="char">443</td><td char="." align="char">413</td><td char="." align="char">383</td><td char="." align="char">353</td><td char="." align="char">323</td></tr><tr><td align="left">Structures</td><td align="left" colspan="9">Force (<italic>N</italic>)</td></tr><tr><td align="left"><italic>M. adductor longus</italic></td><td char="." align="char">9</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">9</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left"><bold>M. coccygeus</bold></td><td char="." align="char"/><td char="." align="char">1</td><td char="." align="char">1</td><td char="." align="char">1</td><td char="." align="char">1</td><td char="." align="char">2</td><td char="." align="char">4</td><td char="." align="char">10</td><td char="." align="char">20</td></tr><tr><td align="left"><bold>M. iliococcygeus</bold></td><td char="." align="char"/><td char="." align="char">1</td><td char="." align="char">1</td><td char="." align="char">1</td><td char="." align="char">1</td><td char="." align="char">2</td><td char="." align="char">4</td><td char="." align="char">10</td><td char="." align="char">20</td></tr><tr><td align="left"><bold>M. pubococcygeus</bold></td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char">1</td><td char="." align="char">2</td><td char="." align="char">6</td></tr><tr><td align="left"><italic>M. gluteus medius (lower)</italic></td><td char="." align="char">7</td><td char="." align="char">11</td><td char="." align="char">13</td><td char="." align="char">14</td><td char="." align="char">15</td><td char="." align="char">27</td><td char="." align="char">44</td><td char="." align="char">30</td><td char="." align="char"/></tr><tr><td align="left"><italic>M. gluteus medius (middle)</italic></td><td char="." align="char">5</td><td char="." align="char">8</td><td char="." align="char">11</td><td char="." align="char">10</td><td char="." align="char">10</td><td char="." align="char">10</td><td char="." align="char">29</td><td char="." align="char">41</td><td char="." align="char"/></tr><tr><td align="left"><italic>M. gluteus medius (upper)</italic></td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char">42</td><td char="." align="char">90</td></tr><tr><td align="left"><italic>M. gluteus minimus (lower)</italic></td><td char="." align="char"/><td char="." align="char">3</td><td char="." align="char">3</td><td char="." align="char">3</td><td char="." align="char">3</td><td char="." align="char">4</td><td char="." align="char">7</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left"><italic>M. gluteus minimus (middle)</italic></td><td char="." align="char">5</td><td char="." align="char">10</td><td char="." align="char">11</td><td char="." align="char">11</td><td char="." align="char">11</td><td char="." align="char">5</td><td char="." align="char">10</td><td char="." align="char">12</td><td char="." align="char"/></tr><tr><td align="left"><italic>M. gluteus minimus (upper)</italic></td><td char="." align="char">8</td><td char="." align="char">17</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">17</td><td char="." align="char">5</td><td char="." align="char">11</td><td char="." align="char">16</td><td char="." align="char">25</td></tr><tr><td align="left">M. iliacus</td><td char="." align="char">47</td><td char="." align="char">47</td><td char="." align="char">50</td><td char="." align="char">54</td><td char="." align="char">58</td><td char="." align="char">68</td><td char="." align="char">88</td><td char="." align="char">85</td><td char="." align="char">102</td></tr><tr><td align="left">M. obliquus externus abdominis</td><td char="." align="char">21</td><td char="." align="char">18</td><td char="." align="char">17</td><td char="." align="char">14</td><td char="." align="char">12</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">M. obliquus internus abdominis</td><td char="." align="char">15</td><td char="." align="char">20</td><td char="." align="char">20</td><td char="." align="char">23</td><td char="." align="char">27</td><td char="." align="char">34</td><td char="." align="char">29</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">M. obturatorius externus</td><td char="." align="char">15</td><td char="." align="char">4</td><td char="." align="char">4</td><td char="." align="char">4</td><td char="." align="char">5</td><td char="." align="char">8</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left"><italic>M. pectineus</italic></td><td char="." align="char">8</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">18</td><td char="." align="char">6</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left"><italic>M. piriformis</italic></td><td char="." align="char">18</td><td char="." align="char">26</td><td char="." align="char">28</td><td char="." align="char">25</td><td char="." align="char">22</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">M. psoas (lower)</td><td char="." align="char">64</td><td char="." align="char">50</td><td char="." align="char">46</td><td char="." align="char">27</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">M. rectus abdominis</td><td char="." align="char">27</td><td char="." align="char">27</td><td char="." align="char">29</td><td char="." align="char">31</td><td char="." align="char">34</td><td char="." align="char">37</td><td char="." align="char">51</td><td char="." align="char">76</td><td char="." align="char">83</td></tr><tr><td align="left">M. rectus femoris</td><td char="." align="char">34</td><td char="." align="char">34</td><td char="." align="char">36</td><td char="." align="char">39</td><td char="." align="char">42</td><td char="." align="char">49</td><td char="." align="char">64</td><td char="." align="char">62</td><td char="." align="char">50</td></tr><tr><td align="left"><italic>M. sartorius</italic></td><td char="." align="char"/><td char="." align="char">16</td><td char="." align="char">17</td><td char="." align="char">18</td><td char="." align="char">19</td><td char="." align="char">16</td><td char="." align="char">22</td><td char="." align="char">14</td><td char="." align="char"/></tr><tr><td align="left">M. tensor fasciae latae</td><td char="." align="char">31</td><td char="." align="char">31</td><td char="." align="char">33</td><td char="." align="char">35</td><td char="." align="char">38</td><td char="." align="char">44</td><td char="." align="char">58</td><td char="." align="char">85</td><td char="." align="char">79</td></tr><tr><td align="left"><bold>M. transversus abdominis</bold></td><td char="." align="char">3</td><td char="." align="char">5</td><td char="." align="char">5</td><td char="." align="char">6</td><td char="." align="char">7</td><td char="." align="char">21</td><td char="." align="char">32</td><td char="." align="char">53</td><td char="." align="char">82</td></tr><tr><td align="left">Iliolumbar ligament</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char">53</td><td char="." align="char">250</td><td char="." align="char">250</td></tr><tr><td align="left">Posterior sacroiliac ligament</td><td char="." align="char"/><td char="." align="char">26</td><td char="." align="char">49</td><td char="." align="char">62</td><td char="." align="char">73</td><td char="." align="char">147</td><td char="." align="char">250</td><td char="." align="char">250</td><td char="." align="char">250</td></tr><tr><td align="left">Sacrospinal ligament</td><td char="." align="char"/><td char="." align="char">38</td><td char="." align="char">150</td><td char="." align="char">159</td><td char="." align="char">147</td><td char="." align="char">145</td><td char="." align="char">132</td><td char="." align="char">106</td><td char="." align="char">74</td></tr><tr><td align="left">Sacrotuberous ligament</td><td char="." align="char">206</td><td char="." align="char">151</td><td char="." align="char">21</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">SIJ (compression)</td><td char="." align="char">92</td><td char="." align="char">121</td><td char="." align="char">130</td><td char="." align="char">142</td><td char="." align="char">154</td><td char="." align="char">229</td><td char="." align="char">473</td><td char="." align="char">607</td><td char="." align="char">633</td></tr><tr><td align="left">SIJ (horizontal shear)</td><td char="." align="char">&#x2212;132</td><td char="." align="char">&#x2212;141</td><td char="." align="char">&#x2212;160</td><td char="." align="char">&#x2212;154</td><td char="." align="char">&#x2212;142</td><td char="." align="char">&#x2212;154</td><td char="." align="char">&#x2212;208</td><td char="." align="char">&#x2212;226</td><td char="." align="char">&#x2212;233</td></tr><tr><td align="left">Total SIJ shear</td><td char="." align="char">579</td><td char="." align="char">551</td><td char="." align="char">528</td><td char="." align="char">497</td><td char="." align="char">465</td><td char="." align="char">441</td><td char="." align="char">436</td><td char="." align="char">419</td><td char="." align="char">398</td></tr><tr><td align="left">Angle of SIJ reaction force (&#xB0;)</td><td char="." align="char">81</td><td char="." align="char">78</td><td char="." align="char">76</td><td char="." align="char">74</td><td char="." align="char">72</td><td char="." align="char">63</td><td char="." align="char">43</td><td char="." align="char">35</td><td char="." align="char">32</td></tr><tr><td align="left">Maximum muscle tension (kPa)</td><td char="." align="char">37</td><td char="." align="char">37</td><td char="." align="char">39</td><td char="." align="char">42</td><td char="." align="char">45</td><td char="." align="char">53</td><td char="." align="char">69</td><td char="." align="char">125</td><td char="." align="char">247</td></tr></tbody></table><table-wrap-foot><p>Included are those muscles that produced at least 15% of the maximum muscle stress after each simulation</p><p>The muscles printed italic increased at least 80% in force after the first simulation step. The muscles printed bold increased at least 10 times in force after completion of the simulation series</p></table-wrap-foot></table-wrap><fig id="Fig2"><label>Figure&#xA0;2</label><caption><p>Directions of the force in the frontal plane exerted by the right ilium through the SIJ on the sacrum as a reaction to trunk load, F<sub>trunk</sub>. Panel (a): initial loading condition without limitation of the vertical shear component (563&#xA0;N, see under &#x201C;initial&#x201D; in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). This condition led to loading of the sacrotuberal ligaments, F<sub>sacrotuberal lig.</sub> (solid thick line). Panel (b): loading condition with the vertical shear component preset at a 120&#xA0;N lower level than the initial value (see under 443&#xA0;N in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). This condition led to loading of the sacrospinal ligaments, F<sub>sacrospinal lig.</sub> (solid thick line). Panel (c): loading condition with the vertical shear component preset at a 240&#xA0;N lower level than the initial value (see under 323&#xA0;N in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). In this situation, SIJ compression force increased by &#x223C;400%, mainly by M. transversus abdominis, F<sub>transversus abdominis</sub>, and the pelvic floor, F<sub>pelvic floor</sub>, muscle forces. The location of these muscles is schematically drawn by the thick solid lines, including the M. pubococcygeus, the M. iliococcygeus and the M. coccygeus (as drawn from the mid to the lateral position). It also led to loading of the iliolumbar ligaments to the maximum allowed force F<sub>iliolumbar lig.</sub> of 250&#xA0;N, (solid thick line). 3-D images copyright of Primal Pictures Ltd. <ext-link ext-link-type="uri" xlink:href="http://www.primalpictures.com">http://www.primalpictures.com</ext-link></p></caption><graphic position="anchor" xlink:href="10439_2007_9385_Fig2_HTML" id="MO2"/></fig></p>
+      <p>When the maximum vertical SIJ shear force was decreased from 563 to 443&#xA0;N in steps of 30&#xA0;N, the SIJ compression force increased by about 70%. Force equilibrium was obtained, amongst others, by activation of some of the muscles with a hip flexion component (M. adductor longus, M. iliacus, M. pectineus, and M. sartorius, M. rectus femoris) and some of the counteracting hip extensors (MM. gluteus medius and minimus and M. piriformis). Most of these muscles became (more) active after we lowered the maximum vertical SIJ shear force by 30&#xA0;N. This led to unloading of the sacrotuberous ligaments and loading of the sacrospinal ligaments. The angle between the normal direction of the SIJ surface and the direction of the total SIJ reaction force was reduced to 72&#xB0;, indicating that a combination of reduced vertical SIJ shear and increased SIJ compression could balance the trunk load on the sacrum, see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b.</p>
+      <p>Further stepwise reduction of the vertical SIJ shear force resulted in a sharp rise of the maximum muscle stress. The simulation series ended with exceeding the maximum physiological muscle stress when the vertical SIJ shear force was decreased to about 60% of its initial value. Surprisingly, activation of some of the hip flexors and extensors had decreased or even disappeared. This was not the case for the MM. gluteus medius and minimus. In this simulation, force equilibrium was obtained by activation of the transversely oriented M. transversus abdominis (ventral to the SIJ) and the pelvic floor muscles, i.e., the M. coccygeus, the M. iliococcygeus, and the M. pubococcygeus (caudal to the SIJ). This resulted in further reduction of the angle between the normal direction of the SIJ surface and the direction of the total SIJ reaction force to 35&#xB0;, see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>c. This indicates that the SIJ compression force, which increased by about 400% and the reduced vertical SIJ shear force, now clamped the sacrum between the coxal bones, see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>c. The MM. gluteus medius and minimus contributed to some extent to this increased compression due to a distinct force component in the transverse direction. To maintain force equilibrium, increased SIJ compression led to loading of the iliolumbar and posterior sacroiliac ligaments to the preset maximum value of 250&#xA0;N.</p>
+    </sec>
+    <sec id="Sec6" sec-type="discussion">
+      <title>Discussion</title>
+      <p>In the present study, the simulation model predicted muscle and ligament forces in the pelvic region when there was an imposed reduction of the vertical SIJ shear force. Initially, the forces acting through the SIJ were mainly vertical shear forces, see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a. These forces were not only caused by trunk load, but also by muscles that acted in the longitudinal direction of the spine, for example the M. psoas and M. rectus abdominis. As a result of the forward bending moment, the sacrotuberous ligament was loaded. This large ligament protects the SIJ against excessive flexion of the sacrum relative to the coxal bones. The controlled reduction of the vertical SIJ shear force with 30&#xA0;N forced some muscles that act as hip flexors and hip extensors to become active. Due to their transverse orientation, especially the MM. gluteus medius and minimus and M. piriformis contributed to the increased compression force between the coxal bones and the sacrum. However, these muscles did not contribute enough to self-bracing of the SIJ, because the total force through the SIJ still mainly acted in vertical direction. When the vertical SIJ shear was further reduced to about 60% of its initial value, the simulation model predicted that self-bracing mainly resulted from the transverse muscles ventrally (M. transversus abdominis) and caudally (pelvic floor) to the SIJ. In this situation, some of the hip flexors and extensors reduced in activity, for example the M. piriformis. Although the M. piriformis has a transverse orientation and crosses the SIJ, its contribution was minimized by the simulation program because this muscle also induces vertical SIJ shear force. The pelvic floor muscles, the M. coccygeus and M. pubo-, and iliococcygeus, contribute to the stabilization with respect to the sacrum. It has been suggested that this stabilization by force closure has an analogy with a classical stone arc.<xref ref-type="bibr" rid="CR33">33</xref> When sideways displacement of both ends of the arc is opposed, mechanical equilibrium of the stones is achieved by compression forces and not by shear forces. In the pelvis, the pelvic floor muscles may help the coxal bones to support the sacrum by compression forces, while shear forces between sacrum and coxal bones are minimized, see Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. Note that the SI compression force is defined as the force acting perpendicular to the SIJ surface. Therefore, decreasing or increasing this force will not alter the shear forces. The articular surfaces of the SIJ are irregular which results in bony interdigitation in the SI joint space. SIJ shear force calculated in the simulation model thus reflects the combination of real joint friction and friction due to this intermingling of bones. The real joint friction forces may be extremely small considering the extremely low coefficients of friction between the articular surfaces. The majority of the shear force is effectuated as normal contact pressures due to the bony interdigitation in the SI joint space. It was not possible to calculate the percentage of shear in terms of joint friction force. This requires a more detailed description of the SIJ surfaces.
+<fig id="Fig3"><label>Figure&#xA0;3</label><caption><p>Analogy of pelvic bones supporting the trunk with a classical stone arc. The M. transversus abdominis and the pelvic floor muscles caudal to the SIJ mainly oppose lateral movement of the coxal bones. Spinal loading is transferred mainly by compression forces through the SIJ to the coxal bones and further down to the legs. 3-D images copyright of Primal Pictures Ltd. <ext-link ext-link-type="uri" xlink:href="http://www.primalpictures.com">http://www.primalpictures.com</ext-link></p></caption><graphic position="anchor" xlink:href="10439_2007_9385_Fig3_HTML" id="MO3"/></fig></p>
+      <p>The simulation model predicts that simultaneous contraction of the M. transversus abdominis and pelvic floor muscles, i.e., the M. coccygeus, the M. iliococcygeus, and the M. pubococcygeus, contribute to lowering of the vertical SIJ shear forces, increasing of the SIJ compression and hence increasing of the SIJ stability. We emphasize that this simulation model was set up to estimate the forces acting in the pelvic region under static conditions and that the outcome of the simulations must be interpreted with caution.<xref ref-type="bibr" rid="CR5">5</xref> Nevertheless, in a previous study co-contraction was shown of pelvic muscles and M. transversus abdominis.<xref ref-type="bibr" rid="CR26">26</xref> This result and the prediction of our simulation model suggest that a protective mechanism against high SIJ shear forces may exist in humans. This mechanism has been investigated <italic>in vivo</italic> and <italic>in vitro</italic>. The contribution of the M. transversus abdominis to SIJ stability was shown in an <italic>in vivo</italic> study in patients with LBP.<xref ref-type="bibr" rid="CR25">25</xref> An <italic>in vitro</italic> study in embalmed human pelvises showed that simulated pelvic floor tension increased the stiffness of the pelvic ring in female pelvises.<xref ref-type="bibr" rid="CR23">23</xref> It is worthwhile to further investigate the contribution of both muscle groups simultaneously, not only during stiffness measurements of the SIJ but also during lumbo-pelvic stability tests based on increased intra-abdominal pressure (IAP). It was shown that the pelvic floor muscles, in combination with abdominal muscles and the diaphragm, may control and/or sustain IAP to increase lumbar spine stability as well.<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR14">14</xref></p>
+      <p>In the present study, the ligament forces were not allowed to exceed 250&#xA0;N. The distribution between muscle and ligament forces depended on the maximum muscle stress as formulated in the first optimization scheme as presented in the Appendix. Increasing the maximum ligament forces might result in a lower maximum muscle stress, which could lead to a different muscle activation pattern to stabilize the SIJ. A small sensitivity test, however, showed that when the ligament forces were allowed to exceed the 250&#xA0;N up to 500&#xA0;N and in a next step up to 750&#xA0;N, the model calculated a similar muscle activation pattern. The outcome of the present study also depended on the choice of optimization criteria and the magnitude of the cross-sectional areas of the muscles. The influence of different criteria was previously investigated for muscle forces in the leg.<xref ref-type="bibr" rid="CR21">21</xref> Indeed, various choices led to different calculated forces, but the obtained solutions were qualitatively similar, as was the case in our model. When we developed the model, other optimization criteria were also tested, for example minimization of the sum of muscle forces. However, minimization of the sum of squared muscle stresses yielded the most plausible solutions. The model cannot account for anatomical variations or detailed variation in muscle attachment sites. Obviously, direct comparison between the model predictions and the outcome of <italic>in vivo</italic> force measurements in the SIJ are not available, so there is no data to confirm the outcome of the present study. Nevertheless, EMG recordings of (superficial) abdominal and back muscles in various postures showed higher M. abdominal oblique internus activity when standing upright than resting on one leg and tilting the pelvic backwards.<xref ref-type="bibr" rid="CR33">33</xref> This muscle is considered as one of the self-bracing muscles of the SIJ. It was hypothesized that when standing on one leg, the shear load on the contralateral SIJ is diminished. Posterior tilt of the pelvis with less lumbar lordosis may than lead to less M. psoas major muscle load on the spine meaning less shear load on the SIJ. These findings indirectly support our findings that transversely oriented muscles reduce SIJ shear forces. We emphasize that the present model served as a tool to investigate the general relations between muscle and ligament forces in the pelvic region. The present simulations results may lead to the development of a new SIJ stabilizing training-program to reduce pain induced by high SIJ shear forces. The effectiveness of such a program, however, can only be tested with an intervention study.</p>
+      <p>The simulation model predicted unloading of the sacrotuberous and loading of the iliolumbar and posterior sacroiliac ligaments when the vertical SIJ shear was forced to reduce. This loading of the dorsal ligaments resulted from the absence of transversely oriented muscles at the dorsal side of the SIJ to counterbalance activation of the M. transverse abdominis at the ventral side of the SIJ. Loading of the iliolumbar ligament has been related to LBP.<xref ref-type="bibr" rid="CR24">24</xref> It was shown that in sitting position, the stepwise backward movement of an erect trunk (from upright position into a slouch) resulted in forward flexion of the spine combined with backward tilt of the sacrum relative to the pelvis.<xref ref-type="bibr" rid="CR32">32</xref> It was shown, that this movement into a sudden or sustained slouch might cause loading of the well-innervated iliolumbar ligaments near failure load.<xref ref-type="bibr" rid="CR31">31</xref> The co-contraction that exists between the deep abdominal M. transversus abdominis and the deep back extensor M. multifidus presumably retains lumbo-pelvic stability.<xref ref-type="bibr" rid="CR13">13</xref> In the future, we intend to extend the model with co-contraction between the M. transversus abdominis, the M. multifidus, and the pelvic floor muscles to study prevention of (over)loading of pelvic ligaments at different static postures.</p>
+    </sec>
+    <sec id="Sec7" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>Effective stabilization of the SIJ is essential in transferring spinal load via the SIJ to the coxal bones and the legs. A biomechanical analysis of the upright standing posture showed that activation of transversely oriented abdominal M. transversus abdominis and pelvic floor, i.e., M. coccygeus and M. pubo- and iliococcygeus muscles would be an effective strategy to reduce vertical SIJ shear force and thus to increase SIJ stability. The force equilibrium in this situation induced loading of the iliolumbar and posterior sacroiliac ligaments. The M. transversus abdominis crosses the SIJ and clamps the sacrum between the coxal bones. Moreover, the pelvic floor muscles oppose lateral movement of the coxal bones, which stabilizes the position of the sacrum (the pelvic arc).</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgment</title>
+      <p>This research was supported by the Anna Foundation.</p>
+    </ack>
+    <app-group>
+      <app id="App1">
+        <title>Appendix</title>
+        <p>This Appendix summarizes the model equilibrium, its optimization scheme and model validation and reliability. Part of the text is a short summary of previously published data.<xref ref-type="bibr" rid="CR15">15</xref> A detailed description of the model will be provided on request.</p>
+        <sec id="Sec9">
+          <title>Biomechanical Model Equilibrium</title>
+          <p>Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a illustrates, in frontal and median view, the bones on which muscle and ligament forces act in the simulation model. The origin of its coordinate system is located between the rotation centers of the hip joints. The ligament and joint forces are the result of counteracting the external loads and the muscles forces. All forces act along straight lines, and in principle, each muscle (see also Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>) or ligament has one line of action, see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b. The simulation model quantifies the muscle, ligament, and joint forces to warrant force equilibrium of the complete model. In the present study, the trunk load is the only external force applied. It is also possible to include an external reaction force as a backing support. The trunk load transfers from the lumbar spine, via the pelvis to the lower legs on the basis of the prescribed posture. The static equilibrium equations for the trunk, the coxal bones, and the sacrum are based on a free-body diagram of each part. All forces and moments exerted on each part, including the weight, the external loads, the muscle, and ligament forces, and the joint reaction forces, have to be in equilibrium. Reaction forces in joints balance the other forces. The trunk has a reaction force in the L5-S1 joint, the sacrum has additional reaction forces in the SIJ, and the two coxal bones have reaction forces in the SIJ and the hip joints. In the present study we focus on the vertical SIJ shear forces. These are the net sum of trunk load, muscle, and ligament forces, and reaction forces acting in vertical direction on the vertebrae, the sacrum, and the coxal bones. Reaction forces are calculated in this order, that is starting with the trunk and ending with the ground reaction force (which is not given as output of the model). Leaving out the ground reaction forces on the feet does not mean that the model floats: these forces are just not needed in the equilibrium equations of the trunk, the pelvis, and the femurs.</p>
+        </sec>
+        <sec id="Sec10">
+          <title>Force Vector Optimization Scheme</title>
+          <p>The pelvis was represented as three separate links (left and right coxal bones and sacrum). The left and right femurs and lowest thoracic vertebra were included as links as well. Muscles and ligaments were modeled as vector forces, and muscle, ligament, and joint reaction forces between the separate links balanced the loading of the pelvis. Several sources were combined to complete the anatomical data set. A set of 164 transversal MRI-scans of a healthy young male adult enabled the quantification of the 3-D coordinates of muscle and ligament attachments sites and the magnitude of cross-sectional areas to calculate muscle stresses. A computer program was written to describe the positions of all attachment sites in different postures. For each load situation, the equilibrium of the links had to be calculated. Since the model is statically indeterminate, additional criteria were formulated to come to unique solution of muscle, ligament, and joint reaction forces. The program GAMS<xref ref-type="bibr" rid="CR6">6</xref> was used to determine the optimum solution for the forces. It calculated the magnitudes of 130 force vectors based on a preset load (e.g., the trunk load) using first a linear and second a quadratic optimization criterion. Since the present study focused on static postures, the first linear criterion was as follows:</p>
+          <p>
+            <list list-type="bullet">
+              <list-item>
+                <p>The maximum muscle stress was minimized. The upper limit for muscle stress valid for all muscles was minimized, which was considered as maximizing the endurance time. This criterion only minimized muscle stresses, not the ligament forces. The ligament and joint reaction forces were just part of the optimum solution for the muscle forces.</p>
+              </list-item>
+            </list>
+          </p>
+          <p>This criterion did not necessarily lead to a unique solution. For example: in case a trunk muscle, e.g., the M. erector spinae determined the lowest possible value for the maximum muscle stress, still an infinite number of solutions may exist for balancing muscle forces around the hip. Thus, a supplementary, quadratic criterion was used:</p>
+          <p>
+            <list list-type="bullet">
+              <list-item>
+                <p>The sum of squared muscle stresses was minimized, with the additional constraint that no muscle stress was allowed to exceed the value that followed from the first criterion. This led to distribution of the load over synergic muscles within the boundary of the first criterion. However, strictly upholding this additional constraint led to unrealistic activity of muscles when a small decrease of the maximum muscle stress was achieved by recruiting many muscles. In addition, this second criterion could enhance the increase of ligament forces, since the constraint was only applied to muscle stresses. To prevent that ligament forces became too high, the maximum muscle stress was allowed to exceed the calculated lowest maximum muscle stress from the first criterion by 10%. This increase of the maximum stress was allowed to reduce the recruitment of inefficient muscles, but it also tempered excessive loading of ligament forces.</p>
+              </list-item>
+            </list>
+          </p>
+          <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> shows a flow chart of optimizing muscle and ligament forces and stresses in terms of position, loading, forces, and stresses.
+<fig id="Fig4"><label>Figure&#xA0;4</label><caption><p>A flow chart of the optimization scheme used to calculate the optimum set of muscle, ligament and joint reaction forces on the basis of geometry, positions, external forces, and force limitations</p></caption><graphic position="anchor" xlink:href="10439_2007_9385_Fig4_HTML" id="MO4"/></fig></p>
+        </sec>
+        <sec id="Sec11">
+          <title>Model Validation and Reliability</title>
+          <p>The presented biomechanical model enabled the analysis of load transfer from the upper body to the pelvis and legs. The number of passive structures in the model is small, for instance no joint capsules were incorporated into the model; it was only valid for postures that were not close to the ends of the range of motion of the joints. All forces acted along straight lines, and in principle, each muscle or ligament had one line of action, see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b. However, muscles with broad attachment sites were either defined by a number of lines of action in parallel, e.g., the M. gluteus maximus and the M. obliquus externus abdominis or in series, e.g., the M. psoas major, see Ref. <xref ref-type="bibr" rid="CR15">15</xref> for a detailed description. For example: the M. gluteus maximus had attachments to the sacrum (partially via the sacrotuberous ligament), the coxal bone and the thoracolumbar fascia. Since forces in these three parts had fundamentally different effects on the load in the SIJ, this muscle was modeled as three separate force vectors. The three lines of action that represented the M. gluteus maximus, were given a relative cross-sectional area according to the mass proportion of these muscle parts.<xref ref-type="bibr" rid="CR15">15</xref></p>
+          <p>The reliability of the model was tested by comparing calculated muscle stresses with measured EMG activities described in the literature. The experiments in the papers that were selected had to be accurately described and EMG activity of various muscles in at least one load situation or EMG activity of a single muscle in a variety of load situations had to be reported. This resulted in model simulations of (1) forward hipflexion with the trunk held straight,<xref ref-type="bibr" rid="CR3">3</xref> (2) an isometric axial trunk torque exercise,<xref ref-type="bibr" rid="CR18">18</xref> and (3) various asymmetric sagittal and frontal plane loading conditions.<xref ref-type="bibr" rid="CR29">29</xref> On average, a good correlation between muscle EMG activity and calculated muscle stresses was found, ranging from 0.869 to 0.984. For example, the normalized EMG values (using a scaling factor 1% of the maximum voluntary contraction of 0.0037&#xA0;N/mm<sup>2</sup>) and calculated muscle stresses at different hip flexion angles showed good proportionality (correlation coefficient of 0.904). This was not the case for the activity of the M. quadratus lumborum (slightly higher EMG value) and the M. erector spinae (slightly lower EMG value). Overall, a good agreement was found for agonist muscle activity, but antagonistic muscle activity was underestimated. The aim of the present model was the development of a tool to investigate the general relations between muscle and ligament forces in the pelvic region, rather than to focus on the contribution of individual muscles. To enable the use of EMG data as input in the model, a facility was made to define upper and lower limits for each muscle force vector. It also provides the possibility to simulate co-contraction of antagonistic muscles in the pelvic region. A similar facility was made for ligament and joint reaction forces. In the present study, the ligament forces were not allowed to exceed a maximum of 250&#xA0;N.</p>
+        </sec>
+      </app>
+    </app-group>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Adams</surname>
+              <given-names>M. A.</given-names>
+            </name>
+            <name>
+              <surname>Dolan</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+          <article-title>Recent advances in lumbar spinal mechanics and their clinical significance</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1995</year>
+          <volume>10</volume>
+          <fpage>3</fpage>
+          <lpage>19</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(95)90432-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Adams M. A., Dolan P. Recent advances in lumbar spinal mechanics and their clinical significance Clin. Biomech. 10:3&#x2013;19, 1995 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anderson</surname>
+              <given-names>C. K.</given-names>
+            </name>
+            <name>
+              <surname>Chaffin</surname>
+              <given-names>D. B.</given-names>
+            </name>
+            <name>
+              <surname>Herrin</surname>
+              <given-names>G. D.</given-names>
+            </name>
+            <name>
+              <surname>Matthews</surname>
+              <given-names>L. S.</given-names>
+            </name>
+          </person-group>
+          <article-title>A biomechanical model of the lumbosacral joint during lifting activities</article-title>
+          <source>J. Biomech.</source>
+          <year>1985</year>
+          <volume>18</volume>
+          <fpage>571</fpage>
+          <lpage>584</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(85)90012-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Anderson C. K., Chaffin D. B., Herrin G. D., Matthews L. S. A biomechanical model of the lumbosacral joint during lifting activities. J. Biomech. 18:571&#x2013;584, 1985 <pub-id pub-id-type="pmid">4055812</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andersson</surname>
+              <given-names>E. A.</given-names>
+            </name>
+            <name>
+              <surname>Oddsson</surname>
+              <given-names>L. I. E.</given-names>
+            </name>
+            <name>
+              <surname>Grundstrom</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Nilsson</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Thorstensson</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>EMG activities of the quadratus lumborum and erector spinae muscles during flexion&#x2013;relaxation and other motor tasks</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1996</year>
+          <volume>11</volume>
+          <fpage>392</fpage>
+          <lpage>400</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(96)00033-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Andersson E. A., Oddsson L. I. E., Grundstrom H., Nilsson J., Thorstensson A. EMG activities of the quadratus lumborum and erector spinae muscles during flexion&#x2013;relaxation and other motor tasks. Clin. Biomech. 11:392&#x2013;400, 1996 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brand</surname>
+              <given-names>R. A.</given-names>
+            </name>
+            <name>
+              <surname>Crowninshield</surname>
+              <given-names>R. D.</given-names>
+            </name>
+            <name>
+              <surname>Wittstock</surname>
+              <given-names>C. E.</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>D. R.</given-names>
+            </name>
+            <name>
+              <surname>Clark</surname>
+              <given-names>C. R.</given-names>
+            </name>
+            <name>
+              <surname>Krieken</surname>
+              <given-names>F. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>A model of lower extremity muscular anatomy</article-title>
+          <source>J. Biomech.</source>
+          <year>1982</year>
+          <volume>104</volume>
+          <fpage>304</fpage>
+          <lpage>310</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Brand R. A., Crowninshield R. D., Wittstock C. E., Pedersen D. R., Clark C. R., van Krieken F. M. A model of lower extremity muscular anatomy J. Biomech. 104:304&#x2013;310, 1982 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brand</surname>
+              <given-names>R. A.</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>D. R.</given-names>
+            </name>
+            <name>
+              <surname>Friederich</surname>
+              <given-names>J. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>The sensitivity of muscle force predictions to changes in physiologic cross-sectional area</article-title>
+          <source>J. Biomech.</source>
+          <year>1986</year>
+          <volume>19</volume>
+          <fpage>589</fpage>
+          <lpage>596</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(86)90164-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Brand R. A., Pedersen D. R., Friederich J. A. The sensitivity of muscle force predictions to changes in physiologic cross-sectional area. J. Biomech. 19:589&#x2013;596, 1986 <pub-id pub-id-type="pmid">3771581</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brooke</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Kendrick</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Meeraus</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <source>GAMS &#x2013; A User&#x2019;s Giude</source>
+          <year>1996</year>
+          <publisher-loc>Washington, DC</publisher-loc>
+          <publisher-name>GAMS Development Corporation</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Brooke, A., Kendrick, D., Meeraus A. GAMS &#x2013; A User&#x2019;s Giude. Washington, DC: GAMS Development Corporation, 1996 </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cholewicki</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Juluru</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>McGill</surname>
+              <given-names>S. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Intra-abdominal pressure mechanism for stabilizing the lumbar spine</article-title>
+          <source>J. Biomech.</source>
+          <year>1999</year>
+          <volume>32</volume>
+          <fpage>13</fpage>
+          <lpage>17</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(98)00129-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cholewicki J., Juluru K., McGill S. M. Intra-abdominal pressure mechanism for stabilizing the lumbar spine. J. Biomech. 32:13&#x2013;17, 1999 <pub-id pub-id-type="pmid">10050947</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cholewicki</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>McGill</surname>
+              <given-names>S. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical stability of the in vivo lumbar spine: implications for injury and chronic low back pain</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1996</year>
+          <volume>11</volume>
+          <fpage>1</fpage>
+          <lpage>15</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(95)00035-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cholewicki J., McGill S. M. Mechanical stability of the in vivo lumbar spine: implications for injury and chronic low back pain Clin. Biomech. 11:1&#x2013;15, 1996 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dolan</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Adams</surname>
+              <given-names>M. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Recent advances in lumbar spinal mechanics and their significance for modelling</article-title>
+          <source>Clin. Biomech</source>
+          <year>2001</year>
+          <volume>16</volume>
+          <fpage>S8</fpage>
+          <lpage>S16</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0268-0033(00)00096-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dolan P., Adams M. A. Recent advances in lumbar spinal mechanics and their significance for modelling. Clin. Biomech. 16:S8-S16, 2001 </citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goel</surname>
+              <given-names>V. K.</given-names>
+            </name>
+            <name>
+              <surname>Svensson</surname>
+              <given-names>N. L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Forces on the pelvis</article-title>
+          <source>J. Biomech.</source>
+          <year>1977</year>
+          <volume>10</volume>
+          <fpage>195</fpage>
+          <lpage>200</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(77)90058-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Goel V. K., Svensson N. L. Forces on the pelvis J. Biomech. 10:195&#x2013;200, 1977 <pub-id pub-id-type="pmid">858724</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gracovetsky</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Farfan</surname>
+              <given-names>H. F.</given-names>
+            </name>
+            <name>
+              <surname>Lamy</surname>
+              <given-names>C. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mathematical model of the lumbar spine using an optimized system to control muscles and ligaments</article-title>
+          <source>Orthop. Clin. N. Am.</source>
+          <year>1977</year>
+          <volume>8</volume>
+          <fpage>135</fpage>
+          <lpage>153</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Gracovetsky S., Farfan H. F., Lamy C. A. Mathematical model of the lumbar spine using an optimized system to control muscles and ligaments Orthop. Clin. N. Am. 8:135&#x2013;153, 1977 </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Granata</surname>
+              <given-names>K. P.</given-names>
+            </name>
+            <name>
+              <surname>Marras</surname>
+              <given-names>W. S.</given-names>
+            </name>
+          </person-group>
+          <article-title>An EMG-assisted model of loads on the lumbar spine during asymmetric trunk extensions</article-title>
+          <source>J. Biomech.</source>
+          <year>1993</year>
+          <volume>26</volume>
+          <fpage>1429</fpage>
+          <lpage>1438</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(93)90093-T</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Granata K. P., Marras W. S. An EMG-assisted model of loads on the lumbar spine during asymmetric trunk extensions J. Biomech. 26:1429&#x2013;1438, 1993 <pub-id pub-id-type="pmid">8308047</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hides</surname>
+              <given-names>J. A.</given-names>
+            </name>
+            <name>
+              <surname>Jull</surname>
+              <given-names>G. A.</given-names>
+            </name>
+            <name>
+              <surname>Richardson</surname>
+              <given-names>C. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Long-term effects of specific stabilizing exercises for first-episode low back pain</article-title>
+          <source>Spine</source>
+          <year>2001</year>
+          <volume>26</volume>
+          <fpage>E243</fpage>
+          <lpage>E248</lpage>
+          <pub-id pub-id-type="doi">10.1097/00007632-200106010-00004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hides J. A., Jull G. A., Richardson C. A. Long-term effects of specific stabilizing exercises for first-episode low back pain. Spine 26:E243&#x2013;E248, 2001 <pub-id pub-id-type="pmid">11389408</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hodges</surname>
+              <given-names>P. W.</given-names>
+            </name>
+            <name>
+              <surname>Butler</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>McKenzie</surname>
+              <given-names>D. K.</given-names>
+            </name>
+            <name>
+              <surname>Gandevia</surname>
+              <given-names>S. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Contraction of the human diaphragm during rapid postural adjustments</article-title>
+          <source>J. Physiol.</source>
+          <year>1997</year>
+          <volume>505</volume>
+          <fpage>539</fpage>
+          <lpage>548</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1469-7793.1997.539bb.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hodges P. W., Butler J. E., McKenzie D. K., Gandevia S. C. Contraction of the human diaphragm during rapid postural adjustments. J. Physiol. 505:539&#x2013;548, 1997 <pub-id pub-id-type="pmid">9423192</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hoek van Dijke</surname>
+              <given-names>G. A.</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Stam</surname>
+              <given-names>H. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>A biomechanical model on muscle forces in the transfer of spinal load to the pelvis and legs</article-title>
+          <source>J. Biomech.</source>
+          <year>1999</year>
+          <volume>32</volume>
+          <fpage>927</fpage>
+          <lpage>933</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(99)00085-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hoek van Dijke G. A., Snijders C. J., Stoeckart R., Stam H. J. A biomechanical model on muscle forces in the transfer of spinal load to the pelvis and legs J. Biomech. 32:927&#x2013;933, 1999 <pub-id pub-id-type="pmid">10460129</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jaspers</surname>
+              <given-names>R. T.</given-names>
+            </name>
+            <name>
+              <surname>Degens</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Huijing</surname>
+              <given-names>P. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Specific tension of intact and skinned muscle fibres</article-title>
+          <source>J. Biomech.</source>
+          <year>2006</year>
+          <volume>39</volume>
+          <fpage>S56</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(06)83105-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jaspers R. T., Degens H., Huijing P. A. Specific tension of intact and skinned muscle fibres. J. Biomech. 39:S56, 2006 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="other">Koopman, B. The three-dimensional analysis and prediction of human walking. PhD thesis, Twente Unversity, The Netherlands, 1989</citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McGill</surname>
+              <given-names>S. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Electromyographic activity of the abdominal and low back musculature during the generation of isometric and dynamic axial trunk torque: implications for lumbar mechanics</article-title>
+          <source>J. Orthop. Res.</source>
+          <year>1991</year>
+          <volume>9</volume>
+          <fpage>91</fpage>
+          <lpage>103</lpage>
+          <pub-id pub-id-type="doi">10.1002/jor.1100090112</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McGill S. M. Electromyographic activity of the abdominal and low back musculature during the generation of isometric and dynamic axial trunk torque: implications for lumbar mechanics. J. Orthop. Res. 9:91&#x2013;103, 1991 <pub-id pub-id-type="pmid">1824571</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McGill</surname>
+              <given-names>S. M.</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Creep response of the lumbar spine to prolonged full flexion</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1992</year>
+          <volume>7</volume>
+          <fpage>1975</fpage>
+          <lpage>1983</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(92)90007-Q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McGill S. M., Brown S. Creep response of the lumbar spine to prolonged full flexion. Clin. Biomech. 7:1975&#x2013;1983, 1992 </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McGill</surname>
+              <given-names>S. M.</given-names>
+            </name>
+            <name>
+              <surname>Patt</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Norman</surname>
+              <given-names>R. W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Measurement of the trunk musculature of active males using CT scan radiography: implications for force, moment generating capacity about the L4/L5 joint</article-title>
+          <source>J. Biomech.</source>
+          <year>1988</year>
+          <volume>21</volume>
+          <fpage>329</fpage>
+          <lpage>341</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(88)90262-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McGill S. M., Patt N., Norman R. W. Measurement of the trunk musculature of active males using CT scan radiography: implications for force, moment generating capacity about the L4/L5 joint. J. Biomech. 21:329&#x2013;341, 1988 <pub-id pub-id-type="pmid">3384829</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pederson</surname>
+              <given-names>D. R.</given-names>
+            </name>
+            <name>
+              <surname>Brand</surname>
+              <given-names>R. A.</given-names>
+            </name>
+            <name>
+              <surname>Cheng</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Arora</surname>
+              <given-names>J. S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Direct comparison of muscle force predictions using linear and nonlinear programming</article-title>
+          <source>J. Biomech.</source>
+          <year>1987</year>
+          <volume>10</volume>
+          <fpage>128</fpage>
+          <lpage>136</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Pederson D. R., Brand R. A., Cheng C., Arora J. S. Direct comparison of muscle force predictions using linear and nonlinear programming. J. Biomech. 10, 128&#x2013;136, 1987 </citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Plamondon</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Gagnon</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Gravel</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Moments at the L5/S1 joint during asymmetrical lifting: effect of different load trajectories and initial load positions</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1995</year>
+          <volume>10</volume>
+          <fpage>128</fpage>
+          <lpage>136</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(95)93702-U</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Plamondon A., Gagnon M., Gravel D. Moments at the L5/S1 joint during asymmetrical lifting: effect of different load trajectories and initial load positions. Clin. Biomech. 10:128&#x2013;136, 1995 </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pool-Goudzwaard</surname>
+              <given-names>A. L.</given-names>
+            </name>
+            <name>
+              <surname>Hoek van Dijke</surname>
+              <given-names>G. A.</given-names>
+            </name>
+            <name>
+              <surname>Gurp</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Mulder</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Contribution of pelvic floor muscles to stiffness of the pelvic ring</article-title>
+          <source>Clin. Biomech.</source>
+          <year>2004</year>
+          <volume>19</volume>
+          <fpage>564</fpage>
+          <lpage>571</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.clinbiomech.2004.02.008</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pool-Goudzwaard A. L., Hoek van Dijke G. A., van Gurp M., Mulder P., Snijders C. J., Stoeckart R. Contribution of pelvic floor muscles to stiffness of the pelvic ring. Clin. Biomech. 19:564&#x2013;571, 2004 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pool-Goudzwaard</surname>
+              <given-names>A. L.</given-names>
+            </name>
+            <name>
+              <surname>Kleinrensink</surname>
+              <given-names>G. J.</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Entius</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>The sacroiliac part of the iliolumbar ligament</article-title>
+          <source>J. Anat.</source>
+          <year>2001</year>
+          <volume>199</volume>
+          <fpage>457</fpage>
+          <lpage>463</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1469-7580.2001.19940457.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pool-Goudzwaard A. L., Kleinrensink G. J., Snijders C. J., Entius C., Stoeckart R. The sacroiliac part of the iliolumbar ligament. J. Anat. 199:457&#x2013;463, 2001 <pub-id pub-id-type="pmid">11693306</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Richardson</surname>
+              <given-names>C. A.</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Hides</surname>
+              <given-names>J. A.</given-names>
+            </name>
+            <name>
+              <surname>Damen</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Pas</surname>
+              <given-names>M. S.</given-names>
+            </name>
+            <name>
+              <surname>Storm</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The relationship between the transversus abdominis muscle, sacroiliac joint mechanics and low back pain</article-title>
+          <source>Spine</source>
+          <year>2002</year>
+          <volume>27</volume>
+          <fpage>399</fpage>
+          <lpage>405</lpage>
+          <pub-id pub-id-type="doi">10.1097/00007632-200202150-00015</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Richardson C. A., Snijders C. J., Hides J. A., Damen L., Pas M. S., Storm J. The relationship between the transversus abdominis muscle, sacroiliac joint mechanics and low back pain. Spine 27:399&#x2013;405, 2002 <pub-id pub-id-type="pmid">11840107</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sapsford</surname>
+              <given-names>R. R.</given-names>
+            </name>
+            <name>
+              <surname>Hodges</surname>
+              <given-names>P. W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Contraction of the pelvic floor muscles during abdominal manoeuvre</article-title>
+          <source>Arch. Phys. Med. Rehab.</source>
+          <year>2001</year>
+          <volume>82</volume>
+          <fpage>1081</fpage>
+          <lpage>1088</lpage>
+          <pub-id pub-id-type="doi">10.1053/apmr.2001.24297</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sapsford R. R., Hodges P. W. Contraction of the pelvic floor muscles during abdominal manoeuvre Arch. Phys. Med. Rehab. 82:1081&#x2013;1088, 2001 </citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scholten</surname>
+              <given-names>P. J.</given-names>
+            </name>
+            <name>
+              <surname>Schultz</surname>
+              <given-names>A. B.</given-names>
+            </name>
+            <name>
+              <surname>Luchies</surname>
+              <given-names>C. W.</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>J. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Motions and loads within the human pelvis: a biomechanical model study</article-title>
+          <source>J. Orthop. Res.</source>
+          <year>1988</year>
+          <volume>6</volume>
+          <fpage>840</fpage>
+          <lpage>850</lpage>
+          <pub-id pub-id-type="doi">10.1002/jor.1100060608</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Scholten P. J., Schultz A. B., Luchies C. W., Miller J. A. Motions and loads within the human pelvis: a biomechanical model study. J. Orthop. Res. 6:840&#x2013;850, 1988 <pub-id pub-id-type="pmid">3171764</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schultz</surname>
+              <given-names>A. B.</given-names>
+            </name>
+            <name>
+              <surname>Andersson</surname>
+              <given-names>G. B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of loads on the lumbar spine</article-title>
+          <source>Spine</source>
+          <year>1981</year>
+          <volume>6</volume>
+          <fpage>76</fpage>
+          <lpage>82</lpage>
+          <pub-id pub-id-type="doi">10.1097/00007632-198101000-00017</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schultz A. B., Andersson G. B. Analysis of loads on the lumbar spine. Spine 6:76&#x2013;82, 1981 <pub-id pub-id-type="pmid">7209677</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Seroussi</surname>
+              <given-names>R. E.</given-names>
+            </name>
+            <name>
+              <surname>Pope</surname>
+              <given-names>M. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>The relationship between trunk muscle electromyography and lifting moments in the sagittal and frontal planes</article-title>
+          <source>J. Biomech.</source>
+          <year>1987</year>
+          <volume>20</volume>
+          <fpage>135</fpage>
+          <lpage>146</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(87)90305-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Seroussi R. E., Pope M. H. The relationship between trunk muscle electromyography and lifting moments in the sagittal and frontal planes. J. Biomech. 20, 135&#x2013;146, 1987 <pub-id pub-id-type="pmid">3571294</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Nordin</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Frankel</surname>
+              <given-names>V. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Standing, sitting and lying</article-title>
+          <source>Basic Biomechanics of the Musculoskeletal System</source>
+          <year>2001</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Lippincott Williams &amp; Wilkins</publisher-name>
+          <fpage>420</fpage>
+          <lpage>436</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Snijders C. J. Standing, sitting and lying. In: Basic Biomechanics of the Musculoskeletal System, edited by M. Nordin, V. H. Frankel New York: Lippincott Williams &amp; Wilkins, 2001, pp: 420&#x2013;436 </citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="other">Snijders C. J., P. F. Hermans, R. Niesing, G. J. Kleinrensink, and A. Pool-Goudzwaard. Effects of slouching and muscle contraction on the strain of the iliolumbar ligament. Man. Ther. Epub ahead of print, 2007</citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Hermans</surname>
+              <given-names>P. F. G.</given-names>
+            </name>
+            <name>
+              <surname>Niesing</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Spoor</surname>
+              <given-names>C. W.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>The influence of slouching and lumbar support on iliolumbar ligaments, intervertrebal discs and sacroiliac joints</article-title>
+          <source>Clin. Biomech.</source>
+          <year>2004</year>
+          <volume>19</volume>
+          <fpage>323</fpage>
+          <lpage>329</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.clinbiomech.2004.01.006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Snijders C. J., Hermans P. F. G., Niesing R., Spoor C. W., Stoeckart R. The influence of slouching and lumbar support on iliolumbar ligaments, intervertrebal discs and sacroiliac joints. Clin. Biomech. 19:323&#x2013;329, 2004 </citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Ribbers</surname>
+              <given-names>M. T. L. M.</given-names>
+            </name>
+            <name>
+              <surname>Bakker</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Stam</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>EMG recordings of abdominal and back muscles in various standing postures: validation of a biomechanical model on sacroiliac joint stability</article-title>
+          <source>J. Electromyogr. Kines.</source>
+          <year>1998</year>
+          <volume>8</volume>
+          <fpage>205</fpage>
+          <lpage>214</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1050-6411(98)00005-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Snijders C. J., Ribbers M. T. L. M., de Bakker H., Stoeckart R., Stam H. EMG recordings of abdominal and back muscles in various standing postures: validation of a biomechanical model on sacroiliac joint stability. J. Electromyogr. Kines. 8:205&#x2013;214, 1998 </citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Vleeming</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Transfer of lumbosacral load to iliac bones and legs. Part 1: biomechanics of self-bracing of the sacroiliac joints and its significance for treatment and exercise</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1993</year>
+          <volume>8</volume>
+          <fpage>285</fpage>
+          <lpage>294</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(93)90002-Y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Snijders C. J., Vleeming A., Stoeckart R. Transfer of lumbosacral load to iliac bones and legs. Part 1: biomechanics of self-bracing of the sacroiliac joints and its significance for treatment and exercise. Clin. Biomech. 8:285&#x2013;294, 1993 </citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Snijders</surname>
+              <given-names>C. J.</given-names>
+            </name>
+            <name>
+              <surname>Vleeming</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Stoeckart</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Transfer of lumbosacral load to iliac bones and legs. Part 2: loading of the sacroiliac joints when lifting in a stooped posture</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1993</year>
+          <volume>8</volume>
+          <fpage>295</fpage>
+          <lpage>301</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(93)90003-Z</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Snijders C. J., Vleeming A., Stoeckart R. Transfer of lumbosacral load to iliac bones and legs. Part 2: loading of the sacroiliac joints when lifting in a stooped posture. Clin. Biomech. 8:295&#x2013;301, 1993 </citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tracy</surname>
+              <given-names>M. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Three-dimensional force model of the low-back for simple computer programming</article-title>
+          <source>Clin. Biomech.</source>
+          <year>1990</year>
+          <volume>5</volume>
+          <fpage>175</fpage>
+          <lpage>179</lpage>
+          <pub-id pub-id-type="doi">10.1016/0268-0033(90)90021-W</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tracy M. F. Three-dimensional force model of the low-back for simple computer programming. Clin. Biomech. 5:175&#x2013;179, 1990 </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

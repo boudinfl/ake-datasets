@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17597905</article-id>
+      <article-id pub-id-type="pmc">1891696</article-id>
+      <article-id pub-id-type="publisher-id">69-1-2006</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Web Database</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Database of cell signaling enzymes</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Gowthaman</surname>
+            <given-names>Ragul</given-names>
+          </name>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Venugopal</surname>
+            <given-names>Ramya</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Dayanandam</surname>
+            <given-names>Dhiviya</given-names>
+          </name>
+        </contrib>
+        <aff>Department of Bioinformatics, School of Chemical and Biotechnology, Shanmugha Arts Science Technology &amp; Research Academy (SASTRA), 
+     SASTRA UNIVERSITY, Tanjore, Tamilnadu, India</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Ragul Gowthaman    
+           E-mail:
+           <email> ragul@bioinfo.sastra.edu</email>; Corresponding author</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>28</day>
+        <month>11</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>1</volume>
+      <issue>7</issue>
+      <fpage>265</fpage>
+      <lpage>268</lpage>
+      <history>
+        <date date-type="received">
+          <day>6</day>
+          <month>11</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>21</day>
+          <month>11</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2005 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2005</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction 
+				in any medium, for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>This paper describes a database for cell signaling enzymes. Our web database 
+offers methods to study, interpret and compare cell-signaling enzymes. 
+Searching and retrieving data from this database has been made easy and user 
+friendly and it is well integrated with other related databases. We believe the 
+end user will be benefited from this database.</p>
+        <sec id="sble">
+          <title>Availability</title>
+          <p>
+            <ext-link ext-link-type="uri" xlink:href="http://www.sastra.edu/dcse/index.html">http://www.sastra.edu/dcse/index.html</ext-link>
+          </p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>cell signaling</kwd>
+        <kwd>enzymes</kwd>
+        <kwd>web database</kwd>
+        <kwd>pBLAST</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>A cell communicates with its neighbors and environment by sending and 
+receiving information in the form of chemical signals. These signals are 
+converted into intracellular second messenger signals that ultimately make the 
+cells respond appropriately by dividing, moving or even dying. The external 
+signals may enter the cell through enzymes, G-protein coupled receptors, 
+hydrophobic molecules and ion channels. When the receptor sensing the signal is 
+a catalyst such as enzyme, the response is amplified. Thus cell signaling 
+governs the basic cellular activities and coordinates the cell action. Errors 
+in cell signaling is the cause for many serious diseases/disorders including 
+cancer, autoimmune diseases, diabetes etc. By understanding cell signaling we 
+can treat these diseases effectively and potentially. [<xref ref-type="bibr" rid="R01">1</xref>] However, no attempts have been made 
+so far to curate and catalog the enzymes involved in cell signaling.</p>
+      <p>DCSE, the Database of Cell Signaling Enzymes covers a gamut of cell 
+signaling enzymes, which includes kinases, phosphatases, adenylyl cyclases, 
+caspases, phosphodiesterases, phospholipases, prenyltransferases etc. As 
+mentioned above the defect in cell signaling mechanism is the major cause for 
+diseases and hence the cell signaling enzymes are considered to be potential 
+target in rational drug design approach.</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <p>DCSE was developed using MySQL [<xref ref-type="bibr" rid="R02">
+2</xref>], a relational database management system, at the back-end for 
+storing data. The database can be regularly updated. The data for the database 
+were collected from SwissProt [<xref ref-type="bibr" rid="R03">3</xref>
+], the repository of protein sequence information. PHP [<xref ref-type="bibr" rid="R04">4</xref>], a widely used general purpose 
+scripting language that is especially suited for web development, was used to 
+design the database interface.</p>
+      <p>The database can be accessed over the Internet. A screenshot of the home 
+page is shown in <xref ref-type="fig" rid="F1">Figure 1</xref>.The database can 
+be searched by specifying keywords such as name, Enzyme Commission Number and 
+species. For each enzyme in the database a unique identifier called DCSE ID has 
+been assigned. The ID consists of two parts. The first part tells about the 
+enzyme class and the second part indicates the number of that enzyme in that 
+class. The two fields are separated by an underscore (_). Each enzyme has been 
+defined with its name, Enzyme commission number, and the species from which it 
+has been sequenced. Crossreference details to other databases are also 
+provided. The functional and other sequence related informations are provided 
+by SwissProt, the domain classification and function is provided by InterPro 
+[<xref ref-type="bibr" rid="R05">5</xref>], the protein family 
+classification is provided by Pfam [<xref ref-type="bibr" rid="R06">
+6</xref>] and the structural details are provided by PDB. [
+<xref ref-type="bibr" rid="R07">7</xref>] A hyperlink has been provided 
+to corresponding entry page in the abovementioned databases.</p>
+      <p>The sequence is also displayed in raw-text format. One can retrieve the 
+sequence in FASTA format using the &#x2018;Retrieve in Fasta format&#x2019; 
+option available with each entry. An advanced search can also be performed by 
+filling an advanced query form that takes input as DCSE id, name, EC number, 
+Species, other database id such as SwissProt, InterPro, Pfam and PDB. The 
+fields in the search form are joined together by AND operator. BLAST (Basic 
+Local Alignment Search Tool) [<xref ref-type="bibr" rid="R08">8</xref>
+] is an algorithm for comparing biological sequences. Given a library 
+or database of sequences, a BLAST search enables a researcher to look for 
+sequences that resemble a given sequence of interest. A standalone BLAST has 
+been installed and it can be used for similarity search purpose. BLAST can be 
+done against SwissProt, DCSE or PD.</p>
+    </sec>
+    <sec id="s3">
+      <title>Usability/Accessibility</title>
+      <p>There are three ways in which a user can query the database. The first is 
+the &#x2018;keyword search&#x2019; that can be done by specifying exact or 
+likely keywords such as name, Enzyme Commission Number and species. The second 
+search option is the &#x2018;Advanced Search&#x2019; wherein the user can 
+fill a form by specifying the details for various fields such as DCSE id, 
+Enzyme name, Enzyme commission number, SwissProt accession number, InterPro 
+domain ID, Pfam id or PDB id. The fields are joined together by AND operator. 
+Alternatively the users can also browse the database by the 21 different 
+categories of cell signaling enzymes. Whenever the database is searched the 
+search returns the result with number of hits found for that query along with a 
+summary of details for each entry with its id, name and species. The user can 
+then select the appropriate hit by following the link on it. This displays a 
+page with all the available details of the enzyme in the database such as name, 
+EC number, sequence information and cross-reference to already existing 
+databases as shown in <xref ref-type="fig" rid="F2">Figure 2</xref>. A 
+hyperlink has been provided to corresponding entry page in the cross-referenced 
+databases for easy access. The sequence is displayed in raw-text format. One 
+can retrieve the sequence in FASTA format using the &#x2018;Retrieve in Fasta 
+format&#x2019; option available with each entry. A BLAST search can also be 
+done to search for similar sequences within the database or in general. A link 
+has been provided in the tools page. The BLAST input page and result page are 
+shown in <xref ref-type="fig" rid="F3">figure 3</xref> and <xref ref-type="fig" rid="F4">4</xref>.</p>
+    </sec>
+    <sec id="s4">
+      <title>Utility to the biological community</title>
+      <p>Since DCSE gather together all the information on biological molecules, 
+sequences, structures, functions, and biological reactions, which transfer the 
+cellular signals, this database has the potential of becoming a major hub of 
+resource for the biological community. This database provides a mechanism by 
+which researchers and students can transform information about interactions 
+between biomolecules into knowledge about a cellular process.</p>
+    </sec>
+    <sec id="s5">
+      <title>Caveats</title>
+      <p>The database needs to be updated from time to time as the data has been 
+obtained from other sources. Despite our efforts to collect information from 
+various sources and check them for consistency, the quality of the information 
+depends heavily on the original source.</p>
+    </sec>
+    <sec id="s6">
+      <title>Future development</title>
+      <p>The coiled-coil structure is important for protein interaction. Since the 
+cell signaling also involves protein interaction, a tool to predict coiled-coil 
+structure is of importance.</p>
+      <p>There are few tools for this purpose like MultiCoil. The Multicoil program 
+just gives the probability for a residue to be in coiled-coil region. We intend 
+to develop a coiled-coil prediction tool based on artificial neural networks 
+that could tell whether a residue is in coiled-coil region if it crosses a 
+threshold computed from a training set consisting of proteins with known 
+coiled-coil structure.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors are grateful to Dr. K.N. Somasekharan, Dean - School of Chemical 
+&amp; Biotechnology, Dr. S. Swaminathan, Dean - Sponsored Research &amp;
+ Director CeNTAB and Prof. K. Usha Devi, Dean - School of Computing, SASTRA 
+University for their support.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Persidis</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Nat Biotechnol</source>
+          <year>1998</year>
+          <volume>16</volume>
+          <fpage>1082</fpage>
+          <pub-id pub-id-type="pmid">9831041</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>02</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.mysql.com/">http://www.mysql.com/</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.expasy.org/sprot">http://www.expasy.org/sprot</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.php.net/">http://www.php.net/</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/interpro/">http://www.ebi.ac.uk/interpro/</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.sanger.ac.uk/Software/Pfam/">http://www.sanger.ac.uk/Software/Pfam/</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.rcsb.org">http://www.rcsb.org</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Altschul</surname>
+              <given-names>SF</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>3389</fpage>
+          <pub-id pub-id-type="pmid">9254694</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>DCSE home page</p>
+        </caption>
+        <graphic xlink:href="97320630001265F1"/>
+      </fig>
+      <fig id="F2" position="float">
+        <label>Figure 2</label>
+        <caption>
+          <p>An DCSE entry</p>
+        </caption>
+        <graphic xlink:href="97320630001265F2"/>
+      </fig>
+      <fig id="F3" position="float">
+        <label>Figure 3</label>
+        <caption>
+          <p>BLAST input page</p>
+        </caption>
+        <graphic xlink:href="97320630001265F3"/>
+      </fig>
+      <fig id="F4" position="float">
+        <label>Figure 4</label>
+        <caption>
+          <p>BLAST result page</p>
+        </caption>
+        <graphic xlink:href="97320630001265F4"/>
+      </fig>
+    </sec>
+    <fn-group>
+      <fn id="FN1" fn-type="other">
+        <p>
+      <bold>Citation:</bold>Gowthaman
+       <italic>et al.</italic>, Bioinformation 1(7): 265-268 (2006)</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,50 @@
+AVATAR: A database for genome-wide alternative splicing event detection using large scale ESTs and mRNAs
+In the past years, identification of alternative splicing (AS) variants has been gaining momentum. We developed AVATAR, a database for documenting AS using 5,469,433 human EST sequences and 26,159 human mRNA sequences. AVATAR contains 12000 alternative splicing sites identified by mapping ESTs and mRNAs with the whole human genome sequence. AVATAR also contains AS information for 6 eukaryotes. We mapped EST alignment information into a graph model where exons and introns are represented with vertices and edges, respectively. AVATAR can be queried using, (1) gene names, (2) number of identified AS events in a gene, (3) minimal number of ESTs supporting a splicing site, etc. as search parameters. The system provides visualized AS information for queried genes.
+Background
+Alternative splicing (AS) is an important mechanism for functional diversity in eukaryotic cells. AS allow processing 
+of one pre-mRNA into different transcripts in a cell type. This results in protein diversity with each protein having 
+distinct function. [1–2
+–3] To address this problem we used EST (short, single pass cDNA 
+sequences generated from randomly selected library clones produced in a high throughput manner from different tissues, 
+individuals and conditions) and mRNA sequences to detect AS variants. The detected variants (using 5,469,433 EST and 
+26,159 mRNA sequences) were stored in a database called AVATAR.
+Although, AS databases are available in the public domain, not many contain AS information for multiple eukaryotes 
+(a comparison summarized in AVATAR web site). Therefore, it is important to document AS information for multiple 
+eukaryotes. Hence, we developed AVATAR containing AS information for six eukaryotes. Here, we describe AVATAR development, 
+its content and utility.
+Methodology
+Dataset used
+The dbEST database (Jan 16, 2004) at NCBI contains nearly 5.4 million human EST sequences and this dataset is used 
+in the current analysis. [4] The human genome sequences (CONTIG build 3.4)
+in Genbank format is obtained from NCBI. [5] Gene information and 
+mRNA sequence were downloaded from the NCBI RefSeq project.
+Identification of AS
+The identification of AS in AVATAR is performed in three steps (described below) as illustrated in Figure 1.
+Step 1:
+Alignment of EST and mRNA with the genome sequence
+EST sequences were aligned to the whole genome sequence using Mugup. [6
+] Mugup is a sequence  alignment program developed in Windows platform. This procedure identified splice sites in 
+the ESTs (Figure 1 panel A and B). The matched regions and gaps correspond to exons and introns, respectively. EST and mRNA 
+alignments with scores greater than 94% were used for further analysis.
+Step 2:
+Clustering EST and mRNA
+EST and mRNA were clustered according to their location in the genome (Figure 1 panel C). EST and mRNA with overlapping 
+regions were then assembled together.
+Step 3:
+Detection of AS sites
+The mapping of EST alignment with genome sequence to intron positions helps to identify skipped exons and 
+included exons.
+Searching AVATAR
+AVATAR can be queried using keywords. The keywords include accession number, gene name, gene isoform, gene location, 
+cytogenetic locations, chromosome number and number of AS events. The database search produces AS visuals for queried gene.
+Utility to the Biological Community
+AVATAR is a collection of AS information for 6 eukaryotic organisms. The database can be queried simultaneously for 6 
+organisms. It can also be searched using gene names and desired number of AS events. EST sequences are error prone resulting 
+in the detection of aberrant transcripts. Frequency of EST alignment at a specific site provides improved detection in AVATAR.
+Caveats
+AS information on paralogous genes in eukaryotic genomes are not included in AVATAR due to the difficulty in identifying 
+their corresponding chromosomal locations using EST sequences.
+Future developments
+New EST sequences are generated in laboratories every day. Hence, it is a time consuming to keep AS databases updated due 
+to the growth of genome and mRNA sequences. Hence, we are in the process of developing a computer agent which can update AVATAR 
+automatically. We also plan to include tumor specific AS data.

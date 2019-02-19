@@ -1,0 +1,1945 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Mol Biol</journal-id>
+      <journal-id journal-id-type="iso-abbrev">J. Mol. Biol</journal-id>
+      <journal-title-group>
+        <journal-title>Journal of Molecular Biology</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0022-2836</issn>
+      <issn pub-type="epub">1089-8638</issn>
+      <publisher>
+        <publisher-name>Elsevier</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17368482</article-id>
+      <article-id pub-id-type="pmc">1885968</article-id>
+      <article-id pub-id-type="publisher-id">S0022-2836(07)00236-7</article-id>
+      <article-id pub-id-type="doi">10.1016/j.jmb.2007.02.055</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Global Changes in Local Protein Dynamics Reduce the Entropic Cost of Carbohydrate Binding in the Arabinose-binding Protein</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>MacRaild</surname>
+            <given-names>Christopher A.</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Daranas</surname>
+            <given-names>Antonio Hern&#xE1;ndez</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Bronowska</surname>
+            <given-names>Agnieszka</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Homans</surname>
+            <given-names>Steve W.</given-names>
+          </name>
+          <email>s.w.homans@leeds.ac.uk</email>
+          <xref rid="cor1" ref-type="corresp">&#x204E;</xref>
+        </contrib>
+      </contrib-group>
+      <aff>Astbury Centre for Structural Molecular Biology and Institute of Molecular and Cellular Biology, University of Leeds, Leeds, LS2 9JT, UK</aff>
+      <author-notes>
+        <corresp id="cor1"><label>&#x204E;</label>Corresponding author. <email>s.w.homans@leeds.ac.uk</email></corresp>
+      </author-notes>
+      <pub-date pub-type="pmc-release">
+        <day>04</day>
+        <month>5</month>
+        <year>2007</year>
+      </pub-date>
+      <!-- PMC Release delay is 0 months and 0 days and was based on <pub-date
+						pub-type="ppub">.-->
+      <pub-date pub-type="ppub">
+        <day>04</day>
+        <month>5</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>368</volume>
+      <issue>3</issue>
+      <fpage>822</fpage>
+      <lpage>832</lpage>
+      <history>
+        <date date-type="received">
+          <day>21</day>
+          <month>12</month>
+          <year>2006</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>12</day>
+          <month>2</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>14</day>
+          <month>2</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2007 Elsevier Ltd.</copyright-statement>
+        <copyright-year>2007</copyright-year>
+        <copyright-holder>Elsevier Ltd</copyright-holder>
+        <license xlink:href="https://creativecommons.org/licenses/by/3.0/">
+          <license-p>Open Access under <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</ext-link> license</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Protein dynamics make important but poorly understood contributions to molecular recognition phenomena. To address this, we measure changes in fast protein dynamics that accompany the interaction of the arabinose-binding protein (ABP) with its ligand, <sc>d</sc>-galactose, using NMR relaxation and molecular dynamics simulation. These two approaches present an entirely consistent view of the dynamic changes that occur in the protein backbone upon ligand binding. Increases in the amplitude of motions are observed throughout the protein, with the exception of a few residues in the binding site, which show restriction of dynamics. These counter-intuitive results imply that a localised binding event causes a global increase in the extent of protein dynamics on the pico- to nanosecond timescale. This global dynamic change constitutes a substantial favourable entropic contribution to the free energy of ligand binding. These results suggest that the structure and dynamics of ABP may be adapted to exploit dynamic changes to reduce the entropic costs of binding.</p>
+      </abstract>
+      <kwd-group>
+        <title>Abbreviations used</title>
+        <kwd>ABP, arabinose-binding protein</kwd>
+        <kwd>HSQC, heteronuclear single quantum coherence</kwd>
+        <kwd>RDC, residual dipolar coupling</kwd>
+      </kwd-group>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>ligand binding</kwd>
+        <kwd>thermodynamics</kwd>
+        <kwd>NMR relaxation</kwd>
+        <kwd>molecular dynamics</kwd>
+        <kwd>periplasmic binding protein</kwd>
+      </kwd-group>
+    </article-meta>
+    <notes>
+      <p>Edited by A. G. Palmer III</p>
+    </notes>
+  </front>
+  <body>
+    <sec sec-type="intro">
+      <title>Introduction</title>
+      <p>An important goal of structural biology is to predict and manipulate the interactions between proteins and small-molecule ligands. To this end, extensive research efforts have been aimed at relating the known structure of protein&#x2013;ligand complexes to the thermodynamics of that interaction. The success of these attempts has been limited, in part because of their neglect of the role of protein and ligand conformational dynamics in determining ligand-binding thermodynamics.</p>
+      <p>A common view of protein&#x2013;ligand interactions sees them arising from the hydrophobic effect (the entropically favourable exclusion of water from hydrophobic surfaces) together with shape complementarity between the protein and ligand. In this view, protein&#x2013;ligand interactions are expected to be driven by favourable changes in entropy. Recent results suggest closer scrutiny of this view is warranted, even for predominantly non-polar interactions.<xref rid="bib1 bib2" ref-type="bibr"><sup>1,2</sup></xref> One can contrast this former view of protein&#x2013;ligand interactions with one that considers the restriction in conformational degrees of freedom, which must necessarily be entailed by binding. From this perspective, an unfavourable change in entropy is expected to characterise these interactions. This requires a larger, favourable enthalpic contribution, which may arise directly from the protein&#x2013;ligand interaction or from solvation effects.</p>
+      <p>The thermodynamic signature of protein&#x2013;ligand interactions in this second view is typical of protein&#x2013;carbohydrate interactions: entropic contributions to the interaction are typically large and unfavourable, and favourable enthalpic contributions drive the interaction. An example of such a system is the arabinose-binding protein (ABP). ABP is a member of the bacterial periplasmic binding protein family and serves as the initial component of the active transport system for the monosaccharides l-arabinose, <sc>d</sc>-fucose and <sc>d</sc>-galactose. Several members of this family, including ABP, have served as models for structural analysis of ligand-binding interactions,<xref rid="bib3 bib4" ref-type="bibr"><sup>3,4</sup></xref> and have recently emerged as templates for design of novel ligand-binding proteins.<xref rid="bib5" ref-type="bibr"><sup>5</sup></xref> ABP binds its ligands in the interface of two protein domains. The binding site displays an extensive network of H-bond and CH&#x2013;&#x3C0; interactions characteristic of protein&#x2013;carbohydrate association. Both structural and thermodynamic aspects of this interaction have been studied extensively,<xref rid="bib4 bib6 bib7 bib8 bib9" ref-type="bibr"><sup>4,6&#x2013;9</sup></xref> yet there is no clear understanding of the basis of either the large favourable binding enthalpy or the unfavourable entropy change on binding.</p>
+    </sec>
+    <sec>
+      <title>Results and Discussion</title>
+      <sec>
+        <title>Entropic cost of binding</title>
+        <p>It is evident that formation of a stable complex between a protein and a ligand will involve the loss of entropy associated with the free diffusion of one component with respect to the other. The magnitude of these unfavourable contributions to the protein&#x2013;ligand interaction may be only approximated; here, we take an estimate of the loss of ligand translational and rotational entropy from the work by Turnbull <italic>et al</italic> and Lundquist and Toone, which converge at approximately 25 kJ/mol for the equivalent free energy penalty.<xref rid="bib10 bib11" ref-type="bibr"><sup>10,11</sup></xref> We note that this estimate is consistent with a number of others in the literature, for systems ranging from small polar molecules to folded and unfolded proteins.<xref rid="bib12 bib13 bib14 bib15" ref-type="bibr"><sup>12&#x2013;15</sup></xref></p>
+        <p>It is generally assumed that the bound ligand will adopt a single conformation, optimised to the structure of the binding site, and thus will experience a loss of entropy reflecting the loss of conformational flexibility of the ligand in solution. Likewise, the protein-binding site might be expected to undergo a loss of entropy as it adopts only that subset of available conformations that are conducive to binding. This loss of internal conformational entropy of the ligand is challenging to assess, particularly for a flexible ligand such as galactose, which displays complex conformational behaviour in solution. Nonetheless, on the assumption that ligand degrees of freedom are substantially &#x201C;frozen&#x201D; on binding, the entropic penalty arising from loss in degrees of freedom of the galactose hydroxyl rotors alone is likely to be &#x223C;&#xA0;30 kJ/mol.<xref rid="bib11" ref-type="bibr"><sup>11</sup></xref></p>
+        <p>The ABP binding site contains a significant number of tightly bound water molecules, which play a role in governing substrate specificity,<xref rid="bib9" ref-type="bibr"><sup>9</sup></xref> and in maintaining the structure of the binding site. Examination of the structures of ABP in complex with arabinose (<italic>1ABE</italic>), fucose (<italic>1ABF</italic>) and galactose (<italic>5APB</italic>) reveals some 15 crystallographically resolved and structurally conserved water molecules within the binding site (within 10&#xA0;&#xC5; of a ligand heavy atom and within 5&#xA0;&#xC5; of heavy atoms of both protein domains; <xref rid="fig1" ref-type="fig">Figure 1</xref>). The entropic cost of confinement of water molecules has been estimated to be as much as 8 kJ/mol per water molecule.<xref rid="bib16" ref-type="bibr"><sup>16</sup></xref> Even if the cost of confinement of the water molecules in the binding site of ABP is much less than this maximal value, it is clear that the overall cost of constraining these water molecules in the binding site will be substantial.</p>
+        <p>The experimentally observed entropy of the ABP&#x2013;galactose interaction amounts to a <italic>T</italic>&#x394;<italic>S</italic>&#xB0; of &#x2013;61 kJ/mol at 308 K.<xref rid="bib6" ref-type="bibr"><sup>6</sup></xref> Together, the entropic costs above exceed significantly this experimental entropy change on binding. Similar discrepancies, in which measured entropies of association are more positive (i.e. more favourable) than might be expected from first principles, have been known for at least 50 years.<xref rid="bib17 bib18 bib19" ref-type="bibr"><sup>17&#x2013;19</sup></xref> Most often, the discrepancy has been attributed to solvation effects, such as the hydrophobic effect or desolvation of charged groups.<xref rid="bib17 bib18" ref-type="bibr"><sup>17,18</sup></xref> It has been noted, however, that these discrepancies might be explained by the introduction of new degrees of freedom in the complex, which did not exist in the interacting partners before interaction.<xref rid="bib19" ref-type="bibr"><sup>19</sup></xref> We investigate this latter possibility by examining the contribution of protein dynamics to the entropy of interaction of ABP with its ligands.</p>
+      </sec>
+      <sec>
+        <title>Assignment of apoABP</title>
+        <p>We have reported the determination of near-complete backbone resonance assignments for ABP in complex with its ligand, <sc>d</sc>-galactose.<xref rid="bib20" ref-type="bibr"><sup>20</sup></xref> Assignments for apoABP were determined from these results, using an approach that combined conventional triple-resonance assignment strategies and <sup>1</sup>H-<sup>15</sup>N heteronuclear single quantum coherence (HSQC) titrations of ABP with the fast-exchanging ligand 1-deoxy-galactose. Approximately 80% of the expected backbone resonances of apoABP were assigned.</p>
+        <p>From these assignments, a comparison was made of the chemical shifts of the backbone amide resonances of ABP in the apo state and in the complex (<xref rid="fig1" ref-type="fig">Figure 1</xref>). As expected, large chemical shift changes are seen in the binding site. In addition, large chemical shift changes are seen in the region linking the two domains of ABP, suggesting that ligand binding might be associated with a change in relative domain orientation in ABP. Domain reorientations on binding are observed in other members of the periplasmic-binding protein family, and have been proposed for ABP on the basis of the results of small-angle X-ray scattering and computational studies.<xref rid="bib21 bib22" ref-type="bibr"><sup>21,22</sup></xref></p>
+        <p>Small chemical shift differences are seen at sites distal to the binding site and hinge region. These differences suggest that subtle changes in conformation or dynamics throughout the molecule occur on binding.</p>
+      </sec>
+      <sec>
+        <title>Domain orientation of apoABP</title>
+        <p>Analysis of NMR relaxation for anisotropic molecules depends on knowledge of the molecular structure. It is therefore necessary to address the possibility of ligand-induced domain reorientation in ABP. We have done this using residual dipolar couplings (RDCs), which are sensitive to the average molecular orientation with respect to molecular alignment induced by a liquid crystalline solution.<xref rid="bib23" ref-type="bibr"><sup>23</sup></xref>
+<sup>1</sup>H-<sup>15</sup>N RDCs were measured for 127 backbone amides in regions of defined secondary structure of apoABP. The measured RDCs were initially compared to those predicted on the basis of the crystal structure of ABP in complex with galactose. Agreement was poor (RMSD&#xA0;=&#xA0;13&#xA0;Hz, <italic>R</italic>-factor&#xA0;=&#xA0;65%), confirming that conformational change does indeed occur on ligand binding.</p>
+        <p>The extent of domain reorientation in ABP was determined using a structure calculation protocol in which the structure of each domain was minimised individually against the measured RDCs, followed by a simulated annealing procedure in which each domain was held rigid in its minimised conformation. This protocol was repeated 100 times with data generated by a Monte Carlo re-sampling of the experimental RDC data to assess the robustness of the protocol and the precision of the resulting structures. The agreement between the RDCs and the calculated structure is excellent, with an RMSD of 1.2&#xA0;Hz and an <italic>R</italic>-factor of 6.0%. The quality of the structure is good, with 97% of residues in the core and allowed regions of the Ramachandran plot, and all residues showing correct peptide bond geometry. The backbone RMSD over the 100 structures derived from Monte Carlo re-sampling of the RDC data is 0.67&#xA0;&#xC5;.</p>
+        <p>The resulting ensemble of structures (<xref rid="fig2" ref-type="fig">Figure 2</xref>) showed apoABP to be &#x201C;opened&#x201D; by a domain hinge motion of &#x223C;&#xA0;20&#xB0; with respect to the crystal structure of the ABP&#x2013;galactose complex. This represents a conformational change similar to those seen in other members of the periplasmic-binding protein family. In addition, small changes to individual domain structures are required for optimal agreement with RDCs. This supports the inference from chemical shift changes, that ligand binding has subtle conformational consequences throughout the protein.</p>
+      </sec>
+      <sec>
+        <title>Dynamics of ABP</title>
+        <p>The contribution of protein dynamics to the ABP&#x2013;galactose interaction was assessed by means of Lipari&#x2013;Szabo analysis of nuclear magnetic relaxation.<xref rid="bib24 bib25" ref-type="bibr"><sup>24,25</sup></xref> This approach yields information on the extent and timescale of molecular motions occurring faster than the rotational diffusion of the protein. The Lipari&#x2013;Szabo formalism is relatively free of assumptions regarding the physical model describing the motion under investigation, requiring only that the dynamics be described by a Markov process and that the internal dynamics is uncorrelated with the global tumbling of the macromolecule. The results of the Lipari&#x2013;Szabo analysis, in the form of an order parameter, can be interpreted in terms of the conformational entropy associated with the measured motions by means of a specific motional model. It has been shown that for a wide range of models, the functional dependence of entropy on the order parameter is similar, suggesting that changes in order parameter can be related to entropy change in a model-independent fashion.<xref rid="bib26" ref-type="bibr"><sup>26</sup></xref></p>
+        <p>We have measured relaxation data for 148 backbone amides of apoABP at three magnetic fields, and for 156 backbone amides of the ABP-galactose complex at two magnetic fields. The analysis of these data in terms of the Lipari&#x2013;Szabo formalism yields order parameters that measure the extent of angular motion of individual amide bond vectors (<xref rid="fig3" ref-type="fig">Figure 3</xref>(a) and (b)). In both apoABP and the complex we see almost exclusively the large order parameters typical of the relatively rigid backbone of globular proteins. Remarkably, order parameters for apoABP are generally larger than for the ABP&#x2013;galactose complex, indicating that pico- to nanosecond motions are more extensive in the complex than in the apo protein.</p>
+        <p>Owing to the size of ABP and the associated spectral complexity, many residues have been excluded from the analysis, because spectral overlap precludes accurate measurement of relaxation rates. For this reason, no experimental data are available for residues involved directly in binding. Thus, our observations reflect changes in dynamics remote from the binding site, yet caused by the protein&#x2013;ligand interaction. Indeed, the observed changes are seen to be distributed throughout the protein, albeit with a slight bias towards the N domain (in the sense that larger dynamic changes are seen preferentially in this domain) (<xref rid="fig3" ref-type="fig">Figure 3</xref>(c)).</p>
+        <p>To confirm and further explore the basis of this result, we have performed molecular dynamics simulations for ABP in the apo state and in complex with galactose. By several measures, we see significant increases in backbone dynamics in the complex as compared with the apo protein. RMS deviations from the average structure for both the N and C domains are significantly larger for the ABP&#x2013;galactose complex than for apoABP. In addition, fluctuations of backbone heavy-atom positions across the trajectory are generally larger in the complex than in the apo protein (data not shown). Furthermore, these dynamic changes are seen to be more pronounced in the N domain than the C domain, consistent with the experimental observations.</p>
+        <p>To make a direct comparison between the experimentally observed order parameters and the simulations, backbone amide order parameters have been calculated from the molecular dynamics trajectory.<xref rid="bib27" ref-type="bibr"><sup>27</sup></xref> We see good agreement between measured and calculated order parameters, albeit with a small tendency for the simulation to underestimate the experimental values (<xref rid="fig3" ref-type="fig">Figure 3</xref>(a) and (b)). Underestimation of measured order parameters by molecular dynamics simulations has been a common observation in previous comparisons between molecular dynamics simulation and NMR relaxation measurements, particularly in loops and other flexible regions.<xref rid="bib27 bib28 bib29 bib30" ref-type="bibr"><sup>27&#x2013;30</sup></xref> This small systematic discrepancy is of little importance in this instance, as we are interested principally in the difference in order parameter between the two states. Indeed, the changes in order parameter upon ligand binding reproduce the measured changes excellently, showing an approximately uniform decrease in order parameter upon binding across much of the protein (<xref rid="fig3" ref-type="fig">Figure 3</xref>(c)). The average change in order parameter (<italic>S</italic><sup>2</sup><sub>apoABP</sub>&#x2013;<italic>S</italic><sup>2</sup><sub>ABPgal</sub>) determined by the two methods is identical, at 0.038; the uncertainty on this average value, derived by propagation of experimental uncertainties in the individual order parameters, is 0.005. The correlation coefficient between the experimental and simulated order parameters is 0.83 for the complex protein and 0.47 for the apo-protein.</p>
+        <p>As well as validating our experimental results, the molecular dynamics simulations reveal details of dynamic changes in regions that could not be measured experimentally. Notably, the simulations reveal complex changes in dynamics in the binding site (<xref rid="fig4" ref-type="fig">Figure 4</xref>(b)). Several residues in the binding site display increases in flexibility upon binding, consistent with the trend seen throughout the rest of the molecule. Other binding site loops display a decrease in flexibility, more in keeping with the intuitive expectation that ligand binding will reduce the conformational freedom of binding site residues.</p>
+        <p>A significant assumption entailed by the Lipari&#x2013;Szabo analysis performed here is that the rotational diffusion of the protein can be fully characterised by a single diffusive process uncorrelated with the internal motions under investigation.<xref rid="bib24" ref-type="bibr"><sup>24</sup></xref> This assumption is generally robust for globular, single-domain proteins, but might be called into question in the case of ABP, where flexibility of the domain hinge may result in a complex interaction between local protein conformation and rotational diffusion.</p>
+        <p>In the case of the ABP&#x2013;galactose complex, we assume such flexibility to be insignificant, as the ligand binds in and stabilises the domain interface. No such assumption can be made for apo ABP, however. In an attempt to assess the influence of inter-domain flexibility in apoABP on our results, we have repeated the Lipari&#x2013;Szabo analysis, assuming each domain undergoes independent rotational diffusion. The expectation is that the apparent rotational diffusion of each domain should differ from that of the molecule as a whole if significant inter-domain flexibility is present. The best-fit diffusion tensors arising from the analysis of the two individual domains are very similar, but are slightly different from the diffusion tensor derived from the whole protein (<xref rid="tbl1" ref-type="table">Table 1</xref>). This suggests that inter-domain flexibility has only a minor influence on the measured relaxation rates. The orientation of the diffusion tensors for each domain is consistent with the RDC-derived structure of apo ABP, highlighting a consistency between the RDC and relaxation data that would not be expected if the relaxation data were influenced substantially by domain motions. Importantly, the Lipari&#x2013;Szabo dynamic parameters derived from this analysis are identical, within error, with those of the initial analysis.</p>
+        <p>Furthermore, we note that inter-domain flexibility can, to a first approximation, be accounted for by the so-called extended Lipari&#x2013;Szabo treatment.<xref rid="bib25" ref-type="bibr"><sup>25</sup></xref> Here, inter-domain flexibility is treated by the slow dynamic component (<italic>S</italic><sup>2</sup><sub>s</sub>, &#x3C4;<sub>s</sub>), while internal motions are treated by the fast dynamic component (<italic>S</italic><sup>2</sup><sub>f</sub>).<xref rid="bib31 bib32" ref-type="bibr"><sup>31,32</sup></xref> Because the reported overall order parameter is the product of the fast and slow order parameters (<italic>S</italic><sup>2</sup><sub>LZ</sub>&#xA0;=&#xA0;<italic>S</italic><sup>2</sup><sub>f</sub> S<sup>2</sup><sub>s</sub>), the effect of inter-domain flexibility (<italic>S</italic><sup>2</sup><sub>s</sub>&#xA0;&lt;&#xA0;1) will always be the overestimation of the extent of internal motions. As such, if domain flexibility in apoABP does influence our analysis, its effect will be the underestimation of the increase in internal dynamics upon ligand binding. In this context, it is of interest to note that there are more residues that are best treated by the extended Lipari&#x2013;Szabo model in apoABP than there are in the ABP&#x2013;galactose complex (<xref rid="tbl2" ref-type="table">Table 2</xref>).</p>
+        <p>Additional evidence that inter-domain motions have little impact on our overall results is obtained from the MD simulations. The contributions of rotational diffusion to the simulated dynamics are removed in the conventional way by alignment of the protein at each snapshot to a single reference structure. Alternatively, contributions of both rotational diffusion and inter-domain flexibility can be removed by separately aligning a single domain to a reference structure before analysis of the internal dynamics of that domain. There is no significant difference between these two approaches in terms of the calculated order parameters (data not shown). This reflects the small amplitude of the domain flexibility observable in the production phase of the apo ABP trajectory. On this basis, it is likely that domain flexibility is either very small or occurs on a timescale slower than is detectable in the 20&#xA0;ns simulations analysed here. Given the anomalously low viscosity of the TIP3P water model used in these simulations, the rate of domain flexibility in the simulation is likely to significantly overestimate the <italic>in vitro</italic> rate. Thus, the failure to detect significant domain flexibility suggests that the relevant timescale is slower than the overall rotational diffusion of ABP (&#x223C;&#xA0;15&#xA0;ns), and therefore is not expected to contribute to the measured relaxation data.</p>
+        <p>A further caveat of the analysis of NMR relaxation data concerns its insensitivity to dynamics occurring on a timescale similar to or slower than the rate of rotational diffusion. Given this insensitivity, it is conceivable that the apparent increase in flexibility of ABP on ligand binding may in fact represent a shift in the dynamic timescale. This would imply that the dominant timescale for motions in apoABP is slower than &#x223C;&#xA0;15&#xA0;ns, but that this shifts to a much faster timescale on ligand binding. There are two reasons to discount this interpretation of our data. Firstly, we consider it most likely that a timescale shift of the type considered here would result in a shift from predominantly simple Lipari&#x2013;Szabo models in the apo-protein to a preponderance of complex models in the ligand-bound form, as new observable motional modes are introduced by the change in timescale. In fact, precisely the opposite trend is observed (<xref rid="tbl2" ref-type="table">Table 2</xref>). Secondly, we note that there is no evidence of extensive slow timescale motions in our molecular dynamics studies. The presence of dynamics on this timescale would be reflected by inadequate sampling over the course of our 20&#xA0;ns trajectories. In fact, using the convergence test proposed by Best <italic>et al.</italic>,<xref rid="bib29" ref-type="bibr"><sup>29</sup></xref> the calculated order parameter is judged to have converged in all but nine residues in apo ABP, and in all but four residues in the ABP&#x2013;galactose complex. All residues for which dynamics are not converged are in flexible loops in ABP.</p>
+        <p>To understand the thermodynamic implications of the observed changes in dynamics, we exploit the relationship between Lipari&#x2013;Szabo order parameter (<italic>S</italic><sup>2</sup><sub>LZ</sub>) and conformational entropy (<italic>S</italic><sub>conf</sub>) derived by Yang and Kay.<xref rid="bib26" ref-type="bibr"><sup>26</sup></xref> Of the 306 residues of ABP, we determined an entropy change associated with the measured change in pico- to nanosecond dynamics for 84 residues. Entropy change for the remaining residues could not be determined either because <italic>S</italic><sup>2</sup><sub>LZ</sub> could not be determined reliably for both the apo and ligand-bound states (203 residues), or because <italic>S</italic><sup>2</sup><sub>LZ</sub>&#xA0;&gt;&#xA0;0.95 in one or both states (19 residues). These data are plotted in <xref rid="fig5" ref-type="fig">Figure 5</xref>. The average entropy change per residue is 2.0(&#xB1;&#xA0;0.3) J/mol K. This amounts to an overall entropy change of 170(&#xB1;&#xA0;30) J/ mol K for the measured residues (<italic>T</italic>&#x394;<italic>S</italic><sub>conf</sub>&#xA0;=&#xA0;52(&#xB1;&#xA0;9) kJ/mol at 308 K). If it is assumed that this average entropy can be applied to all un-measured residues, and that dynamics changes for each residue are not correlated, the total entropy change from changes to pico- to nanosecond motion on ligand binding amounts to 610(&#xB1;&#xA0;120) J/mol K (<italic>T</italic>&#x394;<italic>S</italic><sub>conf</sub>&#xA0;=&#xA0;188(&#xB1;&#xA0;37) kJ/mol at 308 K). Clearly, this latter value amounts to an overestimate, as the assumption of un-correlated motion is not likely to hold for all residues of the protein. It is evident, however, that the entropy change associated with the change in pico- to nanosecond dynamics contributes significantly to the favourable free energy of binding, and in effect amounts to protein dynamics paying some of the unfavourable entropic cost of ligand binding.</p>
+        <p>The experimental data available for this system is limited to probes of backbone dynamics. Given the good agreement between experiment and the molecular dynamics simulations, it is perhaps reasonable to infer something of the side-chain dynamics from these simulations. We observe considerably more variability in side-chain order parameters than is evident for the backbone, consistent with findings in other proteins. Furthermore, there is much greater variability in the change in order parameter observed upon ligand binding. Despite this, the changes in side-chain dynamics are broadly similar to those seen for the backbone, with the majority of residues showing a small increase in flexibility on ligand binding. As fast side-chain dynamics are correlated with local backbone dynamics only weakly, this suggests an additional source of favourable entropy change accompanying binding. A number of residues around the binding site show larger changes in dynamics on binding, reflective of both increases and decreases in flexibility. These changes reflect similar heterogeneous dynamic changes seen in the protein backbone of the loops that comprise the binding site.</p>
+        <p>One particularly surprising aspect of these results is the dispersed and approximately uniform nature of the change in dynamics. This is unexpected, because fast motions in proteins, such as the pico- to nanosecond dynamics under study here, are almost exclusively local in character, with few if any correlations over distances longer than a few &#xE5;ngstr&#xF6;m units.<xref rid="bib30" ref-type="bibr"><sup>30</sup></xref> One plausible explanation for the uniform nature of the observed effect is that it is an artefact arising from a systematic error in the determined rotational diffusion tensor for the apo and/or holo protein. To exclude this possibility, we have repeated the analysis using the approach described by Schurr <italic>et al</italic>., which fits the relaxation data for each residue individually, with a so-called local &#x3C4;<sub>m</sub> term to account for rotational diffusion.<xref rid="bib33" ref-type="bibr"><sup>33</sup></xref> In this analysis, the sets of dynamic parameters determined for each residue are statistically independent of one another, and are independent of any structural model for the protein. We find no significant difference between order parameters derived from this analysis and those obtained from the conventional analysis, where rotational diffusion is treated as a global parameter in the form of an anisotropic diffusion tensor. Furthermore, the local &#x3C4;<sub>m</sub> values determined in this analysis are fully consistent with the diffusion tensor determined conventionally.</p>
+        <p>We conclude that the results described here are robust with respect to the models of protein structure and rotational diffusion used in the analysis. These results therefore indicate a coordinated global change in local dynamics, initiated by the localised event of ligand binding. The physical basis for such a change is not clear, but it is not without precedent in the literature: several studies have identified favourable changes in pico- to nanosecond backbone dynamics on ligand binding to be similarly dispersed throughout the protein.<xref rid="bib34 bib35 bib36" ref-type="bibr"><sup>34&#x2013;36</sup></xref> Other studies have identified broadly dispersed changes in dynamics of contrasting sign, such that favourable changes in one part of a protein appear to compensate for unfavourable dynamic changes elsewhere in the protein.<xref rid="bib37 bib38" ref-type="bibr"><sup>37,38</sup></xref></p>
+        <p>It has been appreciated for some time that protein dynamics might potentially mediate aspects of protein function including allosteric regulation<xref rid="bib39" ref-type="bibr"><sup>39</sup></xref> and catalysis.<xref rid="bib40" ref-type="bibr"><sup>40</sup></xref> Experimental evidence for such a functional role, principally from NMR spectroscopy, has been accumulating.<xref rid="bib41 bib42" ref-type="bibr"><sup>41,42</sup></xref> These results raise the possibility that proteins may be adapted evolutionarily to exploit internal dynamic processes to functional ends. The results described here, together with previous observations,<xref rid="bib34 bib35 bib36 bib37 bib38" ref-type="bibr"><sup>34&#x2013;38</sup></xref> suggest that proteins may have evolved finely tuned networks of dispersed dynamic interactions that regulate the thermodynamics of protein&#x2013;ligand interactions. We are actively exploring the mechanism of this phenomenon in ABP, and the contribution of other degrees of freedom to the binding entropy, particularly ligand and protein side-chain dynamics.</p>
+      </sec>
+    </sec>
+    <sec sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec>
+        <title>Protein expression and purification</title>
+        <p>ABP was expressed as essentially as described,<xref rid="bib6 bib20" ref-type="bibr"><sup>6,20</sup></xref> except that the <italic>Escherichia coli</italic> host strain was BL21(DE3), and the growth medium was M-9 minimal medium, supplemented with BME vitamins (Sigma). For the production of <sup>15</sup>N-labelled protein, <sup>15</sup>NH<sub>4</sub>Cl was the sole nitrogen source, and for production of 50% <sup>2</sup>H, <sup>13</sup>C, <sup>15</sup>N protein, the medium was 50% <sup>2</sup>H<sub>2</sub>O and the carbon and nitrogen sources were [U-<sup>13</sup>C, 50% <sup>2</sup>H]glucose and <sup>15</sup>NH<sub>4</sub>Cl, respectively. Purification was as described.<xref rid="bib6 bib20" ref-type="bibr"><sup>6,20</sup></xref></p>
+      </sec>
+      <sec>
+        <title>NMR spectroscopy</title>
+        <p>All NMR samples contained approximately 1&#xA0;mM ABP in 20&#xA0;mM potassium phosphate (pH 7.0), 3&#xA0;mM sodium azide, 0.1&#xA0;mM EDTA, 10% <sup>2</sup>H<sub>2</sub>O. For studies of the complex of ABP with galactose, the sample contained approximately 5&#xA0;mM <sc>d</sc>-galactose. Except where noted, NMR experiments were performed at 308 K on Varian INOVA spectrometers operating at 500 MHz, 600 MHz or 750 MHz <sup>1</sup>H frequency and equipped with room-temperature triple-resonance <italic>z</italic>-gradient probes. The transverse relaxation optimized spectroscopy (TROSY)-HNCA of apoABP was acquired at 600 MHz with 16 transients and 1024, 60 and 40 complex points and spectral windows of 7510, 2800 and 4000&#xA0;Hz in the <sup>1</sup>H, <sup>15</sup>N, and <sup>13</sup>C dimensions, respectively.</p>
+        <p>RDCs were measured at 303 K and 750 MHz using 3.5% (w/v) C5E12 alkyl-poly(ethylene glycol)/hexanol (1:0.96 molar ratio)<xref rid="bib43" ref-type="bibr"><sup>43</sup></xref> as an alignment medium. <sup>1</sup>H-<sup>15</sup>N one-bond couplings in the presence and in the absence of the alignment medium were measured using the <sup>1</sup><italic>J</italic><sub>NH</sub> modulated HSQC described by Tjandra <italic>et al</italic>.<xref rid="bib44" ref-type="bibr"><sup>44</sup></xref> The dephasing delay was varied in 1&#xA0;ms steps from 6&#xA0;ms to 20&#xA0;ms, with two points duplicated for error estimation. Each increment was acquired with 40 transients, 1024&#xA0;&#xD7;&#xA0;128 complex points and spectral windows of 6500&#xA0;&#xD7;&#xA0;3200&#xA0;Hz. Residues for which fewer than two zero-crossings could be clearly identified were excluded from further analysis. Uncertainty in the measured couplings was estimated using multiple fits using a bootstrap resampling procedure.<xref rid="bib45" ref-type="bibr"><sup>45</sup></xref></p>
+        <p>Backbone amide relaxation parameters (<sup>15</sup>N R<sub>1</sub> and R<sub>2</sub>, and the <sup>1</sup>H-<sup>15</sup>N heteronuclear NOE) were measured using the pulse sequences reported by Farrow <italic>et al</italic>.<xref rid="bib46" ref-type="bibr"><sup>46</sup></xref> Typical relaxation delays were 10.7&#xA0;ms, 53.3&#xA0;ms, 107&#xA0;ms, 213&#xA0;ms, 426&#xA0;ms, 640&#xA0;ms, 906&#xA0;ms, 1230&#xA0;ms, 1600&#xA0;ms and 2130&#xA0;ms for <italic>R</italic><sub>1</sub> and 12.4&#xA0;ms, 16.6&#xA0;ms, 24.8&#xA0;ms, 33.1&#xA0;ms, 49.7&#xA0;ms, 66.2&#xA0;ms, 82.8&#xA0;ms, 99.4&#xA0;ms and 133&#xA0;ms for <italic>R</italic><sub>2</sub>. Duplicate measurements were made for at least two points in each series for estimation of experimental error. In the <italic>R</italic><sub>2</sub> experiment, dummy Carr&#x2013;Purcell&#x2013;Meiboom&#x2013;Gill sequences were applied before the recovery delay to compensate for sample heating caused by radio-frequency pulses, and all experimental series were acquired fully interleaved. Typically, 32 transients were acquired for <italic>R</italic><sub>1</sub> and <italic>R</italic><sub>2</sub> measurements, and 64 for the NOE, giving a total experimental time of approximately 60&#xA0;h for the three experiments at each field. Measurements were made at 500 MHz, 600 MHz and 750 MHz for apo ABP, and at 500 MHz and 600 MHz for the ABP&#x2013;galactose complex.</p>
+      </sec>
+      <sec>
+        <title>Spectral assignment</title>
+        <p>Resonance assignments for the ABP&#x2013;galactose complex have been determined.<xref rid="bib20" ref-type="bibr"><sup>20</sup></xref> Many peaks in the <sup>1</sup>H-<sup>15</sup>N HSQC show small chemical shift changes between the apo and complexed states, permitting partial apoABP assignments to be determined on the basis of those for the complex. For assignment of <sup>1</sup>H-<sup>15</sup>N HSQC resonances that do move on binding ligand, a titration of ABP with 1-deoxygalactose was used. 1-deoxygalactose binds ABP with an affinity four orders of magnitude less than that of galactose, and is in the fast-exchange regime. Assignments for a number of resonances remained ambiguous at this stage, owing to substantial crowding of the <sup>1</sup>H-<sup>15</sup>N HSQC spectrum. These remaining ambiguities were largely resolved by means of <italic>i</italic> to <italic>i</italic>&#x2013;1 connectivities derived from an HNCA spectrum of apoABP.</p>
+      </sec>
+      <sec>
+        <title>Domain orientation of apoABP</title>
+        <p>ABP is composed of two structural domains, the N domain (residues 1&#x2013;103 and 257&#x2013;277), and the C domain (residues 110&#x2013;253 and 286&#x2013;306). The remaining residues form a three-stranded linker between the domains, which retains some flexibility in the absence of ligand.<xref rid="bib21 bib22" ref-type="bibr"><sup>21,22</sup></xref> The relative orientation of the two domains of apoABP was determined using <sup>1</sup>H-<sup>15</sup>N RDCs. An initial estimate of the tensor describing molecular alignment of apoABP in 3.5% (v/v) C5E12/hexanol was obtained from the histogram of experimental RDCs.<xref rid="bib47" ref-type="bibr"><sup>47</sup></xref> A starting structure was derived from the structure of ABP in complex with galactose (PDB ID <italic>5ABP</italic>) by Powell minimisation of each domain individually against the measured RDCs.<xref rid="bib9" ref-type="bibr"><sup>9</sup></xref> From this structure, domain orientation is determined by rigid-body/torsion angle simulated annealing in which both domains are held rigid. All calculations were performed using the IVM module of Xplor-NIH.<xref rid="bib48" ref-type="bibr"><sup>48</sup></xref> The annealing protocol comprised an initial 3 ps/1000 steps of dynamics at 2000 K, after which the temperature was reduced to 25 K in 12.5 K steps, with 0.3 ps/100 steps of dynamics performed at each temperature. Default Xplor-NIH parameters were used throughout, and force constants were ramped using default values. Square-well potentials were used for all RDC constraints.</p>
+      </sec>
+      <sec>
+        <title>Lipari&#x2013;Szabo analysis of relaxation data</title>
+        <p>Backbone amide relaxation parameters were analysed in terms of the extended Lipari&#x2013;Szabo formalism,<xref rid="bib24 bib25" ref-type="bibr"><sup>24,25</sup></xref> using the software relax.<xref rid="bib49 bib50" ref-type="bibr"><sup>49,50</sup></xref> The <sup>15</sup>N CSA was set at &#x2212;170&#xA0;ppm and the effective N&#x2013;H bond length was 1.02&#xA0;&#xC5;. Initial estimates for the rotational diffusion tensor of both apoABP and the ABP&#x2013;galactose complex were obtained from the ratio of longitudinal and transverse relaxation rates.<xref rid="bib51" ref-type="bibr"><sup>51</sup></xref> Residues that experience complex internal motion or Rex contribution were identified as described and excluded from this diffusion tensor estimation.<xref rid="bib52" ref-type="bibr"><sup>52</sup></xref> For ABP&#x2013;galactose, an axially symmetric diffusion tensor produces an optimal fit, while the fit to the apo ABP data is improved significantly by the use of a fully anisotropic diffusion tensor. Similar results were obtained using data collected at each field strength.</p>
+        <p>Using these estimates, parameters of the extended model-free formalism were optimised for each residue individually, and the best parameter set identified by AIC model selection.<xref rid="bib49" ref-type="bibr"><sup>49</sup></xref> All parameters, including the diffusion tensor, were then optimised. This process was repeated until the solution converged. The final optimised diffusion tensors are presented in <xref rid="tbl1" ref-type="table">Table 1</xref>, and the final dynamic parameter sets in <xref rid="tbl2" ref-type="table">Table 2</xref>.</p>
+        <p>Additional analyses were performed as described.<xref rid="bib33" ref-type="bibr"><sup>33</sup></xref> Here, the contribution to relaxation due to overall rotational diffusion is treated as a mono-exponential component to the correlation function, with a time constant determined individually for each residue; the so-called local &#x3C4;<sub>m</sub>. In this analysis, the dynamic parameters and local &#x3C4;<sub>m</sub> for each residue are optimised individually, and the optimal parameter set selected by AIC.<xref rid="bib49" ref-type="bibr"><sup>49</sup></xref> We did not include chemical exchange (<italic>R</italic><sub>ex</sub>) contributions to <italic>R</italic><sub>2</sub> in this analysis, owing to the tendency for un-physically low local &#x3C4;<sub>m</sub> values to be compensated by artefactual <italic>R</italic><sub>ex</sub> contributions and low order parameters, particularly in the case of the ABP&#x2013;galactose complex, where only two <italic>R</italic><sub>2</sub> values are available for each residue.</p>
+        <p>Changes in conformational entropy associated with the observed changes in Lipari&#x2013;Szabo order parameters were determined using the relationship described by Yang and Kay.<xref rid="bib26" ref-type="bibr"><sup>26</sup></xref> This relationship is essentially independent of motional model for <italic>S</italic><sup>2</sup><sub>LZ</sub>&#xA0;&#x2264;&#xA0;0.95, so only residues consistent with this criterion in both apoABP and the complex have been included in considerations of entropy change. Uncertainty in the calculated entropy change deriving from experimental uncertainty in order parameters was determined by standard error propagation methods.</p>
+      </sec>
+      <sec>
+        <title>Molecular dynamics</title>
+        <p>The simulations were carried out using AMBER 8,<xref rid="bib53" ref-type="bibr"><sup>53</sup></xref> with the Cornell <italic>et al</italic>. force field.<xref rid="bib54" ref-type="bibr"><sup>54</sup></xref> Initial coordinates of both holo and apo forms were based on the crystal structure of the ABP&#x2013;galactose complex (PDB code <italic>5ABP</italic>).<xref rid="bib9" ref-type="bibr"><sup>9</sup></xref> The structures were processed by the XleaP module of AMBER, and the hydrogen atoms were added to the system. The structure of &#x3B2;-<sc>d</sc>-galactopyranose was optimised <italic>ab initio</italic> using the Gaussian 98 program<xref rid="fn1" ref-type="fn">&#x2020;</xref> with the HF/6-31G* basis set, and RESP charges were generated and fitted.<xref rid="bib55" ref-type="bibr"><sup>55</sup></xref> The ligand molecule was parameterised using GLYCAM force field.<xref rid="bib56" ref-type="bibr"><sup>56</sup></xref> The models were subjected to short (1000 cycles) energy minimisation.</p>
+        <p>Protein models were then immersed in periodic TIP3P water boxes. Approximately 5500 water molecules were added to each system. Simulations were carried out under NPT conditions at 300 K, using the particle mesh Ewald technique with 12&#xA0;&#xC5; non-bonded cutoff and 2 fs time-step.<xref rid="bib57" ref-type="bibr"><sup>57</sup></xref> SHAKE constraints with a tolerance of 10<sup>&#x2212;&#xA0;8</sup> &#xC5; were applied to all hydrogen atoms during MD simulations to eliminate the fastest X-H vibrations and allow a longer simulation time-step. Translational and rotational centre-of-mass motion was removed every 10 ps. Equilibration started by 20 000 cycles of energy minimisation, with the atomic positions of the solute molecule restrained. It was followed by 100 ps of MD simulations, where the system was heated gently to 300 K and the constraints were released gradually (from 100 kcal/(mol&#xB7;&#xC5;<sup>2</sup>) applied initially). The further equilibration took 4.9&#xA0;ns.</p>
+        <p>The production period took 20&#xA0;ns for both systems. The coordinates were saved every 2 ps of MD simulation.</p>
+        <p>Generalised order parameters were calculated from the trajectory of individual back-bone amide bond vectors as:<xref rid="bib27" ref-type="bibr"><sup>27</sup></xref><disp-formula id="fd1"><label>(1)</label><mml:math id="M1" altimg="si1.gif" overflow="scroll"><mml:msubsup><mml:mi>S</mml:mi><mml:mrow><mml:mi mathvariant="normal">L</mml:mi><mml:mi mathvariant="normal">Z</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mn>3</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn><mml:mo>[</mml:mo><mml:mo>&lt;</mml:mo><mml:msup><mml:mi>x</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:msup><mml:mo>&gt;</mml:mo><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mo>&lt;</mml:mo><mml:msup><mml:mi>y</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:msup><mml:mo>&gt;</mml:mo><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mo>&lt;</mml:mo><mml:msup><mml:mi>z</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:msup><mml:mo>&gt;</mml:mo><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mo>&lt;</mml:mo><mml:mi>x</mml:mi><mml:mi>y</mml:mi><mml:msup><mml:mo>&gt;</mml:mo><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mo>&lt;</mml:mo><mml:mi>x</mml:mi><mml:mi>z</mml:mi><mml:msup><mml:mo>&gt;</mml:mo><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mo>&lt;</mml:mo><mml:mi>y</mml:mi><mml:mi>z</mml:mi><mml:msup><mml:mo>&gt;</mml:mo><mml:mn>2</mml:mn></mml:msup><mml:mo>]</mml:mo><mml:mo>&#x2212;</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:math></disp-formula>where <italic>x</italic>, <italic>y</italic> and <italic>z</italic> are components of a unit vector along the amide bond, and angular brackets denote the time-average over the trajectory. Convergence of the dynamics of interest is tested using the approach described by Best <italic>et al.</italic>:<xref rid="bib29" ref-type="bibr"><sup>29</sup></xref> a cumulative time function <italic>S</italic><sup>2</sup><sub>LZ</sub>(&#x3C4;) is defined using equation <xref rid="fd1" ref-type="disp-formula">(1)</xref>, with the time averages taken from <italic>t</italic>&#xA0;=&#xA0;0 to <italic>t</italic>&#xA0;=&#xA0;&#x3C4;. This function was evaluated for 100 equally spaced time-points across the trajectory. The trajectory was deemed to have converged if the difference between the maximum and minimum values of this function over the final 50 time-points (i.e. the final 10&#xA0;ns of the trajectory) was less than 0.05. Any residue judged not to have converged was excluded from the analysis.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>References</title>
+      <ref id="bib1">
+        <label>1.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Malham</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Johnstone</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Bingham</surname>
+              <given-names>R.J.</given-names>
+            </name>
+            <name>
+              <surname>Barratt</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Phillips</surname>
+              <given-names>S.E.</given-names>
+            </name>
+            <name>
+              <surname>Laughton</surname>
+              <given-names>C.A.</given-names>
+            </name>
+            <name>
+              <surname>Homans</surname>
+              <given-names>S.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Strong solute-solute dispersive interactions in a protein-ligand complex</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>127</volume>
+          <year>2005</year>
+          <fpage>17061</fpage>
+          <lpage>17067</lpage>
+          <pub-id pub-id-type="pmid">16316253</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib2">
+        <label>2.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Barratt</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Bingham</surname>
+              <given-names>R.J.</given-names>
+            </name>
+            <name>
+              <surname>Warner</surname>
+              <given-names>D.J.</given-names>
+            </name>
+            <name>
+              <surname>Laughton</surname>
+              <given-names>C.A.</given-names>
+            </name>
+            <name>
+              <surname>Phillips</surname>
+              <given-names>S.E.</given-names>
+            </name>
+            <name>
+              <surname>Homans</surname>
+              <given-names>S.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Van der Waals interactions dominate ligand-protein association in a protein binding site occluded from solvent water</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>127</volume>
+          <year>2005</year>
+          <fpage>11827</fpage>
+          <lpage>11834</lpage>
+          <pub-id pub-id-type="pmid">16104761</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib3">
+        <label>3.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Probing the atomic interactions between proteins and carbohydrates</article-title>
+          <source>Biochem. Soc. Trans.</source>
+          <volume>21</volume>
+          <year>1993</year>
+          <fpage>442</fpage>
+          <lpage>448</lpage>
+          <pub-id pub-id-type="pmid">8359506</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib4">
+        <label>4.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+            <name>
+              <surname>Vyas</surname>
+              <given-names>N.K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Novel stereospecificity of the L-arabinose-binding protein</article-title>
+          <source>Nature</source>
+          <volume>310</volume>
+          <year>1984</year>
+          <fpage>381</fpage>
+          <lpage>386</lpage>
+          <pub-id pub-id-type="pmid">6379466</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib5">
+        <label>5.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dwyer</surname>
+              <given-names>M.A.</given-names>
+            </name>
+            <name>
+              <surname>Hellinga</surname>
+              <given-names>H.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Periplasmic binding proteins: a versatile superfamily for protein engineering</article-title>
+          <source>Curr. Opin. Struct. Biol.</source>
+          <volume>14</volume>
+          <year>2004</year>
+          <fpage>495</fpage>
+          <lpage>504</lpage>
+          <pub-id pub-id-type="pmid">15313245</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib6">
+        <label>6.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Daranas</surname>
+              <given-names>A.H.</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Homans</surname>
+              <given-names>S.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Thermodynamics of binding of D-galactose and deoxy derivatives thereof to the <sc>L</sc>-arabinose-binding protein</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>126</volume>
+          <year>2004</year>
+          <fpage>11870</fpage>
+          <lpage>11876</lpage>
+          <pub-id pub-id-type="pmid">15382922</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib7">
+        <label>7.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Miller</surname>
+              <given-names>D.M.</given-names>
+              <suffix>3rd</suffix>
+            </name>
+            <name>
+              <surname>Olson</surname>
+              <given-names>J.S.</given-names>
+            </name>
+            <name>
+              <surname>Pflugrath</surname>
+              <given-names>J.W.</given-names>
+            </name>
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Rates of ligand binding to periplasmic proteins involved in bacterial transport and chemotaxis</article-title>
+          <source>J. Biol. Chem.</source>
+          <volume>258</volume>
+          <year>1983</year>
+          <fpage>13665</fpage>
+          <lpage>13672</lpage>
+          <pub-id pub-id-type="pmid">6358208</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib8">
+        <label>8.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fukada</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Sturtevant</surname>
+              <given-names>J.M.</given-names>
+            </name>
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Thermodynamics of the binding of L-arabinose and of <sc>D</sc>-galactose to the L-arabinose-binding protein of <italic>Escherichia coli</italic></article-title>
+          <source>J. Biol. Chem.</source>
+          <volume>258</volume>
+          <year>1983</year>
+          <fpage>13193</fpage>
+          <lpage>13198</lpage>
+          <pub-id pub-id-type="pmid">6355105</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib9">
+        <label>9.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+            <name>
+              <surname>Wilson</surname>
+              <given-names>D.K.</given-names>
+            </name>
+            <name>
+              <surname>Vyas</surname>
+              <given-names>N.K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Substrate specificity and affinity of a protein modulated by bound water molecules</article-title>
+          <source>Nature</source>
+          <volume>340</volume>
+          <year>1989</year>
+          <fpage>404</fpage>
+          <lpage>407</lpage>
+          <pub-id pub-id-type="pmid">2818726</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib10">
+        <label>10.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Turnbull</surname>
+              <given-names>W.B.</given-names>
+            </name>
+            <name>
+              <surname>Precious</surname>
+              <given-names>B.L.</given-names>
+            </name>
+            <name>
+              <surname>Homans</surname>
+              <given-names>S.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dissecting the cholera toxin-ganglioside GM1 interaction by isothermal titration calorimetry</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>126</volume>
+          <year>2004</year>
+          <fpage>1047</fpage>
+          <lpage>1054</lpage>
+          <pub-id pub-id-type="pmid">14746472</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib11">
+        <label>11.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lundquist</surname>
+              <given-names>J.J.</given-names>
+            </name>
+            <name>
+              <surname>Toone</surname>
+              <given-names>E.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The cluster glycoside effect</article-title>
+          <source>Chem. Rev.</source>
+          <volume>102</volume>
+          <year>2002</year>
+          <fpage>555</fpage>
+          <lpage>578</lpage>
+          <pub-id pub-id-type="pmid">11841254</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib12">
+        <label>12.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yu</surname>
+              <given-names>Y.B.</given-names>
+            </name>
+            <name>
+              <surname>Privalov</surname>
+              <given-names>P.L.</given-names>
+            </name>
+            <name>
+              <surname>Hodges</surname>
+              <given-names>R.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Contribution of translational and rotational motions to molecular association in aqueous solution</article-title>
+          <source>Biophys. J.</source>
+          <volume>81</volume>
+          <year>2001</year>
+          <fpage>1632</fpage>
+          <lpage>1642</lpage>
+          <pub-id pub-id-type="pmid">11509376</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib13">
+        <label>13.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Murphy</surname>
+              <given-names>K.P.</given-names>
+            </name>
+            <name>
+              <surname>Xie</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>K.S.</given-names>
+            </name>
+            <name>
+              <surname>Amzel</surname>
+              <given-names>L.M.</given-names>
+            </name>
+            <name>
+              <surname>Freire</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Entropy in biological binding processes: estimation of translational entropy loss</article-title>
+          <source>Proteins: Struct. Funct. Genet.</source>
+          <volume>18</volume>
+          <year>1994</year>
+          <fpage>63</fpage>
+          <lpage>67</lpage>
+          <pub-id pub-id-type="pmid">8146122</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib14">
+        <label>14.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bruice</surname>
+              <given-names>T.C.</given-names>
+            </name>
+            <name>
+              <surname>Lightstone</surname>
+              <given-names>F.C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Ground state and transition state contributions to the rates of intramolecular and enzymatic reactions</article-title>
+          <source>Accts Chem. Res.</source>
+          <volume>32</volume>
+          <year>1999</year>
+          <fpage>127</fpage>
+          <lpage>136</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib15">
+        <label>15.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Calvin</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Bailes</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Stability of chelate compounds. II. Polarographic reduction of copper chelates</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>68</volume>
+          <year>1946</year>
+          <fpage>949</fpage>
+          <lpage>954</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib16">
+        <label>16.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dunitz</surname>
+              <given-names>J.D.</given-names>
+            </name>
+          </person-group>
+          <article-title>The entropic cost of bound water in crystals and biomolecules</article-title>
+          <source>Science</source>
+          <volume>264</volume>
+          <year>1994</year>
+          <fpage>670</fpage>
+          <pub-id pub-id-type="pmid">17737951</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib17">
+        <label>17.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Doty</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Myers</surname>
+              <given-names>G.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Low molecular weight proteins. Thermodynamics of the association of insulin molecules</article-title>
+          <source>Discuss. Faraday Soc.</source>
+          <volume>13</volume>
+          <year>1953</year>
+          <fpage>51</fpage>
+          <lpage>58</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib18">
+        <label>18.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scheraga</surname>
+              <given-names>H.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of hydrophobic bonding on protein reactions</article-title>
+          <source>J. Phys. Chem.</source>
+          <volume>65</volume>
+          <year>1961</year>
+          <fpage>1071</fpage>
+          <lpage>1072</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib19">
+        <label>19.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Steinberg</surname>
+              <given-names>I.Z.</given-names>
+            </name>
+            <name>
+              <surname>Scheraga</surname>
+              <given-names>H.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Entropy changes accompanying association reactions of proteins</article-title>
+          <source>J. Biol. Chem.</source>
+          <volume>238</volume>
+          <year>1963</year>
+          <fpage>172</fpage>
+          <lpage>181</lpage>
+          <pub-id pub-id-type="pmid">13983721</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib20">
+        <label>20.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Daranas</surname>
+              <given-names>A.H.</given-names>
+            </name>
+            <name>
+              <surname>Kalverda</surname>
+              <given-names>A.P.</given-names>
+            </name>
+            <name>
+              <surname>Chiovitti</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Homans</surname>
+              <given-names>S.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Backbone resonance assignment of the <sc>L</sc>-arabinose binding protein in complex with D-galactose</article-title>
+          <source>J. Biomol. NMR</source>
+          <volume>28</volume>
+          <year>2004</year>
+          <fpage>191</fpage>
+          <lpage>192</lpage>
+          <pub-id pub-id-type="pmid">14755164</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib21">
+        <label>21.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Newcomer</surname>
+              <given-names>M.E.</given-names>
+            </name>
+            <name>
+              <surname>Lewis</surname>
+              <given-names>B.A.</given-names>
+            </name>
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>The radius of gyration of L-arabinose-binding protein decreases upon binding of ligand</article-title>
+          <source>J. Biol. Chem.</source>
+          <volume>256</volume>
+          <year>1981</year>
+          <fpage>13218</fpage>
+          <lpage>13222</lpage>
+          <pub-id pub-id-type="pmid">7031058</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib22">
+        <label>22.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mao</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Pear</surname>
+              <given-names>M.R.</given-names>
+            </name>
+            <name>
+              <surname>McCammon</surname>
+              <given-names>J.A.</given-names>
+            </name>
+            <name>
+              <surname>Quiocho</surname>
+              <given-names>F.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hinge-bending in L-arabinose-binding protein. The &#x201C;Venus's-flytrap&#x201D; model</article-title>
+          <source>J. Biol. Chem.</source>
+          <volume>257</volume>
+          <year>1982</year>
+          <fpage>1131</fpage>
+          <lpage>1133</lpage>
+          <pub-id pub-id-type="pmid">7035444</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib23">
+        <label>23.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tjandra</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Bax</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Direct measurement of distances and angles in biomolecules by NMR in a dilute liquid crystalline medium</article-title>
+          <source>Science</source>
+          <volume>278</volume>
+          <year>1997</year>
+          <fpage>1111</fpage>
+          <lpage>1114</lpage>
+          <pub-id pub-id-type="pmid">9353189</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib24">
+        <label>24.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lipari</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Szabo</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Model-free approach to the interpretation of nuclear magnetic reaonance relaxation in macromolecules. 1. Theory and range of validity</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>104</volume>
+          <year>1982</year>
+          <fpage>4546</fpage>
+          <lpage>4559</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib25">
+        <label>25.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clore</surname>
+              <given-names>G.M.</given-names>
+            </name>
+            <name>
+              <surname>Szabo</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Bax</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Kay</surname>
+              <given-names>L.E.</given-names>
+            </name>
+            <name>
+              <surname>Driscoll</surname>
+              <given-names>P.C.</given-names>
+            </name>
+            <name>
+              <surname>Gronenborn</surname>
+              <given-names>A.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Deviations from the simple two-parameter model-free approach to the interpretation of nitrogen-15 nuclear magnetic relaxation of proteins</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>112</volume>
+          <year>1990</year>
+          <fpage>4989</fpage>
+          <lpage>4991</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib26">
+        <label>26.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Kay</surname>
+              <given-names>L.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Contributions to conformational entropy arising from bond vector fluctuations measured from NMR-derived order parameters: application to protein folding</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>263</volume>
+          <year>1996</year>
+          <fpage>369</fpage>
+          <lpage>382</lpage>
+          <pub-id pub-id-type="pmid">8913313</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib27">
+        <label>27.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chatfield</surname>
+              <given-names>D.C.</given-names>
+            </name>
+            <name>
+              <surname>Szabo</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Brooks</surname>
+              <given-names>B.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular dynamics of staphylococcal nuclease: comparison of simulation with 15N and 13C relaxation data</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>120</volume>
+          <year>1998</year>
+          <fpage>5301</fpage>
+          <lpage>5311</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib28">
+        <label>28.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Best</surname>
+              <given-names>R.B.</given-names>
+            </name>
+            <name>
+              <surname>Vendruscolo</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Determination of protein structures consistent with NMR order parameters</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>126</volume>
+          <year>2004</year>
+          <fpage>8090</fpage>
+          <lpage>8091</lpage>
+          <pub-id pub-id-type="pmid">15225030</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib29">
+        <label>29.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Best</surname>
+              <given-names>R.B.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Karplus</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>What contributions to protein side-chain dynamics are probed by NMR experiments? A molecular dynamics simulation analysis</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>349</volume>
+          <year>2005</year>
+          <fpage>185</fpage>
+          <lpage>203</lpage>
+          <pub-id pub-id-type="pmid">15876377</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib30">
+        <label>30.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prabhu</surname>
+              <given-names>N.V.</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>A.L.</given-names>
+            </name>
+            <name>
+              <surname>Wand</surname>
+              <given-names>A.J.</given-names>
+            </name>
+            <name>
+              <surname>Sharp</surname>
+              <given-names>K.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamics and entropy of a calmodulin-peptide complex studied by NMR and molecular dynamics</article-title>
+          <source>Biochemistry</source>
+          <volume>42</volume>
+          <year>2003</year>
+          <fpage>562</fpage>
+          <lpage>570</lpage>
+          <pub-id pub-id-type="pmid">12525185</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib31">
+        <label>31.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baber</surname>
+              <given-names>J.L.</given-names>
+            </name>
+            <name>
+              <surname>Szabo</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Tjandra</surname>
+              <given-names>N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of slow interdomain motion of macromolecules using NMR relaxation data</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>123</volume>
+          <year>2001</year>
+          <fpage>3953</fpage>
+          <lpage>3959</lpage>
+          <pub-id pub-id-type="pmid">11457145</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib32">
+        <label>32.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chang</surname>
+              <given-names>S.L.</given-names>
+            </name>
+            <name>
+              <surname>Tjandra</surname>
+              <given-names>N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of NMR relaxation data of biomolecules with slow domain motions using wobble-in-a-cone approximation</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>123</volume>
+          <year>2001</year>
+          <fpage>11484</fpage>
+          <lpage>11485</lpage>
+          <pub-id pub-id-type="pmid">11707129</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib33">
+        <label>33.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schurr</surname>
+              <given-names>J.M.</given-names>
+            </name>
+            <name>
+              <surname>Babcock</surname>
+              <given-names>H.P.</given-names>
+            </name>
+            <name>
+              <surname>Fujimoto</surname>
+              <given-names>B.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>A test of the model-free formulas. Effects of anisotropic rotational diffusion and dimerization</article-title>
+          <source>J. Magn. Reson. ser. B</source>
+          <volume>105</volume>
+          <year>1994</year>
+          <fpage>211</fpage>
+          <lpage>224</lpage>
+          <pub-id pub-id-type="pmid">7850167</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib34">
+        <label>34.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yu</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Zhu</surname>
+              <given-names>C.X.</given-names>
+            </name>
+            <name>
+              <surname>Tse-Dinh</surname>
+              <given-names>Y.C.</given-names>
+            </name>
+            <name>
+              <surname>Fesik</surname>
+              <given-names>S.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Backbone dynamics of the C-terminal domain of <italic>Escherichia coli</italic> topoisomerase I in the absence and presence of single-stranded DNA</article-title>
+          <source>Biochemistry</source>
+          <volume>35</volume>
+          <year>1996</year>
+          <fpage>9661</fpage>
+          <lpage>9666</lpage>
+          <pub-id pub-id-type="pmid">8703937</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib35">
+        <label>35.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arumugam</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Gao</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Patton</surname>
+              <given-names>B.L.</given-names>
+            </name>
+            <name>
+              <surname>Semenchenko</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Brew</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Van Doren</surname>
+              <given-names>S.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Increased backbone mobility in beta-barrel enhances entropy gain driving binding of N-TIMP-1 to MMP-3</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>327</volume>
+          <year>2003</year>
+          <fpage>719</fpage>
+          <lpage>734</lpage>
+          <pub-id pub-id-type="pmid">12634064</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib36">
+        <label>36.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yun</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Jang</surname>
+              <given-names>D.S.</given-names>
+            </name>
+            <name>
+              <surname>Kim</surname>
+              <given-names>D.H.</given-names>
+            </name>
+            <name>
+              <surname>Choi</surname>
+              <given-names>K.Y.</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>H.C.</given-names>
+            </name>
+          </person-group>
+          <article-title>15N NMR relaxation studies of backbone dynamics in free and steroid-bound Delta 5-3-ketosteroid isomerase from <italic>Pseudomonas testosteroni</italic></article-title>
+          <source>Biochemistry</source>
+          <volume>40</volume>
+          <year>2001</year>
+          <fpage>3967</fpage>
+          <lpage>3973</lpage>
+          <pub-id pub-id-type="pmid">11300777</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib37">
+        <label>37.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bingham</surname>
+              <given-names>R.J.</given-names>
+            </name>
+            <name>
+              <surname>Findlay</surname>
+              <given-names>J.B.</given-names>
+            </name>
+            <name>
+              <surname>Hsieh</surname>
+              <given-names>S.Y.</given-names>
+            </name>
+            <name>
+              <surname>Kalverda</surname>
+              <given-names>A.P.</given-names>
+            </name>
+            <name>
+              <surname>Kjellberg</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Perazzolo</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Thermodynamics of binding of 2-methoxy-3-isopropylpyrazine and 2-methoxy-3-isobutylpyrazine to the major urinary protein</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>126</volume>
+          <year>2004</year>
+          <fpage>1675</fpage>
+          <lpage>1681</lpage>
+          <pub-id pub-id-type="pmid">14871097</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib38">
+        <label>38.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shapiro</surname>
+              <given-names>Y.E.</given-names>
+            </name>
+            <name>
+              <surname>Kahana</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Tugarinov</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Liang</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Freed</surname>
+              <given-names>J.H.</given-names>
+            </name>
+            <name>
+              <surname>Meirovitch</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Domain flexibility in ligand-free and inhibitor-bound Escherichia coli adenylate kinase based on a mode-coupling analysis of 15N spin relaxation</article-title>
+          <source>Biochemistry</source>
+          <volume>41</volume>
+          <year>2002</year>
+          <fpage>6271</fpage>
+          <lpage>6281</lpage>
+          <pub-id pub-id-type="pmid">12009888</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib39">
+        <label>39.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cooper</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Dryden</surname>
+              <given-names>D.T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Allostery without conformational change. A plausible model</article-title>
+          <source>Eur. Biophys. J.</source>
+          <volume>11</volume>
+          <year>1984</year>
+          <fpage>103</fpage>
+          <lpage>109</lpage>
+          <pub-id pub-id-type="pmid">6544679</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib40">
+        <label>40.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Karplus</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>McCammon</surname>
+              <given-names>J.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamics of proteins: elements and function</article-title>
+          <source>Annu. Rev. Biochem.</source>
+          <volume>52</volume>
+          <year>1983</year>
+          <fpage>263</fpage>
+          <lpage>300</lpage>
+          <pub-id pub-id-type="pmid">6351724</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib41">
+        <label>41.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Igumenova</surname>
+              <given-names>T.I.</given-names>
+            </name>
+            <name>
+              <surname>Frederick</surname>
+              <given-names>K.K.</given-names>
+            </name>
+            <name>
+              <surname>Wand</surname>
+              <given-names>A.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of the fast dynamics of protein amino acid side chains using NMR relaxation in solution</article-title>
+          <source>Chem. Rev.</source>
+          <volume>106</volume>
+          <year>2006</year>
+          <fpage>1672</fpage>
+          <lpage>1699</lpage>
+          <pub-id pub-id-type="pmid">16683749</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib42">
+        <label>42.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jarymowycz</surname>
+              <given-names>V.A.</given-names>
+            </name>
+            <name>
+              <surname>Stone</surname>
+              <given-names>M.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Fast time scale dynamics of protein backbones: NMR relaxation methods, applications, and functional consequences</article-title>
+          <source>Chem. Rev.</source>
+          <volume>106</volume>
+          <year>2006</year>
+          <fpage>1624</fpage>
+          <lpage>1671</lpage>
+          <pub-id pub-id-type="pmid">16683748</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib43">
+        <label>43.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ruckert</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Otting</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Alignment of biological macromolecules in novel nonionic liquid crystalline media for NMR experiments</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>122</volume>
+          <year>2000</year>
+          <fpage>7793</fpage>
+          <lpage>7797</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib44">
+        <label>44.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tjandra</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Grzesiek</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Bax</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Magnetic field dependence of nitrogen-proton J splittings in 15N-enriched ubiquitin resulting from relaxation interference and residual dipolar coupling</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>118</volume>
+          <year>1996</year>
+          <fpage>6264</fpage>
+          <lpage>6272</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib45">
+        <label>45.</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Press</surname>
+              <given-names>W.H.</given-names>
+            </name>
+            <name>
+              <surname>Teukolsky</surname>
+              <given-names>S.A.</given-names>
+            </name>
+            <name>
+              <surname>Vetterling</surname>
+              <given-names>W.T.</given-names>
+            </name>
+            <name>
+              <surname>Flannerey</surname>
+              <given-names>B.P.</given-names>
+            </name>
+          </person-group>
+          <chapter-title>Numerical Recipes in C</chapter-title>
+          <edition>2nd edit.</edition>
+          <year>1992</year>
+          <publisher-name>Cambridge University Press</publisher-name>
+          <publisher-loc>Cambridge, UK</publisher-loc>
+        </element-citation>
+      </ref>
+      <ref id="bib46">
+        <label>46.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Farrow</surname>
+              <given-names>N.A.</given-names>
+            </name>
+            <name>
+              <surname>Muhandiram</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Singer</surname>
+              <given-names>A.U.</given-names>
+            </name>
+            <name>
+              <surname>Pascal</surname>
+              <given-names>S.M.</given-names>
+            </name>
+            <name>
+              <surname>Kay</surname>
+              <given-names>C.M.</given-names>
+            </name>
+            <name>
+              <surname>Gish</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Backbone dynamics of a free and phosphopeptide-complexed Src homology 2 domain studied by 15N NMR relaxation</article-title>
+          <source>Biochemistry</source>
+          <volume>33</volume>
+          <year>1994</year>
+          <fpage>5984</fpage>
+          <lpage>6003</lpage>
+          <pub-id pub-id-type="pmid">7514039</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib47">
+        <label>47.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clore</surname>
+              <given-names>G.M.</given-names>
+            </name>
+            <name>
+              <surname>Gronenborn</surname>
+              <given-names>A.M.</given-names>
+            </name>
+            <name>
+              <surname>Bax</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>A robust method for determining the magnitude of the fully asymmetric alignment tensor of oriented macromolecules in the absence of structural information</article-title>
+          <source>J. Magn. Reson.</source>
+          <volume>133</volume>
+          <year>1998</year>
+          <fpage>216</fpage>
+          <lpage>221</lpage>
+          <pub-id pub-id-type="pmid">9654491</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib48">
+        <label>48.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schwieters</surname>
+              <given-names>C.D.</given-names>
+            </name>
+            <name>
+              <surname>Clore</surname>
+              <given-names>G.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Internal coordinates for molecular dynamics and minimization in structure determination and refinement</article-title>
+          <source>J. Magn. Reson.</source>
+          <volume>152</volume>
+          <year>2001</year>
+          <fpage>288</fpage>
+          <lpage>302</lpage>
+          <pub-id pub-id-type="pmid">11567582</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib49">
+        <label>49.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>d'Auvergne</surname>
+              <given-names>E.J.</given-names>
+            </name>
+            <name>
+              <surname>Gooley</surname>
+              <given-names>P.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>The use of model selection in the model-free analysis of protein dynamics</article-title>
+          <source>J. Biomol. NMR</source>
+          <volume>25</volume>
+          <year>2003</year>
+          <fpage>25</fpage>
+          <lpage>39</lpage>
+          <pub-id pub-id-type="pmid">12566997</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib50">
+        <label>50.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>d'Auvergne</surname>
+              <given-names>E.J.</given-names>
+            </name>
+            <name>
+              <surname>Gooley</surname>
+              <given-names>P.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Model-free model elimination: a new step in the model-free dynamic analysis of NMR relaxation data</article-title>
+          <source>J. Biomol. NMR</source>
+          <volume>35</volume>
+          <year>2006</year>
+          <fpage>117</fpage>
+          <lpage>135</lpage>
+          <pub-id pub-id-type="pmid">16791734</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib51">
+        <label>51.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tjandra</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Feller</surname>
+              <given-names>S.E.</given-names>
+            </name>
+            <name>
+              <surname>Pastor</surname>
+              <given-names>R.W.</given-names>
+            </name>
+            <name>
+              <surname>Bax</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Rotational diffusion anisotropy of human ubiquitin from 15N NMR relaxation</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>117</volume>
+          <year>1995</year>
+          <fpage>12562</fpage>
+          <lpage>12566</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib52">
+        <label>52.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hwang</surname>
+              <given-names>P.M.</given-names>
+            </name>
+            <name>
+              <surname>Skrynnikov</surname>
+              <given-names>N.R.</given-names>
+            </name>
+            <name>
+              <surname>Kay</surname>
+              <given-names>L.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Domain orientation in beta-cyclodextrin-loaded maltose binding protein: diffusion anisotropy measurements confirm the results of a dipolar coupling study</article-title>
+          <source>J. Biomol. NMR</source>
+          <volume>20</volume>
+          <year>2001</year>
+          <fpage>83</fpage>
+          <lpage>88</lpage>
+          <pub-id pub-id-type="pmid">11430759</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib53">
+        <label>53.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pearlman</surname>
+              <given-names>D.A.</given-names>
+            </name>
+            <name>
+              <surname>Case</surname>
+              <given-names>D.A.</given-names>
+            </name>
+            <name>
+              <surname>Caldwell</surname>
+              <given-names>J.W.</given-names>
+            </name>
+            <name>
+              <surname>Ross</surname>
+              <given-names>W.S.</given-names>
+            </name>
+            <name>
+              <surname>Cheatham</surname>
+              <given-names>T.E.</given-names>
+            </name>
+            <name>
+              <surname>Debolt</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Amber, a package of computer programs for aplying molecular mechanics, normal mode analysis, molecular-dynamics and free-energy calculations to simulate the structural and energetic properties of molecules</article-title>
+          <source>Comput. Phys. Commun.</source>
+          <volume>91</volume>
+          <year>1995</year>
+          <fpage>1</fpage>
+          <lpage>41</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib54">
+        <label>54.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cornell</surname>
+              <given-names>W.D.</given-names>
+            </name>
+            <name>
+              <surname>Cieplak</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Bayly</surname>
+              <given-names>C.I.</given-names>
+            </name>
+            <name>
+              <surname>Gould</surname>
+              <given-names>I.R.</given-names>
+            </name>
+            <name>
+              <surname>Merz</surname>
+              <given-names>K.M.</given-names>
+            </name>
+            <name>
+              <surname>Ferguson</surname>
+              <given-names>D.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>A 2nd generation force-field for the simulation of proteins, nucleic-acids, and organic-molecules</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>117</volume>
+          <year>1995</year>
+          <fpage>5179</fpage>
+          <lpage>5197</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib55">
+        <label>55.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cornell</surname>
+              <given-names>W.D.</given-names>
+            </name>
+            <name>
+              <surname>Cieplak</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Bayly</surname>
+              <given-names>C.I.</given-names>
+            </name>
+            <name>
+              <surname>Kollman</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+          <article-title>Application of RESP charges to calculate conformational energies, hydrogen bond energies, and free energies of solvation</article-title>
+          <source>J. Am. Chem. Soc.</source>
+          <volume>115</volume>
+          <year>1993</year>
+          <fpage>9620</fpage>
+          <lpage>9631</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib56">
+        <label>56.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Woods</surname>
+              <given-names>R.J.</given-names>
+            </name>
+            <name>
+              <surname>Dwek</surname>
+              <given-names>R.A.</given-names>
+            </name>
+            <name>
+              <surname>Edge</surname>
+              <given-names>C.J.</given-names>
+            </name>
+            <name>
+              <surname>Fraser-Reid</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular mechanical and molecular dynamical simulations of glycoproteins and oligosaccharides. 1. GLYCAM_93 parameter development</article-title>
+          <source>J. Phys. Chem.</source>
+          <volume>99</volume>
+          <year>1995</year>
+          <fpage>3832</fpage>
+          <lpage>3846</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib57">
+        <label>57.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Darden</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>York</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Particle Mesh Ewald-an N.Log(N) method for Ewald sums in large systems</article-title>
+          <source>J. Chem. Phys.</source>
+          <volume>98</volume>
+          <year>1993</year>
+          <fpage>10089</fpage>
+          <lpage>10092</lpage>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn id="fn1">
+        <label>&#x2020;</label>
+        <p>Frisch, M. J. <italic>et al</italic>. (1998). Gaussian 98 (Revision A.9). Gaussian, Inc., Pittsburgh, PA.</p>
+      </fn>
+    </fn-group>
+  </back>
+  <floats-group>
+    <fig id="fig1">
+      <label>Figure 1</label>
+      <caption>
+        <p>Backbone amide chemical shift changes for ABP on binding D-galactose. (a) Normalised amide chemical shift change (&#x394;&#x3B4;<sub>NH</sub>&#xA0;=&#xA0;[&#x394;&#x3B4;<sub>H</sub><sup>2</sup>+[&#x394;&#x3B4;<sub>N</sub>/5]<sup>2</sup>]<sup>1/2</sup>) is colour-mapped onto the backbone structure of the ABP&#x2013;galactose complex (PDB Id 5ABP), with the colour scale shown. White represents residues that lack assignments in either apoABP or the complex. The ligand &#x3B1;-<sc>d</sc>-galactose is shown in the binding site as a space-filling model, and structurally conserved water molecules in the binding site are represented by yellow spheres. (b) The same data as in (a) plotted against the ABP sequence. Secondary structure elements are identified, with the N domain yellow, the C domain dark blue, and the domain hinge regions red.</p>
+      </caption>
+      <graphic xlink:href="gr1"/>
+    </fig>
+    <fig id="fig2">
+      <label>Figure 2</label>
+      <caption>
+        <p>Residual dipolar coupling analysis of the domain orientation of apoABP. (a) Backbone trace of ligand-bound ABP from the X-ray crystal structure of the complex of ABP with galactose (PDB ID 5ABP). (b) Ensemble of ten backbone structures selected randomly from 100 structures calculated from data generated by a Monte Carlo re-sampling of the experimental RDC data. (c) The experimental RDC data plotted against the values back-calculated from the calculated structure closest to the average shown in (b).</p>
+      </caption>
+      <graphic xlink:href="gr2"/>
+    </fig>
+    <fig id="fig3">
+      <label>Figure 3</label>
+      <caption>
+        <p>Backbone amide Lipari&#x2013;Szabo order parameters for apo ABP and ABP bound to galactose. Generalised order parameters (<italic>S</italic><sup>2</sup>) measured for (a) apoABP and (b) the ABP&#x2013;galactose complex from NMR relaxation data (red) and calculated from MD simulation (black). (c) The change in order parameter (&#x394;<italic>S</italic><sup>2</sup>&#xA0;=&#xA0;<italic>S</italic><sup>2</sup><sub>apoABP</sub>&#x2013;<italic>S</italic><sup>2</sup><sub>ABPgal</sub>) with secondary structure elements identified above. The N domain is yellow, the C domain dark blue, and the domain hinge regions red. Residues involved directly in the ligand interaction are highlighted in cyan.</p>
+      </caption>
+      <graphic xlink:href="gr3"/>
+    </fig>
+    <fig id="fig4">
+      <label>Figure 4</label>
+      <caption>
+        <p>The change in backbone amide order parameter (&#x394;<italic>S</italic><sup>2</sup>&#xA0;=&#xA0;<italic>S</italic><sup>2</sup><sub>apoABP</sub>&#x2013;<italic>S</italic><sup>2</sup><sub>ABPgal</sub>) from (a) NMR and (b) MD is colour-mapped onto the backbone structure of the ABP&#x2013;galactose complex. The colour scale for &#x394;<italic>S</italic><sup>2</sup> values is shown. Residues for which &#x394;<italic>S</italic><sup>2</sup> could not be determined due to peak overlap in one of the NMR data sets or failure to converge in one of the MD simulations are white. &#x3B1;-<sc>d</sc>-Galactose is shown in the binding site as a space-filling model, and structurally conserved water molecules in the binding site are represented by yellow spheres.</p>
+      </caption>
+      <graphic xlink:href="gr4"/>
+    </fig>
+    <fig id="fig5">
+      <label>Figure 5</label>
+      <caption>
+        <p>The per-residue change in conformational entropy (&#x394;<italic>S</italic><sub>conf</sub>&#xA0;=&#xA0;<italic>S</italic><sub>conf,apoABP</sub>&#x2013;<italic>S</italic><sub>conf,ABPgal</sub>) calculated from experimental order parameters as described.<xref rid="bib26" ref-type="bibr"><sup>26</sup></xref></p>
+      </caption>
+      <graphic xlink:href="gr5"/>
+    </fig>
+    <table-wrap id="tbl1" position="float">
+      <label>Table 1</label>
+      <caption>
+        <p>Rotational diffusion tensors from the optimisation of Lipari&#x2013;Szabo formalism</p>
+      </caption>
+      <table frame="hsides" rules="groups">
+        <thead>
+          <tr>
+            <th valign="top"/>
+            <th valign="top">Tensor symmetry</th>
+            <th valign="bottom"><italic>D</italic><sub>x</sub> (s<sup>&#x2212;&#xA0;1</sup>)<xref rid="tblfn1" ref-type="table-fn">a</xref></th>
+            <th valign="bottom"><italic>D</italic><sub>y</sub> (s<sup>&#x2212;&#xA0;1</sup>)<xref rid="tblfn1" ref-type="table-fn">a</xref></th>
+            <th valign="bottom"><italic>D</italic><sub>z</sub> (s<sup>&#x2212;&#xA0;1</sup>)<xref rid="tblfn1" ref-type="table-fn">a</xref></th>
+            <th valign="bottom">&#x3C4;<sub>m</sub> (s)<xref rid="tblfn2" ref-type="table-fn">b</xref></th>
+            <th valign="bottom"><italic>D</italic><sub>a</sub> (s<sup>&#x2212;&#xA0;1</sup>)<xref rid="tblfn3" ref-type="table-fn">c</xref></th>
+            <th valign="bottom">
+              <italic>D</italic>
+              <sub>r</sub>
+              <xref rid="tblfn4" ref-type="table-fn">d</xref>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">ApoABP</td>
+            <td valign="top">Anisotropic</td>
+            <td valign="top">9.68(&#xB1;&#xA0;0.10)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td valign="top">1.03(&#xB1;&#xA0;0.01)&#xA0;&#xD7;&#xA0;10<sup>7</sup></td>
+            <td valign="top">1.31(&#xB1;&#xA0;0.01)&#xA0;&#xD7;&#xA0;10<sup>7</sup></td>
+            <td valign="top">1.51(&#xB1;&#xA0;0.002)&#xA0;&#xD7;&#xA0;10<sup>&#x2212;&#xA0;8</sup></td>
+            <td valign="top">3.15(&#xB1;&#xA0;0.08)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td align="center" valign="top">0.0973&#xA0;&#xB1;&#xA0;0.015</td>
+          </tr>
+          <tr>
+            <td valign="top">ApoABP&#x2013;N domain</td>
+            <td valign="top">Anisotropic</td>
+            <td valign="top">8.83(&#xB1;&#xA0;0.02)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td valign="top">1.02(&#xB1;&#xA0;0.02)&#xA0;&#xD7;&#xA0;10<sup>7</sup></td>
+            <td valign="top">1.47(&#xB1;&#xA0;0.01)&#xA0;&#xD7;&#xA0;10<sup>7</sup></td>
+            <td valign="top">1.48(&#xB1;&#xA0;0.003)&#xA0;&#xD7;&#xA0;10<sup>&#x2212;&#xA0;8</sup></td>
+            <td valign="top">5.21(&#xB1;&#xA0;0.13)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td align="center" valign="top">0.134&#xA0;&#xB1;&#xA0;0.017</td>
+          </tr>
+          <tr>
+            <td valign="top">ApoABP&#x2013;C domain</td>
+            <td valign="top">Anisotropic</td>
+            <td valign="top">8.21(&#xB1;&#xA0;0.02)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td valign="top">9.59(&#xB1;&#xA0;0.02)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td valign="top">1.49(&#xB1;&#xA0;0.01)&#xA0;&#xD7;&#xA0;10<sup>7</sup></td>
+            <td valign="top">1.53(&#xB1;&#xA0;0.003)&#xA0;&#xD7;&#xA0;10<sup>&#x2212;&#xA0;8</sup></td>
+            <td valign="top">5.98(&#xB1;&#xA0;0.12)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td align="center" valign="top">0.116&#xA0;&#xB1;&#xA0;0.012</td>
+          </tr>
+          <tr>
+            <td valign="top">ABP-gal</td>
+            <td valign="top">Axially symmetric</td>
+            <td valign="top"/>
+            <td valign="top"/>
+            <td valign="top"/>
+            <td valign="top">1.35(&#xB1;&#xA0;0.003)&#xA0;&#xD7;&#xA0;10<sup>&#x2212;&#xA0;8</sup></td>
+            <td valign="top">4.50(&#xB1;&#xA0;0.12)&#xA0;&#xD7;&#xA0;10<sup>6</sup></td>
+            <td align="center" valign="top">&#x2013;</td>
+          </tr>
+        </tbody>
+      </table>
+      <table-wrap-foot>
+        <fn id="tblfn1">
+          <label>a</label>
+          <p><italic>D</italic><sub>x</sub>, <italic>D</italic><sub>y</sub> and <italic>D</italic><sub>z</sub> are the diffusion constants about the principal axes of the anisotropic tensor. Uncertainties are estimated using Monte Carlo resampling of the experimental data, with the dynamic parameters treated as fixed at their optimal values.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn2">
+          <label>b</label>
+          <p>Average rotational correlation time. &#x3C4;<sub>m</sub>&#xA0;=&#xA0;(2(<italic>D</italic><sub>x</sub>+<italic>D</italic><sub>y</sub>+<italic>D</italic><sub>z</sub>))<sup>&#x2212;&#xA0;1</sup> for anisotropic tensor, and &#x3C4;<sub>m</sub>&#xA0;=&#xA0;(2(<italic>D</italic><sub>&#x2225;</sub>+2<italic>D</italic><sub>&#x22A5;</sub>))<sup>&#x2212;&#xA0;1</sup> for axially symmetric tensor. <italic>D</italic><sub>&#x2225;</sub> is the diffusion constant about the unique axis of the axially symmetric tensor, and D<sub>&#x22A5;</sub> is the diffusion constant perpendicular to the unique axis.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn3">
+          <label>c</label>
+          <p>Anisotropy <italic>D</italic><sub>a</sub>&#xA0;=&#xA0;<italic>D</italic><sub>z</sub>&#x2013;(<italic>D</italic><sub>x</sub>+<italic>D</italic><sub>y</sub>)/2 for anisotropic tensor, and <italic>D</italic><sub>a</sub>&#xA0;=&#xA0;<italic>D</italic><sub>&#x2225;</sub>&#x2013;<italic>D</italic><sub>&#x22A5;</sub> for axially symmetric tensor.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn4">
+          <label>d</label>
+          <p>Rhombicity <italic>D</italic><sub>r</sub>&#xA0;=&#xA0;(<italic>D</italic><sub>y</sub>&#x2013;<italic>D</italic><sub>x</sub>)/2<italic>D</italic><sub>a</sub> for anisotropic tensor, and not defined for axially symmetric tensor.</p>
+        </fn>
+      </table-wrap-foot>
+    </table-wrap>
+    <table-wrap id="tbl2" position="float">
+      <label>Table 2</label>
+      <caption>
+        <p>Distribution of fits of amide-bond vectors to various Lipari&#x2013;Szabo motional models</p>
+      </caption>
+      <table frame="hsides" rules="groups">
+        <thead>
+          <tr>
+            <th valign="top"/>
+            <th valign="top">Model 1<xref rid="tblfn5" ref-type="table-fn">a</xref></th>
+            <th valign="top">Model 2<xref rid="tblfn6" ref-type="table-fn">b</xref></th>
+            <th valign="top">Model 3<xref rid="tblfn7" ref-type="table-fn">c</xref></th>
+            <th valign="top">Model 4<xref rid="tblfn8" ref-type="table-fn">d</xref></th>
+            <th valign="top">Model 5<xref rid="tblfn9" ref-type="table-fn">e</xref></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">apoABP</td>
+            <td align="center" valign="top">54</td>
+            <td align="center" valign="top">17</td>
+            <td align="center" valign="top">12</td>
+            <td align="center" valign="top">5</td>
+            <td align="center" valign="top">60</td>
+          </tr>
+          <tr>
+            <td valign="top">ABP-gal</td>
+            <td align="center" valign="top">62</td>
+            <td align="center" valign="top">28</td>
+            <td align="center" valign="top">13</td>
+            <td align="center" valign="top">11</td>
+            <td align="center" valign="top">41</td>
+          </tr>
+        </tbody>
+      </table>
+      <table-wrap-foot>
+        <fn id="tblfn5">
+          <label>a</label>
+          <p>Simple internal motion faster than &#x223C;&#xA0;10 ps. Fitted parameters are {<italic>S</italic><sup>2</sup><sub>LZ</sub>}.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn6">
+          <label>b</label>
+          <p>Simple pico- nanosecond internal motion. Fitted parameters are {<italic>S</italic><sup>2</sup><sub>LZ</sub>, &#x3C4;}.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn7">
+          <label>c</label>
+          <p>As model 1 with chemical exchange contribution to <italic>R</italic><sub>2</sub>. Fitted parameters are {<italic>S</italic><sup>2</sup><sub>LZ</sub>, <italic>R</italic><sub>ex</sub>}.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn8">
+          <label>d</label>
+          <p>As model 2 with chemical exchange contribution to <italic>R</italic><sub>2</sub>. Fitted parameters are {<italic>S</italic><sup>2</sup><sub>LZ</sub>, &#x3C4;, <italic>R</italic><sub>ex</sub>}.</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn9">
+          <label>e</label>
+          <p>Extended Lipari&#x2013;Szabo formalism:<sup>25</sup> both fast (&lt;&#xA0;10 ps) and slow (about nanosecond) motions are present. Fitted parameters are {<italic>S</italic><sup>2</sup><sub>LZ</sub>, <italic>S</italic><sup>2</sup>f, &#x3C4;<sub>s</sub>}.</p>
+        </fn>
+      </table-wrap-foot>
+    </table-wrap>
+  </floats-group>
+</article>
+</pmc-articleset>

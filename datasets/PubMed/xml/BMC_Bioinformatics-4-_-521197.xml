@@ -1,0 +1,1653 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">BMC Bioinformatics</journal-id>
+      <journal-title>BMC Bioinformatics</journal-title>
+      <issn pub-type="epub">1471-2105</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">12783628</article-id>
+      <article-id pub-id-type="pmc">521197</article-id>
+      <article-id pub-id-type="publisher-id">1471-2105-4-21</article-id>
+      <article-id pub-id-type="doi">10.1186/1471-2105-4-21</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>EasyGene &#x2013; a prokaryotic gene finder that ranks ORFs by statistical significance</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Larsen</surname>
+            <given-names>Thomas Schou</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <email>thsl@novozymes.com</email>
+        </contrib>
+        <contrib id="A2" contrib-type="author">
+          <name>
+            <surname>Krogh</surname>
+            <given-names>Anders</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <xref ref-type="aff" rid="I3">3</xref>
+          <email>krogh@binf.ku.dk</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>Center for Biological Sequence Analysis BioCentrum, Technical University of Denmark Building 208, 2800 Lyngby, Denmark</aff>
+      <aff id="I2"><label>2</label>Present address: Novozymes A/S, Novo Alle, 1B1.01,2800 Bagsvaerd, Denmark</aff>
+      <aff id="I3"><label>3</label>Present address: The Bioinformatics Centre, University of Copenhagen Universitetsparken 15, 2100 Copenhagen, Denmark</aff>
+      <pub-date pub-type="collection">
+        <year>2003</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>3</day>
+        <month>6</month>
+        <year>2003</year>
+      </pub-date>
+      <volume>4</volume>
+      <fpage>21</fpage>
+      <lpage>21</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2105/4/21"/>
+      <history>
+        <date date-type="received">
+          <day>25</day>
+          <month>11</month>
+          <year>2002</year>
+        </date>
+        <date date-type="accepted">
+          <day>3</day>
+          <month>6</month>
+          <year>2003</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2003 Larsen and Krogh; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-statement>
+        <copyright-year>2003</copyright-year>
+        <copyright-holder>Larsen and Krogh; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-holder>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>Contrary to other areas of sequence analysis, a measure of statistical significance of a putative gene has not been devised to help in discriminating real genes from the masses of random Open Reading Frames (ORFs) in prokaryotic genomes. Therefore, many genomes have too many short ORFs annotated as genes.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>In this paper, we present a new automated gene-finding method, EasyGene, which estimates the statistical significance of a predicted gene. The gene finder is based on a hidden Markov model (HMM) that is automatically estimated for a new genome. Using extensions of similarities in Swiss-Prot, a high quality training set of genes is automatically extracted from the genome and used to estimate the HMM. Putative genes are then scored with the HMM, and based on score and length of an ORF, the statistical significance is calculated. The measure of statistical significance for an ORF is the expected number of ORFs in one megabase of random sequence at the same significance level or better, where the random sequence has the same statistics as the genome in the sense of a third order Markov chain.</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>The result is a flexible gene finder whose overall performance matches or exceeds other methods. The entire pipeline of computer processing from the raw input of a genome or set of contigs to a list of putative genes with significance is automated, making it easy to apply EasyGene to newly sequenced organisms. EasyGene with pre-trained models can be accessed at <ext-link ext-link-type="uri" xlink:href="http://www.cbs.dtu.dk/services/EasyGene"/>.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>computational gene finding</kwd>
+        <kwd>statistical significance</kwd>
+        <kwd>hidden Markov model</kwd>
+        <kwd>short open reading frames</kwd>
+        <kwd>automated genome annotation</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Background</title>
+      <p>As of February 2003, 106 microbial genomes have been sequenced and made publicly available and the race is now on to mine genomes such as these for interesting and/or valuable genes and motifs. It has been estimated [<xref ref-type="bibr" rid="B1">1</xref>] that 60&#x2013;80% of the genes in newly sequenced organisms have known homologues in other species. This percentage will grow as genomic annotations progress and perhaps there will be a time when virtually all genes can be found by homology matches to known proteins. That day, however, is not around the corner and even if it were, the occasional odd genes which would nevertheless escape detection by homology may very well be the truely novel and most wanted ones.</p>
+      <p>It is a common misconception that identification of genes in prokaryotes is almost trivial. Any random sequence, as well as non-coding regions in real genomes, contain a large number of open reading frames (ORFs). Most of these are too short to be possible protein coding genes, but in many genomes there are many 'random' ORFs longer than e.g. 100 amino acids, a cut-off that is often used for considering an ORF a real gene. The large number of short 'random' ORFs makes is difficult to discriminate real genes from random ORFs below a certain length, which depends on the genome and in particular its GC content. Therefore many genomes are over-annotated [<xref ref-type="bibr" rid="B2">2</xref>]. In one genome, that of <italic>A. pernix </italic>[<xref ref-type="bibr" rid="B3">3</xref>], all ORFs longer than 100 amino acids are annotated as genes, but probably only around half the annotated genes are real [<xref ref-type="bibr" rid="B2">2</xref>]. The most severe problem today is to disciminate between short genes and random ORFs, and here the meaning of 'short' is quite organism dependent. One of the most important contributions of this paper is a way to deal with this problem by introducing a <italic>statistical significance </italic>for an ORF being a gene.</p>
+      <p>Computational gene finding exploits the statistical differences in codon usage between coding and non-coding regions of DNA [<xref ref-type="bibr" rid="B4">4</xref>-<xref ref-type="bibr" rid="B6">6</xref>]. The search for a mathematical frame work to efficiently capture these differences in codon usage led to Markov chain models and the GeneMark algorithm [<xref ref-type="bibr" rid="B7">7</xref>]. In order to facilitate the combination of various Markov chain scores, the application of Hidden Markov Models (HMMs) to gene finding was introduced in a gene finder for <italic>E. coli</italic>, Ecoparse [<xref ref-type="bibr" rid="B8">8</xref>]. These methods relied on a set of known genes for estimating parameters. More recently methods have been developed which start from a raw genome and automatically extract data for estimation. One of these, Glimmer [<xref ref-type="bibr" rid="B9">9</xref>], employs interpolated Markov models in order to use the maximum Markov chain order which can reliably be estimated for every oligomer. Another one, Orpheus [<xref ref-type="bibr" rid="B1">1</xref>], appeared the same year and calculates coding potentials of ORFs based on codon frequency of similarity-derived genes. Most of these gene finders also extract Shine-Dalgarno sequences in order to improve prediction of start codons.</p>
+      <p>Due to their modular structure, HMMs are a suitable frame work for gene finding, and they are now used in GeneMark.hmm [<xref ref-type="bibr" rid="B10">10</xref>], GeneMarkS [<xref ref-type="bibr" rid="B11">11</xref>,<xref ref-type="bibr" rid="B12">12</xref>] and Frame-by-Frame [<xref ref-type="bibr" rid="B13">13</xref>]. GeneMarkS uses a mixture of Markov chains of order 0, 1 and 2 in combination with features of already annotated genomes to bootstrap an initial estimation of coding statistics, which is then iteratively improved by the GeneMark.hmm2.1 algorithm. Gibbs sampling is also used to detect Ribosome Binding Sites (RBS). The Frame-by-Frame method was conceived to improve the accuracy of GeneMark.hmm and it employs standard Viterbi parsing of all six reading frames independently and subsequently combines these into a global parse.</p>
+      <p>In this paper, we describe a fully automated method for making an organism specific gene finder. It starts from a raw genome and searches for protein matches to get a good training set. Then an HMM with states for coding regions as well as RBS is estimated from the data set. This HMM is used to score all the ORFs in the genome and finally the score is converted to a measure of significance &#x2013; R &#x2013; which is the expected number of ORFs that would be predicted in one megabase of random DNA. The main advantage of this significance measure is that it takes the length distribution of random ORFs properly into account. The method is shown to match or exceed other gene finders currently available.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>Methods</title>
+      <sec>
+        <title>Automatic extraction of training set</title>
+        <p>In order to fully automate the construction of the gene finder, a data set of reliable genes was obtained through the following procedure, which is essentially the same as that used in [<xref ref-type="bibr" rid="B1">1</xref>]. All ORFs with a significant match to a protein from a different organism are assumed to be real genes. A subset of those have only one possible start codon, because there is only one start between the most upstream protein match and the nearest upstream in-frame stop codon. The details of the method are:</p>
+        <p>1. Extract the maximal ORFs longer than 120 bases from the query-genome. For every stop codon, extract the region from the first downstream (in frame) start codon to the next downstream (in frame) stop codon.</p>
+        <p>2. Translate the ORFs to proteins and search for significant protein matches in Swiss-Prot [<xref ref-type="bibr" rid="B14">14</xref>] using BLASTP without gaps and a threshold of 10<sup>-5 </sup>[<xref ref-type="bibr" rid="B15">15</xref>]<italic>excluding </italic>proteins from the query-genome and proteins listed with one or more of the keywords putative, unknown, possible, hypothetical, probable, bacteriophage, transposon, insertion, reverse transcriptase.</p>
+        <p>3. For each ORF with at least one significant protein match, identify the most upstream position of these matches (to compensate for random matches, we actually remove 6 bases from the most upstream match before proceeding). If there is no alternative start codon between this position and the start of the ORF, put it in set <italic>A</italic>' of genes with certain starts. The remaining ORFs are put in set <italic>B</italic>' of certain genes with uncertain starts.</p>
+        <p>4. Reduce similarity in set <italic>A</italic>' by removing genes with similarity within the set. All pairs of genes are compared using BLASTN with a significance cut-off of 0.001. Two genes that match are called neighbours. Genes are removed starting with the one having the largest number of neighbours. This continues until no gene has neighbours left in the set [<xref ref-type="bibr" rid="B16">16</xref>]. The reduced set is henceforth referred to as <italic>A</italic>.</p>
+        <p>5. Unite set <italic>A</italic>' and <italic>B</italic>' into set <italic>T</italic>' and reduce similarity of <italic>T</italic>' to obtain set <italic>T </italic>.</p>
+        <p>6. Add 50 bases of upstream flank to genes of all sets and 10 bases downstream flank.</p>
+        <p>This procedure is a means to identify ORFs in a genome which are almost certain to be (protein coding) genes. The ORFs in set <italic>A </italic>and <italic>T </italic>make out reliable and balanced sets of positive examples which may be used to estimate the model parameters.</p>
+      </sec>
+      <sec>
+        <title>HMM architecture</title>
+        <p>We use a hidden Markov model (HMM) to model the gene structure. An HMM is a probabilistic model in which it is possible to model the various types of signals in a gene in one integrated model. For introductions to HMMs, see e.g. [<xref ref-type="bibr" rid="B17">17</xref>-<xref ref-type="bibr" rid="B19">19</xref>]. We model standard 'text book genes' with an unbroken open reading frame, i.e. genes with no programmed frame shifts, no sequencing errors nor any other special feature obstructing the reading frame.</p>
+        <p>The general architecture of the EasyGene HMM is shown in figure <xref ref-type="fig" rid="F1">1</xref>. There is a begin and end state marked <italic>B </italic>and <italic>E </italic>respectively. Then, at each side of the gene model, there are null models to model everything that is <italic>not </italic>part of a gene nor lies in the immediate vicinity of a gene. The next submodel is the RBS model which models the RBS as well as the nucleotides between the RBS and the start codon. After the start codon we model 3 bases explicitly since it appears that the codon usage immediately downstream of start codons differs from the rest of the gene [<xref ref-type="bibr" rid="B13">13</xref>]. Similarly we model the last codon before the stop codon explicitly and 6 bases after the stop in order to capture information present around the stop codon.</p>
+        <fig position="float" id="F1">
+          <label>Figure 1</label>
+          <caption>
+            <p><bold>The overall HMM architecture. </bold>Each box corresponds to a submodel with more than one state. The number above the boxes indicates the number of bases modelled by the submodel. An 'X' indicates a variable number.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-21-1"/>
+        </fig>
+        <p>We employ 3 looped codon submodels of the interior of the gene as depicted on the right hand side of figure <xref ref-type="fig" rid="F2">2</xref>. The reason for using several codon models is to embed a realistic length distribution in the HMM instead of the geometric distribution which would be implicit in having only one looped codon submodel [[<xref ref-type="bibr" rid="B17">17</xref>], Section 3.4]. We chose 3 because it results in a good fit to the empirical length distribution (see Results). The states in the codon model are of 4th order [<xref ref-type="bibr" rid="B20">20</xref>] in order to capture the inter-codon dependencies. The three looped codon models are identical, i.e. they have the same emission and transition probabilities (the states are <italic>tied</italic>).</p>
+        <fig position="float" id="F2">
+          <label>Figure 2</label>
+          <caption>
+            <p><bold>Enlargement of null model and internal looped codons. </bold>LEFT: The state structure of the NULL model. The background state is of third order and models the general composition of the genome. The three shadow states model coding regions on the complementary strand. There are transitions from the background state to the first RBS state and to the first state modelling the start codon. RIGHT: Details of model of internal codons. A codon is modelled by three states with a transition from the last state back to the first and one out of the codon model. By putting several codon models in series, the length distribution of coding regions can be captured. From the last state there is a transition to the first state of the 'BSTOP' model, which models the last codon before the stop codon.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-21-2"/>
+        </fig>
+        <p>The RBS model in figure <xref ref-type="fig" rid="F3">3</xref> models the ribosome binding site as well as the nucleotides between the RBS and the start codon. It has 7 states to capture any ribosome binding patterns and 12 tied spacer states for modelling the region between the RBS and the start codon. From the first spacer state there are transitions to all but the last of the following states, so the length distribution (with a minimum of 3 and maximum of 12) can be modelled exactly without imposing Gaussian assumptions as is done in e.g. [<xref ref-type="bibr" rid="B21">21</xref>]. These spacer states are of order zero.</p>
+        <fig position="float" id="F3">
+          <label>Figure 3</label>
+          <caption>
+            <p><bold>The state structure of the RBS model. </bold>The RBS model consists of seven states for modelling the ribosome binding site followed by a set of tied states for the variable region between the RBS and the start codon. From the last state there is a transition to the first of the three states modelling the start codon.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-21-3"/>
+        </fig>
+        <p>The null model depicted on the left side of figure <xref ref-type="fig" rid="F2">2</xref> has a third order state for capturing intergenic regions and a reverse codon model for modelling reverse genes ('shadows') with states of second order. Note that transitions are allowed directly from the null model to a start codon; this facilitates detection of genes inside operons which may not have a clear RBS.</p>
+        <p>We found that the inclusion of two more branches of internal codons improved performance. This is presumably because it allows the HMM to keep separate statistics for atypical genes, some of which may be horizontally transfered. Adding a fourth branch did not improve performance further, so we stopped at three lending some support to the hypothesis that there are essentially three classes of genes in prokaryotic genomes [<xref ref-type="bibr" rid="B22">22</xref>].</p>
+      </sec>
+      <sec>
+        <title>Model estimation</title>
+        <p>The HMM parameters (transition and emission probabilities) are estimated with the Baum-Welch algorithm, which is a maximum likelihood approach that finds the parameters maximizing the probability of the training set, see e.g. [<xref ref-type="bibr" rid="B17">17</xref>]. The estimation is done in these stages:</p>
+        <p>1. The emission probabilities of the background state are estimated from both strands of the complete genome.</p>
+        <p>2. The genes from start to stop codons are extracted from the training set and reverse complemented. The shadow model (consisting of three states) is estimated from these sequences. The parameters of this model are fixed.</p>
+        <p>3. The RBS, start and astart submodels (cf. figure <xref ref-type="fig" rid="F1">1</xref>) are estimated using set <italic>A </italic>exclusively since this set has reliable gene starts and therefore aligned upstream regions. Regions of 50 bases upstream from the start codon are extracted from all genes in set <italic>A</italic>. A null model (with fixed parameters) is included before the RBS model. The RBS model is initially primed with a high probability for the consensus GG (a dinucleotide common to most RBS), but the precise pattern is found by the estimation method. During estimation, a type of simulated annealing is used, where noise of a decreasing amount is added to the parameters in each iteration of the Baum-Welch algorithm [<xref ref-type="bibr" rid="B23">23</xref>]. After training on set <italic>A</italic>, the parameters of the RBS, start and astart models are fixed.</p>
+        <p>4. The null model, RBS, start and astart models are now combined with the internal codons, bstop, stop and astop models to make up the complete model. The non-fixed parameters of this model are then trained on the (larger) set <italic>T </italic>.</p>
+        <p>The whole procedure can be completely automated. Note that no experimentally mapped RBSs are used for estimating the RBS model, the RBS is discovered during the estimation procedure.</p>
+        <p>When estimating the complete model (stage 4 above) we use labelled estimation [<xref ref-type="bibr" rid="B17">17</xref>,<xref ref-type="bibr" rid="B20">20</xref>], where each base of the sequence is labelled as coding or non-coding. For the part of set <italic>T </italic>where the exact start is not known, we leave the part of the sequence from the most upstream start codon until the first significant protein match unlabelled. The weight with which each base in the unlabelled region contributes to the estimation of the parameters in the coding states is automatically determined during the iterative estimation procedure.</p>
+      </sec>
+      <sec>
+        <title>Decoding</title>
+        <p>By <italic>decoding </italic>we mean the process of finding an optimal parse of the DNA string into coding and non-coding regions.</p>
+        <p>The commonly used Viterbi decoding returns the most probable path of the sequence given the model [<xref ref-type="bibr" rid="B17">17</xref>], but this is not appropriate when the length is modelled by duplicating codon states, since this length modelling is realized only as a sum over many HMM paths. Therefore we use posterior decoding where one calculates, for each nucleotide <italic>i</italic>, the probability that it was emitted by a given state <italic>S</italic>. The calculation is done by adding the probabilities of all paths compatible with having state <italic>S </italic>emit nucleotide <italic>i </italic>[<xref ref-type="bibr" rid="B24">24</xref>,<xref ref-type="bibr" rid="B17">17</xref>]. We use this to calculate the posterior probability of the first state of the start codon model, and thus obtain the probability that a gene starts at any position in the sequence. Given our assumption of perfect 'textbook-genes' with no errors or frame shifts, there is exactly one stop codon for each start, and thus the probability of a gene start is equal to the probability of the whole gene. The independent scoring of start codons makes it trivial to report several possible start codons for a gene in cases where there is no clear "winner".</p>
+        <p>Note that the HMM architecture in figure <xref ref-type="fig" rid="F1">1</xref> is non-looped &#x2013; ie. it would find only one gene if we were using Viterbi decoding, which only gives the single most likely parse. This architecture however, is the correct one for scoring ORFs with posterior decoding. It has the further advantage that overlapping genes are easily handled since each gene start will be scored independently whether or not it overlaps other genes. In contrast, using a looped model and Viterbi decoding would not facilitate detection of overlapping genes unless the model contains explicit states for overlapping genes as described in e.g. [<xref ref-type="bibr" rid="B8">8</xref>].</p>
+        <p>The state posterior probability itself is not a useful score, because it is a probability of the whole sequence, not just a single gene, and it therefore depends on the length of the sequence it is part of. By dividing the posterior probability by the probability of the whole sequence (the genome) according to the null model, the contribution to the state posterior probability of the sequences flanking a gene will cancel and effectively make the ratio independent of the flanking sequences (except the parts very close to the gene), see the Appendix. The log of this ratio is called the log-odds score, and that is our basic score for a gene.</p>
+      </sec>
+      <sec>
+        <title>Significance</title>
+        <p>As mentioned above, it is important to take into account the chance that a random ORF of the same length scores as high as a given gene. This is implicitly taken into account by our HMM because it models the length distribution of genes, but it turns out that one can calculate a significance score, which works slightly better (se results) and has a more intuitive interpretation.</p>
+        <p>The probability of finding high-scoring ORFs in a random sequence is highly length dependent; the number of ORFs decays exponentially with the length so there will be a lot more short ORFs than long ones. For a random sequence of given length (e.g. 1 Mb) the expected number of ORFs of length <italic>l</italic>' can be written as</p>
+        <p><italic>N</italic>(<italic>l</italic>') = exp (<italic>A </italic>- <italic>Bl</italic>'), &#xA0;&#xA0;&#xA0; (1)</p>
+        <p>where <italic>A </italic>and <italic>B </italic>are constants that can be found from linear regression of the log of the number of ORFs against the length. All lengths are measured in codons and we count both start and stop codon. For convenience we introduce the variable length <italic>l</italic>', which is the length of the ORF modelled by the looped codon submodels. A number of codons <italic>l</italic><sub>0 </sub>are modelled explicitly in the beginning and end of the ORF (<italic>l</italic><sub>0 </sub>= 4 in our model), so <italic>l</italic>' = <italic>l </italic>- <italic>l</italic><sub>0</sub>.</p>
+        <p>If the log-odds score is denoted &#x3B2;, we show in the appendix that &#x3B2;' = &#x3B2; - (<italic>n </italic>- 1) log(<italic>l</italic>' - <italic>n</italic>/2) is approximately normally distributed with a mean &#x3B1;<sub>&#x3BC; </sub>+ &#x3B3;<sub>&#x3BC; </sub><italic>l</italic>' and variance &#x3B1;<sub>&#x3C3; </sub>+ &#x3B3;<sub>&#x3C3; </sub><italic>l</italic>', which are both linear in <italic>l</italic>' (the &#x3B1;'s and &#x3B3;'s are constants). Here <italic>n </italic>is the number of looped codon submodels (3 in our model). The coefficients of the linear mean and variance are estimated by linear regression on ORFs from random sequences. Then we define the <italic>standard score</italic></p>
+        <p>
+          <inline-graphic xlink:href="1471-2105-4-21-i1.gif"/>
+        </p>
+        <p>which is normally distributed with mean 0 and variance 1.</p>
+        <p>For any given length <italic>l</italic>' and standard score &#x393;, one can now estimate the expected number <italic>C</italic>(<italic>l</italic>', &#x393;) of ORFs of the same length scoring higher than &#x393; in a fixed (long) random sequence using equation (1),</p>
+        <p><italic>C</italic>(<italic>l</italic>', &#x393;) = exp(<italic>A </italic>- <italic>Bl</italic>') [1 - &#x3A6; (&#x393;)], &#xA0;&#xA0;&#xA0; (3)</p>
+        <p>where &#x3A6; is the cumulative normal distribution. This number can be used directly to judge the significance of a gene predicted with length <italic>l </italic>and a standard score &#x393;. However, it would be preferable to know the total number of expected genes (of all lengths) predicted in a random sequence, rather than the expected number with a certain length. Therefore, instead of using <italic>C</italic>(<italic>l</italic>', &#x393;) to judge significance, we use the total number of expected predictions in a random sequence.</p>
+        <p>Suppose a gene of length <italic>l</italic><sub>1 </sub>is predicted with a standard score &#x393;<sub>1</sub>. Then the expected number of genes of that length predicted in a random sequence is <italic>C </italic>= <italic>C</italic>(<inline-graphic xlink:href="1471-2105-4-21-i2.gif"/>, &#x393;<sub>1</sub>). Now we want to calculate the total number of genes of <italic>all </italic>lengths predicted in a random sequence at the threshold <italic>C</italic>. For any length above a certain <italic>l</italic><sub><italic>C</italic></sub>, the expected number of ORFs will fall below <italic>C </italic>due to the exponential decay of the length distribution. Therefore the total number of predicted genes (regardless of length) is roughly <italic>l</italic><sub><italic>C </italic></sub><italic>C </italic>+ the sum of predicted genes above <italic>l</italic><sub><italic>C </italic></sub>(a sum of a geometric series). We end up with the following expression for the total number of predicted genes in a random sequence:</p>
+        <p>
+          <inline-graphic xlink:href="1471-2105-4-21-i3.gif"/>
+        </p>
+        <p>The number 16 arises from the fact that the minimum ORF length considered is 20 codons corresponding to a variable length of 20 - 4 = 16. See Appendix for details. This is the expected number of genes predicted in a random sequence for a given value of <italic>C</italic>, and that number is the one we quote for each predicted gene. The constants <italic>A </italic>and <italic>B </italic>characterize the random sequence.</p>
+        <p><italic>R </italic>depends on the standard score &#x393; through <italic>C</italic>. This dependence is illustated in Figure <xref ref-type="fig" rid="F4">4</xref>. It clearly shows that a short ORF needs to have a much higher standard score than a long ORF in order to be significant (in the sense of having a low <italic>R</italic>-value).</p>
+        <fig position="float" id="F4">
+          <label>Figure 4</label>
+          <caption>
+            <p><bold>Relationship between <italic>R</italic>, &#x393; and variable length in codons <italic>l</italic>'. </bold>The numbers are taken from the <italic>E. coli </italic>runs described in Results and Discussion, but the qualitative behavior is independent of the genome</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-21-4"/>
+        </fig>
+        <p>We have chosen to normalize <italic>R </italic>to a random sequence of 1 Mb rather than a random sequence the length of the genome, because then significance can be compared across genomes. The precise recipe we use for calculation of statistical significance is:</p>
+        <p>&#x2022; For the genome in question, generate 40 Mb of random sequence using the 3rd order background model (estimated from the genome). Extract all ORFs and estimate the parameters <italic>A </italic>and <italic>B </italic>by linear regression of the log of the number of ORFs against the length and normalize to 1 Mb. To avoid distortion of regression lines due to noisy statistics of long ORFs, restrict the variable ORF length used to lie below 70 codons. This makes the range of variable length 16&#x2013;70 codons, which corresponds to a total length range of 20&#x2013;74 codons.</p>
+        <p>&#x2022; Score all the ORFs in the random sequence with the model and calculate &#x3B2;' for all ORFs. For each length, calculate the average and variance and estimate the parameters &#x3B1;<sub>&#x3BC;</sub>, &#x3B3;<sub>&#x3BC;</sub>, &#x3B1;<sub>&#x3C3;</sub>, and &#x3B3;<sub>&#x3C3; </sub>by linear regression, again using ORFs in the range 20&#x2013;74 codons.</p>
+        <p>&#x2022; To calculate the significance of an ORF in the genome, first calculate the standard score &#x393; from equation 2, then <italic>C </italic>from equation 3, and finally the significance value <italic>R </italic>using equation 4.</p>
+        <p>There are of course other possible choices of significance measure, but we believe that this is a simple and intuitively clear one and we have prefered it to the more traditional significance measure. By reporting the number <italic>R </italic>of expected false positives in one megabase of random sequence, it is easy for the end-user to estimate the number of false positives in a random sequence the length of the entire query genome &#x2013; one simply has to multiply <italic>R </italic>with the size of the genome measured in megabases.</p>
+      </sec>
+      <sec>
+        <title>Using other gene finders</title>
+        <p>In order to benchmark EasyGene we compare it with some of the existing gene finders.</p>
+        <p>GeneMark 2.4, Frame-by-Frame, GeneMark.hmm 2.1 and GeneMark.hmm/S all belong to the GeneMark suit of programs and are accessible via the web interfaces listed in the references.</p>
+        <p>For GeneMark.hmm2.1, GeneMark.hmm/S and Frame-by-Frame the output is a coordinate listing (start and stop positions) of all predicted genes.</p>
+        <p>GeneMark2.4 outputs a list of stop codons and corresponding high-scoring start codons. Each start/stop is listed with scores for coding potential and RBS. We collect all starts for a given stop and output the "Avg Prob" of the start with the highest RBS score. Whenever a threshold was needed for comparison purposes, we used 0.5 which is the default set on the web page.</p>
+        <p>Glimmer2.02 and Orpheus2 were installed locally. We changed the minimum ORF length predicted by these gene finders to 60 bp which seems to be the minimum used by the other gene finders. Orpheus and Glimmer provide two kinds of output: a verbose coordinate list of starts, stops and ORF scores and a simpler, post-processed list of coordinates for ORFs regarded as genes.</p>
+        <p>In order to test their ORF scoring we had to parse the scored output. We had some difficulties interpreting the scored Orpheus output since some ORFs were scored several times with identical results (several identical "Start chosen"). In cases where multiple copies were found, we simply chose one of them and used the corresponding "Coding potential" (with the recommended threshold of -1) for further analysis.</p>
+        <p>For Glimmer2.02 the scored output was parsed simply by selecting the Gene Score attributed to every scored ORF and using the recommended threshold of 90.</p>
+        <p>Finally, we used RBSfinder [<xref ref-type="bibr" rid="B25">25</xref>] for an alternative post-processing of Glimmer2.02 output. RBSfinder is designed to look for RBS sequences upstream of genes predicted by Glimmer2.02. If there are no RBS patterns in this region, RBSfinder searches for a start codon having a RBS pattern in the same reading frame upstream or downstream and relocates the start codon accordingly. The program may be iterated several times using revised predictions as new inputs. We found that running it twice was better than once but running it three times did not improve things further, so we chose to run it twice (with default options).</p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Results and Discussion</title>
+      <p>A number of tests were conducted in order to optimize the model architecture. We tested the number of codon models in series and found that three models yield a very good fit to the observed length distribution, see figure <xref ref-type="fig" rid="F5">5</xref> for an example.</p>
+      <fig position="float" id="F5">
+        <label>Figure 5</label>
+        <caption>
+          <p><bold>Gene length distribution imposed by HMM architecture. </bold>The model length distribution given by a negative binomial (equation 8 with <italic>n </italic>= 3) compared to the length histogram of set <italic>A </italic>genes for <italic>H. pylori </italic>J99.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-5"/>
+      </fig>
+      <p>The results of our experiments with the number of branches in the coding model and the order of the coding states are shown in figure <xref ref-type="fig" rid="F6">6</xref> and <xref ref-type="fig" rid="F7">7</xref> respectively, which show (cross-validated) <italic>performance </italic>curves (ROC curves) for varying numbers of branches and various orders. The performance curves are made by plotting the average true positive rates for a range of average false positive rates (the fraction of false positives made on average by the 10 different cross-validation models in 1 Mb of random sequence).</p>
+      <fig position="float" id="F6">
+        <label>Figure 6</label>
+        <caption>
+          <p><bold>Assessing the optimal number of HMM coding branches. </bold>Performance curves for 1,2,3 and 4 Markov branches of looped codon submodels for <italic>E. coli</italic>. The performance curves are made by the following procedure: First we sort the positive <italic>R</italic>-values in ascending order for each of the 10 subsets of set <italic>T </italic>(test sets). Then for each ascending <italic>R</italic>-value we calculate the fraction of genes in set <italic>T </italic>scoring below <italic>R </italic>(true positive rate) and the fraction of ORFs (with lengths greater than or equal to 20 codons) in one megabase double-stranded sequence scoring below <italic>R </italic>(false positive rate). The resulting 10 files with true and false positive rates are concatenated and 30 false positive cutoffs are selected (from 0 to 0.15 with steps of 0.005). The false positive entries in the 10 files which fall between these cutoffs are found and the corresponding true positive entries are averaged. Hence for each average false positive rate (halfway between two consecutive false positive cutoffs) we associate an average true positive rate and these tuples are then plotted.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-6"/>
+      </fig>
+      <fig position="float" id="F7">
+        <label>Figure 7</label>
+        <caption>
+          <p><bold>Assessing the optimal order of looped codon states. </bold>Performance curves for 3rd, 4th and 5th order Markov states of looped codon submodels for <italic>E. coli</italic>. For explanation of the construction of performance curves please confer the caption of figure <xref ref-type="fig" rid="F6">6</xref>.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-7"/>
+      </fig>
+      <p>Figure <xref ref-type="fig" rid="F6">6</xref> indicates that 3 branches is the best choice, while figure <xref ref-type="fig" rid="F7">7</xref> suggests that the optimal order for these branches is 4. Note that the Y-axes of these figures have been zoomed in order to allow visual inspection of the performance differences. Note also that all architectures and orders in fact yield a relatively high true positive rate even at false positive rates below 0.02. Similar figures were also made for other organisms (not shown) and although the results were not always as clear as for <italic>E. coli</italic>, a choice of 3 branches of 4th order states as default models of the internal parts of genes works well for the organisms we tested.</p>
+      <p>Similarly, figure <xref ref-type="fig" rid="F8">8</xref> shows performance curves to compare log-odds and significance scores and the significance scoring is seen to be slightly better in that it allows detection of more true positives for a given false positive rate. The significance scoring has the additional advantage of being genome independent and has an intuitively appealing interpretation.</p>
+      <fig position="float" id="F8">
+        <label>Figure 8</label>
+        <caption>
+          <p><bold>Comparing significance and log-odds. </bold>Performance curves comparing significance and log-odds scores for <italic>E. coli</italic>. For explanation of the construction of performance curves please confer the caption of figure <xref ref-type="fig" rid="F6">6</xref>.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-8"/>
+      </fig>
+      <p>Table <xref ref-type="table" rid="T1">1</xref> shows the average true and false positive rates for selected <italic>R</italic>-values in the case of <italic>E. coli </italic>models with three branches and fourth order branch states. This table gives an impression of the approximate <italic>R </italic>values corresponding to the graphs in figures <xref ref-type="fig" rid="F6">6</xref>, <xref ref-type="fig" rid="F7">7</xref> and <xref ref-type="fig" rid="F8">8</xref>.</p>
+      <table-wrap position="float" id="T1">
+        <label>Table 1</label>
+        <caption>
+          <p>True and false positive rates for selected <italic>R</italic>-values.</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <td align="center"><italic>R</italic>-value</td>
+              <td align="center">TP rate</td>
+              <td align="center">FP rate</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center">0.1</td>
+              <td align="center">0.971</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td align="center">2</td>
+              <td align="center">0.980</td>
+              <td align="center">2.3e-6</td>
+            </tr>
+            <tr>
+              <td align="center">10</td>
+              <td align="center">0.984</td>
+              <td align="center">3.0e-5</td>
+            </tr>
+            <tr>
+              <td align="center">50</td>
+              <td align="center">0.987</td>
+              <td align="center">3.1e-4</td>
+            </tr>
+            <tr>
+              <td align="center">150</td>
+              <td align="center">0.991</td>
+              <td align="center">8.7e-4</td>
+            </tr>
+            <tr>
+              <td align="center">500</td>
+              <td align="center">0.995</td>
+              <td align="center">2.8e-3</td>
+            </tr>
+            <tr>
+              <td align="center">10000</td>
+              <td align="center">0.999</td>
+              <td align="center">0.059</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <p>True and false positive rates averaged over 10 cross-validations for selected <italic>R</italic>-values in the case of the three branches, fourth order <italic>E. coli </italic>model. The FP rate is measured as the average fraction of ORFs (with lengths greater than or equal to 20 codons) in one megabase of double-stranded random sequence scoring lower than the given <italic>R</italic>-value. The TP rate is measured as the average fraction of ORFs in data set T scoring lower than the given <italic>R</italic>-value</p>
+        </table-wrap-foot>
+      </table-wrap>
+      <p>In order to test the validity of the approximations used in the derivation of the significance measure, we generated 1 Mb of random sequence from the Markov chain corresponding to the background state of the <italic>E. coli </italic>model. The plots in Figure <xref ref-type="fig" rid="F9">9</xref> show the mean and variance of the length-corrected log-odds score, &#x3B2;', for each length. They are very close to being linear as we assumed. The length distribution of the ORFs in the same random sequence is also shown, which confirm the geometric length distribution. The predicted number of significant ORFs in 1 Mb random sequence is compared with the theoretical significance value <italic>R </italic>in Figure <xref ref-type="fig" rid="F10">10</xref> and the agreement is seen to be rather good. We also compared the distribution of standard (3) scores for ORFs in the same random sequences to a normal distribution of unit variance and zero mean and the agreement also turned out to be good in this case as seen in Figure <xref ref-type="fig" rid="F11">11</xref>. We conclude that the assumptions and approximations used in the calculation of <italic>R </italic>are quite accurate.</p>
+      <fig position="float" id="F9">
+        <label>Figure 9</label>
+        <caption>
+          <p><bold>Statistical characteristics of random sequences. </bold>The top two panels show the mean and variance of log-odds scores versus variable ORF length in random sequences (<italic>E. coli </italic>model). Lowest subplot shows a logarithmic plot of the length distribution of random ORFs. The linear regression lines are shown in all three plots.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-9"/>
+      </fig>
+      <fig position="float" id="F10">
+        <label>Figure 10</label>
+        <caption>
+          <p><bold>Comparing predicted and found number of false positives. </bold>Empirical and theoretical number of false positives per Mb double-stranded random sequence according to the <italic>E. coli </italic>model.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-10"/>
+      </fig>
+      <fig position="float" id="F11">
+        <label>Figure 11</label>
+        <caption>
+          <p><bold>Probability density functions for the standard score. </bold>Empirical (dots) and theoretical (line) probability density functions for the standard scores (&#x393;) in random sequences (<italic>E. coli </italic>model). The lower plot is an enlargement of the distribution tail.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-21-11"/>
+      </fig>
+      <p>Table <xref ref-type="table" rid="T2">2</xref> shows the percentage of genes found for eight different gene finders and some sets of high-confidence genes from <italic>E. coli </italic>as well as the number of genes found in the whole genome and in random sequences. The eight gene finders are: EasyGene, Glimmer2.02, Glimmer2.02 with RBSfinder post-processing, Orpheus, GeneMark2.4, GeneMark.hmm2.1/GeneMarkS hybrid, "pure" GeneMark.hmm2.1 and Frame-by-Frame.</p>
+      <table-wrap position="float" id="T2">
+        <label>Table 2</label>
+        <caption>
+          <p>Specificity, sensitivity and precision estimates for different gene finders in <italic>E. coli</italic>.</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <td align="left">Data set</td>
+              <td align="center">EasyGene</td>
+              <td align="center">Glim</td>
+              <td align="center">rbs-Glim</td>
+              <td align="center">Orpheus</td>
+              <td align="center">Gm24</td>
+              <td align="center">GmS</td>
+              <td align="center">Gmhmm</td>
+              <td align="center">Frame</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">A'-% found</td>
+              <td align="center">98.4</td>
+              <td align="center">98.9/98.9</td>
+              <td align="center">98.9</td>
+              <td align="center">98.0/95.3</td>
+              <td align="center">91.5</td>
+              <td align="center">97.2</td>
+              <td align="center">98.1</td>
+              <td align="center">97.0</td>
+            </tr>
+            <tr>
+              <td align="left">A'-% exact</td>
+              <td align="center">93.8</td>
+              <td align="center">98.9/95.3</td>
+              <td align="center">84.1</td>
+              <td align="center">95.1/92.4</td>
+              <td align="center">41.6</td>
+              <td align="center">88.0</td>
+              <td align="center">85.7</td>
+              <td align="center">93.2</td>
+            </tr>
+            <tr>
+              <td align="left">B'-% found</td>
+              <td align="center">98.4</td>
+              <td align="center">98.5/98.6</td>
+              <td align="center">98.6</td>
+              <td align="center">95.9/96.5</td>
+              <td align="center">90.2</td>
+              <td align="center">96.6</td>
+              <td align="center">97.2</td>
+              <td align="center">96.4</td>
+            </tr>
+            <tr>
+              <td align="left">T-% found</td>
+              <td align="center">98.1(98.0)</td>
+              <td align="center">98.3/98.4</td>
+              <td align="center">98.4</td>
+              <td align="center">96.5/95.6</td>
+              <td align="center">89.8</td>
+              <td align="center">96.3</td>
+              <td align="center">97.1</td>
+              <td align="center">96.1</td>
+            </tr>
+            <tr>
+              <td align="left">Genome</td>
+              <td align="center">4145</td>
+              <td align="center">6827/5756</td>
+              <td align="center">5756</td>
+              <td align="center">9333/7543</td>
+              <td align="center">3552</td>
+              <td align="center">4064</td>
+              <td align="center">4230</td>
+              <td align="center">4064</td>
+            </tr>
+            <tr>
+              <td colspan="9">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">zero order</td>
+              <td align="center">7</td>
+              <td align="center">169/211</td>
+              <td align="center">211</td>
+              <td align="center">6761/5430</td>
+              <td align="center">6</td>
+              <td align="center">153</td>
+              <td align="center">1459</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td align="left">first order</td>
+              <td align="center">7</td>
+              <td align="center">545/723</td>
+              <td align="center">723</td>
+              <td align="center">6836/4804</td>
+              <td align="center">13</td>
+              <td align="center">241</td>
+              <td align="center">830</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td align="left">third order</td>
+              <td align="center">1</td>
+              <td align="center">2423/2694</td>
+              <td align="center">2694</td>
+              <td align="center">6582/4817</td>
+              <td align="center">43</td>
+              <td align="center">659</td>
+              <td align="center">866</td>
+              <td align="center">1</td>
+            </tr>
+            <tr>
+              <td align="left">shadows</td>
+              <td align="center">0</td>
+              <td align="center">19/21</td>
+              <td align="center">21</td>
+              <td align="center">22/9</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">2</td>
+              <td align="center">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <p>Upper part shows the percentage of genes found exactly (both 5' and 3' end) and partially (only 3' end exact) for different gene finders and sets of high confidence genes in <italic>E. coli</italic>. For Glimmer and Orpheus, the numbers before the "/" are based exclusively on their ORF scores and recommended threshold whereas the numbers after the "/" are based on their post-processing procedures. The number of genes predicted in the whole genome is also shown. This should be compared to the 4288 annotated genes in <italic>E. coli</italic>. The lower part of the table shows the number of false positives predicted in random sequences generated by Markov chains of order 0, 1 and 3 and the very last row shows the number of false predictions in the shadows of the high-confidence genes in data set A. All values listed for EasyGene are based on an R-value threshold of R = 2.</p>
+        </table-wrap-foot>
+      </table-wrap>
+      <p>Sequence set <italic>A</italic>' consist of the 1136 genes with high-confidence starts extracted from the <italic>E. coli </italic>genome as described in Methods. The "% exact" row indicates the percentage of predictions where both start and stop codon are correctly predicted whereas the "% found" row indicates that only the stop codon is correct. Note that all genes in set <italic>A </italic>have the most upstream start (they are Longest Possible Open Reading Frames &#x2013; LPORFs) by construction, and hence performance on this set favours gene finders which are biased towards LPORFs (such as Glimmer). Set <italic>B</italic>' consists of 1690 high-confidence genes with uncertain starts extracted as described in Methods. Due to the uncertainty of start codon placement, one cannot evaluate the exact start prediction performance for this set. The same is true for set <italic>T </italic>which is a similarity reduced union of <italic>A</italic>' and <italic>B</italic>' (2042 sequences).</p>
+      <p>The <italic>Genome </italic>row shows the number of genes predicted in the <italic>E. coli </italic>genome using default parameters and thresholds for the various gene finders. For Glimmer and Orpheus the minimum length of predicted genes was lowered to 60 in order to make their performance comparable to the others'. The next three rows show the number of false positives found in both strands of 1 Mb random sequences generated by zero, first and third order Markov chains estimated from the entire <italic>E. coli </italic>genome. The last row of the table shows the number of predictions wholly within the shadows of set <italic>A</italic>' &#x2013; i.e. wholly within regions complementary to the genes in set <italic>A</italic>' where, ideally, no genes (or at least very few) should be predicted.</p>
+      <p>The test sets overlap with the training sets for EasyGene. Therefore, for set <italic>T </italic>the 10-fold cross validation sensitivity is shown in parenthesis for EasyGene and it is seen to be reassuringly close to the non-crossvalidated sensitivity suggesting that EasyGene employs an appropriate model complexity and steers free of overfitting. Note also that the other gene finders have also been estimated from sets that overlap (or even contain) set <italic>T </italic>.</p>
+      <p>For Orpheus and Glimmer we show two numbers N1/N2 for each entry corresponding to before and after post-processing. For Orpheus, N1 is the number of unique ORFs having a Coding Potential above the recommended minimum of -1 and N2 is the number of entries in the post-processed <italic>orfnuc </italic>file. The post-processing removes some overlaps but also appears to employ a less restrictive cutoff than the recommended -1. For Glimmer, N1 is the number of ORFs with Gene Scores greater than or equal to the recommended threshold of 90 and N2 is the number of entries in the post-processed list of putative genes. The post-processing elects ("votes") some ORFs as gene candidates despite a low score. On the other hand the post-procesing removes some same-strand overlaps in different reading frames so the N2 may be greater or less than N1 depending on the relative extent of overlaps and "voting".</p>
+      <p>It is always difficult to asses the specificity of a gene finder, because it is difficult to find genomic regions that are certain to contain no genes. We have therefore assessed specificity in three different ways. First, by counting the number of predicted genes in a genome. If this number is much higher than the number of annotated genes, it is likely that there are many false positive predictions, i.e. poor specificity. Our second test is based on random sequence. Clearly, a high number of predicted genes in a random sequence of bases indicates a poor specificity. However, it is probably not possible to find an exact quantitative correspondence between predictions in random sequences and real genomes. Also, it is not clear what sort of random sequence to use for such a test. By 0'th order we mean a sequence with bases generated randomly and independently with the base frequencies of the genome. Bases are quite correlated in DNA sequences, so we have also tested on sequences that are generated by Markov chains of orders 1 and 3. These Markov chains are estimated from the genome, so the sequences will have the same distribution of dinucleotides and 4-nucleotides, respectively, as the genome. Finally, the third test is the number of genes predicted on the opposite strand of genes (shadows); these shadow regions should contain very few genes if any.</p>
+      <p>All gene finders except EasyGene, Frame and GeneMark2.4 predict a rather large number of false positives in random sequences, but for GeneMark.hmm and GeneMarkS we do not see large over-prediction in the genome or in shadows. Evidently, Glimmer and Orpheus predict a lot more genes in the genome than the other gene finders, suggesting that these gene finders have very high false positive levels. This is supported by the high numbers of genes predicted in random sequences, and (to a much lesser extent) in shadows. Orpheus and Glimmer actually predict more genes pr. nucleotide in the third order random sequence than they do in the genome, suggesting that the coding potential calculated in these gene finders is far from optimal.</p>
+      <p>The HMM used by Frame assumes a minimum gene length of 69 bases which could make its false positive level seem somewhat better (lower) than it is, but there was no convenient way to lower the minimum length so we simply left it. It should also be noted that Frame relies on pre-existing annotations for training and is therefore not a self-training gene finder like Glimmer, Orpheus, GeneMarkS and Easygene.</p>
+      <p>The sensitivity of the gene finders is tested on sets of high-confidence genes. Glimmer has the highest sensitivity for all sets, but this is largely due to heavy over-prediction. One ought always to bear in mind that it is not difficult to achieve high sensitivity if high levels of false predictions are tolerated at the same time &#x2013; sensitivity is 100% if all ORFs are predicted as genes! Although there are some very close competitors, EasyGene comes out as the second best in sensitivity for all sets.</p>
+      <p>The exact prediction of start codons is tested on set <italic>A</italic>' and on an experimentally ver-ified set. As mentioned above, set <italic>A </italic>is biased, because all genes of this set are LPORFs. Glimmer always predicts the most upstream start and consequently achieves a high performance on this set. When Glimmer's output is post-processed by RBSfinder the performance drops considerably.</p>
+      <p>The prediction of start codons was evaluated further on a set of 195 <italic>E. coli </italic>genes with experimentally verified starts [<xref ref-type="bibr" rid="B26">26</xref>] with results shown in table <xref ref-type="table" rid="T3">3</xref>. Set LiC is the subset of 133 genes which coincide with the longest possible open reading frame (LPORF) while set LiD is the remaining 62 genes whose starts are downstream of the LPORF start. The goal is to find the starts of the challenging LiD set without loosing too many of the more trivial starts of set LiC. Table <xref ref-type="table" rid="T3">3</xref> shows that while most gene finders partially locate all genes in set LiC and LiD, there are large variations in their exact localization ability. Selecting for the highest combined performance on set LiC and LiD, one sees that EasyGene, GeneMarkS and Frame-by-Frame are best. Their performances also exceed that of [<xref ref-type="bibr" rid="B27">27</xref>] in which a cross-validated performance of 84.9% +/- 4% is reported on a subset of 184 genes out of the 195. In the low end we have Glimmer finding 0% of set LiD exact (1.6% with post-processing) and GeneMark2.4 finding 49.6% of set LiC exact. Using the RBSfinder post-processing [<xref ref-type="bibr" rid="B25">25</xref>] on the Glimmer predictions improves performance on set LiD to 75.8%, but at the cost of a substantial dip in set LiC performance to 88.7%.</p>
+      <table-wrap position="float" id="T3">
+        <label>Table 3</label>
+        <caption>
+          <p>Sensitivity and precision estimates for experimentally verified <italic>E. coli </italic>genes.</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <td align="left">Data set</td>
+              <td align="center">EasyGene</td>
+              <td align="center">Glim</td>
+              <td align="center">rbs-Glim</td>
+              <td align="center">Orpheus</td>
+              <td align="center">Gm24</td>
+              <td align="center">GmS</td>
+              <td align="center">Gmhmm</td>
+              <td align="center">Frame</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">LiC-% found</td>
+              <td align="center">100</td>
+              <td align="center">100/100</td>
+              <td align="center">100</td>
+              <td align="center">97.7/91.7</td>
+              <td align="center">97.7</td>
+              <td align="center">100</td>
+              <td align="center">100</td>
+              <td align="center">100</td>
+            </tr>
+            <tr>
+              <td align="left">LiC-% exact</td>
+              <td align="center">94.0</td>
+              <td align="center">100/97.0</td>
+              <td align="center">88.7</td>
+              <td align="center">96.2/90.2</td>
+              <td align="center">49.6</td>
+              <td align="center">94.0</td>
+              <td align="center">90.2</td>
+              <td align="center">98.5</td>
+            </tr>
+            <tr>
+              <td align="left">LiD-% found</td>
+              <td align="center">100</td>
+              <td align="center">100/100</td>
+              <td align="center">100</td>
+              <td align="center">96.8/98.4</td>
+              <td align="center">100</td>
+              <td align="center">100</td>
+              <td align="center">100</td>
+              <td align="center">100</td>
+            </tr>
+            <tr>
+              <td align="left">LiD-% exact</td>
+              <td align="center">96.8</td>
+              <td align="center">0/1.6</td>
+              <td align="center">75.8</td>
+              <td align="center">51.5/51.6</td>
+              <td align="center">67.7</td>
+              <td align="center">95.2</td>
+              <td align="center">80.6</td>
+              <td align="center">87.0</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <p>Percentage of genes found exactly and partially in two subsets of the 195 experimentally verified genes published by [<xref ref-type="bibr" rid="B26">26</xref>]. All values listed for EasyGene are based on an R-value threshold of R = 2.</p>
+        </table-wrap-foot>
+      </table-wrap>
+      <p>Many gene finders are first developed for <italic>E. coli </italic>and then later adapted to other organisms. It is therefore important also to test gene finders on other organisms. Based on table <xref ref-type="table" rid="T2">2</xref> and <xref ref-type="table" rid="T3">3</xref> we chose EasyGene, GeneMarkS and Frame-by-Frame as the gene finders with the best overall performances and then conducted further comparisons between these for <italic>M. tuberculosis </italic>[<xref ref-type="bibr" rid="B28">28</xref>], <italic>H. pylori </italic>[<xref ref-type="bibr" rid="B29">29</xref>] and <italic>B. subtilis </italic>[<xref ref-type="bibr" rid="B30">30</xref>]. <italic>M. tuberculosis </italic>presents a challenge due to GC richness, <italic>H. pylori </italic>due to small genome size and <italic>B. subtilis </italic>was chosen on account of its reputation of being well annotated [<xref ref-type="bibr" rid="B11">11</xref>]. The results are presented in table <xref ref-type="table" rid="T4">4</xref> with the same rows as table <xref ref-type="table" rid="T2">2</xref>.</p>
+      <table-wrap position="float" id="T4">
+        <label>Table 4</label>
+        <caption>
+          <p>Specificity, sensitivity and precision estimates for <italic>M. tuberculosis</italic>, <italic>H. pylori J99 </italic>and <italic>B. subtilis</italic>.</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <td align="center" colspan="4">
+                <italic>M. tuberculosis</italic>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">Data set</td>
+              <td align="center">EasyGene</td>
+              <td align="center">GmS</td>
+              <td align="center">Frame</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">A'-% found</td>
+              <td align="center">96.7</td>
+              <td align="center">97.2</td>
+              <td align="center">96.0</td>
+            </tr>
+            <tr>
+              <td align="left">A'-% exact</td>
+              <td align="center">89.1</td>
+              <td align="center">80.9</td>
+              <td align="center">87.9</td>
+            </tr>
+            <tr>
+              <td align="left">B'-% found</td>
+              <td align="center">96.8</td>
+              <td align="center">97.1</td>
+              <td align="center">96.3</td>
+            </tr>
+            <tr>
+              <td align="left">T-% found</td>
+              <td align="center">96.9(96.6)</td>
+              <td align="center">97.3</td>
+              <td align="center">96.4</td>
+            </tr>
+            <tr>
+              <td align="left">Genome</td>
+              <td align="center">3749</td>
+              <td align="center">3983</td>
+              <td align="center">4341</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">zero order</td>
+              <td align="center">0</td>
+              <td align="center">-</td>
+              <td align="center">8</td>
+            </tr>
+            <tr>
+              <td align="left">first order</td>
+              <td align="center">3</td>
+              <td align="center">-</td>
+              <td align="center">2</td>
+            </tr>
+            <tr>
+              <td align="left">third order</td>
+              <td align="center">2</td>
+              <td align="center">-</td>
+              <td align="center">12</td>
+            </tr>
+            <tr>
+              <td align="left">shadows</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" colspan="4">
+                <italic>H. pylori J99</italic>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">Data set</td>
+              <td align="center">EasyGene</td>
+              <td align="center">GmS</td>
+              <td align="center">Frame</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">A'-% found</td>
+              <td align="center">99.2</td>
+              <td align="center">99.2</td>
+              <td align="center">99.2</td>
+            </tr>
+            <tr>
+              <td align="left">A'-% exact</td>
+              <td align="center">97.5</td>
+              <td align="center">95.7</td>
+              <td align="center">96.7</td>
+            </tr>
+            <tr>
+              <td align="left">B'-% found</td>
+              <td align="center">100</td>
+              <td align="center">99.6</td>
+              <td align="center">98.9</td>
+            </tr>
+            <tr>
+              <td align="left">T-% found</td>
+              <td align="center">99.7(98.8)</td>
+              <td align="center">99.5</td>
+              <td align="center">99.1</td>
+            </tr>
+            <tr>
+              <td align="left">Genome</td>
+              <td align="center">1491</td>
+              <td align="center">1518</td>
+              <td align="center">1479</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">zero order</td>
+              <td align="center">2</td>
+              <td align="center">1479</td>
+              <td align="center">2</td>
+            </tr>
+            <tr>
+              <td align="left">first order</td>
+              <td align="center">1</td>
+              <td align="center">336</td>
+              <td align="center">2</td>
+            </tr>
+            <tr>
+              <td align="left">third order</td>
+              <td align="center">0</td>
+              <td align="center">403</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td align="left">shadows</td>
+              <td align="center">2</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" colspan="4">
+                <italic>B. subtilis</italic>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">Data set</td>
+              <td align="center">EasyGene</td>
+              <td align="center">GmS</td>
+              <td align="center">Frame</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">A'-% found</td>
+              <td align="center">99.3</td>
+              <td align="center">98.1</td>
+              <td align="center">98.8</td>
+            </tr>
+            <tr>
+              <td align="left">A'-% exacts</td>
+              <td align="center">94.8</td>
+              <td align="center">94.1</td>
+              <td align="center">93.3</td>
+            </tr>
+            <tr>
+              <td align="left">B'-% found</td>
+              <td align="center">99.2</td>
+              <td align="center">99.0</td>
+              <td align="center">98.2</td>
+            </tr>
+            <tr>
+              <td align="left">T-% found</td>
+              <td align="center">99.3(99.2)</td>
+              <td align="center">99.0</td>
+              <td align="center">98.4</td>
+            </tr>
+            <tr>
+              <td align="left">Genome</td>
+              <td align="center">4083</td>
+              <td align="center">4221</td>
+              <td align="center">4006</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <hr/>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">zero order</td>
+              <td align="center">1</td>
+              <td align="center">675</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td align="left">first order</td>
+              <td align="center">2</td>
+              <td align="center">457</td>
+              <td align="center">0</td>
+            </tr>
+            <tr>
+              <td align="left">third order</td>
+              <td align="center">1</td>
+              <td align="center">813</td>
+              <td align="center">2</td>
+            </tr>
+            <tr>
+              <td align="left">shadows</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <p>Genes found exactly and partially for different gene finders and sets of high confidence genes in <italic>M. tuberculosis</italic>, <italic>H. pylori J99 </italic>and <italic>B. subtilis</italic>, where the number of annotated genes is 3918, 1491 and 4100 respectively. There are no pre-trained GeneMarkS models for <italic>M. tuberculosis</italic>, so it was not possible to obtain a false positive estimate for this organism. All values listed for EasyGene are based on an R-value threshold of R = 2.</p>
+        </table-wrap-foot>
+      </table-wrap>
+      <p>For <italic>M. tuberculosis </italic>GeneMarkS and EasyGene are comparable, although GeneMarkS seems to over-predict slightly (assuming that the 3918 annotated genes are close to being correct), and Easygene might under-predict. We believe that Frame predicts too many genes in this organism and at the same time it has lower sensitivity than the two others, suggesting a worse performance overall. This indicates that Frame is not very robust with respect to high GC content.</p>
+      <p>The small dataset from <italic>H. pylori </italic>might give a slight over-fitting in EasyGene, where there is one percent difference between cross-validated results and non-crossvalidated. For this organism the three gene finders seem to have very similar performances. Finally, for <italic>B. subtilis </italic>EasyGene comes closest to the number of annotated genes and have higher sensitivity than the other methods.</p>
+    </sec>
+    <sec>
+      <title>Conclusions</title>
+      <p>The emerging overall picture is that the sensitivity of EasyGene tends to be comparable to GeneMarkS and higher than Frame. With regards to specificity, EasyGene and Frame tend to be comparable and both higher than GeneMarkS. Hence, EasyGene comes out with the best combined sensitivity/specificity performance. When it comes to exact starts, EasyGene also generally performs best.</p>
+      <p>Glimmer and Orpheus have good sensitivities but at the cost of very low specificities in this comparison. We have lowered the ORF length cutoff from their default values in these methods to make the results comparable. This may be unfair, but since the challenge is to find the short genes, we believe that any gene finder should be able to score them.</p>
+      <p>At present it is not possible to automatically find all genes in a prokaryotic genome. We believe the aim of a gene finding system is to help expert annotators as much as possible, and we consider the statistical significance of a gene an important help in classifying the predictions into almost certain genes and border-line genes needing more attention. Contrary to most other gene finders discussed here, it is up to the user which significance cut-off to use. EasyGene also predicts sub-optimal start codons if need be, so it will be easy to see if e.g. two alternative starts have almost the same score.</p>
+      <p>A shortcoming of the significance value as calculated here is that long ORFs score well simply on account of their length, since very long ORFs occur rarely in random sequences. For this reason, EasyGene also provides a log-odds score in the output which may be held up against the <italic>R</italic>-value for ORFs longer than say 500 bp. Genes of this length ought to have high log-odds values. If they do not &#x2013; i.e. if they score below 0 &#x2013; then they are probably not real genes despite their length (sometimes very long non-coding ORFs occur in regions of repetitive DNA).</p>
+      <p>If the amount of available genomic DNA is very small (as it may be in partially sequenced genomes) the 3 branches of 4th order coding models may have too many parameters to be reliably estimated. In such cases, one could reduce the parameter space simply by using fewer branches and/or lower orders. More generally, one could develop a method for automatic fine-tuning of HMM architecture for every new organism. Other lines of future research could focus on modelling of genes with errors and frame shifts.</p>
+      <p>Finally, it may be noted that a prototype of EasyGene has already been used in the annotation of <italic>S. typhi </italic>[<xref ref-type="bibr" rid="B31">31</xref>].</p>
+    </sec>
+    <sec>
+      <title>Appendix: The length dependent score distribution</title>
+      <p>The log-odds score distribution has several components. The probability of a sequence <italic>z </italic>containing and ORF given a model <italic>M </italic>may be written as</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i4.gif"/>
+      </p>
+      <p>where <italic>c</italic><sub>1</sub>, . . . , <italic>c</italic><sub><italic>l </italic></sub>denotes the codons in the ORF and flanks denotes all the rest of the sequence. <italic>P </italic>(<italic>l</italic>|<italic>M</italic>) is the length distribution of the HMM. In logarithmic form we have</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i5.gif"/>
+      </p>
+      <p>Similarly, the denominator of the log-odds score, log <italic>P </italic>(<italic>z</italic>|<italic>N </italic>), may be rewritten in exactly the same way, so the entire log-odds score becomes</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i6.gif"/>
+      </p>
+      <p>where</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i7.gif"/>
+      </p>
+      <p>We will now look at the distribution of each of these terms.</p>
+      <p>The null model consists of a state with a loop and three reverse codon states with a loop. For a long sequence one of the loops will usually dominate the probability, so the length distribution is well approximated by a geometric distribution</p>
+      <p><italic>P</italic>(<italic>l</italic>|<italic>N</italic>) <inline-graphic xlink:href="1471-2105-4-21-i17.gif"/><italic>k</italic><sub>1 </sub>exp (-<italic>k</italic><sub>1</sub><italic>l</italic>)</p>
+      <p>where <italic>k</italic><sub>1 </sub>is a constant greater than zero.</p>
+      <p>The length distribution from the looped codon states is a negative binomial [<xref ref-type="bibr" rid="B17">17</xref>],</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i8.gif"/>
+      </p>
+      <p>where <italic>p </italic>is loop probability and <italic>n </italic>is the number of looped codon submodels (in casu, <italic>n </italic>= 3). Some of the ORF (start and end) is modelled by non-looped states. The number of nucleotides modelled in the beginning and end of the ORF is denoted <italic>l</italic><sub>0 </sub>and the <italic>variable </italic>length is denoted <italic>l</italic>', so the total ORF length is <italic>l </italic>= <italic>l</italic><sub>0 </sub>+ <italic>l</italic>'. Using that log <inline-graphic xlink:href="1471-2105-4-21-i9.gif"/>&#xA0;<inline-graphic xlink:href="1471-2105-4-21-i17.gif"/> (<italic>n </italic>- 1) log(<italic>l</italic>' - n/2) - log(<italic>n</italic>-1)! for l' &gt;&gt;<italic>n</italic>, we obtain</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i10.gif"/>
+      </p>
+      <p>The next term, <italic>Q</italic>, in equation 6 is a sum of random variables since we are considering random sequences. The sum <italic>Q </italic>will therefore (according to the central limit theorem) converge to a normal distribution <italic>N </italic>(&#x3BC;<italic>l</italic>, &#x3C3;<inline-graphic xlink:href="1471-2105-4-21-i11.gif"/>), for large <italic>l</italic>.</p>
+      <p>The submodels flanking the gene model are identical to the null model. Therefore <italic>p</italic>(flanks|<italic>M</italic>) and <italic>p</italic>(flanks|<italic>N</italic>) will almost cancel in the last term of equation 6, except from the contribution from the RBS model and the states after the stop codon. This contribution will be independent of the ORF length. Since it is again a sum of random terms it is well approximated by a normal distribution.</p>
+      <p>Apart from the non-linear term from the negative binomial we have now shown that all terms in equation 6 are constant or scale linearly with <italic>l</italic>. Therefore</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i12.gif"/>
+      </p>
+      <p>is normally distributed for fixed length with an average and variance that are linear functions of <italic>l</italic>:</p>
+      <p>
+average = &#x3B1;<sub>&#x3BC;</sub> + &#x3B3;<sub>&#x3BC;</sub><italic>l'</italic>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;(11)</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i13.gif"/>
+      </p>
+      <p>The parameters of these linear functions can readily be estimated from random sequences by doing linear regression between the variable length and the mean and variance of log-odds scores as shown in the two upper plots of figure <xref ref-type="fig" rid="F9">9</xref>. (Note that one can switch from the variable length <italic>l</italic>' to the total length <italic>l </italic>in the formulas by changing the constants.)</p>
+      <p>Finally it is convenient to introduce the <italic>standard score </italic>&#x393;, defined in equation 2, which is normally distributed with average 0 and variation 1.</p>
+      <p>Since random ORF lengths are geometrically distributed (cf. equation 1), the expected number of ORFs of length <italic>l </italic>scoring more than &#x393; in a sequence is</p>
+      <p><italic>C</italic>(<italic>l</italic>', &#x393;) = exp (<italic>A </italic>- <italic>Bl</italic>') [1 - &#x3A6;(&#x393;)], &#xA0;&#xA0;&#xA0; (13)</p>
+      <p>where the exponential term is the expected number of ORFs of variable length <italic>l</italic>' and &#x3A6; is the cumulative normal distribution. Thus, for a given score we can calculate the number of expected predictions in a random sequence.</p>
+      <p>For lengths <italic>l </italic>&#x2265; <italic>l</italic><sub><italic>C </italic></sub>this expectation is always less than C (due to the exponential factor). So if we require that no more than <italic>C </italic>predictions be made at any length, the total number of predictions in a random genome is</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i14.gif"/>
+      </p>
+      <p>where <italic>l</italic><sub><italic>s </italic></sub>is the shortest ORF length considered (we use 20). <italic>l</italic><sub><italic>C </italic></sub>is given by</p>
+      <p>
+        <inline-graphic xlink:href="1471-2105-4-21-i15.gif"/>
+      </p>
+      <p>Strictly speaking, we should take the smallest integer larger than <inline-graphic xlink:href="1471-2105-4-21-i16.gif"/>, but using the real expression introduces only an insignificant error. Inserting into equation 14 finally yields equation 4,</p>
+      <p><italic>R </italic>= {(<italic>A </italic>- log <italic>C</italic>)/<italic>B </italic>- (<italic>l</italic><sub><italic>s </italic></sub>- <italic>l</italic><sub>0</sub>)}<italic>C </italic>+ <italic>C</italic>/(1 - exp(-<italic>B</italic>)). &#xA0;&#xA0;&#xA0; (16)</p>
+    </sec>
+    <sec>
+      <title>Web sites used</title>
+      <p>Frame-by-Frame:</p>
+      <p>
+        <ext-link ext-link-type="uri" xlink:href="http://opal.biology.gatech.edu/GeneMark/fbf.cgi"/>
+      </p>
+      <p>GeneMark.hmm 2.1:</p>
+      <p>
+        <ext-link ext-link-type="uri" xlink:href="http://opal.biology.gatech.edu/GeneMark/gmhmm2_prok.cgi"/>
+      </p>
+      <p>GeneMark.hmm 2.1 using GeneMarkS models:</p>
+      <p>
+        <ext-link ext-link-type="uri" xlink:href="http://opal.biology.gatech.edu/GeneMark/gmhmm2_genemarks.cgi"/>
+      </p>
+      <p>GeneMark 2.4:</p>
+      <p>
+        <ext-link ext-link-type="uri" xlink:href="http://opal.biology.gatech.edu/GeneMark/genemark24.cgi"/>
+      </p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <sec>
+        <title>Acknowledgements</title>
+        <p>We wish to thank G. Kolesov for kindly providing the Orpheus package and the people behind <ext-link ext-link-type="uri" xlink:href="http://www.tigr.org/software/glimmer"/> for providing the Glimmer package. This work was supported by a grant from the Danish National Research Foundation.</p>
+      </sec>
+    </ack>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frishman</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Mironov</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mewes</surname>
+              <given-names>HW</given-names>
+            </name>
+            <name>
+              <surname>Gelfand</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Combining diverse evidence for gene recognition in completely sequenced bacterial genomes</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1998</year>
+          <volume>26</volume>
+          <fpage>2941</fpage>
+          <lpage>2947</lpage>
+          <pub-id pub-id-type="pmid">9611239</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/26.12.2941</pub-id>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Skovgaard</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>LJ</given-names>
+            </name>
+            <name>
+              <surname>Brunak</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ussery</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>On the total number of genes and their length distribution in complete microbial genomes</article-title>
+          <source>Trends in Genetics</source>
+          <year>2001</year>
+          <volume>17</volume>
+          <fpage>425</fpage>
+          <lpage>428</lpage>
+          <pub-id pub-id-type="pmid">11485798</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0168-9525(01)02372-1</pub-id>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kawarabayasi</surname>
+              <given-names>Y</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Complete genome sequence of an aerobic hyperthermophilic crenarchaeon</article-title>
+          <source>Aeropyrum pernix K1 DNA Res</source>
+          <year>1999</year>
+          <volume>6</volume>
+          <fpage>83</fpage>
+          <lpage>101</lpage>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fickett</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Recognition of protein coding regions in DNA sequences</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1982</year>
+          <volume>17</volume>
+          <fpage>5303</fpage>
+          <lpage>5318</lpage>
+          <pub-id pub-id-type="pmid">7145702</pub-id>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gribskov</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Devereux</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Burgess</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>The codon preference plot: Graphic analysis of protein coding sequences and prediction of gene expression</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1984</year>
+          <volume>12</volume>
+          <fpage>539</fpage>
+          <lpage>549</lpage>
+          <pub-id pub-id-type="pmid">6694906</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Staden</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Measurements of the effects that coding for a protein has on a dna sequence and their use in finding genes</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1984</year>
+          <volume>12</volume>
+          <fpage>551</fpage>
+          <lpage>567</lpage>
+          <pub-id pub-id-type="pmid">6364041</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Borodovsky</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>McIninch</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>GENMARK: Parallel gene recognition for both DNA strands</article-title>
+          <source>Computers and Chemistry</source>
+          <year>1993</year>
+          <volume>17</volume>
+          <fpage>123</fpage>
+          <lpage>133</lpage>
+          <pub-id pub-id-type="doi">10.1016/0097-8485(93)85004-V</pub-id>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mian</surname>
+              <given-names>IS</given-names>
+            </name>
+            <name>
+              <surname>Haussler</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>A hidden Markov model that finds genes in <italic>E. coli </italic>DNA</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1994</year>
+          <volume>22</volume>
+          <fpage>4768</fpage>
+          <lpage>4778</lpage>
+          <pub-id pub-id-type="pmid">7984429</pub-id>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Salzberg</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Delcher</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Kasif</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>White</surname>
+              <given-names>O</given-names>
+            </name>
+          </person-group>
+          <article-title>Microbial gene identification using interpolated Markov models</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1998</year>
+          <volume>26</volume>
+          <fpage>544</fpage>
+          <lpage>548</lpage>
+          <pub-id pub-id-type="pmid">9421513</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/26.2.544</pub-id>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lukashin</surname>
+              <given-names>AV</given-names>
+            </name>
+            <name>
+              <surname>Borodovsky</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>GeneMark.hmm: new solutions for gene finding</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1998</year>
+          <volume>26</volume>
+          <fpage>1107</fpage>
+          <lpage>1115</lpage>
+          <pub-id pub-id-type="pmid">9461475</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/26.4.1107</pub-id>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Besemer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lomsadze</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Borodovsky</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>GeneMarkS: a self-training method for prediction of gene starts in microbial genomes. implications for finding sequence motifs in regulatory regions</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>2607</fpage>
+          <lpage>2618</lpage>
+          <pub-id pub-id-type="pmid">11410670</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/29.12.2607</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Besemer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Borodovsky</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Heuristic approach to deriving models for gene finding</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>3911</fpage>
+          <lpage>3920</lpage>
+          <pub-id pub-id-type="pmid">10481031</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/27.19.3911</pub-id>
+        </citation>
+      </ref>
+      <ref id="B13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shmatkov</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Melikyan</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Chernousko</surname>
+              <given-names>FL</given-names>
+            </name>
+            <name>
+              <surname>Borodovsky</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Finding prokaryotic genes by the 'frame-by-frame' algorithm: targeting gene starts and overlapping genes</article-title>
+          <source>Bioinformatics</source>
+          <year>1999</year>
+          <volume>15</volume>
+          <fpage>874</fpage>
+          <lpage>886</lpage>
+          <pub-id pub-id-type="pmid">10743554</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/15.11.874</pub-id>
+        </citation>
+      </ref>
+      <ref id="B14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bairoch</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Apweiler</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>The SWISS-PROT protein sequence database and its supplement TrEMBL in 2000</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>2000</year>
+          <volume>28</volume>
+          <fpage>45</fpage>
+          <lpage>48</lpage>
+          <pub-id pub-id-type="pmid">10592178</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/28.1.45</pub-id>
+        </citation>
+      </ref>
+      <ref id="B15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Altschul</surname>
+              <given-names>SF</given-names>
+            </name>
+            <name>
+              <surname>Madden</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Schaffer</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Lipman</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Gapped BLAST and PSI-BLAST: a new generation of protein database search programs</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>3389</fpage>
+          <lpage>3402</lpage>
+          <pub-id pub-id-type="pmid">9254694</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/25.17.3389</pub-id>
+        </citation>
+      </ref>
+      <ref id="B16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hobohm</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Scharf</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Schneider</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Sander</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Selection of representative protein data sets</article-title>
+          <source>Protein Science</source>
+          <year>1992</year>
+          <volume>1</volume>
+          <fpage>409</fpage>
+          <lpage>417</lpage>
+          <pub-id pub-id-type="pmid">1304348</pub-id>
+        </citation>
+      </ref>
+      <ref id="B17">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Durbin</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>Eddy</surname>
+              <given-names>SR</given-names>
+            </name>
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mitchison</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>Biological Sequence Analysis Cambridge University Press, Cambridge, UK</source>
+          <year>1998</year>
+        </citation>
+      </ref>
+      <ref id="B18">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Salzberg SL, Searls DB, Kasif S</surname>
+            </name>
+          </person-group>
+          <article-title>An introduction to hidden Markov models for biological sequences</article-title>
+          <source>In Computational Methods in Molecular Biology</source>
+          <year>1998</year>
+          <volume>4</volume>
+          <publisher-name>Elsevier, Amsterdam</publisher-name>
+          <fpage>45</fpage>
+          <lpage>63</lpage>
+        </citation>
+      </ref>
+      <ref id="B19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rabiner</surname>
+              <given-names>LR</given-names>
+            </name>
+          </person-group>
+          <article-title>A tutorial on hidden Markov models and selected applications in speech recognition</article-title>
+          <source>Proc IEEE</source>
+          <year>1989</year>
+          <volume>77</volume>
+          <fpage>257</fpage>
+          <lpage>286</lpage>
+          <pub-id pub-id-type="doi">10.1109/5.18626</pub-id>
+        </citation>
+      </ref>
+      <ref id="B20">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Gaasterland T, Karp P, Karplus K, Ouzounis C, Sander C, Valencia A</surname>
+            </name>
+          </person-group>
+          <article-title>Two methods for improving performance of a HMM and their application for gene finding</article-title>
+          <source>In Proceedings of the Fifth International Conference on Intelligent Systems for Molecular Biology</source>
+          <year>1997</year>
+          <publisher-name>Menlo Park, CA AAAI Press</publisher-name>
+          <fpage>179</fpage>
+          <lpage>186</lpage>
+        </citation>
+      </ref>
+      <ref id="B21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yada</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Totoki</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Takagi</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Nakai</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>A novel bacterial gene-finding system with improved accuracy in locating start codons</article-title>
+          <source>DNA Research</source>
+          <year>2001</year>
+          <volume>8</volume>
+          <fpage>97</fpage>
+          <lpage>106</lpage>
+          <pub-id pub-id-type="pmid">11475327</pub-id>
+        </citation>
+      </ref>
+      <ref id="B22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Medigue</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Rouxel</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Vigier</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Henaut</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Danchin</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Evidence for horizontal gene transfer in Escherichia coli speciation</article-title>
+          <source>Journal of Molecular Biology</source>
+          <year>1991</year>
+          <volume>222</volume>
+          <fpage>851</fpage>
+          <lpage>856</lpage>
+          <pub-id pub-id-type="pmid">1762151</pub-id>
+        </citation>
+      </ref>
+      <ref id="B23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hughey</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Hidden Markov models for sequence analysis: extension and analysis of the basic method</article-title>
+          <source>CABIOS</source>
+          <year>1996</year>
+          <volume>12</volume>
+          <fpage>95</fpage>
+          <lpage>107</lpage>
+          <pub-id pub-id-type="pmid">8744772</pub-id>
+        </citation>
+      </ref>
+      <ref id="B24">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stormo</surname>
+              <given-names>GD</given-names>
+            </name>
+            <name>
+              <surname>Haussler</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Optimally parsing a sequence into different classes based on multiple types of evidence</article-title>
+          <source>In Proc of Second Int Conf on Intelligent Systems for Molecular Biology</source>
+          <year>1994</year>
+          <fpage>369</fpage>
+          <lpage>375</lpage>
+        </citation>
+      </ref>
+      <ref id="B25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Suzek</surname>
+              <given-names>BE</given-names>
+            </name>
+            <name>
+              <surname>Ermolaeva</surname>
+              <given-names>MD</given-names>
+            </name>
+            <name>
+              <surname>Schreiber</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Salzberg</surname>
+              <given-names>SL</given-names>
+            </name>
+          </person-group>
+          <article-title>A probabilistic method for identifying start codons in bacterial genomes</article-title>
+          <source>Bioinformatics</source>
+          <year>2001</year>
+          <volume>17</volume>
+          <fpage>1123</fpage>
+          <lpage>1130</lpage>
+          <pub-id pub-id-type="pmid">11751220</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/17.12.1123</pub-id>
+        </citation>
+      </ref>
+      <ref id="B26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Link</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Robison</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Church</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparing the predicted and observed properties of proteins encoded in the genome of escherichia coli k-12</article-title>
+          <source>Electrophoresis</source>
+          <year>1997</year>
+          <volume>18</volume>
+          <fpage>1259</fpage>
+          <lpage>1313</lpage>
+          <pub-id pub-id-type="pmid">9298646</pub-id>
+        </citation>
+      </ref>
+      <ref id="B27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hannenhalli</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Hayes</surname>
+              <given-names>WS</given-names>
+            </name>
+            <name>
+              <surname>Hatzigeorgiou</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Fickett</surname>
+              <given-names>JW</given-names>
+            </name>
+          </person-group>
+          <article-title>Bacterial start site prediction</article-title>
+          <source>Nucleic Acids Research</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>3577</fpage>
+          <lpage>3582</lpage>
+          <pub-id pub-id-type="pmid">10446249</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/27.17.3577</pub-id>
+        </citation>
+      </ref>
+      <ref id="B28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cole</surname>
+              <given-names>ST</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Deciphering the biology of <italic>Mycobacterium tuberculosis </italic>from the complete genome sequence</article-title>
+          <source>Nature</source>
+          <year>1998</year>
+          <volume>393</volume>
+          <fpage>537</fpage>
+          <lpage>544</lpage>
+          <pub-id pub-id-type="pmid">9634230</pub-id>
+          <pub-id pub-id-type="doi">10.1038/31159</pub-id>
+        </citation>
+      </ref>
+      <ref id="B29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>RA</surname>
+              <given-names>Alm</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Genomic-sequence comparison of two unrelated isolates of the human gastric pathogen helicobacter pylori</article-title>
+          <source>Nature</source>
+          <year>1999</year>
+          <volume>397</volume>
+          <fpage>176</fpage>
+          <lpage>180</lpage>
+          <pub-id pub-id-type="pmid">9923682</pub-id>
+          <pub-id pub-id-type="doi">10.1038/16495</pub-id>
+        </citation>
+      </ref>
+      <ref id="B30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kunst</surname>
+              <given-names>F</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The complete genome sequence of the gram-positive bacterium bacillus subtilis</article-title>
+          <source>Nature</source>
+          <year>1997</year>
+          <volume>390</volume>
+          <fpage>249</fpage>
+          <lpage>256</lpage>
+          <pub-id pub-id-type="pmid">9384377</pub-id>
+          <pub-id pub-id-type="doi">10.1038/36786</pub-id>
+        </citation>
+      </ref>
+      <ref id="B31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Parkhill</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Complete genome sequence of a multiple drug resistant salmonella enterica serovar typhi ct18</article-title>
+          <source>Nature</source>
+          <year>2001</year>
+          <volume>413</volume>
+          <fpage>848</fpage>
+          <lpage>852</lpage>
+          <pub-id pub-id-type="pmid">11677608</pub-id>
+          <pub-id pub-id-type="doi">10.1038/35101607</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

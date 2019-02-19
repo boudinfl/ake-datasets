@@ -1,0 +1,1378 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Mol Model</journal-id>
+      <journal-title>Journal of Molecular Modeling</journal-title>
+      <issn pub-type="ppub">1610-2940</issn>
+      <issn pub-type="epub">0948-5023</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17828561</article-id>
+      <article-id pub-id-type="pmc">2039871</article-id>
+      <article-id pub-id-type="publisher-id">233</article-id>
+      <article-id pub-id-type="doi">10.1007/s00894-007-0233-4</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Optimization of parameters for semiempirical methods V: Modification of NDDO approximations and application to 70 elements</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Stewart</surname>
+            <given-names>James J. P.</given-names>
+          </name>
+          <address>
+            <phone>+1-719-4889416</phone>
+            <email>MrMOPAC@OpenMOPAC.net</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Stewart Computational Chemistry, 15210 Paddington Circle, Colorado Springs, CO 80921 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>9</day>
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>13</volume>
+      <issue>12</issue>
+      <fpage>1173</fpage>
+      <lpage>1213</lpage>
+      <history>
+        <date date-type="received">
+          <day>9</day>
+          <month>5</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>10</day>
+          <month>7</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Several modifications that have been made to the NDDO core-core interaction term and to the method of parameter optimization are described. These changes have resulted in a more complete parameter optimization, called PM6, which has, in turn, allowed 70 elements to be parameterized. The average unsigned error (AUE) between calculated and reference heats of formation for 4,492 species was 8.0&#xA0;kcal mol<sup>&#x2212;1</sup>. For the subset of 1,373 compounds involving only the elements H, C, N, O, F, P, S, Cl, and Br, the PM6 AUE was 4.4&#xA0;kcal mol<sup>&#x2212;1</sup>. The equivalent AUE for other methods were: RM1: 5.0, B3LYP 6&#x2013;31G*: 5.2, PM5: 5.7, PM3: 6.3, HF 6&#x2013;31G*: 7.4, and AM1: 10.0&#xA0;kcal mol<sup>&#x2212;1</sup>. Several long-standing faults in AM1 and PM3 have been corrected and significant improvements have been made in the prediction of geometries.</p>
+        <p>
+          <fig position="anchor" id="Figa">
+            <label>Figure</label>
+            <caption>
+              <p>Calculated structure of the complex ion [Ta<sub>6</sub>Cl<sub>12</sub>]<sup>2+</sup> (footnote): Reference value in parenthesis</p>
+            </caption>
+            <graphic position="anchor" xlink:href="894_2007_233_Figa_HTML" id="MO1"/>
+          </fig>
+        </p>
+        <sec>
+          <title>Electronic supplementary material</title>
+          <p>The online version of this article (doi:10.1007/s00894-007-0233-4) contains supplementary material, which is available to authorized users.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>NDDO</kwd>
+        <kwd>Parameterization</kwd>
+        <kwd>PM6</kwd>
+        <kwd>Transition metals</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Over the past 30 years, NDDO-type [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR2">2</xref>] semiempirical methods have evolved steadily. The earliest of these methods was MNDO [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR4">4</xref>], which itself was a major advance over even earlier non-NDDO methods such as MINDO/3 [<xref ref-type="bibr" rid="CR5">5</xref>]. The main advantage of MNDO over earlier methods was that the values of the parameters were optimized to reproduce molecular rather than atomic properties. When it first appeared, MNDO was immediately popular because of its increased accuracy, but, with the passage of time, various limitations were found, among the most important of which was the almost total absence of a hydrogen bond. As hydrogen bonding is essential to life, this particular fault essentially precluded MNDO being used in modeling biochemistry.</p>
+      <p>In 1985 an attempt, AM1 [<xref ref-type="bibr" rid="CR6">6</xref>], was made to improve MNDO by adding a stabilizing Gaussian function to the core-core interaction to represent the hydrogen bond. Despite the fact that this was an over-simplification of a very complicated phenomenon, the overall effect was similar, and for the first time NDDO methods gave a good, albeit limited, model of hydrogen bonding.</p>
+      <p>In the course of the next several years, improvements were made to the method of parameter optimization. The result of this was the PM3 method [<xref ref-type="bibr" rid="CR7">7</xref>&#x2013;<xref ref-type="bibr" rid="CR10">10</xref>], which culminated in the parameterization of all the elements in the main group in 2004 [<xref ref-type="bibr" rid="CR11">11</xref>]. At the same time, various changes to the original set of approximations used in MNDO were proposed, the most important of which were the addition of <italic>d</italic>-orbitals to main-group elements [<xref ref-type="bibr" rid="CR12">12</xref>, <xref ref-type="bibr" rid="CR13">13</xref>] and the introduction of diatomic parameters. Work started on the transition metals, and parameters for some of these have been reported [<xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR15">15</xref>]. More recently, parameter sets tailored to reproduce specific phenomena such as the binding energy of nucleic acid base pairs [<xref ref-type="bibr" rid="CR16">16</xref>], iron complex catalyzed hydrogen abstraction [<xref ref-type="bibr" rid="CR17">17</xref>], phosphatase-catalyzed reaction barriers [<xref ref-type="bibr" rid="CR18">18</xref>], and the redox properties of iron containing proteins [<xref ref-type="bibr" rid="CR19">19</xref>] have been developed.</p>
+      <p>Because of the way advances in NDDO developments occurred, in terms of the modifications of the approximations and the extensions to specific elements or groups of elements, there has been an inevitable lack of consistency. The aim of the current work was three-fold: to investigate the incorporation of some of the reported modifications to the core-core approximations into the NDDO methodology; to carry out a systematic global parameter optimization of all the main group elements, with emphasis on compounds of interest in biochemistry; and to extend the methodology by performing a restricted optimization of parameters for the transition metals. This resulted in the development of a new method, consisting of the final set of approximations used and the optimized parameters. This method will be referred to as parametric method number 6, or PM6. The name PM6 was chosen to avoid any confusion with two other unpublished methods, PM4 and PM5.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Theory</title>
+      <p>Despite the apparent complexity of semiempirical methods, there are only three possible sources of error: reference data may be inaccurate or inadequate, the set of approximations may include unrealistic assumptions or be too inflexible, and the parameter optimization process may be incomplete. In order for a method to be accurate, all three potential sources of error must be carefully examined, and, where faults are found, appropriate corrective action taken.</p>
+      <sec id="Sec3">
+        <title>Reference data</title>
+        <p>In contrast to earlier methods, in which reference data was assembled by painstakingly searching the original literature, the current work relies heavily on the large compendia of data that have been developed in recent years. The most important of these are the WebBook [<xref ref-type="bibr" rid="CR20">20</xref>], for thermochemistry, and the Cambridge Structural Database [<xref ref-type="bibr" rid="CR21">21</xref>] (CSD), for molecular geometries.</p>
+        <p>During the early stages of the current work, consistency checks were performed to ensure that erroneous data were not used. These checks revealed many cases in which the calculated heats of formation were inconsistent with the reference heats of formation reported in the NIST database. On further checking, many of these reference data were also found [<xref ref-type="bibr" rid="CR22">22</xref>, <xref ref-type="bibr" rid="CR23">23</xref>] to be inconsistent with other data in the WebBook. In those cases where there was strong evidence of error in the reference data, the offending data were deleted, and the webbook updated [<xref ref-type="bibr" rid="CR24">24</xref>].</p>
+        <p>For molecular geometries, gas phase reference data are preferred, but in many instances such data were unavailable, and recourse was made to condensed-phase data. Provided that care was taken to exclude those species whose geometries were likely to be significantly distorted by crystal forces, or which carried a large formal charge, condensed-phase data of the type found in the CSD were regarded as being suitable as reference data.</p>
+        <p>Because earlier methods used only a limited number of reference data, most of the cases where the method gave bad results were not discovered until after the method was published. In an attempt to minimize the occurrence of such unpleasant surprises, the set of reference data used was made as large as practical. To this end, where there was a dearth or even a complete absence of experimental reference data, recourse was made to high level calculations. Thus, for the Group VIII elements, there are relatively few stable compounds, and the main phenomena of interest involve rare gas atoms colliding with other atoms or molecules, so reference data representing the mechanics of rare gas atoms colliding with other atoms was generated from the results of ab-initio calculations. Additionally, there is an almost complete lack of thermochemical data for many types of complexes involving transition metals, so augmenting what little data there was with the results of ab-initio calculations was essential.</p>
+        <sec id="Sec4">
+          <title>Use of Ab-Initio results</title>
+          <p>Ab-initio calculations provide a convenient source of reference data; for this work, extensive use has been made of results of Hartree Fock and B3LYP density functional [<xref ref-type="bibr" rid="CR25">25</xref>, <xref ref-type="bibr" rid="CR26">26</xref>] methods (DFT), both with the 6&#x2013;31G(d) basis set for elements in the periodic table up to argon. For systems involving heavier elements, the B88&#x2013;PW91 functional [<xref ref-type="bibr" rid="CR27">27</xref>, <xref ref-type="bibr" rid="CR28">28</xref>] was used with the DZVP basis set. Within the spectrum of ab-initio methods these methods are not particularly accurate; many methods with larger basis sets and with post-Hartree-Fock corrections are more accurate. However, the methods used in this work were chosen because they were regarded as robust, practical methods, allowing many systems to be modeled in a reasonable amount of time, a condition that could not be achieved with the more sophisticated ab-initio methods.</p>
+        </sec>
+        <sec id="Sec5">
+          <title>Procedure used in deriving &#x394;H<sub>f</sub></title>
+          <p>Reference heats of formation, &#x394;H<sub>f</sub>, for compounds and ions of elements for which there was a paucity of data were derived from DFT total energies in two stages. In the first stage, a basic set of &#x223C;1,400 well-behaved compounds, for which reliable reference values of experimental &#x394;H<sub>f</sub> were available, was assembled. Only compounds containing one or more of the elements H, C, N, O, F, P, S, Cl, Br, and I were used. For this set, a root-mean-square fit was made to the reference &#x394;H<sub>f</sub> using the calculated total energies, <italic>E</italic><sub>tot</sub> and the atom counts. Thus, the error function, <italic>S</italic>, in Eq.&#xA0;(<xref rid="Equ1" ref-type="">1</xref>) was minimized.
+<disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ S = {\sum\limits_j {{\left( {\Delta H_{j} {\left( {\operatorname{Re} {\text{f}}{\text{.}}} \right)} - 627.51{\left( {E_{{{\text{Tot}}}}  + {\sum\limits_i {C_{i} n_{i} } }} \right)}} \right)}^{2}_{j} } }$$\end{document}</tex-math></disp-formula>In this expression, the <italic>C</italic><sub><italic>i</italic></sub> are constants for each atom of type <italic>i</italic>, and the <italic>n</italic><sub><italic>i</italic></sub> are the number of atoms of that type.</p>
+          <p>In the second stage, the contribution to the total energy of compounds containing element X arising from the elements in the first stage was removed using the coefficients from Equation (<xref rid="Equ1" ref-type="">1</xref>). A second RMS fit was then performed. In this, the function minimized, <italic>S</italic>, was the RMS difference between the reference &#x394;H<sub>f</sub> of compound X and the values predicted from the DFT energy, Eq.&#xA0;(<xref rid="Equ2" ref-type="">2</xref>).
+<disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$S = {\sum\limits_j {{\left( {\Delta H_{j} {\left( {\operatorname{Re} {\text{f}}{\text{.}}} \right)} - 627.51{\left( {E_{{{\text{Tot}}}}  + {\sum\limits_i {C_{i} n_{i} } } + C_{x} n_{x} } \right)}} \right)}^{2}_{j} } }$$\end{document}</tex-math></disp-formula>In this expression, the only unknown is the multiplier coefficient <italic>C</italic><sub><italic>x</italic></sub>. After solving for <italic>C</italic><sub><italic>x</italic></sub>, the &#x394;H<sub>f</sub> of any compound of X could then be predicted as soon as its DFT total energy was evaluated.</p>
+        </sec>
+      </sec>
+      <sec id="Sec6">
+        <title>Training set reference data</title>
+        <p>The training set of reference data used was considerably larger than that used in parameterizing PM3 [<xref ref-type="bibr" rid="CR7">7</xref>, <xref ref-type="bibr" rid="CR8">8</xref>], where approximately 800 discrete species were used. In optimizing the parameters for PM6, somewhat over 9,000 separate species were used, of which about 7,500 were well-behaved stable molecules. The remainder consisted of reference data that were tailored to help define the values of individual parameters or sets of parameters.</p>
+        <sec id="Sec7">
+          <title>Use of rules in parameter optimization</title>
+          <p>Most reference data can be expressed as simple facts. Indeed, all the earlier NDDO methods were parameterized using precisely four types of reference data: &#x394;H<sub>f</sub>, molecular geometries, dipole moments, and ionization potentials. During the development of PM6, however, the use of other types of reference data was found to be necessary. Because of their behavior, these new data are best described as &#x201C;rules.&#x201D; In this context, a rule can therefore be regarded as a reference datum that is a function of one or more other data. To illustrate the use of a rule, consider the binding energy of a hydrogen bond in the water dimer. By default, the weighting factor for &#x394;H<sub>f</sub> for normal compounds is 1.0&#xA0;kcal mol<sup>&#x2212;1</sup>. With this weighting factor, average unsigned errors in the predicted &#x394;H<sub>f</sub> of the order of 3&#x2013;5&#xA0;kcal mol<sup>&#x2212;1</sup> would be acceptable, particularly as the spectrum of values of &#x394;H<sub>f</sub> spans several hundreds of kilocalories per mole. However, the binding energy of a hydrogen bond in a water dimer is only 5&#xA0;kcal mol<sup>&#x2212;1</sup>. To have an average unsigned error (AUE) of 4&#xA0;kcal mol<sup>&#x2212;1</sup> in the prediction of hydrogen bond energies would render such a method almost useless for modeling such phenomena.</p>
+          <p>One way to increase the importance of the hydrogen bond in water would be to increase the weight for the &#x394;H<sub>f</sub> of the water molecule, &#x2212;57.8&#xA0;kcal mol<sup>&#x2212;1</sup>, and the water dimer system, ca. &#x2212;120.6&#xA0;kcal mol<sup>&#x2212;1</sup>. While this would have the intended effect of increasing the weight of the hydrogen bond energy, it would also have the undesired effect of increasing the weight of the &#x394;H<sub>f</sub> of water.</p>
+          <p>An alternative would be to express the &#x394;H<sub>f</sub> of the water dimer in terms of the &#x394;H<sub>f</sub> of two individual water molecules. The difference between the two &#x394;H<sub>f</sub>, that of water dimer and that of two isolated water molecules, would be the energy of the hydrogen bond. If the weight assigned to this quantity were then increased, it would increase the weight for the hydrogen bond energy without also increasing the weight for the &#x394;H<sub>f</sub> of water. Such a reference datum is referred to here as a rule. That is, rules relate the &#x394;H<sub>f</sub> of a moiety to that of one or more other moieties. Thus, in the above example, the simple reference datum H, representing the &#x394;H<sub>f</sub> of an isolated water molecule, could be expressed as:
+<disp-formula id="Equa"><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\text{H}} =  - 57.8$$\end{document}</tex-math></disp-formula></p>
+          <p>Using a rule-based reference datum to represent the strength of the hydrogen bond, and giving a weight of 10 to the hydrogen bond energy, the &#x394;H<sub>f</sub> of the water dimer would then be defined as
+<disp-formula id="Equb"><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\text{H = 10}}{\left( {{\text{ - 5 + H}}_{{{\text{H2O}}}} {\text{ + H}}_{{{\text{H2O}}}} } \right)}$$\end{document}</tex-math></disp-formula></p>
+          <p>In this expression, H<sub>H2O</sub> was the calculated &#x394;H<sub>f</sub>, in kcal mol<sup>&#x2212;1</sup>, of an isolated water molecule. This rule could be interpreted as &#x201C;The calculated strength of the hydrogen bond formed when two water molecules form the dimer should be 5&#xA0;kcal mol<sup>&#x2212;1</sup>, and the importance should be 100 times that of ordinary heats of formation.&#x201D;</p>
+          <p>Rules are very useful in defining the parameter hypersurface. Examples of such tailoring are as follows:</p>
+        </sec>
+        <sec id="Sec8">
+          <title>Correcting qualitatively incorrect predictions</title>
+          <p>During the parameterization of transition metals, some systems were predicted to have qualitatively the wrong structure. For example, [Cu<sup>II</sup>Cl<sub>4</sub>]<sup>2&#x2212;</sup> was initially predicted to have a tetrahedral structure, instead of the D<sub>2d</sub> geometry observed. To induce the parameters to change so as to make the D<sub>2d</sub> geometry more stable than the T<sub>d</sub> geometry, a rule was added to the set of reference data for copper compounds. This rule was constructed using the results of B3LYP calculations on [Cu<sup>II</sup>Cl<sub>4</sub>]<sup>2&#x2212;</sup>. First, the total energies of the optimized B3LYP structure and that of the structure resulting from the semiempirical calculation were evaluated. The difference between these energies was then used in constructing the rule. In this case, the rule was that &#x201C;The &#x394;H<sub>f</sub> of the geometry predicted by the faulty semiempirical method should be <italic>n.n</italic> kcal mol<sup>&#x2212;1</sup> more than that of the B3LYP geometry.&#x201D; When such a rule was included in the parameter optimization, with an appropriate large weight, any tendency of the parameters to predict the incorrect geometry resulted in a large contribution to the error function. That is, with the new rule in place, there was a strong disincentive to prediction of the incorrect structure. Usually one rule was sufficient to correct most qualitative errors, but for a few complicated structures more than one rule was needed. The commonest need for multiple rules occurred when, initially, one rule was used to correct a faulty prediction and, after re-optimizing the parameters, the geometry optimized to a new structure that was distinctly different from either the correct structure or the incorrect structure covered by the rule. When that happened, the procedure just described was repeated, and a new rule added to the set of reference data to address the new incorrect structure. In extreme cases, several such rules might be needed, each one defining a geometry that was incorrect and should therefore be avoided.</p>
+        </sec>
+        <sec id="Sec9">
+          <title>Rare gas atoms at sub-equilibrium distances</title>
+          <p>For some elements, specifically those of Group VIII, there is an understandable shortage of useful experimental reference data. In addition, most simulations involving these elements are likely to involve a rare-gas atom dynamically interacting with another atom or with a molecule at distances significantly less than the equilibrium distance. This makes determining the potential energy surface at sub-equilibrium distances important. As with hydrogen bond energies, the energies involved in this domain are likely to be in the order of a few kcal mol<sup>&#x2212;1</sup>. The shape of the potential energy surface (PES) can readily be mapped using DFT methods. By selecting two or three representative points on this PES, reference data rules can be constructed that describe the mechanical properties of the interactions. As with hydrogen bonding, a large weight can be assigned to these rules.</p>
+        </sec>
+        <sec id="Sec10">
+          <title>Use of rules to restrain parameter values</title>
+          <p>In general, uncharged atoms that are separated by a distance sufficiently large so that all overlaps between orbitals on the two atoms are vanishingly small will not interact significantly, and what interaction energy exists would arise from VDW terms: of their nature, these are mildly stabilizing. Although statements of this type are obviously true, when they are expressed as rules and added to the training set of reference data they can help define the parameter values. For a pair of atoms, A and B, a simple diatomic system would be constructed in which the interatomic separation was the minimum distance at which any overlaps of the atomic orbitals would still be insignificant. The electronic state of such a system would then be the sum of the states of the two isolated atoms. Thus, if both A and B were silicon, then, since the ground state of an isolated silicon atom is a triplet, the combined state would be a quintet. Because the two atoms do not interact significantly, a rule could then be constructed that said &#x201C;The energy of the diatomic system is equal to the addition of energies of the two individual systems.&#x201D; By giving this rule a large weight, any tendency of the method to generate a spurious attraction or repulsion between the atoms would be prevented.</p>
+        </sec>
+        <sec id="Sec11">
+          <title>Atomic energy levels</title>
+          <p>In keeping with the philosophy that a large amount of reference data should be used in the parameter optimization, spin-free atomic energy levels were used for most elements. The exceptions were carbon, nitrogen, and oxygen, where there were enough conventional reference data that the addition of atomic energy levels would not significantly improve the definition of the parameter surface.</p>
+          <p>NDDO approximations do not allow for spin-orbit coupling. Therefore, spin-free levels were needed. For a few elements, there were insufficient spin states to allow the spin-free energy levels to be calculated. For all the remaining elements, spin-free energy levels were calculated.</p>
+          <p>In Moore&#x2019;s compendia [<xref ref-type="bibr" rid="CR29">29</xref>&#x2013;<xref ref-type="bibr" rid="CR31">31</xref>] of atomic energy levels, observed emission spectra were used in determining the energy levels of the various states of neutral and ionized atoms. Most of these energy levels were characterized by three quantum numbers: the spin and orbital angular momenta, and the &#x201C;J&#x201D; or spin-orbit quantum number. The starting point for determining the spin-free atomic energy levels for a given element consisted of identifying each complete manifold of atomic energy levels for that element, that is, each set of levels split by spin-orbit coupling. If all members of the set were present, i.e., all energy levels from L+S to |L&#x2212;S|, then the weighted barycenter of energy could be calculated. The spin-free energy level, E, was derived from the spin-split levels <italic>E</italic>(<italic>S,L,J</italic>) using Eq.&#xA0;(<xref rid="Equ3" ref-type="">3</xref>).
+<disp-formula id="Equ3"><label>3</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ E = \frac{1} {{{\left( {2S + 1} \right)}{\left( {2L + 1} \right)}}}{\sum\limits_{J = {\left| {L - S} \right|}}^{L + S} {{\left( {2J + 1} \right)}E{\left( {S,L,J} \right)}} } $$\end{document}</tex-math></disp-formula></p>
+          <p>In those cases where the ground state of an atom was itself a member of a spin-split manifold, the barycenter of the ground state manifold was calculated and used in re-defining the spin-free ground state. For all elements except tungsten, this change in definition was benign. There is a <sup>7</sup>S<sub>3</sub> level present in tungsten that is located only 8.4&#xA0;kcal mol<sup>&#x2212;1</sup> above the ground state. This puts it inside the <sup>5</sup>D<sub>J</sub>, manifold, which has a barycenter at 12.7&#xA0;kcal mol<sup>&#x2212;1</sup>. The effect of this was that, on going from a spin-split to a spin-free ground state, the ground state changed from 6<italic>d</italic><sup>2</sup>5<italic>d</italic><sup>4</sup> or <sup>5</sup>D to 6<italic>d</italic><sup>1</sup>5<italic>d</italic><sup>5</sup> or <sup>7</sup>S, and the <sup>5</sup>D state now became an excited state with an energy of 4.4&#xA0;kcal mol<sup>&#x2212;1</sup>. To allow for this, a corresponding change was made to the ground state configuration in the PM6 definition of tungsten.</p>
+          <p>Where there were relatively few other reference data, the singly-ionized, and, in rare cases, the doubly-ionized, spin-free states were also evaluated and used as reference data.</p>
+          <p>Each energy level contributed one reference datum to the training set. Most atoms have a large number of atomic energy levels, so in order to minimize the probability that a level might be incorrectly assigned, each level was labeled with three quantum numbers: the total spin momentum, the total angular momentum, and the principal quantum number for these two quantum numbers. These were compared with the corresponding values calculated from the state functions. Since each set of three quantum numbers is unique, the potential for miss-assignment was minimized. In rare cases, particularly during the early stages of parameter optimization, two states with the same total spin and angular quantum numbers would be interchanged, with the result that the calculated principal quantum number would also be interchanged. All such cases always involved the ground state, and were quickly identified and corrected.</p>
+        </sec>
+      </sec>
+      <sec id="Sec12">
+        <title>Approximations</title>
+        <p>Most of the approximations used in PM6 are identical to those in AM1 and PM3. The differences are:</p>
+        <sec id="Sec13">
+          <title>Core-core interactions</title>
+          <p>In the original MNDO set of approximations, two changes were made to the simple point-charge expression for the core-core repulsion term. Beyond about five &#xC5;ngstroms, there should be no significant interaction of two neutral atoms. However, in MNDO, the two-electron, two-center <inline-formula id="IEq1"><!-- Alternate image not processed: 894_2007_233_Article_IEq1.gif --><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\left\langle {\left. {s_{A} s_{A} } \right|\left. {s_{B} s_{B} } \right\rangle } \right.$$\end{document}</tex-math></inline-formula> integrals and the electron-core interactions do not converge to the exact point charge expression; instead, they are always slightly smaller. To prevent there being a small net repulsion between two uncharged atoms, the core-core expression is modified by the exact 1/R<sub>AB</sub> term being replaced by the term used in the <inline-formula id="IEq2"><!-- Alternate image not processed: 894_2007_233_Article_IEq2.gif --><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\left\langle {\left. {s_{A} s_{A} } \right|\left. {s_{B} s_{B} } \right\rangle } \right.$$\end{document}</tex-math></inline-formula> integrals. An additional term is needed to represent the increased core-core repulsion at small distances due to the unpolarizable core. These two changes can be expressed as the MNDO core-core repulsion term as shown in Eq.&#xA0;(<xref rid="Equ4" ref-type="">4</xref>).
+<disp-formula id="Equ4"><label>4</label><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|\left. {s_{B} s_{B} } \right\rangle } \right.{\left( {1 + e^{{ - \alpha _{A} R_{{AB}} }}  + e^{{ - \alpha _{B} R_{{AB}} }} } \right)}$$\end{document}</tex-math></disp-formula></p>
+          <p>This approximation works well for most main-group elements, but when molybdenum was being parameterized, Voityuk [<xref ref-type="bibr" rid="CR14">14</xref>] found that the errors in heats of formation and geometries were unacceptably large, and good results were achieved only when a diatomic term was added to the core-core approximation, as shown in Eq.&#xA0;(<xref rid="Equ5" ref-type="">5</xref>).
+<disp-formula id="Equ5"><label>5</label><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|\left. {s_{B} s_{B} } \right\rangle } \right.{\left( {1 + x_{{AB}} e^{{ - \alpha _{{AB}} R_{{AB}} }} } \right)}$$\end{document}</tex-math></disp-formula></p>
+          <p>When PM3 parameters for elements of Groups IA were being optimized, the MNDO approximation to the core-core expression was found to be unsuitable. In these elements there is only one valence electron so the core charge is the same as that of hydrogen. A consequence of this was that the apparent size of these elements was also approximately that of a hydrogen atom, in marked contrast with observation. For these elements, diatomic core-core parameters were also found to be essential.</p>
+          <p>Further examination showed that when diatomic parameters were used, there was always an increase in accuracy; therefore, in the current work, Eq.&#xA0;(<xref rid="Equ4" ref-type="">4</xref>) was replaced systematically by Eq.&#xA0;(<xref rid="Equ5" ref-type="">5</xref>).</p>
+          <p>As the interatomic separation increased, Voityuk&#x2019;s equation converged to the exact point-charge interaction, as expected. However, for rare gas interactions, an increase in accuracy was found when the rate of convergence was increased by the addition of a small perturbation. Subsequently, the perturbed function was found to be generally beneficial. Because of this, the general form of the core-core interaction used in PM6 is that given in Eq.&#xA0;(<xref rid="Equ6" ref-type="">6</xref>).
+<disp-formula id="Equ6"><label>6</label><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|\left. {s_{B} s_{B} } \right\rangle } \right.{\left( {1 + x_{{AB}} e^{{ - \alpha _{{AB}} {\left( {R_{{AB}}  + 0.0003R^{6}_{{AB}} } \right)}}} } \right)}$$\end{document}</tex-math></disp-formula></p>
+          <p>At normal chemical bonding distances, Eqs.&#xA0;(<xref rid="Equ5" ref-type="">5</xref>) and (<xref rid="Equ6" ref-type="">6</xref>) have essentially similar behavior, but at distances of greater than about 3&#xA0;&#xC5; the effect of the perturbation is to make the PM6 function significantly smaller than the Voityuk approximation.</p>
+        </sec>
+        <sec id="Sec14">
+          <title><italic>d</italic>-orbitals on main-group elements</title>
+          <p>Thiel and Voityuk have shown [<xref ref-type="bibr" rid="CR13">13</xref>] that a large increase in accuracy results when <italic>d</italic>-orbitals are added to main-group elements that have the potential to be hypervalent. During preliminary stages of this work, <italic>d</italic>-orbitals were excluded from main-group elements, and the parameters were optimized. This work was then repeated but with <italic>d</italic>-orbitals on various main-group elements. The results were in accordance with Thiel&#x2019;s observation: the accuracy of the method increased significantly. Because of this, <italic>d-</italic>orbitals were added to several main-group elements: the value of the increased accuracy far outweighs the extra computational cost.</p>
+          <p>The effect of the addition of <italic>d</italic>-orbitals was fundamentally different between main-group elements and transition metals. For main-group elements, the effect of <italic>d</italic>-orbitals is merely a perturbation: to a large degree the chemistry of these elements is determined by the <italic>s</italic> and <italic>p</italic> atomic orbitals. This is not the case with transition metals, where the <italic>d</italic>-orbitals are of paramount importance and the <italic>s</italic> and <italic>p</italic> orbitals are of only very minor significance. In recognition of the importance of the <italic>s</italic> and <italic>p</italic> shells in main-group chemistry, specific parameters are used for the five one-center two-electron integrals. Conversely, for the transition metals, the values of these integrals are derived directly from the internal orbital exponents.</p>
+        </sec>
+        <sec id="Sec15">
+          <title>Unpolarizable core</title>
+          <p>As noted earlier, the NDDO core-core interaction is a function of the number of valence electrons. For elements on the left of the periodic table these numbers are small and can cause the elements to appear to be too small. This was part of the rationale behind the adoption of Voityuk&#x2019;s diatomic core-core parameters. However, even the Voityuk approximation failed during parameter optimization when, in rare cases, a pair of atoms would approach each other very closely. Examination of these catastrophes indicated that the cause was the complete neglect of the unpolarizable core of the atoms involved. To allow for its presence, the core-core interaction for all element pairs was modified by the addition of a simple function, <italic>f</italic><sub><italic>AB</italic></sub>, based on the first term of the Lennard-Jones potential [<xref ref-type="bibr" rid="CR32">32</xref>]. A candidate function was constructed, Eq.&#xA0;(<xref rid="Equ7" ref-type="">7</xref>), using the fact that, to a first approximation, the size of an atom increases as the third power of its atomic number.
+<disp-formula id="Equ7"><label>7</label><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ f_{{AB}}  = c{\left( {\frac{{{\left( {Z^{{\raise0.7ex\hbox{$1$} \!\mathord{\left/  {\vphantom {1 3}}\right.\kern-\nulldelimiterspace} \!\lower0.7ex\hbox{$3$}}}_{A}  + Z^{{\raise0.7ex\hbox{$1$} \!\mathord{\left/  {\vphantom {1 3}}\right.\kern-\nulldelimiterspace} \!\lower0.7ex\hbox{$3$}}}_{B} } \right)}}} {{R_{{AB}} }}} \right)}^{{12}}  $$\end{document}</tex-math></disp-formula></p>
+          <p>The value of <italic>c</italic> was set to 10<sup>&#x2212;8</sup>, this being the best compromise between the requirements that the function should have a vanishingly small value at normal chemical distances. That is, under normal conditions the value of the function should be negligible, and at small interatomic separations the function should be highly repulsive, i.e., that it should represent the unpolarizable core.</p>
+        </sec>
+        <sec id="Sec16">
+          <title>Individual core-core corrections</title>
+          <p>For a small number of diatomic interactions, the general expression for the core-core interaction was modified in order to correct a specific fault. Because it is desirable to keep the methodology as simple as possible, modifications of the approximations were made only after determining that the existing approximations were inadequate. The diatomic specific modifications were:</p>
+        </sec>
+        <sec id="Sec17">
+          <title>O&#x2013;H and N&#x2013;H</title>
+          <p>In the original MNDO formalism, the general core-core interaction, Eq.&#xA0;(<xref rid="Equ4" ref-type="">4</xref>), was replaced in the cases of O&#x2013;H and N&#x2013;H pairs with Eq.&#xA0;(<xref rid="Equ8" ref-type="">8</xref>).
+<disp-formula id="Equ8"><label>8</label><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|} \right.\left. {s_{B} s_{B} } \right\rangle {\left( {1 + R_{{AB}} e^{{ - \alpha _{A} R_{{AB}} }}  + R_{{AB}} e^{{ - \alpha _{B} R_{{AB}} }} } \right)}$$\end{document}</tex-math></disp-formula></p>
+          <p>An unintended effect of this change was that at distances where hydrogen-bonding interactions are important, the diatomic contribution to the &#x394;H<sub>f</sub> is greater than if the general approximation, Eq.&#xA0;(<xref rid="Equ4" ref-type="">4</xref>), had been used. This contributed to a reduced hydrogen-bonding interaction in MNDO, and was a contributor to the need for modified core-core interactions in AM1 and PM3.</p>
+          <p>In PM6, the MNDO core-core approximation is replaced by Voityuk&#x2019;s diatomic expression, but even with that modification, the resulting hydrogen bond interaction energy was too small. In an attempt to increase it, the Voityuk approximation was replaced by Eq.&#xA0;(<xref rid="Equ9" ref-type="">9</xref>).
+<disp-formula id="Equ9"><label>9</label><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|\left. {s_{B} s_{B} } \right\rangle } \right.{\left( {1 + x_{{AB}} e^{{ - \alpha _{{AB}} R^{2}_{{AB}} }} } \right)}$$\end{document}</tex-math></disp-formula></p>
+          <p>At normal O&#x2013;H and N&#x2013;H separations, approximately 1&#xA0;&#xC5;, Eqs.&#xA0;(<xref rid="Equ5" ref-type="">5</xref>) and (<xref rid="Equ9" ref-type="">9</xref>) have similar values, but at hydrogen bonding distances, &#x223C;2&#xA0;&#xC5;, the contribution arising from the exponential term is significantly reduced, resulting in a corresponding increased hydrogen bond interaction energy.</p>
+        </sec>
+        <sec id="Sec18">
+          <title>C&#x2013;C</title>
+          <p>After optimizing all parameters, it was found that compounds containing yne groups, -C&#x2261;C-, were predicted to be too stable by about 10&#xA0;kcal mol<sup>&#x2212;1</sup> per yne group. This error was unique to compounds with extremely short C&#x2013;C distances, and in light of the increased emphasis on accurately reproducing the properties of organic compounds, the C&#x2013;C core-core term was perturbed by the addition of a repulsive term. This term was optimized to correct the error in the yne groups and to have a negligible effect on all other C&#x2013;C interactions. The optimized form of the C&#x2013;C core-core interaction is given in Eq.&#xA0;(<xref rid="Equ10" ref-type="">10</xref>).
+<disp-formula id="Equ10"><label>10</label><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|} \right.\left. {s_{B} s_{B} } \right\rangle {\left( {1 + x_{{AB}} e^{{ - \alpha _{{AB}} {\left( {R_{{AB}}  + 0.0003R^{6}_{{AB}} } \right)}}}  + 9.28e^{{ - 5.98R_{{AB}} }} } \right)}$$\end{document}</tex-math></disp-formula></p>
+        </sec>
+        <sec id="Sec19">
+          <title>Si&#x2013;O</title>
+          <p>During testing of PM6, neutral silicate layers of the type found in talc, H<sub>2</sub>Mg<sub>3</sub>Si<sub>4</sub>O<sub>12</sub>, were found to be slightly repulsive instead of being slightly bound. An attempt was made to correct for this error by adding a weak perturbation to the Si&#x2013;O interaction, illustrated by Eq.&#xA0;(<xref rid="Equ11" ref-type="">11</xref>).
+<disp-formula id="Equ11"><label>11</label><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$E_{n} {\left( {A,B} \right)} = Z_{A} Z_{B} \left\langle {\left. {s_{A} s_{A} } \right|} \right.\left. {s_{B} s_{B} } \right\rangle {\left( {1 + x_{{AB}} e^{{ - \alpha _{{AB}} {\left( {R_{{AB}}  + 0.0003R^{6}_{{AB}} } \right)}}}  - 0.0007e^{{ - {\left( {R_{{AB}}  - 2.9} \right)}^{2} }} } \right)}$$\end{document}</tex-math></disp-formula></p>
+        </sec>
+        <sec id="Sec20">
+          <title>Nitrogen <italic>sp</italic><sup>2</sup> pyramidalization</title>
+          <p>Although PM6 predicted the degree of pyramidalization of primary amines correctly, it overestimated the pyramidalization of secondary and tertiary amines. The degree of pyramidalization of these amines was decreased by adding a function to make the calculated &#x394;H<sub>f</sub> more negative as the nitrogen became more planar, as shown in Eq.&#xA0;(<xref rid="Equ12" ref-type="">12</xref>).
+<disp-formula id="Equ12"><label>12</label><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \Delta {H}\ifmmode{'}\else$'$\fi_{f}  = \Delta H_{f}  - 0.5e^{{ - 10\phi }}  $$\end{document}</tex-math></disp-formula></p>
+          <p>In this equation, the angle <italic>&#x3D5;</italic> is a measure of the non-planarity of the nitrogen environment, and is given by 2&#x3C0; minus the sum of the three contained angles about the nitrogen atom. For planar <italic>sp</italic><sup>2</sup> secondary and tertiary amines, this correction amounted to 0.5&#xA0;kcal mol<sup>&#x2212;1</sup> per nitrogen atom.</p>
+        </sec>
+        <sec id="Sec21">
+          <title>More elements</title>
+          <p>The NDDO basis sets of many of the elements parameterized in PM6 have not previously been described. For all elements except hydrogen, which has only an <italic>s</italic> orbital, the basis set consists of an <italic>s</italic> orbital, three <italic>p</italic> orbitals, and, for most elements, a set of five <italic>d</italic> orbitals. Slater atomic orbitals are used exclusively; these are of form:
+<disp-formula id="Equc"><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varphi  = \frac{{{\left( {2\xi } \right)}^{{n + \raise0.7ex\hbox{$1$} \!\mathord{\left/  {\vphantom {1 2}}\right.\kern-\nulldelimiterspace} \!\lower0.7ex\hbox{$2$}}} }} {{{\left( {{\left( {2n} \right)}!} \right)}^{{\raise0.7ex\hbox{$1$} \!\mathord{\left/  {\vphantom {1 2}}\right.\kern-\nulldelimiterspace} \!\lower0.7ex\hbox{$2$}}} }}r^{{n - 1}} e^{{ - \xi r}} Y^{m}_{l} {\left( {\theta ,\phi } \right)} $$\end{document}</tex-math></disp-formula></p>
+          <p>Where <italic>&#x3BE;</italic> is the orbital exponent, <italic>n</italic> is the principal quantum number (PQN), and the <italic>Y</italic><sub><italic>l</italic></sub><sup><italic>m</italic></sup>(<italic>&#x3B8;</italic>, <italic>&#x3D5;</italic>) are the normalized real spherical harmonics. The PQN are those of the valence shell, i.e., the set of atomic orbitals most important in forming chemical bonds. For PM6, the PQN used are shown in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. For most main-group elements, the <italic>s</italic> and <italic>p</italic> PQN are the same, and, when <italic>d</italic> orbitals are present, all three PQN are the same: that is, the PQN are (n<italic>s</italic>, n<italic>p</italic>, n<italic>d</italic>). For transition metals, the <italic>d</italic> PQN is one less than that of the <italic>s</italic> and <italic>p</italic> shells, i.e., (n<italic>s</italic>, n<italic>p</italic>, (n&#x2013;1)<italic>d</italic>). An exception to this generalization occurs in the elements of Group VIII. Here, the valence shell is completely filled, so in all chemical interactions that could occur between an atom of a Group VIII element and any other atom, electron density could only migrate from the Group VIII element to the other atom. That is, when a rare gas element forms any type of chemical bond it would necessarily become slightly positive. This is an unrealistic result. In order to allow rare gas atoms to have the potential of being slightly negative, the set of valence orbitals was changed from (n<italic>s</italic>, n<italic>p</italic>) to (n<italic>p</italic>, (n+1)<italic>s</italic>), for the elements Ne, Ar, Kr, and Xe. Helium is the only exception to this change, because it does not have a &#x201C;1<italic>p</italic>&#x201D; valence shell. For helium, the valence shell used was (1<italic>s</italic>, 2<italic>p</italic>), this being considered the best compromise.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Principal quantum numbers for atomic orbitals</p></caption><table frame="hsides" rules="groups"><thead><tr><th>&#xA0;</th><th>s</th><th>p</th><th>d</th><th>&#xA0;</th><th>s</th><th>p</th><th>d</th></tr></thead><tbody><tr><td>H</td><td>1</td><td/><td/><td>Kr</td><td>5</td><td>4</td><td/></tr><tr><td>He</td><td>1</td><td>2</td><td/><td>Rb</td><td>5</td><td>5</td><td/></tr><tr><td>Li</td><td>2</td><td>2</td><td/><td>Sr</td><td>5</td><td>5</td><td/></tr><tr><td>Be</td><td>2</td><td>2</td><td/><td>Y</td><td>5</td><td>5</td><td>4</td></tr><tr><td>B</td><td>2</td><td>2</td><td/><td>Zr</td><td>5</td><td>5</td><td>4</td></tr><tr><td>C</td><td>2</td><td>2</td><td/><td>Nb</td><td>5</td><td>5</td><td>4</td></tr><tr><td>N</td><td>2</td><td>2</td><td/><td>Mo</td><td>5</td><td>5</td><td>4</td></tr><tr><td>O</td><td>2</td><td>2</td><td/><td>Tc</td><td>5</td><td>5</td><td>4</td></tr><tr><td>F</td><td>2</td><td>2</td><td/><td>Ru</td><td>5</td><td>5</td><td>4</td></tr><tr><td>Ne</td><td>3</td><td>2</td><td/><td>Rh</td><td>5</td><td>5</td><td>4</td></tr><tr><td>Na</td><td>3</td><td>3</td><td/><td>Pd</td><td>5</td><td>5</td><td>4</td></tr><tr><td>Mg</td><td>3</td><td>3</td><td/><td>Ag</td><td>5</td><td>5</td><td>4</td></tr><tr><td>Al</td><td>3</td><td>3</td><td>3</td><td>Cd</td><td>5</td><td>5</td><td/></tr><tr><td>Si</td><td>3</td><td>3</td><td>3</td><td>In</td><td>5</td><td>5</td><td/></tr><tr><td>P</td><td>3</td><td>3</td><td>3</td><td>Sn</td><td>5</td><td>5</td><td/></tr><tr><td>S</td><td>3</td><td>3</td><td>3</td><td>Sb</td><td>5</td><td>5</td><td>5</td></tr><tr><td>Cl</td><td>3</td><td>3</td><td>3</td><td>Te</td><td>5</td><td>5</td><td>5</td></tr><tr><td>Ar</td><td>4</td><td>3</td><td/><td>I</td><td>5</td><td>5</td><td>5</td></tr><tr><td>K</td><td>4</td><td>4</td><td/><td>Xe</td><td>6</td><td>5</td><td/></tr><tr><td>Ca</td><td>4</td><td>4</td><td/><td>Cs</td><td>6</td><td>6</td><td/></tr><tr><td>Sc</td><td>4</td><td>4</td><td>3</td><td>Ba</td><td>6</td><td>6</td><td/></tr><tr><td>Ti</td><td>4</td><td>4</td><td>3</td><td>La</td><td>6</td><td>6</td><td>5</td></tr><tr><td>V</td><td>4</td><td>4</td><td>3</td><td>Lu</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Cr</td><td>4</td><td>4</td><td>3</td><td>Hf</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Mn</td><td>4</td><td>4</td><td>3</td><td>Ta</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Fe</td><td>4</td><td>4</td><td>3</td><td>W</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Co</td><td>4</td><td>4</td><td>3</td><td>Re</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Ni</td><td>4</td><td>4</td><td>3</td><td>Os</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Cu</td><td>4</td><td>4</td><td>3</td><td>Ir</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Zn</td><td>4</td><td>4</td><td/><td>Pt</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Ga</td><td>4</td><td>4</td><td/><td>Au</td><td>6</td><td>6</td><td>5</td></tr><tr><td>Ge</td><td>4</td><td>4</td><td/><td>Hg</td><td>6</td><td>6</td><td/></tr><tr><td>As</td><td>4</td><td>4</td><td>4</td><td>Tl</td><td>6</td><td>6</td><td/></tr><tr><td>Se</td><td>4</td><td>4</td><td>4</td><td>Pb</td><td>6</td><td>6</td><td/></tr><tr><td>Br</td><td>4</td><td>4</td><td>4</td><td>Bi</td><td>6</td><td>6</td><td/></tr></tbody></table></table-wrap></p>
+        </sec>
+      </sec>
+      <sec id="Sec22">
+        <title>Parameter optimization</title>
+        <sec id="Sec23">
+          <title>Background</title>
+          <p>The objective of parameter optimization is to modify the values of the parameters so as to minimize the error function, <italic>S</italic>, Eq.&#xA0;(<xref rid="Equ13" ref-type="">13</xref>), representing the square of the differences between the values of reference data, <italic>Q</italic><sub><italic>ref</italic></sub>(<italic>i</italic>), and the values calculated using the semiempirical method, <italic>Q</italic><sub><italic>calc</italic></sub>(<italic>i</italic>), with appropriate weighting factors, <italic>g</italic><sub><italic>i</italic></sub>.
+<disp-formula id="Equ13"><label>13</label><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$S = {\sum\limits_i {{\left( {g_{i} {\left( {Q_{{calc}} {\left( i \right)} - Q_{{ref}} {\left( i \right)}} \right)}} \right)}^{2} } }$$\end{document}</tex-math></disp-formula></p>
+          <p>This process is initiated by rendering the reference data in the training set dimensionless. The default conversion factors are given in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, with weighting factors for reference data represented by rules being much larger, typically in the order of 5&#x2013;20&#xA0;kcal mol<sup>&#x2212;1</sup>.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Default weighting factors for reference data</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Reference data</th><th>Weight</th></tr></thead><tbody><tr><td>&#x394;H<sub>f</sub></td><td>1.0&#xA0;mol.kcal<sup>&#x2212;1</sup></td></tr><tr><td>Bond length</td><td>0.7&#xA0;&#xC5;<sup>&#x2212;1</sup></td></tr><tr><td>Angle</td><td>0.7 degrees<sup>&#x2212;1</sup></td></tr><tr><td>Dipole</td><td>20 Debye<sup>&#x2212;1</sup></td></tr><tr><td>I.P.</td><td>10&#xA0;eV<sup>&#x2212;1</sup></td></tr><tr><td>Elements</td><td>Multiplier</td></tr><tr><td>Core</td><td>1.0</td></tr><tr><td>Organic</td><td>0.9</td></tr><tr><td>Main group</td><td>0.8</td></tr><tr><td>Transition metals</td><td>0.7</td></tr></tbody></table></table-wrap></p>
+          <p>The elements were divided into four sets: core elements, (H, C, N, and O), other elements important in organic chemistry (F, Na, P, S, Cl, K, Br, I), the rest of the main group, and the transitions metals. Elements were assigned to the different sets based on their presumed degree of importance in biochemistry, and this importance was converted into a weighting factor to be used in the parameterization optimization procedure. Reference data representing species consisting only of core elements were given their default weight. When other elements were present, the weight was set to the default weight times the smallest multiplier shown in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. Thus the default weight for a reference datum involving tetramethyllead, Pb(CH<sub>3</sub>)<sub>4</sub>, would be multiplied by 0.8 reflecting the fact that this species contains an element in the main group set.</p>
+          <p>For a given set of parameters, <bold><italic>P</italic></bold>, optimization proceeds by calculating the values of all the <italic>Q</italic><sub><italic>calc</italic></sub>(<italic>i</italic>), their first derivatives with respect to each parameter, <italic>P</italic>(<italic>j</italic>), and the second derivatives with respect to every pair of parameters. Evaluating these quantities is time-consuming, and considerable effort was expended in minimizing the need for explicit evaluation of these functions. The most efficient strategy developed [<xref ref-type="bibr" rid="CR7">7</xref>] involved assuming that, in the region of parameter space near to the current values of the parameters, the values of the first derivatives of the <italic>Q</italic><sub><italic>calc</italic></sub>(<italic>i</italic>) with respect to <bold><italic>P</italic></bold> were, at least to a first approximation, constant. By making this assumption the values of the parameters could then be updated using perturbation theory. Because the assumption is only valid in the region of the starting point in parameter space, periodically the focus was moved to the new point in parameter space and a complete explicit re-evaluations of all the functions performed. The parameter optimization process terminated when the scalar of the first derivatives dropped below a preset limit. This process was fully automated, and for given sets of reference data and parameters, parameter optimization could be performed rapidly, easily, and reliably.</p>
+        </sec>
+        <sec id="Sec24">
+          <title>Sequence of optimization of parameters</title>
+          <p>Notwithstanding the reliability of the parameter optimization procedure, a simple global optimization of all the parameters for all 70 elements involving about over 9,000 discrete species was found to be impractical because of the large number of derivatives involved. Such an optimization would involve over 2,000 parameters and over 10,000 reference data. The set of second derivatives alone would consist of 2&#xD7;10<sup>10</sup> terms. With more powerful computers, evaluating such large sets of derivatives might be practical some day, but even then, one faulty reference datum or one faulty initial parameter value would ruin an optimization run. The strategy of parameter optimization was approached with great caution, and the procedure finally adopted was as follows:</p>
+          <p>Because the elements H, C, N, and O are of paramount importance in biochemistry, and because large amounts of reference data are available, the starting point for parameter optimization involved the simultaneous optimization of parameters for these four elements. For the purposes of discussion, this set of four elements will be called the &#x201C;core elements&#x201D;.</p>
+          <p>Once stable parameters had been obtained, parameters for other elements important in organic chemistry were optimized in two stages. First, the parameters for the core elements were held constant, and parameters for the elements F, P, S, Cl, Br, and I were optimized one at a time. Then all parameters for all ten elements were simultaneously optimized. This set (the organic elements) was then used as the starting point for parameterizing the rest of the main group.</p>
+          <p>The same sequence was followed for the rest of the main-group elements. That is, parameters for each element were optimized while freezing the parameters for the organic elements. Then, once all the elements had been processed, all parameters for all of the 39 main-group elements, plus zinc, cadmium, and mercury, were optimized simultaneously.</p>
+          <p>When parameters for the transition metals were being optimized, all parameters for the main group elements were held constant. There were several reasons for this. Most importantly, the reference data for the transition metals, particularly the thermochemical data, was of lower quality, so one consideration was to prevent the transition metals from having a deleterious effect on the main-group elements. Another important consideration was that most compounds involving transition metals also involved only elements of the organic set. Since parameters for these elements had been optimized using a training set consisting of all the main-group elements, the values of the optimized parameters would likely be relatively insensitive to the influence of the small number of additional reference data involving transition metals.</p>
+          <p>In general, all parameters for a given element were optimized simultaneously; this was both efficient and convenient. In some optimizations, specifically those involving a new element, only sub-sets of parameters were used. Three main sub-sets were used:</p>
+        </sec>
+        <sec id="Sec25">
+          <title>Parameters that determine atomic electronic properties</title>
+          <p>For most elements, atomic energy levels are determined by six parameters: the one-electron one-center integrals U<sub>ss</sub>, U<sub>pp</sub>, U<sub>dd</sub>, and the internal orbital exponents &#x3B6;<sub>sn</sub>, &#x3B6;<sub>pn</sub> and &#x3B6;<sub>dn</sub>. If the heat of ionization and sufficient atomic energy level data were available, these quantities could be uniquely defined; there would be no need for the use of molecular reference data. These parameters were the first to be optimized whenever an optimization was started for an element that had not previously been parameterized</p>
+        </sec>
+        <sec id="Sec26">
+          <title>Parameters that determine molecular electronic properties</title>
+          <p>Two of the more important electronic molecular properties are the dipole moment, which indicates the degree of polarization within a molecule, and the ionization potential. These properties are determined primarily by 12 parameters: the six parameters that determine atomic electronic properties and six additional parameters: &#x3B2;<sub>s</sub>, &#x3B2;<sub>p</sub>, and &#x3B2;<sub>d</sub> and the Slater orbital exponents &#x3B6;<sub>s</sub>, &#x3B6;<sub>p</sub>, and &#x3B6;<sub>d</sub>. In the second stage of parameter optimization, the first six parameters were held constant at the values defined using atomic data and the second set optimized. During this operation, all geometries were fixed at their reference values.</p>
+        </sec>
+        <sec id="Sec27">
+          <title>Parameters that determine geometries</title>
+          <p>As soon as an initial optimized set of electronic parameters was available, the diatomic and other core-core parameters could be optimized. The most efficient process was to optimize these parameters initially without allowing the electronic parameters or the molecular geometries to optimize. If geometries were allowed to optimize, optimization of the core-core parameters would be slowed considerably, because of the tight dependency of the optimized geometries on the values of the core-core parameters, and vice versa.</p>
+          <p>As soon as all parameters had been optimized using fixed geometries, the geometries were allowed to relax and the parameters that determine geometry re-optimized. After that there would be three sets of incompletely optimized parameters: the six atomic electronic parameters, the six molecular electronic parameters and the core-core parameters. The only remaining operation was the simultaneous optimization of all the parameters. If the training set of reference data was insufficient to unambiguously define the values of all the parameters, then, at that stage, the potential existed for the parameters to become ill-defined. An example of this would be where there were too few atomic energy levels to allow all six parameters in the first set to be defined. To allow for this, a penalty function was added to each parameter. If the values of a parameter exceeded pre-defined limits, the error function <italic>S</italic> was incremented by a constant times the square of the excess. No penalty was applied if the value of a parameter was between the pre-defined limits; that is, no bias was applied to the numerical value of a parameter. During the early stages of simultaneous optimization of all the parameters for a given element the penalty function was used frequently. In the later stages the penalty function was invoked rarely, and then only when there was a distinct shortage of reference data.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="Sec28" sec-type="results">
+      <title>Results</title>
+      <sec id="Sec29">
+        <title>Parameters for PM6</title>
+        <p>PM6 atomic and diatomic parameters for the 70 elements are presented in Tables&#xA0;<xref rid="Tab3" ref-type="table">3</xref> and <xref rid="Tab4" ref-type="table">4</xref>, respectively. Not all elements have all parameters: where monatomic parameters are missing, the associated approximations were not used. For diatomic parameters, where an atom-pair is missing, no representatives of that type of bond were used.
+<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>PM6 parameters for 70 elements</p></caption><graphic xlink:href="894_2007_233_Tab1a_HTML" id="MO2"/></table-wrap><table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p>Diatomic core&#x2212;core parameters</p></caption><graphic xlink:href="894_2007_233_Tab2a_HTML" id="MO3"/></table-wrap></p>
+      </sec>
+      <sec id="Sec30">
+        <title>Accuracy</title>
+        <sec id="Sec31">
+          <title>Comparison with other semiempirical methods</title>
+          <p>Using the program MOPAC2007 [<xref ref-type="bibr" rid="CR33">33</xref>], an extensive comparison was made between the results obtained using PM6 and those from PM5, PM3, and AM1. This comparison was started by generating tables of reference data (that is, &#x394;H<sub>f</sub>, geometries, ionization potentials (I.P.s), and dipole moments) and differences between the calculated and reference values, using each of the four methods presented here. Because of their size they are provided in the supplementary material. To simplify navigating within the tables, all species are listed in the order of their empirical formula.</p>
+          <p>Average unsigned errors (AUE) for &#x394;H<sub>f</sub> for each element parameterized at the PM6 level are shown in Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>, together with AUE for PM5, PM3, and AM1. The number of data used in each average varies depending on the elements available in each method. AM1 boron [<xref ref-type="bibr" rid="CR34">34</xref>] uses a different core-core interaction expression from the other elements and was not used. AUE for bond-lengths are shown in Table&#xA0;<xref rid="Tab6" ref-type="table">6</xref>. In those cases where a calculated bond-length was very large, indicating that the bond had broken, the bond-length was not used in the analysis. If such data had been used, the resulting statistics would have been misleading. AUE for angles are shown in Table&#xA0;<xref rid="Tab7" ref-type="table">7</xref>. Errors in angles for many elements that form very ionic, i.e., labile, bonds are of less importance than errors involving elements that form strong covalent bonds. The angles subtended by such bonds are often determined largely by the electronic structure of the atom. Information on the accuracy of prediction of molecular electronic structure can also be inferred from the AUE of dipole moments, Table&#xA0;<xref rid="Tab8" ref-type="table">8</xref>, and ionization potentials, Table&#xA0;<xref rid="Tab9" ref-type="table">9</xref>.
+<table-wrap id="Tab5"><label>Table&#xA0;5</label><caption><p>Average unsigned errors in calculated heats of formation (kcal mol<sup>&#x2212;1</sup>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Element</th><th>PM6</th><th>No.</th><th>PM5</th><th>No.</th><th>PM3</th><th>No.</th><th>AM1</th><th>No.</th></tr></thead><tbody><tr><td>Hydrogen</td><td>7.29</td><td>3039</td><td>13.89</td><td>2340</td><td>17.09</td><td>2340</td><td>21.12</td><td>2270</td></tr><tr><td>Helium</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td></tr><tr><td>Lithium</td><td>7.98</td><td>83</td><td>15.31</td><td>83</td><td>18.02</td><td>83</td><td>18.84</td><td>82</td></tr><tr><td>Beryllium</td><td>5.92</td><td>34</td><td>29.06</td><td>34</td><td>29.58</td><td>34</td><td>18.51</td><td>34</td></tr><tr><td>Boron</td><td>6.44</td><td>122</td><td>10.81</td><td>120</td><td>11.84</td><td>120</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Carbon</td><td>7.31</td><td>2828</td><td>13.03</td><td>2155</td><td>15.06</td><td>2155</td><td>19.42</td><td>2123</td></tr><tr><td>Nitrogen</td><td>8.22</td><td>1067</td><td>16.45</td><td>761</td><td>20.96</td><td>761</td><td>24.23</td><td>744</td></tr><tr><td>Oxygen</td><td>8.42</td><td>1758</td><td>16.59</td><td>1243</td><td>20.13</td><td>1244</td><td>27.68</td><td>1229</td></tr><tr><td>Fluorine</td><td>8.49</td><td>497</td><td>22.31</td><td>350</td><td>21.25</td><td>350</td><td>37.40</td><td>334</td></tr><tr><td>Neon</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td></tr><tr><td>Sodium</td><td>5.72</td><td>40</td><td>8.57</td><td>39</td><td>9.47</td><td>39</td><td>10.77</td><td>38</td></tr><tr><td>Magnesium</td><td>9.84</td><td>66</td><td>12.07</td><td>66</td><td>17.94</td><td>66</td><td>18.71</td><td>66</td></tr><tr><td>Aluminum</td><td>7.61</td><td>75</td><td>17.49</td><td>75</td><td>19.15</td><td>75</td><td>18.99</td><td>75</td></tr><tr><td>Silicon</td><td>6.51</td><td>98</td><td>9.28</td><td>96</td><td>12.80</td><td>96</td><td>17.00</td><td>95</td></tr><tr><td>Phosphorus</td><td>8.20</td><td>110</td><td>16.01</td><td>98</td><td>17.36</td><td>98</td><td>20.06</td><td>95</td></tr><tr><td>Sulfur</td><td>8.81</td><td>427</td><td>15.40</td><td>330</td><td>18.44</td><td>330</td><td>26.38</td><td>323</td></tr><tr><td>Chlorine</td><td>8.28</td><td>670</td><td>16.69</td><td>390</td><td>18.71</td><td>390</td><td>23.06</td><td>383</td></tr><tr><td>Argon</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td></tr><tr><td>Potassium</td><td>6.53</td><td>43</td><td>12.33</td><td>42</td><td>9.36</td><td>42</td><td>28.38</td><td>41</td></tr><tr><td>Calcium</td><td>11.87</td><td>43</td><td>28.68</td><td>43</td><td>43.44</td><td>43</td><td>63.20</td><td>43</td></tr><tr><td>Scandium</td><td>10.33</td><td>52</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Titanium</td><td>10.20</td><td>85</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Vanadium</td><td>14.29</td><td>59</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Chromium</td><td>14.09</td><td>60</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Manganese</td><td>12.77</td><td>44</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iron</td><td>18.31</td><td>76</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cobalt</td><td>15.51</td><td>42</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Nickel</td><td>15.10</td><td>51</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Copper</td><td>13.00</td><td>47</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zinc</td><td>5.56</td><td>54</td><td>17.84</td><td>54</td><td>32.93</td><td>54</td><td>37.06</td><td>54</td></tr><tr><td>Gallium</td><td>7.51</td><td>47</td><td>29.12</td><td>47</td><td>37.58</td><td>47</td><td>46.87</td><td>47</td></tr><tr><td>Germanium</td><td>9.83</td><td>67</td><td>12.20</td><td>67</td><td>15.86</td><td>67</td><td>19.12</td><td>67</td></tr><tr><td>Arsenic</td><td>6.94</td><td>49</td><td>15.22</td><td>49</td><td>16.68</td><td>49</td><td>17.34</td><td>49</td></tr><tr><td>Selenium</td><td>4.40</td><td>25</td><td>39.58</td><td>25</td><td>39.71</td><td>25</td><td>32.00</td><td>25</td></tr><tr><td>Bromine</td><td>7.37</td><td>330</td><td>17.20</td><td>199</td><td>25.04</td><td>199</td><td>28.22</td><td>199</td></tr><tr><td>Krypton</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td></tr><tr><td>Rubidium</td><td>10.91</td><td>24</td><td>16.57</td><td>24</td><td>21.47</td><td>24</td><td>29.33</td><td>23</td></tr><tr><td>Strontium</td><td>7.72</td><td>38</td><td>52.46</td><td>38</td><td>103.16</td><td>38</td><td>57.21</td><td>38</td></tr><tr><td>Yttrium</td><td>13.28</td><td>51</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zirconium</td><td>11.18</td><td>46</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Niobium</td><td>8.57</td><td>51</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Molybdenum</td><td>13.41</td><td>70</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>35.77</td><td>69</td></tr><tr><td>Technetium</td><td>15.14</td><td>50</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Ruthenium</td><td>13.87</td><td>56</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhodium</td><td>20.92</td><td>32</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Palladium</td><td>11.65</td><td>47</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Silver</td><td>4.67</td><td>14</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cadmium</td><td>3.49</td><td>38</td><td>34.66</td><td>38</td><td>61.92</td><td>38</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Indium</td><td>7.33</td><td>54</td><td>31.53</td><td>54</td><td>29.83</td><td>54</td><td>32.16</td><td>54</td></tr><tr><td>Tin</td><td>7.14</td><td>77</td><td>16.83</td><td>77</td><td>17.10</td><td>77</td><td>20.21</td><td>77</td></tr><tr><td>Antimony</td><td>5.41</td><td>58</td><td>30.98</td><td>58</td><td>34.61</td><td>58</td><td>35.00</td><td>58</td></tr><tr><td>Tellurium</td><td>8.20</td><td>45</td><td>35.66</td><td>45</td><td>46.80</td><td>45</td><td>22.91</td><td>45</td></tr><tr><td>Iodine</td><td>7.23</td><td>279</td><td>23.77</td><td>176</td><td>25.90</td><td>176</td><td>36.55</td><td>175</td></tr><tr><td>Xenon</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td><td>0.00</td><td>1</td></tr><tr><td>Cesium</td><td>6.89</td><td>40</td><td>37.01</td><td>40</td><td>35.22</td><td>40</td><td>55.33</td><td>39</td></tr><tr><td>Barium</td><td>12.12</td><td>37</td><td>98.20</td><td>37</td><td>154.65</td><td>37</td><td>161.09</td><td>37</td></tr><tr><td>Lanthanum</td><td>10.37</td><td>37</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Lutetium</td><td>7.68</td><td>24</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Hafnium</td><td>8.52</td><td>37</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tantalum</td><td>14.37</td><td>36</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tungsten</td><td>7.38</td><td>28</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhenium</td><td>10.40</td><td>57</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Osmium</td><td>6.46</td><td>19</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iridium</td><td>10.21</td><td>25</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Platinum</td><td>11.61</td><td>77</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Gold</td><td>12.82</td><td>32</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Mercury</td><td>5.94</td><td>51</td><td>16.39</td><td>51</td><td>17.67</td><td>51</td><td>19.75</td><td>51</td></tr><tr><td>Thallium</td><td>10.42</td><td>44</td><td>32.63</td><td>44</td><td>73.96</td><td>45</td><td>73.18</td><td>45</td></tr><tr><td>Lead</td><td>7.92</td><td>44</td><td>18.08</td><td>44</td><td>14.18</td><td>44</td><td>16.71</td><td>44</td></tr><tr><td>Bismuth</td><td>7.74</td><td>53</td><td>99.88</td><td>53</td><td>28.95</td><td>53</td><td>119.23</td><td>53</td></tr></tbody></table></table-wrap><table-wrap id="Tab6"><label>Table&#xA0;6</label><caption><p>Average unsigned errors in bond lengths (&#xC5;)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Element</th><th>PM6</th><th>No.</th><th>PM5</th><th>No.</th><th>PM3</th><th>No.</th><th>AM1</th><th>No.</th></tr></thead><tbody><tr><td>Hydrogen</td><td>0.044</td><td>238</td><td>0.056</td><td>219</td><td>0.032</td><td>217</td><td>0.035</td><td>181</td></tr><tr><td>Helium</td><td>0.251</td><td>6</td><td>0.459</td><td>6</td><td>0.182</td><td>4</td><td>0.655</td><td>5</td></tr><tr><td>Lithium</td><td>0.175</td><td>111</td><td>0.191</td><td>110</td><td>0.167</td><td>110</td><td>0.171</td><td>105</td></tr><tr><td>Beryllium</td><td>0.076</td><td>42</td><td>0.131</td><td>42</td><td>0.067</td><td>42</td><td>0.085</td><td>42</td></tr><tr><td>Boron</td><td>0.027</td><td>116</td><td>0.043</td><td>116</td><td>0.066</td><td>122</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Carbon</td><td>0.057</td><td>1191</td><td>0.066</td><td>693</td><td>0.051</td><td>634</td><td>0.063</td><td>628</td></tr><tr><td>Nitrogen</td><td>0.090</td><td>663</td><td>0.145</td><td>309</td><td>0.124</td><td>259</td><td>0.163</td><td>253</td></tr><tr><td>Oxygen</td><td>0.095</td><td>1163</td><td>0.122</td><td>625</td><td>0.103</td><td>577</td><td>0.117</td><td>571</td></tr><tr><td>Fluorine</td><td>0.063</td><td>396</td><td>0.096</td><td>246</td><td>0.069</td><td>251</td><td>0.101</td><td>228</td></tr><tr><td>Neon</td><td>0.353</td><td>5</td><td>0.182</td><td>2</td><td>0.062</td><td>1</td><td>0.030</td><td>1</td></tr><tr><td>Sodium</td><td>0.229</td><td>33</td><td>0.200</td><td>33</td><td>0.208</td><td>30</td><td>0.140</td><td>29</td></tr><tr><td>Magnesium</td><td>0.089</td><td>106</td><td>0.067</td><td>106</td><td>0.167</td><td>105</td><td>0.073</td><td>106</td></tr><tr><td>Aluminium</td><td>0.045</td><td>77</td><td>0.120</td><td>72</td><td>0.098</td><td>70</td><td>0.138</td><td>70</td></tr><tr><td>Silicon</td><td>0.039</td><td>97</td><td>0.056</td><td>94</td><td>0.074</td><td>95</td><td>0.077</td><td>90</td></tr><tr><td>Phosphorus</td><td>0.039</td><td>141</td><td>0.078</td><td>92</td><td>0.073</td><td>92</td><td>0.083</td><td>87</td></tr><tr><td>Sulfur</td><td>0.094</td><td>359</td><td>0.107</td><td>216</td><td>0.091</td><td>207</td><td>0.134</td><td>200</td></tr><tr><td>Chlorine</td><td>0.069</td><td>672</td><td>0.098</td><td>283</td><td>0.095</td><td>284</td><td>0.130</td><td>285</td></tr><tr><td>Argon</td><td>0.258</td><td>4</td><td>0.303</td><td>1</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Potassium</td><td>0.139</td><td>46</td><td>0.135</td><td>47</td><td>0.148</td><td>47</td><td>0.281</td><td>46</td></tr><tr><td>Calcium</td><td>0.133</td><td>67</td><td>0.177</td><td>69</td><td>0.151</td><td>67</td><td>0.102</td><td>60</td></tr><tr><td>Scandium</td><td>0.053</td><td>90</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Titanium</td><td>0.078</td><td>140</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Vanadium</td><td>0.090</td><td>168</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Chromium</td><td>0.080</td><td>89</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Manganese</td><td>0.083</td><td>107</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iron</td><td>0.102</td><td>117</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cobalt</td><td>0.107</td><td>100</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Nickel</td><td>0.065</td><td>133</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Copper</td><td>0.174</td><td>130</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zinc</td><td>0.076</td><td>77</td><td>0.084</td><td>77</td><td>0.098</td><td>77</td><td>0.142</td><td>76</td></tr><tr><td>Gallium</td><td>0.048</td><td>80</td><td>0.105</td><td>81</td><td>0.192</td><td>81</td><td>0.135</td><td>81</td></tr><tr><td>Germanium</td><td>0.038</td><td>131</td><td>0.045</td><td>131</td><td>0.056</td><td>133</td><td>0.068</td><td>133</td></tr><tr><td>Arsenic</td><td>0.073</td><td>72</td><td>0.069</td><td>70</td><td>0.080</td><td>72</td><td>0.099</td><td>72</td></tr><tr><td>Selenium</td><td>0.056</td><td>56</td><td>0.094</td><td>55</td><td>0.071</td><td>54</td><td>0.061</td><td>54</td></tr><tr><td>Bromine</td><td>0.104</td><td>358</td><td>0.106</td><td>184</td><td>0.146</td><td>182</td><td>0.136</td><td>184</td></tr><tr><td>Krypton</td><td>0.059</td><td>6</td><td>0.417</td><td>3</td><td>0.623</td><td>3</td><td>0.602</td><td>3</td></tr><tr><td>Rubidium</td><td>0.413</td><td>36</td><td>0.498</td><td>37</td><td>0.176</td><td>34</td><td>0.230</td><td>36</td></tr><tr><td>Strontium</td><td>0.087</td><td>56</td><td>0.199</td><td>55</td><td>0.128</td><td>32</td><td>0.242</td><td>47</td></tr><tr><td>Yttrium</td><td>0.132</td><td>69</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zirconium</td><td>0.063</td><td>65</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Niobium</td><td>0.060</td><td>88</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Molybdenum</td><td>0.104</td><td>89</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>0.095</td><td>84</td></tr><tr><td>Technetium</td><td>0.078</td><td>84</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Ruthenium</td><td>0.073</td><td>113</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhodium</td><td>0.162</td><td>68</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Palladium</td><td>0.080</td><td>120</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Silver</td><td>0.151</td><td>41</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cadmium</td><td>0.159</td><td>54</td><td>0.179</td><td>55</td><td>0.121</td><td>50</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Indium</td><td>0.039</td><td>77</td><td>0.085</td><td>77</td><td>0.155</td><td>77</td><td>0.102</td><td>77</td></tr><tr><td>Tin</td><td>0.073</td><td>96</td><td>0.065</td><td>96</td><td>0.078</td><td>96</td><td>0.087</td><td>94</td></tr><tr><td>Antimony</td><td>0.060</td><td>92</td><td>0.169</td><td>91</td><td>0.083</td><td>91</td><td>0.135</td><td>92</td></tr><tr><td>Tellurium</td><td>0.070</td><td>80</td><td>0.162</td><td>79</td><td>0.123</td><td>77</td><td>0.122</td><td>79</td></tr><tr><td>Iodine</td><td>0.144</td><td>286</td><td>0.137</td><td>147</td><td>0.146</td><td>145</td><td>0.175</td><td>141</td></tr><tr><td>Xenon</td><td>0.620</td><td>8</td><td>0.584</td><td>4</td><td>0.472</td><td>2</td><td>0.793</td><td>6</td></tr><tr><td>Cesium</td><td>0.258</td><td>40</td><td>0.335</td><td>43</td><td>0.372</td><td>25</td><td>0.358</td><td>43</td></tr><tr><td>Barium</td><td>0.202</td><td>51</td><td>0.228</td><td>47</td><td>0.207</td><td>48</td><td>0.261</td><td>51</td></tr><tr><td>Lanthanum</td><td>0.253</td><td>47</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Lutetium</td><td>0.050</td><td>60</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Hafnium</td><td>0.071</td><td>42</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tantalum</td><td>0.074</td><td>59</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tungsten</td><td>0.141</td><td>57</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhenium</td><td>0.068</td><td>108</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Osmium</td><td>0.072</td><td>50</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iridium</td><td>0.169</td><td>71</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Platinum</td><td>0.057</td><td>140</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Gold</td><td>0.158</td><td>84</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Mercury</td><td>0.143</td><td>64</td><td>0.110</td><td>64</td><td>0.135</td><td>63</td><td>0.139</td><td>64</td></tr><tr><td>Thallium</td><td>0.202</td><td>59</td><td>0.248</td><td>55</td><td>0.208</td><td>45</td><td>0.268</td><td>43</td></tr><tr><td>Lead</td><td>0.140</td><td>53</td><td>0.167</td><td>53</td><td>0.121</td><td>53</td><td>0.125</td><td>51</td></tr><tr><td>Bismuth</td><td>0.142</td><td>81</td><td>0.616</td><td>75</td><td>0.225</td><td>82</td><td>0.682</td><td>75</td></tr></tbody></table></table-wrap><table-wrap id="Tab7"><label>Table&#xA0;7</label><caption><p>Average unsigned errors in bond angles (Degrees)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Element</th><th>PM6</th><th>No. in set</th><th>PM5</th><th>No. in set</th><th>PM3</th><th>No. in set</th><th>AM1</th><th>No. in set</th></tr></thead><tbody><tr><td>Lithium</td><td>7.79</td><td>28</td><td>6.82</td><td>28</td><td>3.53</td><td>28</td><td>9.48</td><td>28</td></tr><tr><td>Beryllium</td><td>6.61</td><td>14</td><td>6.44</td><td>14</td><td>6.94</td><td>14</td><td>5.98</td><td>14</td></tr><tr><td>Boron</td><td>3.27</td><td>31</td><td>4.41</td><td>31</td><td>4.61</td><td>31</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Carbon</td><td>2.50</td><td>134</td><td>2.79</td><td>134</td><td>2.75</td><td>131</td><td>2.25</td><td>131</td></tr><tr><td>Nitrogen</td><td>7.32</td><td>37</td><td>8.01</td><td>37</td><td>6.75</td><td>35</td><td>7.94</td><td>31</td></tr><tr><td>Oxygen</td><td>12.14</td><td>59</td><td>11.12</td><td>58</td><td>10.17</td><td>53</td><td>9.57</td><td>42</td></tr><tr><td>Fluorine</td><td>8.32</td><td>3</td><td>16.18</td><td>3</td><td>26.34</td><td>3</td><td>24.67</td><td>2</td></tr><tr><td>Sodium</td><td>21.00</td><td>4</td><td>2.87</td><td>4</td><td>3.43</td><td>4</td><td>5.32</td><td>4</td></tr><tr><td>Magnesium</td><td>8.44</td><td>24</td><td>7.28</td><td>24</td><td>14.23</td><td>24</td><td>7.10</td><td>24</td></tr><tr><td>Aluminum</td><td>4.05</td><td>20</td><td>5.26</td><td>20</td><td>7.21</td><td>19</td><td>4.33</td><td>19</td></tr><tr><td>Silicon</td><td>5.25</td><td>35</td><td>3.37</td><td>35</td><td>2.81</td><td>34</td><td>2.88</td><td>34</td></tr><tr><td>Phosphorus</td><td>3.24</td><td>35</td><td>4.40</td><td>35</td><td>6.01</td><td>35</td><td>5.07</td><td>35</td></tr><tr><td>Sulfur</td><td>5.23</td><td>46</td><td>5.64</td><td>45</td><td>5.42</td><td>41</td><td>5.05</td><td>41</td></tr><tr><td>Chlorine</td><td>3.65</td><td>5</td><td>19.47</td><td>5</td><td>10.31</td><td>5</td><td>14.80</td><td>5</td></tr><tr><td>Potassium</td><td>17.90</td><td>11</td><td>10.27</td><td>11</td><td>12.93</td><td>11</td><td>12.75</td><td>11</td></tr><tr><td>Calcium</td><td>14.99</td><td>16</td><td>11.35</td><td>16</td><td>16.81</td><td>16</td><td>18.06</td><td>15</td></tr><tr><td>Scandium</td><td>7.98</td><td>32</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Titanium</td><td>7.86</td><td>39</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Vanadium</td><td>7.46</td><td>44</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Chromium</td><td>3.77</td><td>19</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Manganese</td><td>6.02</td><td>26</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iron</td><td>11.21</td><td>30</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cobalt</td><td>10.68</td><td>29</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Nickel</td><td>10.44</td><td>48</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Copper</td><td>10.77</td><td>44</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zinc</td><td>10.92</td><td>27</td><td>14.41</td><td>27</td><td>8.16</td><td>27</td><td>13.34</td><td>27</td></tr><tr><td>Gallium</td><td>4.43</td><td>18</td><td>10.86</td><td>18</td><td>14.43</td><td>18</td><td>13.84</td><td>18</td></tr><tr><td>Germanium</td><td>4.58</td><td>52</td><td>5.37</td><td>52</td><td>8.95</td><td>52</td><td>5.71</td><td>52</td></tr><tr><td>Arsenic</td><td>6.29</td><td>36</td><td>6.52</td><td>36</td><td>6.48</td><td>36</td><td>5.03</td><td>36</td></tr><tr><td>Selenium</td><td>7.27</td><td>24</td><td>16.16</td><td>24</td><td>12.37</td><td>23</td><td>5.46</td><td>23</td></tr><tr><td>Bromine</td><td>12.64</td><td>4</td><td>20.03</td><td>4</td><td>19.21</td><td>3</td><td>3.27</td><td>3</td></tr><tr><td>Rubidium</td><td>9.69</td><td>11</td><td>10.20</td><td>11</td><td>21.03</td><td>11</td><td>6.68</td><td>11</td></tr><tr><td>Strontium</td><td>18.16</td><td>25</td><td>32.91</td><td>25</td><td>32.92</td><td>25</td><td>31.00</td><td>25</td></tr><tr><td>Yttrium</td><td>12.29</td><td>34</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zirconium</td><td>10.36</td><td>12</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Niobium</td><td>6.54</td><td>23</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Molybdenum</td><td>8.15</td><td>27</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>8.73</td><td>27</td></tr><tr><td>Technetium</td><td>4.96</td><td>22</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Ruthenium</td><td>6.93</td><td>34</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhodium</td><td>10.66</td><td>22</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Palladium</td><td>9.19</td><td>46</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Silver</td><td>23.36</td><td>9</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cadmium</td><td>15.23</td><td>10</td><td>13.52</td><td>10</td><td>20.09</td><td>10</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Indium</td><td>4.47</td><td>17</td><td>7.21</td><td>17</td><td>5.30</td><td>17</td><td>4.94</td><td>17</td></tr><tr><td>Tin</td><td>3.06</td><td>34</td><td>4.09</td><td>34</td><td>3.74</td><td>34</td><td>11.81</td><td>34</td></tr><tr><td>Antimony</td><td>6.49</td><td>41</td><td>12.24</td><td>41</td><td>6.84</td><td>41</td><td>7.40</td><td>41</td></tr><tr><td>Tellurium</td><td>4.85</td><td>25</td><td>7.00</td><td>25</td><td>5.33</td><td>25</td><td>7.87</td><td>25</td></tr><tr><td>Iodine</td><td>8.33</td><td>1</td><td>12.55</td><td>1</td><td>20.66</td><td>1</td><td>4.53</td><td>1</td></tr><tr><td>Cesium</td><td>15.50</td><td>12</td><td>8.52</td><td>12</td><td>19.38</td><td>12</td><td>11.75</td><td>12</td></tr><tr><td>Barium</td><td>28.65</td><td>10</td><td>28.43</td><td>10</td><td>37.04</td><td>10</td><td>36.17</td><td>10</td></tr><tr><td>Lanthanum</td><td>9.25</td><td>14</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Lutetium</td><td>7.08</td><td>26</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Hafnium</td><td>5.64</td><td>10</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tantalum</td><td>9.88</td><td>15</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tungsten</td><td>10.90</td><td>9</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhenium</td><td>7.39</td><td>32</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Osmium</td><td>12.67</td><td>10</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iridium</td><td>7.86</td><td>18</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Platinum</td><td>5.92</td><td>72</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Gold</td><td>13.59</td><td>16</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Mercury</td><td>20.20</td><td>15</td><td>20.99</td><td>15</td><td>18.47</td><td>15</td><td>21.49</td><td>15</td></tr><tr><td>Thallium</td><td>5.73</td><td>10</td><td>10.28</td><td>10</td><td>19.95</td><td>10</td><td>25.38</td><td>10</td></tr><tr><td>Lead</td><td>4.33</td><td>20</td><td>5.24</td><td>20</td><td>4.61</td><td>20</td><td>3.57</td><td>19</td></tr><tr><td>Bismuth</td><td>8.01</td><td>25</td><td>21.74</td><td>25</td><td>8.28</td><td>25</td><td>33.99</td><td>25</td></tr></tbody></table></table-wrap><table-wrap id="Tab8"><label>Table&#xA0;8</label><caption><p>Average unsigned errors in dipole moments (D)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Element</th><th>PM6</th><th>No.</th><th>PM5</th><th>No.</th><th>PM3</th><th>No.</th><th>AM1</th><th>No.</th></tr></thead><tbody><tr><td>Hydrogen</td><td>0.62</td><td>266</td><td>0.80</td><td>265</td><td>0.64</td><td>222</td><td>0.50</td><td>204</td></tr><tr><td>Lithium</td><td>0.78</td><td>16</td><td>0.95</td><td>16</td><td>0.79</td><td>16</td><td>0.52</td><td>16</td></tr><tr><td>Beryllium</td><td>1.63</td><td>1</td><td>1.49</td><td>1</td><td>0.27</td><td>1</td><td>0.53</td><td>1</td></tr><tr><td>Boron</td><td>0.66</td><td>17</td><td>0.66</td><td>17</td><td>0.73</td><td>17</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Carbon</td><td>0.51</td><td>219</td><td>0.62</td><td>218</td><td>0.41</td><td>176</td><td>0.42</td><td>165</td></tr><tr><td>Nitrogen</td><td>0.61</td><td>48</td><td>0.66</td><td>48</td><td>0.46</td><td>40</td><td>0.55</td><td>39</td></tr><tr><td>Oxygen</td><td>0.99</td><td>198</td><td>1.27</td><td>196</td><td>1.05</td><td>74</td><td>0.74</td><td>75</td></tr><tr><td>Fluorine</td><td>0.80</td><td>124</td><td>1.11</td><td>121</td><td>0.59</td><td>63</td><td>0.69</td><td>59</td></tr><tr><td>Sodium</td><td>1.34</td><td>6</td><td>0.80</td><td>6</td><td>1.97</td><td>6</td><td>1.26</td><td>6</td></tr><tr><td>Aluminium</td><td>0.33</td><td>1</td><td>1.50</td><td>1</td><td>1.76</td><td>1</td><td>0.53</td><td>1</td></tr><tr><td>Silicon</td><td>0.21</td><td>11</td><td>1.09</td><td>11</td><td>0.72</td><td>11</td><td>0.29</td><td>11</td></tr><tr><td>Phosphorus</td><td>0.83</td><td>14</td><td>0.79</td><td>14</td><td>0.37</td><td>10</td><td>0.87</td><td>10</td></tr><tr><td>Sulfur</td><td>0.62</td><td>28</td><td>1.01</td><td>28</td><td>0.74</td><td>21</td><td>0.70</td><td>21</td></tr><tr><td>Chlorine</td><td>0.99</td><td>103</td><td>1.27</td><td>100</td><td>0.77</td><td>47</td><td>0.84</td><td>43</td></tr><tr><td>Potassium</td><td>0.44</td><td>4</td><td>0.34</td><td>4</td><td>1.30</td><td>4</td><td>0.58</td><td>4</td></tr><tr><td>Calcium</td><td>0.73</td><td>4</td><td>1.12</td><td>4</td><td>1.23</td><td>4</td><td>0.33</td><td>4</td></tr><tr><td>Scandium</td><td>1.11</td><td>9</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Titanium</td><td>1.02</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Vanadium</td><td>0.82</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Chromium</td><td>1.98</td><td>9</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Manganese</td><td>1.06</td><td>11</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iron</td><td>1.61</td><td>14</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cobalt</td><td>1.04</td><td>6</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Nickel</td><td>1.40</td><td>15</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Copper</td><td>1.11</td><td>10</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zinc</td><td>0.21</td><td>4</td><td>0.18</td><td>4</td><td>0.16</td><td>4</td><td>0.16</td><td>4</td></tr><tr><td>Gallium</td><td>0.20</td><td>1</td><td>1.81</td><td>1</td><td>1.35</td><td>1</td><td>0.64</td><td>1</td></tr><tr><td>Germanium</td><td>0.63</td><td>23</td><td>0.63</td><td>23</td><td>0.55</td><td>23</td><td>0.59</td><td>23</td></tr><tr><td>Arsenic</td><td>0.37</td><td>6</td><td>0.99</td><td>6</td><td>0.35</td><td>6</td><td>0.37</td><td>6</td></tr><tr><td>Selenium</td><td>0.66</td><td>10</td><td>0.94</td><td>10</td><td>0.61</td><td>10</td><td>0.80</td><td>10</td></tr><tr><td>Bromine</td><td>0.90</td><td>88</td><td>1.34</td><td>87</td><td>1.01</td><td>37</td><td>0.50</td><td>39</td></tr><tr><td>Rubidium</td><td>1.84</td><td>6</td><td>2.43</td><td>6</td><td>1.65</td><td>6</td><td>0.44</td><td>6</td></tr><tr><td>Strontium</td><td>1.64</td><td>6</td><td>1.31</td><td>6</td><td>2.55</td><td>6</td><td>1.51</td><td>6</td></tr><tr><td>Yttrium</td><td>1.70</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zirconium</td><td>0.94</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Niobium</td><td>0.91</td><td>10</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Molybdenum</td><td>1.09</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>1.48</td><td>8</td></tr><tr><td>Technetium</td><td>1.74</td><td>13</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Ruthenium</td><td>1.13</td><td>12</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhodium</td><td>1.09</td><td>6</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Palladium</td><td>0.97</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Silver</td><td>1.98</td><td>9</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Cadmium</td><td>0.42</td><td>2</td><td>2.22</td><td>2</td><td>0.67</td><td>2</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Indium</td><td>0.47</td><td>3</td><td>0.78</td><td>3</td><td>0.75</td><td>3</td><td>1.36</td><td>3</td></tr><tr><td>Tin</td><td>0.28</td><td>13</td><td>0.41</td><td>13</td><td>0.88</td><td>13</td><td>0.81</td><td>13</td></tr><tr><td>Antimony</td><td>0.55</td><td>5</td><td>0.77</td><td>5</td><td>0.48</td><td>5</td><td>0.61</td><td>5</td></tr><tr><td>Tellurium</td><td>0.47</td><td>2</td><td>0.75</td><td>2</td><td>0.31</td><td>2</td><td>1.35</td><td>2</td></tr><tr><td>Iodine</td><td>1.03</td><td>77</td><td>1.54</td><td>77</td><td>1.48</td><td>28</td><td>1.22</td><td>30</td></tr><tr><td>Cesium</td><td>1.25</td><td>9</td><td>3.47</td><td>9</td><td>1.89</td><td>9</td><td>0.87</td><td>9</td></tr><tr><td>Barium</td><td>1.77</td><td>11</td><td>1.29</td><td>11</td><td>1.93</td><td>11</td><td>1.11</td><td>11</td></tr><tr><td>Lanthanum</td><td>1.23</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Hafnium</td><td>0.63</td><td>6</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tantalum</td><td>0.97</td><td>5</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Tungsten</td><td>0.92</td><td>14</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Rhenium</td><td>0.76</td><td>13</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Osmium</td><td>0.63</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Iridium</td><td>0.96</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Platinum</td><td>1.07</td><td>8</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Gold</td><td>0.78</td><td>14</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Mercury</td><td>0.63</td><td>9</td><td>0.77</td><td>9</td><td>0.63</td><td>9</td><td>0.67</td><td>9</td></tr><tr><td>Thallium</td><td>0.89</td><td>3</td><td>1.35</td><td>3</td><td>0.45</td><td>3</td><td>2.43</td><td>3</td></tr><tr><td>Lead</td><td>0.73</td><td>6</td><td>0.76</td><td>6</td><td>0.41</td><td>6</td><td>0.82</td><td>6</td></tr><tr><td>Bismuth</td><td>0.42</td><td>8</td><td>3.21</td><td>8</td><td>1.14</td><td>8</td><td>3.40</td><td>8</td></tr></tbody></table></table-wrap><table-wrap id="Tab9"><label>Table&#xA0;9</label><caption><p>Average unsigned errors in ionization potential (eV)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Element</th><th>PM6</th><th>No.</th><th>PM5</th><th>No.</th><th>PM3</th><th>No.</th><th>AM1</th><th>No.</th></tr></thead><tbody><tr><td>Hydrogen</td><td>0.43</td><td>226</td><td>0.40</td><td>226</td><td>0.60</td><td>226</td><td>0.52</td><td>217</td></tr><tr><td>Lithium</td><td>0.89</td><td>12</td><td>0.88</td><td>12</td><td>1.29</td><td>12</td><td>0.59</td><td>12</td></tr><tr><td>Beryllium</td><td>0.52</td><td>7</td><td>0.29</td><td>7</td><td>0.93</td><td>7</td><td>0.45</td><td>7</td></tr><tr><td>Boron</td><td>0.31</td><td>11</td><td>0.34</td><td>11</td><td>1.01</td><td>11</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Carbon</td><td>0.41</td><td>230</td><td>0.39</td><td>230</td><td>0.54</td><td>230</td><td>0.54</td><td>227</td></tr><tr><td>Nitrogen</td><td>0.55</td><td>43</td><td>0.45</td><td>43</td><td>0.53</td><td>43</td><td>0.48</td><td>42</td></tr><tr><td>Oxygen</td><td>0.62</td><td>72</td><td>0.56</td><td>72</td><td>0.63</td><td>72</td><td>0.69</td><td>69</td></tr><tr><td>Fluorine</td><td>0.64</td><td>67</td><td>0.65</td><td>67</td><td>0.74</td><td>67</td><td>0.85</td><td>65</td></tr><tr><td>Sodium</td><td>0.34</td><td>5</td><td>0.34</td><td>5</td><td>1.43</td><td>5</td><td>0.51</td><td>4</td></tr><tr><td>Magnesium</td><td>0.97</td><td>4</td><td>1.05</td><td>4</td><td>1.10</td><td>4</td><td>1.41</td><td>4</td></tr><tr><td>Aluminum</td><td>0.62</td><td>3</td><td>0.29</td><td>3</td><td>0.40</td><td>3</td><td>0.69</td><td>3</td></tr><tr><td>Silicon</td><td>0.43</td><td>11</td><td>0.81</td><td>11</td><td>0.70</td><td>11</td><td>0.68</td><td>11</td></tr><tr><td>Phosphorus</td><td>0.49</td><td>13</td><td>0.47</td><td>13</td><td>0.64</td><td>13</td><td>0.56</td><td>13</td></tr><tr><td>Sulfur</td><td>0.52</td><td>46</td><td>0.51</td><td>46</td><td>0.48</td><td>46</td><td>0.62</td><td>46</td></tr><tr><td>Chlorine</td><td>0.48</td><td>62</td><td>0.58</td><td>62</td><td>0.57</td><td>60</td><td>0.61</td><td>57</td></tr><tr><td>Potassium</td><td>0.23</td><td>4</td><td>0.50</td><td>4</td><td>0.54</td><td>4</td><td>0.34</td><td>3</td></tr><tr><td>Calcium</td><td>0.74</td><td>1</td><td>1.24</td><td>1</td><td>0.52</td><td>1</td><td>0.41</td><td>1</td></tr><tr><td>Scandium</td><td>3.73</td><td>1</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Titanium</td><td>0.09</td><td>1</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Zinc</td><td>0.32</td><td>5</td><td>0.35</td><td>5</td><td>0.99</td><td>5</td><td>0.49</td><td>5</td></tr><tr><td>Gallium</td><td>0.52</td><td>3</td><td>0.73</td><td>3</td><td>1.28</td><td>3</td><td>1.16</td><td>3</td></tr><tr><td>Germanium</td><td>0.70</td><td>13</td><td>0.49</td><td>13</td><td>0.93</td><td>13</td><td>1.05</td><td>13</td></tr><tr><td>Arsenic</td><td>0.69</td><td>5</td><td>0.31</td><td>5</td><td>0.62</td><td>5</td><td>0.79</td><td>5</td></tr><tr><td>Selenium</td><td>0.38</td><td>10</td><td>0.29</td><td>10</td><td>0.47</td><td>10</td><td>1.22</td><td>10</td></tr><tr><td>Bromine</td><td>0.28</td><td>33</td><td>0.39</td><td>33</td><td>1.20</td><td>33</td><td>0.49</td><td>32</td></tr><tr><td>Rubidium</td><td>0.18</td><td>3</td><td>0.39</td><td>3</td><td>0.93</td><td>3</td><td>0.22</td><td>3</td></tr><tr><td>Strontium</td><td>0.63</td><td>1</td><td>0.38</td><td>1</td><td>0.14</td><td>1</td><td>0.26</td><td>1</td></tr><tr><td>Cadmium</td><td>0.33</td><td>5</td><td>0.46</td><td>5</td><td>0.39</td><td>5</td><td>&#x2013;</td><td>&#x2013;</td></tr><tr><td>Indium</td><td>0.63</td><td>2</td><td>0.86</td><td>2</td><td>2.06</td><td>2</td><td>0.83</td><td>2</td></tr><tr><td>Tin</td><td>0.70</td><td>14</td><td>0.48</td><td>14</td><td>1.22</td><td>14</td><td>0.44</td><td>14</td></tr><tr><td>Antimony</td><td>0.44</td><td>5</td><td>0.90</td><td>5</td><td>1.16</td><td>5</td><td>0.54</td><td>5</td></tr><tr><td>Tellurium</td><td>0.43</td><td>3</td><td>0.20</td><td>3</td><td>0.25</td><td>3</td><td>0.70</td><td>3</td></tr><tr><td>Iodine</td><td>0.47</td><td>29</td><td>0.46</td><td>29</td><td>0.48</td><td>29</td><td>0.89</td><td>29</td></tr><tr><td>Cesium</td><td>0.58</td><td>4</td><td>0.71</td><td>4</td><td>1.37</td><td>4</td><td>1.11</td><td>4</td></tr><tr><td>Barium</td><td>0.08</td><td>1</td><td>0.97</td><td>1</td><td>0.08</td><td>1</td><td>0.75</td><td>1</td></tr><tr><td>Mercury</td><td>0.51</td><td>12</td><td>0.43</td><td>12</td><td>0.74</td><td>12</td><td>0.49</td><td>12</td></tr><tr><td>Thallium</td><td>0.30</td><td>3</td><td>0.46</td><td>3</td><td>0.80</td><td>3</td><td>0.53</td><td>3</td></tr><tr><td>Lead</td><td>0.56</td><td>13</td><td>0.47</td><td>13</td><td>0.93</td><td>13</td><td>0.65</td><td>13</td></tr><tr><td>Bismuth</td><td>0.98</td><td>5</td><td>1.28</td><td>5</td><td>0.72</td><td>5</td><td>1.66</td><td>5</td></tr></tbody></table></table-wrap></p>
+          <p>Comparison of the accuracy of PM6 with the other NDDO methods PM5, PM3, and AM1, was made more complicated by the fact that different sets of elements were available in each method. To allow a simple comparison, therefore, average unsigned errors (AUE) for the four common properties for various subsets are presented in Tables&#xA0;<xref rid="Tab10" ref-type="table">10</xref>, <xref rid="Tab11" ref-type="table">11</xref>, <xref rid="Tab12" ref-type="table">12</xref>, <xref rid="Tab13" ref-type="table">13</xref> and <xref rid="Tab14" ref-type="table">14</xref>. To ensure a valid comparison the same number of data were used in each method, except for AM1 in &#x201C;whole of main group&#x201D;, where data for cadmium and boron were not used.
+<table-wrap id="Tab10"><label>Table&#xA0;10</label><caption><p>Average unsigned errors in &#x394;H<sub>f</sub> for various sets of elements (kcal mol<sup>&#x2013;1</sup>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Set of elements</th><th>No.</th><th>PM6</th><th>RM1</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>H, C, N, O</td><td>1157</td><td>4.64</td><td>4.89</td><td>5.60</td><td>5.65</td><td>9.41</td></tr><tr><td>H, C, N, O, F, P, S, Cl, Br, I </td><td>1774</td><td>5.05</td><td>6.57</td><td>6.75</td><td>8.05</td><td>12.57</td></tr><tr><td>Whole of main group</td><td>3188</td><td>6.16</td><td/><td>15.27</td><td>17.76</td><td>22.34</td></tr><tr><td>70 elements</td><td>4492</td><td>8.01</td><td/><td/><td/><td/></tr></tbody></table></table-wrap><table-wrap id="Tab11"><label>Table&#xA0;11</label><caption><p>Average unsigned errors in bond lengths for various sets of elements (&#xC5;)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Set of elements</th><th>No.</th><th>PM6</th><th>RM1</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>H, C, N, O</td><td>413</td><td>0.025</td><td>0.022</td><td>0.033</td><td>0.021</td><td>0.031</td></tr><tr><td>H, C, N, O, F, P, S, Cl, Br, I</td><td>712</td><td>0.031</td><td>0.036</td><td>0.044</td><td>0.037</td><td>0.046</td></tr><tr><td>Whole of main group</td><td>2636</td><td>0.085</td><td/><td>0.121</td><td>0.104</td><td>0.131</td></tr><tr><td>70 elements</td><td>5154</td><td>0.091</td><td/><td/><td/><td/></tr></tbody></table></table-wrap><table-wrap id="Tab12"><label>Table&#xA0;12</label><caption><p>Average unsigned errors in angles for various sets of elements (Degrees)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Set of elements</th><th>No.</th><th>PM6</th><th>RM1</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>H, C, N, O</td><td>100</td><td>3.1</td><td>3.1</td><td>3.3</td><td>2.5</td><td>2.7</td></tr><tr><td>H, C, N, O, F, P, S, Cl, Br, I</td><td>244</td><td>3.2</td><td>4.0</td><td>4.3</td><td>3.8</td><td>3.4</td></tr><tr><td>Whole of main group</td><td>900</td><td>8.0</td><td/><td>8.6</td><td>8.5</td><td>8.8</td></tr><tr><td>70 elements</td><td>1681</td><td>7.9</td><td/><td/><td/><td/></tr></tbody></table></table-wrap><table-wrap id="Tab13"><label>Table&#xA0;13</label><caption><p>Average unsigned errors in dipole moments for various sets of elements (D)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Set of elements</th><th>No.</th><th>PM6</th><th>RM1</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>H, C, N, O</td><td>55</td><td>0.38</td><td>0.22</td><td>0.31</td><td>0.26</td><td>0.26</td></tr><tr><td>H, C, N, O, F, P, S, Cl, Br, I</td><td>131</td><td>0.37</td><td>0.33</td><td>0.50</td><td>0.36</td><td>0.38</td></tr><tr><td>Whole of main group</td><td>313</td><td>0.60</td><td/><td>0.86</td><td>0.72</td><td>0.65</td></tr><tr><td>70 elements</td><td>569</td><td>0.85</td><td/><td/><td/><td/></tr></tbody></table></table-wrap><table-wrap id="Tab14"><label>Table&#xA0;14</label><caption><p>Average unsigned errors in I.P.s for various sets of elements (eV)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Set of elements</th><th>No.</th><th>PM6</th><th>RM1</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>H, C, N, O</td><td>99</td><td>0.45</td><td>0.40</td><td>0.41</td><td>0.51</td><td>0.45</td></tr><tr><td>H, C, N, O, F, P, S, Cl, Br, I</td><td>229</td><td>0.47</td><td>0.41</td><td>0.44</td><td>0.51</td><td>0.56</td></tr><tr><td>Whole of main group</td><td>383</td><td>0.50</td><td/><td>0.49</td><td>0.68</td><td>0.63</td></tr><tr><td>70 elements</td><td>385</td><td>0.50</td><td/><td/><td/><td/></tr></tbody></table></table-wrap></p>
+        </sec>
+        <sec id="Sec32">
+          <title>Comparison with AM1*</title>
+          <p>Winget, et al. [<xref ref-type="bibr" rid="CR15">15</xref>], developed AM1* parameters for P, S, and Cl, in which Voityuk&#x2019;s diatomic parameters were used for all atom-pairs involving P, S, and Cl with H, C, N, O, F, P, S, Cl and Mo. In the AM1* method, all parameters for elements other than the ones being optimized are held constant at the AM1 values. As such, AM1* could be regarded as a hybrid method: parameters for a few individual elements are re-optimized, in this case with some changes in the set of approximations, while holding the parameters for the other methods constant at their AM1 values. Tables comparing individual P, S, and Cl species calculated with AM1* and PM6 are given in the supplementary material. A summary of the statistical analysis is given in Table&#xA0;<xref rid="Tab15" ref-type="table">15</xref>. Winget et al. also reported AM1* parameters for titanium and zirconium [<xref ref-type="bibr" rid="CR15">15</xref>]. These parameters were not used in the comparison given here because the set of approximations used was incompatible with the set used in PM6.
+<table-wrap id="Tab15"><label>Table&#xA0;15</label><caption><p>Average unsigned errors in phosphorus, sulfur, and chlorine</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2">&#xA0;</th><th colspan="3">&#x394;H<sub>f</sub> (kcal mol<sup>&#x2212;1</sup>)</th><th colspan="3">Bond length (&#xC5;)</th><th colspan="3">Dipole (D)</th><th colspan="3">I.P. (eV)</th><th colspan="3">Angles (Degrees)</th></tr><tr><th>PM6</th><th>AM1*</th><th>No.</th><th>PM6</th><th>AM1*</th><th>No.</th><th>PM6</th><th>AM1*</th><th>No.</th><th>PM6</th><th>AM1*</th><th>No.</th><th>PM6</th><th>AM1*</th><th>No.</th></tr></thead><tbody><tr><td>Phosphorus</td><td>8.3</td><td>19.1</td><td>90</td><td>0.022</td><td>0.051</td><td>56</td><td>0.57</td><td>0.49</td><td>10</td><td>0.51</td><td>0.81</td><td>12</td><td>2.5</td><td>3.3</td><td>19</td></tr><tr><td>Sulfur</td><td>6.5</td><td>10.6</td><td>199</td><td>0.029</td><td>0.060</td><td>71</td><td>0.36</td><td>0.64</td><td>14</td><td>0.52</td><td>0.50</td><td>45</td><td>3.1</td><td>4.1</td><td>34</td></tr><tr><td>Chlorine</td><td>6.1</td><td>18.2</td><td>156</td><td>0.025</td><td>0.106</td><td>69</td><td>0.55</td><td>0.60</td><td>10</td><td>0.52</td><td>0.62</td><td>25</td><td>3.4</td><td>14.6</td><td>4</td></tr></tbody></table></table-wrap></p>
+        </sec>
+        <sec id="Sec33">
+          <title>Comparison with RM1</title>
+          <p>In 2006, ten elements, H, C, N, O, F, P, S, Cl, Br, and I, that had been parameterized at the AM1 level were re-parameterized [<xref ref-type="bibr" rid="CR35">35</xref>]; the result was a new method, RM1. No changes were made to the set of approximations used, so that, for example, P, S, Cl, Br, and I used only the <italic>s-p</italic> basis set. That is, RM1 was functionally identical to AM1. A statistical analysis showed that RM1 was more accurate than any of the other NDDO methods, and therefore was the method of choice for modeling organic compounds. An indication of the effect of the current changes to the set of approximations can be obtained by comparing the AUE for PM6 and RM1 in Tables&#xA0;<xref rid="Tab10" ref-type="table">10</xref>, <xref rid="Tab11" ref-type="table">11</xref>, <xref rid="Tab12" ref-type="table">12</xref>, <xref rid="Tab13" ref-type="table">13</xref> and <xref rid="Tab14" ref-type="table">14</xref>.</p>
+          <p>Voityuk reported the parameterization of molybdenum [<xref ref-type="bibr" rid="CR14">14</xref>] at the AM1* level. These parameters were added to the standard AM1 parameters and were used in the analysis.</p>
+        </sec>
+        <sec id="Sec34">
+          <title>Comparison with high-level methods</title>
+          <p>A comparison of PM6, HF 6&#x2013;31G(d) and B3LYP 6&#x2013;31G(d) errors in predicted &#x394;H<sub>f</sub> for 1373 compounds is given in the supplementary material. Only compounds containing the elements H, C, N, O, F, P, S, Cl, and Br were considered, these being the more important elements in biochemistry. Ab-initio &#x394;H<sub>f</sub> were obtained from the calculated total energies by the addition of a simple atomic correction and conversion from atomic units to kcal mol<sup>&#x2212;1</sup>. No allowance was made for thermal population effects, zero point energies, etc., the assumption being made that such effects could be absorbed into the atomic corrections.</p>
+          <p>A statistical analysis of errors in thermochemical predictions for the three methods is given in Table&#xA0;<xref rid="Tab16" ref-type="table">16</xref>. A check was also done to verify that the error distribution was approximately Gaussian. The resulting histogram, shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, shows that the distribution is indeed Gaussian.
+<table-wrap id="Tab16"><label>Table&#xA0;16</label><caption><p>Statistical analysis of errors in predicted &#x394;H<sub>f</sub> for various methods (kcal mol<sup>&#x2212;1</sup>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Statistic</th><th>PM6</th><th>B3LYP*</th><th>HF*</th></tr></thead><tbody><tr><td>Median</td><td>3.26</td><td>3.75</td><td>5.10</td></tr><tr><td>AUE</td><td>4.44</td><td>5.19</td><td>7.37</td></tr><tr><td>RMS</td><td>6.23</td><td>7.42</td><td>10.68</td></tr></tbody></table><table-wrap-foot><p>No. of molecules in set: 1373</p><p>* Basis set: 6&#x2013;31G*</p></table-wrap-foot></table-wrap><fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Histogram of errors in calculated &#x394;H<sub>f</sub></p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig1_HTML" id="MO4"/></fig></p>
+        </sec>
+        <sec id="Sec35">
+          <title>Hydrogen bonding</title>
+          <p>One of the commonest forms of hydrogen bonding involves a hydrogen atom attached to an oxygen atom and forming a weak bond to a distant oxygen atom. The simplest, well-characterized case is that of the water dimer. In an exhaustive analysis of this system, Tschumper, et. al. [<xref ref-type="bibr" rid="CR36">36</xref>], characterized this system using CCSD(T) and a large basis set. They identified and characterized ten stationary points on the 12-dimensional potential energy surface of the dimer and determined that the lowest energy conformer of the water dimer was 5.00&#xA0;kcal mol<sup>&#x2212;1</sup> more stable than two isolated water molecules. A comparison of the relative heats of formation of these points calculated using NDDO methods is shown in Table&#xA0;<xref rid="Tab17" ref-type="table">17</xref>. The AUE for the various methods are as follows: PM6: 1.35&#xA0;kcal mol<sup>&#x2212;1</sup>, PM5: 3.35, PM3: 2.16, and AM1: 1.67.
+<table-wrap id="Tab17"><label>Table&#xA0;17</label><caption><p>Relative energies of conformers of water dimer</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2">Structure</th><th rowspan="2">Ref.</th><th colspan="4">Relative &#x394;H<sub>f</sub> (kcal mol<sup>&#x2212;1</sup>)</th></tr><tr><th>PM6</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>(Non-planar open C<sub>s</sub>)*</td><td>&#x2212;5.00</td><td>&#x2212;3.96</td><td>&#x2212;0.24</td><td>&#x2212;2.79</td><td>&#x2212;2.81</td></tr><tr><td>1 (Non&#x2212;planar open C<sub>s</sub>)</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr><tr><td>2 (Open C<sub>i</sub>)<sup>+</sup></td><td>0.52</td><td>0.83</td><td>0.50</td><td>0.91</td><td>0.64</td></tr><tr><td>3 (Planar Open C<sub>s</sub>)</td><td>0.57</td><td>0.66</td><td>0.25</td><td>0.93</td><td>0.46</td></tr><tr><td>4 (Cyclic C<sub>i</sub>)</td><td>0.70</td><td>0.29</td><td>0.11</td><td>2.10</td><td>&#x2212;0.94</td></tr><tr><td>5 (Cyclic C<sub>2</sub>)</td><td>0.95</td><td>0.77</td><td>0.39</td><td>2.63</td><td>&#x2212;0.51</td></tr><tr><td>6 (Cyclic C<sub>2h</sub>)</td><td>0.99</td><td>0.59</td><td>0.21</td><td>2.71</td><td>&#x2212;0.67</td></tr><tr><td>7 (Triply Hydrogen Bonded</td><td>1.81</td><td>0.93</td><td>&#x2212;1.85</td><td>1.16</td><td>&#x2212;0.95</td></tr><tr><td>8 (Non-planar Bifurcated</td><td>3.57</td><td>2.67</td><td>&#x2212;0.83</td><td>1.71</td><td>1.26</td></tr><tr><td>9 (Non-planar Bifurcated</td><td>1.79</td><td>0.73</td><td>&#x2212;1.95</td><td>1.15</td><td>&#x2212;0.87</td></tr><tr><td>10 (Planar Bifurcated C<sub>2v</sub></td><td>2.71</td><td>1.42</td><td>&#x2212;1.77</td><td>1.28</td><td>&#x2212;0.05</td></tr></tbody></table><table-wrap-foot><p>*: Relative to two isolated water molecules</p><p>+: Structures 2 &#x2013; 10 are relative to Structure 1</p></table-wrap-foot></table-wrap></p>
+          <p>The energies of various different types of hydrogen bonds were estimated from the energy released when the two small molecules involved associate to form a hydrogen-bonded system. Table&#xA0;<xref rid="Tab18" ref-type="table">18</xref> lists the values predicted using B3LYP and the NDDO methods.
+<table-wrap id="Tab18"><label>Table&#xA0;18</label><caption><p>Comparison of B3LYP and PM6 hydrogen bond energies (kcal mol<sup>&#x2212;1</sup>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Hydrogen-bonded system</th><th>Ref</th><th>PM6</th><th>PM5</th><th>PM3</th><th>AM1</th></tr></thead><tbody><tr><td>Ammonia - ammonia</td><td>&#x2212;2.94</td><td>&#x2212;2.34</td><td>&#x2212;0.77</td><td>&#x2212;0.67</td><td>&#x2212;1.41</td></tr><tr><td>Water - methanol</td><td>&#x2212;4.90</td><td>&#x2212;5.12</td><td>&#x2212;2.59</td><td>&#x2212;0.20</td><td>&#x2212;4.52</td></tr><tr><td>Water - acetone</td><td>&#x2212;5.51</td><td>&#x2212;5.25</td><td>&#x2212;2.43</td><td>&#x2212;2.22</td><td>&#x2212;4.09</td></tr><tr><td>Water, dimer, linear (O&#x2013;H&#x2013;O = 180&#xB0;)</td><td>&#x2212;5.00</td><td>&#x2212;3.69</td><td>&#x2212;1.57</td><td>&#x2212;3.49</td><td>&#x2212;3.16</td></tr><tr><td>Water, dimer</td><td>&#x2212;5.00</td><td>&#x2212;4.88</td><td>&#x2212;2.43</td><td>&#x2212;1.95</td><td>&#x2212;5.01</td></tr><tr><td>Benzene dimer, T-shaped</td><td>&#x2212;2.34</td><td>&#x2212;0.83</td><td>&#x2212;0.22</td><td>&#x2212;0.56</td><td>&#x2212;0.07</td></tr><tr><td>Water - acetate anion</td><td>&#x2212;19.22</td><td>&#x2212;18.72</td><td>&#x2212;12.28</td><td>&#x2212;15.77</td><td>&#x2212;15.91</td></tr><tr><td>Water - formaldehyde</td><td>&#x2212;5.17</td><td>&#x2212;4.22</td><td>&#x2212;2.17</td><td>&#x2212;2.73</td><td>&#x2212;3.40</td></tr><tr><td>Water - ammonia</td><td>&#x2212;6.36</td><td>&#x2212;4.32</td><td>&#x2212;2.75</td><td>&#x2212;1.53</td><td>&#x2212;2.90</td></tr><tr><td>Water - formamide</td><td>&#x2212;8.88</td><td>&#x2212;7.60</td><td>&#x2212;4.14</td><td>&#x2212;4.33</td><td>&#x2212;7.54</td></tr><tr><td>Formic acid, dimer</td><td>&#x2212;13.90</td><td>&#x2212;10.03</td><td>&#x2212;4.75</td><td>&#x2212;8.65</td><td>&#x2212;6.44</td></tr><tr><td>Water - methylammonium cation</td><td>&#x2212;18.76</td><td>&#x2212;14.90</td><td>&#x2212;8.94</td><td>&#x2212;10.48</td><td>&#x2212;14.36</td></tr><tr><td>Formamide - formamide</td><td>&#x2212;13.55</td><td>&#x2212;10.83</td><td>&#x2212;4.46</td><td>&#x2212;6.08</td><td>&#x2212;8.14</td></tr><tr><td>Acetic acid, dimer</td><td>&#x2212;14.89</td><td>&#x2212;10.33</td><td>&#x2212;4.50</td><td>&#x2212;8.70</td><td>&#x2212;6.44</td></tr></tbody></table></table-wrap></p>
+        </sec>
+        <sec id="Sec36">
+          <title>Nitrogen pyramidalization</title>
+          <p>A well-documented fault in PM3 nitrogen was its exaggerated degree of pyramidalization when in the <italic>sp</italic><sup>2</sup> configuration. This is dramatically evident in N-methylacetamide, where the H-N-C&#x2013;C torsion angle should be 180&#xA0;&#xB0;, but is predicted by PM3 to be 136&#xA0;&#xB0;. That is, the nitrogen, instead of being in a planar environment, is predicted to be highly pyramidal. The results of a survey of 19 molecules that contain <italic>sp</italic><sup>2</sup> nitrogen are presented in Table&#xA0;<xref rid="Tab19" ref-type="table">19</xref>.
+<table-wrap id="Tab19"><label>Table&#xA0;19</label><caption><p>Average errors in pyramidalization of nitrogen (Torsion angle about nitrogen, in degrees)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Statistic</th><th>PM6</th><th>PM3</th><th>AM1</th><th>RM1</th></tr></thead><tbody><tr><td>Average signed error</td><td>&#x2212;1.7</td><td>&#x2212;13.6</td><td>0.2</td><td>9.7</td></tr><tr><td>Average unsigned error</td><td>5.0</td><td>15.0</td><td>3.5</td><td>19.1</td></tr></tbody></table></table-wrap></p>
+        </sec>
+        <sec id="Sec37">
+          <title>Transition metals</title>
+          <p>Optimizing parameters for transition metals was not as straightforward as for the main group elements. As with the main group compounds, there is a wealth of structural reference data on transition metal complexes. However, unlike main group compounds, there is a distinct shortage of reliable thermochemical data. To alleviate this shortage, the thermochemical data that was available was augmented by the results of DFT calculations. It was recognized, however, that these derived reference data were likely to be of a lower accuracy than the experimental data. Many transition metal complexes are also highly labile; a consequence of this was that some moieties that are known to exist in the solid phase were predicted to be unstable in the gas phase, at least at the PM6 level of calculation. In most cases, such moieties had a high formal charge, therefore, without any countercharge, their instability in isolation is understandable. When an intrinsically unstable ion was identified, it was removed from further consideration.</p>
+          <p>Most transition metal compounds also have extensive UV-visible properties, arising from <italic>d-d</italic> transitions and from charge-transfer excitations, the presence of these absorption bands being indicative of the existence of low-lying electronic excited states. The self-consistent field (SCF) equations frequently did not converge unless special techniques were used. One of these, using the direct inversion of the iterative sub-space [<xref ref-type="bibr" rid="CR37">37</xref>], or DIIS, would frequently yield an SCF when other methods failed. However, as a result of the way it works, the DIIS converged the wavefunction to the nearest stationary point, not necessarily to the lowest energy point. Because of the potential existence of multiple low-lying excited states, special care had to be taken when the DIIS technique was used. Conversely, the tendency to converge to the nearest stationary point was an advantage when electronic states of transition metal atoms were being optimized. In several instances, the lowest energy wavefunction corresponded to a hybrid of <italic>s</italic>, <italic>p</italic> and <italic>d</italic> atomic orbitals that did not transform as any irreducible representation of the group of the sphere. In those cases, the wavefunction could be induced to converge to the correct spherical harmonic solution by using the DIIS procedure.</p>
+        </sec>
+        <sec id="Sec38">
+          <title>Sets of transition metals</title>
+          <p>For the purpose of discussion, the set of 30 transition metals can be partitioned into eight of the groups of the Periodic Table, with each group containing one or more triads of elements. A detailed discussion of each element is impractical because of the wide range of compounds in transition metal chemistry. The following section, therefore, will be limited to systems where PM6 does not work well, and to systems illustrative of the structural chemistry of specific elements.</p>
+        </sec>
+        <sec id="Sec39">
+          <title>Group IIIA: Scandium, Yttrium, Lanthanum, and Lutetium</title>
+          <p>Possibly because of its scarcity, only a few experimental thermochemical reference data for scandium compounds were available for use in the parameterization. What reference data existed were augmented by the results of DFT calculations and with a large number of atomic energy levels for the neutral and ionized atom. Only the chemistry of Sc<sup>III</sup> was studied. Most bond lengths involving scandium were reproduced with good accuracy (for example tri(&#x3B7;<sup>5</sup>&#x2212;cyclopentadienyl)-scandium, Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>), the exception being the coordination complex [Sc(H<sub>2</sub>O)<sub>9</sub>]<sup>3+</sup> which PM6 predicts to decompose to [Sc(H<sub>2</sub>O)<sub>7</sub>]<sup>3+</sup> plus two water molecules.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Tri(&#x3B7;<sup>5</sup>&#x2212;cyclopentadienyl)-scandium Reference value in parenthesis</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig2_HTML" id="MO5"/></fig></p>
+          <p>As with scandium, very few thermochemical reference data were found for yttrium or lanthanum. To compensate for this, extensive use was made of the CSD. The chemistry of lutetium is similar to that of lanthanum, with the principal difference being that whereas La<sup>III</sup> has an empty 4<italic>f</italic> shell, in Lu<sup>III</sup> that shell is completely filled. Since the 4<italic>f</italic> shell is, at least chemically, virtually inert, lutetium could be regarded as a conventional transition metal, and was therefore included in this work.</p>
+        </sec>
+        <sec id="Sec40">
+          <title>Group IVA: Titanium, Zirconium, and Hafnium</title>
+          <p>In contrast to all the elements of Group IIIA, titanium is plentiful, and an abundance of reference data on Ti<sup>III</sup> and the more common Ti<sup>IV</sup> is available. These data include many tetrahedral and octahedral inorganic complexes as well as organotitanium compounds. Most bond lengths are reproduced with good accuracy, the exceptions being the Ti-H bond in TiH<sub>4</sub>, where the predicted value, 1.36&#xA0;&#xC5;, is 0.37&#xA0;&#xC5; shorter than the reference, and coordination complexes which involve oxygen forming a purely dative bond to titanium. In this latter case, the Ti-O bond is typically too long by 0.1 to 0.3&#xA0;&#xC5;.</p>
+          <p>The behavior of zirconium and hafnium is similar to that of titanium.</p>
+        </sec>
+        <sec id="Sec41">
+          <title>Group VA: Vanadium, Niobium, and Tantalum</title>
+          <p>Most of the structural chemistry of vanadium in its five common oxidation states, 0, II, III, IV, and V, are reproduced with good accuracy. The common VO<sub>5</sub> structure which occurs in bis(Acetylacetonato)-oxo-vanadium(iv), where vanadium forms a double bond to one oxygen atom and single bonds to the other four, is reproduced accurately, the V=O distance being 1.58&#xA0;&#xC5; (reference, 1.56), the V-O distance 2.03&#xA0;&#xC5; (1.97), and the O-V=O angle: 104.5&#xA0;&#xB0; (105.9).</p>
+          <p>Not all systems were reproduced with such accuracy. When there are several ligands around a vanadium atom, the effects of steric crowding are over-emphasized, and PM6 incorrectly predicts that one of the metal-oxygen bonds would break. An example is bis(bis(&#x3BC;<sup>2</sup>-trifluoroacetato-O,O&#x2032;)-(&#x3B7;<sup>5</sup>-cyclopentadienyl)-vanadium), where each vanadium atom extends bonds to four oxygen atoms and one cyclopentadienyl. In this system, PM6 predicts that one of the V-O bonds would break.</p>
+          <p>In the heavier elements there is an increased tendency to form highly symmetric polynuclear complexes. An example is the tantalum dication, [Ta<sub>6</sub>Cl<sub>12</sub>]<sup>2+</sup>. This is predicted to have an octahedral structure in modest agreement with the DFT result (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>).
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Calculated structure of the complex ion [Ta<sub>6</sub>Cl<sub>12</sub>]<sup>2+</sup> Reference value in parenthesis</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig3_HTML" id="MO6"/></fig></p>
+          <p>Transition metal complexes usually have one or more unpaired electrons; such systems can only be modeled using an open shell method such as unrestricted Hartree Fock (UHF) or restricted Hartree Fock followed by a configuration interaction (RHF-CI) correction. The UHF method is faster and more reliable, and is the method of choice when only simple properties such as heats of formation or geometries are of interest. For [M<sub>6</sub>X<sub>12</sub>]<sup>2+</sup>, M = Nb or Ta, X = Cl or Br, UHF predicts an almost octahedral complex, a very slight distortion lowering the symmetry to D<sub>4h</sub>. This distortion is also reflected in the asymmetric charge distribution. When RHF-CI is used, the geometry converges on the exact O<sub>h</sub> structure.</p>
+        </sec>
+        <sec id="Sec42">
+          <title>Group VIA: Chromium, Molybdenum, and Tungsten</title>
+          <p>Most Cr&#x2013;O and Cr&#x2013;N bonds are reproduced well, as illustrated by [Cr<sup>III</sup>(EDTA)]<sup>-</sup> in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. The organometallic bond in chromium hexacarbonyl is 1.90&#xA0;&#xC5;, which is in good agreement with the crystal structure, 1.92&#xA0;&#xC5;, found in FOHCOU01[<xref ref-type="bibr" rid="CR21">21</xref>].
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Chromium Ethylenediaminetetraacetate anion, [Cr(III)(EDTA)]<sup>&#x2212;</sup></p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig4_HTML" id="MO7"/></fig></p>
+          <p>The octacyano-molybdate(IV) moiety, [Mo<sup>IV</sup>(CN)<sub>8</sub>]<sup>4&#x2212;</sup>, is a stable eight-coordinate organometallic molybdenum complex ion whose geometry in the crystal is that of a slightly distorted square antiprism. Rather unexpectedly, this structure was reproduced by PM6, the expectation being that in the absence of crystal field forces the structure would have optimized to a geometry which has a higher symmetry, i.e., converged to the exact D<sub>4d</sub> geometry. The predicted Mo-C distance was 2.22 versus 2.16&#xA0;&#xC5;, again in unexpectedly good agreement for an ion with such a large formal charge.</p>
+          <p>Molybdenum forms the cluster anion [Mo<sub>6</sub>(&#x3B7;<sub>3</sub>-Cl<sub>8</sub>)Cl<sub>6</sub>]<sup>2&#x2212;</sup> in which the six molybdenum atoms form a regular octahedron. PM6 successfully reproduces this structure, and predicts the following distances: Mo-Mo: 2.30 (2.63), Mo-&#x3B7;<sub>3</sub>Cl: 2.75 (2.56), and Mo-Cl: 2.50 (2.43&#xA0;&#xC5;).</p>
+          <p>The trioxide of molybdenum can form polyoxometalates, a typical example of which is the &#x3B1;-keggin heteropolyoxyanion [SiO<sub>4</sub>@Mo<sup>VI</sup><sub>12</sub>O<sub>36</sub>]<sup>4&#x2212;</sup>. In this structure, shown in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>, each Mo forms a double bond with one oxygen, single bonds to four other oxygen atoms, and what can only be described as a third of a bond to a sixth oxygen that is part of the SiO<sub>4</sub> unit. Despite the apparently high symmetry, Td, this system has only a center of inversion. This low symmetry is reproduced by PM6.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>&#x3B1;-Keggin structure of tetraconta-oxo-silicon-dodeca-molybdenum, [SiO<sub>4</sub>@Mo<sub>12</sub>O<sub>36</sub>]<sup>4&#x2212;</sup> Crossed-eyes stereo; Mo=O: 1.77&#xA0;&#xC5; (1.69), Mo-O: 2.00 (1.85), Si&#x2013;O: 1.52 (1.64) (Ref. in parentheses)</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig5_HTML" id="MO8"/></fig></p>
+          <p>PM6 predicts the structures of all three hexacarbonyls with good accuracy, but gives qualitatively the wrong structures for the dinuclear decacarbonyls. This failure to qualitatively predict the structure of the polynuclear carbonyls occurred frequently during the survey of the transition metals.</p>
+        </sec>
+        <sec id="Sec43">
+          <title>Group VIIA: Manganese, Technetium, and Rhenium</title>
+          <p>Like many other transition metals, manganese can form sepulchrates, closo polyhedral complexes of general structure 3, 6, 10, 13, 16, 19-hexaaza-bicyclo(6.6.6)icosane. In contrast to the more common open hexadentate chelates of manganese, e.g. [Mn<sup>II</sup>(EDTA)]<sup>2&#x2212;</sup>, the metal atom in a sepulchrate is extremely tightly bound, and cannot be removed without destroying the organic framework. A simple sepulchrate is shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>. PM6 predicts the Mn-N distance with good accuracy but gets the twist angle incorrect. A DFT calculation reproduced the twist angle found in the crystal, which suggests that the error in the twist angle cannot be attributed to the neglect of crystal packing forces.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>[Sepulchrate-manganese(III) ]<sup>3+</sup> (3,6,10,13,16,19-Hexaaza-bicyclo(6.6.6)icosane)-manganese(III) &#xA7;: CSD entry: HAFBUL</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig6_HTML" id="MO9"/></fig></p>
+          <p>Although there is a large amount of structural information on technetium compounds, there is a distinct shortage of thermochemical data. To make up for this, almost all the reference heats of formation of representative technetium compounds were derived from DFT calculations. Only one heat of formation was used in this derivation, that of the isolated technetium atom, therefore the reference values used almost certainly include a systematic error that may amount to many kilocalories per mole. Consequently, the reference heats of formation and the errors in PM6 predicted heats of formation of technetium compounds should be taken <italic>cum granus salis</italic>. However, this should not be construed as implying that they are meaningless: because reactions are balanced, when heats of reaction are evaluated, any systematic errors in the heats of formation are cancelled out.</p>
+          <p>One of the more important technetium species is the pertechnetate ion, [TcO<sub>4</sub>]<sup>&#x2212;</sup>, used in nuclear medicine. In this ion, PM6 predicts the Tc-O distance to be 1.73&#xA0;&#xC5;, in good agreement with the DFT value of 1.76&#xA0;&#xC5;.</p>
+        </sec>
+        <sec id="Sec44">
+          <title>Group VIIIA: Iron, Cobalt, Nickel, Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum</title>
+          <p>The geometries of most compounds of this large group were reproduced with modest to good accuracy, including the iron-porphorin complex, Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>, of the type found in heme. The main exception is iron pentacarbonyl, Fe(CO)<sub>5</sub>, which in its equilibrium geometry is known unambiguously to be of point-group D<sub>3h</sub>, and which PM6 predicts to be equally unambiguously C<sub>4v</sub>. When this error was discovered, attempts were made to correct the fault by adding a rule to the training set for iron. This rule stated that &#x201C;The C<sub>4v</sub> geometry was 28.7&#xA0;kcal mol<sup>&#x2212;1</sup> higher in energy than the D<sub>3h</sub> geometry,&#x201D; 28.7&#xA0;kcal mol<sup>&#x2212;1</sup> being the difference between the energies of the two structures calculated using DFT. However, even when a very large weighting factor, 20.0, was used, the C<sub>4v</sub> structure remained more stable than the D<sub>3h</sub>, albeit the error in the relative energies was decreased. During this optimization errors in all other iron compounds increased significantly. Rather than accept a general deterioration in the predicted properties of iron compounds, the rule was removed from the training set.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>trans-7,8-Dihydro-2,3,7,8,12,13,17,18-octaethylporphyrinato-iron (II) Reference value (CSD entry BUYKUB) in parenthesis</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig7_HTML" id="MO10"/></fig></p>
+          <p>The well-known red complex nickel dimethylglyoxime is normally encountered in the quantitative analysis of inorganic nickel in solution. At the center of the molecule is the planar structure NiN<sub>4</sub> structure, which is frequently found in nickel compounds in biochemical systems. PM6 predicts this with good accuracy (Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>).
+<fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>Nickel Dimethylglyoxime Reference value (CSD entry NIMGLO10) in parenthesis</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig8_HTML" id="MO11"/></fig></p>
+          <p>One of the first polyhapto organometallic complexes discovered was Zeise&#x2019;s salt. In the anion, [PtCl<sub>3</sub>(&#x3B7;<sup>2</sup>-C<sub>2</sub>H<sub>4</sub>)]<sup>&#x2212;</sup>, platinum forms a synergic bond with an ethylene molecule. The calculated and X-ray structures of this complex are shown in Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>.
+<fig id="Fig9"><label>Fig.&#xA0;9</label><caption><p>Zeise&#x2019;s Salt, trichloro-(&#x3B7;<sup>2</sup>-ethene)-platinate Reference value (CSD entry XIVSAK) in parenthesis</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig9_HTML" id="MO12"/></fig></p>
+        </sec>
+        <sec id="Sec45">
+          <title>Group IB: Copper, Silver, and Gold</title>
+          <p>Copper phthalocyanine is an extremely stable blue dyestuff. As with nickel dimethylglyoxime, the planar CuN<sub>4</sub> moiety at the center of the porphyrin ring is typical of many copper species of importance in biochemistry. PM6 reproduces it with very good accuracy (Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>).
+<fig id="Fig10"><label>Fig.&#xA0;10</label><caption><p>Copper phthalocyanine Reference value (CSD entry CUPOCY16) in parenthesis</p></caption><graphic position="anchor" xlink:href="894_2007_233_Fig10_HTML" id="MO13"/></fig></p>
+          <p>Dimethyl gold cyanide tetramer provides a good example of a square-planar Au<sup>III</sup> complex. In this system, each gold atom forms covalent single bonds of length 1.99&#xA0;&#xC5;(2.01) to the carbons of the methyl groups, a weaker, longer bond of length 2.12&#xA0;&#xC5;(2.23) to the carbon of the cyanide group, and a still longer bond, 2.27&#xA0;&#xC5;(2.23) to the nitrogen atom.</p>
+          <p>Gold also forms small planar clusters. PM6 predicts that neutral clusters of up to about nine gold atoms should be planar, an example being the D<sub>6h</sub> Au<sub>7</sub> cluster, in which the Au-Au distance is predicted to be 2.71&#xA0;&#xC5;(2.01). Clusters of up to 12 gold atoms are also predicted to be stable, provided the cluster has a single negative charge.</p>
+        </sec>
+        <sec id="Sec46">
+          <title>Group IIB Zinc, Cadmium, and Mercury</title>
+          <p>These elements have completely filled <italic>d</italic> shells; therefore the valence shell can be limited to the <italic>s</italic> and <italic>p</italic> orbitals. As such, they behave like main-group elements.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="Sec47" sec-type="discussion">
+      <title>Discussion</title>
+      <sec id="Sec48">
+        <title>Methodological changes</title>
+        <p>During the development of PM6, only very minor changes were made to the set of approximations. The main change was in the construction of the training set used for parameter optimization. One of the most important changes was the use of rules in the training set to define chemical information that was not a function of any single molecule. In earlier methods the training set had included only standard reference data. Of their nature, such data could not allow for chemical facts that were independent of any one moiety. For example, the strength of a hydrogen bond is of great importance in biochemistry, but it could not be expressed in terms of a single species. By use of rules, the value of some chemical quantity could be related to that of another. In the case of hydrogen bonding, the heat of formation of the water dimer was made a function of the heat of formation of two separated water molecules.</p>
+        <p>Rules were particularly useful when elements of the three transition metal series were being optimized. Many complexes of these elements are highly labile, and, in the early stages of parameter optimization, there was a strong tendency for the optimized geometry of such complexes to be qualitatively incorrect. Faults of this kind could not be corrected by simply increasing the weight assigned to the correct geometry, so rules were developed to indicate that the faulty geometries were indeed incorrect. Specific points on the potential energy surface were selected, and from single-point high level calculations, the relative energy of these points above the minimum was evaluated. The points selected were precisely those qualitatively incorrect geometries resulting from the use of the then-current parameters. The fact that the incorrect geometry was predicted by high level methods to be of higher energy than the correct geometry was then added to the set of rules. A good example of such a rule was the rule concerning Fe(CO)<sub>5</sub> mentioned above, in which the only datum that was defined referred to the relative energies of the compound in two different symmetries. No reference was made to the bond lengths, or bond angles. With such a rule in place, the parameters could be re-optimized to minimize the error arising from the rule, with the effect that the energy of the incorrect symmetry increased relative to that of the correct symmetry. In the majority of cases, one rule of this type was sufficient; less frequently, two rules were used, and, in rare cases, even more rules were necessary.</p>
+        <p>Another change was the use of very large reference data training sets. In earlier parameterizations, the training set used was deliberately made as small as possible. Only when the resulting method was used in a survey of species not used in the training set could the predictive power of the method be determined. The training set used in the development of PM6 was designed to be considerably larger than the survey set. The rationale for this was that, by including in the training set reference data for unconventional species, e.g., non-equilibrium and hypothetical species, a greater region of the error-function surface could be defined. This would in turn, result in a better definition of the values of the parameters. That this is useful can be evidenced by the recent work in parameterizing chlorine at the AM1* level, where the compound 1,1&#x2032;,2-trichloro-1,2,2&#x2032;-trifluoroethane, C<sub>2</sub>Cl<sub>3</sub>F<sub>3</sub> has a reported &#x394;H<sub>f</sub> of &#x2013;173.7&#xA0;kcal mol<sup>&#x2212;1</sup>, but the value predicted using AM1* was &#x2013;273.9&#xA0;kcal mol<sup>&#x2212;1</sup>. That is, the AM1* value was in error by over 100&#xA0;kcal mol<sup>&#x2212;1</sup>. If this compound had been included in the training set, it is highly likely that the error would have been significantly reduced.</p>
+        <p>Although over 10,000 reference data were used in the PM6 training set, there are several indications that even this large number is still inadequate for the definition of the values of the parameters, and that an even larger training set would be highly desirable. In light of this, work has begun on identifying species to be added to the training set. During the testing of PM6, several faults were found in the method. Some of these were quickly traced to specific core-core parameters. One of the hydrogen atoms in the complex [Sc<sup>III</sup> (H<sub>2</sub>O)<sub>7</sub>]<sup>3+</sup> was predicted to readily move toward the central atom with the result that a Sc-H bond was formed. Such faults could easily be corrected by the addition to the training set of appropriate reference data from high-level calculations. This was done in several instances, and the specific error was corrected, but this action then also required all the testing to be re-started. Because this was a time-consuming process, when faults were found near the end of the testing phase, the decision was taken that the fault should be noted, as in the Sc-H error mentioned here, and to take no further action at that time.</p>
+        <p>A different type of error, found only near the end of testing, was the unrealistically large <italic>p</italic> electron population of some transition metals. The values of the parameters that determine the <italic>p</italic> population are defined using two very different groups of reference data: atomic energy levels and conventional properties of polyatomics. If atomic energy levels were excluded from the parameter optimization, then the <italic>p</italic> population would become very small; but if atomic energy levels were excluded, then the resulting method would not be suitable for reproducing such levels. The decision to use all available atomic energy levels in the training set was a value judgement. In the next training set, it is likely that the result of this decision-making process will be different.</p>
+        <p>Detecting faults in semiempirical methods is difficult, and rather than wait until all errors of this type were found and fixed, a process that could potentially take several more years, the decision was made to freeze the parameters at their current value. Obviously, PM6 still has many errors; some have already been described. Work has already started in an attempt to correct them.</p>
+      </sec>
+    </sec>
+    <sec id="Sec49">
+      <title>Elimination of computational artifacts</title>
+      <p>Earlier NDDO methods, particularly PM3 and AM1, produced artifacts in potential energy surfaces as a result of unrealistic terms in the core-core approximation, specifically in the set of Gaussian functions used. In PM6, only one Gaussian-type correction to the core-core potential is allowed, and, consequently, the potential for these artifacts has been reduced. On the other hand, because PM6 uses diatomic parameters, the likelihood of readily-characterized errors involving specific pairs of atoms, e.g. Sc and H, as mentioned earlier, is increased. Errors of this type can be easily eliminated by a re-parameterization of the faulty diatomic.</p>
+      <p>There are over 450 sets of diatomic interactions parameterized in PM6, covering most of the common types of chemical bonds. But the number of potential bonds is much larger: given 70 elements, there are almost 2500 diatomic sets. If a molecule contains two elements for which the diatomic interaction parameters are missing, then, provided the elements are well separated, say by more than 4 &#xC5;ngstroms, the absence of the parameters will not be important. If the two elements were near to each other, then the diatomic core-core parameters would be needed. This would involve generating a small training set of reference data that included a few examples of the type of interaction involved, and optimizing the two terms in the diatomic interaction.</p>
+      <p>This ability to add diatomic parameter sets to PM6 without modifying the underlying parameterization has the advantage that more and more types of interaction can be added without changing the essential nature of the method.</p>
+    </sec>
+    <sec id="Sec50">
+      <title>Accuracy</title>
+      <p>PM6, being the most recent member of the NDDO family of approximate semiempirical methods, is understandably the most accurate. The development of each new method has been guided by the knowledge of the documented faults found in the earlier methods. This is reflected in the steady decrease in AUE of simple organic compounds, from 12.0&#xA0;kcal mol<sup>&#x2212;1</sup> for AM1 to 4.9&#xA0;kcal mol<sup>&#x2212;1</sup> for PM6.</p>
+      <p>Several low-energy phenomena are predicted more accurately by PM6, with the most important of these being the prediction of the energies and geometries involved in hydrogen bonding. One consequence of this increased accuracy is that the lowest energy conformer of acetylacetone is now correctly predicted to be the ene-ol structure, and not the twisted di-one configuration.</p>
+      <p>Despite the improvement in hydrogen bonding, a significant error was found in the balance of energies involved in forming zwitterions of hydroxyl and amine groups. This is best illustrated by the dimer of 2-aminophenol, where PM6 predicts that the zwitterion should be 3.6&#xA0;kcal mol<sup>&#x2212;1</sup> more stable than the neutral form, but higher level calculations indicate that the neutral form should be 17.7&#xA0;kcal mol<sup>&#x2212;1</sup> more stable than the zwitterion. In the solid state, CSD entries AMPHOM01 &#x2013; AMPHOM10 [<xref ref-type="bibr" rid="CR21">21</xref>], 2-aminophenol exists as the neutral species.</p>
+      <p>In general, however, average unsigned errors in &#x394;H<sub>f</sub> have steadily decreased as semiempirical methods have evolved. Earlier NDDO methods such as PM3 and AM1 had AUE significantly larger than the 6&#x2013;31G* Hartree Fock method. With the advent of PM5 and RM1 errors were intermediate between HF and B3LYP. In the current work, AUE in &#x394;H<sub>f</sub> are lower than those of both B3LYP and HF 6&#x2013;31G*. This increase in accuracy of prediction of &#x394;H<sub>f</sub> relative to higher level methods should not be construed as disparaging those methods: semiempirical methods in general, and PM6 in particular, were parameterized to reproduce &#x394;H<sub>f</sub>. The performance of these methods when applied to non-equilibrium systems, in particular transition states, is likely to be very inferior to that of B3LYP or HF 6&#x2013;31G*.</p>
+      <p>As a result of the current work, there is a clear strategy for further improving the accuracy of semiempirical methods. All three potential sources of error need to be addressed. Regarding reference data, considerably more data are needed than were used here. This would likely come from increased use of high-level theoretical methods: methods significantly more accurate than those used here would obviously be needed in any future work. Parameter optimization can be performed with confidence and reliability, particularly when well-behaved systems are used. In all cases examined where problems were encountered in parameter optimization, problems also occurred in the normal SCF calculation in MOPAC2007. This implies that as faults in the SCF procedure are corrected, faults in parameter optimization would also be removed.</p>
+    </sec>
+    <sec id="Sec51">
+      <title>Permanent errors</title>
+      <p>Notwithstanding the optimism just expressed, not all errors can be eliminated by better data and better optimizations. Despite strenuous efforts, some calculated quantities persistently failed to agree with the reference values. Many potential causes for these failures were investigated. In each case the weight for the offending quantity was increased considerably and the parameter optimization re-run. When that was done, the specific error decreased, but errors elsewhere increased disproportionately. Since the final gradient of the error function was acceptably small, it followed that the parameter optimization was not in error. The reference data were checked to ensure that they were in fact trustworthy. Because two of the three possible origins of error had been eliminated, the inescapable conclusion was that there is a fault in the set of approximations. The most serious of these faults was the qualitatively incorrect prediction of the geometry of the exceedingly simple system, iron pentacarbonyl.</p>
+    </sec>
+    <sec id="Sec52" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>The NDDO method has been modified by the adoption of Voityuk&#x2019;s core-core diatomic interaction parameters. This has resulted in a significant reduction in error for compounds of main-group elements, and, together with Thiel&#x2019;s <italic>d</italic>-orbital approximation, allows extension of the NDDO method to the whole of the transition metal block.</p>
+      <p>The accuracy of PM6 in predicting heats of formation for compounds of interest in biochemistry is somewhat better than Hartree Fock or B3LYP DFT methods, using the 6-31G(d) basis set. For a representative set of compounds, PM6 gave an average unsigned error of 4.4&#xA0;kcal mol<sup>&#x2212;1</sup>; for the same set HF and B3LYP had AUE of 7.4 and 5.2&#xA0;kcal mol<sup>&#x2212;1</sup>, respectively.</p>
+      <p>The potential exists for further large increases in accuracy. This would likely result from the increased use of accurate reference data derived from high-level methods, and from the development of better tools for detecting errors at an early stage of method development.</p>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Electronic supplementary material</title>
+      <supplementary-material id="N0x1d00710N0x2eeb190" content-type="local-data">
+        <p>Tables of errors in predicted heats of formation, geometries, dipole moments, and ionization potentials obtained using PM6, AM1, PM3, PM5, RM1, AM1*, HF 6-31G*, and B3LYP 6-31G* for individual species are provided, together with references for all reference data used. These data were used in generating the statistics presented in the discussion on accuracy.
+</p>
+        <media xlink:href="894_2007_233_MOESM1_ESM.doc" id="MOESM1" mimetype="application" mime-subtype="msword">
+          <label>ESM</label>
+          <caption>
+            <p>DOC 23.7&#xA0;MB</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work was funded by the National Institute of General Medical Sciences (NIGMS) Grant No. 2 R44 GM067327&#x2013;02.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pople</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Santry</surname>
+              <given-names>DP</given-names>
+            </name>
+            <name>
+              <surname>Segal</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>1965</year>
+          <volume>43</volume>
+          <fpage>S129</fpage>
+          <lpage>S135</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1701475</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pople JA, Santry DP, Segal GA (1965) J Chem Phys 43:S129&#x2013;S135 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pople</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Beveridge</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Dobosh</surname>
+              <given-names>PA</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>1967</year>
+          <volume>47</volume>
+          <fpage>2026</fpage>
+          <lpage>2033</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1712233</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pople JA, Beveridge DL, Dobosh PA (1967) J Chem Phys 47:2026&#x2013;2033 </citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dewar</surname>
+              <given-names>MJS</given-names>
+            </name>
+            <name>
+              <surname>Thiel</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>1977</year>
+          <volume>99</volume>
+          <fpage>4907</fpage>
+          <lpage>4917</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja00457a005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dewar MJS, Thiel W (1977) J Am Chem Soc 99:4907&#x2013;4917 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dewar</surname>
+              <given-names>MJS</given-names>
+            </name>
+            <name>
+              <surname>Thiel</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>1977</year>
+          <volume>99</volume>
+          <fpage>4899</fpage>
+          <lpage>4907</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja00457a004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dewar MJS, Thiel W (1977) J Am Chem Soc 99:4899&#x2013;4907 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bingham</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Dewar</surname>
+              <given-names>MJS</given-names>
+            </name>
+            <name>
+              <surname>Lo</surname>
+              <given-names>DH</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>1975</year>
+          <volume>97</volume>
+          <fpage>1285</fpage>
+          <lpage>1293</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja00839a001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bingham RC, Dewar MJS, Lo DH (1975) J Am Chem Soc 97:1285&#x2013;1293 </citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dewar</surname>
+              <given-names>MJS</given-names>
+            </name>
+            <name>
+              <surname>Zoebisch</surname>
+              <given-names>EG</given-names>
+            </name>
+            <name>
+              <surname>Healy</surname>
+              <given-names>EF</given-names>
+            </name>
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>1985</year>
+          <volume>107</volume>
+          <fpage>3902</fpage>
+          <lpage>3909</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja00299a024</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dewar MJS, Zoebisch EG, Healy EF, Stewart JJP (1985) J Am Chem Soc 107:3902&#x2013;3909 </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>1989</year>
+          <volume>10</volume>
+          <fpage>209</fpage>
+          <lpage>220</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.540100208</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart JJP (1989) J Comp Chem 10:209&#x2013;220 </citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>1989</year>
+          <volume>10</volume>
+          <fpage>221</fpage>
+          <lpage>264</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.540100209</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart JJP (1989) J Comp Chem 10:221&#x2013;264 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>1991</year>
+          <volume>12</volume>
+          <fpage>320</fpage>
+          <lpage>341</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.540120306</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart JJP (1991) J Comp Chem 12:320&#x2013;341 </citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anders</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Koch</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Freunscht</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>1993</year>
+          <volume>14</volume>
+          <fpage>301</fpage>
+          <lpage>1312</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Anders E, Koch R, Freunscht P (1993) J Comp Chem 14:1301&#x2013;1312 </citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Modelling</source>
+          <year>2004</year>
+          <volume>10</volume>
+          <fpage>155</fpage>
+          <lpage>164</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00894-004-0183-z</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart JJP (2004) J Mol Model 10:155&#x2013;164 </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thiel</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Voityuk</surname>
+              <given-names>AA</given-names>
+            </name>
+          </person-group>
+          <source>Theor Chim Acta</source>
+          <year>1992</year>
+          <volume>81</volume>
+          <fpage>391</fpage>
+          <lpage>404</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01134863</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Thiel W, Voityuk AA (1992) Theor Chim Acta 81:391&#x2013;404 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thiel</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Voityuk</surname>
+              <given-names>AA</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem</source>
+          <year>1996</year>
+          <volume>100</volume>
+          <fpage>616</fpage>
+          <lpage>629</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp952148o</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Thiel W, Voityuk AA (1996) J Phys Chem 100:616&#x2013;629 </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Voityuk</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>R&#xF6;sch</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem A</source>
+          <year>2000</year>
+          <volume>104</volume>
+          <fpage>4089</fpage>
+          <lpage>4094</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp994394w</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Voityuk AA, R&#xF6;sch N (2000) J Phys Chem A 104:4089&#x2013;4094 </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Winget</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Clark</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Modeling</source>
+          <year>2005</year>
+          <volume>11</volume>
+          <fpage>439</fpage>
+          <lpage>456</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00894-005-0236-y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Winget P, Clark T (2005) J Mol Model 11:439&#x2013;456 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giese</surname>
+              <given-names>TJ</given-names>
+            </name>
+            <name>
+              <surname>Sherer</surname>
+              <given-names>EC</given-names>
+            </name>
+            <name>
+              <surname>Cramer</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>York</surname>
+              <given-names>DM</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Theory and Comp</source>
+          <year>2005</year>
+          <volume>1</volume>
+          <fpage>1275</fpage>
+          <lpage>1285</lpage>
+          <pub-id pub-id-type="doi">10.1021/ct050102l</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Giese TJ, Sherer EC, Cramer CJ, York DM (2005) J Chem Theory and Comp 1:1275&#x2013;1285 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tejero</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Gonz&#xE1;lez-Lafont</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Lluch</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>2007</year>
+          <volume>28</volume>
+          <fpage>997</fpage>
+          <lpage>1005</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20609</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tejero I, Gonz&#xE1;lez-Lafont A, Lluch JM (2007) J Comp Chem 28:997&#x2013;1005 <pub-id pub-id-type="pmid">17274015</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arantes</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Loos</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Phys Chem Chem Phys</source>
+          <year>2006</year>
+          <volume>8</volume>
+          <fpage>347</fpage>
+          <lpage>353</lpage>
+          <pub-id pub-id-type="doi">10.1039/b511805k</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Arantes GM, Loos M (2006) Phys Chem Chem Phys 8:347&#x2013;353 <pub-id pub-id-type="pmid">16482277</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McNamara</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Sundararajan</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hillier</surname>
+              <given-names>IH</given-names>
+            </name>
+            <name>
+              <surname>Ge</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Campbell</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Morgado</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>2006</year>
+          <volume>27</volume>
+          <fpage>1307</fpage>
+          <lpage>1323</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20403</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McNamara JP, Sundararajan M, Hillier IH, Ge J, Campbell A, Morgado C (2006) J Comp Chem 27:1307&#x2013;1323 <pub-id pub-id-type="pmid">16786543</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="other">Afeefy HY, Liebman JF, Stein SE (2003) Neutral Thermochemical Data In: Linstrom PJ, Mallard, WG, Eds. NIST Chemistry WebBook, NIST Standard Reference Number 69 <ext-link ext-link-type="uri" xlink:href="http://webbooknistgov/chemistry">http://webbooknistgov/chemistry</ext-link> National Institute of Standards and Technology, Gaithersburg MD, 20899</citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Allen</surname>
+              <given-names>FH</given-names>
+            </name>
+          </person-group>
+          <source>Acta Cryst B</source>
+          <year>2007</year>
+          <volume>58</volume>
+          <fpage>380</fpage>
+          <lpage>388</lpage>
+          <pub-id pub-id-type="doi">10.1107/S0108768102003890</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Allen FH (2007) Acta Cryst B 58:380&#x2013;388 <pub-id pub-id-type="pmid">12037359</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem Ref Data</source>
+          <year>2004</year>
+          <volume>33</volume>
+          <fpage>713</fpage>
+          <lpage>724</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1643403</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart JJP (2004) J Phys Chem Ref Data 33:713&#x2013;724 </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Modelling</source>
+          <year>2004</year>
+          <volume>10</volume>
+          <fpage>6</fpage>
+          <lpage>12</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00894-003-0157-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart JJP (2004) J Mol Modelling 10:6&#x2013;12 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="other">
+          <ext-link ext-link-type="uri" xlink:href="http://webbook.nist.gov/cgi/cbook.cgi?Source=2004STE6-10&amp;Units=SI&amp;Mask=1">http://webbook.nist.gov/cgi/cbook.cgi?Source=2004STE6-10&amp;Units=SI&amp;Mask=1</ext-link>
+        </citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Becke</surname>
+              <given-names>AD</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>1993</year>
+          <volume>37</volume>
+          <fpage>5648</fpage>
+          <lpage>5652</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.464913</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Becke AD (1993) J Chem Phys 37:5648&#x2013;5652 </citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lee</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Parr</surname>
+              <given-names>RG</given-names>
+            </name>
+          </person-group>
+          <source>Phys Rev B</source>
+          <year>1988</year>
+          <volume>37</volume>
+          <fpage>785</fpage>
+          <lpage>789</lpage>
+          <pub-id pub-id-type="doi">10.1103/PhysRevB.37.785</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lee C, Yang W, Parr RG (1988) Phys Rev B 37:785&#x2013;789 </citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perdew</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Chevary</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Vosko</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Jackson</surname>
+              <given-names>KA</given-names>
+            </name>
+            <name>
+              <surname>Pederson</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Singh</surname>
+              <given-names>DJ</given-names>
+            </name>
+            <name>
+              <surname>Fiolhais</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <source>Phys Rev B</source>
+          <year>1992</year>
+          <volume>46</volume>
+          <fpage>6671</fpage>
+          <lpage>6687</lpage>
+          <pub-id pub-id-type="doi">10.1103/PhysRevB.46.6671</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Perdew JP, Chevary JA, Vosko SH, Jackson KA, Pederson MR, Singh DJ, Fiolhais C (1992) Phys Rev B 46:6671&#x2013;6687 </citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Ford</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>1994</year>
+          <volume>15</volume>
+          <fpage>200</fpage>
+          <lpage>207</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.540150210</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wang B, Ford G (1994) J Comp Chem 15:200&#x2013;207 </citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="other">Moore CE Atomic energy levels, Vol. I (Hydrogen through Vanadium); Natl. Bur. Stand. (U.S.) Cir. No. 467 (U.S. GPO, Washington, D.C.)], 1946</citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="other">Moore CE Atomic Energy Levels, Vol. II (Chromium through Niobium); Circular of the National Bureau of Standards 467, U.S. Government Printing Office: Washington, DC, 1952</citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="other">Moore CE Atomic Energy Levels, Vol. III (Molybdenum through Lanthanum and Hafnium through Actinium); Circular of the National Bureau of Standards 467, U.S. Government Printing Office: Washington, DC, 1958</citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lennard-Jones</surname>
+              <given-names>JE</given-names>
+            </name>
+          </person-group>
+          <source>Proc Phys Soc</source>
+          <year>1931</year>
+          <volume>43</volume>
+          <fpage>461</fpage>
+          <lpage>482</lpage>
+          <pub-id pub-id-type="doi">10.1088/0959-5309/43/5/301</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lennard-Jones JE (1931) Proc Phys Soc 43:461&#x2013;482 </citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="other">Stewart JJP; 7.101W; Stewart Computational Chemistry: Colorado Springs, 2007</citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dewar</surname>
+              <given-names>MJS</given-names>
+            </name>
+            <name>
+              <surname>Jie</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Zoebisch</surname>
+              <given-names>EG</given-names>
+            </name>
+          </person-group>
+          <source>Organometallics</source>
+          <year>1988</year>
+          <volume>7</volume>
+          <fpage>513</fpage>
+          <lpage>521</lpage>
+          <pub-id pub-id-type="doi">10.1021/om00092a043</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dewar MJS, Jie C, Zoebisch EG (1988) Organometallics 7:513&#x2013;521 </citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rocha</surname>
+              <given-names>GB</given-names>
+            </name>
+            <name>
+              <surname>Freire</surname>
+              <given-names>RO</given-names>
+            </name>
+            <name>
+              <surname>Simas</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Stewart</surname>
+              <given-names>JJP</given-names>
+            </name>
+          </person-group>
+          <source>J Comp Chem</source>
+          <year>2006</year>
+          <volume>27</volume>
+          <fpage>1101</fpage>
+          <lpage>1111</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20425</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rocha GB, Freire RO, Simas AM, Stewart JJP (2006) J Comp Chem 27:1101&#x2013;1111 <pub-id pub-id-type="pmid">16691568</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tschumper</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Leininger</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Hoffman</surname>
+              <given-names>BC</given-names>
+            </name>
+            <name>
+              <surname>Valeev</surname>
+              <given-names>EF</given-names>
+            </name>
+            <name>
+              <surname>Schaefer</surname>
+              <given-names>HF</given-names>
+            </name>
+            <name>
+              <surname>Quack</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2002</year>
+          <volume>116</volume>
+          <fpage>690</fpage>
+          <lpage>701</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1408302</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tschumper GS, Leininger ML, Hoffman BC, Valeev EF, Schaefer HF, Quack M (2002) J Chem Phys 116:690&#x2013;701 </citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pulay</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>1980</year>
+          <volume>73</volume>
+          <fpage>393</fpage>
+          <lpage>398</lpage>
+          <pub-id pub-id-type="doi">10.1016/0009-2614(80)80396-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pulay P (1980) Chem Phys Lett 73:393&#x2013;398 </citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p>
+          <bold>Electronic supplementary material</bold>
+        </p>
+        <p>The online version of this article (doi:10.1007/s00894-007-0233-4) contains supplementary material, which is available to authorized users.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,701 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17597935</article-id>
+      <article-id pub-id-type="pmc">1896059</article-id>
+      <article-id pub-id-type="publisher-id">99-1-2007</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Prediction Model</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Functional profiling and gene expression analysis of chromosomal copy number alterations</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Conde</surname>
+            <given-names>Luc&#xED;a</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Montaner</surname>
+            <given-names>David</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+          <xref rid="A2" ref-type="aff">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Burguet-Castell</surname>
+            <given-names>Jordi</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>T&#xE1;rraga</surname>
+            <given-names>Joaqu&#xED;n</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+          <xref rid="A2" ref-type="aff">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Al-Shahrour</surname>
+            <given-names>F&#xE1;tima</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Dopazo</surname>
+            <given-names>Joaqu&#xED;n</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+          <xref rid="A2" ref-type="aff">2</xref>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="A1"><label>1</label>Department of Bioinformatics, Centro de Investigaci&#xF3;n Pr&#xED;ncipe Felipe (CIPF), Valencia, E-46013, Spain</aff>
+      <aff id="A2"><label>2</label>Functional Genomics Node (INB), Centro de Investigaci&#xF3;n Pr&#xED;ncipe Felipe (CIPF), Valencia, E-46013, Spain</aff>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Joaqu&#xED;n Dopazo
+        E-mail:
+          <email>jdopazo@cipf.es</email>; Corresponding author</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>4</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>1</volume>
+      <issue>10</issue>
+      <fpage>432</fpage>
+      <lpage>435</lpage>
+      <history>
+        <date date-type="received">
+          <day>13</day>
+          <month>1</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>11</day>
+          <month>2</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2006 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2006</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction 
+				in any medium, for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Contrarily to the traditional view in which only one or a few key genes were supposed to be the causative factors of diseases, we discuss the importance 
+				of considering groups of functionally related genes in the study of pathologies characterised by chromosomal copy number alterations. Recent observations have 
+				reported the existence of regions in higher eukaryotic chromosomes (including humans) containing genes of related function that show a high degree of coregulation. Copy number 
+				alterations will consequently affect to clusters of functionally related genes, which will be the final causative agents of the diseased phenotype, in many cases. 
+				Therefore, we propose that the functional profiling of the regions affected by copy number alterations must be an important aspect to take into account in the understanding 
+				of this type of pathologies. To illustrate this, we present an integrated study of DNA copy number variations, gene expression along with the functional profiling of chromosomal 
+				regions in a case of multiple myeloma.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>profile</kwd>
+        <kwd>function</kwd>
+        <kwd>gene expression</kwd>
+        <kwd>chromosomal copy number</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>Genomic copy number alterations such as gains or losses of chromosomal regions have been shown to be on the basis of many human pathologies. Classical approaches
+to characterize these genetic aberrations used comparative genomic hybridisation (CGH), in which genomic DNA was hybridised to metaphase
+chromosomes. [<xref ref-type="bibr" rid="R01">1</xref>] Recently, the use of different types of microarrays to directly study genomic variations in DNA
+copy number is becoming more and more popular. Such massive genomic approaches are known as array comparative genomic hybridisation, or Array CGH. [<xref ref-type="bibr" rid="R02">2</xref>]
+These new technologies along with the use of expression arrays allow for a highly accurate characterisation of the dependence of gene expression on alterations in genomic
+copy number. [<xref ref-type="bibr" rid="R03">3</xref>]</p>
+      <p>As in many genome-scale methodologies data analysis and, in particular, the biological interpretation of the results constitutes a well-known bottleneck. Specific
+problems related to the analysis of Array CGH can be circumscribed mainly to two types: appropriate mapping and visualisation of the data onto the chromosomes, and
+efficient copy number estimation. This last aspect has been the motivation for a number of analytical approaches recently proposed [<xref ref-type="bibr" rid="R04">4</xref>], that can be considered
+the first generation of algorithms for Array CGH analysis. Obviously, copy number variations are expected to have a strong effect on gene expression. [<xref ref-type="bibr" rid="R05">5</xref>,<xref ref-type="bibr" rid="R06">6</xref>] Nevertheless, the ultimate aim of studies of copy
+number chromosomal alterations is to understand what is the effect produced in functional terms. In the classical vision one or a few key genes are the causative factors
+for the this type of pathologies, and the problem consisted in identifying such genes within the region amplified or deleted. The existence of regions in the
+chromosomes containing coexpressing genes [<xref ref-type="bibr" rid="R07">7</xref>] which, in addition, are functionally related has recently been
+reported even in higher eukaryotes. [<xref ref-type="bibr" rid="R08">8</xref>] Actually, regional arrangements of genes have found to be
+regulated not only by copy number alterations but also by different mechanisms such as epigenetic modifications. [<xref ref-type="bibr" rid="R09">9</xref>] This reinforces 
+the functional role of chromosomal regions including groups of functionally related genes and its possible impact on diseases such as cancer. [<xref ref-type="bibr" rid="R10">10</xref>] 
+These observations give credence to a new vision in which chromosomal alterations can be causing effects not by altering single key genes but by acting on
+complete molecular sub-systems such as pathways of functionally related genes. Recently, different approaches have focused on the functional aspects of the
+results of microarray experiments. [<xref ref-type="bibr" rid="R11">11</xref>,<xref ref-type="bibr" rid="R12">12</xref>] Nevertheless,
+the possible functional significance at regional level of copy number alterations has been largely ignored. Here we present a combined approach to the study of copynumber
+alterations, gene expression and functional profiling, exemplified in a case of multiple myeloma. [<xref ref-type="bibr" rid="R13">13</xref>]</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <p>Functional profiling of Array-CGH experiments under this new perspective would require of three steps: 1) detection of regions with copy number variations (the
+origin of the disease), 2) detection of regional alterations in gene expression (the causes of the disease) and 3) analysis of enrichment in functional terms in the detected
+regions (the consequences of the alteration or the functional basis of the disease). While copy number alterations can be detected by means of different
+methods, alterations in the levels of gene expression are not always easy to be detected using the typical methods (t-test or similar) due several factors such as small
+sample sizes. For this reason here we will only use plots to visualize the effect of one variable (copy number) into the other one (expression level). The third step, the functional profiling, becomes then the most important
+aspect of the analysis given that it will provide a functional explanation of the molecular basis of the disease caused by copy number alterations.</p>
+      <sec id="s2a">
+        <title>Detection of copy number alterations</title>
+        <p>We have used a segmentation method which is a variant of the circular binary segmentation method [<xref ref-type="bibr" rid="R14">14</xref>], for copy number change detection (isowindow).</p>
+        <p>The isowindow method tries to identify boundaries between regions with a significant change in the values of intensity of hybridisation of the probes by some
+consecutive steps. Firstly a t-test is used to determine differences between regions around all possible boundary points. Once all the candidate boundaries have
+been selected (a liberal p-value is used at this stage) there are sorted from small to high minimum p-values. In a second step the boundary candidates in the list with
+overlapping neighbourhoods are filtered to obtain a refined list of optimal non-overlapping boundary candidates. All the p-values are recalculated for the
+redefined neighbourhoods and a more stringent threshold is applied here. Finally, regions at both sides of each boundary candidate are again compared with a t-test. If
+they are not significantly different in their average hybridisation values, then they are merged as a unique region. Otherwise they define two regions with different
+copy number value. This is a simple and quick procedure that allows for easily changing from fine to coarse resolution by modifying the thresholds for the p-values.</p>
+        <p>We have compared isowindow to other two methods for breakpoint detection, GLAD [<xref ref-type="bibr" rid="R15">15</xref>] and circular binary
+segmentation (CBS) [<xref ref-type="bibr" rid="R14">14</xref>], which are among the best performers. [<xref ref-type="bibr" rid="R04">4</xref>] 
+In the GLAD method a likelihood function with weights determined adaptively is used to solve the copy number estimation problem locally based
+on data smoothed. Then, the algorithm finds, for each probe, the maximal neighbourhood in which the local constant assumption holds. Each of the constant pieces
+of the line define a block of probes with similar copy number among them and different copy number from that of the nearby regions. On the other hand, the CBS
+method selects firstly a segment of the data (a group of probes that are all consecutively arranged in the genome or in a chromosome). The copy number measures of the
+probes in that segment are compared to those in the reminder dataset using a t-statistic. Hence, the method can distinguish whether the segment chosen has a copy
+number that is higher or lower than the overall copy number in the data, assumed to be the normal reference. This scheme is iterated exhaustively for all possible
+segments in the dataset, spotting those that correspond to regions of altered copy number.</p>
+        <p>An approximation to the relative performances of the methods used was obtained by means of simulated data sets. Such datasets were generated by means of a
+piecewise constant function plus random alterations normally distributed with mean value and three different levels for the standard deviation (corresponding to noise
+levels 0.2, 0.5 and 1). A mean value of 0 would correspond to a normal region, without copy number alterations, while mean values lower and higher would
+correspond to deletions or amplifications at different degrees, respectively. Amplified and deleted regions of different sizes are randomly situated within the simulated
+normal chromosome and the methods have to locate them at different noise levels. The method proposed here performs at least as well as the GLAD and CBS (Table
+1) while being more efficient in terms of runtimes. Isowindow shows a better performance in finding small amplicons.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Functional profiling of regions with copy number alterations</title>
+        <p>The final aim of a Array-CGH experiment is to find a molecular explanation for the effects of the detected copy umber alterations. The interpretation of genomescale
+data is usually performed in two steps: in a first step genes of interest are selected in this case because they are located in the amplified (or lost) region detected.
+In a second step, the selected genes of interest are compared to the background (here the rest of genes in the chromosome) in order to find enrichment in any
+functional category (gene ontology, KEGG pathways, etc.) This comparison to the background is required because otherwise the significance of a proportion (even
+if high) cannot be determined. Different approaches have been developed to this end. [<xref ref-type="bibr" rid="R11">11</xref>] Here we will use the
+FatiGO+ (16) program, which uses a Fisher's exact test to determine the enrichment in different functional categories including gene ontology, KEEG pathways,
+Interpro functional motifs, Swissprot keywords and some regulatory elements such as transcription factor binding sites or other regulatory motifs. [<xref ref-type="bibr" rid="R17">17</xref>]</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Discussion</title>
+      <p>We have implemented all the described functionalities in a program, ISACGH (an acronym for <italic>In Silico</italic> Array CGH), which is used to illustrate the concept of
+functional profiling of CGH arrays with an example of multiple myeloma (MM), an incurable form of haematological neoplasia.</p>
+      <p>Nine MM cell lines were obtained from the DSMZ (Deuche Sammlung von Mikroorganismen und Zelkuturen GmbH, Braunschweig, Germany) and were
+cultured under recommended conditions. DNA and RNA were extracted using supplier's protocols. Microarray assays were performed using the CNIO OncoChip,
+which contains 7657 different cDNA clones of cancer related genes. [<xref ref-type="bibr" rid="R18">18</xref>] CGH experiments onto cDNA arrays
+and hybridisation were performed as described in [<xref ref-type="bibr" rid="R13">13</xref>] and quantified using the GenePix Pro 5.0 software (Axon
+Instruments Inc., Union City, CA). Cy3/Cy5 ratio values were normalized using the DNMAD tool from the GEPAS [<xref ref-type="bibr" rid="R19">19</xref>,<xref ref-type="bibr" rid="R20">20</xref>
+,<xref ref-type="bibr" rid="R21">21</xref>] and the resulting data were transformed to log2 ratios. Our purpose was to identify
+any possible region that contained copy number gains (amplifications), to study the expression of the genes included in that particular region and to understand the
+possible functional consequences of such alterations.</p>
+      <p>Using the segmentation method as implemented in the ISACGH we could detect a putative amplicon in the chromosome 18 (which remained undetected with both
+GLAD and CBS, because of the low density of the array, although the effect would have been the same in a high density arrays with a small amplicon) The figure shows
+the region (left) and the slight, although appreciable, differences in gene expression levels within the amplicon (right).</p>
+      <p>A unique feature offered by ISACGH is the possibility of obtaining a functional profile of the detected chromosomal regions. When the amplicon is analysed
+through the FatiGO+ program [<xref ref-type="bibr" rid="R16">16</xref>,<xref ref-type="bibr" rid="R17">17</xref>] a number of GO
+terms arise as over-represented in the genes contained in such region. Thus, the GO terms regulation of cellular process (GO:0050794) and regulation of physiological
+process (GO:0050791) were significantly overrepresented in the amplicon (FDR adjusted p-value=0.0336). Genes annotated with these terms were: BCL2,
+MALT1, NEDD4L, MBD2, TNFRSF11A and TCF4. Some of them have annotations at more detailed levels in GO, although the number of genes was too small as to
+produce statistically significant results. For example BCL2 and MALT1 are annotated as negative regulation of programmed cell death (GO:0043069). These
+observations suggest that some processes altered, that ultimately lead to diseases, are not produced by the deregulation of one unique gene, but are the combined
+result of simultaneous deregulations of genes involved in a pathway or a particular biological function. In addition, these findings stress the importance of the use of
+functional profiling methods for the proper understanding and interpretation of the results of the genome-scale experiments. This unique feature included
+in ISACGH is of extreme importance since growing evidence suggests the existence of clusters of functionally related genes in the chromosomes [<xref ref-type="bibr" rid="R08">8</xref>] 
+and the possible impact on diseases such as cancer. [<xref ref-type="bibr" rid="R10">10</xref>]</p>
+      <p>Although ISACGH [<xref ref-type="bibr" rid="R22">22</xref>] can be used alone, it is tightly integrated in the GEPAS package. [<xref ref-type="bibr" rid="R19">19</xref>,
+<xref ref-type="bibr" rid="R21">21</xref>,<xref ref-type="bibr" rid="R23">23</xref>] GEPAS, that stands for Gene Expression Profile Analysis Suite
+(GEPAS), constitutes one of the most complete resources for microarray data analysis available over the web. GEPAS includes facilities for normalisations, clustering,
+gene selection, predictors and functional profiling. Thus, different operations (including pre-processing or normalization) can directly be performed within the
+same environment, without the necessity of any file reformatting step.</p>
+    </sec>
+    <sec sec-type="conclusion" id="s4">
+      <title>Conclusion</title>
+      <p>Despite a number of applications dealing with the estimation of genomic copy number have been recently published [<xref ref-type="bibr" rid="R04">4</xref>], 
+there are different aspects of the analysis of Array CGH data that have been poorly addressed or even ignored. Recent evidences strongly support the
+existence of regional arrangements of functionally related genes [<xref ref-type="bibr" rid="R08">8</xref>], with obvious consequences for the understanding of diseases 
+characterised by copy number alterations, such as an important number of cancers. [<xref ref-type="bibr" rid="R10">10</xref>]
+This fact reduces the validity to the classical vision, in which one or a few key genes would be the causative factors of the disease, and urges to take into
+consideration the functional dimension in the interpretation of the effects of copy number alterations. In this new scenario, the deregulation of blocks of
+functionally related genes located in the chromosomal regions with copy number alterations would be behind the disease phenotype.</p>
+      <p>The methods for functional profiling have proven in many scenarios its usefulness. An obvious challenge is to increase our knowledge in different aspects of function
+and cooperation between genes in order to be able of applying this methods in a way that allows us to unravel new unknown functional aspects of the biology of the
+cell and their connections to pathologies.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work is supported by grants from Fundaci&#xF3; La Caixa, NRC Canada-SEPOCT Spain, project BIO 2005-01078 from the MEC and National Institute of Bioinformatics 
+(<ext-link ext-link-type="uri" xlink:href="www.inab.org">www.inab.org</ext-link>) a platform of 
+Genoma Espa&#xF1;a.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kallioniemi</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Science</source>
+          <year>1992</year>
+          <volume>258</volume>
+          <fpage>818</fpage>
+          <pub-id pub-id-type="pmid">1359641</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Albertson</surname>
+              <given-names>DG</given-names>
+            </name>
+            <name>
+              <surname>Pinkel</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Hum Mol Genet</source>
+          <year>2003</year>
+          <volume>2</volume>
+          <fpage>R145</fpage>
+          <pub-id pub-id-type="pmid">12915456</pub-id>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mahlamaki</surname>
+              <given-names>EH</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Neoplasia</source>
+          <year>2004</year>
+          <volume>6</volume>
+          <fpage>432</fpage>
+          <pub-id pub-id-type="pmid">15548351</pub-id>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lai</surname>
+              <given-names>WR</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>3763</fpage>
+          <pub-id pub-id-type="pmid">16081473</pub-id>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heidenblad</surname>
+              <given-names>M</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Oncogene</source>
+          <year>2005</year>
+          <volume>24</volume>
+          <fpage>1794</fpage>
+          <pub-id pub-id-type="pmid">15688027</pub-id>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pinkel</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Albertson</surname>
+              <given-names>DG</given-names>
+            </name>
+          </person-group>
+          <source>Nat Genet</source>
+          <year>2005</year>
+          <volume>37</volume>
+          <fpage>S11</fpage>
+          <pub-id pub-id-type="pmid">15920524</pub-id>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Caron</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Science</source>
+          <year>2001</year>
+          <volume>291</volume>
+          <fpage>1289</fpage>
+          <pub-id pub-id-type="pmid">11181992</pub-id>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hurst</surname>
+              <given-names>LD</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nat Rev Genet</source>
+          <year>2004</year>
+          <volume>5</volume>
+          <fpage>299</fpage>
+          <pub-id pub-id-type="pmid">15131653</pub-id>
+        </citation>
+      </ref>
+      <ref id="R09">
+        <label>9</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stransky</surname>
+              <given-names>N</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nat Genet</source>
+          <year>2006</year>
+          <volume>38</volume>
+          <fpage>1386</fpage>
+          <pub-id pub-id-type="pmid">17099711</pub-id>
+        </citation>
+      </ref>
+      <ref id="R10">
+        <label>10</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>Y</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Cancer Res</source>
+          <year>2003</year>
+          <volume>63</volume>
+          <fpage>5781</fpage>
+          <pub-id pub-id-type="pmid">14522899</pub-id>
+        </citation>
+      </ref>
+      <ref id="R11">
+        <label>11</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dopazo</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Omics</source>
+          <year>2006</year>
+          <volume>10</volume>
+          <fpage>398</fpage>
+          <pub-id pub-id-type="pmid">17069516</pub-id>
+        </citation>
+      </ref>
+      <ref id="R12">
+        <label>12</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Datta</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Datta</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>BMC Bioinformatics</source>
+          <year>2006</year>
+          <volume>7</volume>
+          <fpage>397</fpage>
+          <pub-id pub-id-type="pmid">16945146</pub-id>
+        </citation>
+      </ref>
+      <ref id="R13">
+        <label>13</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Largo</surname>
+              <given-names>C</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Haematologica</source>
+          <year>2006</year>
+          <volume>91</volume>
+          <fpage>184</fpage>
+          <pub-id pub-id-type="pmid">16461302</pub-id>
+        </citation>
+      </ref>
+      <ref id="R14">
+        <label>14</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olshen</surname>
+              <given-names>AB</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Biostatistics</source>
+          <year>2004</year>
+          <volume>5</volume>
+          <fpage>557</fpage>
+          <pub-id pub-id-type="pmid">15475419</pub-id>
+        </citation>
+      </ref>
+      <ref id="R15">
+        <label>15</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hupe</surname>
+              <given-names>P</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <fpage>3413</fpage>
+          <pub-id pub-id-type="pmid">15381628</pub-id>
+        </citation>
+      </ref>
+      <ref id="R16">
+        <label>16</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Al-Shahrour</surname>
+              <given-names>F</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <fpage>578</fpage>
+          <pub-id pub-id-type="pmid">14990455</pub-id>
+        </citation>
+      </ref>
+      <ref id="R17">
+        <label>17</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Al-Shahrour</surname>
+              <given-names>F</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>W460</fpage>
+          <pub-id pub-id-type="pmid">15980512</pub-id>
+        </citation>
+      </ref>
+      <ref id="R18">
+        <label>18</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tracey</surname>
+              <given-names>L</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Am J Pathol</source>
+          <year>2002</year>
+          <volume>161</volume>
+          <fpage>1825</fpage>
+          <pub-id pub-id-type="pmid">12414529</pub-id>
+        </citation>
+      </ref>
+      <ref id="R19">
+        <label>19</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.gepas.org">http://www.gepas.org</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R20">
+        <label>20</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Herrero</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>W485</fpage>
+          <pub-id pub-id-type="pmid">15215434</pub-id>
+        </citation>
+      </ref>
+      <ref id="R21">
+        <label>21</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Montaner</surname>
+              <given-names>D</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2006</year>
+          <volume>34</volume>
+          <fpage>W486</fpage>
+          <pub-id pub-id-type="pmid">16845056</pub-id>
+        </citation>
+      </ref>
+      <ref id="R22">
+        <label>22</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://isacgh.bioinfo.cipf.es">http://isacgh.bioinfo.cipf.es</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R23">
+        <label>23</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Herrero</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>3461</fpage>
+          <pub-id pub-id-type="pmid">12824345</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <table-wrap id="T1" position="float">
+        <label>Table 1</label>
+        <caption>
+          <title>Percentage of success in finding copy number alterations in the simulation of the four methods for copy
+          number estimation included in ISACGH</title>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th colspan="4" align="center" valign="top" rowspan="1">Method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="1" colspan="1">Noise level</td>
+              <td rowspan="1" colspan="1">GLAD</td>
+              <td rowspan="1" colspan="1">Isowindow</td>
+              <td rowspan="1" colspan="1">CBS</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">0.2</td>
+              <td rowspan="1" colspan="1">96.9</td>
+              <td rowspan="1" colspan="1">100.0</td>
+              <td rowspan="1" colspan="1">90.6</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">0.5</td>
+              <td rowspan="1" colspan="1">40.6</td>
+              <td rowspan="1" colspan="1">62.5</td>
+              <td rowspan="1" colspan="1">87.5</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">1.0</td>
+              <td rowspan="1" colspan="1">9.4</td>
+              <td rowspan="1" colspan="1">21.9</td>
+              <td rowspan="1" colspan="1">21.9</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>Detection on an amplicon in the chromosome 18 and the relationship between copy number estimation and
+gene expression. Left: the blue line represents the copy number estimation and the grey bars represent the individual
+gene expression values represented onto the same chromosomal coordinates. Right: boxplots of gene expression
+values for the regions with no copy number (a log-ratio of approximately 0) and the amplicon region, which is a
+duplication (a log-ratio of approximately 1) There is a slight increase in gene expression values in the region of the
+amplicon</p>
+        </caption>
+        <graphic xlink:href="97320630001432F1"/>
+      </fig>
+    </sec>
+    <fn-group>
+      <fn id="FN1" fn-type="other">
+        <p>
+        <bold>Citation:</bold>Conde 
+        <italic>et al.</italic>, Bioinformation 1(10): 432-435 (2007)</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

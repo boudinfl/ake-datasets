@@ -1,0 +1,985 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Comput Aided Mol Des</journal-id>
+      <journal-title>Journal of Computer-Aided Molecular Design</journal-title>
+      <issn pub-type="ppub">0920-654X</issn>
+      <issn pub-type="epub">1573-4951</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18253702</article-id>
+      <article-id pub-id-type="pmc">2270923</article-id>
+      <article-id pub-id-type="publisher-id">9170</article-id>
+      <article-id pub-id-type="doi">10.1007/s10822-008-9170-2</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>What do we know and when do we know it?</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Nicholls</surname>
+            <given-names>Anthony</given-names>
+          </name>
+          <address>
+            <phone>+1-505-4737385</phone>
+            <email>anthony@eyesopen.com</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">OpenEye Scientific Software, Inc, 9D Bisbee Crt, Santa Fe, NM 87508 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>6</day>
+        <month>2</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>22</volume>
+      <issue>3-4</issue>
+      <fpage>239</fpage>
+      <lpage>255</lpage>
+      <history>
+        <date date-type="received">
+          <day>16</day>
+          <month>11</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>2</day>
+          <month>1</month>
+          <year>2008</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2008</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Two essential aspects of virtual screening are considered: experimental design and performance metrics. In the design of any retrospective virtual screen, choices have to be made as to the purpose of the exercise. Is the goal to compare methods? Is the interest in a particular type of target or all targets? Are we simulating a &#x2018;real-world&#x2019; setting, or teasing out distinguishing features of a method? What are the confidence limits for the results? What should be reported in a publication? In particular, what criteria should be used to decide between different performance metrics? Comparing the field of molecular modeling to other endeavors, such as medical statistics, criminology, or computer hardware evaluation indicates some clear directions. Taken together these suggest the modeling field has a long way to go to provide effective assessment of its approaches, either to itself or to a broader audience, but that there are no technical reasons why progress cannot be made.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Virtual screening</kwd>
+        <kwd>Statistics</kwd>
+        <kwd>AUC</kwd>
+        <kwd>ROC curves</kwd>
+        <kwd>Metrics</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Virtual screening in the pharmaceutical industry is an essential part of molecular modeling&#x2019;s contribution to lead discovery and, to a lesser extent, lead optimization. This has led to considerable research into what method or approach works best, typically by means of &#x2018;retrospective&#x2019; evaluations, i.e. attempting to predict future, i.e. prospective, behavior by appraising techniques on known systems. Despite this there is no agreed upon theory as to how to conduct a retrospective evaluation. As a consequence, it is very difficult for an outsider to assess if methods are getting better, have stayed the same, or even worsened over time. In a practical enterprise, such as drug discovery, the proposed benefits of virtual screening, i.e. avoiding the cost and time of a real screen, have to be weighed against one simple question: does it actually work? Without proper metrics of success, i.e. ones that go beyond the anecdotal, molecular modeling is not guaranteed a vibrant future.</p>
+      <p>Observed as a general exercise, there are four elements that ought to be standard for any prediction study, whether of a virtual screen, or any general pattern recognition method. The first is whether the study is well designed. The second is what metrics are used to evaluate the outcome. The third is a consideration of significance, i.e. error analysis. And the fourth is a reliable assessment of whether the results are particular or general. All four aspects are important and yet it is rare for a study in any field to meet&#xA0;all these criteria. Even in the most critical part of drug discovery, i.e. clinical trials, there is considerable room for improvement, as several recent retrospective studies of the medical literature have demonstrated [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR2">2</xref>]. In reports on virtual screening, in fact in molecular modeling in general, it is rare to find an adequate consideration of any of these issues.</p>
+      <p>Why is this? Why is the modeling field so poor at the most basic elements of evaluation? A charitable view would be that, as with communication skills, most modelers receive little appropriate formal training. Certainly there is no central resource, whether scholastic review, book or paper. A slightly less charitable view is that journals have not developed standards for publication and as such there is little Darwinian pressure to improve what the community sees as acceptable. It is to be hoped that this is a learning curve, i.e. that editors will eventually appreciate what is required in a study. An extreme view is that we are poor at evaluations because we simply do not matter very much. If large fortunes were won or lost on the results from computational techniques there would be immense debate as to how to analyze and compare methods, on what we know and exactly when we know it. There would be double blind, prospective and rigorously reviewed studies of a scale and depth unknown in our field but common in, for instance, clinical trials. In short, there would be standards.</p>
+      <p>In the hope that virtual screening is, in fact, worthwhile we provide comment, suggestions and research on two important aspects, namely experimental design and performance metrics. Although the two are intimately linked, i.e. an experiment should be designed with a mind to what is being measured, there are distinguishable aspects. On experimental design, extensive properties, such as number of targets, actives and inactives, need to reflect a statistical understanding of the current unreliability, or high <italic>variance</italic>, of methods [<xref ref-type="bibr" rid="CR3">3</xref>&#x2013;<xref ref-type="bibr" rid="CR5">5</xref>]. So dominant is this variance that it almost renders moot any discussion of other matters, such as decoy design. However, ultimately all aspects of design are important. On decoy selection we suggest the necessity of clarifying design intent and suggest four broad categorizations. In analyzing results, the issue of correlation is considered. This often arises in the context of the 2D similarity of actives from congeneric series, but the general issue also concerns decoys, targets and methods. Research is proposed that would clarify essential and poorly understood issues, such as the transference of predictability between closely related systems. On evaluation metrics we examine the AUC (Area Under the Curve) of ROC (Receiver Operator Characteristic) curves [<xref ref-type="bibr" rid="CR6">6</xref>&#x2013;<xref ref-type="bibr" rid="CR9">9</xref>]. Consideration of why the AUC is a popular measure in many disciplines suggests standards by which virtual screening metrics ought to be judged. Finally, by evaluating average properties of large numbers of systems, and by considering simple cost/benefit examples, we bring into question the validity and utility of metrics proposed to capture &#x2018;early&#x2019; behavior.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Experimental design</title>
+      <p>In what follows we consider the importance of both intensive and extensive properties of an experiment. An intensive property is something intrinsic to a design, whereas extensive properties change with the size of the system. For example, the type of decoys used in a retrospective study is an intensive property; the number of such is an extensive property. We believe the most overlooked intensive characteristic is the design goal, i.e. what is trying to be proved. This typically falls into a few discrete classes and appropriate labeling would help combine lessons from different studies. For extensive quantities we consider how common statistical approaches can aid the choice of numbers of actives, decoys and targets. Finally, actives, decoys, targets or methods are not always independent and this has to be quantified even in as simple a matter as comparing two programs. Techniques for accounting for correlation within an experimental design are known but rarely applied.</p>
+      <sec id="Sec3">
+        <title>Intensive properties</title>
+        <p>One of the most basic issues in designing a retrospective screen is how to chose decoys. Typically there are a certain number of active compounds and one wishes to see if a method can distinguish these from a second set, presumed inactive. This is the most basic of classification problems. Is X of type A or type B? The legal system often has the same dilemma, e.g. was X at the scene of a crime or not? A police line-up has all the components of a virtual screen. Usually the number of actives (suspects) is small, usually one. The number of decoys (called &#x2018;fillers&#x2019;) has to be sufficient that random selection does not compete with real recognition; a minimum of four is usual. But it cannot be so large that guilt is hidden within the statistical variance of the innocent. The fillers need to be convincing, i.e. not outlandishly dissimilar to the guilty party, but not too similar or even potentially also at the scene (i.e. false false positives). As courtroom verdicts can depend on the appropriateness of a line-up, standard procedures are well known.</p>
+        <p>We make the argument for four types of virtual screening experiments; each with its own intent. Each of the four designs ultimately consists of a random selection of decoys but after the application of different filters. <list list-type="order"><list-item><p><italic>Universal</italic>. Any compound available to be physically screened, typically either from vendors or corporate collections.</p></list-item><list-item><p><italic>Drug-like</italic>. Available and drug-like, typically by applying simple chemical filters.</p></list-item><list-item><p><italic>Mimetics</italic>. Available, drug-like and matched to <italic>known</italic> ligands by simple physical properties.</p></list-item><list-item><p><italic>Modeled</italic>. Available, drug-like and derived using 3D modeling on known ligands or the intended targets.</p></list-item></list>Although no classification scheme could be perfect, fair comparison of studies requires an alignment of intent. In general, decoys get &#x2018;harder&#x2019; from A to D, although this is not necessarily true on a case-by-case basis and is itself an interesting area of research.</p>
+        <p>The first, and perhaps least in favor, is the <italic>universal</italic> selection of decoys. A catalogue of compounds from a vendor or set of vendors is treated as a general population from which to draw. An example of a virtual study with <italic>universal</italic> decoys can be found in Rognan et&#xA0;al. [<xref ref-type="bibr" rid="CR10">10</xref>]. Although this method is now uncommon, it has an interesting intent. Faced with all compounds available for testing, does a method distinguish known actives without using <italic>prior</italic> knowledge of what makes a compound active? Drug discovery has a long and successful history of grinding up exotic plants and animals and screening for activity and so this is a reasonable, if old-fashioned, approach. In the Rognan set, for example, we find I<sub>3</sub>, not likely to be a drug but none-the-less an interesting molecule. The problem with <italic>universal</italic> decoys is two fold. First, is it random enough? The space of all possible chemistry is exceedingly vast [<xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR12">12</xref>]. The concept that a few thousand compounds, in particular from a vendor database, could act as a thorough sampling is implausible. In fact, there is now evidence suggesting known chemistry is very restrictive [<xref ref-type="bibr" rid="CR12">12</xref>]. Because of &#x2018;inductive bias&#x2019;, a concept frequently highlighted by Jain [<xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR14">14</xref>], we tend to make what we know might work, instead of sampling of what can be made. Second, is it possible a universal decoy such as I<sub>3&#xA0;</sub>might stand out pretty much the same way a shady character would stand out against a selection of school children, shop clerks and nuns? Paul Hawkins has described this as the &#x2018;dog&#x2019; test [<xref ref-type="bibr" rid="CR15">15</xref>], i.e. if your dog could tell the difference between the actives and inactives what have you really proved? Actually, potentially a lot but only if the rest of the experiment is designed with this choice of decoys in mind. The problem here is one of dynamic range. If it is too easy to distinguish an active then the only way to distinguish between the methods is to test many, many times, i.e. to improve the statistical power necessary to rank one method above another. As is well known, and discussed below, the error in any metric depends on both the number of actives and the number of inactives. While it is trivial to increase the number of (presumed) inactives almost without bound, the number of actives is normally very finite. Only in some of the more impressive published studies does the number of actives exceed a hundred [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR4">4</xref>] and it is this limitation that really hinders random decoys being an effective experimental design. We note that this is only a presumed inadequacy of <italic>universal</italic> decoys; in fact such decoys may prove difficult for some computation methods, the Hawkins dog test not with-standing. The point is that a presumed limitation can be overcome by applying basic error analysis.</p>
+        <p>A more typical selection procedure is to choose from a decoy set that is &#x2018;drug-like&#x2019;. Of course, there is no rigorous definition of &#x2018;drug-like&#x2019;, but this does not stop it being widely used. The intent is to mimic modern physical screens and not test everything but instead be guided by current dogma as to what a drug might look like. The most prevalent of these descriptions is the famous Lipinski Rule-of-Five, but there are many variants [<xref ref-type="bibr" rid="CR16">16</xref>]. This is not dissimilar to how police line-ups are actually constructed; &#x2018;fillers&#x2019; are normally acquired from local jails. In theory, this should also be a harder test of methods because there are less easily discernable inactives, although this is not proven. Examples of this approach are the studies of McGaughey et&#xA0;al. and Warren et&#xA0;al. One potential advantage of this approach is that because decoys are derived from characterized collections they are more likely to be known to be inactives. This is typically only an assumption for <italic>universal</italic> decoy sets. It is debatable as to how big a problem false decoys are, but clearly they do not help. There are also issues with <italic>drug-like</italic> decoys. Some companies&#x2019; collections are heavily biased towards certain targets that may or may not be related to the retrospective study at hand. The study by McGaughey et&#xA0;al. reported significant differences in the efficiency of decoys chosen from the MMDR, a kind of &#x2018;consensus&#x2019; drug-like collection, compared to ones from their internal Merck database. This trade of generality for local applicability is a characteristic of many aspects of evaluations. For instance, should targets be chosen to represent all possible systems, a subset of pharmaceutical interest or a class within that subset? What is gained in local applicability is often lost to generality and prospective predictability.</p>
+        <p>The third approach is to find <italic>mimetic</italic> or <italic>modeled</italic> decoys. These are meant to stress-test methods and should be used to compare approaches, rather than necessarily evaluate real-world performance. <italic>Mimetic</italic> decoys are constructed so that &#x2018;simple&#x2019; methods cannot tell known ligands from decoys. The rationale is utilitarian; why should one chose to use sophisticated methods when simple, ligand-based, ones can do just as well? Approaches include matching physical properties, for instance size, number of hydrogen bond donors and acceptors, lipophilicity, charge or flexibility [<xref ref-type="bibr" rid="CR17">17</xref>]. An example of this approach is the DUD dataset [<xref ref-type="bibr" rid="CR18">18</xref>] of Irwin et&#xA0;al. Here, for each target thirty-six decoys are found for each active by matching physical properties, forming a <italic>mimetic</italic> set referred to as DUD-<italic>self</italic>. The combined set, i.e. across all targets is <italic>drug-like</italic> and is referred to as DUD-<italic>all</italic>. <italic>Mimetic</italic> decoys can sometimes be depressingly effective, as illustrated by Irwin et&#xA0;al. However, in not all cases were DUD-<italic>self</italic> decoys harder to distinguish than decoys from DUD-<italic>all</italic>. This at least suggests physical property <italic>mimetics</italic> are not guaranteed to provide a reality check for methods claiming to capture the physics of drug-target interaction.</p>
+        <p><italic>Modeled</italic> decoys go one step further than <italic>mimetics</italic> by eschewing the concept of comparison to simple, practical, methods and instead designing directly against the method under study. As an example, suppose decoys for a docking study were chosen such that every decoy had good shape complementarity with some part of the active site, i.e. it fit well. It is widely known that basic shape complementarity is usually necessary for binding and forms a major component of most scoring functions. Such a set of decoys would them make for a challenging test of scoring functions. But is this a good test of docking? If essentially random performance is seen an observer might decide docking is without merit, whereas an appropriate conclusion would be that complex scoring functions are useless. The inevitable desire of methods to be <italic>seen</italic> to be useful often prevents <italic>modeled</italic> decoys being chosen, even though they potentially address the most interesting scientific questions. Irwin et&#xA0;al. had intended their <italic>mimetic</italic> decoys to act more as <italic>modeled</italic> decoys, i.e. the aim was to make things harder for docking programs, but, as mentioned, this was not always achieved.</p>
+        <p>Although <italic>mimetic</italic> and <italic>modeled</italic> decoy selections have virtues, they can also hamper comparison between different studies. In the case of the <italic>mimetic</italic> approach, the definition of &#x2018;simple&#x2019; evolves over time, especially as property calculations improve or change. To arrive at a set of <italic>modeled</italic> decoys the procedure applied must be scrupulously described, e.g. how is the protein prepared, how is the ligand protonated etc, and complete and accurate descriptions of published virtual screening procedures are rare. However, there seems no reason a consensus could not be reached by interested parties. Standard protocols could be developed, shared and used to verify results. The problems are more of will than ingenuity.</p>
+        <p>Given the above discussion, what is the appropriate decoy set to use? A <italic>universal</italic> set with sufficient actives to enable discrimination between methods? A <italic>drug-like</italic> set built from one group&#x2019;s definition of a corporate collection, but perhaps without general applicability? A <italic>mimetic</italic> set to produce physically similar decoys? Or a <italic>modeled</italic> set defined so as to tease out specific differences between methods, even at perception of poor performance? A suggestion by Geoff Skillman [<xref ref-type="bibr" rid="CR19">19</xref>] provides a novel framework. Given the speed of modern computers and the cost of storage and transmittal of information, there seems no reason a retrospective study could not contain <italic>all</italic> decoy types, with careful labeling of individual intent. The authors can make of their data what they will, for instance by reporting performance against a subset of decoys. However, if a broader set is included in the supplementary material, others can make use of the data for potentially different purposes. One of the proposals of this paper is for modeling to move beyond the anecdotal towards the systematic. Full reporting of data is essential but a further step would be to include alternate data so that others can construct purposes beyond the original intent.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Extensive properties</title>
+        <p>In addition to intensive properties, there are the extensive properties such as how many actives, decoys and targets are used. Once again the important consideration is knowing what we want to know. If the purpose is to evaluate a single method on a single target the necessary extensive properties are quite different than for a broad study on the efficacy of several methods on many targets. We illustrate this with some basic error analysis.</p>
+        <p>The Central Limit Theory (CLT) states that the average of <bold>M</bold> measurements tends towards the true mean with an error proportional to &#x221A;(<bold>V</bold>/<bold>M</bold>), where <bold>V</bold> is the average squared difference of a quantity from its estimated mean. Thus, the error is an intrinsic quantity, the square root of <bold>V</bold>, divided by an extrinsic quantity, the square root of the number of measurements. Famously, we have to take four times the number of measurements to reduce the error by a factor of two. What does this say as to the number of actives, decoys or targets that should be used to accurately measure the performance of a method? If the performance is similar no matter what actives, decoys or targets are used then the variance is small and <bold>M</bold> can be small. However, this is not the situation for modeling techniques applied to real systems. Instead, it is the ruling zeitgeist that &#x2018;performance may vary&#x2019; [<xref ref-type="bibr" rid="CR3">3</xref>&#x2013;<xref ref-type="bibr" rid="CR5">5</xref>].</p>
+        <p>Just how variable are virtual screening methods? Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a and b illustrate the extent of the problem by presenting a reanalysis of the Warren et&#xA0;al. study from GSK, with eight different docking methods and our own work on the DUD dataset (DUD-self decoys) using four different virtual screening techniques. The performance metric is the AUC averaged over each dataset. The number of targets for Warren et&#xA0;al. is eight and for DUD forty, i.e. a five fold difference. As expected, the error bars, i.e. the confidence limits at 95%, are slightly more than twice as big for a method assessed against the GSK set than against DUD. In addition it is clear that although methods in the GSK test could be broadly classified as better or worse, this is subject to considerable statistical dispute. The resolving power of DUD begins to be apparent in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b, where one can begin to put some significance to the generally held belief that ligand-based methods perform better than docking and about as equivalently as 2D methods [<xref ref-type="bibr" rid="CR4">4</xref>, <xref ref-type="bibr" rid="CR21">21</xref>]. The average AUC and error bars for GOLD from the Warren study are included in for comparison purposes only. A more quantitative analysis of this data will be presented below in the section on correlation between methods.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>(<bold>a</bold>) Average AUC values across docking programs in the Warren study, with 95% confidence intervals. Where programs were run in multiple modes the best average AUC was retained. (<bold>b</bold>) Average AUC values plus error bars across the DUD dataset for four in-house methods. Docking: FRED, Ligand-based: ROCS, 2D: Lingos and MACCS Keys [<xref ref-type="bibr" rid="CR20">20</xref>]. Also included for comparison purposes is the average AUC for GOLD against the Warren set with associated error bars</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig1_HTML" id="MO1"/></fig></p>
+        <p>What is the source of so much variation such that even forty targets are barely able to provide statistically supportable conclusions? In general, given a property measurement that has N <italic>independent</italic> sources of error, the expected error is formed from the root mean square of the individual sources of error, thus:</p>
+        <p><disp-formula id="Equa"><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Err}} \approx {\sqrt {{\left( {{\text{Err}}_{{\text{1}}} ^{{\text{2}}} {\text{ + Err}}_{{\text{2}}} ^{{\text{2}}} {\text{ + Err}}_{{\text{3}}} ^{{\text{2}}} {\text{ \ldots }}} \right)}} } $$\end{document}</tex-math></disp-formula> For our case we can write:</p>
+        <p>
+          <disp-formula id="Equb">
+            <tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \begin{aligned}{} {\text{Err(method)}} &amp; \approx {\sqrt {{\text{(Err}}_{{{\text{targets}}}} ^{{\text{2}}} {\text{ + Err}}_{{{\text{actives}}}} ^{{\text{2}}} {\text{ + Err}}_{{{\text{inactives}}}} ^{{\text{2}}} {\text{)}}} } \\ &amp; \approx {\sqrt {{\text{(Var}}_{{{\text{targets}}}} {\text{/N}}_{{\text{t}}} {\text{ + Var}}_{{{\text{actives}}}} {\text{/N}}_{{\text{a}}} {\text{ + Var}}_{{{\text{inactives}}}} {\text{/N}}_{{\text{i}}} {\text{)}}} }{\text{ }} \\ \end{aligned} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>The variances are intrinsic properties to &#x2018;targets&#x2019;, &#x2018;actives&#x2019; and &#x2018;inactives&#x2019;. How do we know what these variances are? One way is to boot-strap, i.e. leave out a randomly chosen fraction of the targets, or subset of actives or inactives, and measure changes in performance. Repeating this procedure many times gives a statistical sampling of the sensitivity to outliers and the number of measurements. Alternatively, in some cases the variance can be established more precisely. In the case of AUC, for example, it can be shown that for a particular target the variance for both actives and inactives can be approximated by:</p>
+        <p>
+          <disp-formula id="Equc">
+            <tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Var}}_{{{\text{active}}}} {\text{ = }}\sum {\text{ (p}}_{{\text{i}}} - \langle {\text{p}}\rangle {\text{)}}^{{\text{2}}} {\text{/N}}_{{{\text{active}}}} {\text{ }} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p><disp-formula id="Equd"><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Var}}_{{{\text{active}}}} {\text{ = }}\sum {\text{ (q}}_{{\text{j}}} - \langle {\text{q}}\rangle {\text{)}}^{{\text{2}}} {\text{/N}}_{{{\text{inactive}}}} {\text{ }} $$\end{document}</tex-math></disp-formula>where the sums are over all actives or inactives, p<sub>i</sub> is the probability this active <italic>i</italic> has a higher score than an inactive, q<sub>j</sub> is the probability an inactive <italic>j</italic> has a higher score than an active and &#x2329;&#x232A; represents the average of a quantity [<xref ref-type="bibr" rid="CR7">7</xref>]. Typically, the variances of both actives and inactives are roughly equal. This leads to useful insights as to the required ratio of decoys to actives. When this ratio is 100:1, the net error is only larger by 0.5% than if we were to use an infinite number of decoys. A ratio of 40:1, roughly that of the DUD-self set, yields an impact about 1%. At 10:1, this impact is about 5% and at 4:1 about 11%. Note that these effects on the error estimates, not on the actual average. What does this look like in practice? Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> shows the AUC values for FRED applied to DUD (self-decoys), along with associated 95% confidence intervals for each system. Given these AUCs and contributions to variance from actives and inactives, we can directly address whether the source of the variance across targets is due to insufficient sampling of actives and decoys, or an intrinsic property of methods. By the CLT,<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>AUC values ordered from left to right by number of actives for each target in the DUD set. Program used: FRED with Chemscore as the posing and scoring function. Error bars are 95% confidence intervals for each virtual screen</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig2_HTML" id="MO2"/></fig></p>
+        <p><disp-formula id="Eque"><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Err(AUC) }} \approx {\sqrt {{\text{(Var}}_{{{\text{Obs}}}} {\text{/N}}_{{\text{t}}} {\text{)}}} } $$\end{document}</tex-math></disp-formula>where</p>
+        <p>
+          <disp-formula id="Equf">
+            <tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Var}}_{{{\text{Obs}}}} {\text{ = }}\sum {\text{ (AUC}}_{{\text{i}}} - \langle {\text{AUC}}\rangle {\text{)}}^{{\text{2}}} {\text{/N}}_{{\text{t}}} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>Therefore</p>
+        <p>
+          <disp-formula id="Equg">
+            <tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Var}}_{{{\text{targets}}}} {\text{ = N}}_{{\text{t}}} {\text{ * \{(Var}}_{{{\text{Obs}}}} {\text{/N}}_{{\text{t}}} {\text{)}} - {\text{(Var}}_{{{\text{actives}}}} {\text{/N}}_{{\text{a}}} {\text{)}} - {\text{(Var}}_{{{\text{decoys}}}} {\text{/N}}_{{\text{i}}} {\text{)\} }} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> shows contributions to the square of the average error in the mean AUC across DUD for our four methods calculated in this manner. First, as expected the contribution from the inactives is about forty times less than that of the actives (because the intrinsic variances are similar and there are thirty-six times more decoys than actives in DUD-<italic>self</italic>). Secondly, it is clear that the errors due to target variability is roughly ten times higher than that due to actives. As independent errors add as squares, this implies only about 5% of the observed confidence limit on the target-averaged AUC is due to the finite number of actives. This leaves 95% of the 95% confidence limit due entirely to the considerable variation from target to target. Comparing DUD-<italic>self</italic> to the careful evaluation of McGaughey et&#xA0;al. from Merck, and Warren et&#xA0;al. from GSK, the latter have roughly four times more actives and four times less systems, i.e. they are more careful studies of particular systems (error bars are 50% smaller per <italic>system</italic>) but substantially less useful for general conclusions (error bars are twice as big per <italic>method</italic>). Remarkably, even if the number of actives in each DUD-<italic>self</italic> set were reduced by a factor of ten, causing a threefold increase in the error estimation per target, the net error of averages over all systems is only increased by about 30%.<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>The contribution to observed variance from actives, decoys and targets over the DUD dataset (DUD-self decoys)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Method</th><th align="left">&#x2329;Err<sup>2</sup>&#x232A;&#xA0;&#x2212;&#xA0;Decoys</th><th align="left">&#x2329;Err<sup>2</sup>&#x232A;&#xA0;&#x2212;&#xA0;Actives</th><th align="left">&#x2329;Err<sup>2</sup>&#x232A;&#xA0;&#x2212;&#xA0;Observed</th><th align="left">Est. &#x2329;Err<sup>2</sup>&#x232A;&#xA0;&#x2212;&#xA0;Targets</th></tr></thead><tbody><tr><td align="left">FRED</td><td char="." align="char">0.000048</td><td char="." align="char">0.0020</td><td char="." align="char">0.023</td><td char="." align="char">0.021</td></tr><tr><td align="left">ROCS</td><td char="." align="char">0.000025</td><td char="." align="char">0.0022</td><td char="." align="char">0.041</td><td char="." align="char">0.039</td></tr><tr><td align="left">MACCS </td><td char="." align="char">0.00004</td><td char="." align="char">0.0017</td><td char="." align="char">0.030</td><td char="." align="char">0.028</td></tr><tr><td align="left">LINGOS</td><td char="." align="char">0.000039</td><td char="." align="char">0.0017</td><td char="." align="char">0.035</td><td char="." align="char">0.033</td></tr></tbody></table><table-wrap-foot><p>The estimated error (squared) from the variation between targets is estimated from the observed variance and corresponds to that which would be obtained if the number of actives and inactives were infinite</p></table-wrap-foot></table-wrap></p>
+        <p>The conclusions from this analysis of extensive properties are straightforward. <list list-type="order"><list-item><p>When calculating the properties of a single system the number of actives is fairly important, but the number of inactives does not have to be substantially larger. A ratio of decoys to actives of 4:1 only has an error 11% higher than the limiting value from an infinite number of inactives. It would be more useful to include sets of inactives designed for different purposes than to attempt to &#x2018;overwhelm&#x2019; the actives with decoys.</p></list-item><list-item><p>If the purpose is to test a method against other methods with 95% confidence then the number of systems required is very large, much larger than even DUD. In our analysis the contributions to the variance from a limited numbers of actives is almost insignificant compared to the target-to-target variation. For example, it would take over 100 test systems to tease apart the difference between the ligand-based method ROCS and the docking program FRED with 95% confidence. (See below.)</p></list-item><list-item><p>The variance between systems is such that the number of actives per target does not need to be very large, perhaps even as low as ten. As such, suggestions to only include representatives of chemical classes, e.g. see Good and Oprea [<xref ref-type="bibr" rid="CR22">22</xref>], may be statistically quite valid.</p></list-item></list></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Correlations</title>
+        <p>A key assumption underlying much statistical analysis is the independence of samples, for instance that any two measurements are uncorrelated. This is often a good assumption but it is not hard to find counterexamples. Consider the case where a decoy is included twice. We have gained no new information. Yet N<sub>i</sub>, the number of decoys, has increased and so the error goes down. Clearly the error has not really been reduced. Instead, the decoys are no longer <italic>independent</italic>. In the line-up analogy, this would correspond to including identical twins as fillers. While this is an unlikely mistake, what about two individuals that look very similar? How independent are two molecules and what does this even mean? The temptation is to reach for the familiar chemical definition, i.e. 2D similarity. Even though there is no rigorous definition of chemical similarity, it is a major concern in selecting active populations from chemically related (congeneric) series. Methods that either rely on chemical similarity, or are heavily influenced by it, may not be making independent assessments. Clearly 2D methods fall into this category, and sometimes ligand-based 3D methods. Ideally, methods that use protein structure, such as docking, ought to be less affected, but this is far from proven. Suggestions as to how to improve matters include reducing the set of active to a smaller set of representative structures [<xref ref-type="bibr" rid="CR22">22</xref>], or giving more weight to the first compound discovered in a series [<xref ref-type="bibr" rid="CR23">23</xref>]. (Application of similar protocols to decoys is seldom discussed, perhaps because they are less likely to be congeneric). These are practical suggestions derived from knowing the nature of drug discovery. There is also a general approach that eschews the particulars. Two compounds are considered <italic>operationally</italic> dependent if their rankings under different tests are correlated. For instance, a method that had a size-bias would tend to rank a pair of molecules of comparable extent similarly, no matter what the target. Even without 2D similarity, this implies a less than perfect independence. Imagine a method where all the decoys are of one size and all the actives another. No matter what the actual number of actives and inactives, there are essentially only two molecules, an active and an inactive, and our ability to extract meaningful statistics is severely compromised. Note that the <italic>operational</italic> part of this definition depends on the nature of the method, i.e. dependence is conditional on the nature of the procedure investigated.</p>
+        <p>Similar situations occur in assessments of genetic linkage. The degree of dependence amongst a set of markers is evaluated by constructing a matrix where the entries are the correlation of phenotypic scores between any two markers. The eigenvalue spectrum of this matrix is then used to assess the actual number of degrees of freedom [<xref ref-type="bibr" rid="CR24">24</xref>]. Crucially, though, correlation can only be estimated by knowing the behavior of a pair of samples/compounds over many tests/targets. At first glance this suggests that the same set of decoys should be used across all targets in a study. If decoy selection is <italic>universal</italic> or <italic>drug-like</italic> this is typically a part of the design, i.e. the decoy set is reused. However, <italic>mimetic</italic> and <italic>modeled</italic> decoys rely on the nature of the actives, which will vary from target to target. This might seem a dilemma, i.e. we want to reuse decoys so we know if they are correlated but we cannot reuse them because one set of decoys may be completely inappropriate for another target. Here Skillman&#x2019;s suggestion is again useful, i.e. there is nothing to stop us including the decoy set for one target in the virtual screen of a second target <italic>not as decoys</italic> but rather to gain information on operational independence. To distinguish the role of decoys from one system applied to a second system for purposes other than assessing performance, we suggest the term &#x2018;latent&#x2019; since these secondary decoys should be hidden from the calculation of performance metrics. In addition to the concept of <italic>latent</italic> decoys, <italic>latent</italic> actives can be used to measure operational independence independent of 2D similarity. Another possibility is to use the actives from one system as <italic>explicit</italic> decoys in other systems. For instance, in the Warren et&#xA0;al. study each set of actives also formed the decoy set for the other targets. The intent was just to produce a set of <italic>drug-like</italic> decoys, but it fortuitously provides the most compact form for a rigorous estimation of decoy/active independence. This work will be presented elsewhere, along with an elaboration of the techniques for assessing operational correlation.</p>
+        <p>We turn now to the question of target independence. As we have seen, and is widely appreciated, the variation of performance of methods from target to target is considerable. But do certain targets, or classes of targets, behave similarly for certain methods? For instance, one would expect that a docking program parameterized against certain binding motifs would perform similarly across all targets with this motif, if only because of inductive bias. Or one might assume that isoforms of a target are sufficiently akin that docking methods would perform similarly on each. Fortuitously, the Warren study provides one such example in the inclusion of PDFE and PDFS. Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows the difference in performance of methods used on isoforms versus the average difference between all other pairs of targets. It is clear there is less variance between the isoforms than unrelated targets. If this were a generalizable result it would have two consequences. On the positive it would mean that methods could be quantified for certain types of problems without requiring large numbers of targets, i.e. because the variance is smaller. On the negative, it would mean that just as considerations need to be made for the true statistical power of closely related actives, or inactives, similar considerations need to be made for targets, increasing the number of targets required to either discern general differences between methods or to reliably gauge progress of a single approach. And, as we have seen, to measure global performance on <italic>independent</italic> systems already requires sampling beyond common practice.<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Docking performance against the two isoforms in the Warren study (PDFS and PDFE), compared to the averaged difference over all other pairs of targets</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig3_HTML" id="MO3"/></fig></p>
+        <p>The PDFE/S example is a single data point. It is entirely possible that the variation between targets of similar class, or highly conserved isoforms, or even different forms of the same protein structure is not small and that calculating mean properties is still formidable. One might imagine this is a well-researched area, but this appears not to be the case. Retrospective experiments are designed, however poorly, to give an estimate of to what to expect for the next <italic>new</italic> target and so targets are chosen to be diverse. Software would seldom be used in default, out-of-the-box, mode when there is considerable domain knowledge, i.e. within a set of closely related targets. Hence, the question of method variance over similar systems appears to have been over-looked.</p>
+        <p>The final aspect of independence is correlation between methods. Suppose we have method A and method B, each tested on the same set of targets with the same set of actives and decoys and the results show A is consistently slightly better than B. How can we prove this difference is statistically significant? At first glance this would seem difficult. As illustrated in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a and b, the variance of any one computational method over a set of targets in invariably large. As such, the error bars on an average property, such as an AUC or enrichment, are big. So although the average behavior of method A is slightly better than B, this difference would appear statistically insignificant. However, if the test systems are indeed identical this is not the correct assessment. Instead, the CLT is applied to the set of measured <italic>differences</italic> between methods, e.g. for an AUC example the variance becomes:</p>
+        <p>
+          <disp-formula id="Equh">
+            <tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Var}}_{{{\text{diff}}}} {\text{ = }} \sum{\text {((}}{\text{A}}_{{\text{i}}}  -  {\text{B}}_{{\text{i}}} {\text{)}} - {\text{(}}\langle {\text{A}}\rangle - \langle  {\text{B}}\rangle {\text{))}}^{{\text{2}}} {\text{/N}}_{{\text{t}}} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>
+          <disp-formula id="Equi">
+            <tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Err(diff) }} \approx {\sqrt {{\text{(Var}}_{{{\text{diff}}}} {\text{/N}}_{{\text{t}}} {\text{)}}} } $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>The formula for Var<sub>diff</sub> can be rewritten as:</p>
+        <p>
+          <disp-formula id="Equj">
+            <tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Var}}_{{{\text{diff}}}} {\text{ = Var}}_{{\text{A}}} {\text{ + Var}}_{{\text{B}}} - {\text{2*Corr(A,B) }} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>
+          <disp-formula id="Equk">
+            <tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Corr(A,B) = }}\sum {\text{(}}{\text{A}}_{{\text{i}}} - \langle {\text{A}}\rangle {\text{)}}{\text{(B}}_{{\text{i}}} - \langle {\text{B}}\rangle {\text{)/N}}_{{\text{t}}} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>Here Corr(A,B) is a measure of the correlation between methods A and B and is related to the Pearson correlation coefficient, thus:</p>
+        <p>
+          <disp-formula id="Equl">
+            <tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Pear(A,B) = Corr(A,B)/}}{\sqrt {{\text{( Var}}_{{\text{A}}} {\text{*\,Var}}_{{\text{B}}} {\text{)}}} } $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>If the tests of methods A and B are independent then the correlation is typically assumed zero and the variance is just the sum of the variances of both methods. If variances were roughly equal, this would typically be a <italic>joint</italic> error bar &#x221A;2 larger than the individual error bars. (This also means the common practice of evaluating whether two methods are statistically different by whether their individual error bars overlap is generally incorrect.)</p>
+        <p>However, if the tests applied to methods A and B are identical, correlation needs to be explicitly included. In the case of A always slightly better than B, we need to assess whether the mean difference is larger than the joint confidence limits generated from the variance of the difference between A and B. In fact, if A is better than B by a constant amount we are guaranteed statistical significance because the variance of the <italic>difference</italic> is zero. In general, methods tend to be positively correlated so that the joint confidence limits are lower than from independent measurements.</p>
+        <p>Confidence limits are convenient because they give a visual estimate of the possible range of true values, typically at a 95% level of confidence. However, joint confidence limits are less graphical as they pertain to pairs of methods. In addition, there is considerable concern in other fields as to the arbitrariness of the 95% value. The origin of this number is R. A. Fisher, whose work in the 1920s still dominates much of the field of practical statistics. Fisher, primarily an agriculturalist, observed a 10% increase in cabbage yield when manure was used. He also observed that only one in twenty plots without manure showed a yield greater than 10%, and so the 95% cut-off was born! From this, and because of the general utility of Fisher&#x2019;s work on experimental design, a <italic>p</italic>-value of 0.05 dominates many fields, in particular clinical trials. Essentially, a <italic>p</italic>-value is the probability a null hypothesis can be rejected. In our case the null hypothesis would be that method B is in fact better than method A, despite average values suggesting the reverse. Under the assumption the difference in performance between two methods is as predicted by the CLT (i.e. Gaussian), we can assign a (<italic>p</italic>-)value to the probability one method is better only because of random chance. We do this by calculating the area under the normal form for which one appears better than the other. The mathematics of this is shown below:</p>
+        <p><disp-formula id="Equm"><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ p{\text{ = (1}}-erf{\text{(}}\langle {\text{A}}-{\text{B}}\rangle {\text{*}}{\surd{{\text{(0}}{\text{.5*N}}_{{\text{t}}}{\text{/Var}}_{{{\text{diff}}}}))) {\text{/2}}} }{\text{ }} $$\end{document}</tex-math></disp-formula>where &#x2329;A&#x2013;B&#x232A; is the average difference between the methods, the other variables are as defined as above and <italic>erf</italic> is the inverse cumulative Gaussian, or <italic>error</italic>, function. If N<sub>t</sub> is small, i.e. less than twenty, then a slightly different functional form is more accurate (i.e. from the Student t-test) because the CLT only applies in the limit of large N. For practical purposes the difference can be ignored. The smaller <italic>p</italic>, the stronger the case for A being better than B. Note, we are not proving how much better A is than B. The best <italic>estimate</italic> of A&#x2019;s superiority is still the mean difference of whatever property we are measuring. Rather the <italic>p</italic>-value refers to the dichotomous question, is A better than B?</p>
+        <p>Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> illustrates the above concepts for the four methods listed in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b applied to DUD (DUD-<italic>self</italic> decoys). The diagonal entries are the mean values of the AUC of each method, followed by the associated 95% confidence limits. The upper triangle of the table contains the na&#xEF;ve joint confidence limits, i.e. by summing individual confidence limits, the joint confidence limits assuming independent tests and the joint confidence limits properly calculated with correlation. The lower diagonal contains the Pearson correlation coefficient for each pair of methods, followed by the <italic>p</italic>-value for the hypothesis that the better method is so only by chance. So, for example, the probability that the 2D and ligand based methods are better than the docking program FRED by chance are around the 10% level, whereas the differences between these three methods themselves is close to 50:50, i.e. in this example we can distinguish ligand-based methods from a docking protocol but not one ligand-based method from another. This is most likely because DUD is not designed to test ligand-based retrieval containing, as it does, many 2D similar actives. Several others have made this point, including the curators themselves [<xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR18">18</xref>, <xref ref-type="bibr" rid="CR22">22</xref>]. Examples from other fields of how to apply these procedures to differences in AUC can be found in Hanley and McNeil [<xref ref-type="bibr" rid="CR9">9</xref>].<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Statistical measures necessary to accurately assess the relative performance of methods, here applied to the DUD data set (DUD-self decoys)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Method</th><th align="left">FRED</th><th align="left">ROCS</th><th align="left">MACCS</th><th align="left">LINGOS</th></tr></thead><tbody><tr><td align="left">FRED</td><td align="left">0.684/0.043</td><td align="left">0.11/0.08/0.07</td><td align="left">0.1/0.07/0.06</td><td align="left">0.1/0.07/0.065</td></tr><tr><td align="left">ROCS</td><td align="left">0.17/0.09</td><td align="left">0.732/0.065</td><td align="left">0.12/0.085/0.05</td><td align="left">0.125/0.09/0.05</td></tr><tr><td align="left">MACCS </td><td align="left">0.03/0.05</td><td align="left">0.70/0.47</td><td align="left">0.734/0.055</td><td align="left">0.115/0.08/0.055</td></tr><tr><td align="left">LINGOS</td><td align="left">0.19/0.14</td><td align="left">0.65/0.36</td><td align="left">0.54/0.31</td><td align="left">0.72/0.061</td></tr></tbody></table><table-wrap-foot><p>Diagonal terms: average AUC/95% confidence limits. Upper triangle terms: na&#xEF;ve joint confidence limits/joint confidence limits assuming different tests/joint confidence limits assuming same tests and accounting for correlation. Lower triangle terms: Pearson correlation coefficients/<italic>p</italic>-values that a method has a higher mean AUC by random chance</p></table-wrap-foot></table-wrap></p>
+        <p>One of the advantages of <italic>p</italic>-values is the statistical machinery, again developed by Fisher [<xref ref-type="bibr" rid="CR25">25</xref>], for combining values from different studies. A classic example is the effects of tobacco. It was not one study that convinced the medical profession, but a series of studies and the facility to combine the results that lead to the overwhelming conclusions as to the health risks of smoking. In statistics this is referred to as &#x201C;Meta-Analysis&#x201D;. Despite this, and the wide application of <italic>p</italic>-values in other fields, they are largely absent from modeling, with a few exceptions [<xref ref-type="bibr" rid="CR5">5</xref>].</p>
+        <p>In conclusion, correlation is important in all aspects of virtual screening, but perhaps most important and most easily corrected for in the comparison of pairs of methods. Neglecting the effects of correlation between tests is a frequent problem even in clinical studies [<xref ref-type="bibr" rid="CR2">2</xref>] and to our knowledge has not been properly applied to comparing methods in virtual screening.</p>
+      </sec>
+    </sec>
+    <sec id="Sec6">
+      <title>Metrics</title>
+      <p>Given an experimental design, what quantities should be measured to assess performance? The question suggests a sequential process, i.e. design the experiment and then measure something, whereas good design takes into account what is going to be measured, in particular to what accuracy. However, assuming a given design, how do we extract useful information? In this section we consider what should be measured and why. This is not a quandary specific to virtual screening, in fact is it universal to all prediction exercises. This very commonality can help suggest worthwhile approaches. It also suggests that measures constructed specifically, even uniquely, for chemical virtual screening should be held to a similar standard to those prevalent in the wider world. Is virtual screening really so different from, say, Internet page ranking? In particular, we will consider the issue of &#x2018;early&#x2019; behavior, i.e. measures that reward ranking some active compounds near the top of a list. By considering real-world financial parameters we ask whether &#x2018;early&#x2019; behavior is even <italic>necessarily</italic> to be prized. By looking at a large number of virtual screens, we will ask whether such &#x2018;early&#x2019; measures are necessary and whether they can be predicted from more fundamental and well-understood properties. Finally, the application of accurate error bounds will be shown to suggest at least one way of quantifying the advantage an expert brings to well-studied systems.</p>
+      <sec id="Sec7">
+        <title>Properties of virtual screening metrics</title>
+        <p>A long list of metrics has been applied to virtual screening. What makes for a good metric? The unfortunate answer with some papers is &#x201C;any metric that will make my method look good&#x201D;. And if no known metric will suffice, then simply make a one up. This is a typical indicator of an under-regulated and under-developed field. Computer manufacturers used to habitually make up their own measures for the latest processor or operating system, leading to much confusion and annoyance. As a consequence, in 1988 SPEC (Standard Performance Evaluation Corporation) was formed and SPEC Marks became the standard benchmark of anything worth measuring. SPEC had a simple philosophy: &#x201C;The key realization was that an ounce of honest data was worth more than a pound of marketing hype&#x201D; [<xref ref-type="bibr" rid="CR26">26</xref>]. SPEC Marks have evolved over time to now cover CPU, graphics, Java, mail servers, file servers, parallel performance, high performance computing and other aspects. In other words, SPEC is not a single measure because not all users want the same thing, but this does not mean manufacturers can create their own metrics. Rather SPEC is an umbrella organization for a set of open and diverse groups that consider, ratify and develop benchmarks. In this spirit, this section will concentrate on what ought to be general characteristics of a good metric rather than all prevalent quantities.</p>
+        <p>In a somewhat circular manner, one of the first characteristics of a good measure is that everyone uses it. Clearly one of the problems with a field with diverse measures is incomparability, the &#x201C;apples and oranges&#x201D; problem. The most straightforward solution is not imposition of a particular standard but full disclosure of all data. The authors of a study may want to present enrichment at 5%, but if the data is freely available others may calculate the enrichment at 1% or 13% or whatever they wish. This would inevitably lead to standardization as independent parties harvest data from many sources, publishing larger and larger studies on the advantages and disadvantages of different methods and measures. This would provide another example of meta-analysis described above. Sometimes a valid excuse against disclosure is that compounds or targets are proprietary. However, just providing lists of actives and inactives in rank order with unique, but not necessarily identifying, tags is enough to calculate most of the metrics for a particular virtual screen. Currently the field of modeling lacks even an agreed upon format for the exchange of such rarely available information.</p>
+        <p>However, if we are going to report a statistic what properties should it have? From considering measures that have become standard in other fields, what characteristics define a good measure? We suggest the following short list:<list list-type="order"><list-item><p>Independence to extensive variables</p></list-item><list-item><p>Robustness</p></list-item><list-item><p>Straightforward assessment of error bounds</p></list-item><list-item><p>No free parameters</p></list-item><list-item><p>Easily understood and interpretable</p></list-item></list></p>
+        <p>Take for example the very popular &#x201C;enrichment&#x201D; measure. Everyone understands the concept of enrichment: swirl a pan of water and gravel from the Klondike river in 1896 in just the right way and you ended up with mostly gold. In virtual screening you look at the top few percent and see whether there are more actives than you would expect by chance. As a mathematical formula this is typically presented as:</p>
+        <p>
+          <disp-formula id="Equn">
+            <tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{EF(X\%) = (100/X) * (Fraction of Actives Found)}} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>The problem with this measure is that the enrichment becomes smaller if fewer inactives are initially present. Imagine panning for gold with all the sand removed. There would still be the same gold in the pan, along with maybe some pebbles and small rocks, but the eventual relative <italic>improvement</italic> after &#x2018;panning&#x2019;, i.e. &#x2018;enrichment&#x2019;, is reduced. The problem is that the (Fraction of Actives Found) contradicts requirement (i), i.e. is a function of extensive quantities, the number of actives and inactives. This means that enrichment is not actually a measure of a method; it is a measure of a method and a <italic>particular</italic> experiment. If the ratio of inactives to actives becomes very large it is assumed this problem disappears, i.e. that the limiting behavior obeys (i). This is not true if the enrichment at a given percent is large, i.e. at precisely the points of most interest. Also, enrichment does not meet requirements (ii). At a small enough percentage the enrichment becomes an unstable function of the exact positions of actives in a list. There is also no agreed upon percentage, making this an adjustable parameter (often abused). Finally, other than by bootstrapping, the author knows of no simple assessment of error bounds. However, it is an intuitive measure, easily understood, passing rule (v), and so almost uniquely to this field is the most common metric reported.</p>
+        <p>Some have been aware of the lack of robustness of enrichment and proposed metrics that average over all percentages with weighting schemes. Before we consider these measures we point out that a simple fix to the common variant of enrichment is to make the enrichment refer to the fraction of inactives, not to the fraction of all compounds. This simple change makes the enrichment independent of extensive quantities, more robust, accessible to analytic error approximation [<xref ref-type="bibr" rid="CR27">27</xref>] and yet suffers only a slight reduction in interpretability. Only a few, such as Jain [<xref ref-type="bibr" rid="CR14">14</xref>] have used this alternate form. Perhaps the only important failing of this measure is that it lacks a specific name. For the purpose of this paper it will be referred to as the ROC enrichment to distinguish it from the widely abused variety.</p>
+        <p>ROC enrichment has better properties because is related to an even better metric, the AUC, defined as the area under a ROC curve. A ROC curve is simply a plot of the discovered active fraction versus the discovered inactive fraction. (Each point on the ROC curve can be translated to a ROC enrichment by dividing by the fraction of inactives). The AUC is the average of this property over all inactive fractions. Many excellent treatises can be found [<xref ref-type="bibr" rid="CR6">6</xref>&#x2013;<xref ref-type="bibr" rid="CR9">9</xref>] and it has become a standard for classification performance in many disciplines (medical diagnostics, radiology, clinical testing, criminology, machine learning, data mining, psychology and economics to name a few). It satisfies all of the criteria listed above as a metric, including (v), ease of interpretation. The AUC is simply the probability that a randomly chosen active has a higher score than a randomly chosen inactive. The main complaint against the AUC is that is does not directly answer the questions some want posed, i.e. the performance of a method in the top few percent. This is akin to complaining that SPEC Marks do not do a good job of evaluating mobile phone processors; a fair complaint perhaps but hardly justifying creating a new benchmark without the strengths of existing standards. The AUC ought to at least be held as such a standard against which new measures are judged.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Early performance in virtual screening</title>
+        <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> illustrates the supposed limitations of the AUC as a measure of performance. The graph shows two ROC curves, each with an AUC of exactly 0.5. Overall this means that an active is as equally likely to out-rank an inactive than the other way around. However, clearly in the case of the solid line a certain fraction of actives is being scored significantly higher than most inactives, while another fraction is being scored worse, i.e. it is only the average behavior that appears even-handed. Similarly, the dashed curve illustrates the case where the actives are all scored better then a certain fraction of the inactives but worse than another fraction. The solid and dashed curves are instances of bimodal score distributions for the actives and inactives respectively. Since the goal of a virtual screen is to save us the trouble of actually screening all the compounds it is entirely reasonable to prefer good &#x2018;early&#x2019; behavior. And yet the AUC does not distinguish between such curves and so, it is claimed, is not appropriate.<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Example ROC plots for &#x201C;early&#x201D; and &#x201C;late&#x201D; methods</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig4_HTML" id="MO4"/></fig></p>
+        <p>It is against this backdrop that metrics such as RIE [<xref ref-type="bibr" rid="CR28">28</xref>] and BedROC [<xref ref-type="bibr" rid="CR29">29</xref>] were developed. In both cases the essential idea is to give early rankings of actives more weight than late rankings. In RIE/BedROC actives are given a weight depending on their position in the list using an exponential function running from 1.0 for the top ranked compound to a number typically close to zero for the lowest ranked. The exponential factor, beta, determines how fast this exponential dies away from the top rank and controls how much the RIE/BedROC parameter focuses on the top of the list. The larger beta the greater the early focus. In RIE the sum of active weights is normalized by the RIE of a random distribution of actives. In BedROC normalization is by the maximum dynamic range, i.e. the score with all the actives ranked at the top minus the score with all the actives ranked at the bottom. In addition, by first subtracting the score of the worst-case scenario, BedROC has the elegant property of running from 0.0 to 1.0. The rational behind using these approaches is to give precedence to actives ranking early but not to fall into the trap of choosing a single enrichment value, i.e. be more robust to perturbations in the rank ordering. Impressively, Truchon and Bayly also derive analytic estimations of the error bounds for BedROC and give some suggested values for the beta parameter. Some incorrect statements regarding the AUC mar their work, for instance that random scores do not give an AUC of 0.5, and that the AUC is dependent on the number of actives and inactives, but overall the work is an interesting attempt to answer a perceived need. Applied to the examples in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, the ratio of the BedROC score of the solid line to the dashed is about two for a beta of ten and about ten for a beta of twenty.</p>
+        <p>So does BedROC or RIE qualify as a good metric for virtual screening? Comparing against the five criteria listed above, both are more robust than enrichment, and the error protocols for BedROC satisfies criteria (iii). RIE suffers from having an ill-defined numerical interpretation (i.e. how good is an RIE of 5.34?). BedROC attempts to overcome this by scaling between 0.0 and 1.0, but does this qualify as being understandable? There is no absolute, interpretable meaning to a BedROC (or RIE) number, only a relative meaning when ranking methods.</p>
+        <p>Unfortunately, neither BedROC nor RIE satisfy criteria (i) or (iv), i.e. both are dependent on extrinsic variables and have an adjustable parameter, the exponential factor beta. The former, as we have seen, means that scores can only be compared in the limiting case of an excess of inactives and, as in the case of enrichment, this excess has to persist even when the enrichment of actives is very high, i.e. it is exactly when the actives are predominantly at the top of the list that both BedROC and RIE (and enrichment) are most sensitive to the total number of inactives. Interestingly, it would be possible to reformulate both metrics to avoid this problem. Just as ROC enrichment is a better metric than enrichment, an exponential weighting across the ROC curve, rather than to the individual rankings of actives amongst inactives, would remove the sensitivity of these measures to extensive properties. However, there would still remains the issue of the arbitrariness of the exponential factor beta. Just as with enrichment thresholds there is nothing intrinsically wrong with the freedom to select a threshold that is of interest to the particular research group. Some companies might have the facility to physically screen ten percent of their database, another only one percent. However, as a characteristic of a method, or a class of methods, it is a disadvantage. A proponent of a method has a free parameter with which to make their method look favorable or even just less unfavorable. In the example in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, a factor of two in BedROC between the methods (beta&#xA0;=&#xA0;5.0) does not sound anywhere near as bad as a factor of ten (beta&#xA0;=&#xA0;20.0).</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Cost structures of virtual screening</title>
+        <p>There is no fundamental meaning to BedROC or RIE. Neither gets to the real heart of why the solid curve in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> represents a better method than the dashed curve. In what follows we will argue that this can only be stated with respect to a set of assigned costs, assumed but never stated. We start by noting that the current focus on early enrichment is actually a change in values for the industry. This author recalls conversations in the mid-1990s wherein the concept of missing <italic>any</italic> potential lead compound was deemed unacceptable. By contrast, a preference for early behavior implies it is acceptable to miss a significant fraction of potential actives in favor of finding a few good leads. There is merit in this approach. Often a chemistry team can only follow up on a small number of leads. High throughput screens can take several months to design and bring on-line, time chemists could use to explore initial leads from a smaller focused set designed by a virtual screen [<xref ref-type="bibr" rid="CR30">30</xref>]. What are not made explicit in this shift are the costs of the four components of any virtual screen: true positives (TP), false negatives (FN), false positives (FP) and true negatives (TN). Not wanting to miss anything is equivalent to assigning an infinite cost to a false negative. This was never sensible, but reflected a &#x2018;lottery&#x2019; mentality prevalent at the time. The reality is that virtual screening never finds drugs; at best it can find things that might, after considerable effort, become drugs. In addition, the attrition rate at many stages in the drug design process means any lead-like compound is at best a bet that will often fail, costing many millions of dollars. A lottery ticket is potentially worth millions; the expected value, i.e. averaged over all contingencies, is usually less than the cost of the ticket. The assumption behind virtual screening is that the value of a true positive similarly averaged is worth the cost of computers and modelers. This is an unproven conjecture.</p>
+        <p>The assignment of a cost structure to the components of a screen is common in the field of medical diagnostics. Here the costs can be estimated with some reliability. A true positive represents the successful diagnosis of a condition that will save money when treated. A false positive means further, costly, tests will need to be performed. A false negative might cost a lot if a more severe condition develops. Finally, a true negative can be set to the cost of the test or a small saving if compared to a more expensive test. If these values are assigned to each &#x201C;truth table&#x201D; component (TP, FP, TN, FN), a ROC curve can be transformed into a cost curve. A small caveat is that the ROC curve deals with true and false positive <italic>rates</italic> and so to transform to real costs the expected number of actives and inactives is required, or at least the ratio of the two. Suppose we apply a cost structure to Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> as follows:<list list-type="order"><list-item><p>TP&#xA0;=&#xA0;8.0</p></list-item><list-item><p>FN&#xA0;=&#xA0;&#x2212;2.0</p></list-item><list-item><p>FP&#xA0;=&#xA0;&#x2212;0.16</p></list-item><list-item><p>TN&#xA0;=&#xA0;0.02</p></list-item></list></p>
+        <p>Positive numbers are favorable, for instance the cost assigned to a true negative is the saving from not physically screening a compound. At any point in the curve the cost of progressing with all compounds higher than a given threshold <italic>t</italic> depends on the False Positive Rate (FPR) and True Positive Rare (TPR):</p>
+        <p>
+          <disp-formula id="Equo">
+            <tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Cost(t) = TPR\,*\,N}}_{{\text{a}}}{\text{\,*\,(8}}{\text{.0) + (1}} - {\text{TPR)\,*\,N}}_{{\text{a}}}{\text{\,*\,(}}-{\text{2}}{\text{.0) + FPR\,*\,N}}_{{\text{i}}}{\text{\,*\,(}}-{\text{0}}{\text{.16) +(1}}-{\text{FPR)\,*\,N}}_{{\text{i}}} {\text{\,*\,(0}}{\text{.02)}}  $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>Let us assume N<sub>a</sub>/N<sub>i</sub>&#xA0;=&#xA0;1/100, then:</p>
+        <p>
+          <disp-formula id="Equp">
+            <tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \begin{aligned}{} {\text{ Cost(t)/Ni }} {\text{= (TPR\,*\,(8}}.0 +2.0)-{\text{2}}{\text{.0)/100}} -{\text{FPR\,*\,(0}}{\text{.16 + 0}}{\text{.02) + 0}}{\text{.02}}\\ {\text{ = 0}}{\text{.10\,*\,TPR}} -{\text{0}}{\text{.18\,*\,FPR}}\\ \end{aligned} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>This is a simple linear scaling of the graphs in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, as shown in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a. As expected, the best approach is to take the method with early performance over the later performance. Notice that the late performing method is never cost effective and even the early method is only cost effective for a narrow range of rankings.<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>(<bold>a</bold>) Cost weighted versions of the curves in Figure 4 as per the first description in the text. (<bold>b</bold>) Cost weighted versions of the curves in Fig. 4 as per the second description in the text</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig5_HTML" id="MO5"/></fig></p>
+        <p>Now consider a slightly difference weighting:<list list-type="order"><list-item><p>TP&#xA0;=&#xA0;8.0</p></list-item><list-item><p>FN&#xA0;=&#xA0;&#x2212;2.0</p></list-item><list-item><p>FP&#xA0;=&#xA0;&#x2212;0.04</p></list-item><list-item><p>TN&#xA0;=&#xA0;0.03</p></list-item></list></p>
+        <p>
+          <disp-formula id="Equq">
+            <tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{Cost(t)/N}}_{{\text{i}}} {\text{ =0}}{\text{.1\,*\,TPR}}-{\text{0}}{\text{.07\,*\,FPR + 0}}{\text{.01}} $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b illustrates the effect of these new weightings. By reducing the cost of a false positive by 75%, i.e. to around the savings of a true negative, both methods are always cost effective. Furthermore, although the early method has a clear maximum at around 20% of the database, it is actually worth physically screening about 75% of the database.</p>
+        <p>These examples are obviously only illustrative, but the point they make is real. Early enrichment is important only because of an assumed cost structure. Clearly much more complicated models could be constructed, possibly with real data, as with medical tests. However, to the author&#x2019;s knowledge this has never been published, presented or even discussed within the industry. It is an assumption that early enrichment is better. Likewise, it is also an assumption that virtual screening itself is a productive exercise compared to physical screening.</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Averaged properties of virtual screening</title>
+        <p>Suppose the cost structure of virtual screening does favors early enrichment. Can we at least say metrics such as RIE and BedROC, perhaps reformulated to be independent of extensive variables, are superior to AUC? If the early behavior shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> were indeed repeated from system to system then clearly this would be the case. In Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> we show data from Warren et&#xA0;al. for twenty docking procedures averaged over all eight targets in the study. Examination of these curves reveals nothing that resembles the biphasic nature anticipated from Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. Individual curves might occasionally suggest biphasic behavior but there is little evidence for this in <italic>target</italic><italic>averaged</italic> ROC curves. Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> shows similar curves for the four methods in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b averaged across the DUD set. The curves in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> are smoother because the averaging across forty targets in DUD is more extensive than the eight from GSK and show even less evidence of biphasic behavior. There are two possibilities for these observations. Either the individual curves are not biphasic or the averaging dilutes this characteristic. It is possible to imagine a technique that would rank one type of actives well, perhaps hydrophobic moieties, but ranks others badly, e.g. hydrophilic ones, but that the proportions of each set differ target to target such that the total behavior appears monophasic. To see if this might be the case we examined two hundred and seventy virtual screens from the Warren study, looking for a divergence between BedROC, with exponential parameter 5.0, and AUC, i.e. an abnormally low AUC and a high BedROC, although possibly the reverse. The results are shown in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>. Clearly there is a strong correlation between BedROC and AUC. Similar correlations were also seen when higher exponential factors were employed and suggest no evidence for biphasic behavior. A better AUC naturally leads to a better BedROC value and does so with surprisingly little variation. It might still be possible that one of the methods has average biphasic behavior, for instance if all the BedROC/AUC points for a method trended higher. Figure&#xA0;<xref rid="Fig9" ref-type="fig">9</xref> shows this is not the case. Here, the average AUC per method is compared to the average BedROC value for that method. In addition, the correlation is stronger the better the BedROC value, so that methods that have a good AUC will also have a (strongly correlated) good BedROC score.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Averaged ROC curves for twenty methods in the Warren study for which scores for all eight targets where available. Programs and scoring functions listed to the right of the graph</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig6_HTML" id="MO6"/></fig><fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Average ROC curves for FRED, ROCS, MACCS keys and LINGOS over DUD, with DUD-self decoys. FRED was run with the ChemGauss3 scoring function</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig7_HTML" id="MO7"/></fig><fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>BedROC scores with an exponential factor of 5.0 versus the AUC for 270 virtual screens from the Warren study</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig8_HTML" id="MO8"/></fig><fig id="Fig9"><label>Fig.&#xA0;9</label><caption><p>The average AUC for each method run against all eight targets in the Warren study versus the averaged BedROC score for each such method</p></caption><graphic position="anchor" xlink:href="10822_2008_9170_Fig9_HTML" id="MO9"/></fig></p>
+        <p>There is one exception to monophasicity, shown circled in Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>. This point lies outside the 95% confidence limits of both AUC and BedROC. Its BedROC score is significantly higher than expected and its AUC is around 0.5, i.e. random ranking. The target protein represented by this point is PPAR-&#x3B4; and the method is MVP, a program developed in-house at GSK by Mill Lambert. In conversation Lambert freely admitted that not only did he have extensive knowledge of this target, he used all of this information to tune MVP. Unfortunately, because of certain aspects of the target he could only select one of three chemical classes for this &#x2018;hands-on&#x2019; treatment at a cost to the two other classes. Hence, MVP had to be biphasic. It seems interesting that out of two hundred and seventy virtual screens the only outlier from the BedROC-AUC correspondence is an example of expert intervention. An unintended consequence of this study might be a method to spot and quantify expert contributions to virtual screening, i.e. by comparing early behavior, either with BedROC or other metrics, to that predicted from the fundamental measure of AUC.</p>
+      </sec>
+    </sec>
+    <sec id="Sec11" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>In this study we have considered several aspects of experimental design and performance metrics for virtual screening. There is clearly interest in doing things the right way, not least because of a popular, if unproven, belief that virtual screening saves the pharmaceutical industry money. As with many relatively young endeavors, molecular modeling has been long on promises and short on standards, and it is standards that ultimately deliver the proof that our field is useful. For many years the computer industry suffered from similar growing pains. Not only were there few, if any, reliable comparison metrics for different processors, operating systems, compilers and so forth, the proposed benefits of computers were more assumed than quantified. These days no one doubts the impact of the computing revolution. It is to be hoped that a similar statement can one day be made for molecule modeling. It is with this in mind that the following observations and recommendations are made.</p>
+      <p>On the issue of experimental design we propose:<list list-type="order"><list-item><p>Decoy selection needs to be properly labeled as to intent to facilitate inter-study comparison. We have suggested four classifications, <italic>universal</italic>, <italic>drug-like</italic>, <italic>mimetic</italic> and <italic>modeled</italic> based on examples from the literature and on typical use-case analysis.</p></list-item><list-item><p>Providing access to primary data would allow the field to gain cumulative knowledge. The field of modeling has almost no &#x201C;meta-analysis&#x201D;, i.e. research combining the results from studies, largely because of a lack of standards as to procedures and measures, but also due to the lack of primary data. A comprehensive format for virtual screening information would be useful.</p></list-item><list-item><p>The inclusion of multiple decoy sets of different design and intent for each target in an evaluation would, in combination with (i) and (ii) above, greatly increase the cumulative value of published studies.</p></list-item><list-item><p>The number of targets, actives and inactives need to be carefully considered with respect to the purpose of the experiment and the required accuracy of the results. These can be derived from simple statistical methods that are almost never applied.</p></list-item><list-item><p>The effects of correlation between actives or inactives can be generally defined as an operational quantity. This could be investigated if actives and inactives for one target were included as <italic>explicit</italic> or <italic>latent</italic> decoys for all other targets. Warren et&#xA0;al. provides an example of the first, i.e. decoy sets were made from the actives of other targets. The second is an extension of point (iii), i.e. include multiple sets of decoys in a study but for different purposes. In conjunction with (ii) above, this would provide material for a rigorous analysis of operational correlation in virtual screening.</p></list-item><list-item><p>Correlation between targets needs further research, in particular the question of the variance of computational methods on closely related systems.</p></list-item><list-item><p>Differences between methods, especially within a single study over multiple targets, should only be reported if the effects of correlation are included. Editors of journals should never publish papers that suggest one method is better than another if these basic statistics are not employed. At a minimum it is recommended that the method variances along with correlation-corrected joint confidence limits be reported. This would allow the estimation of <italic>p</italic>-values for any assessment of method superiority.</p></list-item></list>On the issue of performance metrics we propose:<list list-type="order"><list-item><p>Deciding on the metrics to be reported should be a community effort, although access to primary data to encourage &#x201C;meta-analysis&#x201D; would aid the autonomous adoption of metrics.</p></list-item><list-item><p>There are good reasons metrics such as the AUC are popular in other fields and any new or additional measures for virtual screening need to be assessed against the characteristics that have made such metrics successful. Five characteristics required for a metric to be of similar heft to the AUC are proposed: independence to extensive variables, robustness, error bounds, no adjustable parameters and ease of interpretation. As an illustration, an improvement to the common enrichment measure is described. We propose the term &#x201C;ROC enrichment&#x201D; for this new measure. Similar improvements to early measures are proposed.</p></list-item><list-item><p>Currently, it would seem that providing AUCs and a few ROC enrichment values for the early part of a screen, e.g. 1% and 2%, would capture most <italic>average</italic> behavior of interest.</p></list-item><list-item><p>The assumption that &#x2018;early&#x2019; behavior is necessarily a benefit is based on an assumed cost structure that may or may not hold. Similar statements are true for virtual screening in general. A rigorous attempt to assign real-word costs would be of use to the field.</p></list-item><list-item><p>We have found very little evidence that suggests <italic>average</italic> behaviors cannot be accurately predicted by AUC or obvious extensions there of. Those suggesting otherwise need to provide clear-cut, statistically valid, evidence.</p></list-item><list-item><p>Divergence from (v) may be an indicator of local or domain knowledge, i.e. knowing the right answer and/or extensive knowledge of the system under study. A potential future area of research is whether this is also an indicator of over-parameterization, posterior system preparation or other reliance on retrospective knowledge. Interestingly, 2D methods applied to DUD, showed no evidence of such a divergence.</p></list-item></list>In conclusion, there is no reason it is not possible to establish standards in the field of molecular modeling necessary to enhance the quality of publications and allow a reliable assessment of methods and progress. However, there are also powerful incentives not to be rigorous. As one invested scientist was heard to pronounce, &#x201C;livelihoods are at stake&#x201D;. This is true; we suggest the livelihood of the entire field. Whether the modeling community has the will to enact such measures may well determine whether future generations of scientists look back and see a field that became essential to drug discovery or one that became a mere footnote.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>The author wishes to thank Ajay Jain for discussions and his efforts on the &#x201C;Evaluation of Computational Methods&#x201D; symposium at the 234th American Chemical Society meeting, Martha Head for sharing the AUC and rank orderings of the GSK docking study, and Geoff Skillman, Paul Hawkins and Mark McGann for ideas, discussions and, most importantly, data. Finally, Christopher Bayly and Jean-Francois Truchon for spirited discussions on BedROC that, even if they did not convince the author, provided the spur for much of the work presented here.</p>
+      <p><bold>Open Access</bold> This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ioannidis</surname>
+              <given-names>JPA</given-names>
+            </name>
+          </person-group>
+          <article-title>Contradicted and initially stronger effects in highly cited clinical research</article-title>
+          <source>JAMA</source>
+          <year>2007</year>
+          <volume>294</volume>
+          <issue>2</issue>
+          <fpage>218</fpage>
+          <lpage>228</lpage>
+          <pub-id pub-id-type="doi">10.1001/jama.294.2.218</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ioannidis JPA (2007) Contradicted and initially stronger effects in highly cited clinical research. JAMA 294(2):218&#x2013;228 <pub-id pub-id-type="pmid">16014596</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Obuchowski</surname>
+              <given-names>NA</given-names>
+            </name>
+            <name>
+              <surname>Lieber</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Wians</surname>
+              <given-names>FH</given-names>
+            </name>
+          </person-group>
+          <article-title>ROC curves in <italic>Clinical Chemistry</italic>: Uses, misuses and possible solutions</article-title>
+          <source>Clin Chem</source>
+          <year>2004</year>
+          <volume>50</volume>
+          <issue>7</issue>
+          <fpage>1118</fpage>
+          <lpage>1125</lpage>
+          <pub-id pub-id-type="doi">10.1373/clinchem.2004.031823</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Obuchowski NA, Lieber ML, Wians FH (2004) ROC curves in Clinical Chemistry: Uses, misuses and possible solutions. Clin Chem 50(7):1118&#x2013;1125 <pub-id pub-id-type="pmid">15142978</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Warren</surname>
+              <given-names>GL</given-names>
+            </name>
+            <name>
+              <surname>Andrews</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Capelli</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>LaLonde</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lambert</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Lindvall</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nevins</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Semus</surname>
+              <given-names>SF</given-names>
+            </name>
+            <name>
+              <surname>Senger</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Tedesco</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Wall</surname>
+              <given-names>ID</given-names>
+            </name>
+            <name>
+              <surname>Woolven</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Peishoff</surname>
+              <given-names>CE</given-names>
+            </name>
+            <name>
+              <surname>Head</surname>
+              <given-names>MS</given-names>
+            </name>
+          </person-group>
+          <article-title>A critical assessment of docking programs and scoring functions</article-title>
+          <source>J Med Chem</source>
+          <year>2006</year>
+          <volume>49</volume>
+          <issue>20</issue>
+          <fpage>5912</fpage>
+          <lpage>5931</lpage>
+          <pub-id pub-id-type="doi">10.1021/jm050362n</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Warren GL, Andrews CW, Capelli AM, Clarke B, LaLonde J, Lambert MH, Lindvall M, Nevins N, Semus SF, Senger S, Tedesco G, Wall ID, Woolven JM, Peishoff CE, Head MS (2006) A critical assessment of docking programs and scoring functions. J Med Chem 49(20):5912&#x2013;5931 <pub-id pub-id-type="pmid">17004707</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McGaughey</surname>
+              <given-names>GB</given-names>
+            </name>
+            <name>
+              <surname>Sheridan</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Bayly</surname>
+              <given-names>CI</given-names>
+            </name>
+            <name>
+              <surname>Culberson</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Kreatsoulas</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Lindsley</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Maiorov</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Truchon</surname>
+              <given-names>J-F</given-names>
+            </name>
+            <name>
+              <surname>Cornell</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of topological, shape, and docking methods in virtual screening</article-title>
+          <source>J Chem Inf Model</source>
+          <year>2007</year>
+          <volume>47</volume>
+          <issue>4</issue>
+          <fpage>1504</fpage>
+          <lpage>1519</lpage>
+          <pub-id pub-id-type="doi">10.1021/ci700052x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McGaughey GB, Sheridan RP, Bayly CI, Culberson JC, Kreatsoulas C, Lindsley S, Maiorov V, Truchon J-F, Cornell WD (2007) Comparison of topological, shape, and docking methods in virtual screening. J Chem Inf Model 47(4):1504&#x2013;1519 <pub-id pub-id-type="pmid">17591764</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="other">Sheridan RP This issue</citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hanley</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>McNeil</surname>
+              <given-names>BJ</given-names>
+            </name>
+          </person-group>
+          <article-title>The meaning and use of the area under an ROC curve</article-title>
+          <source>Radiology</source>
+          <year>1982</year>
+          <volume>143</volume>
+          <fpage>29</fpage>
+          <lpage>36</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hanley JA, McNeil BJ (1982) The meaning and use of the area under an ROC curve. Radiology 143:29&#x2013;36 <pub-id pub-id-type="pmid">7063747</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>DeLong</surname>
+              <given-names>ER</given-names>
+            </name>
+            <name>
+              <surname>DeLong</surname>
+              <given-names>DM</given-names>
+            </name>
+            <name>
+              <surname>Clarke-Pearson</surname>
+              <given-names>DL</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparing the areas under two or more correlated receiver operating characteristic curves: A nonparametric approach</article-title>
+          <source>Biometrics</source>
+          <year>1988</year>
+          <volume>44</volume>
+          <fpage>837</fpage>
+          <lpage>845</lpage>
+          <pub-id pub-id-type="doi">10.2307/2531595</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">DeLong ER, DeLong DM, Clarke-Pearson DL (1988) Comparing the areas under two or more correlated receiver operating characteristic curves: A nonparametric approach. Biometrics 44:837&#x2013;845 <pub-id pub-id-type="pmid">3203132</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Metz</surname>
+              <given-names>CE</given-names>
+            </name>
+          </person-group>
+          <article-title>Basic principles of ROC analysis</article-title>
+          <source>Semin Nuclear Med</source>
+          <year>1978</year>
+          <volume>VIII</volume>
+          <issue>4</issue>
+          <fpage>283</fpage>
+          <lpage>298</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0001-2998(78)80014-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Metz CE (1978) Basic principles of ROC analysis. Semin Nuclear Med VIII(4):283&#x2013;298 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hanley</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>McNeil</surname>
+              <given-names>BJ</given-names>
+            </name>
+          </person-group>
+          <article-title>A method of comparing the areas under the receiver operator characteristic curves derived from the same cases</article-title>
+          <source>Radiology</source>
+          <year>1983</year>
+          <volume>148</volume>
+          <fpage>839</fpage>
+          <lpage>843</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hanley JA, McNeil BJ (1983) A method of comparing the areas under the receiver operator characteristic curves derived from the same cases. Radiology 148:839&#x2013;843 <pub-id pub-id-type="pmid">6878708</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bissantz</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Folkers</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Rognan</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein-based virtual screening of chemical databases. 1. Evaluations of diffferent docking/scoring combinations</article-title>
+          <source>J Med Chem</source>
+          <year>2000</year>
+          <volume>43</volume>
+          <issue>25</issue>
+          <fpage>4759</fpage>
+          <lpage>4767</lpage>
+          <pub-id pub-id-type="doi">10.1021/jm001044l</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bissantz C, Folkers G, Rognan D (2000) Protein-based virtual screening of chemical databases. 1. Evaluations of diffferent docking/scoring combinations. J Med Chem 43(25):4759&#x2013;4767 <pub-id pub-id-type="pmid">11123984</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="other">Weininger D (1998) Combinatorics of small molecular structures. Encyclopedia of computational chemistry, vol 1. Wiley, New York, pp 425&#x2013;430</citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fink</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Bruggesser</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Reymond</surname>
+              <given-names>J-L</given-names>
+            </name>
+          </person-group>
+          <article-title>Virtual exploration of the small molecule chemical universe below 160&#xA0;Daltons</article-title>
+          <source>Angew Chem Int Ed</source>
+          <year>2005</year>
+          <volume>44</volume>
+          <fpage>1504</fpage>
+          <lpage>1508</lpage>
+          <pub-id pub-id-type="doi">10.1002/anie.200462457</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fink T, Bruggesser H, Reymond J-L (2005) Virtual exploration of the small molecule chemical universe below 160&#xA0;Daltons. Angew Chem Int Ed 44:1504&#x2013;1508 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jain</surname>
+              <given-names>AN</given-names>
+            </name>
+          </person-group>
+          <article-title>Ligand-based structure hypothesis for virtual screeninG</article-title>
+          <source>J Med Chem</source>
+          <year>2004</year>
+          <volume>47</volume>
+          <fpage>947</fpage>
+          <lpage>961</lpage>
+          <pub-id pub-id-type="doi">10.1021/jm030520f</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jain AN (2004) Ligand-based structure hypothesis for virtual screeninG. J Med Chem 47:947&#x2013;961 <pub-id pub-id-type="pmid">14761196</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="other">Cleves AE, Jain AN This issue</citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="other">Hawkins P (2007) On how not to do an evaluation. Presentation at CUP8, Santa Fe, New Mexico, February 26th&#x2013;28th 2007</citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="other">Lipinski CA, Lombardo F, Dominy BW, Feeney PJ (2001) Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings. Adv Drug Del Rev 46:3&#x2013;26</citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Verdonk</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Berdini</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Hartshorn</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Mooij</surname>
+              <given-names>WTM</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Watson</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Virtual screening using protein-ligand docking: Avoiding artificial enrichment</article-title>
+          <source>J Chem Inf Comput Sci</source>
+          <year>2004</year>
+          <volume>44</volume>
+          <fpage>793</fpage>
+          <lpage>806</lpage>
+          <pub-id pub-id-type="doi">10.1021/ci034289q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Verdonk ML, Berdini V, Hartshorn MJ, Mooij WTM, Murray CW, Taylor RD, Watson P (2004) Virtual screening using protein-ligand docking: Avoiding artificial enrichment. J Chem Inf Comput Sci 44:793&#x2013;806 <pub-id pub-id-type="pmid">15154744</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Shoichet</surname>
+              <given-names>BK</given-names>
+            </name>
+            <name>
+              <surname>Irwin</surname>
+              <given-names>JJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Benchmarking sets for molecular docking</article-title>
+          <source>J Med Chem</source>
+          <year>2006</year>
+          <volume>49</volume>
+          <issue>23</issue>
+          <fpage>6789</fpage>
+          <lpage>6807</lpage>
+          <pub-id pub-id-type="doi">10.1021/jm0608356</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Huang N, Shoichet BK, Irwin JJ (2006) Benchmarking sets for molecular docking. J Med Chem 49(23):6789&#x2013;6807 <pub-id pub-id-type="pmid">17154509</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="other">Geoffrey Skillman A (2007) Personal communication</citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="other">ROCS, FRED are products of OpenEye Scientific Software, www.eyesopen.com. LINGOS are based on the OEChem SMILES canonicalization, also from OpenEye. MACCS Keys are fingerprints of molecular 2D features</citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hawkins</surname>
+              <given-names>PC</given-names>
+            </name>
+            <name>
+              <surname>Skillman</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Nicholls</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of shape-matching and docking as virtual screening tools</article-title>
+          <source>J Med Chem</source>
+          <year>2007</year>
+          <volume>50</volume>
+          <issue>1</issue>
+          <fpage>74</fpage>
+          <lpage>82</lpage>
+          <pub-id pub-id-type="doi">10.1021/jm0603365</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hawkins PC, Skillman AG, Nicholls A (2007) Comparison of shape-matching and docking as virtual screening tools. J Med Chem 50(1):74&#x2013;82 <pub-id pub-id-type="pmid">17201411</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="other">Good A, Oprea T This issue</citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="other">Clark RD This issue</citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cheverud</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <article-title>A simple correction for the multiple comparisons in interval mapping genome scans</article-title>
+          <source>Heredity</source>
+          <year>2001</year>
+          <volume>87</volume>
+          <fpage>52</fpage>
+          <lpage>58</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2540.2001.00901.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cheverud JM (2001) A simple correction for the multiple comparisons in interval mapping genome scans. Heredity 87:52&#x2013;58 <pub-id pub-id-type="pmid">11678987</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="other">Fisher RA (1948) Combining independent tests of significance. Am Stat 2(5):30</citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="other">SPEC website:.<ext-link ext-link-type="uri" xlink:href="http://www.spec.org/spec">www.spec.org/spec</ext-link></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="other">Pepe MS (2003) The statistical evaluation of medical tests for classification and prediction. Oxford Statistical Science Series. Oxford University Press. Chapter 5: Empircal Estimation</citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sheridan</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Singh</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Fluder</surname>
+              <given-names>EM</given-names>
+            </name>
+            <name>
+              <surname>Kearsley</surname>
+              <given-names>SK</given-names>
+            </name>
+          </person-group>
+          <article-title>Protocols for bridging the peptide to nonpeptide gap in topological similarity searches</article-title>
+          <source>J Chem Inf Comput Sci</source>
+          <year>2001</year>
+          <volume>41</volume>
+          <issue>5</issue>
+          <fpage>1395</fpage>
+          <lpage>1406</lpage>
+          <pub-id pub-id-type="doi">10.1021/ci0100144</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sheridan RP, Singh SB, Fluder EM, Kearsley SK (2001) Protocols for bridging the peptide to nonpeptide gap in topological similarity searches. J Chem Inf Comput Sci 41(5):1395&#x2013;1406 <pub-id pub-id-type="pmid">11604041</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Truchon</surname>
+              <given-names>J-F</given-names>
+            </name>
+            <name>
+              <surname>Bayly</surname>
+              <given-names>CI</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluating virtual screening methods: good and bad metrics for the &#x201C;early recognition&#x201D; problem</article-title>
+          <source>J Chem Inf Model</source>
+          <year>2007</year>
+          <volume>47</volume>
+          <issue>2</issue>
+          <fpage>488</fpage>
+          <lpage>508</lpage>
+          <pub-id pub-id-type="doi">10.1021/ci600426e</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Truchon J-F, Bayly CI (2007) Evaluating virtual screening methods: good and bad metrics for the &#x201C;early recognition&#x201D; problem. J Chem Inf Model 47(2):488&#x2013;508 <pub-id pub-id-type="pmid">17288412</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="other">Bayly CI, Brideau C, Liaw A, Svetnick V (2006) Iterative focused screening using Random Forest: A comparison with HTS/random screening for two extreme cases. Thomas Kuhn Paradigm Shift Award Competition, 231st ACS National Meeting. March 26&#x2013;30, 2006</citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

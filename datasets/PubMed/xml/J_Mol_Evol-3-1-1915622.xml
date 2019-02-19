@@ -1,0 +1,1600 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Mol Evol</journal-id>
+      <journal-title>Journal of Molecular Evolution</journal-title>
+      <issn pub-type="ppub">0022-2844</issn>
+      <issn pub-type="epub">1432-1432</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17479342</article-id>
+      <article-id pub-id-type="pmc">1915622</article-id>
+      <article-id pub-id-type="publisher-id">21</article-id>
+      <article-id pub-id-type="doi">10.1007/s00239-006-0021-2</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Positively Selected Codons in Immune-Exposed Loops of the Vaccine Candidate OMP-P1 of <italic>Haemophilus influenzae</italic></article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Mes</surname>
+            <given-names>Ted H. M.</given-names>
+          </name>
+          <address>
+            <email>t.mes@nioo.knaw.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van Putten</surname>
+            <given-names>Jos P. M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Netherlands Institute of Ecology (NIOO-KNAW), Centre for Estuarine and Marine Ecology, P.O.B. 140, 4400 AC Yerseke, The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Department of Infectious Diseases and Immunology, Utrecht University, Yalelaan 1, 3584 CL Utrecht, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>19</day>
+        <month>3</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>4</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>64</volume>
+      <issue>4</issue>
+      <fpage>411</fpage>
+      <lpage>422</lpage>
+      <history>
+        <date date-type="received">
+          <day>27</day>
+          <month>1</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>11</day>
+          <month>1</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The high levels of variation in surface epitopes can be considered as an evolutionary hallmark of immune selection. New computational tools enable analysis of this variation by identifying codons that exhibit high rates of amino acid changes relative to the synonymous substitution rate. In the outer membrane protein P1 of <italic>Haemophilus influenzae</italic>, a vaccine candidate for nontypeable strains, we identified four codons with this attribute in domains that did not correspond to known or assumed B- and T-cell epitopes of OMP-P1. These codons flank hypervariable domains and do not appear to be false positives as judged from parsimony and maximum likelihood analyses. Some closely spaced positively selected codons have been previously considered part of a transmembrane domain, which would render this region unsuited for inclusion in a vaccine. Secondary structure analysis, three-dimensional structural database searches, and homology modeling using <italic>FadL</italic> of <italic>E. coli</italic> as a structural homologue, however, revealed that all positively selected codons are located in or near extracellular looping domains. The spacing and level of diversity of these positively selected and exposed codons in OMP-P1 suggest that vaccine targets based on these and conserved flanking residues may provide broad coverage in <italic>H. influenzae</italic>.</p>
+        <sec>
+          <title>Electronic Supplementary Material</title>
+          <p>The online version of this article (doi:10.1007/s00239-006-0021-2) contains supplementary material, which is available to authorized users.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>
+          <italic>Haemophilus influenzae</italic>
+        </kwd>
+        <kwd>Outer membrane proteinI</kwd>
+        <kwd>Immune selection</kwd>
+        <kwd>Structural information</kwd>
+        <kwd>Epitope</kwd>
+        <kwd>Vaccine</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media, LLC 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Vaccination with <italic>Haemophilus influenzae</italic> type b polysaccharide (in the form of Hib conjugate vaccines) has proven to be highly effective in preventing invasive <italic>H. influenzae</italic> disease and has effectively reduced serotype b in many parts of the world (<xref ref-type="bibr" rid="CR3">Black et al. 1992</xref>). Nontypeable <italic>H. influenzae</italic> strains, however, remain a serious problem (<xref ref-type="bibr" rid="CR46">Zeckel et al. 1992</xref>). These strains are generally less invasive than their encapsulated type b counterpart but are a major cause of ear infections (otitis media) and sinusitis in children. They are also associated with respiratory tract infections such as pneumonia in infants, children, and adults. Ongoing efforts to develop a vaccine against nontypeable <italic>H. influenzae</italic> have mainly focused on immunogenic surface-exposed proteins (<xref ref-type="bibr" rid="CR4">Bolduc et al. 2000</xref>). This approach clearly has potential, as immune responses against surface proteins have been shown to aid the recovery from otitis media (<xref ref-type="bibr" rid="CR33">Shurin et al. 1980</xref>) and vaccination with surface-exposed domains of a major outer membrane protein (OMP-P1) provides protection in animal models (<xref ref-type="bibr" rid="CR4">Bolduc et al. 2000</xref>). However, this effect is strain-specific (<xref ref-type="bibr" rid="CR16">Gonzales et al. 1987</xref>) and, hence, not sufficient to provide broad protection. This problem may be overcome by the inclusion of less variable immunogenic protein regions in the vaccine.</p>
+      <p>Identification of candidate vaccine antigens is classically achieved via immunization studies with isolated or recombinant antigen and via epitope mapping, often in combination with analysis of correlates of protection. Vaccine development is often hampered by antigenic diversity within the surface-exposed regions. This limits a broad cross-reactivity of the elicited immune response. This holds also for proteins such as OMP-P1 in which large conserved domains separate relatively small variable domains (<xref ref-type="bibr" rid="CR23">Munson and Grass 1988</xref>; <xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>; <xref ref-type="bibr" rid="CR4">Bolduc et al. 2000</xref>). On the other hand, the genetic diversity of vaccine candidates can be used to choose OMP-P1 variants for use in immunological assays (<xref ref-type="bibr" rid="CR4">Bolduc et al. 2000</xref>). Nowadays, instead of an arbitrary selection of vaccine candidates, novel and rigorous computational approaches can be used to identify codons whose diversity is driven by the immune system. These codons are characterized by a higher rate of nonsynonymous substitutions (dN) relative to the synonymous substitution rate (dS) (<xref ref-type="bibr" rid="CR41">Yang et al. 2003</xref>; <xref ref-type="bibr" rid="CR14">Fitzpatrick and McInerney 2005</xref>). The codons are referred to as positively selected, although they may typically reflect immune selection (<xref ref-type="bibr" rid="CR14">Fitzpatrick and McInerney 2005</xref>). To avoid confusion with the results of immunological studies, we refer here to codons with a higher rate of nonsynonymous substitution than synonymous substitution (dN &gt; dS) as positively selected.</p>
+      <p>Knowledge of the position of positively selected codons in a protein would constitute an excellent starting point for immunization studies and epitope mapping, not only because of their biological function, but also because the number of variable sites of proteins that are candidates for inclusion in a vaccine can be reduced. In the present study, we identified codons that evolved more rapidly through nonsynonymous than through synonymous substitutions in a sample of 36 OMP-P1 sequences. We compared the location of these codons with the location of peptides that were used in epitope mapping and with B- and T-cell OMP-P1-specific antigens to examine the congruence among these techniques and to identify regions that could be important for vaccine design. Finally, we localized stretches with positively selected codons in secondary structures and three-dimensional (3D) models of OMP-P1. Our computational approach led to the identification of several novel domains with positive selected codons within the OMP-P1 protein that may be attractive targets in future vaccine design.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec id="Sec3">
+        <title>Evolutionary Analysis of the Selection Pressure on OMP-P1</title>
+        <p>We used the nr database for BLASTP searches under standard settings to collect closely related OMP-P1 sequences of <italic>H. influenzae</italic> using accession 9716616 as a query. The GenBank accession numbers and the data set of OMP-P1 sequences are provided as Supplementary Information. We aligned the sequences using the standard alignment parameters using Clustalx (<xref ref-type="bibr" rid="CR37">Thompson et al. 1997</xref>) and checked the amino acid alignment with DNASP version 4.0 (<xref ref-type="bibr" rid="CR31">Rozas et al. 2003</xref>). Codons comprised in insertions and deletions and in extremely variable stretches were removed from the alignment and are referred to in this work as hypervariable domains. A phylogenetic tree was reconstructed using PAUP* (<xref ref-type="bibr" rid="CR36">Swofford 2003</xref>) with the maximum likelihood algorithm (100 random additions of taxa, TBR branch swapping) under the optimal nucleotide substitution model based on modeltest version 3.06 (<xref ref-type="bibr" rid="CR27">Posada and Crandall 1998</xref>). Bootstrapping based on maximum likelihood was used to assess support for internodes using 100 random additions, SPR branch swapping, steepest descent, chuckscore = 0.1, and nchuck = 1. We used the alignment and tree topology of one of the maximum likelihood (ML) trees as input for PAML (<xref ref-type="bibr" rid="CR42">Yang 1997</xref>). This program implements the currently most widely used algorithms to detect selection on codons, which take into account the transition&#x2013;transversion ratio and codon usage bias and allow identification of codons that accumulate nonsynonymous mutations more rapidly than synonymous ones. To detect such sites, the rates of nonsynonymous and synonymous substitutions are determined through ML analyses using the model of <xref ref-type="bibr" rid="CR15">Goldman and Yang (1994)</xref>. For immune-exposed proteins of pathogens, a dN/dS ratio &gt;1 indicates that nonsynonymous substitutions are driven by selection pressures exerted by the immune system (<xref ref-type="bibr" rid="CR11">Derrick et al. 1999</xref>; <xref ref-type="bibr" rid="CR17">Jiggins et al. 2002</xref>; <xref ref-type="bibr" rid="CR14">Fitzpatrick and McInerney 2005</xref>). Because it is most likely that only a subset of codons in any protein-coding gene evolves under positive selection, several distributions of dN/dS that reflect neutral (M1, M7) and selection (M2, M8) models can be fitted to the data using PAML (<xref ref-type="bibr" rid="CR42">Yang 1997</xref>). The neutral models assume a single estimate of &#x3C9; (0&lt;&#x3C9;&lt;1; M1) and a discrete beta distribution of &#x3C9; with 10 categories (0&lt;&#x3C9;&lt;1; M7). The dN/dS ratio under the neutral models is constrained to values &#x2264;1 (<xref ref-type="bibr" rid="CR41">Yang et al. 2003</xref>; <xref ref-type="bibr" rid="CR43">Yang and Swanson 2002</xref>). The selection models M2 and M8 have an additional class of &#x3C9; values that exceed unity. This latter codon category is believed to comprise codons that code for amino acids that are affected by the immune system (<xref ref-type="bibr" rid="CR44">Yang et al. 2000</xref>) and that, consequently, evolve rapidly at the amino acid level. The cross-category &#x3C9;&#x2019;s under M7 and M8 were estimated by averaging the &#x3C9; estimates of individual &#x3C9; classes weighted by their frequency. We used multiple starting values for the selection models M2 and M8, because these models may have multiple local optima (e.g., Wong et al. 2004). The fit of M1 and M7 to the data was compared with selection models (M2 and M8, respectively). The ratio of the fit of neutral and selection models mentioned above follows a chi-square distribution with two degrees of freedom, i.e., for significance at the 1% significance level, two times the difference of the likelihood of neutral and selection models should be &gt;9.21. We examined the evidence for positive selection in the entire alignment (excluding codons with ambiguity codes and gaps; see above), in a data set comprising 30 nontypeable isolates and in a data set of 36 sequences from which five variable domains were deleted. The latter data set enables the detection of positively selected codons in highly conserved domains. The selection models may give false-positive results in the case of a poor fit of the beta distribution to the true distribution of &#x3C9; in the interval between 0 and 1 (Swanson et al. 2003). The test advocated by Swanson et al. (2003) to guard against such false positives of the ML methods implemented in PAML involves the comparison of M8 (&#x3C9;<sub>2</sub> &gt; 1) and M8A (&#x3C9;<sub>2</sub> = 1). This likelihood ratio test (LRT) is asymptotically distributed as a 50:50 mixture of a point mass at 0 and a chi-square with one degree of freedom, which corresponds to 2.71 units difference between the likelihoods of M8A and M8 at the 1% level. If the fit of the selection models is significantly better than that of the corresponding neutral models, the selection models can be used to identify individual codons under positive selection (<xref ref-type="bibr" rid="CR45">Yang et al. 2005</xref>). For inferring which sites are under positive selection, the Bayes theorem was used (<xref ref-type="bibr" rid="CR45">Yang et al. 2005</xref>), which assumes that given the proportion of sites across &#x3C9; classes as estimated from the ML analyses, assigns priors to model parameters to integrate over their uncertainties. The Bayes Empirical Bayes (BEB) approach used here was specifically advocated for small data sets, because it takes into account sampling errors of the proportions and &#x3C9; ratios of site classes (<xref ref-type="bibr" rid="CR45">Yang et al. 2005</xref>).</p>
+        <p>The rigorous identification of codons under positive selection is an important step when linking evolutionary and structural data, and when testing individual codons, p-values should ideally be confirmed by independent tests and corrected for multiple tests. To these ends, we applied the conservative tests of positive selection based on parsimony (<xref ref-type="bibr" rid="CR35">Suzuki and Gojobori 1999</xref>) implemented as the Single Likelihood Ancestor Counting (SLAC) analysis in the datamonkey web server (<xref ref-type="bibr" rid="CR18">Kosakovsky Pond and Frost 2005</xref>). In contrast to the original version of the Suzuki-Gojobori test, the modified version allows selection of a nucleotide substitution model. We also used a new ML method developed by <xref ref-type="bibr" rid="CR21">Massingham and Goldman (2005)</xref>, which does not assume an underlying distribution of &#x3C9;. Instead, their sitewise likelihood ratio (SLR) procedure, which uses the same codon substitution model as in <xref ref-type="bibr" rid="CR15">Goldman and Yang (1994)</xref>, performs a LRT on a sitewise basis, testing the null model (neutrality, &#x3C9; = 1) against an alternative model (&#x3C9; &#x2260; 1). In the SLR method, tree topology, branch lengths, equilibrium codon frequencies, and transition/transversion rate ratio are assumed to be common to all sites in an alignment. Under the null model, all parameters except &#x3C9; are allowed to vary freely. Under the alternative model, all parameters vary freely. The SLR method applies Hochberg&#x2019;s step-up procedure to correct for multiple tests (<xref ref-type="bibr" rid="CR21">Massingham and Goldman 2005</xref>). Both the parsimony method and the SLR method also allow the identification of negatively selected sites.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Secondary Structure of OMP-P1</title>
+        <p>Following the localization of positively selected codons in the primary sequence, we determined the higher-order structure of amino acid stretches in OMP-P1 using TMHMM version 2.0 (<xref ref-type="bibr" rid="CR19">Krogh et al. 2001</xref>) to determine whether stretches with positively selected codons take secondary structures typical of transmembrane domains. The exposition of regions of OMP-P1 was assessed by means of the solvent accessibility algorithm as implemented in Jpred (<xref ref-type="bibr" rid="CR9">Cuff et al. 1998</xref>). We identified exposed residues using the secondary structure algorithm implemented in SSPRO 4.5 (<xref ref-type="bibr" rid="CR5">Cheng et al. 2005</xref>) and Jnet5 (<xref ref-type="bibr" rid="CR8">Cuff and Barton 1999</xref>). These attributes may suggest whether regions with positively selected codons are exposed to the immune system.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Tertiary Structure of OMP-P1</title>
+        <p>We examined the 3D structure of OMP-P1 using x-ray crystallography or NMR data on structurally related proteins. We used the precompiled Vector Alignment Search Tool (VAST) and NCBI&#x2019;s structural database to identify closely related structural variants that could serve as a template for homology modeling of OMP-P1. The entries in VAST contain experimentally verified information on secondary structure elements such as type, relative orientation, and connectivity. Structurally related proteins can be fitted to each other on a residue-by-residue basis using VAST&#x2019;s transformation matrices and a Gibbs sampling algorithm. In addition, alternative alignments can be generated which take into account the information in secondary structure, thereby increasing the confidence one can have in amino acid alignments of relatively divergent proteins. The VAST program was used for one randomly chosen <italic>H. influenzae</italic> OMP-P1 sequence (GenBank accession no. 9716616 of the nontypeable strain 1512A). Superimposed models of template and target protein were constructed to illustrate the position of gaps and insertions, hypervariable domains, and positively selected codons.</p>
+        <p>As an alternative to the identification of structural neighbors as implemented in VAST, homology modeling can be used. This always starts by looking for close relatives using standard PSI-BLAST or other similarity searches. We used homology modeling as implemented in GENO3D (<xref ref-type="bibr" rid="CR7">Combet et al. 2002</xref>) and SWISS-MODEL (<xref ref-type="bibr" rid="CR26">Peitsch 1996</xref>; <xref ref-type="bibr" rid="CR32">Schwede et al. 2003</xref>) to assess the congruence with the VAST searches and to collect additional data on liability of portions of the 3D models of OMP-P1 and its structurally closest neighbors. The 3D models of OMP-P1 were visualized using Cn3d version 4.1, a free 3D model viewing and selection program. To judge the quality of the 3D reconstruction, we collected the percentage identity between template and target, the VAST P-value, the score reported by this program, and the squared root of mean square deviations (RMSD) of the backbone atoms between the template and the target proteins in angstroms (&#xC5;) using a sliding window approach. To assess whether hypervariable domains were robustly assigned to their exact coordinates in the 3D structures, we also examined the reports of loop reconstructions by the CSP (Constrained Space Programming) routine as implemented in Swiss-Model (<xref ref-type="bibr" rid="CR32">Schwede et al. 2003</xref>).</p>
+        <p>To further quantify the degree of similarity in &#x3B2;-strands between OMP-P1 and a structural template, we compared the distribution of amino acids maintaining &#x3B2;-barrels of transmembrane proteins using the TBB-PRED program (<xref ref-type="bibr" rid="CR20">Liu et al. 2003</xref>), which uses atomic data to assign the most likely amino acid stretches that contribute to &#x3B2;-barrels. We used the Support Vector Machines (SVM) algorithm to determine the location of &#x3B2;-barrels.</p>
+      </sec>
+    </sec>
+    <sec id="Sec6" sec-type="results">
+      <title>
+        <bold>Results</bold>
+      </title>
+      <sec id="Sec7">
+        <title>Alignment of OMP-P1 Sequences</title>
+        <p>BLASTP searches used cutoffs of 0 (E-value) and 727 (score) to identify closely related OMP-P1 sequences. Thirty-six hits were obtained, including 33 protein-coding sequences (27 nontypeable, 1 a, 3 b, 1 e, and 1 f) that have previously been analyzed as part of a population genetics study of OMP-P1 (<xref ref-type="bibr" rid="CR4">Bolduc et al. 2000</xref>; six sequences were left out because they were not among the top hits of the BLASTP search). The average pairwise amino acid similarity in the entire data set was 94%. The sequences of the nontypeable and typeable OMP-P1 protein variants comprised three hypervariable portions with many insertions and deletions (nucleotides 262&#x2013;282, 610&#x2013;621, plus 625&#x2013;633 and 1288&#x2013;1302 plus 1309&#x2013;1317) and a few codons with ambiguity codes or gaps (646&#x2013;651, 730&#x2013;732, 850&#x2013;852, 877&#x2013;879, and 1360&#x2013;1362). In addition, 22 codons missed from the 5&#x2019; end of the OMP-P1 gene of isolate 88591, leading to a total of 50 codons that were deleted to ensure a correct alignment. The amino acid and the nucleotide alignments of the five most variable domains that remained after removal of the codons mentioned above can be viewed as Supplementary Information. The nucleotide alignment revealed that many of the underlying codons in the variable domain frequently shared nucleotides at two of three positions, indicating that the alignment of these regions was correct.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Identification of Positively Selected Codons</title>
+        <p>The computational approaches implemented in PAML version 3.14 (<xref ref-type="bibr" rid="CR42">Yang 1997</xref>) determine which, if any, codons may have evolved under positive selection. On the basis of a single phylogenetic estimate using the preferred nucleotide substitution model derived from MODELTEST (the transversion model TVM, which has variable base frequencies, variable transversion rates, and equal transition rates) with a proportion of invariant sites (0.66) and gamma distributed substitution rates (shape parameter, 0.51), we found 14 ML trees, one of which is shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> (ML &#x2013;5104.27). Bootstrapping indicated that four branches received 100% support (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Support for the other branches was &lt;95% (not shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Comparison of neutral and selection models using the OMP-P1 data set and the tree in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> indicated that both selection models M2 (likelihood, &#x2013;5169.38) and M8 (&#x2013;5177.30) fitted the data significantly better than the neutral models M1 (&#x2013;5260.86) and M7 (&#x2013;5270.13), respectively (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Different starting values of &#x3C9; did not lead to different parameter estimates after optimization (not shown). Both comparisons M1&#x2013;M2 and M7&#x2013;M8 exceeded by far the difference required for significance at the 1% level (see Materials and Methods). This suggested that some codons had a higher nonsynonymous than synonymous substitution rate. Similarly, the Swanson test indicated significant evidence for the occurrence of positive selection under M8 (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Both selection models M2 and M8 suggested that the same codons were under positive selection, i.e., codons 93, 94, 97, 99, 105, 198, 222, 284, and 329, and possibly also codon 96 (under model M8). The OMP-P1 alignment (Supplementary Information) further showed that in this sample of OMP-P1 sequences, positively selected codons mostly flank hypervariable domains. Limitation of the analyses to the 30 nontypeable strains resulted in very similar findings. In these analyses, both M2 (likelihood, &#x2013;4802.93) and M8 (&#x2013;4808.87) fitted the data significantly better than M1 (&#x2013;4883.86) and M7 (&#x2013;4895.19), respectively (not shown). Thus, both model comparisons were again significant. This held also true for the positively selected codons. For M2, relative to the analyses in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>, one additional positively selected codon (225) was found. For M8, no additional codons were found. After deletion of the five variable domains, no evidence for positive selection was left (M1, &#x2013;3107.88; M2, &#x2013;3107.77; M7, &#x2013;3108.18; M8, &#x2013;3106.35).
+<fig id="Fig1"><label>Fig.&#xA0;1.</label><caption><p>Maximum likelihood tree based on the TVM model of nucleotide substitution with a proportion of invariant sites and rate heterogeneity (see text). The error bar indicates the number of substitutions per nucleotide. Asterisks indicate branches with 100% bootstrap support.</p></caption><graphic position="anchor" xlink:href="239_2006_21_f1" id="MO1"/></fig><table-wrap id="Tab1"><label>Table&#xA0;1.</label><caption><p>Positively selected codons in OMP P1 <italic>Heamophilus influenza</italic> according to neutral models (M1 and M7) and selection models (M2 and M8)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">Likelihood</th><th align="left">Tree length</th><th align="left">Kappa &#x3BA;</th><th align="left">Parameters</th><th align="left">Codon</th><th align="left">Amino acid</th><th align="left">Probability positive selection (BEB)</th><th align="left">dN/dS codon &#xB1; SE</th></tr></thead><tbody><tr><td align="left">M1</td><td align="left">&#x2212;5260.86</td><td align="left">1.91</td><td align="left">1.90</td><td align="left">&#x3C9;<sub>0</sub> = 0.02, &#x3C9;<sub>1</sub> = 1, p<sub>0</sub> = 0.84, p<sub>1</sub> = 0.16</td><td align="left"/><td align="left"/><td align="left">&#x2014;</td><td align="left"> &#x2014;</td></tr><tr><td align="left">M2</td><td align="left">&#x2212;5169.38</td><td align="left">2.17</td><td align="left">2.13</td><td align="left">&#x3C9;<sub>0</sub> = 0.02, &#x3C9;<sub>1</sub> = 1, &#x3C9;<sub>2</sub> = 6.42, p<sub>0</sub> = 0.83, p<sub>1</sub> = 0.14, p<sub>2</sub> = 0.03</td><td align="left">93</td><td align="left">A</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.523 &#xB1; &#x2212;0.833</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">94</td><td align="left">S</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.523 &#xB1; 0.833</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">96</td><td align="left">K</td><td align="left">0.57</td><td char="&#xB1;" align="char">3.979 &#xB1; 2.632</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">97</td><td align="left">I</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.523 &#xB1; 0.833</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">99</td><td align="left">R</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.523 &#xB1; 0.834</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">105</td><td align="left">Q</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.523 &#xB1; 0.833</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">198</td><td align="left">A</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.522 &#xB1; 0.835</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">222</td><td align="left">K</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.523 &#xB1; 0.834</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">225</td><td align="left">T</td><td align="left">0.79</td><td char="&#xB1;" align="char">5.293 &#xB1; 2.349</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">284</td><td align="left">K</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.519 &#xB1; 0.844</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">329</td><td align="left">H</td><td align="left">1.00</td><td char="&#xB1;" align="char">6.493 &#xB1; 0.919</td></tr><tr><td align="left">M7</td><td align="left">&#x2212;5270.13</td><td align="left">2.07</td><td align="left">1.91</td><td align="left">B(p = 2.14, q = 0.04)</td><td align="left"/><td align="left"/><td align="left">&#x2014;</td><td align="left">&#x2014;</td></tr><tr><td align="left">M8A</td><td align="left">&#x2212;5260.96</td><td align="left">1.92</td><td align="left">1.91</td><td align="left">B(p = 2.14, q = 99), p<sub>0</sub> = 0.84, p<sub>1</sub> = 0.16, &#x3C9;<sub>2</sub> = 1</td><td align="left"/><td align="left"/><td align="left"/><td align="left"/></tr><tr><td align="left">M8</td><td align="left">&#x2212;5177.30</td><td align="left">2.17</td><td align="left">2.12</td><td align="left">B(p = 0.07, q = 0.38), p<sub>0</sub> = 0.97, p<sub>1</sub> = 0.38, &#x3C9;<sub>2</sub> = 5.79</td><td align="left">93</td><td align="left">A</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">94</td><td align="left">S</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">95</td><td align="left">V</td><td align="left">0.84</td><td char="&#xB1;" align="char">4.661 &#xB1; 1.726</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">96</td><td align="left">K</td><td align="left">0.95</td><td char="&#xB1;" align="char">5.214 &#xB1; 1.099</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">97</td><td align="left">I</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">99</td><td align="left">R</td><td align="left">0.74</td><td char="&#xB1;" align="char">4.191 &#xB1;2.015</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">100</td><td align="left">N</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">105</td><td align="left">Q</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">151</td><td align="left">I</td><td align="left">0.90</td><td char="&#xB1;" align="char">4.929 &#xB1; 1.480</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">198</td><td align="left">A</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">222</td><td align="left">K</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.585</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">225</td><td align="left">T</td><td align="left">0.96</td><td char="&#xB1;" align="char">5.238 &#xB1;1.098</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">284</td><td align="left">K</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.445 &#xB1; 0.586</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">329</td><td align="left">H</td><td align="left">1.00</td><td char="&#xB1;" align="char">5.442 &#xB1; 0.596</td></tr><tr><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left"/><td align="left">371</td><td align="left">Y</td><td align="left">0.76</td><td char="&#xB1;" align="char">4.279 &#xB1; 2.030</td></tr></tbody></table><table-wrap-foot><p>The likelihood indicates the fit of the data to the models of <xref ref-type="bibr" rid="CR42">Yang (1997)</xref>. Tree length is measured as the number of mutations per codon. Kappa is the transversion &#x2013; transition ratio. p<sub>i</sub> denotes the proportion of sites falling in site class &#x3C9;<sub>i</sub>. The parameters p and q are the shape parameters of the beta distribution which underlies M8. The probability that codons were under positive selection was determined using Bayes Empirical Bayes (<xref ref-type="bibr" rid="CR45">Yang et al. 2005</xref>), with the proportion, &#x3C9;, and standard error indicated per codon. Model 8A refers to the model of Swanson et al. (2003), in which &#x3C9;<sub>2</sub> is fixed at one under M8. The reference sequence is 9716616.</p></table-wrap-foot></table-wrap></p>
+        <p>The modified Suzuki-Gojobori method indicated that four sites evolved under positive selection (substitution model 012010; codons 93 [<italic>P</italic>= 0.01], 94 [<italic>P</italic>= 0.01], 97 [<italic>P</italic>= 0.03], and 105 [<italic>P</italic>= 0.03]; likelihood, &#x2013;5548.10; tree length per site, 0.59, dN/dS over all codons = 0.32; middle row in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). Using the SLR method, we found eight positively selected codons. Relative to the results of PAML (top row in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>), all but one positively selected codon found by the SLR method remained significant upon correction for multiple tests (except for codon 329, <italic>P</italic>= 0.14; bottom row in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> and Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Overall, the strongest evidence for positive selection based on the parsimony and ML methods was found for residues 93, 94, 97, and 105.
+<fig id="Fig2"><label>Fig.&#xA0;2.</label><caption><p>Codons under positive selection as inferred from the site models in PAML (top panel), the modified Suzuki-Gojobori method implemented as the SLAC procedure in the datamonkey server (middle panel), and the sitewise likelihood ratio test (bottom panel) of 36 OMP-P1 sequences of <italic>H. influenzae</italic>. Codons with significant evidence for positive selection have probabilities &gt;0.95 (PAML and SLR methods) or &lt;0.05 (modified Suzuki-Gojobori method). The spacing between codons is adjusted for the insertions and deletions in OMP-P1.</p></caption><graphic position="anchor" xlink:href="239_2006_21_f2" id="MO2"/></fig></p>
+      </sec>
+      <sec id="Sec9">
+        <title>Topographic Localization of the Amino Acids Encoded by Putatively Positively Selected Codons and Their Relation to Immunological Data of OMP-P1</title>
+        <p>A priori, positively selected codons in B-cell and T-helper determinants in the OMP-P1 protein are suitable vaccination targets, because these sites can be expected to be highly immunogenic and involved in the clearance of OMP-P1 variants. The most promising broadly protective regions of OMP-P1 based on epitope mapping studies are mainly located outside the stretch of closely spaced positively selected codons (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Peptide-specific antisera directed against these regions did not invoke protective immunity, although strong IgG and T-cell responses were obtained (<xref ref-type="bibr" rid="CR28">Proulx et al. 1991</xref>; <xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>). Only in rare cases was targeting of the conserved regions associated with protection (one epitope located on peptide HIBP1-4 and recognized by MAb 7C8 was protective [<xref ref-type="bibr" rid="CR25">Panezutti et al. 1993</xref>]). Furthermore, two of five positively selected sites are present in a synthetic P1 peptide (HIBP1-12) that has been used in immunization studies (<xref ref-type="bibr" rid="CR29">Proulx et al. 1992</xref>; <xref ref-type="bibr" rid="CR25">Panezutti et al. 1993</xref>; <xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>). The peptide, which was not identified as a conserved B-cell epitope across typeable and nontypeable <italic>H. influenzae</italic> isolates, did not carry an immunodominant epitope in animal models. Another peptide that was used for epitope mapping and immunological assays (<xref ref-type="bibr" rid="CR29">Proulx et al. 1992</xref>; <xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>) fully overlaps with the stretch with positively selected amino acids. This HIBP1-2 (<xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>) or 2H (<xref ref-type="bibr" rid="CR29">Proulx et al. 1992</xref>) peptide covers amino acids 60&#x2013;88 of 1H in <italic>H. influenzae</italic> serotype b strain MinnA (<xref ref-type="bibr" rid="CR23">Munson and Grass 1988</xref>), which correspond to residues 82&#x2013;108 in the reference sequence 9716616. However, anti-P1 antisera isolated from rabbits, guinea pigs, and humans did not react with HIBP1-2 (<xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>), and vice versa, anti-HIBP1-2 specific sera did not recognize the intact P1 protein. Despite these negative immunological data, our computational analysis suggests that the stretches with positively selected codons are likely under immune selection in vivo. It may be worthwhile to study these stretches in more detail at the immunological level.
+<fig id="Fig3"><label>Fig.&#xA0;3.</label><caption><p>Diagram of different immunological and genetic attributes of OMP-P1 of <italic>Haemophilus influenzae</italic>. From top to bottom: linear B-cell epitopes in different hosts (murine, guinea pig, and rabbit), B-cell epitopes conserved among <italic>H. influenzae</italic> strains, murine T-helper determinants, positively selected codons, distribution of amino acids with a potentially extended (black) or a helical configuration (gray; Jpred) typical of &#x3B1;-helices and &#x3B2;-sheets, respectively, and distribution of amino acids with &lt;5% solvent accessibility (Jnet5), location of hypervariable domains, and location of 13 synthetic peptides against OMP-P1, which were used for immunological studies (<xref ref-type="bibr" rid="CR29">Proulx et al. 1992</xref>; <xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>). The approximate locations of peptides HIBP1-2 and HIBP1-12 are boxed and dotted, respectively (see text).</p></caption><graphic position="anchor" xlink:href="239_2006_21_f3" id="MO3"/></fig></p>
+        <p>Five of the nine codons for which significant evidence for positive selection was obtained in both PAML selection models M2 and M8 cluster tightly in the primary sequence of OMP-P1 (amino acids 93&#x2013;105) and four of these are confirmed as positively selected sites using the other types of analyses of positive selection (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). <xref ref-type="bibr" rid="CR6">Chong et al. (1995)</xref> found that some of these codons were part of a transmembrane domain based on secondary structure analysis, hydrophobicity, and reactivity with monoclonal antibodies. The nature of the variability of the first hypervariable domain has also been questioned on the basis of a lack of hydrophilic residues (<xref ref-type="bibr" rid="CR24">Munson et al. 1992</xref>). TMHMM version 2.0 was used to determine whether stretches with positively selected codons involved a transmembrane domain or adopted secondary structures typical of such domains (<xref ref-type="bibr" rid="CR19">Krogh et al. 2001</xref>). No secondary structures such as &#x3B1;-helices and &#x3B2;-sheets typically associated with transmembrane domains were found in this stretch (not shown). Investigation of the exposition of this region using the solvent accessibility algorithm as implemented in Jpred (<xref ref-type="bibr" rid="CR9">Cuff et al. 1998</xref>) classified this portion of OMP-P1 as an exposed stretch with high solvent accessibility (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>), which exceeded 25% for the entire stretch with the five positively selected codons. Thus, the positively selected codons are likely to be exposed. The above findings deviate from previous suggestions that these amino acids are part of a putative transmembrane domain (<xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>), which would render this stretch unsuitable for vaccine purposes.</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Localization of the Amino Acids Encoded by Putative Positively Selected Codons as Assessed by 3D Modeling</title>
+        <p>The apparent ambiguity about the putative transmembrane domain of OMP-P1 led us to examine the 3D topology of the protein. BLASTP searches identified one 3D structure with high similarity to OMP-P1 of <italic>H. influenzae</italic>; the <italic>FadL</italic> outer membrane protein of <italic>E. coli</italic> (39% similar in primary amino acid sequence). This protein has been analyzed at a resolution of 2.60 and 2.80 &#xC5; using two x-ray crystallography methods (van den <xref ref-type="bibr" rid="CR40">Berg et al. 2004</xref>). Apart from its role in the transport of long-chain fatty acids across the outer membrane, <italic>FadL</italic> is also a receptor for the bacteriophage T2. OMP-P1 and <italic>FadL</italic> are both classified in PFAM03349.10, which also includes <italic>TodX</italic> from <italic>Pseudomonas putida</italic> F1 and <italic>TbuX</italic> from <italic>Ralstonia pickettii</italic> PKO1. The latter are membrane proteins of uncertain function that are involved in toluene catabolism. The VAST database identified the same structural neighbors (1T1A-B, 1T16A-B) as the BLASTP search and the homology modeling programs GENO3D and SWISS-MODEL (not shown).</p>
+        <p>There are many indications that the reconstructed model of OMP-P1 (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) is reliable. The percentage identity of the OMP-P1 sequences to the target based on secondary elements was approximately 43%, which, in principle, may allow confident 3D models as evidenced by the lower boundary for which homology modeling is used (25%; <ext-link ext-link-type="uri" xlink:href="http://www.expasy.org/swissmod/SWISS-MODEL.html">http://www.expasy.org/swissmod/SWISS-MODEL.html</ext-link>). Although VAST provides no easily interpretable confidence parameters (the score of this structure pair was 48.5 using an alignment length of 391 residues and the VAST P-value was 10<sup>&#x2212;43</sup>), the level of similarity and the root-mean-square deviation (RSMD) of the fit across OMP-P1 and 1T16A indicate a high degree of structural similarity (RMSD &lt; 3 &#xC5;; Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>) (T. Madej, NCBI, personal communication). A large number of secondary structures such as helices, strands, and loops are shared between OMP-P1 and <italic>FadL</italic> as evident from VAST searches (Figs.&#xA0;<xref rid="Fig4" ref-type="fig">4A</xref> and <xref rid="Fig4" ref-type="fig">B</xref>). This interpretation is supported by the congruence among models of secondary structure to assign coiled regions that are exposed as determined through the use of SSPRO version 4.5 (not shown) and by the agreement of regions with a &#x3B2;-barrel structure between <italic>FadL</italic> and OMP-P1 as judged from the results of the TBB-PRED server based on atomic data of &#x3B2;-barrel proteins (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). Clearly, the fit of the overall structure of the reconstructed 3D model of OMP-P1 does not imply that the model is stable and robust for every region of the protein. The hypervariable domains introduce many differences in exposed portions of the 3D models between model and target in the superimposed models (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, bottom row). Further, it is important to note that only a single OMP-P1 sequence was used to model the 3D structure based on <italic>FadL</italic>. Slightly different loops may be obtained when using different OMP-P1 sequences. Not surprisingly, the CSP algorithm implemented in SWISS-MODEL had considerable difficulties in finding and optimally position loops (not shown). Many of the loops examined by the program could not be confidently reconstructed, and in many cases, the accepted loops (by the Spare Part procedure) were found only after shorter ones had not been accepted. These regions in many instances corresponded to hypervariable and looping regions (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4A</xref>) that had much higher RMSD values than other regions of the OMP-P1 molecule. However, as judged from the secondary structure analyses these regions likely do not contribute much to the overall stability of the &#x3B2;-barrel structure of OMP-P1 (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>).
+<fig id="Fig4"><label>Fig.&#xA0;4.</label><caption><p>Three-dimensional model of OMP-P1 of <italic>H. influenzae</italic> (<bold>A</bold>), <italic>FadL</italic> of <italic>E. coli</italic> (<bold>B</bold>), and superimposed models of both proteins (<bold>C</bold>). Brown arrows and threads mark strands, yellow threads mark regions with positively selected codons, green regions mark helical regions, and blue regions mark coiled regions. E, extracellular side; M, membrane; P, periplasm. In the superimposed models, a splitting of the two models indicates gaps or insertions.</p></caption><graphic position="anchor" xlink:href="239_2006_21_f4" id="MO4"/></fig><fig id="Fig5"><label>Fig.&#xA0;5.</label><caption><p>Alignment and structural analysis of OMP P1 9716616 of <italic>H. influenzae</italic> and <italic>FadL</italic> of <italic>E. coli</italic> based on the VAST 3D structural database. The deviation (&#xC5;) of the 3D model of OMP P1 relative to the template <italic>FadL</italic> is shown for windows of five amino acids (above alignment). The contribution of individual residues to the &#x3B2;-barrel structure of OMP P1 as analyzed with TBB-PRED is marked by &#x201C;b&#x201D; (barrel) and &#x201C;n&#x201D; (nonbarrel). Asterisks above the alignment mark conserved amino acid positions; asterisks below the alignment mark positively selected amino acid positions. The alignment of OMP P1 9716616 starts at residue 23.</p></caption><graphic position="anchor" xlink:href="239_2006_21_f5" id="MO5"/></fig></p>
+        <p>The most relevant conclusion of the 3D reconstruction was that the regions that comprised positively selected codons (yellow in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) were always on the extracellular side of the membrane, indicating that the positively selected codons are potential candidates for vaccine development. The positions of insertions and deletions between <italic>FadL</italic> and OMP-P1 that are longer than a few amino acids occurred&#x2014;in agreement with expectation&#x2014;mostly in these exposed regions of OMP-P1. Looping regions with insertions and deletions are indicated by the splitting of the two molecules in superimposed 3D models (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4C</xref>). Overall, the superimposed 3D models agree with the models based on individual 3D structures in that, as expected for a &#x3B2;-barrel protein, particularly the main chain hydrogen-bonding patterns characteristic of strands contribute to the structural maintenance of OMP-P1.</p>
+      </sec>
+    </sec>
+    <sec id="Sec11" sec-type="discussion">
+      <title>
+        <bold>Discussion</bold>
+      </title>
+      <sec id="Sec12">
+        <title>Positive Selection on OMP-P1</title>
+        <p>Identification of positive selection on OMPs is generally hampered by extremely high levels of sequence divergence and the frequent occurrence of insertions and deletions in hot spots. These domains are, however, potentially interesting for vaccine studies, as they may be the targets of immune selection (<xref ref-type="bibr" rid="CR34">Smith et al. 1995</xref>). To enable identification of positively selected codons, we focused on codons directly adjacent to hypervariable and unalignable regions (cf. Supplementary Information). The hypervariable regions were excluded, as it is simply not possible to identify homologous nucleotide positions for these domains. Our strategy to detect positively selected codons is still feasible, as the inference of positive selection is not very sensitive to the use of slightly different trees resulting from, for example, the deletion of hypervariable codons, if sufficient phylogenetic signal remains (<xref ref-type="bibr" rid="CR11">Derrick et al. 1999</xref>). Our results indeed indicate that after deletion of the hypervariable regions, a substantial number of substitutions remains for OMP-P1 (see Supplementary Information), which allows the identification of positively selected codons.</p>
+        <p>Another important issue to consider in this type of study is how recombination affects the inferences of positive selection. Recombination generates different tree topologies when based on different regions of a gene, and it has been shown that&#x2014;depending on the level of recombination&#x2014;the LRT may be affected (<xref ref-type="bibr" rid="CR1">Anisimova et al. 2003</xref>). In general, recombination is considered most problematic for analysis of selection pressures using divergent sequence data (cf. viral sequence data [<xref ref-type="bibr" rid="CR2">Anisimova and Yang 2004</xref>]), but it has generally been difficult to determine its quantitative importance. Simulation studies provide information on the circumstances in which recombination may affect evolutionary analysis of selection pressures. For example, in spite of the congruent results between M2 and M8 in this study, these models are not equally affected by recombination (<xref ref-type="bibr" rid="CR1">Anisimova et al. 2003</xref>). In addition, the Bayesian analysis that was used to identify positively selected residues is less affected by the presence of recombination than the LRTs, presumably because it does not depend strongly on the entire gene tree topology but, instead, reconstructs the numbers of synonymous and nonsynonymous mutations of individual codons. Finally, the proportion of correctly classified sites for the BEB procedure in simulations under positive selection and recombination increases with selection pressure (<xref ref-type="bibr" rid="CR1">Anisimova et al. 2003</xref>). The higher &#x3C9; values of positively selected codons in this study (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>) relative to those of the simulation study mentioned above (&#x3C9;<sub>2</sub> = 2.55) and the large number of positively selected sites in OMP-P1 suggest that the inference of positive selection and sites under positive selection is valid.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Use and Value of 3D Reconstruction of OMP-P1</title>
+        <p>The alternation of relatively conserved and hypervariable stretches in OMP-P1 and other OMPs also impacts the 3D reconstruction. Hypervariable amino acid stretches may render a 3D structure unstable, despite the fact that more conserved parts may share considerable similarity between target and template. Thus, although the level of congruence between the experimental 3D structure of <italic>FadL</italic> and the computational 3D structure of OMP-P1 may vary considerably, the most probable and approximate location of stretches with positively selected codons can be determined if the conserved portions of OMP-P1 can be confidently reconstructed. With this goal in mind, the identification of &#x3B2;-barrel regions and the degree of fit of stranded regions between model and template are most important. These attributes leave little doubt that the fit between <italic>FadL</italic> and OMP-P1 is sufficient to pinpoint the approximate localization of positively selected codons (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). This is not surprising, as more divergent structural templates and targets such as <italic>OmpF</italic> and <italic>PhoE</italic> of <italic>E. coli</italic> have successfully been used for the reconstruction of 3D models of porins in <italic>Neisseria</italic> (<xref ref-type="bibr" rid="CR11">Derrick et al. 1999</xref>). In sum, there is every reason to believe that the basic barrel structure is not profoundly affected by hypervariable loops, even if these experience frequent insertions and deletions that are potentially also under positive selection (<xref ref-type="bibr" rid="CR34">Smith et al. 1995</xref>; <xref ref-type="bibr" rid="CR11">Derrick et al. 1999</xref>).</p>
+      </sec>
+      <sec id="Sec14">
+        <title>Are Positively Selected Sites Useful for Vaccine Formulations?</title>
+        <p>The question arises why the peptides that partially (HIBP1-12) and fully (HIBP1-2) overlapped with the stretch of positively selected sites did not include immunodominant epitopes (<xref ref-type="bibr" rid="CR29">Proulx et al. 1992</xref>; <xref ref-type="bibr" rid="CR25">Panezutti et al. 1993</xref>; <xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>). The stretches, however, were very long (29 and 27 amino acids, respectively) and they extended well into the interior of OMP-P1 (not shown). The potentially most interesting peptide (HIBP1-2) comprises the entire hypervariable domain of the Eagan strain (<xref ref-type="bibr" rid="CR6">Chong et al. 1995</xref>), including residue 105 (SASQRNV is the C-terminus; Supplementary Information). Our analyses suggest that relatively short peptides starting at the C-terminal end of the first hypervariable domain would be suited for immunological experiments. This portion of OMP-P1 has not yet been explored.</p>
+        <p>Interestingly, one of the positively selected residues in OMP-P1 that flank the first hypervariable domain allows examination of the impact and prospect of positively selected residues for vaccine formulation in a considerable fraction of the <italic>H. influenzae</italic> population. The positively selected codons 93, 94, and 97 are flanked on one side by the first hypervariable region and are separated from codon 105 by a conserved amino acid stretch (see Supplementary Information). The latter residue, in turn, is flanked by a long region at the C-terminal side that is conserved in the collection of <italic>H. influenzae</italic> strains examined by <xref ref-type="bibr" rid="CR4">Bolduc et al. (2000)</xref>. In our study sample, only three amino acids are encoded by residue 105, and this number increases only marginally in the larger set of <italic>H. influenzae</italic> isolates (<xref ref-type="bibr" rid="CR4">Bolduc et al. 2000</xref>). Consequently, judging from the spacing of positively selected and conserved residues, there are opportunities to combine sites under purifying and positive selection in immunological experiments of OMP-P1. If it can be demonstrated by, for example, epitope mapping that these positively selected and exposed residues of OMP-P1 are located in immunologically relevant domains, a large portion of the <italic>H. influenzae</italic> population can be targeted by short peptides from this region of OMP-P1. Relative to traditional approaches to vaccine development, this strategy may allow a much broader coverage of the <italic>H. influenzae</italic> population.</p>
+        <p>Another question is to what extent the isolates studied here reflect the evolutionary diversity of <italic>H. influenzae</italic>. The isolates analyzed by <xref ref-type="bibr" rid="CR4">Bolduc et al. (2000)</xref> were selected for OMP-P1 sequencing, because they were phylogenetically diverse in a collection of more than 500 <italic>H. influenzae</italic> isolates. Given the increase in multilocus sequence typing (MLST) of human pathogenic bacteria, it is also of interest to compare the diversity of the strains of <xref ref-type="bibr" rid="CR4">Bolduc et al. (2000)</xref> with the phylogenetic relationships based on housekeeping genes in the MLST database of <italic>H. influenzae</italic>. In the case of <italic>H. influenzae</italic>, seven housekeeping genes are widely used to characterize phylogenetic relationships. In a housekeeping tree of 131 isolates (<xref ref-type="bibr" rid="CR22">Meats et al. 2003</xref>), most of the nontypeable isolates were comprised of two highly divergent clusters, and in contrast to the housekeeping genes of encapsulated isolates, the congruence among trees based on single housekeeping genes of nontypeable isolates was only marginal. The current view of <italic>H. influenzae</italic> evolution is that nontypeable isolates are genetically distinct from encapsulated variants, and that nontypeable isolates form distinct and diverse populations. Among the five strains that were used by both <xref ref-type="bibr" rid="CR4">Bolduc et al. (2000)</xref> and <xref ref-type="bibr" rid="CR22">Meats et al. (2003)</xref>, the shared isolates (B-RM7109, d-Rd, a-7416, nt-667, and e-6181) were scattered over the MLST tree. Apart from issues of sampling, the congruence of gene tree topologies based on different housekeeping genes and OMP-P1 hinges on the level of recombination between genes. It is currently unknown how important recombination is in <italic>H. influenzae</italic>. Although information on the clinical symptoms caused by the isolates with OMP-P1 sequences is extremely limited, strains 667 (9716582), BCH-1 (9716566), BCH-2 (9716610), and BCH-3 (9716568) caused middle ear infection, pneumonia, and nasopharyngeal infection in children. In spite of the limited amount of information on the nontypeable isolates with OMP-P1 sequences, the intermingling of nontypeable and typeable isolates on the housekeeping tree and the clinical symptoms of some of the nontypeable isolates suggest that, in principle, the OMP-P1 diversity studied here might be a suited starting point for vaccine development with the potential of providing broad coverage.</p>
+        <p>Recent technological progress in vaccinology offers hope that epitopes based on moderately rapidly evolving portions of OMPs may turn out to be realistic vaccine material. Although it cannot be excluded that some epitopes will not be stable or immunogenic, or may not constitute stable constructs, extracellular loops in OMPs have been demonstrated to be immunodominant (<xref ref-type="bibr" rid="CR12">Easton et al. 2005</xref>). Also, the inclusion of multiple OMPs in vaccine formulations is possible by using outer membrane vesicles or whole-cell vaccines based on recombinant bacteria (de <xref ref-type="bibr" rid="CR10">Jonge et al. 2004</xref>) and the delivery of antigens based on OMPs of nontypeable <italic>H. influenzae</italic> based on fusion proteins (<xref ref-type="bibr" rid="CR30">Riedmann et al. 2003</xref>) offer opportunities to target interesting vaccine candidate regions of OMPs. Finally, whole-cell vaccines of LPS mutants with strongly reduced toxicity are increasingly suited for vaccination purposes (<xref ref-type="bibr" rid="CR13">Fisseha et al. 2005</xref>), thereby reducing the adverse effects of immune responses against these types of vaccines.</p>
+      </sec>
+      <sec id="Sec15">
+        <title>Impact of Computational Analyses on Vaccine Development</title>
+        <p>Positive selection on codons of exposed outer membrane proteins of pathogenic viruses and bacteria is common (<xref ref-type="bibr" rid="CR38">Urwin et al. 2002</xref>; <xref ref-type="bibr" rid="CR41">Yang et al. Yang 2003</xref>; <xref ref-type="bibr" rid="CR14">Fitzpatrick and McInerney 2005</xref>). The lack of correspondence between interesting sites in OMP-P1 of <italic>H. influenzae</italic> in immunological and genetic diversity studies highlights the difficulty of finding the most promising epitopes, even among closely related sequences. The a priori identification of positively selected codons will normally greatly reduce the number of peptides that need to be screened using epitope mapping or immunization. Because the incorporation of antigenic diversity in the experimental setup of immunological and protection studies is a major bottleneck in terms of time and costs, the identification of a limited number of positively selected codons suggests that a multidisciplinary approach comprising evolutionary and structural data and tools can greatly improve the focus of ensuing empirical studies.</p>
+      </sec>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Electronic Supplementary Material</title>
+      <supplementary-material id="N0x1d0a000N0x2d183c8" content-type="local-data">
+        <media xlink:href="239_2006_21_Supp.pdf" mimetype="application" mime-subtype="pdf">
+          <caption>
+            <p>Supplementary material</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This is publication 3979 of NIOO-KNAW.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anisimova</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nielsen</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of recombination on the accuracy of the likelihood method for detecting positive selection at amino acid sites</article-title>
+          <source>Genetics</source>
+          <year>2003</year>
+          <volume>164</volume>
+          <fpage>1229</fpage>
+          <lpage>1236</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Anisimova M, Nielsen R, Yang Z (2003) Effect of recombination on the accuracy of the likelihood method for detecting positive selection at amino acid sites. Genetics 164:1229&#x2013;1236 <pub-id pub-id-type="pmid">12871927</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anisimova</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular evolution of hepatitis delta virus antigen gene: Recombination or positive selection?</article-title>
+          <source>J Mol Evol</source>
+          <year>2004</year>
+          <volume>59</volume>
+          <fpage>815</fpage>
+          <lpage>826</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00239-004-0112-x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Anisimova A, Yang Z (2004) Molecular evolution of hepatitis delta virus antigen gene: Recombination or positive selection? J Mol Evol 59:815&#x2013;826 <pub-id pub-id-type="pmid">15599513</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Black</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Shinefield</surname>
+              <given-names>HR</given-names>
+            </name>
+            <name>
+              <surname>Fireman</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Hiatt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Safety, immunogenicity, and efficacy in infancy of oligosaccharide conjugate <italic>Haemophilus</italic> i<italic>nfluenzae</italic> Type B vaccine in a United States population&#x2014;possible implications for optimal use</article-title>
+          <source>J Infect Dis</source>
+          <year>1992</year>
+          <volume>165</volume>
+          <fpage>S139</fpage>
+          <lpage>S143</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Black SB, Shinefield HR, Fireman B, Hiatt R (1992) Safety, immunogenicity, and efficacy in infancy of oligosaccharide conjugate Haemophilus influenzae Type B vaccine in a United States population&#x2014;possible implications for optimal use. J Infect Dis 165:S139&#x2013;S143 <pub-id pub-id-type="pmid">1588149</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bolduc</surname>
+              <given-names>GR</given-names>
+            </name>
+            <name>
+              <surname>Bouchet</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Jiang</surname>
+              <given-names>RZ</given-names>
+            </name>
+            <name>
+              <surname>Geisselsoder</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Truong-Bolduc</surname>
+              <given-names>QC</given-names>
+            </name>
+            <name>
+              <surname>Rice</surname>
+              <given-names>PA</given-names>
+            </name>
+            <name>
+              <surname>Pelton</surname>
+              <given-names>SI</given-names>
+            </name>
+            <name>
+              <surname>Goldstein</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Variability of outer membrane protein P1 and its evaluation as a vaccine candidate against experimental otitis media due to nontypeable <italic>Haemophilus influenzae</italic>: an unambiguous, multifaceted approach</article-title>
+          <source>Infect Immun</source>
+          <year>2000</year>
+          <volume>68</volume>
+          <fpage>4505</fpage>
+          <lpage>4517</lpage>
+          <pub-id pub-id-type="doi">10.1128/IAI.68.8.4505-4517.2000</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bolduc GR, Bouchet V, Jiang RZ, Geisselsoder J, Truong-Bolduc QC, Rice PA, Pelton SI, Goldstein R (2000) Variability of outer membrane protein P1 and its evaluation as a vaccine candidate against experimental otitis media due to nontypeable Haemophilus influenzae: an unambiguous, multifaceted approach. Infect Immun 68:4505&#x2013;4517 <pub-id pub-id-type="pmid">10899849</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cheng</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Randall</surname>
+              <given-names>AZ</given-names>
+            </name>
+            <name>
+              <surname>Sweredoski</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Baldi</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>SCRATCH: a protein structure and structural feature prediction server</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>W72</fpage>
+          <lpage>W76</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/gki396</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cheng J, Randall AZ, Sweredoski MJ, Baldi P (2005) SCRATCH: a protein structure and structural feature prediction server. Nucleic Acids Res 33:W72&#x2013;W76 <pub-id pub-id-type="pmid">15980571</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chong</surname>
+              <given-names>PL</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>YP</given-names>
+            </name>
+            <name>
+              <surname>Persaud</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Haer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Tripet</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Tam</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Sia</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Klein</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Immunogenicity of synthetic peptides of <italic>Haemophilus influenzae</italic> Type B outer-membrane protein P1</article-title>
+          <source>Infect Immun</source>
+          <year>1995</year>
+          <volume>63</volume>
+          <fpage>3751</fpage>
+          <lpage>3758</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Chong PL, Yang YP, Persaud D, Haer M, Tripet B, Tam E, Sia C, Klein M (1995) Immunogenicity of synthetic peptides of Haemophilus influenzae Type B outer-membrane protein P1. Infect Immun 63:3751&#x2013;3758 <pub-id pub-id-type="pmid">7558276</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Combet</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Jambon</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Deleage</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Geourjon</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Geno3D: automatic comparative molecular modelling of protein</article-title>
+          <source>Bioinformatics</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>213</fpage>
+          <lpage>214</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/18.1.213</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Combet C, Jambon M, Deleage G, Geourjon C (2002) Geno3D: automatic comparative molecular modelling of protein. Bioinformatics 18:213&#x2013;214 <pub-id pub-id-type="pmid">11836238</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cuff</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Barton</surname>
+              <given-names>GJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluation and improvement of multiple sequence methods for protein secondary structure prediction</article-title>
+          <source>Prot Struct Funct Genet</source>
+          <year>1999</year>
+          <volume>34</volume>
+          <fpage>508</fpage>
+          <lpage>519</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0134(19990301)34:4&lt;508::AID-PROT10&gt;3.0.CO;2-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cuff JA, Barton GJ (1999). Evaluation and improvement of multiple sequence methods for protein secondary structure prediction. Prot Struct Funct Genet 34:508&#x2013;519 </citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cuff</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Clamp</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Siddiqui</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Finlay</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Barton</surname>
+              <given-names>GJ</given-names>
+            </name>
+          </person-group>
+          <article-title>JPred: a consensus secondary structure prediction server</article-title>
+          <source>Bioinformatics</source>
+          <year>1998</year>
+          <volume>14</volume>
+          <fpage>892</fpage>
+          <lpage>893</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/14.10.892</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cuff JA, Clamp ME, Siddiqui AS, Finlay M, Barton GJ (1998) JPred: a consensus secondary structure prediction server. Bioinformatics 14:892&#x2013;893 <pub-id pub-id-type="pmid">9927721</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jonge</surname>
+              <given-names>MI</given-names>
+            </name>
+            <name>
+              <surname>Hamstra</surname>
+              <given-names>HJ</given-names>
+            </name>
+            <name>
+              <surname>Jiskoot</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Roholl</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>NA</given-names>
+            </name>
+            <name>
+              <surname>Dankert</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Alphen</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Ley</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Intranasal immunisation of mice with liposomes containing recombinant meningococcal <italic>OpaB</italic> and <italic>OpaJ</italic> proteins</article-title>
+          <source>Vaccine</source>
+          <year>2004</year>
+          <volume>22</volume>
+          <fpage>4021</fpage>
+          <lpage>4028</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.vaccine.2004.03.047</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">de Jonge MI, Hamstra HJ, Jiskoot W, Roholl P, Williams NA, Dankert J, van Alphen L, van der Ley P (2004) Intranasal immunisation of mice with liposomes containing recombinant meningococcal OpaB and OpaJ proteins. Vaccine 22:4021&#x2013;4028 <pub-id pub-id-type="pmid">15364452</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Derrick</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Urwin</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Suker</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Feavers</surname>
+              <given-names>IM</given-names>
+            </name>
+            <name>
+              <surname>Maiden</surname>
+              <given-names>MCJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Structural and evolutionary inference from molecular variation in <italic>Neisseria</italic> porins</article-title>
+          <source>Infect Immun</source>
+          <year>1999</year>
+          <volume>67</volume>
+          <fpage>2406</fpage>
+          <lpage>2413</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Derrick JP, Urwin R, Suker J, Feavers IM, Maiden MCJ (1999) Structural and evolutionary inference from molecular variation in Neisseria porins. Infect Immun 67:2406&#x2013;2413 <pub-id pub-id-type="pmid">10225902</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Easton</surname>
+              <given-names>DM</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Gallego</surname>
+              <given-names>SG</given-names>
+            </name>
+            <name>
+              <surname>Foxwell</surname>
+              <given-names>AR</given-names>
+            </name>
+            <name>
+              <surname>Cripps</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Kyd</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of a novel porin protein from <italic>Moraxella catarrhalis</italic> and identification of an immunodominant surface loop</article-title>
+          <source>J Bacteriol</source>
+          <year>2005</year>
+          <volume>187</volume>
+          <fpage>6528</fpage>
+          <lpage>6535</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.187.18.6528-6535.2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Easton DM, Smith A, Gallego SG, Foxwell AR, Cripps AW, Kyd JM (2005) Characterization of a novel porin protein from Moraxella catarrhalis and identification of an immunodominant surface loop. J Bacteriol 187:6528&#x2013;6535 <pub-id pub-id-type="pmid">16159786</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fisseha</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Brandt</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Kijek</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Moran</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Zollinger</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of native outer membrane vesicles from <italic>lpxL</italic> mutant strains of <italic>Neisseria meningitidis</italic> for use in parenteral vaccination</article-title>
+          <source>Infect Immun</source>
+          <year>2005</year>
+          <volume>73</volume>
+          <fpage>4070</fpage>
+          <lpage>4080</lpage>
+          <pub-id pub-id-type="doi">10.1128/IAI.73.7.4070-4080.2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fisseha M, Chen P, Brandt B, Kijek T, Moran E, Zollinger W (2005) Characterization of native outer membrane vesicles from lpxL mutant strains of Neisseria meningitidis for use in parenteral vaccination. Infect Immun 73:4070&#x2013;4080 <pub-id pub-id-type="pmid">15972495</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fitzpatrick</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>McInerney</surname>
+              <given-names>JO</given-names>
+            </name>
+          </person-group>
+          <article-title>Evidence of positive Darwinian selection in <italic>Omp85</italic>, a highly conserved bacterial outer membrane protein essential for cell viability</article-title>
+          <source>J Mol Evol</source>
+          <year>2005</year>
+          <volume>60</volume>
+          <fpage>268</fpage>
+          <lpage>273</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00239-004-0194-5</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fitzpatrick DA, McInerney JO (2005) Evidence of positive Darwinian selection in Omp85, a highly conserved bacterial outer membrane protein essential for cell viability. J Mol Evol 60:268&#x2013;273 <pub-id pub-id-type="pmid">15785855</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goldman</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+          </person-group>
+          <article-title>Codon-based model of nucleotide substitution for protein-coding DNA sequences</article-title>
+          <source>Mol Biol Evol</source>
+          <year>1994</year>
+          <volume>11</volume>
+          <fpage>725</fpage>
+          <lpage>736</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Goldman N, Yang ZH (1994) Codon-based model of nucleotide substitution for protein-coding DNA sequences. Mol Biol Evol 11:725&#x2013;736 <pub-id pub-id-type="pmid">7968486</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gonzales</surname>
+              <given-names>FR</given-names>
+            </name>
+            <name>
+              <surname>Leachman</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Norgard</surname>
+              <given-names>MV</given-names>
+            </name>
+            <name>
+              <surname>Radolf</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Mccracken</surname>
+              <given-names>GH</given-names>
+            </name>
+            <name>
+              <surname>Evans</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>EJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Cloning and expression in <italic>Escherichia coli</italic> of the Gene encoding the heat-modifiable major outer-membrane protein of <italic>Haemophilus</italic> i<italic>nfluenzae</italic> Type B</article-title>
+          <source>Infect Immun</source>
+          <year>1987</year>
+          <volume>55</volume>
+          <fpage>2993</fpage>
+          <lpage>3000</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Gonzales FR, Leachman S, Norgard MV, Radolf JD, Mccracken GH, Evans C, Hansen EJ (1987) Cloning and expression in Escherichia coli of the Gene encoding the heat-modifiable major outer-membrane protein of Haemophilus influenzae Type B. Infect Immun 55:2993&#x2013;3000 <pub-id pub-id-type="pmid">2824380</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jiggins</surname>
+              <given-names>FM</given-names>
+            </name>
+            <name>
+              <surname>Hurst</surname>
+              <given-names>GDD</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+          </person-group>
+          <article-title>Host-symbiont conflicts: Positive selection on an outer membrane protein of parasitic but not mutualistic Rickettsiaceae</article-title>
+          <source>Mol Biol Evol</source>
+          <year>2002</year>
+          <volume>19</volume>
+          <fpage>1341</fpage>
+          <lpage>1349</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Jiggins FM, Hurst GDD, Yang ZH (2002) Host-symbiont conflicts: Positive selection on an outer membrane protein of parasitic but not mutualistic Rickettsiaceae. Mol Biol Evol 19:1341&#x2013;1349 <pub-id pub-id-type="pmid">12140246</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kosakovsky Pond</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Frost</surname>
+              <given-names>SDW</given-names>
+            </name>
+          </person-group>
+          <article-title>Datamonkey: rapid detection of selective pressure on individual sites of codon alignments</article-title>
+          <source>Bioinformatics</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>2531</fpage>
+          <lpage>2533</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/bti320</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kosakovsky Pond SL, Frost SDW (2005) Datamonkey: rapid detection of selective pressure on individual sites of codon alignments. Bioinformatics 21:2531&#x2013;2533 <pub-id pub-id-type="pmid">15713735</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krogh</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Larsson</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Heijne</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Sonnhammer</surname>
+              <given-names>ELL</given-names>
+            </name>
+          </person-group>
+          <article-title>Predicting transmembrane protein topology with a hidden Markov model: application to complete genomes</article-title>
+          <source>J Mol Biol</source>
+          <year>2001</year>
+          <volume>305</volume>
+          <fpage>567</fpage>
+          <lpage>580</lpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.2000.4315</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Krogh A, Larsson B, von Heijne G, Sonnhammer ELL (2001) Predicting transmembrane protein topology with a hidden Markov model: application to complete genomes. J Mol Biol 305:567&#x2013;580 <pub-id pub-id-type="pmid">11152613</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Liu</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Zhu</surname>
+              <given-names>YS</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>BH</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>YH</given-names>
+            </name>
+          </person-group>
+          <article-title>HMM-based method to predict the transmembrane regions of beta-barrel membrane proteins</article-title>
+          <source>Comput Biol Chem</source>
+          <year>2003</year>
+          <volume>27</volume>
+          <fpage>69</fpage>
+          <lpage>76</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0097-8485(02)00051-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Liu Q, Zhu YS, Wang BH, Li YH (2003) HMM-based method to predict the transmembrane regions of beta-barrel membrane proteins. Comput Biol Chem 27:69&#x2013;76 <pub-id pub-id-type="pmid">12798041</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Massingham</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Goldman</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>Detecting amino acid sites under positive selection and purifying selection</article-title>
+          <source>Genetics</source>
+          <year>2005</year>
+          <volume>169</volume>
+          <fpage>1753</fpage>
+          <lpage>1762</lpage>
+          <pub-id pub-id-type="doi">10.1534/genetics.104.032144</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Massingham T, Goldman N (2005) Detecting amino acid sites under positive selection and purifying selection. Genetics 169:1753&#x2013;1762 <pub-id pub-id-type="pmid">15654091</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Meats</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Feil</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Stringer</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Cody</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Goldstein</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Kroll</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Popovic</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Spratt</surname>
+              <given-names>BG</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of encapsulated and noncapsulated <italic>Haemophilus influenzae</italic> and determination of phylogenetic relationships by multilocus sequence typing</article-title>
+          <source>J Clin Microbiol</source>
+          <year>2003</year>
+          <volume>41</volume>
+          <fpage>1623</fpage>
+          <lpage>1636</lpage>
+          <pub-id pub-id-type="doi">10.1128/JCM.41.4.1623-1636.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Meats E, Feil EJ, Stringer S, Cody AJ, Goldstein R, Kroll JS, Popovic T, Spratt BG (2003) Characterization of encapsulated and noncapsulated Haemophilus influenzae and determination of phylogenetic relationships by multilocus sequence typing. J Clin Microbiol 41:1623&#x2013;1636 <pub-id pub-id-type="pmid">12682154</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Munson</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Grass</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Purification, cloning, and sequence of outer-membrane protein P1 of <italic>Hemophilus influenzae</italic> Type B</article-title>
+          <source>Infect Immun</source>
+          <year>1988</year>
+          <volume>56</volume>
+          <fpage>2235</fpage>
+          <lpage>2242</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Munson R, Grass S (1988) Purification, cloning, and sequence of outer-membrane protein P1 of Hemophilus influenzae Type B. Infect Immun 56:2235&#x2013;2242 <pub-id pub-id-type="pmid">2842261</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Munson</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Brodeur</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Chong</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Grass</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Proulx</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Outer-membrane proteins P1 and P2 of <italic>Haemophilus influenzae</italic> Type B&#x2014;Structure and identification of surface-exposed epitopes</article-title>
+          <source>J Infect Dis</source>
+          <year>1992</year>
+          <volume>165</volume>
+          <fpage>S86</fpage>
+          <lpage>S89</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Munson R, Brodeur B, Chong P, Grass S, Martin D, Proulx C (1992) Outer-membrane proteins P1 and P2 of Haemophilus influenzae Type B&#x2014;Structure and identification of surface-exposed epitopes. J Infect Dis 165:S86&#x2013;S89 <pub-id pub-id-type="pmid">1375256</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Panezutti</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>James</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Choi</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Harkness</surname>
+              <given-names>RE</given-names>
+            </name>
+            <name>
+              <surname>Klein</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Chong</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification of surface-exposed B-cell epitopes recognized by <italic>Haemophilus influenzae</italic> Type B P1-specific monoclonal antibodies</article-title>
+          <source>Infect Immun</source>
+          <year>1993</year>
+          <volume>61</volume>
+          <fpage>1867</fpage>
+          <lpage>1872</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Panezutti H, James O, Hansen EJ, Choi Y, Harkness RE, Klein MH, Chong P (1993) Identification of surface-exposed B-cell epitopes recognized by Haemophilus influenzae Type B P1-specific monoclonal antibodies. Infect Immun 61:1867&#x2013;1872 <pub-id pub-id-type="pmid">7682997</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peitsch</surname>
+              <given-names>MC</given-names>
+            </name>
+          </person-group>
+          <article-title>ProMod and Swiss model: Internet-based tools for automated comparative protein modeling</article-title>
+          <source>Biochem Soc Trans</source>
+          <year>1996</year>
+          <volume>24</volume>
+          <fpage>274</fpage>
+          <lpage>279</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Peitsch MC (1996) ProMod and Swiss model: Internet-based tools for automated comparative protein modeling. Biochem Soc Trans 24:274&#x2013;279 <pub-id pub-id-type="pmid">8674685</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Posada</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Crandall</surname>
+              <given-names>KA</given-names>
+            </name>
+          </person-group>
+          <article-title>Modeltest: testing the model of DNA substitution</article-title>
+          <source>Bioinformatics</source>
+          <year>1998</year>
+          <volume>14</volume>
+          <fpage>817</fpage>
+          <lpage>818</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/14.9.817</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Posada D, Crandall KA (1998) Modeltest: testing the model of DNA substitution. Bioinformatics 14:817&#x2013;818 <pub-id pub-id-type="pmid">9918953</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Proulx</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Munson</surname>
+              <given-names>RS</given-names>
+            </name>
+            <name>
+              <surname>Grass</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hamel</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Brodeur</surname>
+              <given-names>BR</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification of a surface-exposed immunodominant epitope on outer-membrane protein P1 of <italic>Haemophilus influenzae</italic> Type B</article-title>
+          <source>Infect Immun</source>
+          <year>1991</year>
+          <volume>59</volume>
+          <fpage>963</fpage>
+          <lpage>970</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Proulx C, Munson RS, Grass S, Hamel J, Martin D, Brodeur BR (1991) Identification of a surface-exposed immunodominant epitope on outer-membrane protein P1 of Haemophilus influenzae Type B. Infect Immun 59:963&#x2013;970 <pub-id pub-id-type="pmid">1705245</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Proulx</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Hamel</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Chong</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Brodeur</surname>
+              <given-names>BR</given-names>
+            </name>
+          </person-group>
+          <article-title>Epitope analysis of an immunodominant domain on the P1 protein of <italic>Haemophilus influenzae</italic> Type B using synthetic peptides and antiidiotypic antibodies</article-title>
+          <source>Microbial Pathogenesis</source>
+          <year>1992</year>
+          <volume>12</volume>
+          <fpage>433</fpage>
+          <lpage>442</lpage>
+          <pub-id pub-id-type="doi">10.1016/0882-4010(92)90006-A</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Proulx C, Hamel J, Chong P, Martin D, Brodeur BR (1992) Epitope analysis of an immunodominant domain on the P1 protein of Haemophilus influenzae Type B using synthetic peptides and antiidiotypic antibodies. Microbial Pathogenesis 12:433&#x2013;442 <pub-id pub-id-type="pmid">1522798</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riedmann</surname>
+              <given-names>EM</given-names>
+            </name>
+            <name>
+              <surname>Kyd</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Gomez-Gallego</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Jalava</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Cripps</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Lubitz</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <article-title>Construction of recombinant S-layer proteins (rSbsA) and their expression in bacterial ghosts&#x2014;a delivery system for the nontypeable Haemophilus influenzae antigen Omp26</article-title>
+          <source>FEMS Immunol Med Microbiol</source>
+          <year>2003</year>
+          <volume>37</volume>
+          <fpage>185</fpage>
+          <lpage>192</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0928-8244(03)00070-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Riedmann EM, Kyd JM, Smith AM, Gomez-Gallego S, Jalava K, Cripps AW, Lubitz W (2003) Construction of recombinant S-layer proteins (rSbsA) and their expression in bacterial ghosts&#x2014;a delivery system for the nontypeable Haemophilus influenzae antigen Omp26. FEMS Immunol Med Microbiol 37:185&#x2013;192 <pub-id pub-id-type="pmid">12832124</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rozas</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Sanchez-DelBarrio</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Messeguer</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Rozas</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>DnaSP, DNA polymorphism analyses by the coalescent and other methods</article-title>
+          <source>Bioinformatics</source>
+          <year>2003</year>
+          <volume>19</volume>
+          <fpage>2496</fpage>
+          <lpage>2497</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/btg359</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rozas J, Sanchez-DelBarrio JC, Messeguer X, Rozas R (2003) DnaSP, DNA polymorphism analyses by the coalescent and other methods. Bioinformatics 19:2496&#x2013;2497 <pub-id pub-id-type="pmid">14668244</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schwede</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Kopp</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guex</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Peitsch</surname>
+              <given-names>MC</given-names>
+            </name>
+          </person-group>
+          <article-title>SWISS-MODEL: an automated protein homology-modeling server</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>3381</fpage>
+          <lpage>3385</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg520</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schwede T, Kopp J, Guex N, Peitsch MC (2003) SWISS-MODEL: an automated protein homology-modeling server. Nucleic Acids Res 31:3381&#x2013;3385 <pub-id pub-id-type="pmid">12824332</pub-id></citation>
+      </ref>
+      <ref id="CR33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shurin</surname>
+              <given-names>PA</given-names>
+            </name>
+            <name>
+              <surname>Pelton</surname>
+              <given-names>SI</given-names>
+            </name>
+            <name>
+              <surname>Tager</surname>
+              <given-names>IB</given-names>
+            </name>
+            <name>
+              <surname>Kasper</surname>
+              <given-names>DL</given-names>
+            </name>
+          </person-group>
+          <article-title>Bactericidal antibody and susceptibility to otitis media caused by non-typable strains of <italic>Haemophilus influenzae</italic></article-title>
+          <source>J Pediatr</source>
+          <year>1980</year>
+          <volume>97</volume>
+          <fpage>364</fpage>
+          <lpage>369</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0022-3476(80)80182-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shurin PA, Pelton SI, Tager IB, Kasper DL (1980) Bactericidal antibody and susceptibility to otitis media caused by non-typable strains of Haemophilus influenzae. J Pediatr 97:364&#x2013;369 <pub-id pub-id-type="pmid">6967963</pub-id></citation>
+      </ref>
+      <ref id="CR34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>NH</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Spratt</surname>
+              <given-names>BG</given-names>
+            </name>
+          </person-group>
+          <article-title>Sequence evolution of the <italic>PorB</italic> gene of <italic>Neisseria gonorrhoeae</italic> and <italic>Neisseria meningitidis</italic>&#x2014;evidence of positive Darwinian selection</article-title>
+          <source>Mol Biol Evol</source>
+          <year>1995</year>
+          <volume>12</volume>
+          <fpage>363</fpage>
+          <lpage>370</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Smith NH, Smith JM, Spratt BG (1995) Sequence evolution of the PorB gene of Neisseria gonorrhoeae and Neisseria meningitidis&#x2014;evidence of positive Darwinian selection. Mol Biol Evol 12:363&#x2013;370 <pub-id pub-id-type="pmid">7739379</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Suzuki</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Gojobori</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>A method for detecting positive selection at single amino acid sites</article-title>
+          <source>Mol Biol Evol</source>
+          <year>1999</year>
+          <volume>16</volume>
+          <fpage>1315</fpage>
+          <lpage>1328</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Suzuki Y, Gojobori T (1999) A method for detecting positive selection at single amino acid sites. Mol Biol Evol 16:1315&#x2013;1328 <pub-id pub-id-type="pmid">10563013</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Swofford</surname>
+              <given-names>DL</given-names>
+            </name>
+          </person-group>
+          <source>PAUP*. Phylogenetic analysis using parsimony (*and other methods). Version 4</source>
+          <year>2003</year>
+          <publisher-loc>Sunderland, MA</publisher-loc>
+          <publisher-name>Sinauer Associates</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Swofford DL (2003) PAUP*. Phylogenetic analysis using parsimony (*and other methods). Version 4. Sinauer Associates, Sunderland, MA </citation>
+      </ref>
+      <ref id="CR37">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thompson</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Gibson</surname>
+              <given-names>TJ</given-names>
+            </name>
+            <name>
+              <surname>Plewniak</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Jeanmougin</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Higgins</surname>
+              <given-names>DG</given-names>
+            </name>
+          </person-group>
+          <article-title>The CLUSTAL_X windows interface: flexible strategies for multiple sequence alignment aided by quality analysis tools</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>4876</fpage>
+          <lpage>4882</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/25.24.4876</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Thompson JD, Gibson TJ, Plewniak F, Jeanmougin F, Higgins DG (1997) The CLUSTAL_X windows interface: flexible strategies for multiple sequence alignment aided by quality analysis tools. Nucleic Acids Res 25:4876&#x2013;4882 <pub-id pub-id-type="pmid">9396791</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Urwin</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Holmes</surname>
+              <given-names>EC</given-names>
+            </name>
+            <name>
+              <surname>Fox</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Derrick</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Maiden</surname>
+              <given-names>MCJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Phylogenetic evidence for frequent positive selection and recombination in the meningococcal surface antigen <italic>PorB</italic></article-title>
+          <source>Mol Biol Evol</source>
+          <year>2002</year>
+          <volume>19</volume>
+          <fpage>1686</fpage>
+          <lpage>1694</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Urwin R, Holmes EC, Fox AJ, Derrick JP, Maiden MCJ (2002) Phylogenetic evidence for frequent positive selection and recombination in the meningococcal surface antigen PorB. Mol Biol Evol 19:1686&#x2013;1694 <pub-id pub-id-type="pmid">12270895</pub-id></citation>
+      </ref>
+      <ref id="CR39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Urwin</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Russell</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>EAL</given-names>
+            </name>
+            <name>
+              <surname>Holmes</surname>
+              <given-names>EC</given-names>
+            </name>
+            <name>
+              <surname>Feavers</surname>
+              <given-names>IM</given-names>
+            </name>
+            <name>
+              <surname>Maiden</surname>
+              <given-names>MCJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Distribution of surface protein variants among hyperinvasive meningococci: implication for vaccine design</article-title>
+          <source>Infect Immun</source>
+          <year>2004</year>
+          <volume>72</volume>
+          <fpage>5955</fpage>
+          <lpage>5962</lpage>
+          <pub-id pub-id-type="doi">10.1128/IAI.72.10.5955-5962.2004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Urwin R, Russell JE, Thompson EAL, Holmes EC, Feavers IM, Maiden MCJ (2004) Distribution of surface protein variants among hyperinvasive meningococci: implication for vaccine design. Infect Immun 72:5955&#x2013;5962 <pub-id pub-id-type="pmid">15385499</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berg</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Black</surname>
+              <given-names>PN</given-names>
+            </name>
+            <name>
+              <surname>Clemons</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Rapoport</surname>
+              <given-names>TA</given-names>
+            </name>
+          </person-group>
+          <article-title>Crystal structure of the long-chain fatty acid transporter <italic>FadL</italic></article-title>
+          <source>Science</source>
+          <year>2004</year>
+          <volume>304</volume>
+          <fpage>1506</fpage>
+          <lpage>1509</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1097524</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">van den Berg B, Black PN, Clemons WM, Rapoport TA (2004) Crystal structure of the long-chain fatty acid transporter FadL. Science 304:1506&#x2013;1509 <pub-id pub-id-type="pmid">15178802</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Bielawski</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+          </person-group>
+          <article-title>Widespread adaptive evolution in the human immunodeficiency virus type 1 genome</article-title>
+          <source>J Mol Evol</source>
+          <year>2003</year>
+          <volume>57</volume>
+          <fpage>212</fpage>
+          <lpage>221</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00239-003-2467-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yang W, Bielawski JP, Yang ZH (2003) Widespread adaptive evolution in the human immunodeficiency virus type 1 genome. J Mol Evol 57:212&#x2013;221 <pub-id pub-id-type="pmid">14562964</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+          </person-group>
+          <article-title>PAML: a program package for phylogenetic analysis by maximum likelihood</article-title>
+          <source>Comp Appl Biosci</source>
+          <year>1997</year>
+          <volume>13</volume>
+          <fpage>555</fpage>
+          <lpage>556</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Yang ZH (1997) PAML: a program package for phylogenetic analysis by maximum likelihood. Comp Appl Biosci 13:555&#x2013;556 <pub-id pub-id-type="pmid">9367129</pub-id></citation>
+      </ref>
+      <ref id="CR43">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+            <name>
+              <surname>Swanson</surname>
+              <given-names>WJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Codon-substitution models to detect adaptive evolution that account for heterogeneous selective pressures among site classes</article-title>
+          <source>Mol Biol Evol</source>
+          <year>2002</year>
+          <volume>19</volume>
+          <fpage>49</fpage>
+          <lpage>57</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Yang ZH, Swanson WJ (2002) Codon-substitution models to detect adaptive evolution that account for heterogeneous selective pressures among site classes. Mol Biol Evol 19:49&#x2013;57 <pub-id pub-id-type="pmid">11752189</pub-id></citation>
+      </ref>
+      <ref id="CR44">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+            <name>
+              <surname>Nielsen</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Goldman</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>AMK</given-names>
+            </name>
+          </person-group>
+          <article-title>Codon-substitution models for heterogeneous selection pressure at amino acid sites</article-title>
+          <source>Genetics</source>
+          <year>2000</year>
+          <volume>155</volume>
+          <fpage>431</fpage>
+          <lpage>449</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Yang ZH, Nielsen R, Goldman N, Pedersen AMK (2000) Codon-substitution models for heterogeneous selection pressure at amino acid sites. Genetics 155:431&#x2013;449 <pub-id pub-id-type="pmid">10790415</pub-id></citation>
+      </ref>
+      <ref id="CR45">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yang</surname>
+              <given-names>ZH</given-names>
+            </name>
+            <name>
+              <surname>Wong</surname>
+              <given-names>WSW</given-names>
+            </name>
+            <name>
+              <surname>Nielsen</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Bayes empirical Bayes inference of amino acid sites under positive selection</article-title>
+          <source>Mol Biol Evol</source>
+          <year>2005</year>
+          <volume>22</volume>
+          <fpage>1107</fpage>
+          <lpage>1118</lpage>
+          <pub-id pub-id-type="doi">10.1093/molbev/msi097</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yang ZH, Wong WSW, Nielsen R (2005) Bayes empirical Bayes inference of amino acid sites under positive selection. Mol Biol Evol 22:1107&#x2013;1118 <pub-id pub-id-type="pmid">15689528</pub-id></citation>
+      </ref>
+      <ref id="CR46">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zeckel</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Jacobson</surname>
+              <given-names>KD</given-names>
+            </name>
+            <name>
+              <surname>Guerra</surname>
+              <given-names>FJ</given-names>
+            </name>
+            <name>
+              <surname>Therasse</surname>
+              <given-names>DG</given-names>
+            </name>
+            <name>
+              <surname>Farlow</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Loracarbef (Ly163892) versus amoxicillin clavulanate in the treatment of acute bacterial exacerbations of chronic bronchitis</article-title>
+          <source>Clin Ther</source>
+          <year>1992</year>
+          <volume>14</volume>
+          <fpage>214</fpage>
+          <lpage>229</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Zeckel ML, Jacobson KD, Guerra FJ, Therasse DG, Farlow D (1992) Loracarbef (Ly163892) versus amoxicillin clavulanate in the treatment of acute bacterial exacerbations of chronic bronchitis. Clin Ther 14:214&#x2013;229 <pub-id pub-id-type="pmid">1611645</pub-id></citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p>[<italic>Reviewing Editor</italic>: Dr. Rasmus Nielson]</p>
+      </fn>
+      <fn>
+        <p>
+          <bold>Electronic Supplementary Material</bold>
+        </p>
+        <p>The online version of this article (doi:10.1007/s00239-006-0021-2) contains supplementary material, which is available to authorized users.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

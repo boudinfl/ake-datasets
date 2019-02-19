@@ -1,0 +1,1558 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Springer US</publisher-name>
+        <publisher-loc>Boston</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18465248</article-id>
+      <article-id pub-id-type="pmc">2413127</article-id>
+      <article-id pub-id-type="publisher-id">9510</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-008-9510-3</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Biomechanics of Traumatic Brain Injury: Influences of the Morphologic Heterogeneities of the Cerebral Cortex</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Cloots</surname>
+            <given-names>R.J.H.</given-names>
+          </name>
+          <address>
+            <email>r.j.h.cloots@tue.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Gervaise</surname>
+            <given-names>H.M.T.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van Dommelen</surname>
+            <given-names>J.A.W.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Geers</surname>
+            <given-names>M.G.D.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Materials Technology Institute, Eindhoven University of Technology, P.O. Box 513, 5600&#xA0;MB Eindhoven, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>9</day>
+        <month>5</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>7</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>36</volume>
+      <issue>7</issue>
+      <fpage>1203</fpage>
+      <lpage>1215</lpage>
+      <history>
+        <date date-type="received">
+          <day>6</day>
+          <month>9</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>28</day>
+          <month>4</month>
+          <year>2008</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2008</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Traumatic brain injury (TBI) can be caused by accidents and often leads to permanent health issues or even death. Brain injury criteria are used for assessing the probability of TBI, if a certain mechanical load is applied. The currently used injury criteria in the automotive industry are based on global head kinematics. New methods, based on finite element modeling, use brain injury criteria at lower scale levels, e.g., tissue-based injury criteria. However, most current computational head models lack the anatomical details of the cerebrum. To investigate the influence of the morphologic heterogeneities of the cerebral cortex, a numerical model of a representative part of the cerebral cortex with a detailed geometry has been developed. Several different geometries containing gyri and sulci have been developed for this model. Also, a homogeneous geometry has been made to analyze the relative importance of the heterogeneities. The loading conditions are based on a computational head model simulation. The results of this model indicate that the heterogeneities have an influence on the equivalent stress. The maximum equivalent stress in the heterogeneous models is increased by a factor of about 1.3&#x2013;1.9 with respect to the homogeneous model, whereas the mean equivalent stress is increased by at most 10%. This implies that tissue-based injury criteria may not be accurately applied to most computational head models used nowadays, which do not account for sulci and gyri.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Traumatic brain injury</kwd>
+        <kwd>Brain tissue</kwd>
+        <kwd>Cerebrum</kwd>
+        <kwd>Cerebral cortex</kwd>
+        <kwd>Inhomogeneities</kwd>
+        <kwd>Finite element model</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The brain is often one of the most seriously injured parts of the human body in case of a road traffic crash situation.<xref ref-type="bibr" rid="CR1">1</xref>,<xref ref-type="bibr" rid="CR21">21</xref>,<xref ref-type="bibr" rid="CR41">41</xref> The incidence rate and mortality rate in Europe are estimated to be 235 and 15.4 per 100,000 of the population per year, respectively.<xref ref-type="bibr" rid="CR41">41</xref> Traumatic brain injury (TBI) is therefore considered as a widespread problem. Understanding the mechanisms inducing TBI is necessary for reducing the number of occurrences, e.g., by developing more appropriate protective systems and diagnostic tools.</p>
+      <p>Brain injury criteria are used for the assessment of the probability of TBI for certain mechanical loading conditions. The most commonly used injury criterion in the automotive industry is the Head Injury Criterion (HIC).<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR43">43</xref> It is developed to predict TBI resulting from a translational acceleration of the head. One of the drawbacks of the HIC is that it is based on global kinematic data to predict TBI, whereas actual brain damage is caused at the cellular level as a consequence of tissue strains and stresses.<xref ref-type="bibr" rid="CR35">35</xref> Furthermore, it is based on experimental data, in which only anterior&#x2013;posterior contact loading has been applied to human cadavers, not accounting for angular accelerations of the head. For a better approximation of the relation between TBI and a mechanical load, more advanced methods have been developed. For instance, three-dimensional finite element (FE) head models have been developed to predict brain injury.<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR38">38</xref>,<xref ref-type="bibr" rid="CR42">42</xref>,<xref ref-type="bibr" rid="CR45">45</xref>,<xref ref-type="bibr" rid="CR47">47</xref> With these numerical head models, different injury mechanisms and loading conditions can be distinguished. However, in these models, the heterogeneous anatomy of the cerebrum is usually represented by a relatively homogeneous geometry. A comparison between the homogeneous geometry of a typical finite element head model and the complex structure of a real brain is given in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>. The main function of the heterogeneous morphology is to increase the cortical surface in order to obtain a more complex level of the brain functions.<xref ref-type="bibr" rid="CR34">34</xref> The most recent numerical head models include ventricles and the invaginations of the dura mater, but none include the convolutions of the cerebral cortex. Consequently, the stresses and strains that are predicted from these models likely do not represent actual tissue stresses and strains, at least in the cortex. Therefore, although tissue-based injury criteria may be used, their accuracy is expected to be limited. This might prohibit the direct use of tissue-based injury criteria. Such criteria predict injury at the tissue level and are based on <italic>in&#xA0;vitro</italic> and <italic>in&#xA0;vivo</italic> experiments.<xref ref-type="bibr" rid="CR3">3</xref>,<xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR10">10</xref>,<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR13">13</xref>,<xref ref-type="bibr" rid="CR31">31</xref>,<xref ref-type="bibr" rid="CR32">32</xref> For a direct application of tissue-based injury criteria in a computational head model, a more detailed description of the biomechanical behavior of the cerebrum may be required, which can be achieved by including its morphologic heterogeneities in these models. A few two-dimensional FE models of the brain containing the convolutions of the cerebral cortex have been described in literature. Miller <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR30">30</xref> compared different modeling techniques for the relative motion between the brain and the cranium. Nishimoto and Murakami<xref ref-type="bibr" rid="CR33">33</xref> developed a model to investigate the relation between brain injury and the HIC. However, these models have not been developed with the purpose of investigating the local biomechanics at the level of these convolutions. No conclusions have been drawn from these studies on the biomechanical influence of the heterogeneities of the cerebral cortex, due to the limited spatial resolution of the mesh.<fig id="Fig1"><label>Figure&#xA0;1</label><caption><p>(a) Numerical head model developed by Claessens.<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR7">7</xref> (b) Lateral view of the human brain. Adapted from Welker <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR44">44</xref></p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig1_HTML" id="MO16"/></fig></p>
+      <p>Physical experiments have been conducted in several studies to investigate the biomechanical consequences of the heterogeneities of the cerebrum.<xref ref-type="bibr" rid="CR14">14</xref> In a study by Bradshaw <italic>et&#xA0;al</italic>.,<xref ref-type="bibr" rid="CR5">5</xref> a gel-filled chamber that represented the brain and skull in a coronal plane including the falx cerebri and the sulci of the cerebral cortex was subjected to a rotation with a peak acceleration of approximately 7800&#xA0;rad&#xA0;s<sup>&#x2212;2</sup>. An increase of the maximum principle strain in the cerebral cortex due to the sulci was found.</p>
+      <p>The aim of this study is to investigate the biomechanical influences of the morphologic heterogeneities in the cerebral cortex. To achieve this, several two-dimensional FE models with detailed geometries of a part of the cerebral cortex have been developed. Also, an FE model with a homogeneous morphology of the cortex has been made. The loading conditions are based on simulations with a computational head model as used by Brands <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR6">6</xref> The results of the simulations of the heterogeneous models will be compared to those of the homogeneous model.</p>
+    </sec>
+    <sec id="Sec2" sec-type="methods">
+      <title>Methods</title>
+      <p>In this study, plane strain models of small sections of the cerebrum are made using the FE code Abaqus 6.6-1 (HKS, Providence, USA). An explicit time integration is used, anticipating a dynamic load with a high magnitude and a short duration. The time increments are limited by the stability condition, which is determined in the global estimator function in Abaqus.</p>
+      <sec id="Sec3">
+        <title>Geometries</title>
+        <p>To investigate the influence of the heterogeneities of the cerebral cortex, a homogeneous model and three heterogeneous models have been developed. The heterogeneous models, which are shown in Figs.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a, <xref rid="Fig2" ref-type="fig">2</xref>c, and <xref rid="Fig2" ref-type="fig">2</xref>d have detailed geometries of a small part of the cerebrum, including also a part of the cerebrospinal fluid (CSF). The cranium is modeled by a boundary constraint, as will be detailed further on. Since the dura mater and the arachnoid are connected to the inside of the cranium in the region that is modeled,<xref ref-type="bibr" rid="CR29">29</xref>,<xref ref-type="bibr" rid="CR34">34</xref> it is assumed that they can be ignored for this situation. The pia mater, which is a thin and delicate membrane covering the brain,<xref ref-type="bibr" rid="CR29">29</xref>,<xref ref-type="bibr" rid="CR34">34</xref> is also not included, since it is expected to have no mechanical influence for the used loading conditions. The same assumption is used for the arachnoid trabeculae, which extend from the arachnoid to the pia mater and are less existent inside the sulci.<xref ref-type="bibr" rid="CR34">34</xref><fig id="Fig2"><label>Figure&#xA0;2</label><caption><p>(a) Heterogeneous geometry 1 and (b) its spatial discretization. (c) Heterogeneous geometry 2. (d) Heterogeneous geometry 3. (e) Homogeneous geometry</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig2_HTML" id="MO17"/></fig></p>
+        <p>The first geometry has one narrow sulcus on the right hand side and a small part of a sulcus on the left hand side. The second geometry contains two deeper and wider sulci than the other two geometries. The third geometry consists of one vertical sulcus and one partly horizontal sulcus, where horizontal and vertical refer to the <italic>x</italic>- and <italic>y</italic>-direction, respectively. These geometries, which represent typical stylized shapes of the cerebral cortex, are based on the topological studies by Mai <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR27">27</xref> The left and right boundaries of the models are chosen to be periodic, i.e., the internal geometries near the opposite boundaries match. The periodicity of the boundary conditions will be explained further on. The models do not distinguish between gray (cerebral cortex) and white matter. In Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>e, the homogeneous model is shown. Similar to the heterogeneous models, it also consists of CSF and brain tissue, but it does not contain any gyri and sulci. The outer dimensions of each model are 32&#xA0;mm by 24&#xA0;mm. The meshes consist of bi-linear, quadrilateral, reduced integration elements with hourglass control. The heterogeneous models also contain a small number of triangular elements. The total number of elements of the heterogeneous models ranges from 4243 to 4533 elements. The homogeneous geometry consists of 3072 elements.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Material Properties</title>
+        <p>For the material properties of the CSF, a nearly incompressible, low shear modulus elastic solid has been assumed, since the shear stress in the brain tissue due to the applied loading conditions is estimated to be about a factor 10<sup>4</sup> higher than that in the CSF. The material properties are listed in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. The shear modulus of CSF is estimated from the loading conditions that are described further on by using <inline-formula id="IEq1"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq1.gif --><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$G = {\eta\dot{\gamma}}/{\gamma},$$\end{document}</tex-math></inline-formula> in which <italic>G</italic> is the elastic shear modulus, &#x3B7; is the viscosity, &#x3B3; is the estimated shear strain, and <inline-formula id="IEq2"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq2.gif --><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\dot{\gamma}$$\end{document}</tex-math></inline-formula> is the estimated shear rate. Because two different loading conditions have been used, also two different estimates for the CSF shear modulus have been used. However, with these shear moduli being much lower than that of the brain tissue, the exact values of these estimates do not affect the outcome of this study. The bulk modulus is obtained from literature.<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR47">47</xref><table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Linear material parameters</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">&#xA0;</th><th align="left">Bulk modulus (GPa)</th><th align="left">Shear modulus (Pa)</th><th align="left">Time constant (s)</th></tr></thead><tbody><tr><td align="left" rowspan="2">CSF</td><td align="left" rowspan="2">2.2</td><td align="left">0.036<sup>a</sup></td><td char="." align="char">&#x221E;</td></tr><tr><td align="left">0.12<sup>b</sup></td><td char="." align="char">&#x221E;</td></tr><tr><td align="left" rowspan="7">Brain tissue</td><td align="left" rowspan="7">2.5</td><td align="left">182.9</td><td char="." align="char">&#x221E;</td></tr><tr><td align="left">9884</td><td char="." align="char">0.00013</td></tr><tr><td align="left">835.5</td><td char="." align="char">0.012</td></tr><tr><td align="left">231.2</td><td char="." align="char">0.35</td></tr><tr><td align="left">67.1</td><td char="." align="char">4.62</td></tr><tr><td align="left">3.61</td><td char="." align="char">12.1</td></tr><tr><td align="left">2.79</td><td char="." align="char">54.3</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Shear modulus in case of loading condition A</p><p><sup>b</sup>Shear modulus in case of loading condition B</p></table-wrap-foot></table-wrap></p>
+        <p>The material properties of the brain tissue are described by a non-linear viscoelastic constitutive model that has been developed by Hrapko <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR19">19</xref> This model was found to accurately describe the response of brain tissue for large deformations in both shear and compression. This model is extended here to account for compressibility.</p>
+        <p>The constitutive model consists of an elastic part, denoted by the subscript &#x2018;e&#x2019;, and a (deviatoric) viscoelastic part, denoted by the subscript &#x2018;ve&#x2019;, with <italic>N</italic> viscoelastic modes. The total Cauchy stress tensor <inline-formula id="IEq3"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq3.gif --><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\sigma}$$\end{document}</tex-math></inline-formula> is written as<disp-formula id="Equ1"><label>1</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\sigma} = \varvec{\sigma}_{\rm e}^{\rm h}+\varvec{\sigma}_{\rm e}^{\rm d} +\sum\limits_{i=1}^{N}\varvec{\sigma}_{{\rm ve}_{i}}^{\rm d} $$\end{document}</tex-math></disp-formula>in which the superscripts &#x2018;h&#x2019; and &#x2018;d&#x2019; denote the hydrostatic and the deviatoric part, respectively. For simplicity, the subscript <italic>i</italic> indicating the number of the viscoelastic mode will be omitted from this point on. The hydrostatic part of Eq. (<xref rid="Equ1" ref-type="">1</xref>) is defined as<disp-formula id="Equ2"><label>2</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\sigma}_{\rm e}^{\rm h}= K(J-1)\user2{I} $$\end{document}</tex-math></disp-formula>where <italic>K</italic> is the bulk modulus and <inline-formula id="IEq4"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq4.gif --><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$J=\hbox{det}(\user2{F})$$\end{document}</tex-math></inline-formula> is the volume change ratio.</p>
+        <p>The deviatoric elastic mode describes a non-linear response to the deformation gradient tensor <bold><italic>F</italic></bold>, which is given by<disp-formula id="Equ3"><label>3</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\sigma}_{\rm e}^{\rm d} = \frac{G_{\infty}}{J} \left[ (1-A)\hbox{exp}\left(-C\sqrt{b\tilde{I}_{1} + (1-b)\tilde{I}_{2} - 3}\right) + A \right]\left[b\tilde{\user2{B}}^{\rm d} - (1-b)(\tilde{\user2{B}}^{-1})^{\rm d} \right] $$\end{document}</tex-math></disp-formula>where <italic>G</italic><sub>&#x221E;</sub> is the elastic shear modulus, <inline-formula id="IEq5"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq5.gif --><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tilde{\user2{B}}=J^{-\frac{2}{3}}\user2{B}$$\end{document}</tex-math></inline-formula> is the isochoric part of the Finger tensor <bold><italic>B</italic></bold>, and <inline-formula id="IEq6"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq6.gif --><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tilde{I}_{1}$$\end{document}</tex-math></inline-formula> and <inline-formula id="IEq7"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq7.gif --><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tilde{I}_{2}$$\end{document}</tex-math></inline-formula> are the first and second invariant of the isochoric Finger tensor <inline-formula id="IEq8"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq8.gif --><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tilde{\user2{B}},$$\end{document}</tex-math></inline-formula> respectively. <italic>A</italic>, <italic>C</italic>, and <italic>b</italic> are fitting parameters describing the non-linearity of the elastic response.</p>
+        <p>The third term on the right hand side of Eq. (<xref rid="Equ1" ref-type="">1</xref>) consists of the summation of the viscoelastic modes. The deformation gradient tensor <bold><italic>F</italic></bold> is partitioned into an elastic deformation gradient tensor <inline-formula id="IEq9"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq9.gif --><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\user2{F}_{\rm e}$$\end{document}</tex-math></inline-formula> and a viscous deformation gradient tensor <inline-formula id="IEq10"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq10.gif --><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\user2{F}_{\rm v}$$\end{document}</tex-math></inline-formula> by assuming multiplicative decomposition<xref ref-type="bibr" rid="CR25">25</xref>,<xref ref-type="bibr" rid="CR36">36</xref>:<disp-formula id="Equ4"><label>4</label><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \user2{F}=\user2{F}_{\rm e}\cdot \user2{F}_{\rm v} $$\end{document}</tex-math></disp-formula></p>
+        <p>The decomposition involves a fictitious intermediate state, which could exist after application of merely the viscous deformation gradient tensor <inline-formula id="IEq11"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq11.gif --><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\user2{F}_{\rm v}.$$\end{document}</tex-math></inline-formula> This is the stress-free state, which after application of the elastic deformation tensor <inline-formula id="IEq12"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq12.gif --><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\user2{F}_{\rm e}$$\end{document}</tex-math></inline-formula> transforms into the final state. The third term on the right hand side of Eq. (<xref rid="Equ1" ref-type="">1</xref>) describes the viscoelastic contribution to the stress as follows:<disp-formula id="Equ5"><label>5</label><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\sigma}_{\rm ve}^{\rm d} = \frac{G}{J} \left[a\tilde{\user2{B}}^{\rm d}_{\rm e} - (1-a)(\tilde{\user2{B}}^{-1}_{\rm e})^{\rm d} \right] $$\end{document}</tex-math></disp-formula>with <italic>G</italic> the shear modulus, <inline-formula id="IEq13"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq13.gif --><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tilde{\user2{B}}_{\rm e}=J^{-\frac{2}{3}}\user2{B}_{\rm e}$$\end{document}</tex-math></inline-formula> the isochoric part of the elastic Finger tensor <inline-formula id="IEq14"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq14.gif --><tex-math id="M19">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\user2{B}_{\rm e},$$\end{document}</tex-math></inline-formula> and <italic>a</italic> a fitting parameter.</p>
+        <p>The viscous deformation <inline-formula id="IEq15"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq15.gif --><tex-math id="M20">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\user2{F}_{\rm v}$$\end{document}</tex-math></inline-formula> is assumed to be volume-invariant, i.e., <inline-formula id="IEq16"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq16.gif --><tex-math id="M21">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\hbox{det}(\user2{F}_{\rm v})=1$$\end{document}</tex-math></inline-formula> and <inline-formula id="IEq17"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq17.gif --><tex-math id="M22">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$J_{\rm e}=\hbox{det}(\user2{F}_{\rm e})=J.$$\end{document}</tex-math></inline-formula> The viscous rate of deformation tensor is calculated from the flow rule as<disp-formula id="Equ6"><label>6</label><tex-math id="M23">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \user2{D}_{\rm v} = \frac{\varvec{\sigma}^{\rm d}_{\rm ve}}{2\eta(\tau)} $$\end{document}</tex-math></disp-formula>where the dynamic viscosity &#x3B7; is a function of the scalar equivalent stress measure <inline-formula id="IEq18"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq18.gif --><tex-math id="M24">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tau=\sqrt{\frac{1}{2}\varvec{\sigma}^{\rm d}:\varvec{\sigma}^{\rm d}},$$\end{document}</tex-math></inline-formula> for which the Ellis model is adopted:<disp-formula id="Equ7"><label>7</label><tex-math id="M25">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \eta(\tau) = \eta_{\infty} + \frac{\eta_{0} - \eta_{\infty}} {1 + \left(\frac {\tau} {\tau_{0}}\right)^{(n-1)}} $$\end{document}</tex-math></disp-formula>with subscripts 0 and &#x221E; denoting the initial and infinite values, respectively. The initial value for the viscosity is defined as &#x3B7;<sub>0</sub>&#xA0;=&#xA0;<italic>G</italic>&#x3BB;, whereas the infinite viscosity is defined as &#x3B7;<sub>&#x221E;</sub>&#xA0;=&#xA0;<italic>k</italic>&#x3B7;<sub>0</sub>. Here, &#x3BB; refers to the time constant.</p>
+        <p>Although differences between the material properties of the gray and white matter may exist, these differences are not well characterized. Therefore, no distinction between gray and white matter has been made in this study, except for the investigation of the influence of varying the material properties of gray matter with respect to those of white matter (see the Discussion and Conclusions). For simulating a head impact situation representative of road traffic accidents, an extra viscoelastic mode with a smaller time constant has been added to the behavior as characterized by Hrapko <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR19">19</xref> The extra mode<xref ref-type="bibr" rid="CR18">18</xref> is based on the experimental data from Hrapko and co-workers in combination with the data by Shen <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR39">39</xref> The linear material properties are listed in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. The values of the non-linear viscoelastic parameters are shown in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>.<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Non-linear material parameters for brain tissue</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Elastic</th><th align="left">Viscous</th></tr></thead><tbody><tr><td align="left"><italic>A</italic>&#xA0;=&#xA0;0.73</td><td align="left">&#x3C4;<sub>0</sub>&#xA0;=&#xA0;9.7&#xA0;Pa</td></tr><tr><td align="left"><italic>C</italic>&#xA0;=&#xA0;15.6</td><td align="left"><italic>n</italic>&#xA0;=&#xA0;1.65</td></tr><tr><td align="left"><italic>a</italic>&#xA0;=&#xA0;1</td><td align="left"><italic>k</italic>&#xA0;=&#xA0;0.39</td></tr><tr><td align="left"><italic>b</italic>&#xA0;=&#xA0;1</td><td align="left"/></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Boundary Conditions</title>
+        <p>The boundary conditions have been chosen such that they represent the biomechanical influences of the surroundings on the cerebral cortex model. Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows the labeling of the corner nodes and the boundaries. The symbols <italic>x</italic> and <italic>y</italic> denote the components of position vector <inline-formula id="IEq19"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq19.gif --><tex-math id="M26">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\vec{x}$$\end{document}</tex-math></inline-formula> with respect to a Cartesian vector basis <inline-formula id="IEq20"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq20.gif --><tex-math id="M27">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$(\vec{e}_x,\vec{e}_y),$$\end{document}</tex-math></inline-formula> whereas <italic>u</italic> and <italic>v</italic> are the components of the displacement vector <inline-formula id="IEq21"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq21.gif --><tex-math id="M28">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\vec{u}$$\end{document}</tex-math></inline-formula> with respect to this basis.<fig id="Fig3"><label>Figure&#xA0;3</label><caption><p>Labeling of corner nodes and boundaries</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig3_HTML" id="MO18"/></fig></p>
+        <p>The Young&#x2019;s modulus of the cranium is much higher than that of brain tissue.<xref ref-type="bibr" rid="CR19">19</xref>,<xref ref-type="bibr" rid="CR46">46</xref> Still, in a contact loading situation of the head the deformation of the skull is important, because it initiates strain waves in the brain tissue. In this study, however, only inertial loading of the head is considered and therefore the cranium is assumed to be rigid. The cranium is incorporated in the boundary condition at &#x393;<sub>3</sub>. Because of the low shear modulus of the CSF, the influence of the rigid constraint associated with the cranium at boundary &#x393;<sub>3</sub> in the <italic>x</italic>-direction can be neglected. Provided no rotation of the model occurs, the constraint equation for all nodes on boundary &#x393;<sub>3</sub> is<disp-formula id="Equ8"><label>8</label><tex-math id="M29">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ v|_{\Upgamma_{3}} = v_{\rm s} $$\end{document}</tex-math></disp-formula>with <italic>v</italic><sub>s</sub> the vertical displacement of the skull.</p>
+        <p>The boundaries &#x393;<sub>2</sub> and &#x393;<sub>4</sub> are subjected to periodic boundary conditions<xref ref-type="bibr" rid="CR23">23</xref>:<disp-formula id="Equ9"><label>9</label><tex-math id="M30">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \vec{u}|_{\Upgamma_{2}} - \vec{u}|_{\Upgamma_{4}} = \vec{u}|_{{\rm C}_{2}}-\vec{u}|_{{\rm C}_{1}} $$\end{document}</tex-math></disp-formula></p>
+        <p>These constraints imply that throughout the deformation process the shapes of the opposite boundaries, &#x393;<sub>2</sub> and &#x393;<sub>4</sub>, remain identical to each other, while the tractions on opposite boundaries are opposite to satisfy stress continuity, which can be written as<disp-formula id="Equ10"><label>10</label><tex-math id="M31">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\sigma} \cdot \vec{n}_{2} = -\varvec{\sigma} \cdot \vec{n}_{4} $$\end{document}</tex-math></disp-formula>with <inline-formula id="IEq22"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq22.gif --><tex-math id="M32">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\sigma}$$\end{document}</tex-math></inline-formula> the Cauchy stress tensor and <inline-formula id="IEq23"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq23.gif --><tex-math id="M33">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\vec{n}_i$$\end{document}</tex-math></inline-formula> the unit outward normal vector of boundary &#x393;<sub><italic>i</italic></sub>.</p>
+        <p>The lower boundary, &#x393;<sub>1</sub>, of the brain tissue in the model lies adjacent to brain tissue in neighboring regions. Therefore, boundary &#x393;<sub>1</sub> has to be constrained accordingly. The applied constraint on &#x393;<sub>1</sub> is obtained by tying all nodal displacements on &#x393;<sub>1</sub> to a linear interpolation between the displacements of corner nodes C<sub>1</sub> and C<sub>2</sub>. For any node on boundary &#x393;<sub>1</sub>, this results in<disp-formula id="Equ11"><label>11</label><tex-math id="M34">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \vec{u}|_{\Upgamma_{1}} = \vec{u}|_{{\rm C}_{1}} + \frac{||\vec{x}_0|_{\Upgamma_{1}} - \vec{x}_0|_{{\rm C}_{1}}||}{||\vec{x}_0|_{{\rm C}_{2}} -\vec{x}_0|_{{\rm C}_{1}}||} \left(\vec{u}|_{{\rm C}_{2}}-\vec{u}|_{{\rm C}_{1}}\right) $$\end{document}</tex-math></disp-formula>with the subscript 0 denoting the initial configuration. The displacements of corner nodes C<sub>1</sub> and C<sub>2</sub> are prescribed and calculated from the applied loading conditions.</p>
+        <p>The loading conditions of the cerebral cortex model (micro-level in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) are based on the loading conditions that have been used by Brands <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR6">6</xref> for a three-dimensional numerical head model (macro-level in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). In that model, an eccentric rotation has been applied to the skull to simulate an angular head acceleration around the neck-shoulder joint in the sagittal plane in the anterior&#x2013;posterior direction. The eccentricity has been chosen to represent a typical neck length. The axis of rotation has been positioned at 155&#xA0;mm below the anatomical origin, i.e., the ear hole projected to the sagittal plane. The rotation of the head model consists of two successive sine functions that describe the angular acceleration:<disp-formula id="Equ12"><label>12</label><tex-math id="M35">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ 0\,\hbox{s} &lt; t \leq 0.010\,\hbox{s} : \dot{\omega}(t) = 250\pi \sin\; (100\pi t) $$\end{document}</tex-math></disp-formula><disp-formula id="Equ13"><label>13</label><tex-math id="M36">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ 0.010\,\hbox{s} &lt; t \leq 0.030\,\hbox{s} : \dot{\omega}(t) = -125 \pi\sin\;(50\pi (t-0.010)) $$\end{document}</tex-math></disp-formula><fig id="Fig4"><label>Figure&#xA0;4</label><caption><p>The loading conditions of the cerebral cortex model (micro-level) are derived from the region of interest in a parasagittal cross-section (15&#xA0;mm offset from the midsagittal plane) of the head model (macro-level). Shown at the macro-level is the equivalent stress field of the head model at 10&#xA0;ms</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig4_HTML" id="MO19"/></fig></p>
+        <p>In Eqs. (<xref rid="Equ12" ref-type="">12</xref>) and (<xref rid="Equ13" ref-type="">13</xref>), the angular acceleration <inline-formula id="IEq24"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq24.gif --><tex-math id="M37">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\dot{\omega}$$\end{document}</tex-math></inline-formula> is given in rad&#xA0;s<sup>&#x2212;2</sup>.</p>
+        <p>The loading conditions are applied to the cerebral cortex model by means of body forces. In all integration points of the elements in the model, a non-uniform body force is imposed that reversely simulates the inertial forces:<disp-formula id="Equ14"><label>14</label><tex-math id="M38">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \vec{q}(\vec{x},t) = \rho(\vec{x}) \ddot{u}(y,t) \vec{e}_x $$\end{document}</tex-math></disp-formula>in which <inline-formula id="IEq25"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq25.gif --><tex-math id="M39">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\vec{q}$$\end{document}</tex-math></inline-formula> represents the distributed load per unit of volume, &#x3C1; is mass density, <italic>t</italic> is time, and <inline-formula id="IEq26"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq26.gif --><tex-math id="M40">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\ddot{u}$$\end{document}</tex-math></inline-formula> refers to the acceleration in the <italic>x</italic>-direction that is represented by these body forces. Note that for the head model the loading conditions contain an angular component, whereas the cerebral cortex model uses translational loading conditions. Because only a small part of the head is modeled and because of the small rotation of the head model with a maximum of 4&#xB0;, the loading of the cerebral cortex model is assumed to be translational in <italic>x</italic>-direction only.</p>
+        <p>The loading conditions of the cerebral cortex model, i.e., the representative accelerations <inline-formula id="IEq27"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq27.gif --><tex-math id="M41">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\ddot{u}(y,t),$$\end{document}</tex-math></inline-formula> are calculated from the head model (from the region indicated in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) in two different approaches: <list list-type="order"><list-item><p>In the first approach, the input accelerations of the head model are used to define the loading condition of the cerebral cortex model. This approach will be referred to as loading condition A.</p><p>The translational acceleration <inline-formula id="IEq28"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq28.gif --><tex-math id="M42">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\ddot{u}$$\end{document}</tex-math></inline-formula> can be calculated using<disp-formula id="Equ15"><label>15</label><tex-math id="M43">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \ddot{u}(y,t) = \dot{\omega}(t)\;r(y) $$\end{document}</tex-math></disp-formula>with <inline-formula id="IEq29"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq29.gif --><tex-math id="M44">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\dot{\omega}$$\end{document}</tex-math></inline-formula> the angular acceleration, which is defined by Eqs. (<xref rid="Equ12" ref-type="">12</xref>) and (<xref rid="Equ13" ref-type="">13</xref>), and <italic>r</italic> the radius from the axis of rotation (neck-shoulder) in the head model to a point in the region of interest. The radius <italic>r</italic> is a function of the <italic>y</italic>-position in the cerebral cortex model. It varies between <italic>r</italic>(0)&#xA0;=&#xA0;0.251&#xA0;m at boundary &#x393;<sub>1</sub> to <italic>r</italic>(0.024)&#xA0;=&#xA0;0.275&#xA0;m at &#x393;<sub>3</sub>. The accelerations <inline-formula id="IEq30"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq30.gif --><tex-math id="M45">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\ddot{u}$$\end{document}</tex-math></inline-formula> at &#x393;<sub>1</sub> and &#x393;<sub>3</sub> are depicted in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a. All other accelerations are interpolated linearly between these two boundaries, thereby creating a gradient across the height of the model. The acceleration gradient is important for the resulting shear stresses. Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b shows the acceleration profile of the cerebral cortex model. The accelerations are used to calculate the body forces as a function of both time and <italic>y</italic>-position.</p><p>The disadvantage of this loading condition is that a spatially constant acceleration gradient is assumed and therefore it does not account for the influence of the geometry of the cranium. To account for the geometry of the head, another loading condition has been developed that is described next.</p></list-item><list-item><p>The second approach, loading condition B, uses output accelerations from a global head model simulation as the input of the cerebral cortex model. For this, a modified version of the head model, as used by Brands <italic>et&#xA0;al</italic>.,<xref ref-type="bibr" rid="CR6">6</xref> has been employed in the simulation code Madymo, in which the constitutive model for brain tissue by Hrapko <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR19">19</xref> has been implemented. The accelerations obtained from the region inside the box in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> from the head model are imposed on the cerebral cortex model. Hence, the influence of the geometry of the head is modeled indirectly by means of an acceleration profile that is obtained from the head model.</p><p>The displacements of the brain tissue in the head model in the field of interest are almost entirely in the <italic>x</italic>-direction justifying the assumption of inertial loading (of the cerebral cortex model) in the <italic>x</italic>-direction only. In Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, the acceleration profiles as a function of the <italic>y</italic>-position are shown at 5, 10, and 20&#xA0;ms. Similar to loading condition A, the accelerations are used to calculate the body forces as a function of both time and <italic>y</italic>-position.</p></list-item></list><fig id="Fig5"><label>Figure&#xA0;5</label><caption><p>Loading condition A. (a) Acceleration at the upper and lower boundary of the cerebral cortex model. (b) Acceleration profiles at different times</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig5_HTML" id="MO20"/></fig><fig id="Fig6"><label>Figure&#xA0;6</label><caption><p>Loading condition B: displacement (top) and acceleration (bottom) profiles derived from the output of the head model</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig6_HTML" id="MO21"/></fig></p>
+        <p>In order to quantify the influence of the morphologic heterogeneities, the equivalent stress <inline-formula id="IEq31"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq31.gif --><tex-math id="M46">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\bar{\sigma}=\sqrt{\frac{3}{2}\varvec{\sigma}^{\rm d}:\varvec{\sigma}^{\rm d}}$$\end{document}</tex-math></inline-formula> is used, in which <inline-formula id="IEq32"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq32.gif --><tex-math id="M47">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\sigma}^{\rm d}$$\end{document}</tex-math></inline-formula> is the deviatoric part of the Cauchy stress tensor <inline-formula id="IEq33"><!-- Alternate image not processed: 10439_2008_9510_Article_IEq33.gif --><tex-math id="M48">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\sigma}.$$\end{document}</tex-math></inline-formula> The equivalent stress is chosen, because the simulations are based on an angular acceleration of the head, in which deviatoric stresses are considered to be the most important.<xref ref-type="bibr" rid="CR30">30</xref> The maximum principal strain is considered important as well with respect to diffuse axonal brain injury.<xref ref-type="bibr" rid="CR3">3</xref>,<xref ref-type="bibr" rid="CR30">30</xref> Therefore, also the maximum principal logarithmic strain is used to quantify the influence of the morphologic heterogeneities.</p>
+      </sec>
+    </sec>
+    <sec id="Sec6" sec-type="results">
+      <title>Results</title>
+      <p>Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> depicts the development in time of the equivalent stress fields for the homogeneous model (top row) and the heterogeneous models from the simulation with loading condition A. Stress concentrations are present in the heterogeneous models at the surface of the brain tissue between two gyri at 5, 10, and 20&#xA0;ms. Near boundary &#x393;<sub>1</sub>, all heterogeneous models have lower equivalent stresses compared to the homogeneous model at 20&#xA0;ms.<fig id="Fig7"><label>Figure&#xA0;7</label><caption><p>The equivalent stress fields as a result of loading condition A</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig7_HTML" id="MO22"/></fig></p>
+      <p>In order to obtain a good comparison of the results for all geometries during the complete simulation time, the maximum and mean equivalent stress from the simulations with loading condition A are shown in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> as a function of time. It shows the stresses in the brain tissue only. It can be noticed that the heterogeneous models have a higher maximum equivalent stress than the homogeneous model. Among the heterogeneous configurations, geometry 1 causes a noticeably lower maximum equivalent stress of 112&#xA0;Pa compared to geometries 2 and 3, with a maximum equivalent stress of approximately 156&#xA0;Pa. The large maximum equivalent stress in heterogeneous geometry 2 lasts longer than the stresses of the other geometries. The maximum equivalent stress of the homogeneous model reaches a value of 80&#xA0;Pa. The mean equivalent stresses are nearly the same for all geometries.<fig id="Fig8"><label>Figure&#xA0;8</label><caption><p>Maximum and mean equivalent stress for the heterogeneous and homogeneous models as a result of loading condition A</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig8_HTML" id="MO23"/></fig></p>
+      <p>To investigate the influence of the heterogeneities, the equivalent stress of the cerebral cortex in the heterogeneous models is taken relative to that of the homogeneous model. For the maximum equivalent stress, this will be done by taking the maximum values, whereas for the mean equivalent stress, this will be done by taking the time averaged values. The maximum equivalent stress of the heterogeneous models 1, 2, and 3 is 1.31, 1.84, and 1.83 times higher than the homogeneous model, respectively. The mean equivalent stress of the heterogeneous models 1, 2, and 3 with respect to the homogeneous model is 1.09, 1.08, and 1.10, respectively.</p>
+      <p>The equivalent stress fields obtained with loading condition B are displayed in Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>. During the beginning of the simulation, the equivalent stress fields in the brain tissue are comparable for all models. When the field of higher equivalent stress moves downwards, the heterogeneities result in local peak stress concentrations, which can be seen at 10&#xA0;ms for geometries 1 and 3. Later on, at 20&#xA0;ms, the heterogeneous geometries 1 and 3 have less influence on the equivalent stress fields. The differences of geometry 2 with respect to geometries 1 and 3 are a consequence of the deeper sulci in geometry 2.<fig id="Fig9"><label>Figure&#xA0;9</label><caption><p>The equivalent stress fields as a result of loading condition B</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig9_HTML" id="MO24"/></fig></p>
+      <p>The maximum and mean equivalent stress of the cerebral cortex as a function of time obtained with loading condition B is shown in Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>. The maximum equivalent stress is higher for the heterogeneous models than for the homogeneous models, but not for the complete duration of the simulation. After about 10&#x2013;15&#xA0;ms, the maximum equivalent stress of the heterogeneous models drops to approximately the same magnitude as the one obtained for the homogeneous model. For the heterogeneous models, the maximum equivalent stress reaches values of approximately 470, 565, and 624&#xA0;Pa for geometries 1, 2, and 3, respectively. The homogeneous model has a maximum equivalent stress reaching 325&#xA0;Pa. Also, the moment in time at which the maximum occurs differs from one geometry to the other. The mean equivalent stress values of all the geometries are similar.<fig id="Fig10"><label>Figure&#xA0;10</label><caption><p>Maximum and mean equivalent stress for the heterogeneous and homogeneous models as a result of loading condition B</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig10_HTML" id="MO25"/></fig></p>
+      <p>To quantify the influence of the heterogeneities, the equivalent stress of the brain tissue of the heterogeneous models is taken relative to the homogeneous model in the same manner as described previously for loading condition A. The maximum equivalent stress of the heterogeneous models 1, 2, and 3 has increased by 1.44, 1.74, and 1.92 with respect the homogeneous model, respectively. The mean equivalent stress of the heterogeneous models 1, 2, and 3 is 0.97, 0.99, and again 0.99 relative to the homogeneous model, respectively.</p>
+      <p>The distribution of maximum principal strains for loading condition B at 10&#xA0;ms is shown in Fig.&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>. One can notice that a concentration of maximum principal strains at 10&#xA0;ms occurs in the same location as the equivalent stress concentration at 10&#xA0;ms (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>), both in case of loading condition B. The same method for the quantification of the influence of the heterogeneities is used, but with the maximum principal strain instead of the equivalent stress. For the simulations with loading condition A, the peak maximum principal strain in the brain tissue of the heterogeneous models 1, 2, and 3 has increased with respect to the homogeneous model by 1.22, 1.92, and 1.80, respectively. If loading condition B is used, the increases are 1.43, 1.84, and 1.90, respectively.<fig id="Fig11"><label>Figure&#xA0;11</label><caption><p>The maximum principal logarithmic strain field as a result of loading condition B at 10&#xA0;ms</p></caption><graphic position="anchor" xlink:href="10439_2008_9510_Fig11_HTML" id="MO26"/></fig></p>
+    </sec>
+    <sec id="Sec7" sec-type="discussion">
+      <title>Discussion and Conclusions</title>
+      <p>In this study, the influences of the heterogeneities in the cerebral cortex were investigated. This was done with FE models of several different geometries from small detailed parts of the cortex. In a preliminary study, the boundary constraints were tested. The loading conditions were derived from a numerical head model.</p>
+      <p>In order to determine which constraints on the boundaries would represent the surroundings best, a preliminary study was conducted in which several different constraints were applied to boundaries &#x393;<sub>1</sub> and &#x393;<sub>3</sub>. The different conditions on boundary &#x393;<sub>3</sub>, i.e., rigid constraint or slip-condition in the <italic>x</italic>-direction, did not contribute to differences in the results of the brain tissue. This was probably caused by the low shear modulus of the CSF. For boundary &#x393;<sub>1</sub>, several different boundary conditions were tested and compared to the results of models with the same width, but with twice the height of the models in this study. By comparing the &#x2018;normal&#x2019; and the &#x2018;high&#x2019; models, the boundary condition at boundary &#x393;<sub>1</sub> that represented adjacent brain tissue could be determined. The periodic boundary condition that was applied to boundaries &#x393;<sub>2</sub> and &#x393;<sub>4</sub>, was used because of the assumed periodicity in the cerebral cortex.</p>
+      <p>Since the loading conditions were dynamic they could not be applied to the model by directly imposing a deformation, which would induce boundary effects. For this reason, an indirect deformation was imposed by means of body forces. This approach worked well for the first 20&#xA0;ms of the simulation, which had a total duration of 30&#xA0;ms. After 20&#xA0;ms the deformations of the brain tissue differed from the deformations derived from the head model that were indirectly applied to the model (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> and <xref rid="Fig9" ref-type="fig">9</xref>). Therefore, only the first 20&#xA0;ms of the simulation are considered to be realistic.</p>
+      <p>Loading condition A was derived from the acceleration pulse that has been applied to a head model.<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR12">12</xref> The equivalent stress fields of the homogeneous models caused by loading condition A (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>) showed no similarities to the equivalent stress field of the head model (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). Provided that the equivalent stress field of the head model is realistic, loading condition A can be considered unrealistic. Loading condition B was obtained from the resulting accelerations in the region of interest of the head model. The equivalent stress fields of the homogeneous models from simulations with loading condition B (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>) were approximately similar to the stress fields in the corresponding region of the head model (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) during the first 20&#xA0;ms. Nevertheless, differences in the equivalent stress fields existed at the surface of the cortex. This is due to the CSF layer in the cerebral cortex model being described elastically with a low shear modulus, as opposed to the head model, which contains a relatively stiff CSF/dura layer. In spite of all these obvious differences, by comparing these two loading conditions, it was shown that the different loading conditions have hardly any effect on the relative mean and maximum equivalent stress and the relative peak maximum principal logarithmic strain. Hence, the mechanical influences of the heterogeneities of the cerebral cortex seem to be independent of the loading conditions.</p>
+      <p>The constitutive model for brain tissue was based on experiments on porcine white matter.<xref ref-type="bibr" rid="CR19">19</xref> This was used as a substitute for human brain tissue, as it was readily available and it allowed to conduct experiments with a shorter post-mortem time.<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR26">26</xref> Experiments conducted by Prange <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR37">37</xref> on fresh human brain tissue indicated that its mechanical properties are approximately 30% stiffer than those of fresh porcine brain tissue. Although the constitutive model for brain tissue in the cerebral cortex model was not based on human brain tissue, the geometries of the models were based on the human cerebrum. This assumption is expected to have more effect on the absolute equivalent stress than on the relative equivalent stress, which is dominated by the heterogeneities of the model. Furthermore, no distinction between the mechanical properties of white and gray matter was made, so that the material properties of the cerebral cortex, which consists of gray matter, were based on experiments on white matter, as well. In their results, Prange <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR37">37</xref> found differences between the material properties of the corpus callosum, i.e., the white matter that connects the two cerebral hemispheres, and the cerebral cortex, but not between the corona radiata, i.e., the white matter that lies inferior to the cerebral cortex, and the cerebral cortex. Nevertheless, in several other studies of head and brain models, different material properties were used for gray and white matter based on the assumption that white matter was more fibrous than gray matter.<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR28">28</xref>,<xref ref-type="bibr" rid="CR30">30</xref>,<xref ref-type="bibr" rid="CR47">47</xref> Therefore, simulations of the cerebral cortex model with shear moduli for gray matter ranging from 75% to 125% with respect to the shear moduli white matter were conducted as well. The results of these simulations indicated that the material properties had an effect on the magnitude of the equivalent stress, but not on the regions in which the peak equivalent stress was observed. The equivalent stress of the heterogeneous model relative to the homogeneous model was hardly affected by the different material properties.</p>
+      <p>In this model, the meninges and the blood vessels were considered to have no mechanical influence on the cerebral cortex for the used loading conditions. Although Jin <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR20">20</xref> suggested that the pia-arachnoid complex can have a mechanical influence on the brain tissue during an impact, it is still not clear if it would affect the influence due to the gyrification of the cerebral cortex. In a study performed by Ho and Kleiven,<xref ref-type="bibr" rid="CR17">17</xref> it was found that the vasculature of the brain can be neglected, as far as the mechanical influences are concerned in a head model not containing the gyrification of the cortex.</p>
+      <p>In order to validate this model, a comparison with physical experiments is required. However, data of physical experiments at a typical length scale of this level is rather limited. Parallel to this study, the results of physical experiments, in which brain slices have been accelerated, showed increased equivalent strains near the sulci.<xref ref-type="bibr" rid="CR24">24</xref> Furthermore, some studies showed that angular accelerations of the head induce high stress concentrations in and near the cerebral cortex.<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR15">15</xref> Another method of validation can be performed by comparing the results of the model to clinically observed injury. It has been shown that small cortical infarcts exist in diffuse brain injury at the bottom of the sulci.<xref ref-type="bibr" rid="CR40">40</xref> This is in accordance with the locations of the high stress and strain regions in the cerebral cortex model.</p>
+      <p>The two loading conditions and the different geometries resulted in different equivalent stress fields. The simulations with loading condition A resulted in a lower mean and maximum equivalent stress compared to the simulations with loading condition B. However, relative to the homogeneous model, it was observed that the equivalent stress was almost independent of the different loading conditions used in this study. The differences between the several heterogeneous geometries had more influence on the relative mean and maximum equivalent stress. The morphologic heterogeneities of the cerebral cortex led to an increase of the maximum equivalent stress by a factor of about 1.3&#x2013;1.9, depending mostly on the geometry, whereas the relative mean equivalent stress values of all the geometries were 1.1 and 1.0 for loading condition A and B, respectively. Furthermore, the peak maximum principal logarithmic strain was increased by a factor of about 1.2&#x2013;1.9 due to the morphologic heterogeneities of the cerebral cortex. This is a strong indication that predictions of brain injury obtained from head models with a homogeneous cerebrum should be interpreted with care. To obtain a more accurate assessment of injury, the influence of the morphologic heterogeneities in the cerebral cortex should be accounted for.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work has been supported by the European Integrated Project APROSYS and the Dutch Technology Foundation STW, applied science division of NWO and the Technology Program of the Ministry of Economic Affairs.</p>
+      <p><bold>Open Access</bold> This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Acosta</surname>
+              <given-names>J. A.</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>J. C.</given-names>
+            </name>
+            <name>
+              <surname>Winchell</surname>
+              <given-names>R. J.</given-names>
+            </name>
+            <name>
+              <surname>Simons</surname>
+              <given-names>R. K.</given-names>
+            </name>
+            <name>
+              <surname>Fortlage</surname>
+              <given-names>D. A.</given-names>
+            </name>
+            <name>
+              <surname>Hollingsworth-Fridlund</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Hoyt</surname>
+              <given-names>D. B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Lethal injuries and time to death in a level I trauma center</article-title>
+          <source>J. Am. Coll. Surg.</source>
+          <year>1998</year>
+          <volume>186</volume>
+          <fpage>528</fpage>
+          <lpage>533</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1072-7515(98)00082-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Acosta, J. A., J. C. Yang, R. J. Winchell, R. K. Simons, D. A. Fortlage, P. Hollingsworth-Fridlund, and D. B. Hoyt: 1998, &#x2018;Lethal Injuries and Time to Death in a Level I Trauma Center&#x2019;. J. Am. Coll. Surg. 186, 528&#x2013;533. <pub-id pub-id-type="pmid">9583692</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="other">Al-Bsharat, A. S., W. N. Hardy, K. H. Yang, T. B. Khalil, S. Tashman, and A. I. King. Brain/skull relative displacement magnitude due to blunt head impact: new experimental data and model. In: Stapp Car Crash Conference Proceedings, Vol. 43, Warrendale, PA: Society of Automotive Engineers, Inc., 1999, pp. 321&#x2013;332.</citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bain</surname>
+              <given-names>A. C.</given-names>
+            </name>
+            <name>
+              <surname>Meaney</surname>
+              <given-names>D. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Tissue-level thresholds for axonal damage in an experimental model of central nervous system white matter injury</article-title>
+          <source>J. Biomech. Eng.</source>
+          <year>2000</year>
+          <volume>122</volume>
+          <fpage>615</fpage>
+          <lpage>622</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.1324667</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bain, A. C. and D. F. Meaney: 2000, &#x2018;Tissue-level thresholds for axonal damage in an experimental model of central nervous system white matter injury&#x2019;. J. Biomech. Eng. 122, 615&#x2013;622. <pub-id pub-id-type="pmid">11192383</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bain</surname>
+              <given-names>A. C.</given-names>
+            </name>
+            <name>
+              <surname>Raghupathi</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Meaney</surname>
+              <given-names>D. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic stretch correlates to both morphological abnormalities and electrophysiological impairment in a model of traumatical axonal injury</article-title>
+          <source>J. Neurotrauma</source>
+          <year>2001</year>
+          <volume>18</volume>
+          <fpage>499</fpage>
+          <lpage>511</lpage>
+          <pub-id pub-id-type="doi">10.1089/089771501300227305</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bain, A. C., R. Raghupathi, and D. F. Meaney: 2001, &#x2018;Dynamic stretch correlates to both morphological abnormalities and electrophysiological impairment in a model of traumatical axonal injury&#x2019;. J. Neurotrauma18, 499&#x2013;511. <pub-id pub-id-type="pmid">11393253</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bradshaw</surname>
+              <given-names>D. R. S.</given-names>
+            </name>
+            <name>
+              <surname>Ivarsson</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Morfey</surname>
+              <given-names>C. L.</given-names>
+            </name>
+            <name>
+              <surname>Viano</surname>
+              <given-names>D. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Simulation of acute subdural hematoma and diffuse axonal injury in coronal head impact</article-title>
+          <source>J. Biomech.</source>
+          <year>2001</year>
+          <volume>34</volume>
+          <fpage>85</fpage>
+          <lpage>94</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(00)00135-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bradshaw, D. R. S., J. Ivarsson, C. L. Morfey, and D. C. Viano: 2001, &#x2018;Simulation of acute subdural hematoma and diffuse axonal injury in coronal head impact&#x2019;. J. Biomech. 34, 85&#x2013;94. <pub-id pub-id-type="pmid">11425084</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="other">Brands, D. W. A., P. H. M. Bovendeerd, and J. S. H. M. Wismans. On the potential importance of non-linear viscoelastic material modelling for numerical prediction of brain tissue response: test and application. In: Stapp Car Crash Conference Proceedings, Vol. 46, Warrendale, PA: Society of Automotive Engineers, Inc., 2002, pp. 103&#x2013;121.</citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="other">Claessens, M. H. A., A. A. H. J. Sauren, and J. S. H. M. Wismans. Modelling of the human head under impact conditions. In: Stapp Car Crash Conference Proceedings, Vol. 41, Warrendale, PA: Society of Automotive Engineers, Inc., 1997, pp. 315&#x2013;328.</citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cotter</surname>
+              <given-names>C. S.</given-names>
+            </name>
+            <name>
+              <surname>Smolarkiewicz</surname>
+              <given-names>P. K.</given-names>
+            </name>
+            <name>
+              <surname>Szczyrba</surname>
+              <given-names>I. N.</given-names>
+            </name>
+          </person-group>
+          <article-title>A viscoelastic fluid model for brain injuries</article-title>
+          <source>Int. J. Numer. Methods Fluids</source>
+          <year>2002</year>
+          <volume>40</volume>
+          <fpage>303</fpage>
+          <lpage>311</lpage>
+          <pub-id pub-id-type="doi">10.1002/fld.287</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cotter, C. S., P. K. Smolarkiewicz, and I. N. Szczyrba. 2002, &#x2018;A viscoelastic fluid model for brain injuries&#x2019;. Int. J. Numer. Meth. Fluids40, 303&#x2013;311. </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="other">DiMasi, F. P., R. H. Eppinger, and F. A. Bandak. Computational analysis of head impact response under car crash loadings. In: Stapp Car Crash Conference Proceedings, Vol. 39, 1995.</citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Engel</surname>
+              <given-names>D. C.</given-names>
+            </name>
+            <name>
+              <surname>Slemmer</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>Vlug</surname>
+              <given-names>A. S.</given-names>
+            </name>
+            <name>
+              <surname>Maas</surname>
+              <given-names>A. I. R.</given-names>
+            </name>
+            <name>
+              <surname>Weber</surname>
+              <given-names>J. T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Combined effects of mechanical and ischemic injury to cortical cells: secondary ischemia increases damage and decreases effects of neuroprotective agents</article-title>
+          <source>Neuropharmacology</source>
+          <year>2005</year>
+          <volume>49</volume>
+          <fpage>985</fpage>
+          <lpage>995</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.neuropharm.2005.05.021</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Engel, D. C., J. E. Slemmer, A. S. Vlug, A. I. R. Maas, and J. T. Weber: 2005, &#x2018;Combined effects of mechanical and ischemic injury to cortical cells: secondary ischemia increases damage and decreases effects of neuroprotective agents&#x2019;. Neuropharmacology49, 985&#x2013;995. <pub-id pub-id-type="pmid">16046227</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Floyd</surname>
+              <given-names>C. L.</given-names>
+            </name>
+            <name>
+              <surname>Gorin</surname>
+              <given-names>F. A.</given-names>
+            </name>
+            <name>
+              <surname>Lyeth</surname>
+              <given-names>B. G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical strain injury increases intracellular sodium and reverses Na<sup>+</sup>/Ca<sup>2+</sup> exchange in cortical astrocytes</article-title>
+          <source>Glia</source>
+          <year>2005</year>
+          <volume>51</volume>
+          <fpage>35</fpage>
+          <lpage>46</lpage>
+          <pub-id pub-id-type="doi">10.1002/glia.20183</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Floyd, C. L., F. A. Gorin, and B. G. Lyeth: 2005, &#x2018;Mechanical strain injury increases intracellular sodium and reverses Na+/Ca2+ exchange in cortical astrocytes&#x2019;. Glia51, 35&#x2013;46. <pub-id pub-id-type="pmid">15779085</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Garo</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Hrapko</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Dommelen</surname>
+              <given-names>J. A. W.</given-names>
+            </name>
+            <name>
+              <surname>Peters</surname>
+              <given-names>G. W. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Towards a reliable characterisation of the mechanical behaviour of brain tissue: the effects of post-mortem time and sample preparation</article-title>
+          <source>Biorheology</source>
+          <year>2007</year>
+          <volume>44</volume>
+          <fpage>51</fpage>
+          <lpage>58</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Garo, A., M. Hrapko, J. A. W. van Dommelen, and G. W. M. Peters: 2007, &#x2018;Towards a reliable characterisation of the mechanical behaviour of brain tissue: The effects of post-mortem time and sample preparation&#x2019;. Biorheology44, 51&#x2013;58. <pub-id pub-id-type="pmid">17502689</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Geddes-Klein</surname>
+              <given-names>D. M.</given-names>
+            </name>
+            <name>
+              <surname>Schiffman</surname>
+              <given-names>K. B.</given-names>
+            </name>
+            <name>
+              <surname>Meaney</surname>
+              <given-names>D. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanisms and consequences of neuronal stretch injury in vitro differ with the model of trauma</article-title>
+          <source>J Neurotrauma</source>
+          <year>2006</year>
+          <volume>23</volume>
+          <fpage>193</fpage>
+          <lpage>204</lpage>
+          <pub-id pub-id-type="doi">10.1089/neu.2006.23.193</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Geddes-Klein, D. M., K. B. Schiffman, and D. F. Meaney: 2006, &#x2018;Mechanisms and consequences of neuronal stretch injury in vitro differ with the model of trauma&#x2019;. J Neurotrauma23, 193&#x2013;204. <pub-id pub-id-type="pmid">16503803</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goldsmith</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Monson</surname>
+              <given-names>K. L.</given-names>
+            </name>
+          </person-group>
+          <article-title>The state of head injury biomechanics: past, present, and future part 2: physical experimentation</article-title>
+          <source>Crit. Rev. Biomed. Eng.</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>105</fpage>
+          <lpage>207</lpage>
+          <pub-id pub-id-type="doi">10.1615/CritRevBiomedEng.v33.i2.20</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Goldsmith, W. and K. L. Monson: 2005, &#x2018;The state of head injury biomechanics: past, present, and future part 2: physical experimentation&#x2019;. Crit. Rev. Biomed. Eng. 33, 105&#x2013;207. <pub-id pub-id-type="pmid">15777159</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gutierrez</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Haglid</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Bao</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Hansson</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Hamberger</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Viano</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>A new model for diffuse brain injury by rotational acceleration: I. Model, gross appearance, and astrocytosis</article-title>
+          <source>J. Neurotrauma</source>
+          <year>2001</year>
+          <volume>18</volume>
+          <fpage>247</fpage>
+          <lpage>257</lpage>
+          <pub-id pub-id-type="doi">10.1089/08977150151070874</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gutierrez, E., Y. Huang, K. Haglid, F. Bao, H. Hansson, A. Hamberger, and D. Viano: 2001, &#x2018;A New Model for Diffuse Brain Injury by Rotational Acceleration: I Model, Gross Appearance, and Astrocytosis&#x2019;. J. Neurotrauma18, 247&#x2013;257. <pub-id pub-id-type="pmid">11284546</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Henn</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Crash tests and the head injury criterion</article-title>
+          <source>Teaching Math. Appl.</source>
+          <year>1998</year>
+          <volume>17</volume>
+          <fpage>162</fpage>
+          <lpage>170</lpage>
+          <pub-id pub-id-type="doi">10.1093/teamat/17.4.162</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Henn, H.: 1998, &#x2018;Crash tests and the head injury criterion&#x2019;. Teaching mathematics and its applications17, 162&#x2013;170. </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ho</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Kleiven</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic response of the brain with vasculature: a three-dimensional computational study</article-title>
+          <source>J. Biomech.</source>
+          <year>2007</year>
+          <volume>40</volume>
+          <fpage>3006</fpage>
+          <lpage>3012</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jbiomech.2007.02.011</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ho, J. and S. Kleiven: 2007, &#x2018;Dynamic response of the brain with vasculature: a three-dimensional computational study&#x2019;. J. Biomech. 40, 3006&#x2013;3012. <pub-id pub-id-type="pmid">17433331</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="other">Hrapko, M., H. Gervaise, J. A. W. van Dommelen, G. W. M. Peters, and J. S. H. M. Wismans. Identifying the mechanical behaviour of brain tissue in both shear and compression. In: Proceedings of the IRCOBI Conference, Zurich, Switzerland: IRCOBI, 2007, pp.143&#x2013;159.</citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hrapko</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Dommelen</surname>
+              <given-names>J. A. W.</given-names>
+            </name>
+            <name>
+              <surname>Peters</surname>
+              <given-names>G. W. M.</given-names>
+            </name>
+            <name>
+              <surname>Wismans</surname>
+              <given-names>J. S. H. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>The mechanical behaviour of brain tissue: large strain response and constitutive modelling</article-title>
+          <source>Biorheology</source>
+          <year>2006</year>
+          <volume>43</volume>
+          <fpage>623</fpage>
+          <lpage>636</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hrapko, M., J. A. W. van Dommelen, G. W. M. Peters, and J. S. H. M. Wismans: 2006, &#x2018;The mechanical behaviour of brain tissue: large strain response and constitutive modelling&#x2019;. Biorheology43, 623&#x2013;636. <pub-id pub-id-type="pmid">17047281</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="other">Jin, X., J. B. Lee, L. Y. Leung, L. Zhang, K. H. Yang, and A. I. King. Biomechanical response to the bovine pia-arachnoid complex to tensile loading at varying strain-rates. In: Stapp Car Crash Conference Proceedings, Vol. 50, Warrendale, PA: Society of Automotive Engineers, Inc., 2006, pp. 637&#x2013;649.</citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>King</surname>
+              <given-names>A. I.</given-names>
+            </name>
+          </person-group>
+          <article-title>Fundamentals of impact biomechanics: part I &#x2013; biomechanics of the head, neck, and thorax</article-title>
+          <source>Annu. Rev. Biomed. Eng.</source>
+          <year>2000</year>
+          <volume>2</volume>
+          <fpage>55</fpage>
+          <lpage>81</lpage>
+          <pub-id pub-id-type="doi">10.1146/annurev.bioeng.2.1.55</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">King, A. I.: 2000, &#x2018;Fundamentals of impact biomechanics: part I - biomechanics of the head, neck, and thorax&#x2019;. Annu. Rev. Biomed. Eng. 2, 55&#x2013;81. <pub-id pub-id-type="pmid">11701507</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kleiven</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluation of head injury criteria using a finite element model validated against experiments on localized brain motion, intracerebral acceleration, and intracranial pressure</article-title>
+          <source>Int. J. Crashworthiness</source>
+          <year>2006</year>
+          <volume>11</volume>
+          <fpage>65</fpage>
+          <lpage>79</lpage>
+          <pub-id pub-id-type="doi">10.1533/ijcr.2005.0384</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kleiven, S.: 2006, &#x2018;Evaluation of head injury criteria using a finite element model validated against experiments on localized brain motion, intracerebral acceleration, and intracranial pressure&#x2019;. Int. J. Crashworthiness11, 65&#x2013;79. </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kouznetsova</surname>
+              <given-names>V. G.</given-names>
+            </name>
+            <name>
+              <surname>Brekelmans</surname>
+              <given-names>W. A. M.</given-names>
+            </name>
+            <name>
+              <surname>Baaijens</surname>
+              <given-names>F. P. T.</given-names>
+            </name>
+          </person-group>
+          <article-title>An approach to micro-macro modeling of heterogenous materials</article-title>
+          <source>Comp. Mech.</source>
+          <year>2001</year>
+          <volume>27</volume>
+          <fpage>37</fpage>
+          <lpage>48</lpage>
+          <pub-id pub-id-type="doi">10.1007/s004660000212</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kouznetsova, V. G., W. A. M. Brekelmans, and F. P. T. Baaijens: 2001, &#x2018;An approach to micro-macro modeling of heterogenous materials&#x2019;. Comp. Mech. 27, 37&#x2013;48. </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="other">Lauret, C., M. Hrapko, J. A. W. van Dommelen, G. W. M. Peters, and J. S. H. M. Wismans. An experimental setup for optical characterization of acceleration-induced strain fields in inhomogeneous brain slices (submitted)</citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leonov</surname>
+              <given-names>A. I.</given-names>
+            </name>
+          </person-group>
+          <article-title>Nonequilibrium thermodynamics and rheology of viscoelastic polymer media</article-title>
+          <source>Rheol. Acta</source>
+          <year>1976</year>
+          <volume>15</volume>
+          <fpage>85</fpage>
+          <lpage>98</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01517499</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Leonov, A. I.: 1976, &#x2018;Nonequilibrium thermodynamics and rheology of viscoelastic polymer media&#x2019;. Rheol. Acta15, 85&#x2013;98. </citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lind</surname>
+              <given-names>N. M.</given-names>
+            </name>
+            <name>
+              <surname>Moustgaard</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Jelsing</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Vajta</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Cumming</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>A. K.</given-names>
+            </name>
+          </person-group>
+          <article-title>The use of pigs in neuroscience: modeling brain disorders</article-title>
+          <source>Neurosci. Biohav. Rev.</source>
+          <year>2007</year>
+          <volume>31</volume>
+          <fpage>728</fpage>
+          <lpage>751</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.neubiorev.2007.02.003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lind, N. M., A. Moustgaard, J. Jelsing, G. Vajta, P. Cumming, and A. K. Hansen: 2007, &#x2018;The use of pigs in neuroscience: modeling brain disorders&#x2019;. Neurosci. Biohav. Rev. 31, 728&#x2013;751. </citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mai</surname>
+              <given-names>J. K.</given-names>
+            </name>
+            <name>
+              <surname>Assheuer</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Paxinos</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <source>Atlas of the Human Brain</source>
+          <year>1997</year>
+          <edition>1</edition>
+          <publisher-loc>London, GB</publisher-loc>
+          <publisher-name>Academic Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Mai, J. K., J. Assheuer, and G. Paxinos: 1997, Atlas of the human brain. London, GB: Academic Press, 1st edition. </citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="other">Mao, H., L. Zhang, K. H. Yang, and A. I. King. Application of a finite element model of the brain to study traumatic brain injury mechanisms in the rat. In: Stapp Car Crash Conference Proceedings, Vol. 50, 2006.</citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marieb</surname>
+              <given-names>E. N.</given-names>
+            </name>
+          </person-group>
+          <source>Human Anatomy and Physiology</source>
+          <year>1998</year>
+          <edition>4</edition>
+          <publisher-loc>Menlo Park, CA</publisher-loc>
+          <publisher-name>Benjamin/Cummings Science Publishing</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Marieb, E. N.: 1998, Human anatomy and physiology. Menlo Park, CA: Benjamin/Cummings Science Publishing, 4th edition. </citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="other">Miller, R. T., S. S. Margulies, M. Leoni, M. Nonaka, X. Chen, D. H. Smith, and D. F. Meaney. Finite element modeling approaches for predicting injury in an experimental model of severe diffuse axonal injury. In: Stapp Car Crash Conference Proceedings, Vol. 42, Warrendale, PA: Society of Automotive Engineers, Inc., 1998, pp. 155&#x2013;167.</citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Morrison</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Cater</surname>
+              <given-names>H. L.</given-names>
+            </name>
+            <name>
+              <surname>Benham</surname>
+              <given-names>C. D.</given-names>
+            </name>
+            <name>
+              <surname>Sundstrom</surname>
+              <given-names>L. E.</given-names>
+            </name>
+          </person-group>
+          <article-title>An in vitro model of traumatic brain injury utilising two-dimensional stretch of organotypic hippocampal slice cultures</article-title>
+          <source>J. Neurosci. Methods</source>
+          <year>2006</year>
+          <volume>150</volume>
+          <fpage>192</fpage>
+          <lpage>201</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jneumeth.2005.06.014</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Morrison III, B., H. L. Cater, C. D. Benham, and L. E. Sundstrom: 2006, &#x2018;An in vitro model of traumatic brain injury utilising two-dimensional stretch of organotypic hippocampal slice cultures&#x2019;. J Neurosci Meth150, 192&#x2013;201. <pub-id pub-id-type="pmid">16098599</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="other">Morrison, B., III, H. L. Cater, C. C. Wang, F. C. Thomas, C. T. Hung, G. A. Ateshian, and L. E. Sundstrom. A tissue level tolerance criterion for living brain developed with an in vitro model of traumatic mechanical loading. In: Stapp Car Crash Conference Proceedings, Vol. 47, Warrendale, PA: Society of Automotive Engineers, Inc., 2003, pp. 93&#x2013;105.</citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nishimoto</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Murakami</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Direct impact simulations of diffuse axonal injury by axial head model</article-title>
+          <source>JSAE Rev.</source>
+          <year>2000</year>
+          <volume>21</volume>
+          <fpage>117</fpage>
+          <lpage>123</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0389-4304(99)00079-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nishimoto, T. and S. Murakami: 2000, &#x2018;Direct impact simulations of diffuse axonal injury by axial head model&#x2019;. JSAE Review21, 117&#x2013;123. </citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nolte</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <source>The Human Brain: An Introduction to its Functional Anatomy</source>
+          <year>2002</year>
+          <edition>5</edition>
+          <publisher-loc>St. Louis, MO</publisher-loc>
+          <publisher-name>Mosby, Inc.</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Nolte, J.: 2002, The human brain: an introduction to its functional anatomy. St. Louis, MO: Mosby, Inc., 5th edition. </citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ommaya</surname>
+              <given-names>A. K.</given-names>
+            </name>
+            <name>
+              <surname>Thibault</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Bandak</surname>
+              <given-names>F. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanisms of impact head injury</article-title>
+          <source>Int. J. Impact Eng.</source>
+          <year>1994</year>
+          <volume>15</volume>
+          <fpage>535</fpage>
+          <lpage>560</lpage>
+          <pub-id pub-id-type="doi">10.1016/0734-743X(94)80033-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ommaya, A. K., L. Thibault, and F. A. Bandak: 1994, &#x2018;Mechanisms of Impact Head Injury&#x2019;. Int. J. Impact Eng. 15, 535&#x2013;560. </citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peters</surname>
+              <given-names>G. W. M.</given-names>
+            </name>
+            <name>
+              <surname>Baaijens</surname>
+              <given-names>F. P. T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Modelling of non-isothermal viscoelastic flows</article-title>
+          <source>J. Non-Newtonian Fluid Mech.</source>
+          <year>1997</year>
+          <volume>68</volume>
+          <fpage>205</fpage>
+          <lpage>224</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0377-0257(96)01511-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peters, G. W. M. and F. P. T. Baaijens: 1997, &#x2018;Modelling of non-isothermal viscoelastic flows&#x2019;. J. Non-Newtonian Fluid Mech. 68, 205&#x2013;224. </citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prange</surname>
+              <given-names>M. T.</given-names>
+            </name>
+            <name>
+              <surname>Margulies</surname>
+              <given-names>S. S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Regional, directional, and age-dependent properties of the brain undergoing large deformation</article-title>
+          <source>J. Biomech. Eng.</source>
+          <year>2002</year>
+          <volume>124</volume>
+          <fpage>244</fpage>
+          <lpage>252</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.1449907</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Prange, M. T. and S. S. Margulies: 2002, &#x2018;Regional, Directional, and Age-Dependent Properties of the Brain Undergoing Large Deformation&#x2019;. J. Biomech. Eng. 124, 244&#x2013;252. <pub-id pub-id-type="pmid">12002135</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Raul</surname>
+              <given-names>J. S.</given-names>
+            </name>
+            <name>
+              <surname>Baumgartner</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Willinger</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Ludes</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Finite element modelling of human head injuries caused by a fall</article-title>
+          <source>Int. J. Leg. Med.</source>
+          <year>2006</year>
+          <volume>120</volume>
+          <fpage>212</fpage>
+          <lpage>218</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00414-005-0018-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Raul, J. S., D. Baumgartner, R. Willinger, and B. Ludes: 2006, &#x2018;Finite element modelling of human head injuries caused by a fall&#x2019;. Int. J. Leg. Med. 120, 212&#x2013;218. </citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shen</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Tay</surname>
+              <given-names>T. E.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>J. Z.</given-names>
+            </name>
+            <name>
+              <surname>Nigen</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>P. V. S.</given-names>
+            </name>
+            <name>
+              <surname>Chan</surname>
+              <given-names>H. K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Modified Bilston nonlinear viscoelastic model for finite element head injury studies</article-title>
+          <source>J. Biomech. Eng.</source>
+          <year>2006</year>
+          <volume>125</volume>
+          <fpage>797</fpage>
+          <lpage>801</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.2264393</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shen, F., T. E. Tay, J. Z. Li, S. Nigen, P. V. S. Lee, and H. K. Chan: 2006, &#x2018;Modified Bilston Nonlinear Viscoelastic Model for Finite Element Head Injury Studies&#x2019;. J. Biomech. Eng. 125, 797&#x2013;801. <pub-id pub-id-type="pmid">16995770</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Strich</surname>
+              <given-names>S. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Diffuse degeneration of the cerebral white matter in severe dementia following head injury</article-title>
+          <source>J. Neurol. Neurosurg. Psychiatr.</source>
+          <year>1956</year>
+          <volume>19</volume>
+          <fpage>163</fpage>
+          <lpage>185</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Strich, S. J.: 1956, &#x2018;Diffuse degeneration of the cerebral white matter in severe dementia following head injury&#x2019;. J Neurol Neurosurg Psychiatr19, 163&#x2013;185. <pub-id pub-id-type="pmid">13357957</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tagliaferri</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Compagnone</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Korsic</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Servadei</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Kraus</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>A systematic review of brain injury epidemiology in Europe</article-title>
+          <source>Acta Neurochir.</source>
+          <year>2006</year>
+          <volume>148</volume>
+          <fpage>255</fpage>
+          <lpage>268</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00701-005-0651-y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tagliaferri, F., C. Compagnone, M. Korsic, F. Servadei, and J. Kraus: 2006, &#x2018;A systematic review of brain injury epidemiology in Europe&#x2019;. Acta Neurochir. 148, 255&#x2013;268. </citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <citation citation-type="other">Takhounts, E. G., R. H. Eppinger, J. Q. Campbell, R. E. Tannous, E. D. Power, and L. S. Shook. On the development of the SIMon finite element head model. In: Stapp Car Crash Conference Proceedings, Vol. 47, Warrendale, PA: Society of Automotive Engineers, Inc., 2003, pp. 107&#x2013;133.</citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <citation citation-type="other">Versace, J. A review of the severity index. In: Stapp Car Crash Conference Proceedings, Vol. 15, Warrendale, PA: Society of Automotive Engineers, Inc., 1971, pp. 771&#x2013;796.</citation>
+      </ref>
+      <ref id="CR44">
+        <label>44.</label>
+        <citation citation-type="other">Welker, W., J. Johnson, and A. Noe. Comparative mammalian brain collections. Technical report, University of Wisconsin, Michigan State and National Museum of Health and Medicine, 2007. <ext-link ext-link-type="uri" xlink:href="http://www.brainmuseum.org">www.brainmuseum.org</ext-link>.</citation>
+      </ref>
+      <ref id="CR45">
+        <label>45.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Willinger</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Kang</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Diaw</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Three-dimensional human head finite-element model validation against two experimental impacts</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>403</fpage>
+          <lpage>410</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.165</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Willinger, R., H. Kang, and B. Diaw: 1999, &#x2018;Three-dimensional human head finite-element model validation against two experimental impacts&#x2019;. Ann. Biomed. Eng. 27, 403&#x2013;410. <pub-id pub-id-type="pmid">10374732</pub-id></citation>
+      </ref>
+      <ref id="CR46">
+        <label>46.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wood</surname>
+              <given-names>J. K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic response of human cranial bone</article-title>
+          <source>J. Biomech.</source>
+          <year>1971</year>
+          <volume>4</volume>
+          <fpage>1</fpage>
+          <lpage>12</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(71)90010-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wood, J. K.: 1971, &#x2018;Dynamic response of human cranial bone&#x2019;. J. Biomech. 4, 1&#x2013;12. <pub-id pub-id-type="pmid">5127933</pub-id></citation>
+      </ref>
+      <ref id="CR47">
+        <label>47.</label>
+        <citation citation-type="other">Zhou, C., T. B. Khalil, and A. I. King. A new model comparing impact responses of homogeneous and inhomogeneous human brain. In: Stapp Car Crash Conference Proceedings, Vol. 39, Warrendale, PA: Society of Automotive Engineers, Inc., 1995, pp. 121&#x2013;137.</citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

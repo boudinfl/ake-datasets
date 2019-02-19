@@ -1,0 +1,1093 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Environ Manage</journal-id>
+      <journal-title>Environmental Management</journal-title>
+      <issn pub-type="ppub">0364-152X</issn>
+      <issn pub-type="epub">1432-1009</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17999108</article-id>
+      <article-id pub-id-type="pmc">2242854</article-id>
+      <article-id pub-id-type="publisher-id">9033</article-id>
+      <article-id pub-id-type="doi">10.1007/s00267-007-9033-y</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Headwater Influences on Downstream Water Quality</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Dodds</surname>
+            <given-names>Walter K.</given-names>
+          </name>
+          <address>
+            <email>wkdodds@ksu.edu</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Oakes</surname>
+            <given-names>Robert M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Division of Biology, Kansas State University, Manhattan, KS 66506 USA </aff>
+        <aff id="Aff2"><label>2</label>University of Pennsylvania Law School, 3400 Chestnut Street, Philadelphia, PA 19104 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>13</day>
+        <month>11</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>41</volume>
+      <issue>3</issue>
+      <fpage>367</fpage>
+      <lpage>377</lpage>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>We investigated the influence of riparian and whole watershed land use as a function of stream size on surface water chemistry and assessed regional variation in these relationships. Sixty-eight watersheds in four level III U.S. EPA ecoregions in eastern Kansas were selected as study sites. Riparian land cover and watershed land use were quantified for the entire watershed, and by Strahler order. Multiple regression analyses using riparian land cover classifications as independent variables explained among-site variation in water chemistry parameters, particularly total nitrogen (41%), nitrate (61%), and total phosphorus (63%) concentrations. Whole watershed land use explained slightly less variance, but riparian and whole watershed land use were so tightly correlated that it was difficult to separate their effects. Water chemistry parameters sampled in downstream reaches were most closely correlated with riparian land cover adjacent to the smallest (first-order) streams of watersheds or land use in the entire watershed, with riparian zones immediately upstream of sampling sites offering less explanatory power as stream size increased. Interestingly, headwater effects were evident even at times when these small streams were unlikely to be flowing. Relationships were similar among ecoregions, indicating that land use characteristics were most responsible for water quality variation among watersheds. These findings suggest that nonpoint pollution control strategies should consider the influence of small upland streams and protection of downstream riparian zones alone is not sufficient to protect water quality.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Water quality</kwd>
+        <kwd>Geographic information systems</kwd>
+        <kwd>Headwater streams</kwd>
+        <kwd>Nonpoint source pollution</kwd>
+        <kwd>Riparian zones</kwd>
+        <kwd>Watershed management</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media, LLC 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Nonpoint source pollution is a serious problem that degrades surface waters and aquatic ecosystems. Loading of nutrients, sediment, and other pollutants from the landscape may compromise the integrity of freshwaters (Hunsaker and Levine <xref ref-type="bibr" rid="CR16">1995</xref>). In particular, excessive inputs of nitrogen and phosphorus result in eutrophication and fundamental changes in trophic state of lakes and streams (Carpenter and others <xref ref-type="bibr" rid="CR6">1998</xref>; Dodds and others <xref ref-type="bibr" rid="CR11">2002</xref>; Dodds <xref ref-type="bibr" rid="CR8">2006</xref>) and the impairment of surface waters for uses such as drinking, recreation, and support of aquatic life (Dodds and Welch <xref ref-type="bibr" rid="CR10">2000</xref>). These problems are pervasive; almost 40% of classified stream miles in the United States may be impaired, with diffuse pollutants responsible for a large percentage of impairments (U.S. Environmental Protection Agency [EPA] <xref ref-type="bibr" rid="CR39">2000</xref>). In response to these problems, research has focused on identifying and testing practices that reduce excessive pollutant loading and help restore the health of aquatic ecosystems.</p>
+      <p>The development of remote sensing and geographic information systems (GIS) technologies has facilitated quantitative assessment of landscape influences on aquatic ecosystems and watershed-scale approaches to the study of water quality (Johnson and Gage <xref ref-type="bibr" rid="CR17">1997</xref>). Watershed land cover is strongly correlated with water chemistry parameters, especially nutrient concentrations (e.g., Hunsaker and Levine <xref ref-type="bibr" rid="CR16">1995</xref>; Johnson and others <xref ref-type="bibr" rid="CR17">1997</xref>; Jones and others <xref ref-type="bibr" rid="CR19">2001</xref>; Osborne and Wiley <xref ref-type="bibr" rid="CR30">1988</xref>; Sliva and Williams <xref ref-type="bibr" rid="CR34">2001</xref>). Riparian land use may be particularly influential and, in some cases, a better predictor of in-stream water quality than land cover in the entire catchment (Johnson and others <xref ref-type="bibr" rid="CR18">1997</xref>; Osborne and Wiley <xref ref-type="bibr" rid="CR30">1988</xref>). Intact riparian zones provide water quality benefits and help preserve the biological integrity of watersheds (Gregory and others <xref ref-type="bibr" rid="CR13">1991</xref>).</p>
+      <p>In areas such as the Midwestern United States large-scale land use conversion has resulted in some of the worst water pollution in the United States (U.S. EPA <xref ref-type="bibr" rid="CR39">2000</xref>) and imperilment of many native aquatic species (Fausch and Bestgen <xref ref-type="bibr" rid="CR12">1997</xref>). Establishing or protecting riparian zones or large watershed areas that mitigate impacts of human land use on water quality may be costly or politically difficult, particularly in areas where much of the land is privately owned. In such instances, it is essential that scientists and managers identify areas within watersheds where protection would produce the most substantial water quality benefits, and prioritize these areas for protection. Geographic information systems are ideally suited to provide such identification because landscape analyses encompass the full range of spatial scales across which stream processes are regulated (Allan and others <xref ref-type="bibr" rid="CR2">1997</xref>) and allow for multiscale examinations of riparian (e.g., Johnson and Gage <xref ref-type="bibr" rid="CR17">1997</xref>) or headwater impacts on water quality.</p>
+      <p>We examined relationships between riparian and whole watershed land cover and water chemistry metrics in streams in Kansas at spatial scales ranging from several kilometers to the entire watershed, with the objective of testing areas where land use may strongly affect water quality in downstream reaches of the watershed (herein referred to as &#x201C;downstream water quality&#x201D;). We hypothesized that land use adjacent to small headwater streams would have a disproportionately large impact on water quality, because these streams provide the predominant hydrologic contributions to the watershed (Lowrance and others <xref ref-type="bibr" rid="CR24">1997</xref>), and substantial in-stream nutrient processing and retention in upland streams and rivers can regulate downstream water quality (Alexander and others <xref ref-type="bibr" rid="CR1">2000</xref>; Peterson and others <xref ref-type="bibr" rid="CR32">2001</xref>).</p>
+      <p>Natural geological and topographic features also influence surface water quality at landscape scales, in addition to anthropogenic factors such as land use conversion (Johnson and others <xref ref-type="bibr" rid="CR17">1997</xref>; Sliva and Williams <xref ref-type="bibr" rid="CR34">2001</xref>). To assess regional differences related to these features, we compared riparian-water chemistry relationships among four U.S. EPA level III ecoregions. Ecoregions denote general similarities in ecosystem types, serve as a spatial framework for research, assessment, and management of ecosystems (Omernik <xref ref-type="bibr" rid="CR29">1995</xref>), and can correspond well with principal factors that may influence surface water quality (e.g., Brown and Brown <xref ref-type="bibr" rid="CR5">1994</xref>; Rohm and others <xref ref-type="bibr" rid="CR33">2002</xref>). We assessed the degree to which relationships between surface water quality and land cover were affected by landscape heterogeneity (as indicated by ecoregions) by evaluating regional variation in riparian-water chemistry relationships. To our knowledge, no previous studies have examined the importance of headwater riparian zones, compared to other riparian areas within watersheds, at these scales of analysis across multiple watersheds.</p>
+    </sec>
+    <sec id="Sec2" sec-type="methods">
+      <title>Methods</title>
+      <p>Sixty-eight small watersheds (mean watershed area, 280 km<sup>2</sup>; range, 19&#x2013;1400 km<sup>2</sup>) were identified in four level III U.S. EPA ecoregions (U.S. EPA <xref ref-type="bibr" rid="CR37">1998a</xref>) across eastern Kansas (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). These ecoregions also represent 4 of the 14 regions developed for the National Nutrient Strategy (U.S. EPA <xref ref-type="bibr" rid="CR38">1998b</xref>), which were classified by both anthropogenic and natural characteristics (i.e., geology, geomorphology, land use, soils, vegetation) associated with nutrient concentrations in streams. Sites were selected across the four ecoregions so results would not be as tied to within-ecoregion characteristics. Sites were chosen from those regularly sampled by the Kansas Department of Health and Environment within the ecoregions such that the watersheds did not cross ecoregion boundaries and none of the sites were nested.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Location of study watersheds in Kansas, grouped by level III U.S. EPA ecoregion, and example of land cover classification scheme, in which riparian and catchment land cover was quantified for the subcatchment of each stream segment in the watersheds</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig1_HTML" id="MO1"/></fig></p>
+      <p>Twenty-four watersheds were located in the Flint Hills (FH) ecoregion, characterized by rolling hills, coarse soils, and relatively intact tracts of tallgrass prairie predominantly used as cattle pasture. Because of topography and geology, little of this region has been converted to cropland agriculture. Eighteen watersheds were located in the Central Irregular Plains (CIP), characterized by irregular topography, loam soils, and a variety of land use types, including cropland agriculture, tallgrass prairie, and oak-hickory forests. Fourteen watersheds were located in the Western Corn Belt Plains (WCBP), a region that was historically covered with tall and mixed-grass prairie but has now been almost entirely converted to cropland agriculture. Finally, 12 watersheds were located in the eastern part of the Central Great Plains (CGP) ecoregion, characterized by reduced topography, mixed-grass prairie, and large tracts of cropland agriculture. Criteria for inclusion in the study were as follows: (1) watersheds were sampled for water chemistry parameters a minimum of 12 times, and (2) watersheds were entirely contained within one U.S. EPA level III ecoregion. Watersheds were located across a precipitation gradient, with average rainfall ranging from 610 to 1016 mm/year. No watersheds were chosen that had very large livestock feeding operations or municipal point sources. The few smaller feeding operations (&#x223C;1000 animals) included were in all cases at least 0.1 km upstream of the stream chemistry site, and the total area of these operations was included in the analysis (see section Statistical Analyses, below).</p>
+      <p>Relationships between riparian land cover and water chemistry parameters were assessed at four spatial scales (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). Riparian land cover throughout entire watersheds was quantified to examine cumulative impacts on water quality. Because small streams exert a large influence on downstream water quality (Alexander and others <xref ref-type="bibr" rid="CR1">2000</xref>; Peterson and others <xref ref-type="bibr" rid="CR32">2001</xref>), we examined correlations between riparian land cover adjacent to only the smallest (first-order) streams and water chemistry parameters sampled in downstream reaches of these watersheds. In addition, we examined localized riparian impacts on water quality by quantifying riparian land cover both 2 and 4 km upstream of the sampling site. The results of the above analyses were compared to correlations between water chemistry parameters and catchment-scale land cover at both the watershed and the first-order streams scales. In this way, we assessed the relative impact of riparian land cover on water chemistry parameters, compared to catchment land cover. Temporal variation was explored by partitioning water chemistry data seasonally, which allowed for examination of riparian-water chemistry relationships during both high and base flow conditions.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Riparian land cover assessed at four spatial scales: (<bold>A</bold>) land cover in the whole watershed, (<bold>B</bold>) land cover adjacent to the first-order streams of watersheds, and (<bold>C</bold>) land cover 2 and 4 km upstream of the water chemistry sampling point</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig2_HTML" id="MO2"/></fig></p>
+      <p>We examined a subset of 39 study watersheds where water chemistry measurements were taken on a fourth-order reach of stream to directly compare the influence of riparian land cover on streams of similar sizes within watersheds. Riparian land cover was quantified by stream order (Strahler <xref ref-type="bibr" rid="CR35">1957</xref>) and correlated with downstream water chemistry values separately, so comparisons could be made between stream sizes. In addition, we analyzed riparian land cover-water chemistry relationships among ecoregions to determine if differences existed, or if these relationships held constant across ecosystem types. These analyses also help to show that watershed size and natural factors captured by ecoregions (geology, precipitation, elevation, gradient, etc.) did not confound the interpretations of land use effects.</p>
+      <sec id="Sec3">
+        <title>Water Chemistry Data</title>
+        <p>Water chemistry data were collected and analyzed by the Kansas Department of Health and Environment (KDHE) as part of their stream chemistry monitoring network (KDHE <xref ref-type="bibr" rid="CR22">2000</xref>). Total nitrogen (TN), nitrate (NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>), ammonium (NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>), total phosphorus (TP), total suspended solids (TSSs), atrazine (AT), fecal coliform bacteria (FC), and dissolved oxygen (DO) data were used to assess the impact of riparian land cover on water chemistry. Samples are collected every 2 months between 0900 and 1700 hr at each site on a rotational schedule. Extreme weather (river icing, very high floods) precludes sampling occasionally. Water chemistry samples were collected from the thalweg of each stream, frozen, and stored in acid-washed bottles in the dark, prior to analysis. All TN, NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, and TP samples were analyzed within 28 days of collection, NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> samples were analyzed within 48 hr of collection, TSS and AT samples were analyzed within 7 days of collection, FC samples were analyzed within 24 hr of collection, and DO measurements were taken in the field using a membrane electrode probe. Total nitrogen and phosphorus were analyzed by a colorimetric automated phenate method, following digestion by metal-catalyzed acid and persulfate techniques, respectively (U.S. EPA <xref ref-type="bibr" rid="CR36">1983</xref>). Nitrate was analyzed by ion chromatography; NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, by semiautomated colorimetry; TSS, by a residue, nonfilterable and TSSs method; and AT, by gas chromatography (U.S. EPA <xref ref-type="bibr" rid="CR36">1983</xref>). Fecal coliform bacteria samples were analyzed by a membrane filter procedure (APHA <xref ref-type="bibr" rid="CR4">1992</xref>). Field duplicate samples and internal spikes were used to assess the reliability and recovery efficiencies of the assays.</p>
+        <p>Water chemistry data for NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, TP, TSS, AT, FC, and DO were collected from 1990 to 2001 for all study watersheds. Total nitrogen data were collected from January 2000 to May 2003 for 57 of the 68 study watersheds. Collection of TN data began in 2000 to assist establishment of nutrient criteria for Kansas&#x2019; surface waters. For all analyses, mean concentrations of TN, NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, TP, TSS, AT, and FC were taken for each watershed across sampling dates. Minimum and maximum DO concentrations were quantified by averaging minimum and maximum concentrations by year for all years in which at least five samples were taken, then taking a mean of these concentrations across years.</p>
+        <p>To examine temporal variability in riparian-water chemistry relationships, we first classified seasons using mean monthly discharge measurements (1990&#x2013;2001) from 30 USGS gauging stations across the study region. Seasons were classified as the month or months in which 0%&#x2013;25%, 26%&#x2013;50%, 51%&#x2013;75%, and 76%&#x2013;100% of the annual water volume across the region was discharged. Mean water chemistry concentrations of NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, TP, TSS, AT, and FC were taken for each of the four seasons. Insufficient data prevented analysis of total nitrogen and DO for temporal differences.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Digital and Land Cover Data</title>
+        <p>Digital stream networks were derived for each watershed using 30-m digital elevation models, ARCGIS (Arcview version 8.2, 2002), and ArcHydro (Maidment, <xref ref-type="bibr" rid="CR25">2002</xref>) software. This method accounts for permanent streams and all but the smallest intermittent streams. Catchment area above each KDHE monitoring site was delineated using catchment-processing tools in ArcHydro software. Using the same processing tools, a subcatchment was delineated for each stream segment of the watersheds. A stream segment was defined as a section of stream from its upstream confluence to its downstream confluence with other tributaries. By overlaying catchment and subcatchment layers with digitized riparian and catchment land cover data, we quantified land cover for each watershed and watershed subcatchment (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>).</p>
+        <p>Riparian land cover was classified from the Kansas Riparian Areas Inventory dataset (NRCS <xref ref-type="bibr" rid="CR27">2001</xref>). The riparian ecotone in this dataset was defined as the 33 m adjacent to the stream and was digitized at a 1:24,000 scale from USGS Digital Orthophotograph Quarter Quadrangles that reflected land cover conditions in 1991. Land cover was identified from the beginning of the period of water chemistry sampling. Large socioeconomic changes did not occur in Kansas over this time period (e.g., only &#x223C;10% population increase). This dataset contained 11 land cover classes (animal production area (holding pens or feeding areas), barren land, cropland, crop/tree mix, forest, grassland, grass/tree mix, shrub/scrub land, urban land, urban/tree mix, water), and riparian areas were classified by the land cover type occurring in &#x2265;51% of the 33-m ecotone. Of the 11 land cover classes, 3 (shrub/scrub land, barren land, and animal production area) did not account for more than 1% of the riparian land cover in any watershed and were not included in the analyses. The remaining eight classifications were aggregated into five categories (cropland, forest, grassland, urban land, and water) following the level I classification scheme developed by Anderson et al. (<xref ref-type="bibr" rid="CR3">1976</xref>). Water was not included as a land cover type in analyses. While this scheme can create problems with colinearity, the primary goal of this paper was to determine the best-fit model at different spatial scales within the watershed. Colinearity influences the ability to ascribe causation by individual categories of land use (e.g., cropland, urban, forest, or grassland), but this was not the primary goal of our analysis.</p>
+        <p>Catchment land cover was classified from the Kansas Land Cover dataset (KARS <xref ref-type="bibr" rid="CR21">1993</xref>). This dataset was digitized at a 1:100,000 scale from Landsat Thematic Mapper imagery and, also, contained 11 land cover classes that reflected conditions in 1991. Land cover classes were reclassified in the same way as the riparian dataset. Comparison of the riparian dataset to a 33-m &#x201C;buffer&#x201D; clipped from the catchment dataset showed highly significant correlations (average Kendal &#x3C4; correlation = 0.93, p&#xA0;&lt;&#xA0;0.01) between the two datasets for all land cover types. Information on permitted point sources and confined livestock feeding operations within watersheds was obtained from KDHE and incorporated into GIS to ensure that point sources were not in close proximity to sampling sites.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Statistical Analyses</title>
+        <p>Forward stepwise linear regression models were used to predict water chemistry parameters with land cover data (animal production area [holding pens or feeding areas], barren land, cropland, crop/tree mix, forest, grassland, grass/tree mix, shrub/scrub land, urban land, urban/tree mix, water) at four spatial scales (watershed, first-order streams, 2 km upstream, 4 km upstream). Separate regressions were done at each scale. <italic>F</italic>-values of 1 and 0 were used as thresholds to include and exclude land cover classifications from regression models. We investigated the predictive ability of riparian land cover independent of catchment effects by examining partial correlations (<italic>r</italic>) among riparian land cover classifications that were significant predictors in regression models and water chemistry parameters, controlling for predictor catchment land cover classifications. Analysis of variance (ANOVA) was used to test for differences among ecoregions. Since ecoregions were correlated with land use, slopes of relationships were compared among ecoregions at all four spatial scales using general linear model (GLM) analysis of variance (ANCOVA) to assess whether riparian-water chemistry relationships held constant across ecoregions. Results of comparisons of intercepts on these data were presented in a prior publication (Dodds and Oakes <xref ref-type="bibr" rid="CR9">2004</xref>). Least-squares means were used to compare slopes of regression lines. Slopes represent the fundamental response to anthropogenic effects (most relevant to this paper) and intercepts indicate the baseline nutrient or pollutant level. Response data appeared normally distributed and were not transformed prior to analyses. All relationships among the data were plotted and no clear outliers or leveraged relationships were observed.</p>
+      </sec>
+    </sec>
+    <sec id="Sec6" sec-type="results">
+      <title>Results</title>
+      <sec id="Sec7">
+        <title>Riparian-Water Chemistry Relationships</title>
+        <p>Strahler ordering showed the smallest (first-order) digitized streams on average comprised &gt;60% of the stream miles within study watersheds, with larger streams accounting for sequentially fewer percentages of stream miles. Across all studied watersheds, riparian land cover was a significant predictor of among-site variation in water chemistry concentrations at the watershed and first-order streams scales, particularly for nutrients (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Less variance was explained at local scales represented as riparian cover 2 or 4 km upstream from the sampling site (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Total nitrogen, TP, and NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> were the parameters with the greatest <italic>R</italic><sup>2</sup> values related to riparian land cover, and all three had slightly greater <italic>R</italic><sup>2</sup> values using land cover adjacent to first-order streams of watersheds than using riparian land cover across the whole watershed.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Multiple regression models showing correlations between water chemistry parameters and riparian land cover in both the whole watersheds the first-order streams of watersheds</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Water chemistry parameter</th><th align="left">Crop</th><th align="left">Forest</th><th align="left">Grassland</th><th align="left">Urban </th><th align="left">Intercept</th><th align="left"><italic>R</italic><sup>2</sup></th></tr></thead><tbody><tr><td align="left" colspan="7">Watershed</td></tr><tr><td align="left">&#xA0;&#xA0;TN</td><td align="left"/><td align="left"/><td align="left">&#x2212;0.440</td><td align="left">0.260</td><td char="." align="char">1.932 </td><td char="." align="char">0.355</td></tr><tr><td align="left">&#xA0;&#xA0;NO<sub>3</sub>-N</td><td char="." align="char">0.623</td><td align="left"/><td align="left"/><td align="left">0.490</td><td char="." align="char">&#x2212;0.500</td><td char="." align="char">0.525</td></tr><tr><td align="left">&#xA0;&#xA0;NH<sub>4</sub>-N</td><td align="left"/><td align="left">&#x2212;0.466</td><td align="left">&#x2212;0.662</td><td align="left"/><td char="." align="char">0.203</td><td char="." align="char">0.327</td></tr><tr><td align="left">&#xA0;&#xA0;TP</td><td char="." align="char">0.264</td><td align="left"/><td align="left"/><td align="left">0.712</td><td char="." align="char">0.095</td><td char="." align="char">0.507</td></tr><tr><td align="left">&#xA0;&#xA0;AT</td><td char="." align="char">0.428</td><td align="left"/><td align="left"/><td align="left"/><td char="." align="char">0.558</td><td char="." align="char">0.171</td></tr><tr><td align="left">&#xA0;&#xA0;FC</td><td char="." align="char">0.378</td><td align="left"/><td align="left"/><td align="left"/><td char="." align="char">1621.570</td><td char="." align="char">0.199</td></tr><tr><td align="left">&#xA0;&#xA0;DO (max)</td><td char="." align="char">0.508</td><td align="left"/><td align="left"/><td align="left"/><td char="." align="char">12.085</td><td char="." align="char">0.247</td></tr><tr><td align="left" colspan="7">First order</td></tr><tr><td align="left">&#xA0;&#xA0;TN</td><td char="." align="char">0.388</td><td align="left"/><td align="left"/><td align="left">0.576</td><td char="." align="char">0.551</td><td char="." align="char">0.406</td></tr><tr><td align="left">&#xA0;&#xA0;NO<sub>3</sub>-N</td><td char="." align="char">0.650</td><td align="left"/><td align="left"/><td align="left">0.538</td><td char="." align="char">&#x2212;0.033</td><td char="." align="char">0.606</td></tr><tr><td align="left">&#xA0;&#xA0;NH<sub>4</sub>-N</td><td align="left"/><td align="left">&#x2212;0.445</td><td align="left">&#x2212;0.683</td><td align="left"/><td char="." align="char">0.195</td><td char="." align="char">0.304</td></tr><tr><td align="left">&#xA0;&#xA0;TP</td><td char="." align="char">0.320</td><td align="left"/><td align="left"/><td align="left">0.780</td><td char="." align="char">0.087</td><td char="." align="char">0.634</td></tr><tr><td align="left">&#xA0;&#xA0;AT</td><td char="." align="char">0.413</td><td align="left"/><td align="left"/><td align="left"/><td char="." align="char">0.605</td><td char="." align="char">0.158</td></tr><tr><td align="left">&#xA0;&#xA0;FC</td><td char="." align="char">0.458</td><td align="left"/><td align="left"/><td align="left"/><td char="." align="char">798.832</td><td char="." align="char">0.198</td></tr><tr><td align="left">&#xA0;&#xA0;DO (max)</td><td char="." align="char">0.522</td><td align="left"/><td align="left"/><td align="left"/><td char="." align="char">12.113</td><td char="." align="char">0.261</td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>. Significant regression coefficients are presented, illustrating the magnitude and direction of importance of land cover classes in models. TN analyses based on 57 watersheds; all other analyses based on 68 watersheds. Nutrient parameters and dissolved oxygen expressed as milligrams per liter, atrazine (AT) expressed as micrograms per liter, microbiological parameters expressed as colony forming units/100 ml, and land cover classifications expressed as percentages. All values reported were significant at <italic>p&#xA0;</italic>&lt;&#xA0;0.05</p></table-wrap-foot></table-wrap><fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Variance in water chemistry variables (<italic>R</italic><sup>2</sup> values) accounted for by (<bold>A</bold>) land cover in the riparian ecotone (33 m) at multiple scales and (<bold>B</bold>) catchment land cover at two scales, using multiple linear regression analyses. TN analyses based on 57 watersheds; all other analyses based on 68 watersheds. Bars for <italic>R</italic><sup>2</sup> values were not plotted when there was not a significant relationship (<italic>p&#xA0;</italic>&gt;&#xA0;0.05)</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig3_HTML" id="MO3"/></fig></p>
+        <p>Riparian land cover 2 and 4 km upstream explained no significant variance in TP concentrations, and riparian land cover 2 km upstream of the sampling point explained no significant variance in AT concentrations. Total suspended solids and minimum DO concentrations did not have significant relationships with riparian cover in any analyses and are not discussed further in this section.</p>
+        <p>Catchment land cover showed similar relationships to water chemistry parameters as riparian land cover (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). In all comparisons between catchment and riparian land cover, the magnitude of differences was small. Partial correlations indicated that riparian land cover classifications were still significantly correlated with some water chemistry parameters after controlling for variance explained by catchment land cover classifications that were significant predictors in regression models (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). Removal of the effect of land use cover by using partial correlations can actually remove riparian effects from the overall correlation so these data should not be interpreted to suggest that riparian cover only explains a small portion of the variance in water quality.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Partial correlations among nutrient concentrations and riparian land cover classifications</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Water chemistry parameter</th><th align="left">Catchment land cover </th><th align="left">Riparian land cover</th><th align="left"><italic>r</italic></th><th align="left"><italic>p</italic>-value</th></tr></thead><tbody><tr><td align="left" colspan="5">Watershed</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;TN</td><td align="left" rowspan="2">Grass, forest</td><td align="left" rowspan="2">Grass, urban</td><td align="left">Grass = &#x2212;0.06</td><td align="left">0.687</td></tr><tr><td align="left">Urban = 0.20</td><td align="left">0.134</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup></td><td align="left" rowspan="2">Crop, urban</td><td align="left" rowspan="2">Crop, urban</td><td align="left">Crop = 0.22</td><td align="left">0.071</td></tr><tr><td align="left">Urban = 0.48</td><td align="left">0.000</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup></td><td align="left" rowspan="2">Grass, forest</td><td align="left" rowspan="2">Grass, forest</td><td align="left">Grass = &#x2212;0.03</td><td align="left">0.803</td></tr><tr><td align="left">Wood = &#x2212;0.11</td><td align="left">0.370</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;TP</td><td align="left" rowspan="2">Crop, urban, forest</td><td align="left" rowspan="2">Crop, urban</td><td align="left">Crop = 0.04</td><td align="left">0.779</td></tr><tr><td align="left">Urban = 0.58</td><td align="left">0.000</td></tr><tr><td align="left" colspan="5">First order</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;TN</td><td align="left" rowspan="2">Crop, grass</td><td align="left" rowspan="2">Crop, urban</td><td align="left">Crop = 0.25</td><td align="left">0.068</td></tr><tr><td align="left">Urban = 0.33</td><td align="left">0.013</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup></td><td align="left" rowspan="2">Crop, urban</td><td align="left" rowspan="2">Crop, urban</td><td align="left">Crop = 0.26</td><td align="left">0.033</td></tr><tr><td align="left">Urban = 0.50</td><td align="left">0.000</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup></td><td align="left" rowspan="2">Grass, forest</td><td align="left" rowspan="2">Grass, forest</td><td align="left">Grass = &#x2212;0.00</td><td align="left">0.994</td></tr><tr><td align="left">Forest = &#x2212;0.08</td><td align="left">0.543</td></tr><tr><td align="left" rowspan="2">&#xA0;&#xA0;TP</td><td align="left" rowspan="2">Crop, urban</td><td align="left" rowspan="2">Crop, urban</td><td align="left">Crop = 0.04</td><td align="left">0.724</td></tr><tr><td align="left">Urban = 0.68</td><td align="left">0.000</td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>. Correlations controlled for catchment land cover classifications that were significant predictors in regression models and were used to partition additional variance explained by riparian land cover from variance explained by catchment land cover. Partial correlations (<italic>r</italic>) for which riparian crop land (crop), forest, grassland (grass), and urban land (urban) explained &gt;30% of the variation in water chemistry parameters among sites (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> and Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>) are presented</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec8">
+        <title>Temporal Variation</title>
+        <p>Examination of regional discharge patterns revealed that 25% of annual water volume was discharged from January to April, 50% by June, 75% by August, and the remainder in the August&#x2013;December time period. Thus, the periods of January&#x2013;April, May, June&#x2013;July, and August&#x2013;December were designated as seasons in temporal analyses. Seasons in which a quarter of annual water volume was discharged in 1 or 2 months (i.e., May, June&#x2013;July) represented periods of high flow and high connectivity across the landscape, while seasons encompassing more than 2 months (January&#x2013;April, August&#x2013;December) represented predominantly base flow conditions (with most of the upper reaches of the first-order streams dry).</p>
+        <p>Most water chemistry parameters exhibited temporal changes in the degree that they were statistically related to riparian land cover. Total P and NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> were significantly correlated with riparian land cover in all seasons except May (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>); in particular, riparian land cover at both the watershed and the first-order streams scales explained most variance in TP concentrations in January&#x2013;April compared to other seasons. Conversely, AT and FC concentrations were best explained during the high flow period of May, and did not have significant relationships with riparian land cover during some base flow seasons. Nitrate exhibited comparatively less temporal variation; riparian land cover at the watershed scale explained a minimum of 30%, and at the first-order streams scale a minimum of 45%, of among-site variance in NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> concentrations across seasons.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Temporal variation (<italic>R</italic><sup>2</sup> values) in relationships between water chemistry parameters and (<bold>A</bold>) total riparian land cover in watersheds and (<bold>B</bold>) riparian land cover adjacent to the first-order streams of watersheds. Seasons were designated from quartiles of annual discharge occurring across the study region. Total nitrogen and DO were not analyzed for temporal differences (see Methods). Bars for <italic>R</italic><sup>2</sup> values were not plotted when there was not a significant relationship (<italic>p&#xA0;</italic>&gt;&#xA0;0.05)</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig4_HTML" id="MO4"/></fig></p>
+        <p>A particularly interesting aspect of these data is that even when first-order streams are not very likely to flow (August&#x2013;December), the riparian land cover around them yielded somewhat greater <italic>R</italic><sup>2</sup> values than did the whole watershed riparian cover for TP and NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Impact of Stream Size</title>
+        <p>Different stream sizes were used in the analyses to this point. To control for this a subset of sites was chosen from which data were taken only for fourth-order streams. Total N and NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> were most closely correlated with first-order riparian land cover (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). In general, the most variance was explained by riparian land cover adjacent to first-order streams and less variance was explained by riparian cover near larger-order streams closer to sampling sites. Atrazine and maximum DO concentrations were not significantly correlated with riparian land cover near streams of any size in this subset of watersheds.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Variance in water chemistry variables (<italic>R</italic><sup>2</sup> values) explained by riparian land cover adjacent to different sized streams within watersheds. Analyses performed with a subset of 39 fourth-order watersheds; TN analyses preformed with 38 fourth-order watersheds. Comparisons between riparian land cover and AT and maximum DO concentrations were not significant and are not presented</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig5_HTML" id="MO5"/></fig></p>
+      </sec>
+      <sec id="Sec10">
+        <title>Ecoregion Effects</title>
+        <p>ANOVA indicated some variation in TN, NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, TP, FC, and maximum DO concentrations among ecoregions. Comparison of least-squares means showed TN and NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> concentrations were significantly different (<italic>p&#xA0;</italic>&lt;&#xA0;0.05) among all ecoregions except the CGP and CIP (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). The Western Corn Belt Plains was the only ecoregion that exhibited significantly different NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>, FC, and maximum DO concentrations, which were all higher than mean concentrations in other ecoregions.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Mean values for selected water chemistry parameters and riparian cropland, grouped by ecoregion (WCBP, Western Corn Belt Plains; CGP, Central Great Plains; FH, Flint Hills; CIP, Central Irregular Plains). TN data for WCBP were available for only 3 of 12 study watersheds. Significant differences are labeled with different letters; error bars represent 1 SE</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig6_HTML" id="MO6"/></fig></p>
+        <p>The Flint Hills was the only ecoregion that exhibited significantly different TP concentrations, which were lower than those of other ecoregions. Atrazine concentrations did not differ significantly among ecoregions.</p>
+        <p>The percentage of riparian land in agricultural production also varied by ecoregion and closely mirrored nutrient concentrations. Least-squares means comparing slopes of regression lines between water chemistry parameters and significant predictor land cover classifications among the four ecoregions showed that slopes were generally similar across all water chemistry parameters (e.g., Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>), and differences that did exist most often occurred when comparing the Flint Hills to other ecoregions (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>).
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Example of typically observed relationships between riparian land cover and water chemistry parameters among the four ecoregions analyzed (WCBP, Western Corn Belt Plains; CGP, Central Great Plains; FH, Flint Hills; CIP, Central Irregular Plains). The percentage of riparian cropland in the watersheds is plotted versus in-stream NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> concentrations. Slopes of regression lines fitted through each of the four ecoregions were not significantly different</p></caption><graphic position="anchor" xlink:href="267_2007_9033_Fig7_HTML" id="MO7"/></fig><table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Comparisons of least-squares means using general linear model analyses to assess differences in slopes of riparian-water chemistry relationships at four spatial scales, across level III U.S. EPA ecoregions</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Spatial scale</th><th align="left">Response variable</th><th align="left">Ecoregions with different slopes</th><th align="left"><italic>p</italic>-value</th></tr></thead><tbody><tr><td align="left">Watershed</td><td align="left">TP</td><td align="left">FH &amp; CGP</td><td align="left">0.010</td></tr><tr><td align="left">First order</td><td align="left">TN</td><td align="left">FH &amp; CGP</td><td align="left">0.019</td></tr><tr><td align="left">First order</td><td align="left">TP</td><td align="left">FH &amp; CGP</td><td align="left">0.007</td></tr><tr><td align="left">First order</td><td align="left">TP</td><td align="left">CIP &amp; CGP</td><td align="left">0.007</td></tr><tr><td align="left">First order</td><td align="left">TP</td><td align="left">CIP &amp; WCBP</td><td align="left">0.041</td></tr><tr><td align="left">2 km upstream</td><td align="left">TN</td><td align="left">FH &amp; CGP</td><td align="left">0.022</td></tr><tr><td align="left">2 km upstream</td><td align="left">NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup></td><td align="left">FH &amp; CIP</td><td align="left">0.014</td></tr><tr><td align="left">2 km upstream</td><td align="left">NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup></td><td align="left">FH &amp; WCBP</td><td align="left">0.002</td></tr><tr><td align="left">4 km upstream</td><td align="left">NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup></td><td align="left">FH &amp; WCBP</td><td align="left">0.001</td></tr><tr><td align="left">4 km upstream</td><td align="left">FC</td><td align="left">FH &amp; WCBP</td><td align="left">0.023</td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>. Significantly different slope comparisons between Central Great Plains (CGP), Central Irregular Plains (CIP), Flint Hills (FH), and Western Corn Belt Plains (WCBP) ecoregions are listed. All other comparisons were not significantly different at <italic>p&#xA0;</italic>&lt;&#xA0;0.05</p></table-wrap-foot></table-wrap></p>
+      </sec>
+    </sec>
+    <sec id="Sec11" sec-type="discussion">
+      <title>Discussion</title>
+      <sec id="Sec12">
+        <title>Land Cover-Water Chemistry Relationships</title>
+        <p>Riparian and whole watershed land cover was significantly correlated with water quality metrics, particularly nutrient concentrations. Land cover explained greater variance at landscape scales (watershed and first-order streams) than riparian cover at local scales (2 and 4 km upstream of sampling), which is consistent with the idea that nutrient loading and retention occurs at larger spatial scales (Allan and others <xref ref-type="bibr" rid="CR2">1997</xref>). Given that NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> uptake lengths are often less than 2 km in this region (O&#x2019;Brien and others <xref ref-type="bibr" rid="CR28">2007</xref>), it is possible that local riparian cover would influence NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> concentrations, but the effect was small. Differences in correlations between nitrogen species (NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> and NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup>) may have occurred because NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> inputs from the watershed are often greater than NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> inputs (Peterson and others <xref ref-type="bibr" rid="CR32">2001</xref>) and NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> is a preferred nitrogen source for aquatic organisms that can use inorganic N and cycles more quickly than NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212; </sup>(Dodds and others <xref ref-type="bibr" rid="CR10">2000</xref>). Seasonal differences in relationships between riparian land cover and both NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> and TP may be attributable to their strong relationship to particulate dynamics (Johnson and others <xref ref-type="bibr" rid="CR18">1997</xref>). Phosphate and NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> both adsorb readily to sediments, and are primarily transported into streams via surface runoff (Novotny and Olem <xref ref-type="bibr" rid="CR26">1994</xref>).</p>
+        <p>We wanted to remove the potential problem that the proportion of length of first order streams would vary by stream order. But if we only used our fourth-order sites, then we had about half the total number of sites and our statistical power decreased. Thus we analyzed the subset of fourth-order stream sites (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>) to be certain that our results were not an artifact of sampling sites occurring at different order streams. Since our results were similar with this subset, all other analyses used the full dataset.</p>
+        <p>Variation in nutrient concentrations during high flow may have resulted from &#x201C;pulses&#x201D; of sediment-bound nutrients entering from the landscape which were not effectively captured by our method of analyzing mean seasonal concentrations. This could explain the lack of correlation between riparian land cover and NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> and TP in May compared to other seasons. Conversely, the primary mode of NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> transport to surface water is generally via subsurface flow (Hill <xref ref-type="bibr" rid="CR14">1996</xref>), and this consistent connectivity to the landscape may explain the comparatively low temporal variability seen in riparian-NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> relationships.</p>
+        <p>Discrepancies in numbers of sampling dates and sites made it difficult to directly compare riparian-TN relationships with those of other parameters. However, we felt it was important to include TN in these analyses because of its importance in establishing nutrient criteria (Dodds and Welch <xref ref-type="bibr" rid="CR10">2000</xref>) and because other available parameters, such as dissolved inorganic nitrogen, can be unsuitable substitutes (Dodds <xref ref-type="bibr" rid="CR7">2003</xref>). A disproportionate number of watersheds for which TN data were not available were primarily agricultural and contained some of the highest observed concentrations of both NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup> and TP; the absence of these sites in TN analyses may explain why TN was not as strongly correlated with riparian land cover compared to NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212; </sup>or TP.</p>
+        <p>Nonnutrient water chemistry parameters had weaker correlations with riparian land cover. Although AT, FC, and maximum DO concentrations were significantly correlated with riparian land cover, relationships were weak across all spatial and temporal scales and preclude conjecture into the mechanisms underlying correlations. Lack of correlation between TSS and riparian land cover contrasts with results of previous studies (Johnson and others <xref ref-type="bibr" rid="CR17">1997</xref>; Sliva and Williams <xref ref-type="bibr" rid="CR34">2001</xref>) and, as with relationships observed in sediment-bound nutrients, may be a function of averaging TSS concentrations into one measurement.</p>
+        <p>Although permitted livestock operations and other point sources were not substantial in each watershed, point sources falling below Kansas&#x2019; permitting regulations (e.g., confined livestock operations under 300 animals) were likely present in some watersheds and may have accounted for unexplained variance in the observed relationships. Our results were consistent with previous studies (Johnson and others <xref ref-type="bibr" rid="CR18">1997</xref>; Jones and others <xref ref-type="bibr" rid="CR19">2001</xref>; Osborne and Wiley <xref ref-type="bibr" rid="CR30">1988</xref>; Sliva and Williams <xref ref-type="bibr" rid="CR34">2001</xref>), suggesting that agricultural and/or urban lands were the most important predictors of water quality variability.</p>
+        <p>Maintaining buffers or other passive land uses in headwater streams may effectively reduce diffuse pollution downstream. The importance of these streams and their riparian zones is due in part to their sheer numbers; small streams often comprise the majority of stream miles within a drainage network (Horton <xref ref-type="bibr" rid="CR15">1945</xref>; Leopold and others <xref ref-type="bibr" rid="CR23">1964</xref>), and in this study the smallest (first-order) streams on average comprised more than 60% of the stream miles in the study watersheds. Riparian land cover near the first-order streams of watersheds explained greater variance in TN, NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, and TP concentrations than did riparian land cover immediately upstream from sampling sites. First-order riparian land cover was statistically related to most water quality measures, even when all potential correlation related to watershed land cover was controlled for. Our results suggest that headwater riparian areas could have an important impact on downstream water quality.</p>
+        <p>Our study was correlative in nature and does not unequivocally confirm causation. Such an approach is required at the spatial scales of our study. Previous work suggests several possible causes for our observed associations. First, lower-order streams have the greatest potential for interactions between water and the adjacent landscape (Lowrance and others <xref ref-type="bibr" rid="CR24">1997</xref>). Second, the large benthic surface area-to-volume ratio of small streams favors rapid in-stream uptake, processing, and retention of nitrogen (Alexander and others <xref ref-type="bibr" rid="CR1">2000</xref>; Dodds and others <xref ref-type="bibr" rid="CR10">2000</xref>; Peterson and others <xref ref-type="bibr" rid="CR32">2001</xref>), which in larger streams increases in proportion to depth (Alexander and others <xref ref-type="bibr" rid="CR1">2000</xref>) or discharge (Wollheim and others <xref ref-type="bibr" rid="CR40">2001</xref>). Because high nitrogen inputs may overwhelm this ability (O&#x2019;Brien and others <xref ref-type="bibr" rid="CR28">2007</xref>; Wollheim and others <xref ref-type="bibr" rid="CR40">2001</xref>), riparian zones adjacent to small streams may be particularly important in regulating nutrient inputs and allowing natural in-stream processes to significantly impact nutrient concentrations.</p>
+        <p>Several studies have addressed the relative importance of riparian versus whole catchment land use in regulating water quality. Reports in the literature have been mixed; some researchers (Hunsaker and Levine <xref ref-type="bibr" rid="CR16">1995</xref>; Sliva and Williams <xref ref-type="bibr" rid="CR34">2001</xref>) found that catchment land cover was better correlated with water quality, while others (Osborne and Wiley <xref ref-type="bibr" rid="CR30">1988</xref>; Johnson and others <xref ref-type="bibr" rid="CR17">1997</xref>) reported that land cover in the riparian ecotone was more influential. Likewise, although partial correlations indicated riparian land cover classifications were significantly related to TN, NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, and TP even after accounting for catchment effects, this did not hold true for all water chemistry parameters. Overall, it is difficult to separate the effects of land cover in the riparian ecotone and land cover in the catchment because they are highly correlated, and in many altered landscapes, riparian land cover may simply reflect the dominant catchment land cover types.</p>
+        <p>Significant partial correlations between riparian land cover and TN, NO<sub arrange="stack">3</sub><sup arrange="stack">&#x2212;</sup>, and TP concentrations correspond with previous work (e.g., Karr and Schlosser <xref ref-type="bibr" rid="CR20">1978</xref>; Lowrance and others <xref ref-type="bibr" rid="CR24">1997</xref>) identifying riparian zones as key regulators of nutrient inputs to surface waters. These results, in addition to strong relationships among water quality metrics and riparian land use that have been previously reported at both field (e.g., Karr and Schlosser <xref ref-type="bibr" rid="CR20">1978</xref>; Peterjohn and Correll <xref ref-type="bibr" rid="CR31">1984</xref>) and landscape (e.g., Johnson and others <xref ref-type="bibr" rid="CR18">1997</xref>; Osborne and Wiley <xref ref-type="bibr" rid="CR30">1988</xref>) scales, suggest that intact riparian zones could influence landscape impacts on surface water quality.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Ecoregion Effects</title>
+        <p>The finding that slopes of the relationships were not significantly different in most ecoregion comparisons may be attributable to several factors. Exceptionally variable relationships could preclude the statistical power to determine differences. It is possible that the study regions were not sufficiently distinct to allow detection of differences in riparian interactions, although this is unlikely given their previous classification as both separate ecoregions (U.S. EPA <xref ref-type="bibr" rid="CR37">1998a</xref>) and nutrient regions (U.S. EPA <xref ref-type="bibr" rid="CR38">1998b</xref>). Because U.S. EPA ecoregion designations encompass human impacts such as land use in addition to natural geological, climatic, and soil characteristics (Omernik <xref ref-type="bibr" rid="CR29">1995</xref>), observed intraregion differences in riparian land cover classification and nutrient concentrations were expected. However, since land use is often a dominant factor regulating surface water quality (Hunsaker and Levine <xref ref-type="bibr" rid="CR16">1995</xref>; Johnson and others <xref ref-type="bibr" rid="CR17">1997</xref>; Osborne and Wiley <xref ref-type="bibr" rid="CR30">1988</xref>), riparian-water chemistry relationships would be expected to remain relatively constant across ecoregions if designations were partially dependent on land use, as was the case in this study.</p>
+      </sec>
+    </sec>
+    <sec id="Sec14" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>The data suggest that riparian cover near sampling sites is generally less well correlated with water quality parameters than riparian cover or land use in first-order streams. Because watershed cover and riparian land use were correlated, it is difficult to determine how important first-order riparian cover is related to water quality. Our results suggest a statistically significant effect of riparian cover of first-order streams on water quality because partial correlations among riparian land cover classifications were significant predictors in regression models when controlling for predictor catchment land cover classifications. We take the conservative approach in our interpretation, but it is possible that riparian cover has much stronger effects than whole-watershed land cover and that most of the correlation is driven by riparian effects. The effect of first-order land cover may not be too surprising; first-order streams make up the majority of stream length in watersheds. Our approach shows that a correlation with land uses in small headwater streams does hold, and holds even in seasons when many of the first-order stream channels are not flowing.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank Bob Angelo, Steve Cringan, and Anthony Stahl of the Kansas Department of Health and Environment for providing data used in this study. Brent Brock provided GIS and other technical assistance. Comments by Dolly Gudder, Keith Gido, Bill Hargrove, the Editorial Board, and anonymous reviewers improved early versions of the manuscript. This is contribution 04-171-J from the Kansas Agricultural Experiment Station. Research was supported by grants from the National Science Foundation Long-Term Ecological Research (LTER) Program, the National Science Foundation Kansas EPSCoR Program (No. 0553722), and the U.S. Geological Survey National Gap Analysis Program.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Alexander</surname>
+              <given-names>RB</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Schwarz</surname>
+              <given-names>GE</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of stream channel size on the delivery of nitrogen to the Gulf of Mexico</article-title>
+          <source>Nature</source>
+          <year>2000</year>
+          <volume>403</volume>
+          <fpage>758</fpage>
+          <lpage>761</lpage>
+          <pub-id pub-id-type="doi">10.1038/35001562</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Alexander RB, Smith RA, Schwarz GE (2000) Effect of stream channel size on the delivery of nitrogen to the Gulf of Mexico. Nature 403:758&#x2013;761 <pub-id pub-id-type="pmid">10693802</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Allan</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Erickson</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Fay</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>The influence of catchment land use on stream integrity across multiple spatial scales</article-title>
+          <source>Freshwater Biol</source>
+          <year>1997</year>
+          <volume>37</volume>
+          <fpage>149</fpage>
+          <lpage>161</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2427.1997.d01-546.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Allan JD, Erickson DL, Fay J (1997) The influence of catchment land use on stream integrity across multiple spatial scales. Freshwater Biol 37:149&#x2013;161 </citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anderson</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Hardy</surname>
+              <given-names>EE</given-names>
+            </name>
+            <name>
+              <surname>Roach</surname>
+              <given-names>JT</given-names>
+            </name>
+            <name>
+              <surname>Witmer</surname>
+              <given-names>RE</given-names>
+            </name>
+          </person-group>
+          <source>A land use and land cover classification system for use with remote sensor data. Geological Survey Professional Paper 964</source>
+          <year>1976</year>
+          <publisher-loc>Washington, DC</publisher-loc>
+          <publisher-name>U.S. Government Printing Office</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Anderson JR, Hardy EE, Roach JT, Witmer RE (1976) A land use and land cover classification system for use with remote sensor data. Geological Survey Professional Paper 964. U.S. Government Printing Office, Washington, DC </citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="other">APHA (1992) Standard methods for the examination of water and wastewater. 18th ed. American Public Health Association, American Water Works Association, and Water Pollution Control Federation, Washington, DC</citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="other">Brown DD, Brown TC (1994) An evaluation of land classification systems for large-scale water quality assessments. In: Effects of human-induced changes on hydrologic systems. Proceedings of the AWRA 1994 Annual Summer Symposium, AWRA Technical Publication Series TPS-94-3. American Water Resources Association, Middleburg, VA</citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carpenter</surname>
+              <given-names>SR</given-names>
+            </name>
+            <name>
+              <surname>Caraco</surname>
+              <given-names>NF</given-names>
+            </name>
+            <name>
+              <surname>Correll</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Howarth</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Sharpley</surname>
+              <given-names>AN</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>VH</given-names>
+            </name>
+          </person-group>
+          <article-title>Nonpoint pollution of surface waters with phosphorus and nitrogen</article-title>
+          <source>Ecol Appl</source>
+          <year>1998</year>
+          <volume>8</volume>
+          <fpage>559</fpage>
+          <lpage>568</lpage>
+          <pub-id pub-id-type="doi">10.1890/1051-0761(1998)008[0559:NPOSWW]2.0.CO;2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Carpenter SR, Caraco NF, Correll DL, Howarth RW, Sharpley AN, Smith VH (1998) Nonpoint pollution of surface waters with phosphorus and nitrogen. Ecol Appl 8:559&#x2013;568 </citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+          </person-group>
+          <article-title>Misuse of inorganic N and soluble reactive P concentrations to indicate nutrient status of surface waters</article-title>
+          <source>J North Am Benthol Soc</source>
+          <year>2003</year>
+          <volume>22</volume>
+          <fpage>171</fpage>
+          <lpage>181</lpage>
+          <pub-id pub-id-type="doi">10.2307/1467990</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dodds WK (2003) Misuse of inorganic N and soluble reactive P concentrations to indicate nutrient status of surface waters. J North Am Benthol Soc 22:171&#x2013;181 </citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+          </person-group>
+          <article-title>Eutrophication and trophic state in rivers and streams</article-title>
+          <source>Limnol Oceanogr</source>
+          <year>2006</year>
+          <volume>51</volume>
+          <fpage>671</fpage>
+          <lpage>680</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dodds WK (2006) Eutrophication and trophic state in rivers and streams. Limnol Oceanogr 51:671&#x2013;680 </citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Oakes</surname>
+              <given-names>RM</given-names>
+            </name>
+          </person-group>
+          <article-title>A technique for establishing reference nutrient concentrations across watersheds impacted by humans</article-title>
+          <source>Limnol Oceanogr Methods</source>
+          <year>2004</year>
+          <volume>2</volume>
+          <fpage>333</fpage>
+          <lpage>341</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dodds WK, Oakes RM (2004) A technique for establishing reference nutrient concentrations across watersheds impacted by humans. Limnol Oceanogr Methods 2:333&#x2013;341 </citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Welch</surname>
+              <given-names>EB</given-names>
+            </name>
+          </person-group>
+          <article-title>Establishing nutrient criteria in streams</article-title>
+          <source>J North Am Benthol Soc</source>
+          <year>2000</year>
+          <volume>19</volume>
+          <fpage>186</fpage>
+          <lpage>196</lpage>
+          <pub-id pub-id-type="doi">10.2307/1468291</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dodds WK, Welch EB (2000) Establishing nutrient criteria in streams. J North Am Benthol Soc 19:186&#x2013;196 </citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>VH</given-names>
+            </name>
+            <name>
+              <surname>Lohman</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Nitrogen and phosphorus relationships to benthic algal biomass in temperate streams</article-title>
+          <source>Can J Fish Aquat Sci</source>
+          <year>2002</year>
+          <volume>59</volume>
+          <fpage>865</fpage>
+          <lpage>874</lpage>
+          <pub-id pub-id-type="doi">10.1139/f02-063</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dodds WK, Smith VH, Lohman K (2002) Nitrogen and phosphorus relationships to benthic algal biomass in temperate streams. Can J Fish Aquat Sci 59:865&#x2013;874 </citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fausch</surname>
+              <given-names>KD</given-names>
+            </name>
+            <name>
+              <surname>Bestgen</surname>
+              <given-names>KR</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Knopf</surname>
+              <given-names>FL</given-names>
+            </name>
+            <name>
+              <surname>Samson</surname>
+              <given-names>FB</given-names>
+            </name>
+          </person-group>
+          <article-title>Ecology of fishes indigenous to the central and southwestern Great Plains</article-title>
+          <source>Ecology and conservation of Great Plains vertebrates</source>
+          <year>1997</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Springer-Verlag</publisher-name>
+          <fpage>131</fpage>
+          <lpage>166</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Fausch KD, Bestgen KR (1997) Ecology of fishes indigenous to the central and southwestern Great Plains. In: Knopf FL, Samson FB (eds) Ecology and conservation of Great Plains vertebrates. Springer-Verlag, New York, pp 131&#x2013;166 </citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gregory</surname>
+              <given-names>SV</given-names>
+            </name>
+            <name>
+              <surname>Swanson</surname>
+              <given-names>FJ</given-names>
+            </name>
+            <name>
+              <surname>McKee</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Cummins</surname>
+              <given-names>KW</given-names>
+            </name>
+          </person-group>
+          <article-title>An ecosystem perspective of riparian zones</article-title>
+          <source>BioScience</source>
+          <year>1991</year>
+          <volume>41</volume>
+          <fpage>540</fpage>
+          <lpage>550</lpage>
+          <pub-id pub-id-type="doi">10.2307/1311607</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gregory SV, Swanson FJ, McKee WA, Cummins KW (1991) An ecosystem perspective of riparian zones. BioScience 41:540&#x2013;550 </citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hill</surname>
+              <given-names>AR</given-names>
+            </name>
+          </person-group>
+          <article-title>Nitrate removal in stream riparian zones</article-title>
+          <source>J Environ Qual</source>
+          <year>1996</year>
+          <volume>25</volume>
+          <fpage>743</fpage>
+          <lpage>755</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hill AR (1996) Nitrate removal in stream riparian zones. J Environ Qual 25:743&#x2013;755 </citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Horton</surname>
+              <given-names>RE</given-names>
+            </name>
+          </person-group>
+          <article-title>Erosional development of streams and their drainage basins; hydrophysical approach to quantitative morphology</article-title>
+          <source>Bull Geol Soc Am</source>
+          <year>1945</year>
+          <volume>56</volume>
+          <fpage>275</fpage>
+          <lpage>370</lpage>
+          <pub-id pub-id-type="doi">10.1130/0016-7606(1945)56[275:EDOSAT]2.0.CO;2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Horton RE (1945) Erosional development of streams and their drainage basins; hydrophysical approach to quantitative morphology. Bull Geol Soc Am 56:275&#x2013;370 </citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hunsaker</surname>
+              <given-names>CT</given-names>
+            </name>
+            <name>
+              <surname>Levine</surname>
+              <given-names>DA</given-names>
+            </name>
+          </person-group>
+          <article-title>Hierarchical approaches to the study of water quality in rivers</article-title>
+          <source>BioScience</source>
+          <year>1995</year>
+          <volume>45</volume>
+          <fpage>193</fpage>
+          <lpage>202</lpage>
+          <pub-id pub-id-type="doi">10.2307/1312558</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hunsaker CT, Levine DA (1995) Hierarchical approaches to the study of water quality in rivers. BioScience 45:193&#x2013;202 </citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johnson</surname>
+              <given-names>LB</given-names>
+            </name>
+            <name>
+              <surname>Gage</surname>
+              <given-names>SH</given-names>
+            </name>
+          </person-group>
+          <article-title>Landscape approaches to the analysis of aquatic ecosystems</article-title>
+          <source>Freshwater Biol</source>
+          <year>1997</year>
+          <volume>37</volume>
+          <fpage>113</fpage>
+          <lpage>132</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2427.1997.00156.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Johnson LB, Gage SH (1997) Landscape approaches to the analysis of aquatic ecosystems. Freshwater Biol 37:113&#x2013;132 </citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johnson</surname>
+              <given-names>LB</given-names>
+            </name>
+            <name>
+              <surname>Richards</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Host</surname>
+              <given-names>GE</given-names>
+            </name>
+            <name>
+              <surname>Arthur</surname>
+              <given-names>JW</given-names>
+            </name>
+          </person-group>
+          <article-title>Landscape influences on water chemistry in Midwestern stream ecosystems</article-title>
+          <source>Freshwater Biol</source>
+          <year>1997</year>
+          <volume>37</volume>
+          <fpage>193</fpage>
+          <lpage>208</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2427.1997.d01-539.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Johnson LB, Richards C, Host GE, Arthur JW (1997) Landscape influences on water chemistry in Midwestern stream ecosystems. Freshwater Biol 37:193&#x2013;208 </citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jones</surname>
+              <given-names>KB</given-names>
+            </name>
+            <name>
+              <surname>Neale</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Nash</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Remortel</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Wickham</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Ritters</surname>
+              <given-names>KH</given-names>
+            </name>
+            <name>
+              <surname>O&#x2019;Neill</surname>
+              <given-names>RV</given-names>
+            </name>
+          </person-group>
+          <article-title>Predicting nutrient and sediment loadings to streams from landscape metrics: a multiple watershed study from the United States Mid-Atlantic Region</article-title>
+          <source>Landscape Ecol</source>
+          <year>2001</year>
+          <volume>16</volume>
+          <fpage>301</fpage>
+          <lpage>312</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1011175013278</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jones KB, Neale AC, Nash MS, Van Remortel RD, Wickham JD, Ritters KH, O&#x2019;Neill RV (2001) Predicting nutrient and sediment loadings to streams from landscape metrics: a multiple watershed study from the United States Mid-Atlantic Region. Landscape Ecol 16:301&#x2013;312 </citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Karr</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Schlosser</surname>
+              <given-names>IJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Water resources and the land-water interface</article-title>
+          <source>Science</source>
+          <year>1978</year>
+          <volume>201</volume>
+          <fpage>229</fpage>
+          <lpage>234</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.201.4352.229</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Karr JR, Schlosser IJ (1978) Water resources and the land-water interface. Science 201:229&#x2013;234 <pub-id pub-id-type="pmid">17778646</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="other">KARS (1993) Kansas land cover. Kansas Applied Remote Sensing, Lawrence</citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="other">KDHE (2000) Stream chemistry monitoring program quality assurance management plan. Division of Environment, Kansas Department of Health and Environment, Topeka</citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leopold</surname>
+              <given-names>LB</given-names>
+            </name>
+            <name>
+              <surname>Wolman</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <source>Fluvial processes in geomorphology</source>
+          <year>1964</year>
+          <publisher-loc>San Francisco</publisher-loc>
+          <publisher-name>W. H. Freeman</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Leopold LB, Wolman MG, Miller JP (1964) Fluvial processes in geomorphology. W. H. Freeman, San Francisco </citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lowrance</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Altier</surname>
+              <given-names>LS</given-names>
+            </name>
+            <name>
+              <surname>Newbold</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Schnabel</surname>
+              <given-names>RR</given-names>
+            </name>
+            <name>
+              <surname>Groffman</surname>
+              <given-names>PM</given-names>
+            </name>
+            <name>
+              <surname>Denver</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Correll</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Gilliam</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Robinson</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Brinsfield</surname>
+              <given-names>RB</given-names>
+            </name>
+            <name>
+              <surname>Staver</surname>
+              <given-names>KW</given-names>
+            </name>
+            <name>
+              <surname>Lucas</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Todd</surname>
+              <given-names>AH</given-names>
+            </name>
+          </person-group>
+          <article-title>Water quality functions of riparian forest buffers in Chesapeake Bay watersheds</article-title>
+          <source>Environ Manage</source>
+          <year>1997</year>
+          <volume>21</volume>
+          <fpage>687</fpage>
+          <lpage>712</lpage>
+          <pub-id pub-id-type="doi">10.1007/s002679900060</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lowrance R, Altier LS, Newbold JD, Schnabel RR, Groffman PM, Denver JM, Correll DL, Gilliam JW, Robinson JL, Brinsfield RB, Staver KW, Lucas W, Todd AH (1997) Water quality functions of riparian forest buffers in Chesapeake Bay watersheds. Environ Manage 21:687&#x2013;712 <pub-id pub-id-type="pmid">9236284</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="book">
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Maidment</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <source>Arc Hydro: GIS for water resources</source>
+          <year>2002</year>
+          <publisher-loc>Redlands, CA</publisher-loc>
+          <publisher-name>ESRI Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Maidment DR, ed (2002) Arc Hydro: GIS for water resources. ESRI Press, Redlands, CA </citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Novotny</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Olem</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <source>Water quality: prevention, identification, and management of diffuse pollution</source>
+          <year>1994</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>John Wiley and Sons</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Novotny V, Olem H (1994) Water quality: prevention, identification, and management of diffuse pollution. John Wiley and Sons, New York </citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="other">NRCS (2001) Riparian areas inventory. U.S. Department of Agriculture, Natural Resources Conservation Service, Salina, KS</citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>O&#x2019;Brien</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Wilson</surname>
+              <given-names>KC</given-names>
+            </name>
+            <name>
+              <surname>Murdock</surname>
+              <given-names>JN</given-names>
+            </name>
+            <name>
+              <surname>Eichmiller</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>The saturation of N cycling in central plains streams: <sup>15</sup>N experiments across a broad gradient of nitrate concentrations</article-title>
+          <source>Biogeochemistry</source>
+          <year>2007</year>
+          <volume>84</volume>
+          <fpage>31</fpage>
+          <lpage>49</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10533-007-9073-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">O&#x2019;Brien JM, Dodds WK, Wilson KC, Murdock JN, Eichmiller J (2007) The saturation of N cycling in central plains streams: 15N experiments across a broad gradient of nitrate concentrations. Biogeochemistry 84:31&#x2013;49 </citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Omernik</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Davis</surname>
+              <given-names>WS</given-names>
+            </name>
+            <name>
+              <surname>Simon</surname>
+              <given-names>TP</given-names>
+            </name>
+          </person-group>
+          <article-title>Ecoregions: a spatial framework for environmental management</article-title>
+          <source>Biological assessment and criteria: tools for water resource planning and decision making</source>
+          <year>1995</year>
+          <publisher-loc>Boca Raton, FL</publisher-loc>
+          <publisher-name>Lewis</publisher-name>
+          <fpage>49</fpage>
+          <lpage>62</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Omernik JM (1995) Ecoregions: a spatial framework for environmental management. In: Davis WS, Simon TP (eds) Biological assessment and criteria: tools for water resource planning and decision making. Lewis, Boca Raton, FL, pp 49&#x2013;62 </citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Osborne</surname>
+              <given-names>LL</given-names>
+            </name>
+            <name>
+              <surname>Wiley</surname>
+              <given-names>MJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Empirical relationships between land use/cover and stream water quality in an agricultural watershed</article-title>
+          <source>J Environ Manage</source>
+          <year>1988</year>
+          <volume>26</volume>
+          <fpage>9</fpage>
+          <lpage>27</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Osborne LL, Wiley MJ (1988) Empirical relationships between land use/cover and stream water quality in an agricultural watershed. J Environ Manage 26:9&#x2013;27 </citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peterjohn</surname>
+              <given-names>WT</given-names>
+            </name>
+            <name>
+              <surname>Correll</surname>
+              <given-names>DL</given-names>
+            </name>
+          </person-group>
+          <article-title>Nutrient dynamics in an agricultural watershed: observations on the role of a riparian forest</article-title>
+          <source>Ecology</source>
+          <year>1984</year>
+          <volume>65</volume>
+          <fpage>1466</fpage>
+          <lpage>1475</lpage>
+          <pub-id pub-id-type="doi">10.2307/1939127</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peterjohn WT, Correll DL (1984) Nutrient dynamics in an agricultural watershed: observations on the role of a riparian forest. Ecology 65:1466&#x2013;1475 </citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peterson</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Wollheim</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Mulholland</surname>
+              <given-names>PJ</given-names>
+            </name>
+            <name>
+              <surname>Webster</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Meyer</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Tank</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Marti</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Bowden</surname>
+              <given-names>WB</given-names>
+            </name>
+            <name>
+              <surname>Valett</surname>
+              <given-names>HM</given-names>
+            </name>
+            <name>
+              <surname>Hershey</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>McDowell</surname>
+              <given-names>WH</given-names>
+            </name>
+            <name>
+              <surname>Dodds</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Hamilton</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Gregory</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Morrall</surname>
+              <given-names>DD</given-names>
+            </name>
+          </person-group>
+          <article-title>Control of nitrogen export from watersheds by headwater streams</article-title>
+          <source>Science</source>
+          <year>2001</year>
+          <volume>292</volume>
+          <fpage>86</fpage>
+          <lpage>90</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1056874</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peterson BJ, Wollheim WM, Mulholland PJ, Webster JR, Meyer JL, Tank JL, Marti E, Bowden WB, Valett HM, Hershey AE, McDowell WH, Dodds WK, Hamilton SK, Gregory S, Morrall DD (2001) Control of nitrogen export from watersheds by headwater streams. Science 292:86&#x2013;90 <pub-id pub-id-type="pmid">11292868</pub-id></citation>
+      </ref>
+      <ref id="CR33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rohm</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Omernik</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Woods</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Stoddard</surname>
+              <given-names>JL</given-names>
+            </name>
+          </person-group>
+          <article-title>Regional characteristics of nutrient concentrations in streams and their applications to nutrient criteria development</article-title>
+          <source>J Am Water Resources Assoc</source>
+          <year>2002</year>
+          <volume>38</volume>
+          <fpage>213</fpage>
+          <lpage>239</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1752-1688.2002.tb01547.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rohm CM, Omernik JM, Woods AJ, Stoddard JL (2002) Regional characteristics of nutrient concentrations in streams and their applications to nutrient criteria development. J Am Water Resources Assoc 38:213&#x2013;239 </citation>
+      </ref>
+      <ref id="CR34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sliva</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Buffer zone versus whole catchment approaches to studying land use impact on river water quality</article-title>
+          <source>Water Res</source>
+          <year>2001</year>
+          <volume>35</volume>
+          <fpage>3462</fpage>
+          <lpage>3472</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0043-1354(01)00062-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sliva L, Williams D (2001) Buffer zone versus whole catchment approaches to studying land use impact on river water quality. Water Res 35:3462&#x2013;3472 <pub-id pub-id-type="pmid">11547869</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Strahler</surname>
+              <given-names>AN</given-names>
+            </name>
+          </person-group>
+          <article-title>Quantitative analysis of watershed geomorphology</article-title>
+          <source>Trans Am Geophys Union</source>
+          <year>1957</year>
+          <volume>38</volume>
+          <fpage>913</fpage>
+          <lpage>920</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Strahler AN (1957) Quantitative analysis of watershed geomorphology. Trans Am Geophys Union 38:913&#x2013;920 </citation>
+      </ref>
+      <ref id="CR36">
+        <citation citation-type="other">U.S. EPA (1983) Methods for chemical analysis of water and waste. EPA 600/4-79-020. U.S. Environmental Protection Agency, EMSL-CIN, Cincinnati, OH</citation>
+      </ref>
+      <ref id="CR37">
+        <citation citation-type="other">U.S. EPA (1998a) Level III ecoregions of the continental United States (revision of Omernik, 1987). U.S. Environmental Protection Agency, National Health and Environmental Effects Laboratory, Western Ecology Division, Corvallis, OR</citation>
+      </ref>
+      <ref id="CR38">
+        <citation citation-type="other">U.S. EPA (1998b) National strategy for the development of regional nutrient criteria. 822-R-98-002. U.S. Environmental Protection Agency Office of Water, Washington, DC</citation>
+      </ref>
+      <ref id="CR39">
+        <citation citation-type="other">U.S. EPA (2000) National water quality assessment (305-B report). 841-R-02-001. U.S. Environmental Protection Agency Office of Water, Washington, DC</citation>
+      </ref>
+      <ref id="CR40">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wollheim</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Peterson</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Deegan</surname>
+              <given-names>LA</given-names>
+            </name>
+            <name>
+              <surname>Hobbie</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Hooker</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Bowden</surname>
+              <given-names>WB</given-names>
+            </name>
+            <name>
+              <surname>Edwardson</surname>
+              <given-names>KJ</given-names>
+            </name>
+            <name>
+              <surname>Arscott</surname>
+              <given-names>DB</given-names>
+            </name>
+            <name>
+              <surname>Hershey</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Finlay</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of stream size on ammonium and suspended particulate nitrogen processing</article-title>
+          <source>Limnol Oceanogr</source>
+          <year>2001</year>
+          <volume>46</volume>
+          <fpage>1</fpage>
+          <lpage>13</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Wollheim WM, Peterson BJ, Deegan LA, Hobbie JE, Hooker B, Bowden WB, Edwardson KJ, Arscott DB, Hershey AE, Finlay J (2001) Influence of stream size on ammonium and suspended particulate nitrogen processing. Limnol Oceanogr 46:1&#x2013;13 </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

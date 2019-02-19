@@ -1,0 +1,1144 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Cardiovasc Eng</journal-id>
+      <journal-title>Cardiovascular Engineering (Dordrecht, Netherlands)</journal-title>
+      <issn pub-type="ppub">1567-8822</issn>
+      <issn pub-type="epub">1573-6806</issn>
+      <publisher>
+        <publisher-name>Springer US</publisher-name>
+        <publisher-loc>Boston</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18080208</article-id>
+      <article-id pub-id-type="pmc">2137944</article-id>
+      <article-id pub-id-type="publisher-id">9039</article-id>
+      <article-id pub-id-type="doi">10.1007/s10558-007-9039-3</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Determination of myocardial energetic output for cardiac rhythm pacing</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>He&#x159;man</surname>
+            <given-names>Dalibor</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>P&#x159;evorovsk&#xE1;</surname>
+            <given-names>Sv&#x11B;tlana</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Mar&#x161;&#xED;k</surname>
+            <given-names>Franti&#x161;ek</given-names>
+          </name>
+          <address>
+            <phone>+420-266-053322</phone>
+            <fax>+420-286-584695</fax>
+            <email>marsik@it.cas.cz</email>
+          </address>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Cardiocenter, Department of Cardiology, 3rd Medical School Charles University and University Hospital Kralovske Vinohrady, Prague, Czech Republic </aff>
+        <aff id="Aff2"><label>2</label>Institute of Thermomechanics, Czech Academy of Sciences v.v.i, Dolej&#x161;kova 5, Prague 8, 182 00 Czech Republic </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>4</day>
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>4</issue>
+      <fpage>156</fpage>
+      <lpage>161</lpage>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>This research is aimed to the determination of the changes in the cardiac energetic output for three different modes of cardiac rhythm pacing. The clinical investigation of thirteen patients with the permanent dual-chamber pacemaker implantation was carried out. The patients were taken to echocardiography examination conducted by way of three pacing modes (AAI, VVI and DDD). The myocardial energetic parameters&#x2014;the stroke work index (SWI) and the myocardial oxygen consumption (MVO2) are not directly measurable, however, their values can be determined using the numerical model of the human cardiovascular system. The 24-segment hemodynamical model (pulsating type) of the human cardiovascular system was used for the numerical simulation of the changes of myocardial workload for cardiac rhythm pacing. The model was fitted by well-measurable parameters for each patient. The calculated parameters were compared using the two-tailed Student&#x2019;s test. The differences of SWI and MVO2 between the modes AAI and VVI and the modes DDD and VVI are statistically significant (<italic>P</italic>&#xA0;&lt;&#xA0;0.05). On the other hand, the hemodynamic effects for the stimulation modes DDD and AAI are almost identical, i.e. the differences are statistically insignificant (<italic>P</italic>&#xA0;&gt;&#xA0;0.05).</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Heart arrhythmia</kwd>
+        <kwd>Cardiac pacing modes</kwd>
+        <kwd>Myocardial energetics</kwd>
+        <kwd>Numerical simulation</kwd>
+        <kwd>Echocardiography examination</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media, LLC 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The medical management of cardiovascular diseases, especially of arrhythmia, has become increasingly reliant upon the use of implanted electronic devices for the treatment of bradycardia or tachycardia (Winters et&#xA0;al. <xref ref-type="bibr" rid="CR22">2001</xref>; Gregoratos et&#xA0;al. <xref ref-type="bibr" rid="CR5">2004</xref>). The simple pacemakers of the 1970 gave way to the more advanced devices capable of real-time diagnosis of arrhythmia-related disorders and their treatment. The pacemaker technology and clinical practice permits the use of either single-chamber ventricular pacemakers or dual-chamber pacemakers for patients who require cardiac pacing in some indications. The single-chamber ventricular pacemakers are less expensive and their implantation is simpler than the implantation of the dual-chamber pacemakers. Several randomized studies comparing the dual-chamber &#x201C;physiological&#x201D; pacing to the ventricular pacing (Mattioli et&#xA0;al. <xref ref-type="bibr" rid="CR13">1998</xref>; Connolly et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Lamas et&#xA0;al. <xref ref-type="bibr" rid="CR8">2002</xref>) have shown that the physiological pacing was more beneficial in some subgroup of patients despite the fact that both variants caused mortality, stroke and heart failures were no significant differences.</p>
+      <p>Clinical studies focusing on the quality of life with respect to the type of the pacing system implantation were also conducted. The results of the studies confirmed that the implantation of a permanent pacemaker improves health and quality of life. The quality-of-life benefits associated with dual-chamber pacing as compared with the ventricular pacing were observed only in the subgroup of patients with the sinus-node dysfunction (Lamas et&#xA0;al. <xref ref-type="bibr" rid="CR9">1998</xref>). The DAVID trial (Dual Chamber and VVI Implantable Defibrillator) demonstrated increase heart failure hospitalisation and mortality in patients programmed to the DDDR mode compared to ventricular backup pacing. The Multicenter Automatic Defibrillator Implantation Trial II (MADIT II) evoke the question of minimising the unnecessary right ventricular pacing (Wilkoff et&#xA0;al. <xref ref-type="bibr" rid="CR21">2002</xref>; Moss et&#xA0;al. <xref ref-type="bibr" rid="CR15">2002</xref>; Galley et&#xA0;al. <xref ref-type="bibr" rid="CR4">2004</xref>).</p>
+      <p>The myocardial energy demands during the cardiac pacing were studied experimentally (Montgomery et&#xA0;al. <xref ref-type="bibr" rid="CR14">1991</xref>; Portman and Ning <xref ref-type="bibr" rid="CR17">1995</xref>). The clinical data demonstrating the energetic changes during the pacing on the patients with dilated cardiomyopathy were shown by Baller et&#xA0;al. (<xref ref-type="bibr" rid="CR1">2004</xref>). Kerckhoffs et&#xA0;al. (<xref ref-type="bibr" rid="CR7">2005</xref>) carried out mathematical modelling of the right ventricular pacing and comparison with spontaneous depolarization.</p>
+      <p>In the present study we are using the numerical model of the human cardiovascular system developed in the Institute of Thermomechanics, Czech Academy of Sciences (P&#x159;evorovsk&#xE1; and Mar&#x161;&#xED;k <xref ref-type="bibr" rid="CR18">2004</xref>) with the purpose to find the parameters of the myocardial energetics during the cardiac rhythm pacing.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Methods and materials</title>
+      <sec id="Sec3">
+        <title>Patients</title>
+        <p>For our research purposes the patients were designated on the basis of selective criteria. The inclusion criteria were established sick sinus syndrome and pacemaker implantation lasting more than 6&#xA0;months. The exclusion criteria were left ventricle dysfunction, clinical significant valvular disease and other pathological structural heart changes. The patients with other than sinus rhythm, AV block under 110&#xA0;beat/min during stimulation or bad image quality from echocardiography examination were also excluded. Our research finally involved thirteen patients with the sick sinus syndrome (eight males and five females with the average age 73&#xA0;years, ranging 59&#x2013;82&#xA0;years). These patients with permanent dual-chamber pacemaker implantation were taken to echocardiography examination.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Study protocol</title>
+        <p>The numerical model of cardiovascular system was used to calculate the myocardial energetic parameters such as the stroke work index and the myocardial oxygen consumption for three types of pacing.</p>
+        <p>The stroke work index SWI (gm/m<sup>2</sup>) is used as a measure of myocardial contractility or work performed by the heart at every contraction. The work performed by the heart can be simply by the fluid dynamic formula 
+<inline-formula id="IEq1"><!-- Alternate image not processed: 10558_2007_9039_Article_IEq1.gif --><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{work}} = {\text{blood volume change}} \times {\text{pressure change}}{\text{.}} $$\end{document}</tex-math></inline-formula> The stroke work index of the left ventricle LVSWI is then determined by the stroke volume SV (ml), by the difference of the mean arterial pressure MAP (mmHg) and the pulmonary artery occlusion pressure PAOP (mmHg) (considered to be the indirect measure of the left atrial pressure) by the formula (<ext-link ext-link-type="uri" xlink:href="http://www.lidco-ir.co.uk/html/clinical/nhp.asp">http://www.lidco-ir.co.uk/html/clinical/nhp.asp</ext-link>)<xref ref-type="fn" rid="Fn1">1</xref>: <disp-formula id="Equ1"><label>1</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{LVSWI}} = 0.0136 \cdot {\left( {{\text{MAP}} - {\text{PAOP}}} \right)} \cdot {\text{SV}}/{\text{BSA}} $$\end{document}</tex-math></disp-formula>the constant 0.0136 converts the units mmHg&#xA0;l/m<sup>2</sup> to gm/m<sup>2</sup>. BSA (m<sup>2</sup>) is the body surface area given by the DuBois formula (Wang et&#xA0;al. <xref ref-type="bibr" rid="CR20">1992</xref>): <disp-formula id="Equ2"><label>2</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{BSA}} = 0,007184 \cdot {\text{BW}}^{{0.425}} \cdot {\text{BH}}^{{0.725}} $$\end{document}</tex-math></disp-formula>where BW (kg) is the body weight and BH (cm) is the body height.</p>
+        <p>The myocardial oxygen consumption MVO<sub>2</sub> (ml O<sub>2</sub>/beat) is calculated by the relationship proposed by Suga <xref ref-type="bibr" rid="CR19">1990</xref>, which is based on the time-varying elastance model of the ventricle. This relationship represents linear correlation between the total pressure-volume area PVA (J/beat) and MVO<sub>2</sub> (1&#xA0;ml O<sub>2</sub>&#xA0;=&#xA0;20&#xA0;J) <disp-formula id="Equ3"><label>3</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{MVO}}_{2} = a \times {\text{PVA}} + b $$\end{document}</tex-math></disp-formula>where <italic>a</italic> is the slope coefficient and <italic>b</italic> is unloaded MVO<sub>2</sub>. PVA consists of the external mechanical work EW (J/beat) within the contraction cycle and the potential energy PE (J/beat) <disp-formula id="Equ4"><label>4</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{PVA}} = {\text{EW}} + {\text{PE}} $$\end{document}</tex-math></disp-formula>The values EW (representing the work done by the ventricle to eject blood) and PE (the work against the viscoelastic properties of the myocardium) can be estimated using the pressure-volume loops (see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>) <disp-formula id="Equ5"><label>5</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \begin{aligned}{} &amp; {\text{EW}} = {\left( {p_{{{\text{peakS}}}} - p_{{{\text{ED}}}} } \right)} \cdot {\left( {V_{{{\text{ED}}}} - V_{{{\text{ES}}}} } \right)} \\ &amp; {\text{PE}} = {\left( {p_{{{\text{peakS}}}} - p_{{{\text{ED}}}} } \right)} \cdot {\left( {V_{{{\text{ES}}}} - V_{{\text{o}}} } \right)} \\ \end{aligned} $$\end{document}</tex-math></disp-formula><fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Ventricular pressure&#x2013;volume loops</p></caption><graphic position="anchor" xlink:href="10558_2007_9039_Fig1_HTML" id="MO9"/></fig>The following symbols are used in Eq. <xref rid="Equ5" ref-type="">5</xref>:<list list-type="bullet"><list-item><p><italic>p</italic><sub>peakS</sub> (Pa) maximal value of the systolic ventricular pressure</p></list-item><list-item><p><italic>p</italic><sub>pED</sub> (Pa) end-diastolic ventricular pressure</p></list-item><list-item><p><italic>V</italic><sub>ED</sub> (m<sup>3</sup>) end-diastolic ventricular volume</p></list-item><list-item><p><italic>V</italic><sub>ES</sub> (m<sup>3</sup>) end-systolic ventricular volume</p></list-item><list-item><p><italic>V</italic><sub>o</sub> (m<sup>3</sup>) ventricular volume at zero pressure (point of intersection on the volume axis, see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>).</p></list-item></list></p>
+        <p>The input data for the numerical model, such as the anthropometrical data of the patients (weight, height) or the heart frequency, were obtained from their physical examination. The various model parameters, such as the calcium, sodium, potassium channel&#x2019;s conductance, were fitted to obtain the stroke volume, blood pressure and pulmonary artery pressure established by the echocardiography examination which was performed during the spontaneous heart rhythm and the AAI, VVI, DDD pacing modes. Each mode was examined for stimulation frequencies 70, 90 and 110&#xA0;beat/min. Each examination was performed 5&#xA0;min after the mode change to ensure steady state. Standard views of the parasternal long-axis view and the Doppler outflow tract across the aortic valve were taken using the Agilent Sonos 5500 ultrasound device. The stroke volume was determined from the left ventricular outflow (aortic valve) diameter measured on the parasternal long-axis view and from the outflow velocity on the aortic valve measured from the apical five-chamber view (Huntsman et&#xA0;al. <xref ref-type="bibr" rid="CR6">1983</xref>; Lewis et&#xA0;al. <xref ref-type="bibr" rid="CR11">1984</xref>) by the Doppler probe. The blood pressure was measured by the sphyngomanometer for each stimulation mode. Then, the pulmonary pressure was measured by the Doppler echocardiography on tricuspid valve.</p>
+        <p>Medical Ethical Committees of the University Hospital Kr&#xE1;lovsk&#xE9; Vinohrady, Prague, approved the study protocol and the informed consent was obtained from all patients.</p>
+      </sec>
+    </sec>
+    <sec id="Sec5">
+      <title>Mathematical model</title>
+      <p>For the modelling purposes, the real cardiovascular system was compartmentalised (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The 24-segment hemodynamical model (pulsating type) of the human cardiovascular system imitating the electrochemical and mechanical activity of the heart muscle was used for the numerical simulation of the myocardial workload changes during the cardiac rhythm pacing.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Scheme of the human cardiovascular system applied to heart workload calculations</p></caption><graphic position="anchor" xlink:href="10558_2007_9039_Fig2_HTML" id="MO1"/></fig></p>
+      <p>The system is approximated by twenty-four compartments, which are characterized by elasticity, resistivity and transfer of the relevant chemical components. The pulsating heart consists of the following compartments: RA&#x2014;Right Atrium, RV&#x2014;Right Ventricle, LA&#x2014;Left Atrium, LV&#x2014;Left Ventricle. The pulmonary circuit includes compartments representing the pulmonary artery (PA), arteries (Paa), capillaries (Pc), postcapillary venules (Pvv), and pulmonary veins (PV). Systemic circuit connects the aorta (Ao), systemic arteries (Saa), capillaries (Sc), head arteries (HA), capillaries (Hc), and head veins (HV). In addition, the systemic circuit includes the coronary circulation with coronary arteries (CA), capillaries (Cc), veins (CV), shunt (CS), and also the bronchial circulation with bronchial arteries (BA), left bronchial veins (BVL), capillaries (BRc), and right bronchial veins (BVR). The compartments of the pulmonary and systemic blood circulation are connected in series with the four pulsating heart compartments.</p>
+      <p>The suggested model describes the one-dimensional flow of incompressible blood through the network of elastic blood vessels. The heart compartments are considered to be made of anisotropic and viscoelastic incompressible material.</p>
+      <p>The mathematical formulation describing the blood flow in the cardiovascular system is based on the mass, energy and momentum balance. The behaviour of the cardiovascular system is described by the heart rate and by its hemodynamical variables, i.e., blood pressure, volume and flow, and by the cardiovascular parameters, such as the compliances and resistances in the corresponding compartments. The blood inertia and physicochemical variables, such as the cardiac action potential and the calcium, sodium and potassium ion concentrations, are included to support more accurate performance of the cardiovascular system. The Beeler-Reuter model (Beeler and Reuter <xref ref-type="bibr" rid="CR2">1977</xref>) describes the behaviour of excitable cardiac cells.</p>
+    </sec>
+    <sec id="Sec6">
+      <title>Discussion and conclusions</title>
+      <p>All experimental results obtained with the investigated patients and simulated values resulting from the applied numerical model were elaborated by the following statistical analysis. We use the null hypothesis to demonstrate the agreement or discrepancy between the values of the myocardial energetic parameters (stroke work index, myocardial oxygen consumption) obtained by the numerical simulation for the three pacing modes.</p>
+      <p>All comparisons of the data were made by the two-tailed Student&#x2019;s test. The statistical analysis was performed with 5% significance level and the degree of freedom d<italic>f</italic>&#xA0;=&#xA0;24. The data for the stroke work index are expressed as the mean value&#xA0;&#xB1;&#xA0;standard deviation.</p>
+      <p>The calculated values of the stroke work index at the three pacing modes are shown in the Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. It was shown that the differences in the compared pacing modes AAI and VVI and the modes DDD and VVI are statistically significant (<italic>P</italic>&#xA0;&lt;&#xA0;0.05). The comparison of the stimulation modes DDD and AAI shows that the differences are statistically insignificant (<italic>P</italic>&#xA0;&gt;&#xA0;0.05).
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Stroke work index calculated by the numerical model of cardiovascular and respiratory system</p></caption><graphic position="anchor" xlink:href="10558_2007_9039_Fig3_HTML" id="MO2"/></fig></p>
+      <p>The calculated values of the myocardial oxygen consumption for three pacing modes are demonstrated in the Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. The myocardial efficiency, which is an important factor for heart performance, changes according to the stimulation mode. The changes resulting from the hemodynamical model fitting by the well-measurable data, i.e., heart rate, stroke volume, systolic pulmonary artery pressure, systolic and diastolic aortic pressure. The conclusion is that the difference between the modes AAI and VVI and the modes DDD and VVI is statistically significant (<italic>P</italic>&#xA0;&lt;&#xA0;0.05). The statistical analysis of the AAI and DDD modes indicates that the compared data are not significantly different (<italic>P</italic>&#xA0;&gt;&#xA0;0.05).
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Myocardial oxygen consumption calculated by the numerical model of cardiovascular system in various pacemaker modes</p></caption><graphic position="anchor" xlink:href="10558_2007_9039_Fig4_HTML" id="MO3"/></fig></p>
+      <p>From the comparison of the obtained numerical values for the stroke work index between the AAI and VVI pacing modes and between DDD and VVI modes it follows that the differences are statistically significant (<italic>P</italic>&#xA0;&lt;&#xA0;0.05). The results are consistent with the published data (Leclercq et&#xA0;al. <xref ref-type="bibr" rid="CR10">1995</xref>; Nielsen et&#xA0;al. <xref ref-type="bibr" rid="CR16">1998</xref>). The results of the statistical analysis for the AAI and DDD stimulation modes show that the differences between the compared groups are statistically insignificant (<italic>P</italic>&#xA0;&gt;&#xA0;0.05). These results are consistent with the clinical observation where can achieve a similar clinical outcome in AAI and DDD modes in this group of patients (Masumoto et&#xA0;al. <xref ref-type="bibr" rid="CR12">2004</xref>). The increase of the stroke work index in AAI or DDD modes was caused by saving the AV synchrony in the patient with the normal left ventricle systolic function. During the AAI pacing mode the implantation of the pacemaker is easier. This fact supports the clinical superiority of the AAI mode against the DDD mode in the sick-sinus group patients with preserved left ventricular function.</p>
+      <p>The results of the comparison of the obtained numerical values for the myocardial oxygen consumption between the AAI and VVI and between DDD and VVI modes show that the difference between the modes is statistically significant (<italic>P</italic>&#xA0;&lt;&#xA0;0.05). The increase of the myocardial oxygen consumption corresponds to the increase of the stroke work index. From the comparison of AAI and DDD modes we can see that the difference is statistically insignificant (<italic>P</italic>&#xA0;&gt;&#xA0;0.05).</p>
+      <p>The insufficient number of the designated subjects gives the limitation of our research study because very strict exclusion criteria exist for the concomitant disease. Many pacemaker patients were not eligible for echocardiography examination because they had hypertension, left ventricle dysfunction or valvular disease.</p>
+      <p>We conclude that mathematical modelling of the cardiovascular system is a recommended method for the estimation of the myocardial energy demand in patients with heart diseases.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This research is supported by the grant of the GACR No. 106/03/1073 and by the project 1M06031 of Ministry of Education, Youth and Sports of Czech Republic.</p>
+      <p><bold>Open Access</bold> This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baller</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Vogt</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lindner</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Lamp</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Holzinger</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kammeier</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Wielepp</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Burchert</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Horstkotte</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Myocardial oxygen consumption and perfusion before and after cardiac resynchronisation therapy: experimental observations and clinical implications</article-title>
+          <source>Eur Heart J (S)</source>
+          <year>2004</year>
+          <volume>6</volume>
+          <fpage>91</fpage>
+          <lpage>97</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Baller D, Vogt J, Lindner O, Lamp B, Holzinger J, Kammeier A, Wielepp P, Burchert W, Horstkotte D. Myocardial oxygen consumption and perfusion before and after cardiac resynchronisation therapy: experimental observations and clinical implications. Eur Heart J (S) 2004;6:91&#x2013;97. </citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Beeler</surname>
+              <given-names>GW</given-names>
+            </name>
+            <name>
+              <surname>Reuter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Reconstruction of the action potential of ventricular myocardial fibres</article-title>
+          <source>J Physiol (Lond)</source>
+          <year>1977</year>
+          <volume>268</volume>
+          <fpage>177</fpage>
+          <lpage>210</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Beeler GW, Reuter H. Reconstruction of the action potential of ventricular myocardial fibres. J Physiol (Lond) 1977;268:177&#x2013;210. <pub-id pub-id-type="pmid">874889</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Connolly</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Kerr</surname>
+              <given-names>CR</given-names>
+            </name>
+            <name>
+              <surname>Gent</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Roberts</surname>
+              <given-names>RS</given-names>
+            </name>
+            <name>
+              <surname>Yusuf</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Gillis</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Sami</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Talajic</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Tang</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Klein</surname>
+              <given-names>GJ</given-names>
+            </name>
+            <name>
+              <surname>Lauc</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Newman</surname>
+              <given-names>DM.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of physiologic pacing versus ventricular pacing on the risk of stroke and death due to cardiovascular causes</article-title>
+          <source>N Engl J Med</source>
+          <year>2000</year>
+          <volume>342</volume>
+          <fpage>1385</fpage>
+          <lpage>91</lpage>
+          <pub-id pub-id-type="doi">10.1056/NEJM200005113421902</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Connolly SJ, Kerr CR, Gent M, Roberts RS, Yusuf S, Gillis AM, Sami MH, Talajic M, Tang AS, Klein GJ, Lauc C, Newman DM. Effects of physiologic pacing versus ventricular pacing on the risk of stroke and death due to cardiovascular causes. N Engl J Med 2000;342:1385&#x2013;91. <pub-id pub-id-type="pmid">10805823</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Galley</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Anselme</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Frohlig</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Savoure</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Defaye</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Reuter</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Mabo</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Amblard</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>David</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Clarifying pacing indications for AAI pacing with ventricular backup</article-title>
+          <source>Europace (S)</source>
+          <year>2004</year>
+          <volume>6</volume>
+          <fpage>126</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Galley D, Anselme F, Frohlig G, Savoure A, Defaye P, Reuter S, Mabo P, Amblard A, David G. Clarifying pacing indications for AAI pacing with ventricular backup. Europace (S) 2004;6:126. </citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gregoratos</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Abrams</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Epstein</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Freedman</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Hazes</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Hlatky</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Kerber</surname>
+              <given-names>RE</given-names>
+            </name>
+            <name>
+              <surname>Naccarelli</surname>
+              <given-names>GV</given-names>
+            </name>
+            <name>
+              <surname>Schoenfeld</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Silka</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Winters</surname>
+              <given-names>SL.</given-names>
+            </name>
+          </person-group>
+          <article-title>ACC/AHA/NASPE 2002 guideline update for Implantation of cardiac pacemakers and antiarrhythmia devices. Summary article: a report of the American College of Cardiology/American heart association task force on practice guidelines (ACC/AHA/NASPE committee to update the 1998 pacemaker gudelines)</article-title>
+          <source>Circulation</source>
+          <year>2004</year>
+          <volume>106</volume>
+          <fpage>2145</fpage>
+          <lpage>61</lpage>
+          <pub-id pub-id-type="doi">10.1161/01.CIR.0000035996.46455.09</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gregoratos G, Abrams J, Epstein AE, Freedman RA, Hazes DL, Hlatky MA, Kerber RE, Naccarelli GV, Schoenfeld MH, Silka MJ, Winters SL. ACC/AHA/NASPE 2002 guideline update for Implantation of cardiac pacemakers and antiarrhythmia devices. Summary article: a report of the American College of Cardiology/American heart association task force on practice guidelines (ACC/AHA/NASPE committee to update the 1998 pacemaker gudelines). Circulation 2004;106:2145&#x2013;61. <pub-id pub-id-type="pmid">12379588</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huntsman</surname>
+              <given-names>LL</given-names>
+            </name>
+            <name>
+              <surname>Stewart</surname>
+              <given-names>DK</given-names>
+            </name>
+            <name>
+              <surname>Barnes</surname>
+              <given-names>SR</given-names>
+            </name>
+            <name>
+              <surname>Franklin</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Colocousis</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Hessel</surname>
+              <given-names>EA.</given-names>
+            </name>
+          </person-group>
+          <article-title>Non-invasive Doppler determination of cardiac output in man. Clinical validation</article-title>
+          <source>Circulation</source>
+          <year>1983</year>
+          <volume>67</volume>
+          <fpage>593</fpage>
+          <lpage>601</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Huntsman LL, Stewart DK, Barnes SR, Franklin SB, Colocousis JS, Hessel EA. Non-invasive Doppler determination of cardiac output in man. Clinical validation Circulation 1983;67:593&#x2013;601. <pub-id pub-id-type="pmid">6821902</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kerckhoffs</surname>
+              <given-names>RCP</given-names>
+            </name>
+            <name>
+              <surname>Faris</surname>
+              <given-names>OP</given-names>
+            </name>
+            <name>
+              <surname>Bovendeerd</surname>
+              <given-names>PHM</given-names>
+            </name>
+            <name>
+              <surname>Prinzen</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Smits</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>McVeigh</surname>
+              <given-names>ER</given-names>
+            </name>
+            <name>
+              <surname>Arts</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Electromechanics of paced left ventricle simulated by straightforward mathematical model: comparison with experiments</article-title>
+          <source>AJP-Heart</source>
+          <year>2005</year>
+          <volume>289</volume>
+          <fpage>1889</fpage>
+          <lpage>1897</lpage>
+          <pub-id pub-id-type="doi">10.1152/ajpheart.00340.2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kerckhoffs RCP, Faris OP, Bovendeerd PHM, Prinzen W, Smits K, McVeigh ER, Arts T. Electromechanics of paced left ventricle simulated by straightforward mathematical model: comparison with experiments. AJP-Heart 2005;289:1889&#x2013;1897. </citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lamas</surname>
+              <given-names>GA</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>KL</given-names>
+            </name>
+            <name>
+              <surname>Sweeney</surname>
+              <given-names>MO</given-names>
+            </name>
+            <name>
+              <surname>Silverman</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Leon</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Yee</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Marinchak</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Flaker</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Schron</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Orav</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Hellkamp</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Greer</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>McAnulty</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Ellenbogen</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ehlert</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Freedman</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Estes</surname>
+              <given-names>NA</given-names>
+            </name>
+            <name>
+              <surname>Greespons</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Goldman</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mode selection trial on sinus node dysfunction. Ventricular or dual-chamber pacing for sinus&#x2014;node dysfunction</article-title>
+          <source>N Engl J Med</source>
+          <year>2002</year>
+          <volume>346</volume>
+          <fpage>1854</fpage>
+          <lpage>62</lpage>
+          <pub-id pub-id-type="doi">10.1056/NEJMoa013040</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lamas GA, Lee KL, Sweeney MO, Silverman R, Leon A, Yee R, Marinchak RA, Flaker G, Schron E, Orav EJ, Hellkamp AS, Greer S, McAnulty J, Ellenbogen K, Ehlert F, Freedman RA, Estes NA, Greespons A, Goldman L. Mode selection trial on sinus node dysfunction. Ventricular or dual-chamber pacing for sinus&#x2014;node dysfunction. N Engl J Med 2002;346:1854&#x2013;62. <pub-id pub-id-type="pmid">12063369</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lamas</surname>
+              <given-names>GA</given-names>
+            </name>
+            <name>
+              <surname>Orav</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Stambler Ellenbogen</surname>
+              <given-names>BS KA</given-names>
+            </name>
+            <name>
+              <surname>Sgarbossa</surname>
+              <given-names>EB</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>SKS</given-names>
+            </name>
+            <name>
+              <surname>Marinchak</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Estes</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Mitchell</surname>
+              <given-names>GF</given-names>
+            </name>
+            <name>
+              <surname>Lieberman</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Mangione</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Goldman</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Griffin</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Maloney</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Patron</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Venditti</surname>
+              <given-names>FJ</given-names>
+            </name>
+            <name>
+              <surname>Wilkoff</surname>
+              <given-names>BL.</given-names>
+            </name>
+          </person-group>
+          <article-title>Quality of life and clinical outcomes on elderly patients treated with ventricular pacing as compared with dual-chamber pacing</article-title>
+          <source>N Engl J Med</source>
+          <year>1998</year>
+          <volume>338</volume>
+          <fpage>1097</fpage>
+          <lpage>104</lpage>
+          <pub-id pub-id-type="doi">10.1056/NEJM199804163381602</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lamas GA, Orav J, Stambler BS Ellenbogen KA, Sgarbossa EB, Huang SKS, Marinchak RA, Estes M, Mitchell GF, Lieberman EH, Mangione CM, Goldman L, Griffin JJ, Maloney JD, Patron CM, Venditti FJ, Wilkoff BL. Quality of life and clinical outcomes on elderly patients treated with ventricular pacing as compared with dual-chamber pacing. N Engl J Med 1998;338:1097&#x2013;104. <pub-id pub-id-type="pmid">9545357</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leclercq</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Gras</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Le Helloco</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Nicol</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Mabo</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Daubert</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hemodynamic importance of preserving the normal sequence of ventricular activation in permanent cardiac pacing</article-title>
+          <source>Am Heart J</source>
+          <year>1995</year>
+          <volume>129</volume>
+          <fpage>1133</fpage>
+          <lpage>41</lpage>
+          <pub-id pub-id-type="doi">10.1016/0002-8703(95)90394-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Leclercq C, Gras D, Le Helloco A, Nicol L, Mabo P, Daubert C. Hemodynamic importance of preserving the normal sequence of ventricular activation in permanent cardiac pacing. Am Heart J 1995;129:1133&#x2013;41. <pub-id pub-id-type="pmid">7754944</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lewis</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>Kuo</surname>
+              <given-names>LC</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>JG</given-names>
+            </name>
+            <name>
+              <surname>Limacher</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Quinones</surname>
+              <given-names>MA.</given-names>
+            </name>
+          </person-group>
+          <article-title>Pulsed Doppler echocardiographic determination of stroke volume and cardiac output: clinical validation of two new methods using the apical window</article-title>
+          <source>Circulation</source>
+          <year>1984</year>
+          <volume>70</volume>
+          <fpage>425</fpage>
+          <lpage>531</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Lewis JF, Kuo LC, Nelson JG, Limacher MC, Quinones MA. Pulsed Doppler echocardiographic determination of stroke volume and cardiac output: clinical validation of two new methods using the apical window. Circulation 1984;70:425&#x2013;531. <pub-id pub-id-type="pmid">6744546</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Masumoto</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Ueda</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Kato</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Usui</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Maseki</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Takagi</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Usui</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Long-term clinical performance of AAI pacing in patients with sick sinus syndrome: a comparison with dual-chamber pacing</article-title>
+          <source>Europace</source>
+          <year>2004</year>
+          <volume>6</volume>
+          <fpage>444</fpage>
+          <lpage>50</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.eupc.2004.05.003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Masumoto H, Ueda Y, Kato R, Usui A, Maseki T, Takagi Y, Usui M. Long-term clinical performance of AAI pacing in patients with sick sinus syndrome: a comparison with dual-chamber pacing. Europace 2004;6:444&#x2013;50. <pub-id pub-id-type="pmid">15294270</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mattioli</surname>
+              <given-names>AV</given-names>
+            </name>
+            <name>
+              <surname>Vivoli</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Mattioli</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of pacing modalities on the incidence of atrial fibrillation on patients without prior atrial fibrillation. A prospective study</article-title>
+          <source>Eur Heart J</source>
+          <year>1998</year>
+          <volume>19</volume>
+          <fpage>282</fpage>
+          <lpage>6</lpage>
+          <pub-id pub-id-type="doi">10.1053/euhj.1997.0616</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mattioli AV, Vivoli D, Mattioli G. Influence of pacing modalities on the incidence of atrial fibrillation on patients without prior atrial fibrillation. A prospective study. Eur Heart J 1998;19:282&#x2013;6. <pub-id pub-id-type="pmid">9519322</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Montgomery</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Hamilton</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Ianuzzo</surname>
+              <given-names>CD.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of different rates of cardiac pacing on rat myocardial energy status</article-title>
+          <source>Mol Cell Biochem</source>
+          <year>1991</year>
+          <volume>102</volume>
+          <fpage>95</fpage>
+          <lpage>100</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF00234567</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Montgomery C, Hamilton N, Ianuzzo CD. Effects of different rates of cardiac pacing on rat myocardial energy status. Mol Cell Biochem 1991;102:95&#x2013;100. <pub-id pub-id-type="pmid">1881388</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moss</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Zareba</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Hall</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Klein</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Wilber</surname>
+              <given-names>DJ</given-names>
+            </name>
+            <name>
+              <surname>Cannom</surname>
+              <given-names>DS</given-names>
+            </name>
+            <name>
+              <surname>Daubert</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Higgins</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>MW</given-names>
+            </name>
+            <name>
+              <surname>Andrews</surname>
+              <given-names>ML.</given-names>
+            </name>
+          </person-group>
+          <article-title>Prophylactic implantation of a defibrillator in patients with myocardial infarction and reduced ejection fraction</article-title>
+          <source>N Engl J Med</source>
+          <year>2002</year>
+          <volume>346</volume>
+          <fpage>877</fpage>
+          <lpage>83</lpage>
+          <pub-id pub-id-type="doi">10.1056/NEJMoa013474</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Moss AJ, Zareba W, Hall WJ, Klein H, Wilber DJ, Cannom DS, Daubert JP, Higgins SL, Brown MW, Andrews ML. Prophylactic implantation of a defibrillator in patients with myocardial infarction and reduced ejection fraction. N Engl J Med 2002;346:877&#x2013;83. <pub-id pub-id-type="pmid">11907286</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nielsen</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Andersen</surname>
+              <given-names>HR</given-names>
+            </name>
+            <name>
+              <surname>Thomsen</surname>
+              <given-names>PEB</given-names>
+            </name>
+            <name>
+              <surname>Thuesen</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Mortensen</surname>
+              <given-names>PT</given-names>
+            </name>
+            <name>
+              <surname>Vesterlund</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>AK.</given-names>
+            </name>
+          </person-group>
+          <article-title>Heart failure and echocardiographic changes during long-term follow up of patients with sick sinus syndrome randomised to single-chamber atrial or ventricular pacing</article-title>
+          <source>Circulation</source>
+          <year>1998</year>
+          <volume>97</volume>
+          <fpage>987</fpage>
+          <lpage>95</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Nielsen JC, Andersen HR, Thomsen PEB, Thuesen L, Mortensen PT, Vesterlund T, Pedersen AK. Heart failure and echocardiographic changes during long-term follow up of patients with sick sinus syndrome randomised to single-chamber atrial or ventricular pacing. Circulation 1998;97:987&#x2013;95. <pub-id pub-id-type="pmid">9529267</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Portman</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Ning</surname>
+              <given-names>XH.</given-names>
+            </name>
+          </person-group>
+          <article-title>Myocardial energy metabolism on the newborn lamb on vivo during pacing-induced changes on oxygen consumption</article-title>
+          <source>Pediatr Res</source>
+          <year>1995</year>
+          <volume>37</volume>
+          <fpage>182</fpage>
+          <lpage>8</lpage>
+          <pub-id pub-id-type="doi">10.1203/00006450-199502000-00010</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Portman MA, Ning XH. Myocardial energy metabolism on the newborn lamb on vivo during pacing-induced changes on oxygen consumption. Pediatr Res 1995;37:182&#x2013;8. <pub-id pub-id-type="pmid">7731755</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>P&#x159;evorovsk&#xE1;</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Mar&#x161;&#xED;k</surname>
+              <given-names>F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Numerical simulation of hemodynamic and physiological responses of human cardiovascular and respiratory system under drugs administration</article-title>
+          <source>Cardiovasc Eng Int J</source>
+          <year>2004</year>
+          <volume>4</volume>
+          <fpage>295</fpage>
+          <lpage>304</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00270-005-8755-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">P&#x159;evorovsk&#xE1; S, Mar&#x161;&#xED;k F. Numerical simulation of hemodynamic and physiological responses of human cardiovascular and respiratory system under drugs administration. Cardiovasc Eng Int J 2004;4:295&#x2013;304. </citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Suga</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>Ventricular energetics</article-title>
+          <source>Physiol Rev</source>
+          <year>1990</year>
+          <volume>70</volume>
+          <issue>2</issue>
+          <fpage>247</fpage>
+          <lpage>77</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Suga H. Ventricular energetics. Physiol Rev 1990;70(2):247&#x2013;77. <pub-id pub-id-type="pmid">2181496</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Moss</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Thisted</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Predictor of body surface area</article-title>
+          <source>J Clin Anesth</source>
+          <year>1992</year>
+          <volume>4</volume>
+          <issue>1</issue>
+          <fpage>4</fpage>
+          <lpage>10</lpage>
+          <pub-id pub-id-type="doi">10.1016/0952-8180(92)90111-D</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wang Y, Moss J, Thisted R. Predictor of body surface area. J Clin Anesth 1992;4(1):4&#x2013;10. <pub-id pub-id-type="pmid">1540367</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wilkoff</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Cook</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Epstein</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Greene</surname>
+              <given-names>HL</given-names>
+            </name>
+            <name>
+              <surname>Hallstrom</surname>
+              <given-names>AP</given-names>
+            </name>
+            <name>
+              <surname>Hsia</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Kutalek</surname>
+              <given-names>SP</given-names>
+            </name>
+            <name>
+              <surname>Sharma</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dual chamber and VVI implantable defibrillator trial investigators</article-title>
+          <source>JAMA</source>
+          <year>2002</year>
+          <volume>228</volume>
+          <fpage>3115</fpage>
+          <lpage>23</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Wilkoff BL, Cook JR, Epstein AE, Greene HL, Hallstrom AP, Hsia H, Kutalek SP, Sharma A. Dual chamber and VVI implantable defibrillator trial investigators. JAMA 2002;228:3115&#x2013;23. <pub-id pub-id-type="pmid">12495391</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Winters</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Packer</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Marchlinski</surname>
+              <given-names>FE</given-names>
+            </name>
+            <name>
+              <surname>Lazzara</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Cannom</surname>
+              <given-names>DS</given-names>
+            </name>
+            <name>
+              <surname>Breithardt</surname>
+              <given-names>GE</given-names>
+            </name>
+            <name>
+              <surname>Wilber</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Camm</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Ruskin</surname>
+              <given-names>JN.</given-names>
+            </name>
+          </person-group>
+          <article-title>Consensus statement on indications, guidelines for use and recommendations for follow-up of implantable cardioverter defibrillators</article-title>
+          <source>PACE</source>
+          <year>2001</year>
+          <volume>24</volume>
+          <fpage>262</fpage>
+          <lpage>9</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Winters SL, Packer DL, Marchlinski FE, Lazzara R, Cannom DS, Breithardt GE, Wilber DA, Camm AJ, Ruskin JN. Consensus statement on indications, guidelines for use and recommendations for follow-up of implantable cardioverter defibrillators. PACE 2001;24:262&#x2013;9. <pub-id pub-id-type="pmid">11270713</pub-id></citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn id="Fn1">
+        <label>1</label>
+        <p><ext-link ext-link-type="uri" xlink:href="http://www.lidco-ir.co.uk/html/clinical/nhp.asp">http://www.lidco-ir.co.uk/html/clinical/nhp.asp</ext-link>, Normal Hemodynamic Parameters.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

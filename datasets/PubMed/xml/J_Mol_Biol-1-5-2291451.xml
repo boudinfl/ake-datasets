@@ -1,0 +1,2994 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Mol Biol</journal-id>
+      <journal-id journal-id-type="iso-abbrev">J. Mol. Biol</journal-id>
+      <journal-title-group>
+        <journal-title>Journal of Molecular Biology</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0022-2836</issn>
+      <issn pub-type="epub">1089-8638</issn>
+      <publisher>
+        <publisher-name>Elsevier</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18022190</article-id>
+      <article-id pub-id-type="pmc">2291451</article-id>
+      <article-id pub-id-type="publisher-id">S0022-2836(07)01300-9</article-id>
+      <article-id pub-id-type="doi">10.1016/j.jmb.2007.09.088</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Plasticity Within the Obligatory Folding Nucleus of an Immunoglobulin-like Domain</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Lappalainen</surname>
+            <given-names>Ilkka</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Hurley</surname>
+            <given-names>Michael G.</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Clarke</surname>
+            <given-names>Jane</given-names>
+          </name>
+          <email>jc162@cam.ac.uk</email>
+          <xref rid="cor1" ref-type="corresp">&#x204E;</xref>
+        </contrib>
+      </contrib-group>
+      <aff>University of Cambridge Department of Chemistry, MRC Centre for Protein
+Engineering, Lensfield Rd, Cambridge CB2 1EW, UK</aff>
+      <author-notes>
+        <corresp id="cor1"><label>&#x204E;</label>Corresponding author. <email>jc162@cam.ac.uk</email></corresp>
+      </author-notes>
+      <pub-date pub-type="pmc-release">
+        <day>11</day>
+        <month>1</month>
+        <year>2008</year>
+      </pub-date>
+      <!-- PMC Release delay is 0 months and 0 days and was based on <pub-date
+						pub-type="ppub">.-->
+      <pub-date pub-type="ppub">
+        <day>11</day>
+        <month>1</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>375</volume>
+      <issue>2</issue>
+      <fpage>547</fpage>
+      <lpage>559</lpage>
+      <history>
+        <date date-type="received">
+          <day>11</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>25</day>
+          <month>9</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>28</day>
+          <month>9</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2008 Elsevier Ltd.</copyright-statement>
+        <copyright-year>2007</copyright-year>
+        <copyright-holder>Elsevier Ltd</copyright-holder>
+        <license xlink:href="https://creativecommons.org/licenses/by/3.0/">
+          <license-p>Open Access under <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</ext-link> license</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>A number of &#x3B2;-sandwich immunoglobulin-like domains have been shown
+to fold using a set of structurally equivalent residues that form a folding
+nucleus deep within the core of the protein. Formation of this nucleus is
+sufficient to establish the complex Greek key topology of the native state.
+These nucleating residues are highly conserved within the immunoglobulin
+superfamily, but are less well conserved in the fibronectin type III (fnIII)
+superfamily, where the requirement is simply to have four interacting
+hydrophobic residues. However, there are rare examples where this nucleation
+pattern is absent. In this study, we have investigated the folding of a novel
+member of the fnIII superfamily whose nucleus appears to lack one of the four
+buried hydrophobic residues. We show that the folding mechanism is unaltered,
+but the folding nucleus has moved within the hydrophobic core.</p>
+      </abstract>
+      <kwd-group>
+        <title>Abbreviations used</title>
+        <kwd>Ig, immunoglobulin</kwd>
+        <kwd>fnIII, fibronectin type III</kwd>
+        <kwd>CAfn2, the second fnIII domain of chitin A1 from <italic>Bacillus
+circulans</italic></kwd>
+        <kwd>TNfn3, the third fnIII domain of human fibronectin</kwd>
+      </kwd-group>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>folding nucleus</kwd>
+        <kwd>protein folding</kwd>
+        <kwd>phi-value analysis</kwd>
+        <kwd>Ig domain</kwd>
+      </kwd-group>
+    </article-meta>
+    <notes>
+      <p>Edited by K. Kuwajima</p>
+    </notes>
+  </front>
+  <body>
+    <sec sec-type="intro">
+      <title>Introduction</title>
+      <p>Studies of structurally related proteins have clearly indicated that for
+many proteins the folding mechanism is determined primarily by the native state
+topology.<xref rid="bib1 bib2" ref-type="bibr"><sup>1,2</sup></xref> This is evident from comparative &#x3A6;-value analyses of proteins
+that share similar folds but are very different in sequence. Such studies
+include representatives from all protein classes; all-&#x3B1; proteins,<xref rid="bib3 bib4 bib5 bib6 bib7 bib8 bib9" ref-type="bibr"><sup>3&#x2013;9</sup></xref> all-&#x3B2; proteins,<xref rid="bib10 bib11 bib12 bib13 bib14 bib15 bib16 bib17 bib18 bib19 bib20 bib21 bib22" ref-type="bibr"><sup>10&#x2013;22</sup></xref> and mixed &#x3B1;/&#x3B2; proteins.<xref rid="bib23 bib24 bib25 bib26 bib27 bib28" ref-type="bibr"><sup>23&#x2013;28</sup></xref> The folding mechanisms of these proteins range from purely
+hierarchical, where secondary structural elements form before any tertiary
+structure, to pure nucleation-condensation, where secondary and tertiary
+structure form concomitantly.<xref rid="bib29" ref-type="bibr"><sup>29</sup></xref> A study of representative members of the homeodomain superfamily
+family has suggested that their folding mechanisms are dependent on inherent
+secondary structural propensity, and the authors propose that all folding
+mechanisms are in fact variations of the same theme:<xref rid="bib3" ref-type="bibr"><sup>3</sup></xref> as the propensity for forming secondary structures decreases,
+the folding mechanism shifts from pure hierarchical to polarized transition
+states, and ultimately to the classical nucleation-condensation mechanism first
+shown for CI2.<xref rid="bib30" ref-type="bibr"><sup>30</sup></xref> Separate investigations have suggested that a folding nucleus
+consists of obligatory and critical components: the specific interactions
+necessary to establish the correct topology form first, followed by a subset of
+surrounding residues that provide the critical stabilising
+interactions.<xref rid="bib31 bib32 bib33" ref-type="bibr"><sup>31&#x2013;33</sup></xref></p>
+      <p>As part of the &#x201C;fold approach&#x201D; we have studied the folding of a number of
+proteins with an Ig-like fold,<xref rid="bib16 bib17 bib18 bib34 bib35 bib36" ref-type="bibr"><sup>16&#x2013;18,34&#x2013;36</sup></xref> all of which are composed of two anti-parallel &#x3B2;-sheets packed
+against each other. The deep hydrophobic core is always formed from the packing
+of the four central B, C, E and F &#x3B2;-strands,<xref rid="bib37" ref-type="bibr"><sup>37</sup></xref> but the number and position of the edge strands varies between
+the superfamilies.<xref rid="bib38" ref-type="bibr"><sup>38</sup></xref> Although proteins in different superfamilies share the same
+fold, they are apparently unrelated in sequence and are found in proteins with a
+wide variety of functions. The stabilities of the Ig-like proteins studied to
+date range from about 1&#xA0;kcal mol<sup>&#x2212;&#xA0;1</sup> to 9&#xA0;kcal
+mol<sup>&#x2212;&#xA0;1</sup>, and the folding rate
+constants vary by six orders of magnitude. However, there is a correlation
+between folding rate and thermodynamic stability, which suggests that the
+interactions that are critical in stabilising the fold also govern the folding
+process.<xref rid="bib34" ref-type="bibr"><sup>34</sup></xref></p>
+      <p>All members of the fold studied to date fold <italic>via</italic> a
+nucleation-condensation mechanism where the obligatory folding nucleus comprises
+a set of structurally equivalent buried hydrophobic residues in the B, C, E and
+F-strands that form a &#x201C;ring&#x201D; of interactions in the core (<xref rid="fig1" ref-type="fig">Figure 1</xref>). Early
+packing of the residues, which are distant in sequence, ensures formation of the
+correct native state topology.<xref rid="bib35 bib36" ref-type="bibr"><sup>35,36</sup></xref> The critical nucleus surrounds this obligatory nucleus, but the
+degree of structure formation varies between different proteins.</p>
+      <p>The residues that form the obligatory folding nucleus are highly conserved
+within immunoglobulin domains but are conserved only in terms of residue type in
+fibronectin type III (fnIII) domains. However, there are rare examples of
+proteins that appear to have a disparate nucleation pattern. Here, we have
+identified a fnIII domain in which one of the hydrophobic residues in the
+conserved folding nucleus has been replaced by a surface polar residue, and we
+ask how the folding mechanism has been affected. An extensive protein
+engineering &#x3A6;-value analysis reveals that the folding mechanism is unaltered,
+but that a spatially different set of core residues is used to form the
+obligatory folding nucleus, where interactions within each sheet establish the
+correct hydrogen bond registry between the core &#x3B2;-strands. Subsequent
+interactions between two such pairs are able to bring the &#x3B2;-sheets together and
+set up the complex Greek key topology.</p>
+    </sec>
+    <sec sec-type="results">
+      <title>Results</title>
+      <sec>
+        <title>Residue conservation within the folding nucleus of fnIII
+domains</title>
+        <p>A non-redundant multiple sequence alignment from Pfam was used to
+analyse the residue conservation in the putative folding nucleus of fnIII
+domains.<xref rid="bib39" ref-type="bibr"><sup>39</sup></xref> These nucleation positions were identified through
+comparison with the third fnIII domain from human tenascin (TNfn3), which
+has been studied extensively in our laboratory. In most fnIII domains (73%),
+all four residues in the proposed folding nucleus positions are hydrophobic.
+Further analysis reveals that where there is a polar residue in one of these
+folding positions, it is almost invariably in the C or E strand, and these
+hydrophilic residues are usually arginine or lysine. These can act as
+hydrophobic residues, since the long aliphatic side-chains can traverse the
+core and allow the charged terminus to reside on the surface of the
+protein.<xref rid="bib40" ref-type="bibr"><sup>40</sup></xref> Small hydrophilic residues, such as asparagine or aspartate,
+are found very rarely (only in &#x223C;&#xA0;3% of all cases).</p>
+        <p>Most fnIII domains (65%) have a single aromatic residue in the proposed
+folding nucleus. Analysis of the distribution of aromatic residues in the
+four obligatory folding nucleus positions shows clearly that aromatic amino
+acids are located preferably within the C&#x2013;F sheet (<xref rid="fig2" ref-type="fig">Figure 2</xref>).
+Furthermore, the type of aromatic residue present is affected by the solvent
+accessibility of the &#x3B2;-strand: the C-strand position is partly
+solvent-accessible, and hence the majority of aromatic residues occurring
+within this strand are tyrosine (thereby allowing hydrogen bonding of the
+hydroxyl group with solvent molecules). In contrast, the F-strand position
+is deep within the core and phenylalanine is almost always the aromatic
+residue of choice. Approximately 20% of the sequences have more than one
+aromatic residue in the folding nucleus, and again these residues are almost
+exclusively located in the C&#x2013;F sheet (86% of all such sequences). This
+asymmetry is likely caused by the presence of an adjacent conserved
+tryptophan in the B-strand that is essential for stability but not involved
+in the folding nucleus.<xref rid="bib16 bib18" ref-type="bibr"><sup>16,18</sup></xref> Interestingly, about 15% of the fnIII domains appear to
+fold without any aromatic residues at the supposed folding positions,
+suggesting that a large side-chain is not crucial for the formation of the
+obligatory nucleus.</p>
+      </sec>
+      <sec>
+        <title>Selection of CAfn2 as a candidate</title>
+        <p>All known fnIII structures were surveyed to find a candidate protein
+that was missing a hydrophobic residue at one of the four putative folding
+positions. Only one candidate protein was identified, the second fnIII
+domain in chitin A1 from <italic>Bacillus circulans</italic> (CAfn2),
+which has a surface-exposed asparagine in the putative nucleus position in
+the C-strand. It has an aromatic residue in the F-strand folding position
+(Phe66).<xref rid="bib41" ref-type="bibr"><sup>41</sup></xref></p>
+        <p>In this work we intended to compare the folding of CAfn2 with TNfn3, as
+this is the most extensively studied &#x201C;typical&#x201D; fnIII domain. The structure
+of CAfn2 was superimposed on the structure of TNfn3 to reveal a RMSD of only
+1.7&#xA0;&#xC5; over all structurally equivalent positions (69 residues), even though
+the two proteins have just 13% sequence identity (<xref rid="app1" ref-type="sec">Supplementary Data Figure 1</xref>). The major differences are
+restricted to the loops and turns, which are different in length in the two
+proteins. CAfn2 has the same Greek key topology as all other fnIII domains,
+(<xref rid="fig1" ref-type="fig">Figure 1</xref>), and possesses both
+the highly conserved Trp residue in the B-strand and the conserved tyrosine
+corner motif (<xref rid="app1" ref-type="sec">Supplementary Figure
+1</xref>).<xref rid="bib42" ref-type="bibr"><sup>42</sup></xref> A comparison of the structures of CAfn2 and TNfn3 reveals
+that the lengths of the highly conserved EF-loop and the AB-turn are
+identical in these proteins, whereas the rest of the loops show some
+variation. Most notably the C and C&#x2032;-strands are shorter in CAfn2 and are
+joined by a short tight turn (<xref rid="fig1 fig3" ref-type="fig">Figures 1 and
+3</xref>). The packing
+interactions are almost identical in the two proteins, with the majority of
+the contacts being made within the same sheet, and the interactions between
+sheets occurring in &#x201C;layers&#x201D;.<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref> To help visualize the interactions that occur within the
+proteins, all residue positions are described according to both the &#x3B2;-strand
+and the core layer in which they reside (<xref rid="fig3" ref-type="fig">Figure
+3</xref>).</p>
+        <p>Importantly, however, inspection of the supposed obligatory folding
+nucleus of CAfn2 clearly shows that the C-strand residue, N40, does not pack
+against the other putative nucleus residues (<xref rid="fig1" ref-type="fig">Figure 1</xref>). How, therefore, does this domain
+fold?</p>
+      </sec>
+      <sec>
+        <title>Characterization of wild-type CAfn2</title>
+        <p>The equilibrium stabilities of wild-type CAfn2 and all its mutant
+proteins were determined through the use of standard denaturation curves fit
+to a two-state equation.<xref rid="bib43" ref-type="bibr"><sup>43</sup></xref> From a number of repeated measurements of wild-type CAfn2
+the free energy of unfolding (&#x394;<italic>G</italic><sub>D&#x2013;N</sub>)
+was estimated to be 6.7(&#xA0;&#xB1;&#xA0;0.3) kcal
+mol<sup>&#x2212;&#xA0;1</sup> at pH 5.0 and 25&#xA0;&#xB0;C.</p>
+        <p>Kinetic studies reveal a single unfolding phase, but two refolding
+phases. Since the slower phase accounts for less than 15% of the total
+amplitude, and is apparently independent of the concentration of denaturant,
+it was attributed to proline isomerisation. Both arms of the chevron plot
+are linear (<xref rid="fig4" ref-type="fig">Figure
+4</xref>), and the
+&#x3B2;<sub>T</sub> for wild-type CAfn2 is estimated to be 0.56. This is
+similar to that of TNfn3,<xref rid="bib44" ref-type="bibr"><sup>44</sup></xref> indicating that the two transition state structures are of a
+similar compactness.</p>
+      </sec>
+      <sec>
+        <title>Effect of mutations</title>
+        <p>Using the &#x3A6;-value analysis of TNfn3 as a basis, a total of 23
+non-disruptive mutations were made throughout the CAfn2 protein. Where
+possible, all mutations were conservative deletions.<xref rid="bib45" ref-type="bibr"><sup>45</sup></xref> Contacts lost upon mutation are given in <xref rid="tbl1" ref-type="table">Table 1</xref>. The
+difference in free energy between wild-type and mutant
+(&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub>) was calculated using an
+average <italic>m</italic>-value,
+&lt;<italic>m</italic>&gt;, of 1.15(&#xB1;&#xA0;0.02)
+kcal mol<sup>&#x2212;&#xA0;1</sup> M<sup>&#x2212;&#xA0;1</sup>. It has been shown that <italic>m-</italic>values are
+hard to determine with accuracy (the range of
+<italic>m</italic>-values observed is typical for that observed in
+most large-scale protein engineering studies) so that use of an average
+<italic>m</italic>-value reduces the error in
+&#x394;&#x394;<italic>G</italic>.<xref rid="bib46" ref-type="bibr"><sup>46</sup></xref> Most mutations are destabilizing but
+&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub> values range between
+&#x2212;&#xA0;1.5&#xA0;kcal mol<sup>&#x2212;&#xA0;1</sup>
+and +&#xA0;6.0&#xA0;kcal mol<sup>&#x2212;&#xA0;1</sup>.</p>
+        <p>Chevron plots for all mutants are shown in <xref rid="fig4" ref-type="fig">Figure 4</xref>, with the kinetic data given in <xref rid="tbl2" ref-type="table">Table 2</xref>.
+Using these data, &#x3A6;-values were calculated from refolding data at 0&#xA0;M
+denaturant. Note that for three highly destabilized proteins (L22A, Y36L and
+L58A) there were too few data points in the refolding arm to determine the
+gradient (<italic>m</italic><sub>kf</sub>) accurately. In these
+cases an average <italic>m</italic><sub>kf</sub> (1.06
+M<sup>&#x2212;&#xA0;1</sup>) was used to fit the data.
+Note that this has no effect on the final &#x3A6;-value determined at 0&#xA0;M
+denaturant. Only one mutant, V38A, has a folding
+<italic>m-</italic>value that is significantly different from this
+mean value.</p>
+        <p>Several mutant proteins exhibit roll-over in the unfolding arm, and
+some mutants have increased <italic>m</italic><sub>ku</sub>
+values. Such behavior in unfolding has several possible explanations. It has
+been ascribed to &#x201C;Hammond&#x201D; behaviour, where there is a broad transition
+state barrier,<xref rid="bib47" ref-type="bibr"><sup>47</sup></xref> or to population of a high-energy intermediate.<xref rid="bib48" ref-type="bibr"><sup>48</sup></xref> We do not have sufficient data to distinguish these two
+possibilities and, since there is no roll-over in the wild-type protein, it
+is not possible to determine &#x3A6;-values for the &#x201C;late&#x201D; transition state using
+unfolding data. However, the model used has no effect on analysis of the
+&#x201C;early&#x201D; transition state, at 0&#xA0;M denaturant.<xref rid="bib49" ref-type="bibr"><sup>49</sup></xref></p>
+      </sec>
+      <sec>
+        <title>Structure of the transition state</title>
+        <p>A number of positions in each &#x3B2;-strand of CAfn2 were probed using
+&#x3A6;-value analysis. &#x3A6; is a measure of the extent of structure at a given
+residue in the transition state (&#x2021;). A &#x3A6;-value of 1 indicates that the
+interactions are fully formed in &#x2021;, whereas a &#x3A6;-value of 0 indicates that
+the structure is as unfolded in &#x2021; as in the denatured state. The precise
+interpretation of fractional &#x3A6;-values is ambiguous but is usually taken to
+mean that the residue is partly structured in &#x2021;.<xref rid="bib50" ref-type="bibr"><sup>50</sup></xref> However, it is generally accepted that, particularly when
+comparing homologous proteins, the best approach is to look at patterns of
+&#x3A6;-values rather than considering the absolute values of individual
+residues.<xref rid="bib2" ref-type="bibr"><sup>2</sup></xref></p>
+        <p>The CAfn2 &#x3A6;-values range from 0 to 0.5, indicating that none of the
+positions analyzed is completely structured at the transition state
+(<xref rid="tbl2" ref-type="table">Table 2</xref>). In general, the
+&#x3A6;-values in the A and G-strands are close to 0, while those in the central
+B, C, C&#x2032;, E and F&#xA0;&#x3B2;-strands are higher, and the &#x3A6;-values in these central
+strands are higher in the central layers of the core than at the extremes
+(<xref rid="fig3" ref-type="fig">Figure 3</xref>), as observed in
+TNfn3,<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref> the tenth fnIII domain of fibronectin (FNfn10)<xref rid="bib16" ref-type="bibr"><sup>16</sup></xref> and the titin immunoglobulin domain TI I27.<xref rid="bib17" ref-type="bibr"><sup>17</sup></xref> The &#x3A6;-values were classified into low (&#x3A6;&#xA0;&#x2264;&#xA0;0.2), medium (0.2&#xA0;&lt;&#xA0;&#x3A6;&#xA0;&lt;&#xA0;0.4) and high (&#x3A6;&#xA0;&#x2265;&#xA0;0.4)
+classes. These &#x3A6;-values are mapped onto the CAfn2 structure in <xref rid="fig5" ref-type="fig">Figure 5</xref>.</p>
+      </sec>
+      <sec>
+        <sec>
+          <title>A and G-strands</title>
+          <p>All mutations in the A and G-strands gave low &#x3A6;-values, indicating
+very little structure formation in these strands in the transition state
+(<xref rid="tbl2" ref-type="table">Table 2</xref>; <xref rid="fig3" ref-type="fig">Figures 3 and</xref>
+<xref rid="fig4" ref-type="fig">4</xref>). Both mutated sites in the
+A-strand, L10A(A3) and S12A(A2), pack onto the neighbouring B-strand,
+whilst inter-sheet interactions are formed with residues from the F and
+G-strands (<xref rid="tbl1" ref-type="table">Table 1</xref>). The
+&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub> for the S12A(A2)
+mutation is too low for a reliable &#x3A6;-value to be determined. The three
+residues probed in the G-strand, S81(G4), V84(G3) and V86(G2), make
+interactions mainly with residues from the A and F-strands
+(<xref rid="tbl1" ref-type="table">Table 1</xref>).</p>
+        </sec>
+        <sec>
+          <title>Strands B, C, E and F</title>
+          <p>All core positions in CAfn2 were mutated, with the exception of W24
+in the B-strand. The distribution of &#x3A6;-values reveals that the
+hydrophobic core is only partially formed in the transition state
+(<xref rid="tbl2" ref-type="table">Table 2</xref>; <xref rid="fig3" ref-type="fig">Figures 3 and</xref>
+<xref rid="fig4" ref-type="fig">4</xref>). The highest values occur
+at positions V38(C4) and I55(E3), with moderate &#x3A6;-values at four other
+positions: I20(B2), L22(B3), V68(F4) and A70(F5).</p>
+        </sec>
+        <sec>
+          <title>C&#x2032;-strand</title>
+          <p>The C&#x2032;-strand is connected by two short loops to the central C and
+E-strands. Three of the four mutations within this strand, L44A(C&#x2032;3),
+T46A(C&#x2032;4), and V48A(C&#x2032;5), have high &#x3A6;-values (<xref rid="tbl2" ref-type="table">Table 2</xref>; <xref rid="fig3" ref-type="fig">Figures 3 and</xref>
+<xref rid="fig4" ref-type="fig">4</xref>). T46 and V48 interact
+mainly with the buried residues from the C and E-strands, whereas the
+L44 contacts are limited to residues within the C and C&#x2032;-strands
+(<xref rid="tbl1" ref-type="table">Table 1</xref>).</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec sec-type="discussion">
+      <title>Discussion</title>
+      <sec>
+        <title>CAfn2 folds by a nucleation-condensation mechanism</title>
+        <p>There has been much discussion of folding mechanisms in recent years.
+The two &#x201C;extremes&#x201D; are represented by the framework model, where local
+secondary structure forms before tertiary structure, and
+nucleation-condensation, where secondary structure and tertiary structure
+form concomitantly. Such extremes have distinct patterns of &#x3A6;-values. In the
+framework model, &#x3A6;-values will fall into two groups, one set close to 1 and
+the other close to 0. This has been termed a polarised transition state. In
+a nucleation-condensation mechanism, the transition state structure will be
+more diffuse, involving most of the protein, and &#x3A6;-values will all be
+generally between 1 and zero. Furthermore, in the nucleation condensation
+mechanism, the pattern of &#x3A6;-values is generally distinctive, with a subset
+of residues having slightly higher &#x3A6;-values, with &#x3A6;-values gradually
+becoming lower as structure condenses around the early &#x201C;nucleus&#x201D;. The
+pattern of &#x3A6;-values shows CAfn2 to have a diffuse nucleus, with two-thirds
+of the residues having &#x3A6;-values between 0.10 and 0.45. Moreover, these are
+arranged in the structure as one would predict from a
+nucleation-condensation pattern, with higher &#x3A6;-values at the centre of the
+core, becoming lower towards the edges of the molecule. This suggests
+strongly that CAfn2 folds, as do other Ig-like proteins,
+<italic>via</italic> a nucleation-condensation folding mechanism.
+However, again like other Ig-like proteins, there is a significant number of
+residues, in the peripheral A and G-strands, and in loops that have &#x3A6;-values
+close to 0, suggesting that in the final stage of folding these peripheral
+strands and loops pack onto the central region of the protein.</p>
+      </sec>
+      <sec>
+        <title>Identification of the obligate (embryonic) folding nucleus</title>
+        <p>Oliveberg and co-workers have suggested that residues that constitute
+the transition state for folding in a nucleation-condensation mechanism
+might be divided into two sets.<xref rid="bib31 bib32" ref-type="bibr"><sup>31,32</sup></xref> The first set of residues make up the &#x201C;embryonic&#x201D; or
+obligate folding nucleus, defined as the set of primary contacts that are
+obliged to form to establish the topology of the protein. The second set is
+the residues that pack onto this embryonic nucleus forming the &#x201C;critical
+contact layer&#x201D;, providing sufficient interactions to drive the folding
+process downhill. Note that residues that form the embryonic nucleus have to
+form a network of contacts that establish the topology of the protein, but
+that residues in the critical contact layer may contribute significantly
+towards stabilising the transition state for folding. Identifying the most
+likely obligate folding nucleus from a pattern of &#x3A6;-values is non-trivial,
+especially for complex Greek key structures. This has been discussed in
+detail.<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref> In summary, it is not possible simply to &#x201C;pick&#x201D; residues
+with the highest &#x3A6;-values as being those that form the folding nucleus: one
+also has to consider the packing of the residues. In TNfn3, as is observed
+here for CAfn2, residues in the B-strand have generally low &#x3A6;-values
+compared to the &#x3A6;-values in the other central &#x3B2;-strands. This does not
+necessarily mean that the residues in the B-strand are less important for
+folding. Residue L22(B3) in CAfn2, for example, forms about half of its
+inter-strand contacts with residues in the A and G-strands, which have
+&#x3A6;-values of &#x223C;&#xA0;0. Thus, the contacts with the C (V38), E
+(A53 and I55) and F (F66 and V68) strands must be more formed than the
+moderate &#x3A6;-value would indicate. Similarly, the high &#x3A6;-values in the
+C&#x2032;-strand probably reflect the fact that the residues in this strand make
+the vast majority of their tertiary contacts with residues in the C and
+E-strands, which are themselves partially formed. In TNfn3 it was suggested
+that this C&#x2032;-strand is &#x201C;obliged&#x201D; to fold when the adjoining C and E-strands
+pack together. Thus, we would now, following the nomenclature suggested by
+the Oliveberg model, assign residues in the C&#x2032;-strand to the critical
+contact layer and not to the obligatory embryonic nucleus.</p>
+        <p>For TNfn3, the residues with the highest &#x3A6;-value in the B, C, E and
+F-strands were initially chosen as putative nucleus residues. Examination of
+the structure showed that these residues are all found in the same core
+layer, and that they pack to form a &#x201C;ring&#x201D; of interactions in the core of
+the protein. It was suggested that this &#x201C;obligatory&#x201D; nucleus alone was
+sufficient to establish the topology of the native protein. This picture of
+the folding transition state was confirmed by subsequent restrained
+molecular dynamics simulations.<xref rid="bib36" ref-type="bibr"><sup>36</sup></xref> A similar method has been used to identify the folding
+nucleus in a structurally related immunoglobulin domain.<xref rid="bib17 bib35" ref-type="bibr"><sup>17,35</sup></xref></p>
+        <p>Using the same strategy, the &#x3A6;-value pattern of CAfn2 was investigated
+to identify the putative obligate folding nucleus, a set of residues with
+significant &#x3A6;-values that interact such that these interactions are
+sufficient to establish the topology of the protein. The layer that contains
+residues with consistently high &#x3A6;-values in the B and E-strands is layer 3
+(I55 and L22), as in TNfn3. However, for the C and F-strands, the layer with
+the highest &#x3A6;-values is layer 4 (V38 and V68). Examination of the structure
+of CAfn2 shows that although residues L22 and I55, and V38 and V68 sit in
+different core layers, these four residues are still able to pack together
+in the centre of the core to form a ring of contacts (<xref rid="fig6" ref-type="fig">Figure 6</xref>). We
+suggest that the residues surrounding the obligate nucleus, residues in the
+C&#x2032;-strand and more peripheral residues in the B, C E and F-strands, pack
+onto these obligate nucleus residues and, together, form the critical
+contact layer required to stabilise the transition state structure
+sufficiently to drive folding.</p>
+        <p>There is a caveat we should make. We note that in CAfn2 it is more
+difficult to select which residues are likely to form part of the obligate
+nucleus than it was in TNfn3. Consider the B-strand. I20(B2) exhibits a
+&#x3A6;-value that is slightly lower, but is within error of L22(B3). However, I20
+forms no contacts with the nucleating residues from the opposite sheet,
+(V38(C4) and V68(E4)), suggesting that it does not form part of the
+obligatory nucleus that establishes the topology of the molecule.
+Furthermore, as was the case in TNfn3, we were unable to determine a &#x3A6;-value
+for the highly conserved Trp in the position B4. Simulations confirmed for
+TNfn3 that this Trp residue had a low &#x3A6;-value (as we had inferred from the
+pattern of &#x3A6;-values surrounding the Trp residue). Trp 24 makes 150
+side-chain&#x2013;side-chain contacts in CAfn2, and 65% of these contacts are with
+residues that have &#x3A6;-values that are (or are predicted to be) low (&#x3A6;&#xA0;&#x223C;&#xA0;0.15, 52 contacts) or zero (46 contacts).
+Less than one-third of the contacts made by Trp24 are with residues in the
+putative obligatory nucleus (with L22, V38 and V68) and no contact is made
+with I55. Thus, we tentatively propose that if Trp24 does have a role in the
+folding nucleus, it is more likely to be in the critical layer than in the
+topology-defining obligate nucleus. Also consider residue A70 in the
+F-strand in position F5. The &#x3A6;-value for this residue is very slightly
+higher than that for V68 in layer F4. However, Ala to Gly mutation must be
+considered to be non-conservative and, furthermore, Ala70 makes no contact
+within the proposed obligate nucleus i.e. it cannot have a role in
+establishing the Greek key topology.</p>
+      </sec>
+      <sec>
+        <title>Comparison of the transition states of CAfn2 and TNfn3</title>
+        <p>The &#x3A6;-values for TNfn3 are generally higher than those in CAfn2,
+ranging from 0 to 0.6;<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref> however, the pattern of &#x3A6;-values is similar. For both
+proteins, the mutational results can be separated into two classes. The
+first group consists of residues in the central &#x3B2;-strands, which show
+significant formation of structure in the transition state. The second group
+consists of mutations probing the terminal A and G-strands, and residues
+from the extremities of the central strands. These two populations are
+clearly observed in a Br&#xF8;nsted plot (<xref rid="fig7" ref-type="fig">Figure
+7</xref>).</p>
+        <p>Nevertheless, there are important differences between the two domains,
+which are apparent in the pattern of &#x3A6;-values (<xref rid="fig8" ref-type="fig">Figure 8</xref>). In the
+C&#x2013;F-sheet, the highest &#x3A6;-values in TNfn3 are found in core layer 3 (V70,
+0.54; Y36, 0.53), with the &#x3A6;-values in layer 4 being significantly lower
+(L72, 0.29; L34, 0.35). However, in CAfn2 the &#x3A6;-values in layer 3 are very
+low (F66, 0.07; N40, 0.01), whereas the &#x3A6;-values in layer 4 (V68, 0.25; V38,
+0.40) are significantly higher (<xref rid="fig3 fig8" ref-type="fig">Figures 3
+and 8</xref>). This indicates that the absence of a buried
+hydrophobic residue in position C3 has forced the obligate folding nucleus
+of CAfn2 to &#x201C;migrate down&#x201D; one layer within the core (<xref rid="fig6" ref-type="fig">Figure 6</xref>). Perhaps unexpectedly, a
+corresponding &#x201C;downwards migration&#x201D; has not occurred in the B&#x2013;E-sheet; (even
+if Trp24 was important, the &#x3A6;-value for A53(E4) is unambiguously low
+(0.14)). Such migration is not necessary; analysis of the CAfn2 structure
+shows clearly that residues L22(B3) and I55(E3) form significant
+interactions with V68(F4) and V38(C4) in the opposite sheet. Thus, these
+inter-sheet interactions would be sufficient to establish the Greek key
+topology.</p>
+        <p>Further support for this migration hypothesis comes from &#x3A6;-values in
+the EF-loop. TNfn3 exhibits moderate &#x3A6;-values in this loop, (Y68(F2), 0.42;
+L62(E2), 0.33), which indicates that it is significantly structured in the
+transition state. It was argued that this loop is &#x201C;obliged&#x201D; to be structured
+in the transition state of TNfn3 to allow for formation of the adjacent
+folding nucleus: the more distant BC-loop exhibits lower values. However, in
+CAfn2 the folding nucleus has shifted away from the EF-loop (<xref rid="fig6" ref-type="fig">Figure 6</xref>) and consequently it is less
+restrained within the transition state (&#x3A6;-values for Y64(F2) and L58(E2) are
+0.04 and 0.16, respectively).</p>
+        <p>Both TNfn3 and CAfn2 display high &#x3A6;-values in the C&#x2032;-strand. We suggest
+that these residues are not involved in the obligatory folding nucleus, but
+result from short CE-loops that force the C&#x2032;-strand to pack as the nucleus
+forms;<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref> thus, these residues form part of the critical contact
+layer. In CD2d1, an immunoglobulin Ig variable domain, the nucleating C and
+E-strands are joined by a much longer loop comprising three &#x3B2;-strands, C&#x2032;,
+C&#x2BA; and D. In this case these strands do not pack until late in
+folding.<xref rid="bib18 bib19" ref-type="bibr"><sup>18,19</sup></xref></p>
+        <p>In summary, for both proteins we observe the formation of a specific
+nucleus in the core of the protein involving formation of long-range
+tertiary contacts between a single residue from each of the B, C, E and
+F-strands. Formation of this &#x201C;obligate&#x201D; nucleus establishes the topology of
+the protein. Other residues pack around this obligate nucleus to form the
+critical contact layer until sufficient contacts have formed to surmount the
+free-energy barrier. This is typical of a nucleation-condensation folding
+mechanism. The peripheral strands and the loops pack late, mainly after the
+rate-limiting step for folding.</p>
+      </sec>
+      <sec>
+        <title>Conclusion: plasticity within the obligatory folding nucleus
+in Ig-like domains</title>
+        <p>Unlike other classes of proteins, such as the homeodomain proteins, all
+Ig-like proteins appear to fold by the same, nucleation condensation
+mechanism. The obligate nucleus is defined by the interactions that are
+necessary to establish the complex Greek key &#x3B2;-sheet topology of the native
+state. Previous biophysical studies of members of the Ig-like fold have
+shown that this folding nucleus always comprises a ring of interacting
+residues within the hydrophobic core: one residue from each of the B, C, E
+and F-strands. Whereas the obligatory nucleus in the immunoglobulin
+superfamily proteins is highly conserved and is based around the invariant
+tryptophan located within the C-strand, members of the fnIII superfamily
+show more variability. Instead of restricting a particular structural
+position to a specific amino acid, each position simply needs to possess a
+hydrophobic residue. Here, we have shown that the fnIII nucleus is more
+flexible still, and that when this pattern of residue conservation is lost
+upon mutation, fnIII proteins can &#x201C;migrate&#x201D; the folding nucleus, thereby
+revealing plasticity in the early stages of the folding process, while
+retaining the same folding mechanism.</p>
+        <p>Such plasticity in the folding of Ig-like proteins has been observed
+previously; the Ig domain TI I27 has been shown to fold by alternative,
+parallel pathways.<xref rid="bib51" ref-type="bibr"><sup>51</sup></xref> Although the wild-type protein folds only through one
+pathway under physiological conditions, extremes of temperature and
+denaturant, or mutations within its obligate folding nucleus also result in
+a switch of folding pathway. Lindberg and Oliveberg have suggested recently
+that a &#x201C;malleable&#x201D; protein folding energy landscape will allow proteins to
+retain efficient folding during the course of evolution, even though the
+finer details of the folding pathway are dependent on individual
+sequence.<xref rid="bib52" ref-type="bibr"><sup>52</sup></xref> It is possible that the ability of these Ig-like domains to
+alter their folding pathway on mutation has contributed to the success of
+this fold, and has contributed to its abundance in the proteome (over
+40,000&#xA0;Ig-like domains are listed in the current Pfam database).</p>
+      </sec>
+    </sec>
+    <sec sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec>
+        <title>Protein expression and purification</title>
+        <p>The fibronectin type III domain used in this work consists of 88
+residues (SwissProt P20533, residues 559&#x2013;646, PDB 1K85) of the
+<italic>Bacillus circulans</italic> chitinase A1. The synthetic
+gene was produced using overlapping primers and standard PCR techniques, and
+was inserted into a modified version of pRSETA vector (Invitrogen)
+containing an N-terminal His-tag followed by a thrombin cleavage site.
+Site-directed mutagenesis was performed using the QuikChange Kit
+(Stratagene). The identity of wild-type and mutants was confirmed by DNA
+sequencing.</p>
+        <p>Protein expression was carried out in <italic>Escherichia
+coli</italic> C41 cells.<xref rid="bib53" ref-type="bibr"><sup>53</sup></xref> Transformed cells were grown to an absorbance at 600&#xA0;nm of
+0.6 at 37&#xA0;&#xB0;C before induction with IPTG and growth overnight at 28&#xA0;&#xB0;C. The
+cells were harvested and lysed by sonication. The soluble fraction was bound
+to Ni<sup>2+</sup>-agarose resin, washed several times to remove
+weakly bound proteins, and eluted from the Ni<sup>2+</sup>-agarose
+resin in a high concentration of imidazole. After dialysis to remove the
+imidazole, the proteins were cleaved overnight with thrombin. Uncleaved
+protein and remaining His-tag were removed by using small amounts of
+Ni<sup>2+</sup>-resin before further purification by
+gel-filtration chromatography using a Pharmacia Biotech Superdex 75 column.
+When not used immediately, proteins were flash-frozen and stored at &#x2212;&#xA0;80&#xA0;&#xB0;C.</p>
+      </sec>
+      <sec>
+        <title>Equilibrium measurements</title>
+        <p>The stability of the CAfn2 wild-type and mutant proteins was determined
+by equilibrium urea denaturation in 50&#xA0;mM sodium acetate buffer, pH 5.0
+(15&#xA0;mM HOAc, 35&#xA0;mM NaOAc) at 25&#xA0;&#xB0;C. The solutions were left to equilibrate
+at 25&#xA0;&#xB0;C for at least 2&#xA0;h before measurements were recorded. All experiments
+were carried out in thermostatted cuvettes at 25&#xA0;&#xB0;C. The experiments used an
+excitation wavelength of 280&#xA0;nm, and an emission wavelength of 360&#xA0;nm. Data
+were fit to an equation describing a two-state transition.<xref rid="bib43" ref-type="bibr"><sup>43</sup></xref></p>
+      </sec>
+      <sec>
+        <title>Change of free energy on mutation</title>
+        <p>The change of free energy on mutation,
+&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub>, was determined using
+equation <xref rid="fd1" ref-type="disp-formula">(1)</xref>:<xref rid="bib54" ref-type="bibr"><sup>54</sup></xref><disp-formula id="fd1"><label>(1)</label><mml:math id="M1" altimg="si1.gif" overflow="scroll"><mml:mi mathvariant="normal">&#x394;&#x394;</mml:mi><mml:msub><mml:mi>G</mml:mi><mml:mrow><mml:mi mathvariant="normal">D</mml:mi><mml:mo>&#x2212;</mml:mo><mml:mi mathvariant="normal">N</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true">&#x2329;</mml:mo><mml:mi>m</mml:mi><mml:mo stretchy="true">&#x232A;</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true">(</mml:mo><mml:msubsup><mml:mrow><mml:mo>[</mml:mo><mml:mi mathvariant="normal">u</mml:mi><mml:mi mathvariant="normal">r</mml:mi><mml:mi mathvariant="normal">e</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mo>]</mml:mo></mml:mrow><mml:mrow><mml:mn>50</mml:mn><mml:mo>%</mml:mo></mml:mrow><mml:mrow><mml:mi mathvariant="normal">w</mml:mi><mml:mi mathvariant="normal">t</mml:mi></mml:mrow></mml:msubsup><mml:mo>&#x2212;</mml:mo><mml:msubsup><mml:mrow><mml:mo>[</mml:mo><mml:mi mathvariant="normal">u</mml:mi><mml:mi mathvariant="normal">r</mml:mi><mml:mi mathvariant="normal">e</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mo>]</mml:mo></mml:mrow><mml:mrow><mml:mn>50</mml:mn><mml:mo>%</mml:mo></mml:mrow><mml:mrow><mml:mi mathvariant="normal">m</mml:mi><mml:mi mathvariant="normal">u</mml:mi><mml:mi mathvariant="normal">t</mml:mi></mml:mrow></mml:msubsup><mml:mo stretchy="true">)</mml:mo></mml:mrow></mml:math></disp-formula>Where [urea]<sub>50%</sub> is the concentration of urea
+at which 50% of the protein is unfolded for wild-type (wt) and mutant (mut)
+proteins, and &lt;<italic>m</italic>&gt; is the mean
+<italic>m</italic>-value determined from all measurements on
+wild-type and mutant proteins.</p>
+      </sec>
+      <sec>
+        <title>Kinetic measurements</title>
+        <p>All kinetic experiments were done using an Applied Photophysics
+stopped-flow fluorimeter. The excitation wavelength was 280&#xA0;nm and the
+emission was monitored at wavelengths &gt;&#xA0;320&#xA0;nm. All
+experiments were carried out in 50&#xA0;mM sodium acetate buffer (pH 5.0) at
+25&#xA0;&#xB0;C. The final concentration of all proteins was 1&#xA0;&#x3BC;M. Refolding rates at
+0&#xA0;M denaturant were determined using CAfn2 unfolded at pH 12.4 as
+described.<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref> Between three and five traces were averaged for each
+concentration of denaturant. The refolding data were fit to an equation
+using a single-exponential term. An average refolding
+<italic>m</italic>-value of 1.06&#xA0;M<sup>&#x2212;&#xA0;1</sup> was used for mutations L22A, Y36L and L58A. Fitting data to an
+equation with two exponentials did not improve the residuals. The unfolding
+data were fit to an equation describing a single-exponential process with
+curvature.</p>
+      </sec>
+      <sec>
+        <title>&#x3A6;-Value analysis</title>
+        <p>The &#x3A6;-value for folding was determined using equation <xref rid="fd2" ref-type="disp-formula">(2)</xref>:<xref rid="bib54" ref-type="bibr"><sup>54</sup></xref>.<disp-formula id="fd2"><label>(2)</label><mml:math id="M2" altimg="si2.gif" overflow="scroll"><mml:mi mathvariant="normal">&#x3A6;</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mi mathvariant="normal">&#x394;&#x394;</mml:mi><mml:msub><mml:mi>G</mml:mi><mml:mrow><mml:mi mathvariant="normal">D</mml:mi><mml:mo>&#x2212;</mml:mo><mml:mo>&#x2021;</mml:mo></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mi mathvariant="normal">&#x394;&#x394;</mml:mi><mml:msub><mml:mi>G</mml:mi><mml:mrow><mml:mi mathvariant="normal">D</mml:mi><mml:mo mathvariant="normal">&#x2212;</mml:mo><mml:mi mathvariant="normal">N</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:math></disp-formula>where &#x394;&#x394;<italic>G</italic><sub>D&#x2013;&#x2021;</sub> is the
+change in the difference in free energy between D and the transition state
+(&#x2021;) upon mutation and calculated from refolding data as follows:<disp-formula><label>(3)</label><mml:math id="M3" altimg="si3.gif" overflow="scroll"><mml:mi mathvariant="normal">&#x394;&#x394;</mml:mi><mml:msub><mml:mi>G</mml:mi><mml:mrow><mml:mi mathvariant="normal">D</mml:mi><mml:mo>&#x2212;</mml:mo><mml:mo>&#x2021;</mml:mo></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>R</mml:mi><mml:mi>T</mml:mi><mml:mi>ln</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mi mathvariant="normal">f</mml:mi></mml:msub><mml:mo>/</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mi mathvariant="normal">f</mml:mi><mml:mo>&#x2032;</mml:mo></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:math></disp-formula>where <italic>k</italic><sub>f</sub> and
+<italic>k</italic><sub>f&#x2032;</sub> are refolding rate constants
+for wild-type and mutant proteins (at 0&#xA0;M urea), respectively.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>References</title>
+      <ref id="bib1">
+        <label>1</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baker</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>A surprising simplicity to protein
+folding</article-title>
+          <source>Nature</source>
+          <volume>405</volume>
+          <year>2000</year>
+          <fpage>39</fpage>
+          <lpage>42</lpage>
+          <pub-id pub-id-type="pmid">10811210</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib2">
+        <label>2</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zarrine-Afsar</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Larson</surname>
+              <given-names>S.M.</given-names>
+            </name>
+            <name>
+              <surname>Davidson</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>The family feud: do proteins with similar structures
+fold via the same pathway?</article-title>
+          <source>Curr. Opin. Struct. Biol.</source>
+          <volume>15</volume>
+          <year>2005</year>
+          <fpage>42</fpage>
+          <lpage>49</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib3">
+        <label>3</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gianni</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Guydosh</surname>
+              <given-names>N.R.</given-names>
+            </name>
+            <name>
+              <surname>Khan</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Caldas</surname>
+              <given-names>T.D.</given-names>
+            </name>
+            <name>
+              <surname>Mayor</surname>
+              <given-names>U.</given-names>
+            </name>
+            <name>
+              <surname>White</surname>
+              <given-names>G.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Unifying features in protein-folding
+mechanisms</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>100</volume>
+          <year>2003</year>
+          <fpage>13286</fpage>
+          <lpage>13291</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib4">
+        <label>4</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mayor</surname>
+              <given-names>U.</given-names>
+            </name>
+            <name>
+              <surname>Guydosh</surname>
+              <given-names>N.R.</given-names>
+            </name>
+            <name>
+              <surname>Johnson</surname>
+              <given-names>C.M.</given-names>
+            </name>
+            <name>
+              <surname>Grossmann</surname>
+              <given-names>J.G.</given-names>
+            </name>
+            <name>
+              <surname>Sato</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Jas</surname>
+              <given-names>G.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>The complete folding pathway of a protein from
+nanoseconds to microseconds</article-title>
+          <source>Nature</source>
+          <volume>421</volume>
+          <year>2003</year>
+          <fpage>863</fpage>
+          <lpage>867</lpage>
+          <pub-id pub-id-type="pmid">12594518</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib5">
+        <label>5</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Religa</surname>
+              <given-names>T.L.</given-names>
+            </name>
+            <name>
+              <surname>Markson</surname>
+              <given-names>J.S.</given-names>
+            </name>
+            <name>
+              <surname>Mayor</surname>
+              <given-names>U.</given-names>
+            </name>
+            <name>
+              <surname>Freund</surname>
+              <given-names>S.M.</given-names>
+            </name>
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Solution structure of a protein denatured state and
+folding intermediate</article-title>
+          <source>Nature</source>
+          <volume>437</volume>
+          <year>2005</year>
+          <fpage>1053</fpage>
+          <lpage>1056</lpage>
+          <pub-id pub-id-type="pmid">16222301</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib6">
+        <label>6</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Friel</surname>
+              <given-names>C.T.</given-names>
+            </name>
+            <name>
+              <surname>Capaldi</surname>
+              <given-names>A.P.</given-names>
+            </name>
+            <name>
+              <surname>Radford</surname>
+              <given-names>S.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Structural analysis of the rate-limiting transition
+states in the folding of Im7 and Im9: similarities and
+differences in the folding of homologous proteins</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>326</volume>
+          <year>2003</year>
+          <fpage>293</fpage>
+          <lpage>305</lpage>
+          <pub-id pub-id-type="pmid">12547210</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib7">
+        <label>7</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Capaldi</surname>
+              <given-names>A.P.</given-names>
+            </name>
+            <name>
+              <surname>Kleanthous</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Radford</surname>
+              <given-names>S.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Im7 folding mechanism: misfolding on a path to the
+native state</article-title>
+          <source>Nature Struct. Biol.</source>
+          <volume>9</volume>
+          <year>2002</year>
+          <fpage>209</fpage>
+          <lpage>216</lpage>
+          <pub-id pub-id-type="pmid">11875516</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib8">
+        <label>8</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scott</surname>
+              <given-names>K.A.</given-names>
+            </name>
+            <name>
+              <surname>Randles</surname>
+              <given-names>L.G.</given-names>
+            </name>
+            <name>
+              <surname>Moran</surname>
+              <given-names>S.J.</given-names>
+            </name>
+            <name>
+              <surname>Daggett</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding pathway of spectrin R17 from experiment
+and simulation: using experimentally validated MD simulations to
+characterize States hinted at by experiment</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>359</volume>
+          <year>2006</year>
+          <fpage>159</fpage>
+          <lpage>173</lpage>
+          <pub-id pub-id-type="pmid">16618492</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib9">
+        <label>9</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scott</surname>
+              <given-names>K.A.</given-names>
+            </name>
+            <name>
+              <surname>Randles</surname>
+              <given-names>L.G.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding of spectrin domains II: phi-value analysis
+of R16</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>344</volume>
+          <year>2004</year>
+          <fpage>207</fpage>
+          <lpage>221</lpage>
+          <pub-id pub-id-type="pmid">15504412</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib10">
+        <label>10</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ventura</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Vega</surname>
+              <given-names>M.C.</given-names>
+            </name>
+            <name>
+              <surname>Lacroix</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Angrand</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Spagnolo</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Serrano</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Conformational strain in the hydrophobic core and its
+implications for protein folding and design</article-title>
+          <source>Nature Struct. Biol.</source>
+          <volume>9</volume>
+          <year>2002</year>
+          <fpage>485</fpage>
+          <lpage>493</lpage>
+          <pub-id pub-id-type="pmid">12006985</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib11">
+        <label>11</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Northey</surname>
+              <given-names>J.G.</given-names>
+            </name>
+            <name>
+              <surname>Di Nardo</surname>
+              <given-names>A.A.</given-names>
+            </name>
+            <name>
+              <surname>Davidson</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hydrophobic core packing in the SH3 domain folding
+transition state</article-title>
+          <source>Naturer Struct. Biol.</source>
+          <volume>9</volume>
+          <year>2002</year>
+          <fpage>126</fpage>
+          <lpage>130</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib12">
+        <label>12</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Northey</surname>
+              <given-names>J.G.</given-names>
+            </name>
+            <name>
+              <surname>Maxwell</surname>
+              <given-names>K.L.</given-names>
+            </name>
+            <name>
+              <surname>Davidson</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein folding kinetics beyond the phi value: using
+multiple amino acid substitutions to investigate the structure
+of the SH3 domain folding transition state</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>320</volume>
+          <year>2002</year>
+          <fpage>389</fpage>
+          <lpage>402</lpage>
+          <pub-id pub-id-type="pmid">12079394</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib13">
+        <label>13</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Guijarro</surname>
+              <given-names>J.I.</given-names>
+            </name>
+            <name>
+              <surname>Morton</surname>
+              <given-names>C.J.</given-names>
+            </name>
+            <name>
+              <surname>Plaxco</surname>
+              <given-names>K.W.</given-names>
+            </name>
+            <name>
+              <surname>Campbell</surname>
+              <given-names>I.D.</given-names>
+            </name>
+            <name>
+              <surname>Dobson</surname>
+              <given-names>C.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Folding kinetics of the SH3 domain of PI3 kinase by
+real-time NMR combined with optical spectroscopy</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>276</volume>
+          <year>1998</year>
+          <fpage>657</fpage>
+          <lpage>667</lpage>
+          <pub-id pub-id-type="pmid">9551103</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib14">
+        <label>14</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Martinez</surname>
+              <given-names>J.C.</given-names>
+            </name>
+            <name>
+              <surname>Serrano</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding transition state between SH3 domains is
+conformationally restricted and evolutionarily
+conserved</article-title>
+          <source>Nature Struct. Biol.</source>
+          <volume>6</volume>
+          <year>1999</year>
+          <fpage>1010</fpage>
+          <lpage>1016</lpage>
+          <pub-id pub-id-type="pmid">10542091</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib15">
+        <label>15</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riddle</surname>
+              <given-names>D.S.</given-names>
+            </name>
+            <name>
+              <surname>Grantcharova</surname>
+              <given-names>V.P.</given-names>
+            </name>
+            <name>
+              <surname>Santiago</surname>
+              <given-names>J.V.</given-names>
+            </name>
+            <name>
+              <surname>Alm</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Ruczinski</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Baker</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Experiment and theory highlight role of native state
+topology in SH3 folding</article-title>
+          <source>Nauret Struct. Biol.</source>
+          <volume>6</volume>
+          <year>1999</year>
+          <fpage>1016</fpage>
+          <lpage>1024</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib16">
+        <label>16</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cota</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding nucleus of a fibronectin type III domain
+is composed of core residues of the immunoglobulin-like
+fold</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>305</volume>
+          <year>2001</year>
+          <fpage>1185</fpage>
+          <lpage>1194</lpage>
+          <pub-id pub-id-type="pmid">11162123</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib17">
+        <label>17</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mapping the folding pathway of an immunoglobulin
+domain: structural detail from phi value analysis and movement
+of the transition state</article-title>
+          <source>Structure</source>
+          <volume>9</volume>
+          <year>2001</year>
+          <fpage>355</fpage>
+          <lpage>366</lpage>
+          <pub-id pub-id-type="pmid">11377196</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib18">
+        <label>18</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hamill</surname>
+              <given-names>S.J.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding of an immunoglobulin-like Greek key
+protein is defined by a common-core nucleus and regions
+constrained by topology</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>297</volume>
+          <year>2000</year>
+          <fpage>165</fpage>
+          <lpage>178</lpage>
+          <pub-id pub-id-type="pmid">10704314</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib19">
+        <label>19</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lorch</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Mason</surname>
+              <given-names>J.M.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>A.R.</given-names>
+            </name>
+            <name>
+              <surname>Parker</surname>
+              <given-names>M.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of core mutations on the folding of a
+beta-sheet protein: implications for backbone organization in
+the I-state</article-title>
+          <source>Biochemistry</source>
+          <volume>38</volume>
+          <year>1999</year>
+          <fpage>1377</fpage>
+          <lpage>1385</lpage>
+          <pub-id pub-id-type="pmid">9931001</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib20">
+        <label>20</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jager</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Nguyen</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Crane</surname>
+              <given-names>J.C.</given-names>
+            </name>
+            <name>
+              <surname>Kelly</surname>
+              <given-names>J.W.</given-names>
+            </name>
+            <name>
+              <surname>Gruebele</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding mechanism of a beta-sheet: the WW
+domain</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>311</volume>
+          <year>2001</year>
+          <fpage>373</fpage>
+          <lpage>393</lpage>
+          <pub-id pub-id-type="pmid">11478867</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib21">
+        <label>21</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nguyen</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Jager</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Moretto</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Gruebele</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Kelly</surname>
+              <given-names>J.W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Tuning the free-energy landscape of a WW domain by
+temperature, mutation, and truncation</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>100</volume>
+          <year>2003</year>
+          <fpage>3948</fpage>
+          <lpage>3953</lpage>
+          <pub-id pub-id-type="pmid">12651955</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib22">
+        <label>22</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Crane</surname>
+              <given-names>J.C.</given-names>
+            </name>
+            <name>
+              <surname>Koepf</surname>
+              <given-names>E.K.</given-names>
+            </name>
+            <name>
+              <surname>Kelly</surname>
+              <given-names>J.W.</given-names>
+            </name>
+            <name>
+              <surname>Gruebele</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mapping the transition state of the WW domain
+beta-sheet</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>298</volume>
+          <year>2000</year>
+          <fpage>283</fpage>
+          <lpage>292</lpage>
+          <pub-id pub-id-type="pmid">10764597</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib23">
+        <label>23</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chiti</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Taddei</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>White</surname>
+              <given-names>P.M.</given-names>
+            </name>
+            <name>
+              <surname>Bucciantini</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Magherini</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Stefani</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Dobson</surname>
+              <given-names>C.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mutational analysis of acylphosphatase suggests the
+importance of topology and contact order in protein
+folding</article-title>
+          <source>Nature Struct. Biol.</source>
+          <volume>6</volume>
+          <year>1999</year>
+          <fpage>1005</fpage>
+          <lpage>1009</lpage>
+          <pub-id pub-id-type="pmid">10542090</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib24">
+        <label>24</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Villegas</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Martinez</surname>
+              <given-names>J.C.</given-names>
+            </name>
+            <name>
+              <surname>Aviles</surname>
+              <given-names>F.X.</given-names>
+            </name>
+            <name>
+              <surname>Serrano</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Structure of the transition state in the folding
+process of human procarboxypeptidase A2 activation
+domain</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>283</volume>
+          <year>1998</year>
+          <fpage>1027</fpage>
+          <lpage>1036</lpage>
+          <pub-id pub-id-type="pmid">9799641</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib25">
+        <label>25</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Otzen</surname>
+              <given-names>D.E.</given-names>
+            </name>
+            <name>
+              <surname>Oliveberg</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Conformational plasticity in folding of the split
+beta-alpha-beta protein S6: evidence for burst-phase disruption
+of the native state</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>317</volume>
+          <year>2002</year>
+          <fpage>613</fpage>
+          <lpage>627</lpage>
+          <pub-id pub-id-type="pmid">11955013</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib26">
+        <label>26</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ternstrom</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Mayor</surname>
+              <given-names>U.</given-names>
+            </name>
+            <name>
+              <surname>Akke</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Oliveberg</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>From snapshot to movie: phi analysis of protein
+folding transition states taken one step further</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>96</volume>
+          <year>1999</year>
+          <fpage>14854</fpage>
+          <lpage>14859</lpage>
+          <pub-id pub-id-type="pmid">10611302</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib27">
+        <label>27</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Went</surname>
+              <given-names>H.M.</given-names>
+            </name>
+            <name>
+              <surname>Jackson</surname>
+              <given-names>S.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Ubiquitin folds through a highly polarized transition
+state</article-title>
+          <source>Protein Eng. Des. Sel.</source>
+          <volume>18</volume>
+          <year>2005</year>
+          <fpage>229</fpage>
+          <lpage>237</lpage>
+          <pub-id pub-id-type="pmid">15857839</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib28">
+        <label>28</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sosnick</surname>
+              <given-names>T.R.</given-names>
+            </name>
+            <name>
+              <surname>Dothager</surname>
+              <given-names>R.S.</given-names>
+            </name>
+            <name>
+              <surname>Krantz</surname>
+              <given-names>B.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Differences in the folding transition state of
+ubiquitin indicated by phi and psi analyses</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>101</volume>
+          <year>2004</year>
+          <fpage>17377</fpage>
+          <lpage>17382</lpage>
+          <pub-id pub-id-type="pmid">15576508</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib29">
+        <label>29</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <chapter-title>Structure and Mechanism in Protein Science: A Guide to
+Enzyme Catalysis and Protein Folding</chapter-title>
+          <year>1998</year>
+          <publisher-name>W.H. Freeman and Company</publisher-name>
+          <publisher-loc>New York</publisher-loc>
+        </element-citation>
+      </ref>
+      <ref id="bib30">
+        <label>30</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Itzhaki</surname>
+              <given-names>L.S.</given-names>
+            </name>
+            <name>
+              <surname>Otzen</surname>
+              <given-names>D.E.</given-names>
+            </name>
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>The structure of the transition state for folding of
+chymotrypsin inhibitor 2 analysed by protein engineering
+methods: evidence for a nucleation-condensation mechanism for
+protein folding</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>254</volume>
+          <year>1995</year>
+          <fpage>260</fpage>
+          <lpage>288</lpage>
+          <pub-id pub-id-type="pmid">7490748</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib31">
+        <label>31</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hedberg</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Oliveberg</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Scattered Hammond plots reveal second level of
+site-specific information in protein folding: phi'
+(&#x3B2;&#x2021;)</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>101</volume>
+          <year>2004</year>
+          <fpage>7606</fpage>
+          <lpage>7611</lpage>
+          <pub-id pub-id-type="pmid">15136744</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib32">
+        <label>32</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hubner</surname>
+              <given-names>I.A.</given-names>
+            </name>
+            <name>
+              <surname>Oliveberg</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Shakhnovich</surname>
+              <given-names>E.I.</given-names>
+            </name>
+          </person-group>
+          <article-title>Simulation, experiment, and evolution: understanding
+nucleation in protein S6 folding</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>101</volume>
+          <year>2004</year>
+          <fpage>8354</fpage>
+          <lpage>8359</lpage>
+          <pub-id pub-id-type="pmid">15150413</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib33">
+        <label>33</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krantz</surname>
+              <given-names>B.A.</given-names>
+            </name>
+            <name>
+              <surname>Dothager</surname>
+              <given-names>R.S.</given-names>
+            </name>
+            <name>
+              <surname>Sosnick</surname>
+              <given-names>T.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Discerning the structure and energy of multiple
+transition states in protein folding using
+psi-analysis</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>337</volume>
+          <year>2004</year>
+          <fpage>463</fpage>
+          <lpage>475</lpage>
+          <pub-id pub-id-type="pmid">15003460</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib34">
+        <label>34</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Cota</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Hamill</surname>
+              <given-names>S.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Folding studies of immunoglobulin-like beta-sandwich
+proteins suggest that they share a common folding
+pathway</article-title>
+          <source>Structure</source>
+          <volume>7</volume>
+          <year>1999</year>
+          <fpage>1145</fpage>
+          <lpage>1153</lpage>
+          <pub-id pub-id-type="pmid">10508783</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib35">
+        <label>35</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Geierhaas</surname>
+              <given-names>C.D.</given-names>
+            </name>
+            <name>
+              <surname>Paci</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Vendruscolo</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of the transition states for folding of two
+Ig-like proteins from different superfamilies</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>343</volume>
+          <year>2004</year>
+          <fpage>1111</fpage>
+          <lpage>1123</lpage>
+          <pub-id pub-id-type="pmid">15476825</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib36">
+        <label>36</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Paci</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Vendruscolo</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Karplus</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Self-consistent determination of the transition state
+for protein folding: application to a fibronectin type III
+domain</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>100</volume>
+          <year>2003</year>
+          <fpage>394</fpage>
+          <lpage>399</lpage>
+          <pub-id pub-id-type="pmid">12515856</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib37">
+        <label>37</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Williams</surname>
+              <given-names>A.F.</given-names>
+            </name>
+            <name>
+              <surname>Barclay</surname>
+              <given-names>A.N.</given-names>
+            </name>
+          </person-group>
+          <article-title>The immunoglobulin superfamily&#x2013;domains for cell
+surface recognition</article-title>
+          <source>Annu. Rev. Immunol.</source>
+          <volume>6</volume>
+          <year>1988</year>
+          <fpage>381</fpage>
+          <lpage>405</lpage>
+          <pub-id pub-id-type="pmid">3289571</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib38">
+        <label>38</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bork</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Holm</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Sander</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>The immunoglobulin fold. Structural classification,
+sequence patterns and common core</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>242</volume>
+          <year>1994</year>
+          <fpage>309</fpage>
+          <lpage>320</lpage>
+          <pub-id pub-id-type="pmid">7932691</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib39">
+        <label>39</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Finn</surname>
+              <given-names>R.D.</given-names>
+            </name>
+            <name>
+              <surname>Mistry</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Schuster-Bockler</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Griffiths-Jones</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Hollich</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Lassmann</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Pfam: clans, web tools and services</article-title>
+          <source>Nucl. Acids Res.</source>
+          <volume>34</volume>
+          <year>2006</year>
+          <fpage>D247</fpage>
+          <lpage>D251</lpage>
+          <pub-id pub-id-type="pmid">16381856</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib40">
+        <label>40</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goll</surname>
+              <given-names>C.M.</given-names>
+            </name>
+            <name>
+              <surname>Pastore</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Nilges</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>The three-dimensional structure of a type I module
+from titin: a prototype of intracellular fibronectin type III
+domains</article-title>
+          <source>Structure</source>
+          <volume>6</volume>
+          <year>1998</year>
+          <fpage>1291</fpage>
+          <lpage>1302</lpage>
+          <pub-id pub-id-type="pmid">9782056</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib41">
+        <label>41</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jee</surname>
+              <given-names>J.G.</given-names>
+            </name>
+            <name>
+              <surname>Ikegami</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Hashimoto</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Kawabata</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Ikeguchi</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Watanabe</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Shirakawa</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Solution structure of the fibronectin type III domain
+from <italic>Bacillus circulans</italic> WL-12 chitinase
+A1</article-title>
+          <source>J. Biol. Chem.</source>
+          <volume>277</volume>
+          <year>2002</year>
+          <fpage>1388</fpage>
+          <lpage>1397</lpage>
+          <pub-id pub-id-type="pmid">11600504</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib42">
+        <label>42</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hamill</surname>
+              <given-names>S.J.</given-names>
+            </name>
+            <name>
+              <surname>Cota</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Chothia</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Conservation of folding and stability within a protein
+family: the tyrosine corner as an evolutionary
+cul-de-sac</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>295</volume>
+          <year>2000</year>
+          <fpage>641</fpage>
+          <lpage>649</lpage>
+          <pub-id pub-id-type="pmid">10623553</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib43">
+        <label>43</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Engineered disulfide bonds as probes of the folding
+pathway of barnase: increasing the stability of proteins against
+the rate of denaturation</article-title>
+          <source>Biochemistry</source>
+          <volume>32</volume>
+          <year>1993</year>
+          <fpage>4322</fpage>
+          <lpage>4329</lpage>
+          <pub-id pub-id-type="pmid">8476861</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib44">
+        <label>44</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Hamill</surname>
+              <given-names>S.J.</given-names>
+            </name>
+            <name>
+              <surname>Johnson</surname>
+              <given-names>C.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Folding and stability of a fibronectin type III domain
+of human tenascin</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>270</volume>
+          <year>1997</year>
+          <fpage>771</fpage>
+          <lpage>778</lpage>
+          <pub-id pub-id-type="pmid">9245604</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib45">
+        <label>45</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+            <name>
+              <surname>Serrano</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Principles of protein stability derived from protein
+engineering experiments</article-title>
+          <source>Curr. Opin. Struct. Biol.</source>
+          <volume>3</volume>
+          <year>1993</year>
+          <fpage>75</fpage>
+          <lpage>83</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib46">
+        <label>46</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Serrano</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Kellis</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Cann</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Matouschek</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding of an enzyme. II. Substructure of barnase
+and the contribution of different interactions to protein
+stability</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>224</volume>
+          <year>1992</year>
+          <fpage>783</fpage>
+          <lpage>804</lpage>
+          <pub-id pub-id-type="pmid">1569557</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib47">
+        <label>47</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Matouschek</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Application of physical-organic chemistry to
+engineered mutants of proteins: Hammond postulate behaviour in
+the transitional state of protein folding</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>90</volume>
+          <year>1993</year>
+          <fpage>7814</fpage>
+          <lpage>7818</lpage>
+          <pub-id pub-id-type="pmid">8356089</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib48">
+        <label>48</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sanchez</surname>
+              <given-names>I.E.</given-names>
+            </name>
+            <name>
+              <surname>Kiefhaber</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Evidence for sequential barriers and obligatory
+intermediates in apparent two-state protein
+folding</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>325</volume>
+          <year>2003</year>
+          <fpage>367</fpage>
+          <lpage>376</lpage>
+          <pub-id pub-id-type="pmid">12488101</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib49">
+        <label>49</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scott</surname>
+              <given-names>K.A.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Spectrin R16: Broad energy barrier or sequential
+transition states?</article-title>
+          <source>Protein Sci.</source>
+          <volume>14</volume>
+          <year>2005</year>
+          <fpage>1617</fpage>
+          <lpage>1629</lpage>
+          <pub-id pub-id-type="pmid">15930007</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib50">
+        <label>50</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+            <name>
+              <surname>Itzhaki</surname>
+              <given-names>L.S.</given-names>
+            </name>
+            <name>
+              <surname>elMasry</surname>
+              <given-names>N.F.</given-names>
+            </name>
+            <name>
+              <surname>Matthews</surname>
+              <given-names>J.M.</given-names>
+            </name>
+            <name>
+              <surname>Otzen</surname>
+              <given-names>D.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Single versus parallel pathways of protein folding and
+fractional formation of structure in the transition
+state</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>91</volume>
+          <year>1994</year>
+          <fpage>10426</fpage>
+          <lpage>10429</lpage>
+          <pub-id pub-id-type="pmid">7937968</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib51">
+        <label>51</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wright</surname>
+              <given-names>C.F.</given-names>
+            </name>
+            <name>
+              <surname>Lindorff-Larsen</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Randles</surname>
+              <given-names>L.G.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Parallel protein-unfolding pathways revealed and
+mapped</article-title>
+          <source>Nature Struct. Biol.</source>
+          <volume>10</volume>
+          <year>2003</year>
+          <fpage>658</fpage>
+          <lpage>662</lpage>
+          <pub-id pub-id-type="pmid">12833152</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib52">
+        <label>52</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lindberg</surname>
+              <given-names>M.O.</given-names>
+            </name>
+            <name>
+              <surname>Oliveberg</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Malleability of protein folding pathways: a simple
+reason for complex behaviour</article-title>
+          <source>Curr. Opin. Struct. Biol.</source>
+          <volume>17</volume>
+          <year>2007</year>
+          <fpage>21</fpage>
+          <lpage>29</lpage>
+          <pub-id pub-id-type="pmid">17251003</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib53">
+        <label>53</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Miroux</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Walker</surname>
+              <given-names>J.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Over-production of proteins in <italic>Escherichia
+coli</italic>: mutant hosts that allow synthesis of some
+membrane proteins and globular proteins at high
+levels</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>260</volume>
+          <year>1996</year>
+          <fpage>289</fpage>
+          <lpage>298</lpage>
+          <pub-id pub-id-type="pmid">8757792</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib54">
+        <label>54</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+            <name>
+              <surname>Matouschek</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Serrano</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>The folding of an enzyme. I. Theory of protein
+engineering analysis of stability and pathway of protein
+folding</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>224</volume>
+          <year>1992</year>
+          <fpage>771</fpage>
+          <lpage>782</lpage>
+          <pub-id pub-id-type="pmid">1569556</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib55">
+        <label>55</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leahy</surname>
+              <given-names>D.J.</given-names>
+            </name>
+            <name>
+              <surname>Hendrickson</surname>
+              <given-names>W.A.</given-names>
+            </name>
+            <name>
+              <surname>Aukhil</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Erickson</surname>
+              <given-names>H.P.</given-names>
+            </name>
+          </person-group>
+          <article-title>Structure of a fibronectin type III domain from
+tenascin phased by MAD analysis of the selenomethionyl
+protein</article-title>
+          <source>Science</source>
+          <volume>258</volume>
+          <year>1992</year>
+          <fpage>987</fpage>
+          <lpage>991</lpage>
+          <pub-id pub-id-type="pmid">1279805</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib56">
+        <label>56</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leahy</surname>
+              <given-names>D.J.</given-names>
+            </name>
+            <name>
+              <surname>Erickson</surname>
+              <given-names>H.P.</given-names>
+            </name>
+            <name>
+              <surname>Aukhil</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Joshi</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Hendrickson</surname>
+              <given-names>W.A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Crystallization of a fragment of human fibronectin:
+introduction of methionine by site-directed mutagenesis to allow
+phasing via selenomethionine</article-title>
+          <source>Proteins: Struct. Funct. Genet.</source>
+          <volume>19</volume>
+          <year>1994</year>
+          <fpage>48</fpage>
+          <lpage>54</lpage>
+          <pub-id pub-id-type="pmid">8066086</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib57">
+        <label>57</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Main</surname>
+              <given-names>A.L.</given-names>
+            </name>
+            <name>
+              <surname>Harvey</surname>
+              <given-names>T.S.</given-names>
+            </name>
+            <name>
+              <surname>Baron</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Boyd</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Campbell</surname>
+              <given-names>I.D.</given-names>
+            </name>
+          </person-group>
+          <article-title>The three-dimensional structure of the tenth type III
+module of fibronectin: an insight into RGD-mediated
+interactions</article-title>
+          <source>Cell</source>
+          <volume>71</volume>
+          <year>1992</year>
+          <fpage>671</fpage>
+          <lpage>678</lpage>
+          <pub-id pub-id-type="pmid">1423622</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib58">
+        <label>58</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fersht</surname>
+              <given-names>A.R.</given-names>
+            </name>
+            <name>
+              <surname>Sato</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Phi-value analysis and the nature of protein-folding
+transition states</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>101</volume>
+          <year>2004</year>
+          <fpage>7976</fpage>
+          <lpage>7981</lpage>
+          <pub-id pub-id-type="pmid">15150406</pub-id>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <sec id="app1" sec-type="supplementary-material">
+      <label>Appendix A</label>
+      <title>Supplementary data</title>
+      <p>
+<supplementary-material content-type="local-data" id="d32e2455"><caption><title>Supplementary Figure 1</title></caption><media xlink:href="applic1.pdf"/></supplementary-material>
+</p>
+    </sec>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This work was supported by the Wellcome Trust. I.L is funded by the Academy of
+Finland and the Helsingin Sanomain 100-vuotiss&#xE4;&#xE4;ti&#xF6;. M.H. was supported by the MRC,
+the Isaac Newton Trust and the Cambridge European Trust. J.C. is a Wellcome Trust
+Senior Research Fellow. We thank Adrian Nickson for critical reading of the
+manuscript.</p>
+    </ack>
+    <fn-group>
+      <fn id="d32e2460" fn-type="supplementary-material">
+        <p>Supplementary data associated with this article can be found, in the online
+version, at <ext-link ext-link-type="doi" xlink:href="10.1016/j.jmb.2007.09.088">doi:10.1016/j.jmb.2007.09.088</ext-link></p>
+      </fn>
+    </fn-group>
+  </back>
+  <floats-group>
+    <fig id="fig1">
+      <label>Figure 1</label>
+      <caption>
+        <p>The structure of the CAfn2 (left, green, PDB code 1K85) and TNfn3
+(right, orange, PDB core 1TEN). The side-chains forming the putative folding
+nucleus in both structures are shown in blue. In most fnIII domains these
+residues form a ring of interactions deep within the core, as is shown for
+TNfn3. The polar side-chain of N40 in CAfn2 is not interacting with the other
+residues in the folding nucleus. The CAfn2 has the same topology as all other
+fnIII domains: seven &#x3B2;-strands that arrange into two &#x3B2;-sheets.<xref rid="bib55 bib56 bib57" ref-type="bibr"><sup>55&#x2013;57</sup></xref> The first sheet is formed of the A, B and E-strands, and the
+second sheet is formed of the C&#x2032;, C, F and G-strands. <xref rid="fig1" ref-type="fig">Figures 1</xref>, <xref rid="fig5" ref-type="fig">5 and</xref><xref rid="fig6" ref-type="fig">6</xref> were made using PyMol [<ext-link ext-link-type="uri" xlink:href="http://pymol.sourceforge.net/">http://pymol.sourceforge.net/</ext-link>].</p>
+      </caption>
+      <graphic xlink:href="gr1"/>
+    </fig>
+    <fig id="fig2">
+      <label>Figure 2</label>
+      <caption>
+        <p>The fnIII sequences containing only a single aromatic residue within
+the predicted obligatory folding nucleus. The frequency of the appearance of a
+given amino acid in any position is shown on the <italic>y</italic>-axis.
+The majority of the sequences have either phenylalanine at the F-strand or
+tyrosine at the C-strand folding position.</p>
+      </caption>
+      <graphic xlink:href="gr2"/>
+    </fig>
+    <fig id="fig3">
+      <label>Figure 3</label>
+      <caption>
+        <p>A simplified representation of the CAfn2 (left, green) and TNfn3
+(right, orange) structures showing the mutated positions within each strand. The
+core of the proteins is divided into six layers, residues within the same layer
+pack against each other on opposite &#x3B2;-sheets. The differences in loop lengths
+between CAfn2 and TNfn3 are shown for each loop in the CAfn2 representation (+
+means the CAfn2 loop is longer, &#x2013;&#x2013; means the CAfn2 loop is shorter). The
+&#x3A6;-values are marked in blue for each position. The obligatory folding positions
+are shown as a red oval.</p>
+      </caption>
+      <graphic xlink:href="gr3"/>
+    </fig>
+    <fig id="fig4">
+      <label>Figure 4</label>
+      <caption>
+        <p>Chevron plots for each mutation according to the &#x3B2;-strand. The
+observed rate constants (<italic>k</italic>) are measured in
+s<sup>&#x2212;</sup>&#xA0;<sup>1</sup> and the
+concentration of urea ([urea]) is measured in M.</p>
+      </caption>
+      <graphic xlink:href="gr4"/>
+    </fig>
+    <fig id="fig5">
+      <label>Figure 5</label>
+      <caption>
+        <p>The CAfn2 structure showing the &#x3D5;-values (high, blue, &#x3A6;&#xA0;&#x2265;&#xA0;0.4; medium, magenta, 0.2&#xA0;&lt;&#xA0;&#x3A6;&#xA0;&lt;&#xA0;0.4; and low, red, &#x3A6;&#xA0;&#x2264;&#xA0;0.2). (a) The front
+view of CAfn2 (the CAfn2 structure is oriented as in <xref rid="fig1" ref-type="fig">Figure 1</xref>). (b) The rear view of CAfn2.</p>
+      </caption>
+      <graphic xlink:href="gr5"/>
+    </fig>
+    <fig id="fig6">
+      <label>Figure 6</label>
+      <caption>
+        <p>(a) and (c) The obligatory folding nucleus of CAfn2 has moved within
+the hydrophobic core in comparison to (b) and (d) the structurally conserved
+positions for TNfn3. The molecules are oriented as in <xref rid="fig1" ref-type="fig">Figure 1</xref>. The novel obligatory folding nucleus of CAfn2 is
+based on the &#x3A6;-values and contact maps between the residues in the hydrophobic
+nucleus.</p>
+      </caption>
+      <graphic xlink:href="gr6"/>
+    </fig>
+    <fig id="fig7">
+      <label>Figure 7</label>
+      <caption>
+        <p>Br&#xF8;nsted analysis of TNfn3 and CAfn2 mutants, showing the plot of
+&#x394;&#x394;<italic>G</italic><sub>D&#x2013;&#x2021;</sub><italic>versus</italic> &#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub>.
+The separation of data points into two discrete populations shows that the
+folding nucleus of both proteins is not a uniformly expanded form of the native
+state. The central core of the protein forms early and the peripheral regions
+pack after the transition state for folding.</p>
+      </caption>
+      <graphic xlink:href="gr7"/>
+    </fig>
+    <fig id="fig8">
+      <label>Figure 8</label>
+      <caption>
+        <p>Comparison of the &#x3A6;-value patterns in CAfn2 (red) and TNfn3 (blue).
+(a) The pattern of &#x3A6;-values in the A&#x2013;B&#x2013;E strand is the same with the highest
+&#x3A6;-values falling in layer 3. (b) In the C&#x2032;-C-F-G sheet, however, the residues
+with the highest &#x3A6;-values in CAfn2 are in a lower layer than in
+TNfn3.</p>
+      </caption>
+      <graphic xlink:href="gr8"/>
+    </fig>
+    <table-wrap id="tbl1" position="float">
+      <label>Table 1</label>
+      <caption>
+        <p>Structural details at each position mutated in
+CAfn2</p>
+      </caption>
+      <table frame="hsides" rules="groups">
+        <thead>
+          <tr>
+            <th valign="top">Mutant</th>
+            <th align="center" valign="top">Position<xref rid="tblfn1" ref-type="table-fn">a</xref></th>
+            <th valign="top">SASA (%)</th>
+            <th align="center" valign="top">Deleted contacts: residue number (number
+of contacts deleted)<xref rid="tblfn2" ref-type="table-fn">b</xref></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">L10A</td>
+            <td align="center" valign="top">A3</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">11(2), 22(12), 23(1), 24(17), 66(1),
+67(2), 68(9), 81(6), 82(1), 84(9)</td>
+          </tr>
+          <tr>
+            <td valign="top">S12A</td>
+            <td align="center" valign="top">A2</td>
+            <td align="char" valign="top">11</td>
+            <td align="center" valign="top">11(1), 15(1), 20(2), 22(1), 84(3),
+86(3)</td>
+          </tr>
+          <tr>
+            <td valign="top">I20A</td>
+            <td align="center" valign="top">B2</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">12(4), 15(10), 21(2), 22(6), 55(6),
+58(5), 66(13), 86(7), 88(1)</td>
+          </tr>
+          <tr>
+            <td valign="top">L22A</td>
+            <td align="center" valign="top">B3</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">10(11), 12(3), 20(6), 24(3), 38(6),
+53(3), 55(4), 66(13), 68(3), 84(8), 86(2)</td>
+          </tr>
+          <tr>
+            <td valign="top">V33A</td>
+            <td align="center" valign="top">BC-loop</td>
+            <td align="char" valign="top">3</td>
+            <td align="center" valign="top">4(5), 27(4), 29(1), 30(2), 34(2), 36(6),
+70(2), 72(2)</td>
+          </tr>
+          <tr>
+            <td valign="top">Y36L</td>
+            <td align="center" valign="top">C5</td>
+            <td align="char" valign="top">4</td>
+            <td align="center" valign="top">7(7), 24(20), 26(4), 27(8), 33(5), 51(3),
+70(4)</td>
+          </tr>
+          <tr>
+            <td valign="top">Y36F</td>
+            <td align="center" valign="top">C5</td>
+            <td align="char" valign="top">4</td>
+            <td align="center" valign="top">7(1), 24(3), 26(1), 27(2), 33(2), 51(1),
+70(1)</td>
+          </tr>
+          <tr>
+            <td valign="top">V38A</td>
+            <td align="center" valign="top">C4</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">22(7), 24(4), 39(1), 45(1), 46(4), 48(3),
+53(2), 55(5), 66(6), 67(1), 68(4)</td>
+          </tr>
+          <tr>
+            <td valign="top">N40A</td>
+            <td align="center" valign="top">C3</td>
+            <td align="char" valign="top">18</td>
+            <td align="center" valign="top">45(3), 55(1), 58(3), 64(14), 65(2),
+66(15)</td>
+          </tr>
+          <tr>
+            <td valign="top">L44A</td>
+            <td align="center" valign="top">C&#x2032;3</td>
+            <td align="char" valign="top">25</td>
+            <td align="center" valign="top">37(11), 38(1), 39(15), 45(2),
+47(5)</td>
+          </tr>
+          <tr>
+            <td valign="top">T46A</td>
+            <td align="center" valign="top">C&#x2032;4</td>
+            <td align="char" valign="top">10</td>
+            <td align="center" valign="top">38(4), 45(1), 47(2), 48(4), 53(1), 54(2),
+55(7)</td>
+          </tr>
+          <tr>
+            <td valign="top">V48A</td>
+            <td align="center" valign="top">C&#x2032;5</td>
+            <td align="char" valign="top">8</td>
+            <td align="center" valign="top">24(9), 36(3), 38(3), 46(4), 52(1), 53(2),
+54(2), 68(1)</td>
+          </tr>
+          <tr>
+            <td valign="top">A53G</td>
+            <td align="center" valign="top">E4</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">22(4), 24(4), 38(3), 46(2), 48(3), 52(2),
+54(2), 55(2), 68(1)</td>
+          </tr>
+          <tr>
+            <td valign="top">I55A</td>
+            <td align="center" valign="top">E3</td>
+            <td align="char" valign="top">3</td>
+            <td align="center" valign="top">20(7), 22(5), 38(6), 40(2), 45(2), 46(8),
+53(2), 54(1), 56(1), 58(5), 66(20)</td>
+          </tr>
+          <tr>
+            <td valign="top">L58A</td>
+            <td align="center" valign="top">E2</td>
+            <td align="char" valign="top">2</td>
+            <td align="center" valign="top">20(7), 40(3), 55(7), 64(23), 66(10),
+88(7)</td>
+          </tr>
+          <tr>
+            <td valign="top">Y64L</td>
+            <td align="center" valign="top">F2</td>
+            <td align="char" valign="top">11</td>
+            <td align="center" valign="top">40(4), 58(15), 59(4), 62(12), 66(1),
+88(9)</td>
+          </tr>
+          <tr>
+            <td valign="top">Y64F</td>
+            <td align="center" valign="top">F2</td>
+            <td align="char" valign="top">11</td>
+            <td align="center" valign="top">58(3), 59(1), 62(3), 88(2)</td>
+          </tr>
+          <tr>
+            <td valign="top">F66L</td>
+            <td align="center" valign="top">F3</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">20(9), 22(2), 38(2), 40(10), 45(1),
+55(12), 58(10), 64(12), 86(4), 88(1)</td>
+          </tr>
+          <tr>
+            <td valign="top">V68A</td>
+            <td align="center" valign="top">F4</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">7(5), 10(7), 22(2), 24(30), 36(5), 38(4),
+48(1), 53(1), 67(1), 81(4)</td>
+          </tr>
+          <tr>
+            <td valign="top">A70G</td>
+            <td align="center" valign="top">F5</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">7(3), 27(2), 33(3), 36(8), 4(3), 69(1),
+71(1), 78(2)</td>
+          </tr>
+          <tr>
+            <td valign="top">S81A</td>
+            <td align="center" valign="top">G4</td>
+            <td align="char" valign="top">0</td>
+            <td align="center" valign="top">7(1), 10(4), 67(3), 68(3), 80(1),
+82(1)</td>
+          </tr>
+          <tr>
+            <td valign="top">V84A</td>
+            <td align="center" valign="top">G3</td>
+            <td align="char" valign="top">7</td>
+            <td align="center" valign="top">10(8), 11(1), 12(4), 22(5), 66(3), 82(1),
+86(4)</td>
+          </tr>
+          <tr>
+            <td valign="top">V86A</td>
+            <td align="center" valign="top">G2</td>
+            <td align="char" valign="top">6</td>
+            <td align="center" valign="top">12(4), 15(6), 20(6), 22(2), 64(3), 66(8),
+84(5), 88(1)</td>
+          </tr>
+        </tbody>
+      </table>
+      <table-wrap-foot>
+        <fn id="tblfn1">
+          <label>a</label>
+          <p>Each residue is described by strand and core layer (see <xref rid="fig3" ref-type="fig">Figure 3</xref>).</p>
+        </fn>
+      </table-wrap-foot>
+      <table-wrap-foot>
+        <fn id="tblfn2">
+          <label>b</label>
+          <p>Side-chain &#x2014; side chain contacts within 6&#xA0;&#xC5; deleted on
+mutation.</p>
+        </fn>
+      </table-wrap-foot>
+    </table-wrap>
+    <table-wrap id="tbl2" position="float">
+      <label>Table 2</label>
+      <caption>
+        <p>Changes in stability and refolding kinetics for mutants of
+CAfn2</p>
+      </caption>
+      <table frame="hsides" rules="groups">
+        <thead>
+          <tr>
+            <th valign="top">Protein</th>
+            <th align="center" valign="top">Position</th>
+            <th align="center" valign="top"><italic>m</italic><sub>D&#x2013;N</sub> (kcal mol<sup>&#x2212;&#xA0;1</sup> M<sup>&#x2212;&#xA0;1</sup>)</th>
+            <th align="center" valign="top">[urea]<sub>50%</sub> (M)</th>
+            <th align="center" valign="top">&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub> (kcal
+mol<sup>&#x2212;&#xA0;1</sup>)</th>
+            <th align="center" valign="top"><italic>k</italic><sub>f</sub> at 0&#xA0;M urea
+(s<sup>&#x2212;&#xA0;1</sup>)</th>
+            <th align="center" valign="top"><italic>m</italic><sub>kf</sub> (M<sup>&#x2212;&#xA0;1</sup>)</th>
+            <th align="center" valign="top">&#x3A6; at 0&#xA0;M urea</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">Wild-type</td>
+            <td align="center" valign="top"/>
+            <td align="char" valign="top">1.08&#xA0;&#xB1;&#xA0;0.14</td>
+            <td align="char" valign="top">6.20&#xA0;&#xB1;&#xA0;0.14</td>
+            <td align="char" valign="top"/>
+            <td align="char" valign="top">4.23&#xA0;&#xB1;&#xA0;0.11</td>
+            <td align="char" valign="top">0.89&#xA0;&#xB1;&#xA0;0.01</td>
+            <td align="char" valign="top"/>
+          </tr>
+          <tr>
+            <td valign="top">L10A</td>
+            <td align="center" valign="top">A3</td>
+            <td align="char" valign="top">1.19&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">4.01&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">2.52&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">4.70&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">1.00&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">0.03&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">S12A</td>
+            <td align="center" valign="top">A2</td>
+            <td align="char" valign="top">1.00&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">6.29&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">&#x2212;0.10&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top"/>
+            <td align="char" valign="top"/>
+            <td align="center" valign="top">ND</td>
+          </tr>
+          <tr>
+            <td valign="top">I20A</td>
+            <td align="center" valign="top">B2</td>
+            <td align="char" valign="top">1.15&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">3.50&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">3.11&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">1.35&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="char" valign="top">1.12&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">0.22&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">L22A</td>
+            <td align="center" valign="top">B3</td>
+            <td align="char" valign="top">1.16&#xA0;&#xB1;&#xA0;0.11</td>
+            <td align="char" valign="top">1.39&#xA0;&#xB1;&#xA0;0.12</td>
+            <td align="char" valign="top">5.54&#xA0;&#xB1;&#xA0;0.25</td>
+            <td align="char" valign="top">0.44&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="center" valign="top">a</td>
+            <td align="char" valign="top">0.24&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">V33A</td>
+            <td align="center" valign="top">BC-loop</td>
+            <td align="char" valign="top">1.16&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">4.66&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">1.77&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">3.12&#xA0;&#xB1;&#xA0;0.22</td>
+            <td align="char" valign="top">0.88&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">0.10&#xA0;&#xB1;&#xA0;0.03</td>
+          </tr>
+          <tr>
+            <td valign="top">Y36F</td>
+            <td align="center" valign="top">C5</td>
+            <td align="char" valign="top">1.25&#xA0;&#xB1;&#xA0;0.12</td>
+            <td align="char" valign="top">4.66&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">1.77&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">4.24&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">1.04&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">0.00&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">Y36L</td>
+            <td align="center" valign="top">C5</td>
+            <td align="char" valign="top">1.46&#xA0;&#xB1;&#xA0;0.34</td>
+            <td align="char" valign="top">1.02&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="char" valign="top">5.97&#xA0;&#xB1;&#xA0;0.24</td>
+            <td align="char" valign="top">0.92&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="center" valign="top">a</td>
+            <td align="char" valign="top">0.15&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">F36L</td>
+            <td align="center" valign="top">C5</td>
+            <td align="char" valign="top">1.46&#xA0;&#xB1;&#xA0;0.34</td>
+            <td align="char" valign="top">1.02&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="char" valign="top">4.20&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="char" valign="top">0.92&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="center" valign="top">a</td>
+            <td align="char" valign="top">0.22&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">V38A</td>
+            <td align="center" valign="top">C4</td>
+            <td align="char" valign="top">1.27&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">2.56&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">4.19&#xA0;&#xB1;&#xA0;0.19</td>
+            <td align="char" valign="top">0.25&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">1.46&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">0.40&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">N40A</td>
+            <td align="center" valign="top">C3</td>
+            <td align="char" valign="top">0.99&#xA0;&#xB1;&#xA0;0.08</td>
+            <td align="char" valign="top">5.33&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="char" valign="top">1.00&#xA0;&#xB1;&#xA0;0.20</td>
+            <td align="char" valign="top">4.29&#xA0;&#xB1;&#xA0;0.19</td>
+            <td align="char" valign="top">0.87&#xA0;&#xB1;&#xA0;0.82</td>
+            <td align="char" valign="top">0.01&#xA0;&#xB1;&#xA0;0.03</td>
+          </tr>
+          <tr>
+            <td valign="top">L44A</td>
+            <td align="center" valign="top">C&#x2032;3</td>
+            <td align="char" valign="top">1.25&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">3.79&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">2.78&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">0.61&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">1.17&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">0.40&#xA0;&#xB1;&#xA0;0.03</td>
+          </tr>
+          <tr>
+            <td valign="top">T46A</td>
+            <td align="center" valign="top">C&#x2032;4</td>
+            <td align="char" valign="top">0.89&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">7.49&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">&#x2212;&#xA0;1.49&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">3.08&#xA0;&#xB1;&#xA0;0.52</td>
+            <td align="char" valign="top">0.88&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">0.36&#xA0;&#xB1;&#xA0;0.05</td>
+          </tr>
+          <tr>
+            <td valign="top">V48A</td>
+            <td align="center" valign="top">C&#x2032;5</td>
+            <td align="char" valign="top">1.10&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">4.83&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">1.58&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">1.28&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">1.08&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">0.45&#xA0;&#xB1;&#xA0;0.05</td>
+          </tr>
+          <tr>
+            <td valign="top">A53G</td>
+            <td align="center" valign="top">E4</td>
+            <td align="char" valign="top">1.18&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">4.18&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">2.33&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">2.48&#xA0;&#xB1;&#xA0;0.16</td>
+            <td align="char" valign="top">1.23&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">0.14&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">I55A</td>
+            <td align="center" valign="top">E3</td>
+            <td align="char" valign="top">1.13&#xA0;&#xB1;&#xA0;0.08</td>
+            <td align="char" valign="top">3.05&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">3.63&#xA0;&#xB1;&#xA0;0.19</td>
+            <td align="char" valign="top">0.37&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">1.08&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">0.40&#xA0;&#xB1;&#xA0;0.03</td>
+          </tr>
+          <tr>
+            <td valign="top">L58A</td>
+            <td align="center" valign="top">E2</td>
+            <td align="char" valign="top">1.13&#xA0;&#xB1;&#xA0;0.10</td>
+            <td align="char" valign="top">1.63&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">5.26&#xA0;&#xB1;&#xA0;0.21</td>
+            <td align="char" valign="top">1.06&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="center" valign="top">a</td>
+            <td align="char" valign="top">0.16&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">Y64L</td>
+            <td align="center" valign="top">F2</td>
+            <td align="char" valign="top">1.26&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">2.40&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">4.38&#xA0;&#xB1;&#xA0;0.19</td>
+            <td align="char" valign="top">3.09&#xA0;&#xB1;&#xA0;0.14</td>
+            <td align="char" valign="top">1.14&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">0.04&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">Y64F</td>
+            <td align="center" valign="top">F2</td>
+            <td align="char" valign="top">1.31&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">4.88&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">1.52&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">3.82&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">0.94&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">0.04&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">F64L</td>
+            <td align="center" valign="top">F2</td>
+            <td align="char" valign="top">1.26&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">2.40&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">2.86&#xA0;&#xB1;&#xA0;0.12</td>
+            <td align="char" valign="top">3.09&#xA0;&#xB1;&#xA0;0.14</td>
+            <td align="char" valign="top">1.14&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">0.12&#xA0;&#xB1;&#xA0;0.03</td>
+          </tr>
+          <tr>
+            <td valign="top">F66L</td>
+            <td align="center" valign="top">F3</td>
+            <td align="char" valign="top">1.08&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">4.03&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">2.50&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">3.13&#xA0;&#xB1;&#xA0;0.08</td>
+            <td align="char" valign="top">1.01&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">0.07&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">V68A</td>
+            <td align="center" valign="top">F4</td>
+            <td align="char" valign="top">1.19&#xA0;&#xB1;&#xA0;0.07</td>
+            <td align="char" valign="top">2.67&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">4.07&#xA0;&#xB1;&#xA0;0.20</td>
+            <td align="char" valign="top">0.74&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">1.36&#xA0;&#xB1;&#xA0;0.04</td>
+            <td align="char" valign="top">0.25&#xA0;&#xB1;&#xA0;0.01</td>
+          </tr>
+          <tr>
+            <td valign="top">A70G</td>
+            <td align="center" valign="top">F5</td>
+            <td align="char" valign="top">1.22&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">4.57&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">1.88&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">1.77&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">1.04&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">0.27&#xA0;&#xB1;&#xA0;0.03</td>
+          </tr>
+          <tr>
+            <td valign="top">S81A</td>
+            <td align="center" valign="top">G4</td>
+            <td align="char" valign="top">1.13&#xA0;&#xB1;&#xA0;0.09</td>
+            <td align="char" valign="top">4.97&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">1.42&#xA0;&#xB1;&#xA0;0.18</td>
+            <td align="char" valign="top">4.84&#xA0;&#xB1;&#xA0;0.22</td>
+            <td align="char" valign="top">0.92&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">&#x2212;0.06&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">V84A</td>
+            <td align="center" valign="top">G3</td>
+            <td align="char" valign="top">1.22&#xA0;&#xB1;&#xA0;0.06</td>
+            <td align="char" valign="top">4.76&#xA0;&#xB1;&#xA0;0.03</td>
+            <td align="char" valign="top">1.66&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">3.66&#xA0;&#xB1;&#xA0;0.17</td>
+            <td align="char" valign="top">0.94&#xA0;&#xB1;&#xA0;0.02</td>
+            <td align="char" valign="top">0.05&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+          <tr>
+            <td valign="top">V86A</td>
+            <td align="center" valign="top">G2</td>
+            <td align="char" valign="top">1.15&#xA0;&#xB1;&#xA0;0.05</td>
+            <td align="char" valign="top">4.95&#xA0;&#xB1;&#xA0;0.15</td>
+            <td align="char" valign="top">1.44&#xA0;&#xB1;&#xA0;0.24</td>
+            <td align="char" valign="top">4.19&#xA0;&#xB1;&#xA0;0.14</td>
+            <td align="char" valign="top">0.96&#xA0;&#xB1;&#xA0;0.01</td>
+            <td align="char" valign="top">0.00&#xA0;&#xB1;&#xA0;0.02</td>
+          </tr>
+        </tbody>
+      </table>
+      <table-wrap-foot>
+        <fn>
+          <p>ND Not done: No &#x3A6;-value was determined for S12A because
+&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub> &#x223C;&#xA0;0.
+Previous studies have indicated that where
+&#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub> &gt;&#xA0;0.6&#xA0;kcal mol<sup>&#x2212;&#xA0;1</sup>, the corresponding &#x3A6;-value
+can be considered reliable.<xref rid="bib58" ref-type="bibr"><sup>58</sup></xref></p>
+          <p>The errors reported for <italic>m</italic><sub>D&#x2013;N</sub>
+and <italic>k</italic><sub>f</sub> are standard errors from the fits
+of the data. Errors in &#x394;&#x394;<italic>G</italic><sub>D&#x2013;N</sub> and &#x3A6; were
+determined by standard error propagation methods.</p>
+          <p><sup>a</sup>Where the mutation induced a large change in
+stability there were too few points to fit the refolding
+<italic>m</italic>-value with accuracy. These mutant chevrons were fit
+with a fixed average <italic>m-</italic>value of 1.06&#xA0;M<sup>&#x2212;&#xA0;1</sup>.</p>
+        </fn>
+      </table-wrap-foot>
+    </table-wrap>
+  </floats-group>
+</article>
+</pmc-articleset>

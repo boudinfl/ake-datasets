@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17597854</article-id>
+      <article-id pub-id-type="pmc">1891631</article-id>
+      <article-id pub-id-type="publisher-id">16-1-2005</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Web Database</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A database for medicinal and aromatic plants of JK (Jammu and Kashmir) in India</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Masood</surname>
+            <given-names>Akbar</given-names>
+          </name>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Shafi</surname>
+            <given-names>Mujtaba</given-names>
+          </name>
+        </contrib>
+        <aff>Bioinformatics Centre, The University of Kashmir, Hazratbal, Srinagar, Jammu and Kashmir, India 190006</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Akbar Masood
+          E-mail:
+          <email>akbar@bioinfoku.org</email>; Corresponding author</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2005</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>7</day>
+        <month>10</month>
+        <year>2005</year>
+      </pub-date>
+      <volume>1</volume>
+      <issue>2</issue>
+      <fpage>56</fpage>
+      <lpage>57</lpage>
+      <history>
+        <date date-type="received">
+          <day>26</day>
+          <month>9</month>
+          <year>2005</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>6</day>
+          <month>10</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>6</day>
+          <month>10</month>
+          <year>2005</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2005 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2005</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction 
+				in any medium, for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>High throughput screening of small molecules for a given drug target is achieved using plant materials of medicinal value. 
+          Therefore, it is important to document the availability and location of such medicinal plants in the form of a database. Here, 
+          we describe a web database containing information (botanical name, common name, local name, botany, chemistry, folklore 
+          medicinal use and medicinal uses) about the medicinal and aromatic plants available in JK (Jammu and Kashmir). The database is 
+          available for free in public domain.</p>
+        <sec id="sb1e">
+          <title>Availability</title>
+          <p>
+				<ext-link ext-link-type="uri" xlink:href="http://www.bioinfoku.org/db/medsearch.php">
+          http://www.bioinfoku.org/db/medsearch.php</ext-link>
+			</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>medicinal</kwd>
+        <kwd>aromatic</kwd>
+        <kwd>plants</kwd>
+        <kwd>Jammu and Kashmir</kwd>
+        <kwd>India</kwd>
+        <kwd>botanical name</kwd>
+        <kwd>common name</kwd>
+        <kwd>folklore</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>Medicinal plants documented in the literature from thick vegetations of the world are routinely used for high throughput 
+      screening in small molecular drug discovery. A large number of such plants are known to be recognized in a discrete manner. 
+      Therefore, it is important to store information related to medicinal and aromatic plants of JK in a database. This will help in 
+      the use and exploitation of the plant materials for drug discovery. Some of the plants available in this region are also known 
+      to have aromatic value. Here, we describe the development and use of a database containing information on medicinal and aromatic 
+      plants from JK. </p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <sec id="s2a">
+        <title>Dataset</title>
+        <p>Folklore medicinal usage and other associated data were manually collected from the inhabitants (tribal/gujjars/local 
+      clinicians) of JK through direct person to person survey for each plant species. The current dataset contains information for 
+      about 133 plant species.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Database Interface</title>
+        <p>The database interface is designed for searching the dataset using a PHP (a programming language that allows web developers 
+      to create dynamic content that interacts with databases) server enabled script for keywords such as botanical name, local name, 
+      folklore use and medicinal use. The database is accessible for free through the internet. </p>
+      </sec>
+      <sec id="s2c">
+        <title>Database Design</title>
+        <p>The database is developed in MySQL on a Linux Platform and updated regularly.</p>
+      </sec>
+      <sec id="s2d">
+        <title>Search result</title>
+        <p>The search output for a given query (for example, diabetes) is given in <xref ref-type="fig" rid="F1">Figure 1</xref>.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Utility</title>
+      <p>The database finds utility in the selection of medicinal plant species for high throughput screening in drug discovery.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This project is funded by BTIS (Biotechnology information system), DBT (Department of Biotechnology), Ministry of Science and 
+      Technology, Government of India, India.
+    </p>
+    </ack>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>A database for medicinal and aromatic plants of JK (Jammu and Kashmir) in India. A sample output for &#x2018;diabetes&#x2019; is shown. </p>
+        </caption>
+        <graphic xlink:href="97320630001056F1"/>
+      </fig>
+    </sec>
+    <fn-group>
+      <fn id="FN1" fn-type="other">
+        <p>
+					<bold>Citation:</bold>Masood &amp; Shafi, Bioinformation 1(2): 56-57 (2005)</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

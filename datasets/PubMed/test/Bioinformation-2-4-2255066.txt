@@ -1,0 +1,29 @@
+Database of neurodegenerative disorders
+A neurological disorder is a disorder caused by the deterioration of certain nerve cells called neurons. Changes in these cells cause them to function abnormally, eventually bringing about their death. In this paper we present a comprehensive database for neurodegenerative diseases, a first-of-its kind covering all known or suspected genes, proteins, pathways related to neurodegenerative diseases. This dynamically compiled database allows researchers to link neurological disorders to the candidate genes & proteins. It serves as a tool to navigate potential gene-protein-pathway relationships in the context of neurodegenerative diseases. The neurodegenerative disorder database covers more then 100 disease concepts including synonyms and research topics. The current version of the database provides links to 728 abstracts and over 203 unique genes/proteins with 137 drugs. Also it is integrated well with other related databases. The aim of this database is to provide the researcher with a quick overview of potential links between genes and proteins with related neurodegenerative diseases. Thus DND providing a user-friendly interface is designed as a source to enhance research on neurodegenerative disorders.
+Background
+Neurodegenerative disease leads to neurodegeneration and disabilities as a result of deterioration of neurons. [1] Progressive loss of motor, sensory neurons and the ability of the mind to refer 
+sensory information to an external object is affected in different kinds of neurological disorders. [2] Mutations in the genes identified for these disorders leads to accumulation of misfolded protein 
+resulting in protein aggregation and intracellular inclusions. [3] The knowledge gained from the genetic studies of many neurodegenerative disorders explains the disease mechanism that includes few pathways 
+leading to neuronal death of cells. [4] Amyloid precursor proteins (APP), SNCA, Parkin, UCHL1, NR4A2, DJ1, PINK1 and LRRK2 are the genetic causes of some of the primary neurodegenerative disorders like 
+Alzheimer's disease, Parkinson's disease, Huntington's disease, amyotrophic lateral sclerosis and prion diseases. [5] The treatment strategies for these disorders include therapies and drugs. Because of the 
+complexity involved in the neurodegenerative disease mechanism and treatment strategies, it is of interest to collate different Neurodegenerative Disorders in the form of a database. Hence we developed DND 
+(Database of Neurodegenerative Disorders), an on-line web based database that contains more than 100 neuro related disease concepts and provides with a covering of all related genes, proteins, pathways and drug information.
+Methodology
+Database model and content
+Database of Neurodegenerative Disorders (DND) is developed as an open source software system using Mysql - 5.0.18 - Win32 [6] and PHP - 5.2.0. 
+[7] DND uses the relational data model. A schema diagram describing 
+the DND is shown in the [figure 1]. MySQL tables are shown as rectangles. Mandatory attributes are in bold, optional are in italics. The relationships between tables in the database are shown as connecting 
+lines. The public databases NCBI, SwissProt, Kegg and DrugBank are used for populating the database. The gene sequences related to various neurological disorders are obtained from NCBI. Both gene sequence and coding 
+sequence can be obtained in Fasta format. Also HGNC links for each entry is provided. All protein sequences are extracted from UniProt, and fields that mapped to PDB, Pfam, Interpro, Prints and Smart are parsed and 
+stored. Links from DND to these source databases are also provided for each entry. Fasta format of protein sequences too can be obtained. Pathway information for Neurodegenerative diseases as well as known neuro 
+related drug compounds in KEGG is searched and the results obtained are incorporated in to the database. The articles are chosen to represent a diverse selection of reports on major Neurodegenerative diseases and 
+corresponding Pubmed ID is provided for all the entries. Neurological Associations and Organizations interested in neuroscience-related fields are tabulated with links to their corresponding web pages.
+Searching DND
+There are three ways by which the user can query the database. The first one is the keyword search in home page that can be performed by giving keywords like Disease name, Gene name and Drug name to retrieve the 
+required data. The second one is the advanced search option for specific requirements with two main entry points namely gene/protein and drug/drug properties. Gene/protein include search options like Gene name, Gene id, 
+Omim, Hgnc, Pubmed, Swissprot id, Pdb, Interpro, Pfam, Smart and Prints. The second entry point Drug/drug properties include Drug name, Kegg id, DrugBank id, Pubchem, and IUPAC name and Molecular formula. Alternatively, 
+the users can also browse the database via the seven entry points namely browse by Diseases, Genes, Proteins, Drugs, Pathways, Related Articles and Organizations.
+Utility
+The current version of the DND is comprehensive with enormous data related to every aspect of neurological disorders, providing public access to sequence, genetics, structural, and bibliographic information. Structures 
+of drugs can be viewed using the browser plug in Chime [8] that allows chemical structures to rotate, reformat, and save in various file formats. A glossary describing the terms used in database is also provided to help 
+the end users. We believe that DND will assist the intended neurological researchers in understanding of fundamental molecular and genetic processes that control various neurodegenerative diseases.

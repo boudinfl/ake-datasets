@@ -1,0 +1,643 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioprocess Biosyst Eng</journal-id>
+      <journal-title>Bioprocess and Biosystems Engineering</journal-title>
+      <issn pub-type="ppub">1615-7591</issn>
+      <issn pub-type="epub">1615-7605</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16955246</article-id>
+      <article-id pub-id-type="pmc">1705514</article-id>
+      <article-id pub-id-type="publisher-id">80</article-id>
+      <article-id pub-id-type="doi">10.1007/s00449-006-0080-1</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Improving the batch-to-batch reproducibility in microbial cultures during recombinant protein production by guiding the process along a predefined total biomass profile</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Jenzsch</surname>
+            <given-names>Marco</given-names>
+          </name>
+          <address>
+            <email>marco.jenzsch@biochemtech.uni-halle.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Gnoth</surname>
+            <given-names>Stefan</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Kleinschmidt</surname>
+            <given-names>Martin</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Simutis</surname>
+            <given-names>Rimvydas</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>L&#xFC;bbert</surname>
+            <given-names>Andreas</given-names>
+          </name>
+          <address>
+            <email>andreas.luebbert@biochemtech.uni-halle.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Zentrum f&#xFC;r Bioverfahrenstechnik, Martin-Luther-Universitaet, Weinbergweg 22, c/o Biozentrum, 06120 Halle (Saale), Germany </aff>
+        <aff id="Aff2"><label>2</label>Protein Research, Probiodrug AG, Weinbergweg 22, 06120 Halle (Saale), Germany </aff>
+        <aff id="Aff3"><label>3</label>Institute of Automation and Control Systems, Kaunas University of Technology, Studentu g. 48, 3028 Kaunas, Lithuania </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>6</day>
+        <month>9</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>29</volume>
+      <issue>5-6</issue>
+      <fpage>315</fpage>
+      <lpage>321</lpage>
+      <history>
+        <date date-type="received">
+          <day>15</day>
+          <month>7</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>2</day>
+          <month>8</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>In industry <italic>Escherichia coli </italic>is the preferred host system for the heterologous biosynthesis of therapeutic proteins that do not need posttranslational modifications. In this report, the development of a robust high-cell-density fed-batch procedure for the efficient production of a therapeutic hormone is described. The strategy is to guide the process along a predefined profile of the total biomass that was derived from a given specific growth rate profile. This profile might have been built upon experience or derived from numerical process optimization. A surprisingly simple adaptive procedure correcting for deviations from the desired path was developed. In this way the batch-to-batch reproducibility can be drastically improved as compared to the process control strategies typically applied in industry. This applies not only to the biomass but, as the results clearly show, to the product titer also.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>PAT</kwd>
+        <kwd><italic>E. coli</italic> fed batch</kwd>
+        <kwd>Reproducibility</kwd>
+        <kwd>Recombinant proteins</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Biologics are known to be rather complex products. Apparently small changes in the manufacturing processes can cause significant differences in their clinical properties. Hence, production processes for biologics are approved by authorities only with clearly defined constraints on their manufacturing procedures. Consequently, reproducibility is of utmost importance. Additionally, reproducibility is very important as it affects the downstream processing and thus quality of the final product.</p>
+      <p>From the engineering point of view there are two challenges in guaranteeing batch-to-batch reproducibility. First of all, within the given constraints, the operational procedure, most robust with respect to typically appearing process fluctuations, must be found. And, secondly, while running the process along this robust path, the remaining randomly appearing disturbances must be eliminated by means of feedback control.</p>
+      <p>With respect to batch-to-batch reproducibility, production processes for recombinant proteins are lagging far behind most other industrial processes. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> shows a typical example of the repeatability of biomass concentration profiles in a recombinant protein production process. The variability is quite high.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Biomass (<italic>open circles</italic>) and target protein (<italic>open triangles</italic>) concentration profiles from 13 fed-batch fermentations for the production of a recombinant protein. Typically the batch-to-batch reproducibility of these production processes is rather low</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig1_HTML" id="MO1"/></fig></p>
+      <p>This fact was recognized by the FDA. The agency responded with a couple of measures. One essential reaction is FDA&#x2019;s PAT initiative [<xref ref-type="bibr" rid="CR2">2</xref>]. With PAT, improvements in pharmaceutical and biologics production processes with respect to real time automated process monitoring and control are demanded. A rigorous science-based approach to manufacturing is demanded, as better understanding is thought to lead to more efficient process control, lower process variability, thus high product quality and finally patient safety. For biologics it is particularly important to keep the processes under control early in the product synthesis process (e.g., [<xref ref-type="bibr" rid="CR1">1</xref>]).</p>
+      <p>In bioprocess engineering, process monitoring and control is being developed since many years. A review was given by Lee et al. [<xref ref-type="bibr" rid="CR8">8</xref>]. The objective was to keep the process on trajectories that finally lead to a high value of the desired mass <italic>m</italic><sub>P</sub> of the product. Within a more or less well-defined production time <italic>t</italic><sub>P</sub>, this can be related to biomass by the following expression: <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ m_{{\text{P}}} = {\int\limits_0^{t_{{\text{P}}} } {\pi x\,{\text{d}}t} }, $$\end{document}</tex-math></disp-formula> where <italic>&#x3C0;</italic> is the specific product formation rate and <italic>x</italic> the total biomass. Both arguments of the integral are functions of time, but more importantly, both are primarily dependent on the specific biomass growth rate <italic>&#x3BC;</italic> in most industrial production systems. The growth rate that a specific medium supports determines the physiological state of the cells, and particularly the cell&#x2019;s protein-synthesizing machinery that is important to recombinant protein production is also under growth rate control [<xref ref-type="bibr" rid="CR12">12</xref>]. Hence, the variable that rules the final outcome of the process is the specific biomass growth rate <italic>&#x3BC;</italic>. Thus, design of effective cultivation processes should be based on an optimal or at least a quasi-optimal profile of the specific growth rate. This can be obtained by means of numerical optimization procedures (e.g., [<xref ref-type="bibr" rid="CR10">10</xref>]) or simply by deriving a profile from data records and experience with the production system under consideration. In order to make sure that the process follows this profile it is straightforward to control <italic>&#x3BC;</italic> in the engineering sense (e.g., [<xref ref-type="bibr" rid="CR5">5</xref>&#x2013;<xref ref-type="bibr" rid="CR7">7</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR16">16</xref>&#x2013;<xref ref-type="bibr" rid="CR18">18</xref>]).</p>
+      <p>Direct control of <italic>&#x3BC;</italic> works perfectly as long as there are no severe disturbances in the process. When, however, some disturbances lead to a significant deviation of the biomass from its desired path, one must correct it before one can proceed with the desired optimal or quasi-optimal <italic>&#x3BC;</italic> profile. Otherwise reproducible process trajectories cannot be obtained.</p>
+      <p>The decisive innovation in this paper is to show that the batch-to-batch reproducibility of the production processes can be significantly enhanced when the process is controlled to a predefined profile of the biomass <italic>x</italic>. This does not mean to stay away from keeping the <italic>&#x3BC;</italic> profiles found to be optimal from the physiological point of view. The <italic>x</italic>-setpoint profiles are simply derived from predefined <italic>&#x3BC;</italic> profiles. Using start biomass and desired specific biomass growth rate profile it is easy to estimate total biomass profile during the cultivation: <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \frac{{{\text{d}}x}} {{{\text{d}}t}} = \mu _{{{\text{set}}}} x. $$\end{document}</tex-math></disp-formula></p>
+      <p>A given biomass profile <italic>x</italic><sub>set</sub>(<italic>t</italic>) is then in close relationship with the specific biomass growth rate <italic>&#x3BC;</italic>. Hence, controlling the process to an <italic>x</italic> profile should satisfy the corresponding specific growth rate profile <italic>&#x3BC;</italic><sub>set</sub>(<italic>t</italic>) as well. In this case the cultivation process is more robust because the deviations in biomass concentration can be eliminated directly by controlling the integral variable <italic>x</italic>.</p>
+      <p>As <italic>x</italic> cannot be measured directly with sensors that work reliably at a production fermenter and provide biomass values representative for the culture, it should be measured indirectly. This is a further advantage as compared to the <italic>&#x3BC;</italic>-control because we are able to estimate <italic>x</italic> much more reliably than the specific growth rate <italic>&#x3BC;</italic> [<xref ref-type="bibr" rid="CR4">4</xref>]. In production environments, where sufficiently many data records are available from the process under consideration, artificial neural networks (ANNs) yield very accurate estimates. Hence we use ANNs to estimate biomass <italic>x</italic>. The ANN was trained on 26 data sets measured during a process development project with the strain used in this work.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <p>Experiments were performed with <italic>Escherichia coli</italic> BL21(DE3) as the host cell. The recombinant target protein was coded on the plasmid pET 28a and expressed under the control of the T7 promoter after induction with isopropyl-thiogalactopyranosid (IPTG). The strain was resistant to kanamycin. The product appears as inclusion body within the cytoplasm. The particular strain used did not produce measurable amounts of acetate under the cultivation conditions adjusted in the experiments reported. This was tested in the beginning by means of appropriate test kits.</p>
+      <p>The main substrate was glucose. It was fed at a concentration of 600&#xA0;g/kg. The other components are compiled in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Composition of the mineral medium</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" colspan="2">Mineral salt solution</th><th align="left" colspan="2">Trace element solution</th></tr><tr><th align="left">Component</th><th align="left">Concentration (g/kg)</th><th align="left">Component</th><th align="left">Concentration (g/kg)</th></tr></thead><tbody><tr><td align="left">K<sub>2</sub>HPO<sub>4</sub></td><td char="." align="char">14.60</td><td align="left">Na<sub>2</sub>-EDTA</td><td char="." align="char">20.10</td></tr><tr><td align="left">NaH<sub>2</sub>PO<sub>4</sub>&#xB7;H<sub>2</sub>O</td><td char="." align="char">3.60</td><td align="left">FeCl<sub>3</sub>&#xB7;6H<sub>2</sub>O</td><td char="." align="char">16.70</td></tr><tr><td align="left">(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></td><td char="." align="char">2.46</td><td align="left">CaCl<sub>2</sub>&#xB7;2H<sub>2</sub>O</td><td char="." align="char">0.74</td></tr><tr><td align="left">Na<sub>2</sub>SO<sub>4</sub></td><td char="." align="char">2.00</td><td align="left">CoCl<sub>2</sub>&#xB7;6H<sub>2</sub>O</td><td char="." align="char">0.21</td></tr><tr><td align="left">MgSO<sub>4</sub>&#xB7;7H<sub>2</sub>O</td><td char="." align="char">1.20</td><td align="left">ZnSO<sub>4</sub>&#xB7;7H<sub>2</sub>O</td><td char="." align="char">0.18</td></tr><tr><td align="left">(NH<sub>4</sub>)<sub>2</sub>-H-citrate</td><td char="." align="char">1.00</td><td align="left">CuSO<sub>4</sub>&#xB7;5H<sub>2</sub>O</td><td char="." align="char">0.10</td></tr><tr><td align="left">NH<sub>4</sub>Cl</td><td char="." align="char">0.50</td><td align="left">MnSO<sub>4</sub>&#xB7;H<sub>2</sub>O</td><td char="." align="char">0.10</td></tr><tr><td align="left">Kanamycin</td><td char="." align="char">0.10</td><td align="left"/><td char="." align="char"/></tr><tr><td align="left">Thiamin</td><td char="." align="char">0.10</td><td align="left"/><td char="." align="char"/></tr><tr><td align="left">Trace element solution</td><td char="." align="char">2&#xA0;mL/kg</td><td align="left"/><td char="." align="char"/></tr></tbody></table></table-wrap></p>
+      <p>All experiments were performed within BBI Sartorius System&#x2019;s BIOSTAT<sup>&#xAE;</sup> ED 15&#xA0;L bioreactor with 8&#xA0;L working volume (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The fermenter was equipped with standard 6-blade Rushton turbines that could be operated at up to 1,400&#xA0;rpm. The aeration rate could be increased up to 24&#xA0;L/min. Aeration rate and then stirrer speed were increased one after the other in order to keep the dissolved oxygen concentration at 25% saturation. In order to suppress foam formation, increase oxygen solubility and reduce the risk of contamination, the fermenter head pressure was kept at 0.5&#xA0;bar above the ambient pressure in the laboratory.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Experimental setup of the cultivation equipment</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig2_HTML" id="MO2"/></fig></p>
+      <p>The fermentations were operated in the fed-batch mode from the early beginning with an initial volume of 5&#xA0;L at pH 7 and a temperature of 35&#xB0;C. All fermentations were started in the night by automatic transfer of the inoculation biomass from a refrigerator into the reactor. Substrate feeding starts immediately after inoculation with a fixed exponential profile. According to Jenzsch et al. [<xref ref-type="bibr" rid="CR3">3</xref>], the specific growth rate setpoint was chosen as 0.5&#xA0;h<sup>&#x2212;1</sup>. Thus the glucose concentration appeared to be at a very low value just from the beginning on. Its value is in the order of the <italic>K</italic><sub>s</sub> value and thus below the values that can be measured during the fermentation. After the biomass concentration reached values of about 35&#xA0;g/kg, the culture was induced with 1&#xA0;mM IPTG. From the seventh fermentation hour on, the growth rate was kept under feedback control along an <italic>x</italic> profile that was derived from a predefined profile of the specific growth rate. The corresponding profile of the substrate feed rate was determined from the profiles of <italic>&#x3BC;</italic> and <italic>x</italic>. This was taken as reference feeding profile <italic>F</italic><sub>ref</sub> for all the fermentations described.</p>
+      <p>Temperature was measured with a Pt-100, pH with an Ingold-pH-probe, pO<sub>2</sub> with an Ingold pO<sub>2</sub>-Clark-electrode, CO<sub>2</sub> in the vent line with MAIHAK<sup>&#xAE;</sup>&#x2019;s Unor 610 and O<sub>2</sub> there with MAIHAK<sup>&#xAE;</sup>&#x2019;s Oxor 610. Further, the total ammonia consumption during pH control was recorded by means of a balance beneath the base reservoir. All these quantities were measured online. Additionally, enhanced foam levels could be detected with a foam sensor and, if the critical level was reached, a silicone antifoaming emulsion (ROTH<sup>&#xAE;</sup>) was added.</p>
+      <p>Biomass concentrations were measured offline (via the optical density at 600&#xA0;nm) with a Shimadzu<sup>&#xAE;</sup> photo-spectrometer (UV-2102PC). In preceding experiments a correlation was established between these values and the biomass dry weights, which were determined with the standard drying and weighting technique. Glucose was determined enzymatically with a YSI 2700 Select Bioanalyzer. The product was measured with SDS-PAGE after separation of the inclusion bodies and their solubilization.</p>
+    </sec>
+    <sec id="Sec3" sec-type="results">
+      <title>Results</title>
+      <p>Preliminary simulations and experiments showed that the total biomass <italic>x</italic>(<italic>t</italic>) is better suited as the controlled variable than the biomass concentration <italic>X</italic>(<italic>t</italic>) itself. The control can then be performed with a simple adaptive control algorithm comprising the following steps:<list list-type="order"><list-item><p>Estimate the total biomass <italic>x</italic><sub>est</sub> at the current time instant <italic>t</italic> using the artificial neural network trained before on the available data records [<xref ref-type="bibr" rid="CR4">4</xref>]. A simple feedforward artificial neural network with a single hidden layer was used which makes use of the online measured signals OUR, CPR, total base consumption resulting from pH control. With an additional bias node in the input layer the network has four input nodes. Five hidden layer nodes were used where the nonlinear response function of these nodes was chosen to be tangens hyperbolicus (tanh) functions. A single output, namely the biomass <italic>x</italic>, was taken, where the weighted sum of its input signals was directly used as the output signal.</p></list-item><list-item><p>Compute the deviation of estimated biomass <italic>x</italic><sub>est</sub> from its setpoint <italic>x</italic><sub>set</sub>: <disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta x = x_{{{\text{set}}}} - x_{{{\text{est}}}} . $$\end{document}</tex-math></disp-formula></p></list-item><list-item><p>The deviation &#x394;<italic>x</italic> in <italic>x</italic> was used to correct the growth yield value <italic>Y</italic><sub>xs</sub> in the feed function, which itself was limited to the interval given in order to avoid too big variations in cases where the measurements are disturbed in an unusual way: <disp-formula id="Equ4"><label>4</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ F = \frac{{\mu _{{{\text{set}}}} x_{{{\text{est}}}} }} {{{\left( {Y_{{{\text{xs}}}} - \alpha } \right)}S_{{\text{f}}} }}\quad {\text{with}}\;0.7F_{{{\text{ref}}}} \le F \le 1.3F_{{{\text{ref}}}} . $$\end{document}</tex-math></disp-formula></p></list-item></list>The concrete limits to <italic>F</italic> were chosen by experience in control practice.<list list-type="order"><list-item><p>In order to determine the controller variable <italic>&#x3B1;</italic> by which the growth yield is adapted to the current state of the process we found that it is better to make use not only of the deviation &#x394;<italic>x</italic> but also the smoothing action of an integral correction term to the deviation: <disp-formula id="Equ5"><label>5</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \alpha = k_{1} \Delta x + k_{2} {\int\limits_{t_{S} }^t {\Delta x\,{\text{d}}t\quad } }{\text{with}} - 0.15 \le \alpha \le 0.15. $$\end{document}</tex-math></disp-formula></p></list-item></list>Again, the correction was limited. Here the limitation was chosen by experience in such a way that the resulting yield values are kept within reasonable limits. The parameters <italic>k</italic><sub>1</sub> and <italic>k</italic><sub>2</sub> were initially determined in simulation studies. Later, during preliminary control experiments, they were slightly adapted. Their final values are <italic>k</italic><sub>1&#xA0;</sub>=&#xA0;0.1&#xA0;(kg(S))<sup>&#x2212;1</sup> and k<sub>2</sub>&#xA0;=&#xA0;0.02&#xA0;(kg(S))<sup>&#x2212;1</sup>&#xA0;h<sup>&#x2212;1</sup>.</p>
+      <p>The controlled biomass profiles depicted in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> show that this simple control approach leads to a very good reproducibility of the total biomass profiles.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Total biomass signals from five fermentations performed sequentially using the same setpoint profile</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig3_HTML" id="MO3"/></fig></p>
+      <p>As one is usually not interested in the total biomass, the corresponding biomass concentrations are depicted in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. As can easily be seen from both plots, the batch-to-batch variability of the trajectories is rather small, i.e., the process total biomass control works well.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Measurements of the biomass concentration during five experiments in which the total biomass was controlled. The induction time was <italic>t</italic><sub>ind&#xA0;</sub>=&#xA0;11&#xA0;h in all cases</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig4_HTML" id="MO4"/></fig></p>
+      <p>In order to get a better impression of the controller action, the deviations from the desired profile, i.e., the relative deviations between the total biomass and its setpoint, are plotted in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>. In all the experiments, the controller was switched on at <italic>t</italic>&#xA0;=&#xA0;7&#xA0;h. In the first 4&#xA0;h thereafter, the relative deviations remain within a 5% interval. The controller action then improves so that finally the relative deviation of the total biomass remains within a 2% interval around the mean. The feed rate profiles <italic>F</italic>(<italic>t</italic>) applied in the experiments are shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Relative deviations of the total biomass from the mean. The controller was switched on 7&#xA0;h after the cultivation was inoculated</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig5_HTML" id="MO5"/></fig><fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Substrate feed rate profiles for the six <italic>x</italic>-controlled fed-batch experiments</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig6_HTML" id="MO6"/></fig></p>
+      <p>There is one exception. In the last experiment (S330) feed pump was switched off from 3 to 5&#xA0;h in order to test the controller performance under process conditions with an extremely hard disturbance. The controller appeared to be robust enough to cope with this disturbance. Again in the end the relative deviation from the mean remained in the 2% interval.</p>
+      <p>The next question is what does this mean for the profiles of the specific biomass growth rate, which was initially chosen to determine the setpoint profiles for the total biomass. This comparison essentially should demonstrate data consistency. The specific growth rate <italic>&#x3BC;</italic> was determined from a Luedeking&#x2013;Piret type relationship between the biomass concentration, carbon dioxide production or oxygen uptake rate and the specific growth rate: <disp-formula id="Equ6"><label>6</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{OUR}} = Y_{{{\text{OX}}}} \mu X + m_{{\text{O}}} X, $$\end{document}</tex-math></disp-formula><disp-formula id="Equ7"><label>7</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{CPR}} = Y_{{{\text{CX}}}} \mu X + m_{{\text{C}}} X. $$\end{document}</tex-math></disp-formula></p>
+      <p>Both equations can be resolved for <italic>&#x3BC;</italic>. The parameters were already known from a fit of the models to the fermentation data.</p>
+      <p>Hence, with the biomass concentration profiles estimated and the measured OUR(<italic>t</italic>) and CPR(<italic>t</italic>) signals, <italic>&#x3BC;</italic> can easily be computed. The result is depicted in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>. In the decisive phase of the process, the product formation phase, the resulting trajectories of the specific biomass formation rate <italic>&#x3BC;</italic>(<italic>t</italic>) resemble quite well the original setpoint profiles. It should be recalled that rather high noise is to be expected when computing <italic>&#x3BC;</italic>(<italic>t</italic>). However, the results depicted in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> nevertheless clearly show that the data are consistent.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Specific biomass growth rate profiles determined from the measurement profiles of OUR, CPR as well as from the estimates for biomass concentration <italic>X</italic>(<italic>t</italic>). Note that the study 330 was the test case where the substrate supply was interrupted for some period during the biomass growth phase</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig7_HTML" id="MO7"/></fig></p>
+      <p>Finally the question arises what does a high batch-to-batch reproducibility in the biomass profiles mean for the variance in the product formation profiles. Results corresponding to the data shown before are depicted in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>.
+<fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>Product concentration profiles for the cultivation processes already mentioned. All protein data stay within the error bar ranges representing the confidential interval of the protein analysis method</p></caption><graphic position="anchor" xlink:href="449_2006_80_Fig8_HTML" id="MO8"/></fig></p>
+      <p>The corresponding protein concentration profiles are rather close together saying that the improved reproducibility in biomass profiles by means of <italic>x</italic> control also leads to an improved batch-to-batch reproducibility in the product concentration profiles. All profiles stay within the confidence interval of the analytical protein detection method. The relative error of &#xB1;15% of target protein analysis by SDS-PAGE was estimated from a fivefold analysis using the same fermentation samples.</p>
+    </sec>
+    <sec id="Sec4" sec-type="discussion">
+      <title>Discussion</title>
+      <p>Previous work on controlling the fermentation processes performed to manufacture recombinant proteins focused on keeping the cultures on tracks that guaranteed a high productivity or yield. The obviously first quantity influencing the amount of protein that is produced in a cultivation run is the biomass employed, hence high-cell-density cultures are required (e.g., [<xref ref-type="bibr" rid="CR9">9</xref>, <xref ref-type="bibr" rid="CR15">15</xref>]). As the cells&#x2019; protein-synthesizing machinery that is particularly important to recombinant protein production is under growth rate control [<xref ref-type="bibr" rid="CR12">12</xref>], the performance of the cells is ruled by the specific biomass growth rate <italic>&#x3BC;</italic>. Hence, much work has been put into closed loop control of fermentation processes along appropriate profiles <italic>&#x3BC;</italic><sub>set</sub>(<italic>t</italic>) of the specific biomass growth rate [<xref ref-type="bibr" rid="CR5">5</xref>&#x2013;<xref ref-type="bibr" rid="CR7">7</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR16">16</xref>&#x2013;<xref ref-type="bibr" rid="CR18">18</xref>]. While advantageous from the cell physiological point of view, controlling the specific growth rate directly has the disadvantage of leading to a relatively low reproducibility of the fermentations [<xref ref-type="bibr" rid="CR6">6</xref>]. This is a significant disadvantage from the process quality point of view.</p>
+      <p>We wished to extend the work on fermentation control towards quality assurance of process and thus product formation. This first of all requires improving the batch-to-batch reproducibility of the processes. There are two motivations for this. First, the product quality in recombinant protein manufacturing processes can be affected by changes in the fermentation operational procedure, hence the authorities link process approval with tight constraints on the process trajectories. Thus, good reproducibility increases product quality. Secondly the downstream processing can work much more efficiently when the cultivation results are highly reproducible. Therefore, having the same culture each time should be beneficial to the overall product yield as well.</p>
+      <p>The results of the new control procedure discussed below show that the batch-to-batch reproducibility is significantly improved. The procedure controls the biomass along a profile that is directly derived from the specific growth rate profile that was found to be desirable. The first decisive advantage of this approach is that the control procedure is robust to distortions usually appearing in practice. This is opposite to control along a predefined profile of the specific biomass growth rate. Practically all distortions lead to changes in the biomass and this is the controlled variable. A second advantage is that the actual biomass values can be estimated with higher accuracy than the specific growth rate from the online measurement signals available at most fermenters. As shown previously [<xref ref-type="bibr" rid="CR4">4</xref>] <italic>x</italic> can be representatively estimated with a root mean square error of about 0.5&#xA0;g/kg by means of simple artificial neural networks.</p>
+      <p>The reason for the robustness of the <italic>x</italic> control is easy to understand. The <italic>x</italic>-setpoint profile for the control was determined from a <italic>&#x3BC;</italic> profile. This <italic>&#x3BC;</italic> profile leads to a feed rate profile <italic>F</italic>(<italic>t</italic>) and a biomass profile <italic>x</italic>(<italic>t</italic>). The <italic>F</italic>(<italic>t</italic>) profile is taken as the feed forward component of the process and programmed in the programmable controller at the fermenter. If due to distortion the biomass becomes smaller as expected, the cells will see more substrate than expected and respond temporarily by increasing their growth rate. If, on the other hand, the distortion leads to a higher biomass concentration, the cells see less substrate than expected and reduce their growth rate, thus correcting for their deviation in the total biomass. The feedback component of the process has thus only to correct for larger deviations.</p>
+      <p>Control of the specific biomass growth rate or qualitatively similar control technique that uses the substrate feed rate <italic>F</italic> as the manipulated variable is currently not generally used in production practice. Its adoption is now supported by recent initiatives of the FDA in its PAT initiative [<xref ref-type="bibr" rid="CR2">2</xref>], but will critically depend on the ease of the control algorithm. The algorithm used in this work is an extremely simple adaptive control approach which only corrects the biomass-on-substrate yield in the basic feed rate expression. The control algorithm proved to be stable in many fermentation runs with many different organisms and several different fermenter scales up to the large production scale.</p>
+      <p>It is very important to note again that the new <italic>x</italic> control approach does not require refraining from taking the <italic>&#x3BC;</italic> profile of the process as the basic process control variable. This basic concept can be maintained and it is easy to derive the <italic>x</italic> profile from a given <italic>&#x3BC;</italic> profile. As clearly shown in the examples, not only does this <italic>x</italic>-based control keep biomass and specific growth rate in tight limit, but also the batch-to-batch reproducibility with respect to the desired product concentration is high.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work has been supported financially by the Ministry of Cultural Affairs of the state &#x201C;Sachsen-Anhalt&#x201D;, Germany. We gratefully acknowledge this support.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>DePalma</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>PAT: taking process monitoring to next level</article-title>
+          <source>Gen Eng News</source>
+          <year>2004</year>
+          <volume>24</volume>
+          <issue>9</issue>
+          <fpage>46</fpage>
+          <lpage>47</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">DePalma A (2004) PAT: taking process monitoring to next level. Gen Eng News 24(9):46&#x2013;47 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="other">FDA (2004) Guidance for Industry: PAT&#x2014;a framework for innovative pharmaceutical manufacturing &amp; quality assurance. <ext-link ext-link-type="uri" xlink:href="http://www.fda.gov/cvm/guidance/published.html">http://www.fda.gov/cvm/guidance/published.html</ext-link></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="other">Jenzsch M, Gnoth S, Beck M, Kleinschmidt M, Simutis R, L&#xFC;bbert A (2006) Open loop control of the biomass concentration within the growth phase of recombinant protein production processes. J Biotechnol (in press)</citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jenzsch</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Simutis</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Eisbrenner</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>St&#xFC;ckrath</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>L&#xFC;bbert</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Estimation of biomass concentrations in fermentation processes for recombinant protein production</article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2006</year>
+          <volume>29</volume>
+          <issue>1</issue>
+          <fpage>19</fpage>
+          <lpage>27</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00449-006-0051-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jenzsch M, Simutis R, Eisbrenner G, St&#xFC;ckrath I, L&#xFC;bbert A (2006) Estimation of biomass concentrations in fermentation processes for recombinant protein production. Bioprocess Biosyst Eng 29(1):19&#x2013;27 <pub-id pub-id-type="pmid">16502002</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="other">Jenzsch M, Simutis R, L&#xFC;bbert A (2005) Application of model predictive control to cultivation processes for protein production with genetically modified bacteria. In: Pons MN, van Impe JFM (eds) Computer application in biotechnology 2004 (CAB9). IFAC/Elsevier, Amsterdam, pp 511&#x2013;516, ISBN 0-08-044251-X</citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jenzsch</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Simutis</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>L&#xFC;bbert</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Generic model control of the specific growth rate in recombinant <italic>Escherichia coli</italic> cultivations</article-title>
+          <source>J Biotechnol</source>
+          <year>2006</year>
+          <volume>122</volume>
+          <issue>4</issue>
+          <fpage>483</fpage>
+          <lpage>493</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jbiotec.2005.09.013</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jenzsch M, Simutis R, L&#xFC;bbert A (2006) Generic model control of the specific growth rate in recombinant Escherichia coli cultivations. J Biotechnol 122(4):483&#x2013;493 <pub-id pub-id-type="pmid">16293333</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kim</surname>
+              <given-names>BS</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>SY</given-names>
+            </name>
+            <name>
+              <surname>Chang</surname>
+              <given-names>YK</given-names>
+            </name>
+            <name>
+              <surname>Chang</surname>
+              <given-names>HN</given-names>
+            </name>
+          </person-group>
+          <article-title>High cell density fed-batch cultivation of <italic>Escherichia coli</italic> using exponential feeding combined with pH-stat</article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2004</year>
+          <volume>26</volume>
+          <fpage>147</fpage>
+          <lpage>150</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00449-003-0347-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kim BS, Lee SC, Lee SY, Chang YK, Chang HN (2004) High cell density fed-batch cultivation of Escherichia coli using exponential feeding combined with pH-stat. Bioprocess Biosyst Eng 26:147&#x2013;150 <pub-id pub-id-type="pmid">15160725</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lee</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>SY</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Middelberg</surname>
+              <given-names>APJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Control of fed-batch fermentations</article-title>
+          <source>Biotechnol Adv</source>
+          <year>1999</year>
+          <volume>17</volume>
+          <fpage>29</fpage>
+          <lpage>48</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0734-9750(98)00015-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lee J, Lee SY, Park S, Middelberg APJ (1999) Control of fed-batch fermentations. Biotechnol Adv 17:29&#x2013;48 <pub-id pub-id-type="pmid">14538142</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lee</surname>
+              <given-names>SY</given-names>
+            </name>
+          </person-group>
+          <article-title>High cell-density culture of <italic>Escherichia coli</italic></article-title>
+          <source>Trends Biotechnol</source>
+          <year>1996</year>
+          <volume>14</volume>
+          <fpage>98</fpage>
+          <lpage>105</lpage>
+          <pub-id pub-id-type="doi">10.1016/0167-7799(96)80930-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lee SY (1996) High cell-density culture of Escherichia coli. Trends Biotechnol 14:98&#x2013;105 <pub-id pub-id-type="pmid">8867291</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levisauskas</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Galvanauskas</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Henrich</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Wilhelm</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Volk</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>L&#xFC;bbert</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Model-based optimization of viral capsid protein production in fed-batch culture of recombinant <italic>Escherichia coli</italic></article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2003</year>
+          <volume>25</volume>
+          <fpage>255</fpage>
+          <lpage>262</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Levisauskas D, Galvanauskas V, Henrich S, Wilhelm K, Volk N, L&#xFC;bbert A (2003) Model-based optimization of viral capsid protein production in fed-batch culture of recombinant Escherichia coli. Bioprocess Biosyst Eng 25:255&#x2013;262 <pub-id pub-id-type="pmid">14505005</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levisauskas</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Simutis</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Borvitz</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>L&#xFC;bbert</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Automatic control of the specific growth rate in fed-batch cultivations processes based on exhaust gas analysis</article-title>
+          <source>Bioprocess Eng</source>
+          <year>1996</year>
+          <volume>15</volume>
+          <issue>3</issue>
+          <fpage>145</fpage>
+          <lpage>150</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Levisauskas D, Simutis R, Borvitz D, L&#xFC;bbert A (1996) Automatic control of the specific growth rate in fed-batch cultivations processes based on exhaust gas analysis. Bioprocess Eng 15(3):145&#x2013;150 </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Neidhardt</surname>
+              <given-names>FC</given-names>
+            </name>
+            <name>
+              <surname>Ingraham</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Schaechter</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Physiology of the bacterial cell, a molecular approach</source>
+          <year>1990</year>
+          <publisher-loc>Sunderland</publisher-loc>
+          <publisher-name>Sinauer</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Neidhardt FC, Ingraham JL, Schaechter M (1990) Physiology of the bacterial cell, a molecular approach. Sinauer, Sunderland </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pic&#xF3;-Marco</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Pic&#xF3;</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Battista</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>Sliding mode scheme for adaptive specific growth rate control in biotechnological fed-batch processes</article-title>
+          <source>Int J Control</source>
+          <year>2005</year>
+          <volume>78</volume>
+          <issue>2</issue>
+          <fpage>128</fpage>
+          <lpage>141</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Pic&#xF3;-Marco E, Pic&#xF3; J, De Battista H (2005) Sliding mode scheme for adaptive specific growth rate control in biotechnological fed-batch processes. Int J Control 78(2):128&#x2013;141 </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pirt</surname>
+              <given-names>SJ</given-names>
+            </name>
+          </person-group>
+          <source>Principles of microbe and cell cultivation</source>
+          <year>1975</year>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Blackwell</publisher-name>
+          <fpage>115</fpage>
+          <lpage>117</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Pirt SJ (1975) Principles of microbe and cell cultivation. Blackwell, London, pp 115&#x2013;117 </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riesenberg</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Guthke</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>High-cell-density cultivation of microorganisms</article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>1999</year>
+          <volume>51</volume>
+          <fpage>422</fpage>
+          <lpage>430</lpage>
+          <pub-id pub-id-type="doi">10.1007/s002530051412</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Riesenberg D, Guthke R (1999) High-cell-density cultivation of microorganisms. Appl Microbiol Biotechnol 51:422&#x2013;430 <pub-id pub-id-type="pmid">10341426</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shioya</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Optimization and control in fed-batch bioreactors</article-title>
+          <source>Adv Biochem Eng Biotechnol</source>
+          <year>1992</year>
+          <volume>46</volume>
+          <fpage>111</fpage>
+          <lpage>142</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Shioya S (1992) Optimization and control in fed-batch bioreactors. Adv Biochem Eng Biotechnol 46:111&#x2013;142 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="other">Soons ZITA, Voogt JA, van Straten G, van Boxtel AJB (2006) Constant specific growth rate in fed-batch cultivation of <italic>Bordetella pertussis</italic> using adaptive control. J Biotechnol, published online 10-07-2006</citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yoon</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Kang</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>TH</given-names>
+            </name>
+          </person-group>
+          <article-title>Fed-batch operation of recombinant <italic>Escherichia coli</italic> containing Trp promoter with controlled specific growth rate</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1994</year>
+          <volume>43</volume>
+          <fpage>995</fpage>
+          <lpage>999</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.260431013</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yoon SK, Kang WK, Park TH (1994) Fed-batch operation of recombinant Escherichia coli containing Trp promoter with controlled specific growth rate. Biotechnol Bioeng 43:995&#x2013;999 <pub-id pub-id-type="pmid">18615447</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

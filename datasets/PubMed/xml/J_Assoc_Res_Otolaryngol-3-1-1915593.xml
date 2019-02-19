@@ -1,0 +1,1278 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Assoc Res Otolaryngol</journal-id>
+      <journal-id journal-id-type="iso-abbrev">J. Assoc. Res. Otolaryngol</journal-id>
+      <journal-title-group>
+        <journal-title>JARO: Journal of the Association for Research in Otolaryngology</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">1525-3961</issn>
+      <issn pub-type="epub">1438-7573</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17387553</article-id>
+      <article-id pub-id-type="pmc">1915593</article-id>
+      <article-id pub-id-type="publisher-id">80</article-id>
+      <article-id pub-id-type="doi">10.1007/s10162-007-0080-0</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Frequency-Dependent Properties of a Fluid Jet Stimulus: Calibration, Modeling, and Application to Cochlear Hair Cell Bundles</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Dinklo</surname>
+            <given-names>Theo</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+          <xref ref-type="aff" rid="Aff2"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Meulenberg</surname>
+            <given-names>C&#xC9;cil J. W.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name>
+            <surname>van Netten</surname>
+            <given-names>Sietse M.</given-names>
+          </name>
+          <address>
+            <phone>+31-50-3634741</phone>
+            <fax>+31-50-3634740</fax>
+            <email>s.m.van.netten@rug.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1"><label/>Department of Neurobiophysics, University of Groningen, Nijenborgh 4, 9747 AG Groningen, Netherlands </aff>
+        <aff id="Aff2"><label/>Laboratory for Toxicology and Food Chemistry, Katholieke Universiteit Leuven, Leuven, Belgium </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>27</day>
+        <month>3</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="pmc-release">
+        <day>27</day>
+        <month>3</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>6</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>2</issue>
+      <fpage>167</fpage>
+      <lpage>182</lpage>
+      <history>
+        <date date-type="received">
+          <day>27</day>
+          <month>11</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>1</day>
+          <month>3</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Association for Research in Otolaryngology 2007</copyright-statement>
+      </permissions>
+      <abstract id="Abs1">
+        <p>The investigation of small physiological mechano-sensory systems, such as hair cells or their accessory structures in the inner ear or lateral line organ, requires mechanical stimulus equipment that allows spatial manipulation with micrometer precision and stimulation with amplitudes down to the nanometer scale. Here, we describe the calibration of a microfluid jet produced by a device that was designed to excite individual cochlear hair cell bundles or cupulae of the fish superficial lateral line system. The calibration involves a precise definition of the linearity and time- and frequency-dependent characteristics of the fluid jet as produced by a pressurized fluid-filled container combined with a glass pipette having a microscopically sized tip acting as an orifice. A procedure is described that can be applied during experiments to obtain a fluid jet&#x2019;s frequency response, which may vary with each individual glass pipette. At small orifice diameters (&lt;15&#xA0;&#x3BC;m), the fluid velocity of the jet is proportional to the displacement of the piezoelectric actuator pressurizing the container&#x2019;s volume and is suitable to stimulate the hair bundles of sensory hair cells. With increasing diameter, the fluid jet velocity becomes proportional to the actuator&#x2019;s velocity. The experimentally observed characteristics can be described adequately by a dynamical model of damped fluid masses coupled by elastic components.</p>
+      </abstract>
+      <kwd-group xml:lang="en">
+        <title>Keywords</title>
+        <kwd>micro fluid jet</kwd>
+        <kwd>hair cell</kwd>
+        <kwd>lateral line</kwd>
+        <kwd>micromechanics</kwd>
+        <kwd>hydrodynamic excitation</kwd>
+        <kwd>calibrated fluid sensing</kwd>
+      </kwd-group>
+      <custom-meta-group>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Association for Research in Otolaryngology 2007</meta-value>
+        </custom-meta>
+      </custom-meta-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="intro">
+      <title>INTRODUCTION</title>
+      <p>Sensory hair cells are the primary mechano-detectors in several mechano-sensory organs in vertebrates such as the hearing- and vestibular organ and the lateral line system in fish and amphibians. The hair bundle is the mechano-sensitive organelle of a hair cell and consists of a well-organized arrangement of villi on the apical side of the cell, called stereocilia, in some types of hair cells together with a true cilium, the kinocilium. In most mechano-receptor organs, the hair cells are covered by an overlying tectorial structure bathed in fluid often mechanically coupling many hair bundles (Pumphrey <xref ref-type="bibr" rid="CR26">1950</xref>; van Netten <xref ref-type="bibr" rid="CR21">1997</xref>). These tectorial structures, when driven by fluid flow, convey the mechanical signals present in the fluid flow to the hair bundles. In the mammalian cochlea, for instance, sound signals are converted to vibrations of the cochlear endo- and perilymph, which drive the cochlear partition, causing a motion of the stereocilia. Deflections of a bundle of stereocilia, which pivot at their base, induce changes in the open probability of mechanically gated ion channels located in the tips of the stereocilia (e.g., Hudspeth <xref ref-type="bibr" rid="CR13">2000</xref>; Fettiplace and Ricci <xref ref-type="bibr" rid="CR6">2006</xref>). The combined mechanics and hydrodynamics of the hair bundles and tectorial structure determine an organ&#x2019;s sensitivity to a specific aspect of the excitatory fluid motion (e.g., van Netten <xref ref-type="bibr" rid="CR22">2006</xref>).</p>
+      <p>To quantitatively study the mechanics of tectorial structures and individual hair bundles and the mechano-electrical transduction process of hair cells, a well-defined mechanical stimulus is required. Due to the small dimensions of most tectorial structures, manipulation at a microscopic spatial resolution is desirable, especially when stimulating an individual hair bundle. A commonly used mechanical stimulus for individual hair bundles consists of an electromagnetic or piezoelectric actuator driving an elongated microscopic fiber or glass probe pushing against the hair bundle (e.g., Strelioff and Flock <xref ref-type="bibr" rid="CR31">1984</xref>; Crawford and Fettiplace <xref ref-type="bibr" rid="CR4">1985</xref>; Howard and Ashmore <xref ref-type="bibr" rid="CR10">1986</xref>; Howard and Hudspeth <xref ref-type="bibr" rid="CR11">1988</xref>; Russell et al. <xref ref-type="bibr" rid="CR28">1992</xref>; Kennedy et al. <xref ref-type="bibr" rid="CR16">2003</xref>, <xref ref-type="bibr" rid="CR17">2005</xref>). The probe&#x2019;s tip may adhere to the cell membrane of the kinocilium or tallest stereociliar row allowing for force application to the bundle in both directions. A stiff probe enables direct displacement of the bundle with virtually the same amplitude as the driving element, overruling the intrinsic bundle mechanics, and can be used to study transducer channel kinetics (e.g. Holton and Hudspeth <xref ref-type="bibr" rid="CR9">1986</xref>; Assad and Corey <xref ref-type="bibr" rid="CR1">1992</xref>; Vollrath and Eatock <xref ref-type="bibr" rid="CR32">2003</xref>; Kennedy et al. <xref ref-type="bibr" rid="CR16">2003</xref>). Alternatively, a more compliant probe with a stiffness comparable to that of the hair bundle can be used. Although under such conditions the application of displacement may become less direct, the stiffness of the probe can be designed as to not dominate the intrinsic mechanics of the hair bundle. Consequently, it allows for estimating the bundle&#x2019;s intrinsic mechanical characteristics like its compliance or resistance (Crawford and Fettiplace <xref ref-type="bibr" rid="CR4">1985</xref>; Howard and Ashmore <xref ref-type="bibr" rid="CR10">1986</xref>; Howard and Hudspeth <xref ref-type="bibr" rid="CR11">1988</xref>; Jaramillo and Hudspeth <xref ref-type="bibr" rid="CR14">1993</xref>; Benser et al. <xref ref-type="bibr" rid="CR2">1996</xref>; Kennedy et al. <xref ref-type="bibr" rid="CR17">2005</xref>). Viscous forces do, however, attenuate the efficiency of a compliant probe at higher frequency stimuli, limiting their use up to a certain cut-off frequency (Crawford and Fettiplace <xref ref-type="bibr" rid="CR4">1985</xref>; Howard and Hudspeth <xref ref-type="bibr" rid="CR12">1987</xref>). As several types of hair cells and most mechano-detecting structures in mechano-receptor organs are fluid-driven, a fluid coupling between stimulator and mechano-receptor is an attractive natural alternative to direct-contact stimulation with a probe. Well-defined fluid displacements can be obtained using a stimulus sphere attached to a piezoelectric element. Submerged in water, a sphere vibrating with a constant displacement amplitude may generate a near-field water flow that has a constant displacement amplitude as a function of frequency up to the order of a kilohertz (van Netten 1991, <xref ref-type="bibr" rid="CR22">2006</xref>). It does, however, stimulate very inefficiently at larger distances, as the stimulus strength in the near field measured as water displacement amplitude (<italic>A</italic>) is proportional to the third power of the ratio of stimulus sphere radius (<italic>a</italic>) to the distance (<italic>r</italic>) to its centre (i.e. <inline-formula id="IEq1"><alternatives><tex-math id="M1">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$A \propto {\left( {a \mathord{\left/ {\vphantom {a r}} \right. \kern-\nulldelimiterspace} r} \right)}^{3} $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq1.gif"/></alternatives></inline-formula>; e.g. van Netten <xref ref-type="bibr" rid="CR22">2006</xref>). To compensate for this reduced efficiency at larger distances, a stimulus sphere with larger radius (<italic>a</italic>) may be used. Large spheres, however, are less practical in many situations in which small experimental chambers and objective lenses do not provide sufficient space. To obtain a more targeted but sufficiently strong mechanical stimulus, a fluid jet emerging from a glass pipette with a small opening at its tip may provide a practical alternative solution.</p>
+      <p>The use of a fluid jet to mechanically excite individual hair bundles may have several advantages over stimulating with glass probes, noticeably yielding a better defined resting position of the bundle, a more even application of force, and in the case of lymph-driven hair cells, a more natural physiological stimulus. Also the asymmetry in force that may occur in pushing and pulling the cell membrane of the stereocilia, inevitably related to the direct contact of a glass probe, can be avoided. It is feasible that glass probes allow wider stimulating bandwidths although (lateral) resonances have been reported that may limit the high frequency response to the order of 10&#xA0;kHz (e.g., Beurg et al. <xref ref-type="bibr" rid="CR3">2006</xref>; see also <xref rid="Sec18" ref-type="sec">Discussion</xref> section). Fluid jet stimuli have been considered as effective force stimuli, whereas (stiff) probe excitation present displacement stimuli to the bundle (Vollrath and Eatock <xref ref-type="bibr" rid="CR32">2003</xref>). Such differences in stimulation may also lead to differences in speed of engagement of the transduction apparatus.</p>
+      <p>In one of the first reports on the use of a fluid jet in mechano-reception research, it was applied to drive the cupula of a fish lateral line neuromast (Jielof et al.<xref ref-type="bibr" rid="CR15"> 1952</xref>). The 4-mm pipette opening diameter used in that study was relatively wide compared to later, more miniaturized models, which were designed to displace individual hair bundles (Flock and Orman <xref ref-type="bibr" rid="CR7">1983</xref>). A first step to calibrating the frequency dependence of a fluid jet was set by Saunders and Szymko (<xref ref-type="bibr" rid="CR30">1989</xref>). They used glass micro-beads with a density close to that of water that were captured in the hydrodynamic flow field and monitored their motion by stroboscopic-illuminating microscopy. Later developments of fluid jet-producing devices were utilized to displace single inner or outer hair cell bundles or lateral line cupulae and were in some cases pressure-calibrated (Kros et al <xref ref-type="bibr" rid="CR18">1992</xref>; Denk and Webb <xref ref-type="bibr" rid="CR5">1992</xref>; G&#xE9;l&#xE9;oc et al. <xref ref-type="bibr" rid="CR8">1997</xref>; Nicolson et al. <xref ref-type="bibr" rid="CR25">1998</xref>; Vollrath and Eatock <xref ref-type="bibr" rid="CR32">2003</xref>).</p>
+      <p>In the present work, a calibration procedure of a newly designed piezoelectrically driven fluid jet device is presented. A compliant glass fiber with a resin sphere attached to its tip is used as a sense probe to measure the dynamic fluid displacement output of the fluid jet device. The motion of the sense probe, which is reflecting the dynamics of the fluid jet, is monitored using a displacement measurement method implemented in a transmitted-light microscope. The procedure, which can be applied in an experimental setting, enables the determination of the frequency dependence of the fluid jet. This is essential to correct experimental data obtained using the same fluid jet as a stimulus. To understand the physical factors of the fluid jet-producing device governing the frequency response of the produced fluid jet, a theoretical model of the device has been developed. The results of the model were compared to the measured data and show that the fluid resistance of the orifice at the pipette&#x2019;s tip is a key parameter, influencing the amplitude and phase characteristics of the emerging fluid jet. As an example of its usefulness, the fluid jet system was applied to induce transducer currents in mouse cochlear hair cells, showing the importance to correct for the phase delay of the fluid jet, especially at high frequencies. This example also shows that fluid jet dynamics may lead to resonance, which in practice limits the use of the present design to a bandwidth of approximately 5.5&#xA0;kHz.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>MATERIALS AND METHODS</title>
+      <sec id="Sec3">
+        <title>Fluid jet-producing device</title>
+        <p>The device used for the generation of a fluid jet is shown in Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A and its individual parts in Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B. The main parts are a Perspex fluid container (C) and a brass rear end (R). Three screws (S) pull both parts together, sandwiching a piezoelectrically driven brass disc (P, &#xD8;&#x2009;=&#x2009;18&#xA0;mm, thickness, 0.35&#xA0;mm, resonance frequency &#x2248; 8.3&#xA0;kHz, Conrad Electronic SE, Hirschau, Germany) in a configuration that is clamping the disc at its rim. The Perspex container is cone-shaped and is closed by the piezoelectric disc at the rear end. A rubber o-ring (O) between the Perspex and the piezoelectric disc provides a fluid-tight seal. When driven by a voltage signal, the piezoelectric disc produces forces that move the fluid in or out of the container.
+<fig id="Fig1"><label>FIG.&#xA0;1.</label><caption><p>The fluid jet-producing device. <bold>A</bold> Picture of the assembled fluid jet-producing device mounted on an <italic>x</italic>,<italic>y</italic>,<italic>z</italic>-micromanipulator. <bold>B</bold> Disassembled device showing its separate parts: <italic>R</italic> Rear brass element, <italic>P</italic> piezoelectric disc, <italic>O</italic> o-ring, <italic>S</italic> screws, <italic>C</italic> Perspex container, <italic>W</italic> rubber cone washer, <italic>Sp</italic> Perspex spacer, <italic>Sc</italic> Perspex screw cap, <italic>Pi</italic> glass pipette. The <italic>calibration bar</italic> indicates 1&#xA0;cm.</p></caption><graphic xlink:href="10162_2007_80_Fig1_HTML" id="MO1"/></fig></p>
+        <p>At the front end of the Perspex container, a glass pipette (Pi, outer &#xD8;&#x2009;=&#x2009;1.5&#xA0;mm, inner &#xD8;&#x2009;=&#x2009;1.17&#xA0;mm) is inserted. The screw cap (Sc) applies pressure on two cone washers (W) separated by a Perspex spacer (Sp) to produce a fluid tight seal and fixes the glass pipette in a mechanically stable way. In most applications, the pipette was narrowed at its tip using an electrode puller. Tip diameters were varied between 6 and 62&#xA0;&#x3BC;m and tapering lengths were kept at approximately 3&#x2013;4&#xA0;mm. Also, in some experiments, untreated glass pipettes without tapered tips were used so that their effective opening equaled the inner diameter of the glass pipette (&#xD8;&#x2009;=&#x2009;1.17&#xA0;mm). The total length of the glass pipette was about 5&#xA0;cm of which about 1.5&#xA0;cm was clamped inside the Perspex container. To facilitate horizontal application of the produced fluid jet in the experimental chamber, the glass was bent 1&#xA0;cm from the tip over an angle of about 20&#xB0; so that its tip could be aligned within the horizontal plane (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A). For inducing transducer currents in hair cells (see <xref rid="Sec16" ref-type="sec"><italic>Applications</italic></xref>), straight glass pipettes were used.</p>
+        <p>To obtain an air-free filling of the fluid container in the Perspex body part, it was filled with a low viscosity silicone fluid (200 Fluid 5&#xA0;CS, Dow Corning, Midland, MI, USA), which has low surface tension properties. The silicone fluid was degassed under vacuum conditions for several hours before use to prevent dissolved gas from creating bubbles inside the fluid chamber. The glass pipette was filled with de-mineralized water, or in the case of physiological experiments, with extracellular fluid (bath solution). Inserting the filled glass pipette into the Perspex body part generated a pressure increase inside the fluid container, replacing a volume of the water in the back side of the pipette by silicone fluid. During this temporary overpressure, the fluid jet device was transferred to its position in the set-up, and the pipette tip was submerged in the bath solution preventing air from entering the tip.</p>
+        <p>When prepared, as described above, the instrument also benefits from the high resistivity (&#x2248;10<sup>15&#xA0;</sup>Ohm cm) of the silicone fluid creating an electrical resistance between the brass disc and the bath solution, thereby, preventing electrical cross-talk of the piezoelectric control signal to the possible electrophysiological recordings obtained from a preparation. Additional electrical shielding was obtained by connecting the brass disc, which is facing the preparation, to the electrical ground. The rear end of the fluid jet device, which together with the grounded brass disc enclosed the piezoelectric material, was also grounded, thereby, shielding off the applied voltages.</p>
+        <p>A shaft connected to the rear end of the fluid jet device was used to mount the device on an <italic>x</italic>,<italic>y</italic>,<italic>z</italic>-micromanipulator (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A). The tip of the jet pipette was lowered in the bath solution and positioned under visual or microscope guidance. All calibration measurements were done approximately 5&#xA0;mm above the bottom and below the surface.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Signal generation</title>
+        <p>Sine wave stimuli at exponentially distributed frequencies ranging from 1 to 1,000&#xA0;Hz were generated at 32 points per period using the full amplitude range of a 16-bit D/A converter (Ariel, DSP 16, Highland Park, NJ, USA). These signals were subsequently attenuated to the desired amplitude and filtered (8 pole Bessel, 3988, Krohn-Hite Corporation, Brockton, MA, USA) at eight times the stimulus frequency. Frequencies used to probe resonances exceeding 1&#xA0;kHz were derived from a signal generator (PM 5129; Philips, Eindhoven, The Netherlands). Signals for exciting hair cells were generated using a 16-bit D/A converter with dedicated software (Power 1401 and Signal 2.0 software package, Cambridge Electronic Design Ltd, Cambridge, UK).</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Sense probes</title>
+        <p>Sense probes used for the detection of fluid displacement consisted of compliant glass fibers (Borosilicate glass capillaries GC150T-10, Harvard apparatus Ltd., UK) produced with a micropipette puller (P-97 Sutter instrument Co., Novato, CA, USA) with a small sphere that was produced by dipping the glass fiber tip into a resin (Bison, Silicone universal transparent, Goes, The Netherlands). After curing the resin, sphere diameters ranged from 10 to 60&#xA0;&#x3BC;m. The fibers were about 1&#xA0;cm in length with a gradually decreasing diameter from about 100&#xA0;&#x3BC;m to approximately 2&#xA0;&#x3BC;m at their tips. The fibers were glued to a stiff glass capillary that was subsequently mounted on an <italic>x</italic>,<italic>y</italic>,<italic>z</italic>-micromanipulator. The mechanical frequency responses of the sense probes to fluid displacement were obtained by stimulating the sense probe with the fluid flow produced by a glass stimulus sphere (&#xD8; 1.1&#xA0;mm) attached to a piezoelectric element. The frequency response of this stimulus sphere was separately determined using a laser interferometer (see <xref rid="Sec6" ref-type="sec">Motion detection</xref>).</p>
+        <p>When stimulating the same sense probe with a fluid jet, the center of the fluid jet was aimed at the center of the resin sphere. The distance between the jet-producing pipette tip and the resin sphere of the sense probe was at least one diameter of the sphere. Based on the frequency responses of the sense probes, their overall stiffness coupling to the stiff glass tube held in the <italic>x</italic>,<italic>y</italic>,<italic>z</italic>-micromanipulator was estimated to be of the order of 10<sup>&#x2212;4</sup>&#xA0;N/m.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Motion detection</title>
+        <p>The motion of the stimulus sphere and the sense probe were measured with a heterodyne laser interferometer coupled to a fixed-stage transmitted light microscope mounted on a vibration isolated table. The objective lens (&#xD7;40&#x2009;WI, NA 0.8, Zeiss, Oberkochen, Germany) of the microscope (modified Axiotron, Zeiss, Oberkochen, Germany) focuses two coherent laser beams (HeNe 127, Newport Spectra Physics GmbH, Darmstadt, Germany) aligned in parallel so that their beam waists intersect in the plane of focus creating a measuring volume with microscopic dimensions (&#xD8;&#x2009;&#x2248;&#x2009;4&#xA0;&#x3BC;m).</p>
+        <p>A frequency difference of 400&#xA0;kHz between the two laser beams produced by two Bragg cells (1201E, Isomet Corporation, Springfield, VA, USA) driven at 40.0 and 40.4&#xA0;MHz, creates a moving fringe pattern in the measuring volume. Light scattered by a stationary object, therefore, fluctuates in intensity at a carrier frequency of 400&#xA0;kHz (<italic>f</italic><sub>het</sub>). Additional motion of the object induces a phase modulation of these intensity fluctuations, which is displacement-dependent.</p>
+        <p>The back-scattered laser light from an irregularity on the surface of the object was detected by a photomultiplier (model H6780 02, Hamamatsu Photonics, Japan) coupled to an <italic>I</italic>&#x2009;/&#x2009;<italic>V</italic> converter. The output, containing the carrier frequency, <italic>f</italic><sub>het</sub>, phase-modulated in proportion to the object&#x2019;s displacement, was band-pass filtered with a centre frequency at <italic>f</italic><sub>het</sub> and electronically demodulated using a modified frequency demodulator (OFV 3000, Polytec GmbH, Waldbronn, Germany, equivalent r.m.s velocity noise was 0.1&#xA0;&#x3BC;m/s). Time-varying phase modulations were thus treated as frequency modulations (i.e., Doppler shifts), which was appropriate, as the phase changes per time of the carrier were small compared to the carrier frequency itself. Under these conditions, the output signal of the demodulator is a calibrated linear measure of the velocity of the object within the range of 10<sup>&#x2212;1</sup> to 10<sup>3</sup>&#xA0;&#x3BC;m/s. For low frequency stimuli (&lt;10&#xA0;Hz), a digital phase demodulator (OVD-20, Polytec GmbH, Waldbronn, Germany) was used, which has an output proportional to the displacement of the object with a 32-nm resolution.</p>
+        <p>The demodulator signals were low-pass filtered (3988, 8 pole Bessel, Krohn-Hite Corporation, Brockton, MA, USA) at eight times the frequency of stimulation and were amplified before being digitized using a 16-bit A/D converter (DSP 16, Ariel, Highland Park, NJ, USA) with a sample frequency at 32 times the frequency of stimulation. Displacement responses consisting of usually ten consecutive stretches, each 16 periods in length, were averaged on-line by the data acquisition board. The first 4&#xA0;s of a response to a stimulus were not recorded to prevent effects of onset transients.</p>
+        <p>The averaged response waveform was stored on hard disc. A fast-Fourier transform (FFT) was used to extract the amplitude and phase at the frequency of stimulation from this averaged waveform.</p>
+        <p>In some experiments, a Position Sensitive Detector (PSD; PSM2-2 On-Trak, Photonics Inc, Lake Forest, CA, USA) was used to measure displacements of uncalibrated sense probes at frequencies beyond 1&#xA0;kHz, using a A/D converter with dedicated software (Power 1401 and Signal 2.0 software package, Cambridge Electronic Design Ltd, Cambridge, UK).</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Hair cell electrophysiology</title>
+        <p>Experiments were performed on apical-coil outer hair cells obtained from acutely isolated organs of Corti taken from neonatal C57Bl/6 mice (Harlan Netherlands B.V., Horst). Animal procedures conformed to Dutch governmental rules and the guidelines of the University of Groningen Institutional Animal Committee (RuG-DEC). Transducer currents in response to fluid jet stimulation were measured under whole-cell voltage clamp with an Axopatch 200B patch clamp amplifier (Axon Instruments Inc, Molecular Devices, Foster City, CA, USA) at &#x2212;84&#xA0;mV holding potential. Further details on the procedures and solutions used can be found elsewhere (Kros et al. <xref ref-type="bibr" rid="CR18">1992</xref>; van Netten et al. <xref ref-type="bibr" rid="CR24">2003</xref>).</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Model of fluid jet dynamics</title>
+        <p>Schematics of a mechanical model illustrating the principal physical elements of the fluid jet-producing device are shown in Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>. The device is shown to work with only minor nonlinear distortion (e.g., Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>) so that the system may be adequately analyzed in the frequency domain. In this section, all dynamic variables will therefore be considered to vary harmonically with angular frequency, <italic>&#x3C9;</italic>. A piezoelectrically driven disc, with mass <italic>M</italic><sub>piezo</sub> and stiffness <italic>S</italic><sub>piezo</sub> is used to pressurize the fluids in the jet-producing device. A force, <italic>F</italic><sub>0</sub>, on the brass diaphragm of the piezoelectric disc is produced in proportion to the applied voltage, <italic>V</italic><sub>0</sub>. This causes a displacement of the disc, <italic>X</italic><sub>c</sub>, so that the fluid in the Perspex container is pressurized. Compressibility of the fluid is neglected (see also <xref rid="Sec18" ref-type="sec">Discussion</xref> section).
+<fig id="Fig2"><label>FIG.&#xA0;2.</label><caption><p>Mechanical model representation of the fluid jet-producing device. <italic>F</italic>
+<sub>0</sub> is the piezoelectrically induced force, proportional to the applied voltage, <italic>V</italic>
+<sub>0</sub>. The piezoelectric element consists of a brass disc (<italic>dark gray</italic>) and a smaller ceramic plate. The spring, <italic>S</italic>
+<sub>piezo</sub>, and a resistive element, <italic>R</italic>
+<sub>c</sub>, together with the mass of the piezo, <italic>M</italic>
+<sub>piezo</sub>, and the mass of the container fluid, <italic>M</italic>
+<sub>c</sub> (cone-shaped), affect the fluid displacement amplitude, <italic>X</italic>
+<sub>c</sub>, in the Perspex container. The fluid displacement, <italic>X</italic>
+<sub>c</sub>, is amplified through a lever arm, with ratio <italic>L</italic>, into <italic>L&#xB7;X</italic>
+<sub>c</sub>, which drives the fluid in the glass pipette. The same lever ratio applies to the forces <italic>F</italic>
+<sub>1</sub> and <italic>F</italic>
+<sub>2</sub>. The displacement response of the fluid mass in the pipette, <italic>X</italic>
+<sub>p</sub>, is determined by the pipette&#x2019;s spring, <italic>S</italic>
+<sub>p</sub>, the pipette&#x2019;s tip resistive element, <italic>R</italic>
+<sub>p</sub>, and the mass of the pipette fluid, <italic>M</italic>
+<sub>p</sub>. <italic>X</italic>
+<sub>p</sub> is taken as a proportional measure of the displacement of the jet fluid.</p></caption><graphic xlink:href="10162_2007_80_Fig2_HTML" id="MO2"/></fig><fig id="Fig3"><label>FIG.&#xA0;3.</label><caption><p>Sense probe displacements induced by the fluid jet. <bold>A</bold> Sense probe displacement in response to a 106-Hz vibrational fluid jet stimulus as a function of time. An average of ten traces is shown. <bold>B</bold> Fast Fourier transform of the average waveform shown in <bold>A</bold> with a fundamental component at 106&#xA0;Hz and a second harmonic component at 212&#xA0;Hz, which is more than 40&#xA0;dB less in amplitude than the fundamental component. Total harmonic distortion (THD) was calculated using <inline-formula id="IEq2"><alternatives><tex-math id="M2">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\text{THD}} = 20 \cdot \log {\sum\limits_{n = 2}^8 {\left| {a_{n} {\left| / \right|}\left. {a_{1} } \right|} \right.} }$$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq2.gif"/></alternatives></inline-formula>, where <italic>a</italic>
+<sub>1</sub> is the response amplitude at the fundamental frequency and <italic>a</italic>
+<sub><italic>n</italic></sub> is the amplitude of the <italic>n</italic>th harmonic component, as determined from the FFT calculated from the averaged waveform of measured sense probe responses.</p></caption><graphic xlink:href="10162_2007_80_Fig3_HTML" id="MO3"/></fig></p>
+        <p>The fluid in the Perspex container has a mass, <italic>M</italic><sub>c</sub>. Fluid mass appears in the dynamic equations (e.g., Eq.&#xA0;<xref rid="Equ1" ref-type="">1a</xref>) as a product of mass times its acceleration. The fluid mass in the cone-shaped Perspex container can be considered as the sum of a series of cross-sectional fluid slices with variable radius, so that the fluid mass of each slice is proportional to the square of its radius. Assuming that the equation of continuity holds in combination with incompressibility means that the fluid flux along the series of slices is conserved. The velocity of each fluid slice and also its acceleration must therefore be inversely proportional to the square of its radius, so that the product of mass and acceleration of each slice is independent of radius. This means that the overall product of mass and acceleration of the fluid in the cone-shaped Perspex container can be dynamically modeled with a cylinder with length <italic>L</italic><sub>1</sub> (7&#xA0;mm), equal to the cone&#x2019;s actual length and a diameter <italic>D</italic><sub>1</sub> (13.4&#xA0;mm) equal to the cone&#x2019;s base. Therefore, the mass of the fluid in the Perspex container is modeled as <inline-formula id="IEq3"><alternatives><tex-math id="M3">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$M_{{\text{c}}}  = {\rho L_{1} \pi D^{2}_{1} } \mathord{\left/ {\vphantom {{\rho L_{1} \pi D^{2}_{1} } 4}} \right. \kern-\nulldelimiterspace} 4$$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq3.gif"/></alternatives></inline-formula> and its effective acceleration as <inline-formula id="IEq4"><alternatives><tex-math id="M4">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathop {X_{{\text{c}}} }\limits^{ \cdot \; \cdot } }$$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq4.gif"/></alternatives></inline-formula>. Here <italic>&#x3C1;</italic> (1,000&#xA0;kg/m<sup>3</sup>) denotes the fluid density. The fluid mass in the container <italic>M</italic><sub>c</sub> (0.987&#x2009;&#xD7;&#x2009;10<sup>&#x2212;3</sup>&#xA0;kg) sums with that of the piezoelectric disc <italic>M</italic><sub>piezo</sub> (0.741&#x2009;&#xD7;&#x2009;10<sup>&#x2212;3</sup>&#xA0;kg), resulting in <italic>M</italic><sub>tot</sub>&#x2009;=&#x2009;<italic>M</italic><sub>c</sub>&#x2009;+&#x2009;<italic>M</italic><sub>piezo</sub> (1.728&#x2009;&#xD7;&#x2009;10<sup>&#x2212;3</sup>&#xA0;kg). A resistive element, <italic>R</italic><sub>c</sub>, in series with mass <italic>M</italic><sub>c</sub> is included, which is related to friction of the fluid flow in the Perspex container and the motion of the piezoelectric disc. The mass in the cylindrical glass pipette is described by <inline-formula id="IEq5"><alternatives><tex-math id="M5">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$M_{{\text{p}}}  = {\rho L_{2} \pi D^{2}_{2} } \mathord{\left/ {\vphantom {{\rho L_{2} \pi D^{2}_{2} } 4}} \right. \kern-\nulldelimiterspace} 4$$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq5.gif"/></alternatives></inline-formula> (53.8&#x2009;&#xD7;&#x2009;10<sup>&#x2212;6</sup>&#xA0;kg), where <italic>L</italic><sub>2</sub> (50&#xA0;mm) and <italic>D</italic><sub>2</sub> (1.17&#xA0;mm) are the length and inner diameter of the glass pipette, while this mass has a displacement <italic>X</italic><sub>p</sub>. The overall effect of the conservation of flux in the conical Perspex container is the transformation of the effective displacement of fluid in the Perspex container into that of the glass pipette. The transformation factor equals the ratio of the (maximum) cross-sectional areas of the two fluid compartments <inline-formula id="IEq6"><alternatives><tex-math id="M6">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ L = {D^{2}_{1} } \mathord{\left/  {\vphantom {{D^{2}_{1} } {D^{2}_{2} }}} \right.  \kern-\nulldelimiterspace} {D^{2}_{2} } $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq6.gif"/></alternatives></inline-formula> (&#x2248;131). The force ratio of this transformation is governed by the same ratio, <inline-formula id="IEq7"><alternatives><tex-math id="M7">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {F_{1} } \mathord{\left/  {\vphantom {{F_{1} } {F_{2}  = L}}} \right.  \kern-\nulldelimiterspace} {F_{2}  = L} $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq7.gif"/></alternatives></inline-formula>. The transformed fluid displacement, <inline-formula id="IEq8"><alternatives><tex-math id="M8">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ L \cdot X_{{\text{c}}}  $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq8.gif"/></alternatives></inline-formula>, is not completely transferred into displacement of the fluid mass in the pipette, <italic>X</italic><sub>p</sub>, as the elastic cone washers around the glass pipette absorb it partly. This is represented by the compliant element, <italic>S</italic><sub>p</sub>. A resistive element, <italic>R</italic><sub>p</sub>, describes the viscous friction in the pipette, which is dominated by the tip resistance. The resulting fluid displacement, <italic>X</italic><sub>p</sub>, is taken as a proportional measure of the fluid displacement of the jet emerging from the pipette tip. Again, assuming the equation of continuity, this proportion is related to the square of the ratio of the pipette&#x2019;s tip diameter to the glass pipette&#x2019;s cross-sectional diameter (<italic>D</italic><sub>2</sub>). However, the absolute displacement of the jet is strongly dependent on the distance to the pipette tip (See also <xref rid="Sec22" ref-type="sec">Absolute fluid jet velocity</xref> in the <xref rid="Sec18" ref-type="sec">Discussion</xref> section).</p>
+        <p>The governing equations relating the piezoelectric force, <italic>F</italic><sub>0</sub>, to the fluid displacements <italic>X</italic><sub>c</sub> and <italic>X</italic><sub>p</sub>, utilizing the usual notation for time derivatives, are then:
+<disp-formula id="Equ1"><label>1a</label><alternatives><tex-math id="M9">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$F_{0}  - F_{1}  = M_{{{\text{tot}}}} {\mathop {X_{{\text{c}}} }\limits^{ \cdot \; \cdot } } + R_{{\text{c}}} {\mathop {X_{{\text{c}}} }\limits^ \cdot  } + S_{{{\text{piezo}}}} X_{{\text{c}}} ,$$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ1.gif" position="anchor"/></alternatives></disp-formula>and
+<disp-formula id="Equ2"><label>1b</label><alternatives><tex-math id="M10">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}
+$$
+F_{2}  - S_{{\text{p}}} \left( {LX_{{\text{c}}} } \right. - \left. {X_{{\text{p}}} } \right) = M_{{\text{p}}} {\mathop {X_{{\text{p}}} }\limits^{ \cdot \,\,\, \cdot } } + R_{{\text{p}}} {\mathop X\limits^ \cdot  }_{{\text{p}}}  \cdot 
+$$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ2.gif" position="anchor"/></alternatives></disp-formula>Changing to the frequency domain, <italic>V</italic><sub>0</sub>, <italic>F</italic><sub>0</sub>, <italic>F</italic><sub>1</sub>, <italic>F</italic><sub>2</sub>, <italic>X</italic><sub>c</sub>, and <italic>X</italic><sub>p</sub> are all assumed to vary harmonically with time so that they are proportional to the factor exp(<italic>i&#x3C9;t</italic>). This factor will be omitted in the further analysis so that only (complex) amplitudes can be written for these variables. Displacement of the fluid emerging from the jet pipette, <italic>X</italic><sub>p</sub>, as a function of angular frequency, <italic>&#x3C9;</italic>&#x2009;=&#x2009;2<italic>&#x3C0;f</italic>, and piezoelectrically induced force, <italic>F</italic><sub>0</sub>, is then described by:
+<disp-formula id="Equ3"><label>2a</label><alternatives><tex-math id="M11">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$X_{{\text{p}}} {\left( \omega  \right)} = \frac{{F_{0} }}{{T{\left( \omega  \right)}{\left[ { - \omega ^{2} M_{{{\text{tot}}}}  + i\omega R_{{\text{c}}}  + L^{2} S_{{\text{p}}} } \right]} - LS_{{\text{p}}} }},$$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ3.gif" position="anchor"/></alternatives></disp-formula>with a relative transformation factor, <italic>T</italic>(<italic>&#x3C9;</italic>), between the displacement in the container and the pipette given by:
+<disp-formula id="Equ4"><label>2b</label><alternatives><tex-math id="M12">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$T{\left( \omega  \right)} = \frac{{X_{{\text{c}}} }}{{X_{{\text{p}}} }} = \frac{{S_{{\text{p}}}  + i\omega R_{{\text{p}}}  - \omega ^{2} M_{{\text{p}}} }}{{LS_{{\text{p}}} }} \cdot $$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ4.gif" position="anchor"/></alternatives></disp-formula></p>
+        <p>Inspection of the denominator of Eq.&#xA0;<xref rid="Equ3" ref-type="">2a</xref> shows that two minima may occur as a function of <italic>&#x3C9;</italic>&#x2009;=&#x2009;2<italic>&#x3C0;f</italic>, corresponding with a low (<italic>f</italic><sub>l</sub>) and high (<italic>f</italic><sub>h</sub>) resonance frequency. The high resonance frequency, <italic>f</italic><sub>h</sub>, can be found by minimizing the term between square brackets, assuming that <italic>T</italic>(<italic>&#x3C9;</italic>) varies only slowly around <italic>f</italic><sub>h</sub>. This frequency is therefore related to <italic>M</italic><sub>tot</sub>, the summed mass of piezoelectric disc and mass of the fluid in the Perspex container, and the parallel combination of <italic>S</italic><sub>piezo</sub>, and the up-transformed stiffness of the pipette, <italic>L</italic><sup>2</sup><italic>S</italic><sub>p</sub>. Together, they amount to the stiffness <inline-formula id="IEq9"><alternatives><tex-math id="M13">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$S_{{{\text{par}}}}  = S_{{{\text{piezo}}}}  + L^{2} S_{{\text{p}}} $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq9.gif"/></alternatives></inline-formula>, in accordance with <italic>M</italic><sub>tot</sub>&#x2019;s position in between these two parallel elastic elements (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The related high-resonance frequency is consequently given by:
+<disp-formula id="Equ5"><label>3</label><alternatives><tex-math id="M14">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$f_{{\text{h}}}  = {\left( {2\pi } \right)}^{{ - 1}} {\sqrt {\frac{{S_{{{\text{par}}}} }}{{M_{{{\text{tot}}}} }} \cdot } }$$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ5.gif" position="anchor"/></alternatives></disp-formula></p>
+        <p>At relatively low frequencies the frequency dependent terms of the factor between square brackets (Eq.&#xA0;<xref rid="Equ3" ref-type="">2a</xref>) are relatively small so that this factor reduces to <italic>S</italic><sub>par</sub>. Then <italic>X</italic><sub>p</sub> can be approximated in the low frequency range by:
+<disp-formula id="Equ6"><label>4a</label><alternatives><tex-math id="M15">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$X_{{\text{p}}}  \cong \frac{{F_{0} }}{{\frac{{S_{{{\text{par}}}} }}{{LS_{{\text{p}}} }}{\left( {S_{{{\text{ser}}}}  + i\omega R_{{\text{p}}}  - \omega ^{2} M_{{\text{p}}} } \right)}}},$$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ6.gif" position="anchor"/></alternatives></disp-formula>where <italic>S</italic><sub>ser</sub> is the series spring combination, of <italic>S</italic><sub>p</sub> and <italic>S</italic><sub>piezo</sub>&#x2009;/&#x2009;<italic>L</italic><sup>2</sup> given by:
+<disp-formula id="Equ7"><label>4b</label><alternatives><tex-math id="M16">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$S_{{{\text{ser}}}}  = \frac{{S_{{\text{p}}} \frac{{S_{{{\text{piezo}}}} }}{{L^{2} }}}}{{S_{{\text{p}}}  + \frac{{S_{{{\text{piezo}}}} }}{{L^{2} }}}} = \frac{{S_{{\text{p}}} S_{{{\text{piezo}}}} }}{{S_{{{\text{par}}}} }} \cdot $$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ7.gif" position="anchor"/></alternatives></disp-formula>It then follows from Eq.&#xA0;<xref rid="Equ6" ref-type="">4a</xref> that the low-frequency resonance, <italic>f</italic><sub>l</sub>, is given by:
+<disp-formula id="Equ8"><label>4c</label><alternatives><tex-math id="M17">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$f_{1}  = {\left( {2\pi } \right)}^{{ - 1}} {\sqrt {\frac{{S_{{{\text{ser}}}} }}{{M_{{\text{p}}} }} \cdot } }$$\end{document}</tex-math><graphic xlink:href="10162_2007_80_Article_Equ8.gif" position="anchor"/></alternatives></disp-formula></p>
+        <p>Equation&#xA0;<xref rid="Equ8" ref-type="">4c</xref> shows that the low frequency oscillation is due to the mass of the fluid in the pipette, <italic>M</italic><sub>p</sub>, that is elastically supported by the effective stiffness, <italic>S</italic><sub>ser</sub>, which is formed by the series combination of <italic>S</italic><sub>p</sub> and the down-transformed piezo-stiffness, <italic>S</italic><sub>piezo</sub>&#x2009;/&#x2009;<italic>L</italic><sup>2</sup>, in line with their series configuration (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The parameters <italic>S</italic><sub>piezo</sub>, <italic>R</italic><sub>c</sub>, <italic>S</italic><sub>p</sub>, and <italic>R</italic><sub>p</sub> were determined from fitting the full model (Eqs.&#xA0;<xref rid="Equ3" ref-type="">2a</xref> and <xref rid="Equ4" ref-type="">2b</xref>) to the measured data. The fluid masses were determined from their actual physical sizes (<italic>D</italic><sub>1</sub>&#x2009;=&#x2009;13.4&#xA0;mm; <italic>D</italic><sub>2</sub>&#x2009;=&#x2009;1.17&#xA0;mm) and lengths (<italic>L</italic><sub>1</sub>&#x2009;=&#x2009;7&#xA0;mm; <italic>L</italic><sub>2</sub>&#x2009;=&#x2009;50&#xA0;mm).</p>
+      </sec>
+    </sec>
+    <sec id="Sec9" sec-type="results">
+      <title>RESULTS</title>
+      <sec id="Sec10">
+        <title>Linearity of the fluid jet</title>
+        <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>A shows a typical sinusoidal displacement of the sense probe driven by a fluid jet produced with a pipette tip diameter of 62&#xA0;&#x3BC;m. The average sense probe displacement of 10 consecutive traces is given each containing 16 periods at a frequency of 106&#xA0;Hz. The waveform clearly shows the 16 periods of the fundamental frequency with negligible harmonic distortion. The extent of the distortion was determined by the Fast Fourier Transform (FFT) calculated of the waveform shown in Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>A. Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>B shows the resultant frequency content of this waveform up to 600&#xA0;Hz. The fundamental frequency is clearly visible at 106&#xA0;Hz and rises about three orders of magnitude above the noise floor. The second harmonic component is visible, but has an amplitude more than 40&#xA0;dB below the component at the fundamental frequency. Higher harmonics are even smaller. The calculated total harmonic distortion in this case was &#x2212;32.7&#xA0;dB (see legend Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>).</p>
+      </sec>
+      <sec id="Sec11">
+        <title>Fluid jet calibration</title>
+        <p>To determine the frequency-dependent motion of a fluid jet produced with a pipette, we used the following procedure. The vibrational displacement of the sense probe induced by the fluid jet was measured as a function of stimulus frequency. The frequency-dependent amplitude and phase characteristics obtained this way are, however, contaminated with frequency-dependent characteristics of the sense probe and other possible frequency-selective components of the equipment. To isolate the fluid jet frequency response, three additional frequency responses were measured in this procedure, which are displayed in Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>.
+<fig id="Fig4"><label>FIG.&#xA0;4.</label><caption><p>Schematic representation of the fluid jet correction procedure. A Each column (<italic>1&#x2013;4</italic>) represents a type of measurement needed to complete the correction. The frequency responses measured with the sense probe contain frequency-dependent properties of <italic>ED</italic> (equipment, demodulator), <italic>S</italic> (stimulus sphere), <italic>SP</italic> (sense probe), or <italic>FJ</italic> (fluid jet) as a function of frequency. Results represented in a column are used to correct the measured response in the next column, indicated by the <italic>long arrows</italic> and produce results pointed at with a short arrow. <bold>B</bold> Displacement amplitude and phase for each measurement (<italic>1&#x2013;4</italic>) described in (<bold>A</bold>). Each <italic>solid line</italic> is the result of a correction (except for column 1) and is used in the next column to correct the measured frequency response (<italic>symbols</italic>), both for the amplitude and the phase response.</p></caption><graphic xlink:href="10162_2007_80_Fig4_HTML" id="MO4"/></fig></p>
+        <p>The first step (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>A1) is to obtain the frequency-dependent properties of the demodulator (D) including the additional signal measuring and conditioning equipment (E) like (anti-alias) filters and amplifiers. For this step, a voltage-controlled oscillator (VCO) was used to generate a frequency-modulated 400&#xA0;kHz carrier signal, which was sent to the demodulator. These signals of the VCO at various known modulation frequencies simulate a calibrated output of the photomultiplier similar to operating the laser interferometer. The resulting response, <italic>ED</italic>(<italic>f</italic>), characterizing demodulator (D) and equipment (E) is presented in Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B1, as a function of frequency, <italic>f</italic>. It shows a nearly constant amplitude as a function of frequency and a clear phase change starting at about 300&#xA0;Hz as a result of the used anti-alias filter.</p>
+        <p>The second step characterizes the frequency response of the stimulus sphere, <italic>S</italic>(<italic>f</italic>). The laser interferometer is used to directly measure its displacement amplitude and phase as a function of input frequency with fixed voltage amplitude. This response, consisting of <italic>ED</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>S</italic>(<italic>f</italic>) (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B2; data points) can now be divided by <italic>ED</italic>(<italic>f</italic>), obtained in step 1, to isolate the pure stimulus sphere response, <italic>S</italic>(<italic>f</italic>) (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B2; solid line). The resonance at approximately 900&#xA0;Hz, originating from the mass of the stimulus sphere and its elastic attachment, can clearly be discerned. The fluid displacement produced by a vibrating stimulus sphere can be taken proportional to the displacement of the sphere <italic>S</italic>(<italic>f</italic>) (e.g., van Netten <xref ref-type="bibr" rid="CR22">2006</xref>).</p>
+        <p>In the third step, the same stimulus sphere vibrating in water is used to hydrodynamically displace the sense probe, which has frequency characteristics <italic>SP</italic>(<italic>f</italic>) that subsequently will be used to probe the fluid jet displacement. The sense probe displacement resulting from sphere stimulation, <italic>ED</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>S</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>SP</italic>(<italic>f</italic>), as measured by the laser interferometer is thus contaminated with equipment, i.e., demodulator and stimulus sphere characteristics. This response is divided by the previously (step 2) isolated stimulus sphere response, <italic>S</italic>(<italic>f</italic>), resulting in the sense probe frequency response <italic>ED</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>SP</italic>(<italic>f</italic>) (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B3; solid line), which is intentionally still contaminated with the equipment response characteristics, <italic>ED</italic>(<italic>f</italic>).</p>
+        <p>In the fourth step, this result, <italic>ED</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>SP</italic>(<italic>f</italic>), is used to divide the fluid jet-driven sense probe response measured by the interferometer <italic>ED</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>FJ</italic>(<italic>f</italic>)&#x2009;&#xD7;&#x2009;<italic>SP</italic>(<italic>f</italic>), thus eventually isolating the amplitude and phase of the pure fluid jet displacement response, <italic>FJ</italic>(<italic>f</italic>), as a function of the frequency (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B4; solid line).</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Effects of tip diameter</title>
+        <sec id="Sec13">
+          <title>Measurements</title>
+          <p>The dimensions of the object that has to be stimulated largely determine the diameter of the tip of the glass pipette to be used for producing the fluid jet. Mechanically stimulating an individual hair bundle usually requires pipette tip (i.e., orifice) diameters smaller than 10&#x2013;15&#xA0;&#x3BC;m, whereas some tectorial structures like a lateral line neuromast may require tip openings of up to 1&#xA0;mm. A narrow tip increases the outflow resistance and thus decreases the fluid flow of the jet as evidenced by the larger voltage amplitudes that have to be applied across the piezoelectric disc to obtain equal displacement amplitudes of the sense probe.</p>
+          <p>Another important consequence of the tip diameter is its influence on the fluid flow frequency characteristics of the fluid jet. To illustrate this calibrated fluid jet characteristics obtained as described in the previous section are shown for different tip diameters in Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>. This figure also shows the amplitude and phase response of the resulting fluid displacement when using a pipette without a tip restriction (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A). In this case, the glass pipette was cut at the same length as the pipettes used in Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>B and C, but was not tapered at its tip. Its outflow diameter therefore equals the inner diameter of the glass pipette (1.17&#xA0;mm). The characteristics of the fluid jet generated using such an unrestricted tip in response to signals applied to the piezoelectric disc within a range of frequencies and with a fixed amplitude, have a constant displacement amplitude up to a certain frequency (about 100&#xA0;Hz) and the jet thus effectively behaves as a displacement stimulus in this frequency range (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A, data points). At higher frequencies, the amplitude starts increasing and approaches a resonance at about 150&#xA0;Hz. Beyond this resonant frequency, the displacement amplitude decreases at a rate of about &#x2212;40&#xA0;dB/dec, which is reminiscent of a second-order system driven beyond resonance. Around the resonant frequency, the phase rotates over an angle of 180&#xB0;, which is consistent with these second-order characteristics.
+<fig id="Fig5"><label>FIG.&#xA0;5.</label><caption><p>Effect of tip diameter on fluid jet response. Data points are the measured amplitude and phase responses as a function of frequency using a pipette without a tip restriction (<bold>A</bold>), a 56-&#x3BC;m tip (<bold>B</bold>), or a 7-&#x3BC;m tip (<bold>C</bold>). The <italic>solid lines</italic> are fits to the data with the model description (Eqs.&#xA0;<xref rid="Equ3" ref-type="">2a</xref> and <xref rid="Equ4" ref-type="">2b</xref>) of the jet-producing device (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). Fixed parameters based on physical sizes and properties: <italic>L</italic>
+<sub>1</sub>&#x2009;=&#x2009;7&#xA0;mm; <italic>L</italic>
+<sub>2</sub>&#x2009;=&#x2009;50&#xA0;mm; <italic>D</italic>
+<sub>1</sub>&#x2009;=&#x2009;13.4&#xA0;mm; <italic>D</italic>
+<sub>2</sub>&#x2009;=&#x2009;1.17&#xA0;mm; &#x3C1;&#x2009;=&#x2009;1,000&#xA0;kg/m<sup>3</sup>. Fixed parameters: <italic>S</italic>
+<sub>piezo</sub>&#x2009;=&#x2009;2.0&#x2009;&#xD7;&#x2009;10<sup>6</sup>&#xA0;N/m; <italic>R</italic>
+<sub>c</sub>&#x2009;=&#x2009;7&#xA0;Ns/m. Varied parameters: <bold>A</bold>
+<italic>S</italic>
+<sub>p</sub>&#x2009;=&#x2009;85&#xA0;N/m, <italic>R</italic>
+<sub>p</sub>&#x2009;=&#x2009;0.0165&#xA0;Ns/m; <italic>F</italic>
+<sub>0</sub>&#x2009;=&#x2009;7.0&#xB7;10<sup>&#x2212;3</sup>&#xA0;N, (<bold>B</bold>) <italic>S</italic>
+<sub>p</sub>&#x2009;=&#x2009;9&#xA0;N/m, <italic>R</italic>
+<sub>p</sub>&#x2009;=&#x2009;0.09&#xA0;Ns/m; <italic>F</italic>
+<sub>0</sub>&#x2009;=&#x2009;62&#xB7;10<sup>-3</sup>&#xA0;N, (<bold>C</bold>) <italic>S</italic>
+<sub>p</sub>&#x2009;=&#x2009;11&#xA0;N/m, <italic>R</italic>
+<sub>p</sub>&#x2009;=&#x2009;2&#xA0;Ns/m; <italic>F</italic>
+<sub>0</sub>&#x2009;=&#x2009;52&#xB7;10<sup>-3</sup>&#xA0;N.</p></caption><graphic xlink:href="10162_2007_80_Fig5_HTML" id="MO5"/></fig></p>
+          <p>A different jet response is produced with a pipette with an intermediate tip restriction (56&#xA0;&#x3BC;m; Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>B, data points). At low frequencies, the jet&#x2019;s fluid displacement is proportional to the voltage applied to the piezoelectric disc, as evidenced by the constant amplitude and the almost zero phase. With this more restricted pipette tip, the displacement amplitude, however, starts declining beyond 15&#xA0;Hz, changing towards a slope of about &#x2212;20&#xA0;dB/dec with an according &#x2212;90&#xB0; phase rotation in the mid-frequency range. At about 400&#xA0;Hz, the slope of the amplitude starts to decrease further and also the phase lag changes to values more negative than &#x2212;90&#xB0;. With this more restricted tip diameter (56&#xA0;&#x3BC;m), no clear resonance is evident as was the case with the larger diameter (1.17&#xA0;mm).</p>
+          <p>In the case of an extremely restricted tip with a diameter of 7&#xA0;&#x3BC;m, the fluid jet device produces a displacement amplitude response, which declines with about &#x2212;20&#xA0;dB/dec over the measured frequency range (1&#x2013;1,000&#xA0;Hz; Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C data points), so that effectively, the velocity amplitude of the fluid jet is constant within this frequency range. Consistent with these characteristics is the almost constant phase lag of &#x2212;90&#xB0;, except at the higher frequencies where it starts to decline further. These frequency characteristics reflect an overdamped system. In the case of a small pipette tip diameter, therefore, the resulting dynamics lead to a fluid jet of which the velocity is proportional and in phase with the voltage applied to the piezoelectric disc within the measured frequency range.</p>
+        </sec>
+        <sec id="Sec14">
+          <title>Model calculations</title>
+          <p>To get a better understanding of the physical factors influencing the output characteristic of the jet-producing device, the measured data were described by a mechanical model of the masses of the fluids related to the two main compartments of the device, i.e., the Perspex container part and the pipette (see <xref rid="Sec2" ref-type="sec">Materials and Methods</xref>). The mass of the piezoelectric disc (<italic>M</italic><sub>piezo</sub>) is combined with the fluid mass contained in the Perspex fluid container (<italic>M</italic><sub>c</sub>), because they can be considered to move in unison, having a total mass <inline-formula id="IEq10"><alternatives><tex-math id="M18">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$M_{{{\text{tot}}}}  = M_{{\text{c}}}  + M_{{{\text{piezo}}}} $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq10.gif"/></alternatives></inline-formula>. The fluid mass in the glass pipette is indicated with <italic>M</italic><sub>p</sub>. These two effective masses, <italic>M</italic><sub>tot</sub> and <italic>M</italic><sub>p</sub>, are mechanically coupled by a lever and a spring <italic>S</italic><sub>p</sub> (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The displacement amplitude of the mass in the pipette, <italic>X</italic><sub>p</sub>, is considered to be proportional to the displacement of the fluid jet emerging from the pipette tip and is calculated as a function of frequency of the force produced by the piezoelectric disc. The force is assumed to be proportional to the electrical signal applied to the piezoelectric disc. The results of this model were subsequently fitted to the measured data points (Figs.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A-C, solid lines).</p>
+          <p>The model results support the measurements in showing that the value of the resistance controlled by the tip of the pipette, <italic>R</italic><sub>p</sub>, strongly influences the fluid jet response characteristics. When fitting the model to the data obtained for different tip diameters, the value of the resistance, <italic>R</italic><sub>p</sub>, increases more than two orders of magnitude (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A solid lines, <italic>R</italic><sub>p,small</sub>&#x2009;=&#x2009;0.0165&#xA0;Ns/m; Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C solid lines, <italic>R</italic><sub>p,large</sub>&#x2009;=&#x2009;2&#xA0;Ns/m), when the pipette without tip restriction (&#xD8;<sub>large</sub>&#x2009;=&#x2009;1.17&#xA0;mm) is compared with the most restricted pipette (&#xD8;<sub>small</sub>&#x2009;=&#x2009;7&#xA0;&#x3BC;m). Fitting the flow produced by the pipette tip with intermediate opening (&#xD8;&#x2009;=&#x2009;56&#xA0;&#x3BC;m) results in an intermediate resistance value (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>B, solid lines, <italic>R</italic><sub>p</sub>&#x2009;=&#x2009;0.09&#xA0;Ns/m). Besides these expected changes in <italic>R</italic><sub>p</sub>, the value of <italic>S</italic><sub>p</sub> needed to be modified (9 to 85&#xA0;N/m) for obtaining proper model fits to the data. The cone washers (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>; denoted with W) are the most compliant structures in the assembly to which part of the elastic stiffness <italic>S</italic><sub>p</sub> can most likely be attributed. The variation in <italic>S</italic><sub>p</sub> found between individual fluid jets could be due to the variability with which the cone washers were positioned during the insertion of the pipette and subsequently tightened. In addition, we cannot exclude the variability in the amount of gas or air bubbles present in the silicone fluid causing these variations in <italic>S</italic><sub>p</sub> between individual fluid jets. Except for <italic>S</italic><sub>p</sub> and <italic>R</italic><sub>p</sub>, all other parameters of the model were kept fixed in fitting the results with different pipette tip dimensions (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>).</p>
+        </sec>
+        <sec id="Sec15">
+          <title>Resonance frequencies</title>
+          <p>Unless overdamped by resistive elements, a combination of a spring and a mass leads to a resonance phenomenon and is accompanied by a &#x2212;180&#xB0; phase rotation and an amplitude response slope change of &#x2212;40&#xA0;dB/dec around the resonance frequency. The present model, including two sets of masses and elastic elements, therefore predicts two possible resonant frequencies, <italic>f</italic><sub>l</sub>, and <italic>f</italic><sub>h</sub> (see <xref rid="Sec2" ref-type="sec">Materials and Methods</xref>). The high resonance frequency, <italic>f</italic><sub>h</sub>, is beyond the calibrated frequency range considered (1&#xA0;kHz). This resonance is related to the summed mass (<italic>M</italic><sub>tot</sub>) of the fluid in the Perspex container (<italic>M</italic><sub>c</sub>) and that of the piezoelectric disc (<italic>M</italic><sub>piezo</sub>) combined with the parallel stiffness (<italic>S</italic><sub>piezo</sub>) of the piezoelectric disc and the up-transformed stiffness of the cone washers (<italic>L</italic><sup>2</sup><italic>S</italic><sub>p</sub>), as effectively acting on the fluid mass in the Perspex container (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>; Eq.&#xA0;<xref rid="Equ5" ref-type="">3</xref>). The existence of a second resonance at higher frequencies was confirmed by applying both sinusoidal signals and voltage steps to the piezoelectric disc of the fluid jet device. The displacement of a (uncalibrated) sense probe in front of a small pipette tip (&#x2248;10&#xA0;&#x3BC;m) of the fluid jet device driven by a voltage step clearly shows a resonance at about 5.65&#xA0;kHz (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). The same value was found using a series of sinusoidal voltages applied to the piezoelectric disc. The high-resonance frequency also coincides with the resonance frequency of the back side of the piezoelectric disc measured directly using laser interferometry, while the disc was being clamped and operated in the same fluid jet device (not shown).
+<fig id="Fig6"><label>FIG.&#xA0;6.</label><caption><p>High frequency fluid jet resonance. Response of the fluid jet to an unfiltered step driver voltage applied to the piezoelectric disc, showing a high resonance frequency, <italic>f</italic>
+<sub>h</sub>&#x2009;=&#x2009;5.65&#xA0;kHz. (<italic>solid line</italic>, calibration as indicated<bold>).</bold> Parameters used in the model (<italic>dashed line</italic>): <italic>S</italic>
+<sub>piezo</sub>&#x2009;=&#x2009;2.12&#x2009;&#xD7;&#x2009;10<sup>6</sup>&#xA0;N/m; <italic>R</italic>
+<sub>c</sub>&#x2009;=&#x2009;4&#xA0;Ns/m; <italic>S</italic>
+<sub>p</sub>&#x2009;=&#x2009;6.4&#xA0;N/m, <italic>R</italic>
+<sub>p</sub>&#x2009;=&#x2009;0.402&#xA0;Ns/m; <italic>F</italic>
+<sub>0</sub>&#x2009;=&#x2009;2.5&#x2009;&#xD7;&#x2009;10<sup>&#x2212;3</sup>&#xA0;N.</p></caption><graphic xlink:href="10162_2007_80_Fig6_HTML" id="MO6"/></fig></p>
+          <p>In the case of the unrestricted pipette with small damping, the low resonant frequency, <italic>f</italic><sub>l</sub>, was observed (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A), together with the accompanying &#x2212;180&#xB0; phase rotation within the measured frequency range. This low-frequency resonance, <italic>f</italic><sub>l</sub>, (see Eq.&#xA0;<xref rid="Equ8" ref-type="">4c</xref>) can be attributed to the mass of fluid in the pipette (<italic>M</italic><sub>p</sub>) and the combined series stiffness, <italic>S</italic><sub>ser</sub>, that is associated with the compliant cone washers or air bubbles (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, C) and the down-transformed piezo stiffness <italic>S</italic><sub>piezo</sub>/<italic>L</italic><sup>2</sup>, which effectively also acts on <italic>M</italic><sub>p</sub>. The resonance frequency resulting from substituting the fitted parameters of Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A in Eq.&#xA0;<xref rid="Equ8" ref-type="">4c</xref> yields <italic>f</italic><sub>l</sub>&#x2009;=&#x2009;152&#xA0;Hz, similar to the measured value (&#x2248;150&#xA0;Hz).</p>
+        </sec>
+      </sec>
+      <sec id="Sec16">
+        <title>Applications</title>
+        <sec id="Sec17">
+          <title>Mechanical excitation of sensory hair cells using the fluid jet</title>
+          <p>To measure transducer currents at acoustic frequencies, whole-cell voltage-clamp recordings of individual outer hair cells were performed in acutely prepared organs of Corti of mice (e.g., G&#xE9;l&#xE9;oc et al. <xref ref-type="bibr" rid="CR8">1997</xref>; van Netten et al. <xref ref-type="bibr" rid="CR24">2003</xref>). The hair bundles were stimulated by the present fluid jet device using narrow tips (&#xD8;&#x2009;&lt;&#x2009;15&#xA0;&#x3BC;m), so that fluid jet velocities were proportional to the voltage applied to piezoelectric disc (e.g., Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C). The pipette&#x2019;s tip was aimed at the hair bundle, the mechano-receptive structure of a hair cell, at an angle of about 20&#xB0; with the apical plate of the hair cell, and at a distance of approximately 15&#xA0;&#x3BC;m from the hair bundle.</p>
+          <p>Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> shows examples of inward transducer currents measured in an apical mouse outer hair cell. The hair bundle was excited with 16 periods of a pure sinusoidal fluid stimulus at 100&#xA0;Hz and at 1,000&#xA0;Hz, as produced by the micro-fluid jet device. The driver voltage and resulting jet velocity are symmetric, whereas the measured transducer currents (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B; 100&#xA0;Hz; Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>C; 1,000&#xA0;Hz) are asymmetric. This is expected as the transducer channels only gate ionic currents when they are deflected in the direction of the tallest hair bundles (e.g., Hudspeth <xref ref-type="bibr" rid="CR13">2000</xref>; Fettiplace and Ricci <xref ref-type="bibr" rid="CR6">2006</xref>).
+<fig id="Fig7"><label>FIG.&#xA0;7.</label><caption><p>Application of the fluid jet to excite sensory hair cells. A Schematic representation for recording transducer currents in cochlear outer hair cells. Indicated are the fluid jet&#x2019;s pipette tip and the hair cell under whole-cell voltage-clamp configuration with a patch pipette at the lateral side. The sinusoidal driver voltage (DV) applied to the piezoelectric disc is indicated. Positive voltages correspond with the fluid moving out of the chamber towards the hair bundle so that it bends in the excitatory direction towards the tallest stereocilia. B Transducer currents in response to a fluid stimulus at 100&#xA0;Hz. <bold>(</bold>C<bold>)</bold> Transducer currents in response to a fluid stimulus at 1,000&#xA0;Hz from the same cell, and using the same fluid-jet pipette as in <bold>B</bold>. D Responses of transducer currents (dashed, 100&#xA0;Hz; <italic>solid</italic>, 1,000&#xA0;Hz) shown on an extended time axis in relation to two stimulus periods of the driver voltage (DV, thin <italic>black line</italic> upper trace). The two transducer currents have a comparable magnitude but show a different delay in activation with respect to the maxima of the driver voltage (<italic>vertical thin lines</italic>), which is caused by the different phase delays of the fluid jet at 100 and 1,000&#xA0;Hz. The measured delays are 0.0194 and 0.171 periods, for respectively, the 100&#xA0;Hz and the 1,000&#xA0;Hz stimulus, and correspond to a phase delay of 7&#xB0; and 62&#xB0; respectively. E Step driver voltage (DV) applied to the piezoelectric disc of the device and the evoked transducer current showing a 5.65-kHz oscillation produced by resonance of the fluid in the Perspex container.</p></caption><graphic xlink:href="10162_2007_80_Fig7_HTML" id="MO7"/></fig></p>
+          <p>In Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>D, two periods of the traces from Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B and C are shown on an extended time scale. For both frequencies, there are delays in peak transducer current with respect to the maximum stimulus (vertical lines). The measured delays are 194&#x2009;&#xB1;&#x2009;155&#xA0;&#x3BC;s and 171&#x2009;&#xB1;&#x2009;15&#xA0;&#x3BC;s (mean&#x2009;&#xB1;&#x2009;SD, <italic>n</italic>&#x2009;=&#x2009;16), for, respectively, the 100&#xA0;Hz and the 1,000&#xA0;Hz stimulus. This corresponds to a phase delay of 7&#x2009;&#xB1;&#x2009;6&#xB0; at 100&#xA0;Hz and to 62&#x2009;&#xB1;&#x2009;5&#xB0; at 1,000&#xA0;Hz, which can be attributed to the frequency-dependent phase delay of the fluid jet (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C; see also <xref rid="Sec18" ref-type="sec">Discussion</xref>).</p>
+          <p>Hair cells also reliably transduce the (high-frequency) resonance of the fluid jet device in response to an unfiltered step applied to the piezoelectric disc as can be seen in Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>E. The hair cell response shows an initial step transducer current followed by an oscillation of 5.65&#xA0;kHz. This frequency is identical to the resonance observed while applying an unfiltered fluid jet stimulus to the sense probe (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>) and thus illustrates the need for proper filtering of the voltage step to avoid fluid jet resonance.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="Sec18" sec-type="discussion">
+      <title>DISCUSSION</title>
+      <sec id="Sec19">
+        <title>Reliability of the calibration method</title>
+        <p>The flow of microscopic fluid jets produced by several types of devices has been used in hair cell research for several decades (Flock and Orman <xref ref-type="bibr" rid="CR7">1983</xref>; Saunders and Szymko <xref ref-type="bibr" rid="CR30">1989</xref>; Kros et al. <xref ref-type="bibr" rid="CR18">1992</xref>; R&#xFC;sch et al. <xref ref-type="bibr" rid="CR28">1994</xref>; G&#xE9;l&#xE9;oc et al. <xref ref-type="bibr" rid="CR8">1997</xref>; Vollrath and Eatock <xref ref-type="bibr" rid="CR32">2003</xref>; van Netten et al. <xref ref-type="bibr" rid="CR24">2003</xref>). In almost all cases, the mechanical output characteristics are assumed to be constant in terms of fluid displacement or velocity but generally lack detailed data on these actual output characteristics.</p>
+        <p>In the present study, a method was developed to dynamically calibrate a microscopic fluid jet using a flexible sense probe that was independently calibrated by means of an additional stimulus device (stimulus sphere), providing its detailed frequency selectivity within a relevant frequency range. This information is necessary to properly analyze the displacements of objects induced by a fluid jet. Because changes in the tip diameter of the jet-producing pipette alter the frequency response, a calibration for each individual pipette is necessary especially when applied at higher frequencies (e.g., Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>D). The developed calibration procedure using a sense probe has been shown to be practical within the frequency range tested (1&#x2013;1,000&#xA0;Hz). This calibration procedure intrinsically produces results for the flow of the jet in a free and unobstructed fluid field. This is related to the principle used, which is based on equivalent forces acting on a sense probe when stimulated with either a fluid jet or a sphere with known (free) flow field.</p>
+        <p>The frequency-dependent characteristics of a particular sense probe can be determined well in advance of the actual physiological experiment, and the sense probes can be stored for later use. During an experiment, a sense probe can be positioned in close proximity of the preparation to enable calibration of the fluid jet directly after the stimulation of the preparation without having to move the pipette tip out of the water. Essential for this procedure is that the fluid jet&#x2019;s frequency response does not change over time. A potential danger is that the pipette tip gets (partially) blocked by dirt floating in the bath solution. Such an additional restriction of the tip leads to changed jet response characteristics, precluding a proper correction of the measured data. However, in practice, such a blockage in the glass pipette&#x2019;s tip can be monitored by microscopic visualization.</p>
+      </sec>
+      <sec id="Sec20">
+        <title>Displacement or velocity output depends on tip size</title>
+        <p>From the experiments on fluid jets produced by various glass pipettes, it appears that the pipette&#x2019;s tip size is the dominant parameter determining the fluid jet output characteristics both in terms of the overall output and frequency selectivity (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). One of the most relevant features of this stimulus device is whether it is the fluid displacement or velocity of the jet that follows the voltage applied to the device. Our results show that with a large tip diameter (unrestricted pipette) the displacement of the fluid jet is proportional to the displacement of the piezoelectric disc in a low frequency range (&lt;100&#xA0;Hz). This displacement mode is accompanied with resonance behavior (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>A). A restriction of the pipette&#x2019;s tip diameter critically damps the system, preventing it from resonating. Under such conditions (e.g., &#xD8; 56&#xA0;&#x3BC;m; Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>B), it produces a constant fluid displacement amplitude as a function of frequency of the input signal up to about 10&#x2013;20&#xA0;Hz. Beyond this frequency, the displacement amplitude falls off with &#x2212;40&#xA0;dB/dec and is accompanied by a phase rotation that may reach &#x2212;180&#xB0; at high frequencies. An even higher restriction of the tip diameter (&#xD8; 7&#xA0;&#x3BC;m; Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C) results in a fluid displacement that declines with about &#x2212;20&#xA0;dB/dec from low (1&#xA0;Hz) to high (1,000&#xA0;Hz) frequencies with a fixed phase delay of about 90&#xB0;. This means that the velocity of the fluid jet follows the voltage applied to the piezoelectric disc. This is the most effective mode for producing a hydrodynamic stimulus to excite micro-sized objects such as sensory hair bundles.</p>
+      </sec>
+      <sec id="Sec21">
+        <title>Comparison of measured fluid jet characteristics with model</title>
+        <p>A physical representation of the fluid jet-producing device as two damped fluid masses coupled via a lever and loaded with springs describes the behavior of the fluid jet emerging from the pipette&#x2019;s tip quite well (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> solid lines). It follows from fitting the model response to the measured data that the dynamics of the fluid in the pipette, rather than that in the larger Perspex container, dominantly determines the overall frequency response characteristics below 1&#xA0;kHz. In this frequency range the output can be approximated with Eq. <xref rid="Equ6" ref-type="">4a</xref>, which shows the importance of <italic>R</italic><sub>p</sub> and <italic>M</italic><sub>p</sub> in relation to the frequency selectivity. It also shows that the overall output at frequencies around and below the low resonance frequency (<inline-formula id="IEq11"><alternatives><tex-math id="M19">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\omega  &lt; f_{1} $$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq11.gif"/></alternatives></inline-formula>) is inversely proportional to the stiffness of the piezoelectric disc <inline-formula id="IEq12"><alternatives><tex-math id="M20">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\left( {{X_{{\text{p}}}  \approx F_{0} } \mathord{\left/ {\vphantom {{X_{{\text{p}}}  \approx F_{0} } {{\left( {S_{{{\text{par}}}} S_{{{\text{ser}}}} /{\left( {LS_{{\text{p}}} } \right)}} \right)} = {F_{0} L} \mathord{\left/ {\vphantom {{F_{0} L} {S_{{{\text{piezo}}}} }}} \right. \kern-\nulldelimiterspace} {S_{{{\text{piezo}}}} }}}} \right. \kern-\nulldelimiterspace} {{\left( {S_{{{\text{par}}}} S_{{{\text{ser}}}} /{\left( {LS_{{\text{p}}} } \right)}} \right)} = {F_{0} L} \mathord{\left/ {\vphantom {{F_{0} L} {S_{{{\text{piezo}}}} }}} \right. \kern-\nulldelimiterspace} {S_{{{\text{piezo}}}} }}} \right)}$$\end{document}</tex-math><inline-graphic xlink:href="10162_2007_80_Article_IEq12.gif"/></alternatives></inline-formula>.</p>
+        <p>The high resonance frequency of the fluid jet was found at 5.65&#xA0;kHz (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). The value of this resonance frequency was confirmed by laser interferometric measurements on the back side of the piezoelectric disc under the same fluid load conditions. When the fluid was removed from the Perspex body and no pipette was inserted, the piezoelectric disc resonated at about 8.3&#xA0;kHz. As in this configuration only the disc is moving, we could estimate its effective dynamic mass value in combination with the value of <italic>S</italic><sub>piezo</sub> to be <italic>M</italic><sub>piezo</sub>&#x2009;=&#x2009;0.741&#x2009;&#xD7;&#x2009;10<sup>&#x2212;3</sup>&#xA0;kg. This appears to be 65% of the physical mass of the disc (1.14&#x2009;&#xD7;&#x2009;10<sup>&#x2212;3</sup>&#xA0;kg), which seems to be a reasonable fraction if the circular disc is moving in a mode with a circular node imposed by its peripheral clamping support.</p>
+        <p>The compressibility of the fluid in the Perspex container and that in the pipette has been neglected. This can be justified as the obtained maximum stiffness values of the elastic elements associated with these masses, <italic>S</italic><sub>piezo</sub> (&#x223C;2&#x2009;&#xD7;&#x2009;10<sup>6</sup>&#xA0;N/m) and <italic>S</italic><sub>p</sub> (&#x223C;85&#xA0;N/m), are significantly smaller than the effective stiffness values associated with their compressibility, 4.4&#x2009;&#xD7;&#x2009;10<sup>7</sup> and 4.7&#x2009;&#xD7;&#x2009;10<sup>4</sup>&#xA0;N/m, respectively. These effective stiffness values, <italic>S</italic><sub>eff</sub>, were evaluated by considering the compressibility along the long axis of a fluid-filled cylinder having length, <italic>L</italic>, and cross sectional area, <italic>A</italic>, and can be shown to equal <italic>S</italic><sub>eff</sub>&#x2009;=&#x2009;<italic>KA</italic>&#x2009;/&#x2009;<italic>L</italic>, with <italic>K</italic> (=&#x2009;2.2&#x2009;&#xD7;&#x2009;10<sup>9</sup>&#xA0;Pa) the bulk modulus of water (Lide <xref ref-type="bibr" rid="CR19">2005</xref>).</p>
+        <p>Highly restricted pipettes with tip diameters of the order of 15&#xA0;&#x3BC;m or less strongly overdamp the system and produce a velocity output which is proportional to the force produced by the piezoelectric disc and therefore to the voltage signal applied (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C). The model therefore predicts the transition in fluid jet characteristics from a displacement stimulus in the situation of a large tip diameter (small tip resistance) to a velocity stimulus due to tip restriction. Figure&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> compares these model results in more detail for increasing tip resistance, <italic>R</italic><sub>p</sub>. At a relative low pipette resistance (<italic>R</italic><sub>p</sub>&#x2009;=&#x2009;0.02&#xA0;Ns/m), a constant displacement amplitude of the jet is produced at frequencies below about 80&#xA0;Hz showing resonance around 150&#xA0;Hz. Increasing the resistance to <italic>R</italic><sub>p</sub>&#x2009;=&#x2009;0.07&#xA0;Ns/m, critically damps the system making it a useful displacement stimulus device up to about 100&#xA0;Hz. Gradually increasing the resistance <italic>R</italic><sub>p</sub> (2 to 20&#xA0;Ns/m) changes the fluid jet apparatus into a velocity-producing device in the full frequency range considered (1&#x2013;1,000&#xA0;Hz) at the expense of the jet&#x2019;s flow amplitude. This velocity output corresponds with a slope of &#x2212;20&#xA0;dB/dec in the displacement amplitude response.
+<fig id="Fig8"><label>FIG.&#xA0;8.</label><caption><p>The effect of increasing pipette resistance. Series of modelled frequency responses showing fluid displacement output as a function of the frequency of the voltage signal put across the piezoelectric disc. Parameter values: <italic>L</italic>
+<sub>1</sub>&#x2009;=&#x2009;7&#xA0;mm; <italic>L</italic>
+<sub>2</sub>&#x2009;=&#x2009;50&#xA0;mm; <italic>D</italic>
+<sub>1</sub>&#x2009;=&#x2009;13.4&#xA0;mm; <italic>D</italic>
+<sub>2</sub>&#x2009;= &#x2009;1.17&#xA0;mm; &#x3C1; &#x2009;=&#x2009;1,000&#xA0;kg/m<sup>3</sup>; <italic>S</italic>
+<sub><bold>piezo</bold></sub>&#x2009;=&#x2009;2.0&#x2009;&#xD7;&#x2009;10<sup>6</sup>&#xA0;N/m, <italic>R</italic>
+<sub>c</sub>&#x2009;=&#x2009;7&#xA0;Ns/m, <italic>S</italic>
+<sub>p</sub>&#x2009;=&#x2009;55&#xA0;N/m, values of pipette resistance (<italic>R</italic>
+<sub>p</sub> in Ns/m) are given next to each curve.</p></caption><graphic xlink:href="10162_2007_80_Fig8_HTML" id="MO8"/></fig></p>
+      </sec>
+      <sec id="Sec22">
+        <title>Absolute fluid jet velocity</title>
+        <p>The calibration method described was focused on the relative frequency selectivity of the fluid jet emerging from the tip of the glass pipette. The absolute fluid velocity that can be obtained not only depends on the tip diameter, but it also varies strongly with the measurement position with respect to the pipette&#x2019;s tip. This means that it is not useful to afterwards calibrate the absolute fluid velocity on a sense probe as done for determining the relative frequency sensitivity. Nevertheless, an estimate of the order of magnitude follows directly from curves like Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C or alternatively by visualizing the trajectories of small (&#xD8;&#x2009;=&#x2009;1.0&#xA0;&#x3BC;m) latex microbeads in the flow field (e.g., Sauders and Szymko <xref ref-type="bibr" rid="CR30">1989</xref>). Our observations, for instance, show that a sensitivity of about 1&#xA0;mm/s per volt applied to the piezoelectric disc is obtained at a distance of about 30&#xA0;&#x3BC;m in front of the pipette tip (&#xD8;&#x2009;=&#x2009;15&#xA0;&#x3BC;m). From such calibrations, we estimate that the fluid flow velocity, required to produce an open probability of the transducer channels of 0.5, is about 2&#xA0;mm/s. Linearly extrapolating this to the maximum voltages that may be applied to the piezo-electric element (100&#xA0;V) without damaging it, leads to a maximal velocity in the order of 200&#xA0;mm/s.</p>
+      </sec>
+      <sec id="Sec23">
+        <title>Applications</title>
+        <p>As shown in Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>, a fluid jet produced by the apparatus using a restricted tip diameter (&lt;15&#xA0;&#x3BC;m) can be adequately used to effectively evoke robust transducer currents in individual sensory hair cells. It is known from previous studies (van Netten et al. <xref ref-type="bibr" rid="CR24">2003</xref>; Ricci et al. <xref ref-type="bibr" rid="CR27">2005</xref>) that the speed of the transducer apparatus in mammalian outer hair cells is well exceeding the range of frequencies (1 to 1,000&#xA0;Hz) considered here. This implies that the transducer apparatus is capable of following signals up into the kiloHertz range without delay. The observed delays in transducer currents (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>D) can therefore be attributed to the frequency selectivity of the fluid jet. Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C illustrates that the difference in phase delay at 1,000&#xA0;Hz (&#x2212;130&#xB0;) compared to that at 100&#xA0;Hz (&#x2212;80&#xB0;) amounts to about 50&#xB0;, when using restricted pipettes. The observed time delays of the hair cell responses (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>D) in stimulus periods (0.0194 at 100&#xA0;Hz and 0.171 at 1,000&#xA0;Hz) or in terms of phase delays (7&#xB0; at 100&#xA0;Hz and 62&#xB0; at 1,000&#xA0;Hz, a difference of 55&#xB0;) are therefore in line with the measured phase difference of the fluid jet at these frequencies. As is also apparent from Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>C, the amplitude response of the fluid jet is quite comparable in terms of velocity of the jet at 100 and 1,000&#xA0;Hz, in line with the equal magnitude of the measured transducer currents at these frequencies. These results support our notion that a proper calibration of the fluid jet characteristics is necessary for a correct interpretation of the (phase) measurements.</p>
+        <p>A relevant issue related to the application to hair cell stimulation is the proper mechanical stimulus to excite a sensory hair bundle. Based on the micromechanics and hydrodynamics of an individual hair bundle, it has theoretically been argued that a hair bundle&#x2019;s displacement response is flat as a function of the frequency of a fluid velocity stimulus up to a cut-off frequency determined by its stiffness and its size (G&#xE9;l&#xE9;oc et al. <xref ref-type="bibr" rid="CR8">1997</xref>; van Netten <xref ref-type="bibr" rid="CR21">1997</xref>). The pipettes used to displace individual bundles have opening diameters that are matched to the dimensions of the bundle resulting in diameters of about 15&#xA0;&#x3BC;m or below. When applying a (filtered) step voltage, the accompanying high resistance of the pipette tip results in a jet velocity proportional to the step and therefore produces an adequate stimulus to statically displace individual hair cell bundles inducing step displacements of the bundle. If unfiltered, the velocity output may, however, be contaminated with a ringing (5.65&#xA0;kHz) caused by resonance of the fluid in the Perspex fluid container (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>E). Adequate low-pass filtering of the applied voltage signal can prevent these oscillations, but will inevitably put an upper limit to the displacement rise time of a hair bundle that can be achieved (see also next section).</p>
+        <p>A second consequence of tip restriction is the decreased output response. Much larger voltages have to be applied to the piezoelectric disc to produce similar fluid jet displacements. This consequence of tip restriction was previously recognized by Saunders and Szymko (<xref ref-type="bibr" rid="CR30">1989</xref>) who showed a square relation between fluid displacement amplitude and tip diameter. Remarkably, they did not report differences in the frequency response of their fluid jet due to tip diameter. Their calibrating method did not give precise information about the phase of the response and lacks relevant information on tip size. Their reported displacement frequency responses have a slope of &#x2212;10&#xA0;dB/dec, which makes their apparatus neither a true displacement nor a true velocity-producing device.</p>
+        <p>When a preparation is only stimulated at a single frequency, the detailed frequency response of the fluid jet is less relevant as long as the desired displacement and related phase of the object can be established. Harmonic distortion of the produced fluid jet might, however, cause a problem in the investigation of a system&#x2019;s nonlinearities. Although the harmonics produced by the described device are relatively small (e.g., Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>; THD&#x2009;&lt;&#x2009;&#x2212;30&#xA0;dB) and comparable to the fluid jet distortion reported by Saunders and Szymko (<xref ref-type="bibr" rid="CR30">1989</xref>), they may nevertheless preclude the direct measurement of transducer-related hair bundle nonlinearities from harmonic analyses as predicted for specific types of hair cells (e.g. van Netten and Kros, <xref ref-type="bibr" rid="CR23">2000</xref>).</p>
+      </sec>
+      <sec id="Sec24">
+        <title>Bandwidth limitations of the fluid jet-producing device</title>
+        <p>The calibration method described here is restricted to about 1,000&#xA0;Hz because of the frequency range of the stimulus sphere used to calibrate the sense probes, which resonates at about 900&#xA0;Hz and produces only a limited fluid displacement beyond resonance (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B2). However, it may be possible to design a method to mechanically calibrate the sense probes into the supra-kHz range so that the jet&#x2019;s output can also be calibrated in an extended frequency bandwidth.</p>
+        <p>In the velocity-producing mode, resonance of the fluid mass, <italic>M</italic><sub>c</sub>, in the Perspex container may limit the use of the device beyond the high resonance frequency (5.65&#xA0;kHz), where the fluid jet velocity output declines with &#x2212;20&#xA0;dB/ dec. It may seem therefore that a fundamental restriction of the application of the fluid jet produced by the apparatus described lies in the restricted bandwidth imposed by the piezoelectric disc used. The piezoelectric disc&#x2019;s intrinsic resonance behavior under dry unloaded conditions, i.e., while being clamped at its rim similarly as in the operational fluid jet device but without the fluid load imposed, is about 8.3&#xA0;kHz. However, using the model, it can be shown that this is not a fundamental limit for its dynamic use, as the high-frequency resonance is also determined by the stiffness <italic>S</italic><sub>p</sub>, which contributes via up-transforming via the lever with a factor <italic>L</italic><sup>2</sup> to the stiffness of the moving fluid in the Perspex container determining the high-resonance frequency (Eq.&#xA0;<xref rid="Equ5" ref-type="">3</xref>).</p>
+        <p>Enhanced (high) frequency characteristics, i.e., a higher resonance or cut-off frequency (<italic>f</italic><sub>h</sub>) in the velocity mode using small pipette tip diameters, may thus be expected from designs with a smaller fluid mass (<italic>M</italic><sub>c</sub>) in the Perspex container, improved lever action (higher <italic>L</italic>), and overall stiffer elastic elements (<italic>S</italic><sub>piezo</sub>, <italic>S</italic><sub>p</sub>), although the latter will decrease the overall output of such devices. In practice, this means that at the expense of a smaller output faster fluid jet performance may be obtained by using smaller but stiffer (ultrasonic) piezo elements.</p>
+      </sec>
+      <sec id="Sec25" sec-type="conclusion">
+        <title>Conclusions</title>
+        <p>This work emphasizes the importance of the calibration of a jet-producing stimulus device and demonstrates the importance of the outflow restriction for the jet response characteristics. Not only the jet output is decreased with a higher tip resistance, but more importantly, its output characteristic changes from a displacement to a velocity fluid stimulus in relation to the input voltage of the device. A simple mechanical model that adequately describes the fluid jet&#x2019;s characteristics can help understanding the physical parameters underlying these characteristics and can thus facilitate optimizing the design of this type of hydrodynamic stimulus device for particular applications.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>ACKNOWLEDGMENTS</title>
+      <p>We thank J. Land for providing excellent technical expertise in constructing various components used in this study and D.G. Stavenga for comments on the manuscript. T.D. and C.J.W.M. were supported by the Netherlands Organization for Scientific Research.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>REFERENCES</title>
+      <ref id="CR1">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Assad</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Corey</surname>
+              <given-names>DP</given-names>
+            </name>
+          </person-group>
+          <article-title>An active motor model for adaptation by vertebrate hair cells</article-title>
+          <source>J. Neurosci.</source>
+          <year>1992</year>
+          <volume>12</volume>
+          <fpage>3291</fpage>
+          <lpage>3309</lpage>
+          <pub-id pub-id-type="pmid">1527581</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR2">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Benser</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Marquis</surname>
+              <given-names>RE</given-names>
+            </name>
+            <name>
+              <surname>Hudspeth</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Rapid, active hair bundle movements in hair cells from the bullfrog&#x2019;s sacculus</article-title>
+          <source>J. Neurosci.</source>
+          <year>1996</year>
+          <volume>16</volume>
+          <fpage>5629</fpage>
+          <lpage>56431</lpage>
+          <pub-id pub-id-type="pmid">8795619</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR3">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Beurg</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Evans</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Hackney</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Fettiplace</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>A Large conductance calcium-selective mechanotransducer channel in mammalian cochlear hair cells</article-title>
+          <source>J. Neurosci.</source>
+          <year>2006</year>
+          <volume>26</volume>
+          <fpage>10992</fpage>
+          <lpage>11000</lpage>
+          <pub-id pub-id-type="doi">10.1523/JNEUROSCI.2188-06.2006</pub-id>
+          <pub-id pub-id-type="pmid">17065441</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR4">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Crawford</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Fettiplace</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>The mechanical properties of ciliary bundles of turtle cochlear hair cells</article-title>
+          <source>J. Physiol.</source>
+          <year>1985</year>
+          <volume>364</volume>
+          <fpage>359</fpage>
+          <lpage>379</lpage>
+          <pub-id pub-id-type="pmid">4032304</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR5">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Denk</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Webb</surname>
+              <given-names>WW</given-names>
+            </name>
+          </person-group>
+          <article-title>Forward and reverse transduction at the limit of sensitivity studied by correlating electrical and mechanical fluctuations in frog saccular hair cells</article-title>
+          <source>Hear. Res.</source>
+          <year>1992</year>
+          <volume>60</volume>
+          <fpage>89</fpage>
+          <lpage>102</lpage>
+          <pub-id pub-id-type="doi">10.1016/0378-5955(92)90062-R</pub-id>
+          <pub-id pub-id-type="pmid">1500380</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR6">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fettiplace</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Ricci</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Eatock</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Fay</surname>
+              <given-names>RR</given-names>
+            </name>
+            <name>
+              <surname>Popper</surname>
+              <given-names>AN</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical transduction in auditory hair cells</article-title>
+          <source>Vertebrate Hair Cells</source>
+          <year>2006</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Springer</publisher-name>
+          <fpage>154</fpage>
+          <lpage>203</lpage>
+        </element-citation>
+      </ref>
+      <ref id="CR7">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Flock</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Orman</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Micromechanical properties of sensory hairs on receptor cells of the inner ear</article-title>
+          <source>Hear. Res.</source>
+          <year>1983</year>
+          <volume>11</volume>
+          <fpage>249</fpage>
+          <lpage>260</lpage>
+          <pub-id pub-id-type="doi">10.1016/0378-5955(83)90060-6</pub-id>
+          <pub-id pub-id-type="pmid">6605335</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR8">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>G&#xE9;l&#xE9;oc</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Lennan</surname>
+              <given-names>GW</given-names>
+            </name>
+            <name>
+              <surname>Richardson</surname>
+              <given-names>GP</given-names>
+            </name>
+            <name>
+              <surname>Kros</surname>
+              <given-names>CJ</given-names>
+            </name>
+          </person-group>
+          <article-title>A quantitative comparison of mechanoelectrical transduction in vestibular and auditory hair cells of neonatal mice</article-title>
+          <source>Proc. R. Soc. Lond. B</source>
+          <year>1997</year>
+          <volume>264</volume>
+          <fpage>611</fpage>
+          <lpage>621</lpage>
+          <pub-id pub-id-type="doi">10.1098/rspb.1997.0087</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR9">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Holton</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Hudspeth</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>The transduction channel of hair cells from the bull-frog characterized by noise analysis</article-title>
+          <source>J. Physiol.</source>
+          <year>1986</year>
+          <volume>375</volume>
+          <fpage>195</fpage>
+          <lpage>227</lpage>
+          <pub-id pub-id-type="pmid">2432221</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR10">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Howard</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Ashmore</surname>
+              <given-names>JF</given-names>
+            </name>
+          </person-group>
+          <article-title>Stiffness of sensory hair bundles in the sacculus of the frog</article-title>
+          <source>Hear. Res.</source>
+          <year>1986</year>
+          <volume>23</volume>
+          <fpage>93</fpage>
+          <lpage>104</lpage>
+          <pub-id pub-id-type="doi">10.1016/0378-5955(86)90178-4</pub-id>
+          <pub-id pub-id-type="pmid">3488306</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR11">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Howard</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hudspeth</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Compliance of the hair bundle associated with gating of mechanoelectrical transduction channels in the bullfrog&#x2019;s saccular hair cell</article-title>
+          <source>Neuron.</source>
+          <year>1988</year>
+          <volume>1</volume>
+          <fpage>189</fpage>
+          <lpage>199</lpage>
+          <pub-id pub-id-type="doi">10.1016/0896-6273(88)90139-0</pub-id>
+          <pub-id pub-id-type="pmid">2483095</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR12">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Howard</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hudspeth</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical relaxation of the hair bundle mediates adaptation in mechanoelectrical transduction by the bullfrog&#x2019;s saccular hair cell</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <year>1987</year>
+          <volume>84</volume>
+          <fpage>3064</fpage>
+          <lpage>3068</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.84.9.3064</pub-id>
+          <pub-id pub-id-type="pmid">3495007</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR13">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hudspeth</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Choe</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Mehta</surname>
+              <given-names>AD</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Putting ion channels to work: mechanoelectrical transduction, adaptation, and amplification by hair cells</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <year>2000</year>
+          <volume>97</volume>
+          <fpage>11765</fpage>
+          <lpage>11772</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.97.22.11765</pub-id>
+          <pub-id pub-id-type="pmid">11050207</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR14">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jaramillo</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Hudspeth</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Displacement-clamp measurement of the forces exerted by gating springs in the hair bundle</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <year>1993</year>
+          <volume>90</volume>
+          <fpage>1330</fpage>
+          <lpage>1334</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.90.4.1330</pub-id>
+          <pub-id pub-id-type="pmid">7679501</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR15">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jielof</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Spoor</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>de Vries</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>The microphonic activity of the lateral line</article-title>
+          <source>J. Physiol.</source>
+          <year>1952</year>
+          <volume>116</volume>
+          <fpage>137</fpage>
+          <lpage>157</lpage>
+          <pub-id pub-id-type="pmid">14928229</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR16">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>HJ</given-names>
+            </name>
+            <name>
+              <surname>Evans</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Crawford</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Fettiplace</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Fast adaptation of mechanoelectrical transducer channels in mammalian cochlear hair cells</article-title>
+          <source>Nat. Neurosci.</source>
+          <year>2003</year>
+          <volume>6</volume>
+          <fpage>832</fpage>
+          <lpage>836</lpage>
+          <pub-id pub-id-type="doi">10.1038/nn1089</pub-id>
+          <pub-id pub-id-type="pmid">12872124</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR17">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>HJ</given-names>
+            </name>
+            <name>
+              <surname>Crawford</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Fettiplace</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Force generation by mammalian hair bundles supports a role in cochlear amplification</article-title>
+          <source>Nature.</source>
+          <year>2005</year>
+          <volume>433</volume>
+          <fpage>880</fpage>
+          <lpage>883</lpage>
+          <pub-id pub-id-type="doi">10.1038/nature03367</pub-id>
+          <pub-id pub-id-type="pmid">15696193</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR18">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kros</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Rusch</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Richardson</surname>
+              <given-names>GP</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechano-electrical transducer currents in hair cells of the cultured neonatal mouse cochlea</article-title>
+          <source>Proc. R. Soc. Lond. B Biol. Sci.</source>
+          <year>1992</year>
+          <volume>249</volume>
+          <fpage>185</fpage>
+          <lpage>193</lpage>
+          <pub-id pub-id-type="doi">10.1098/rspb.1992.0102</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR19">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lide</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <source>Compressibility of liquids. In: Handbook of chemistry and physics 86th edition</source>
+          <year>2005</year>
+          <publisher-loc>Taylor and Francis Group</publisher-loc>
+          <publisher-name>CRC Press</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="CR20">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van Netten</surname>
+              <given-names>SM</given-names>
+            </name>
+          </person-group>
+          <article-title>Hydrodynamics of the excitation of the cupula in the fish canal lateral line</article-title>
+          <source>J.Acoust.Soc.Am</source>
+          <year>1991</year>
+          <volume>89</volume>
+          <fpage>310</fpage>
+          <lpage>319</lpage>
+          <pub-id pub-id-type="doi">10.1121/1.400512</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR21">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van Netten</surname>
+              <given-names>SM</given-names>
+            </name>
+          </person-group>
+          <article-title>Hair cell mechano-transduction: its influence on the gross mechanical characteristics of a hair cell organ</article-title>
+          <source>Biophys. Chem.</source>
+          <year>1997</year>
+          <volume>68</volume>
+          <fpage>43</fpage>
+          <lpage>52</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0301-4622(97)00006-9</pub-id>
+          <pub-id pub-id-type="pmid">9468609</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR22">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van Netten</surname>
+              <given-names>SM</given-names>
+            </name>
+          </person-group>
+          <article-title>Hydrodynamic detection by cupulae in a lateral line canal: functional relations between physics and physiology</article-title>
+          <source>Biol. Cybern.</source>
+          <year>2006</year>
+          <volume>94</volume>
+          <fpage>67</fpage>
+          <lpage>85</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00422-005-0032-x</pub-id>
+          <pub-id pub-id-type="pmid">16315048</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR23">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van Netten</surname>
+              <given-names>SM.</given-names>
+            </name>
+            <name>
+              <surname>Kros</surname>
+              <given-names>C.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Gating energies and forces of the mammalian hair cell transducer channel and related hair bundle mechanics</article-title>
+          <source>Proc. R. Soc. Lond. B Biol. Sci.</source>
+          <year>2000</year>
+          <volume>267</volume>
+          <fpage>1915</fpage>
+          <lpage>1923</lpage>
+          <pub-id pub-id-type="doi">10.1098/rspb.2000.1230</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR24">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van Netten</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Dinklo</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Marcotti</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Kros</surname>
+              <given-names>CJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Channel gating forces govern accuracy of mechano-electrical transduction in hair cells</article-title>
+          <source>Proc. Natl. Acad. Sci. USA</source>
+          <year>2003</year>
+          <volume>100</volume>
+          <fpage>15510</fpage>
+          <lpage>15515</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.2632626100</pub-id>
+          <pub-id pub-id-type="pmid">14668434</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR25">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nicolson</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Rusch</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Friedrich</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Granato</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Ruppersberg</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Nusslein-Volhard</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetic analysis of vertebrate sensory hair cell mechanosensation: the zebrafish circler mutants</article-title>
+          <source>Neuron.</source>
+          <year>1998</year>
+          <volume>20</volume>
+          <fpage>271</fpage>
+          <lpage>283</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0896-6273(00)80455-9</pub-id>
+          <pub-id pub-id-type="pmid">9491988</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR26">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pumphrey</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Hearing</article-title>
+          <source>Symp. Soc. Exp. Biol.</source>
+          <year>1950</year>
+          <volume>4</volume>
+          <fpage>3</fpage>
+          <lpage>18</lpage>
+        </element-citation>
+      </ref>
+      <ref id="CR27">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ricci</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>HJ</given-names>
+            </name>
+            <name>
+              <surname>Crawford</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Fettiplace</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>The transduction channel filter in auditory hair cells</article-title>
+          <source>J. Neurosci.</source>
+          <year>2005</year>
+          <volume>25</volume>
+          <fpage>7831</fpage>
+          <lpage>7839</lpage>
+          <pub-id pub-id-type="doi">10.1523/JNEUROSCI.1127-05.2005</pub-id>
+          <pub-id pub-id-type="pmid">16120785</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR28">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>R&#xFC;sch</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Kros</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Richardson</surname>
+              <given-names>GP</given-names>
+            </name>
+          </person-group>
+          <article-title>Block by amiloride and its derivatives of mechano-electrical transduction in outer hair cells of mouse cochlear cultures</article-title>
+          <source>J. Physiol.</source>
+          <year>1994</year>
+          <volume>474</volume>
+          <fpage>75</fpage>
+          <lpage>86</lpage>
+          <pub-id pub-id-type="pmid">7516972</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR29">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Russell</surname>
+              <given-names>IJ</given-names>
+            </name>
+            <name>
+              <surname>Kossl</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Richardson</surname>
+              <given-names>GP</given-names>
+            </name>
+          </person-group>
+          <article-title>Nonlinear mechanical responses of mouse cochlear hair bundles</article-title>
+          <source>Proc. R. Soc. Lond. B Biol. Sci.</source>
+          <year>1992</year>
+          <volume>250</volume>
+          <fpage>217</fpage>
+          <lpage>227</lpage>
+          <pub-id pub-id-type="doi">10.1098/rspb.1992.0152</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR30">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Saunders</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Szymko</surname>
+              <given-names>YM</given-names>
+            </name>
+          </person-group>
+          <article-title>The design, calibration, and use of a water microjet for stimulating hair cell sensory hair bundles</article-title>
+          <source>J. Acoust. Soc. Am.</source>
+          <year>1989</year>
+          <volume>86</volume>
+          <fpage>1797</fpage>
+          <lpage>1804</lpage>
+          <pub-id pub-id-type="doi">10.1121/1.398612</pub-id>
+          <pub-id pub-id-type="pmid">2808929</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR31">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Strelioff</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Flock</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Stiffness of sensory-cell hair bundles in the isolated guinea pig cochlea</article-title>
+          <source>Hear. Res.</source>
+          <year>1984</year>
+          <volume>15</volume>
+          <fpage>19</fpage>
+          <lpage>28</lpage>
+          <pub-id pub-id-type="doi">10.1016/0378-5955(84)90221-1</pub-id>
+          <pub-id pub-id-type="pmid">6480520</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR32">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vollrath</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Eatock</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>Time course and extent of mechanotransducer adaptation in mouse utricular hair cells: comparison with frog saccular hair cells</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>2003</year>
+          <volume>90</volume>
+          <fpage>2676</fpage>
+          <lpage>2689</lpage>
+          <pub-id pub-id-type="doi">10.1152/jn.00893.2002</pub-id>
+          <pub-id pub-id-type="pmid">12826658</pub-id>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

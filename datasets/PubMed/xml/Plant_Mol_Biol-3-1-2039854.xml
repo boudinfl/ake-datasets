@@ -1,0 +1,1143 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Plant Mol Biol</journal-id>
+      <journal-title>Plant Molecular Biology</journal-title>
+      <issn pub-type="ppub">0167-4412</issn>
+      <issn pub-type="epub">1573-5028</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17641976</article-id>
+      <article-id pub-id-type="pmc">2039854</article-id>
+      <article-id pub-id-type="publisher-id">9209</article-id>
+      <article-id pub-id-type="doi">10.1007/s11103-007-9209-0</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Local coexpression domains in the genome of rice show no microsynteny with Arabidopsis domains</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Ren</surname>
+            <given-names>Xin-Ying</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Stiekema</surname>
+            <given-names>Willem J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Nap</surname>
+            <given-names>Jan-Peter</given-names>
+          </name>
+          <address>
+            <phone>+31-317-477169</phone>
+            <fax>+31-317-418094</fax>
+            <email>janpeter.nap@wur.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Applied Bioinformatics, Plant Research International, Plant Sciences Group, Wageningen University and Research Centre, P.O. Box 16, 6700 AA Wageningen, The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Laboratory of Bioinformatics, Plant Sciences Group, Wageningen University and Research Centre, 6703 HA Wageningen, The Netherlands </aff>
+        <aff id="Aff3"><label>3</label>Centre for BioSystems Genomics, 6700 AB Wageningen, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>20</day>
+        <month>7</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>65</volume>
+      <issue>1-2</issue>
+      <fpage>205</fpage>
+      <lpage>217</lpage>
+      <history>
+        <date date-type="received">
+          <day>13</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>6</day>
+          <month>7</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media B.V. 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Chromosomal coexpression domains are found in a number of different genomes under various developmental conditions. The size of these domains and the number of genes they contain vary. Here, we define local coexpression domains as adjacent genes where all possible pair-wise correlations of expression data are higher than 0.7. In rice, such local coexpression domains range from predominantly two genes, up to 4, and make up &#x223C;5% of the genomic neighboring genes, when examining different expression platforms from the public domain. The genes in local coexpression domains do not fall in the same ontology category significantly more than neighboring genes that are not coexpressed. Duplication, orientation or the distance between the genes does not solely explain coexpression. The regulation of coexpression is therefore thought to be regulated at the level of chromatin structure. The characteristics of the local coexpression domains in rice are strikingly similar to such domains in the Arabidopsis genome. Yet, no microsynteny between local coexpression domains in Arabidopsis and rice could be identified. Although the rice genome is not yet as extensively annotated as the Arabidopsis genome, the lack of conservation of local coexpression domains may indicate that such domains have not played a major role in the evolution of genome structure or in genome conservation.</p>
+        <sec>
+          <title>Electronic supplementary material</title>
+          <p>The online version of this article (doi:10.1007/s11103-007-9209-0) contains supplementary material, which is available to authorized users.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Arabidopsis</kwd>
+        <kwd>Coexpression domain</kwd>
+        <kwd>Higher-order chromatin structures</kwd>
+        <kwd>Microsynteny</kwd>
+        <kwd>Rice</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The fast-growing data sets on genome annotation and genome-wide gene expression facilitate the study and comparison of gene activity between and among genomes. The genomic context of genes is supposed to play an important role in the regulation of gene expression (van Drunen et&#xA0;al. <xref ref-type="bibr" rid="CR26">1997</xref>). Non-random clusters of similarly expressed (co-regulated, coexpressed, highly expressed and/or broadly expressed) genes have been described in almost all organisms, ranging from prokaryotes to eukaryotes. In eukaryotes, from yeast to Arabidopsis to human, both short-range co-regulated/coexpressed clusters of two to five genes (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>; Zhan et&#xA0;al. <xref ref-type="bibr" rid="CR30">2006</xref>) and longer-range coexpression domains of up to 30 genes spanning up to 100&#xA0;kb and more (Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>; Ma et&#xA0;al. <xref ref-type="bibr" rid="CR13">2005</xref>; Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>; Zhan et&#xA0;al. <xref ref-type="bibr" rid="CR30">2006</xref>) have been described. Duplicated genes (Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>), shared promoter regions (Kruglyak and Tang <xref ref-type="bibr" rid="CR12">2000</xref>), shorter gene distance (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Roy et&#xA0;al. <xref ref-type="bibr" rid="CR22">2002</xref>; Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>) and/or functional relatedness (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Lee et&#xA0;al. <xref ref-type="bibr" rid="CR14">2004</xref>; Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>) were found to account for only part of the coexpression between genes. Therefore, most studies postulate that the occurrence of coexpression domains, small or large, is regulated on the level of higher-order chromatin structure (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Hershberg et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>; Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>; Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>), although alternative views exist (Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>).</p>
+      <p>Previously we have defined and demonstrated the existence of local coexpression domains in the genome of Arabidopsis (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). A local coexpression domain was defined as any set of physically adjacent genes that are highly coexpressed with a pair-wise Pearson&#x2019;s correlation coefficient larger than 0.7. It was shown that a small (5&#x2013;10%) yet significant fraction of genes in the Arabidopsis genome is organized in such local coexpression domains. Genes in such local domains were for the major part not categorized in the same functional category (GOslim). Neither tandemly duplicated genes nor shared promoter sequence, nor gene distance, explained the occurrence of coexpression of genes in such chromosomal domains. This indicates that other parameters in genes or gene positions are important to establish coexpression in local domains of Arabidopsis chromosomes. Here it is analyzed whether a similar situation exists in the genome of the monocotyledonous model plant rice (<italic>Oryza sativa</italic>), for which an earlier study had shown the existence of longer-range domains (Ma et&#xA0;al. <xref ref-type="bibr" rid="CR13">2005</xref>). We combined the whole genome rice annotation data (TIGR version 3; www.tigr.com) with Massively Parallel Signature Sequencing (MPSS; mpss.udel.edu/rice) expression data as well as Affymetrix array expression data (GEO, GSE4438; www.ncbi.nlm.nih.gov/geo) for the rice cultivar japonica in a way similar to the analysis performed for the Arabidopsis genome (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). The results show that the characteristics of the two genomes with respect to the occurrence and configuration of local expression domains are remarkably similar.</p>
+      <p>Also in the rice genome, a small yet significant fraction of genes is organized in local coexpression domains that predominantly consist of two, up to 4, genes that are not categorized in the same functional category, irrespective of the expression platform used for analyses. The presence of tandemly duplicated genes, shared promoter sequence or gene distance is not fully explaining the occurrence of coexpression of genes in such chromosomal domains. Therefore, the regulation of local coexpression domains is postulated to be at the level of higher-order of chromatin structure. Given the similarities in the characteristics and occurrence of coexpression domains between Arabidopsis and rice, we investigated whether the genes involved showed microsynteny between the two genomes. These analyses did not identify the presence of syntenic local coexpression domains between Arabidopsis and rice.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Material and methods</title>
+      <sec id="Sec3">
+        <title>Genome data</title>
+        <p>The rice (<italic>Oryza sativa</italic>) genome was obtained from the website of The Institute of Genomic Research (TIGR; www.tigr.org). The rice TIGR version 3 [Jan. 2005] annotation has 57,915 gene loci. In case of alternative splicing, the longest variant of the gene was used. The genes along each chromosome were sorted based on ascending start coordinates and were numbered consecutively. These rank numbers (rank ID) helped to eliminate any discontinuity in the unique Os gene identifiers of the annotated genes and facilitated analyzing physically adjacent genes. In case of overlapping gene loci, the smaller one of the overlapping genes was removed from the data set. This way the order of both gene and rank ID numbers was maintained.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Expression data</title>
+        <p>The MPSS expression data for rice (cv. Japonica) were obtained from the rice MPSS database (<ext-link ext-link-type="uri" xlink:href="http://mpss.udel.edu/rice">http://mpss.udel.edu/rice</ext-link>). Only the unique MPSS tags (mapping to the genome only once) and those mapping to unique gene identifiers in TIGR v3 were used in the analyses. The MA expression data were obtained from the Gene Expression Omnibus repository (GEO; www.ncbi.nlm.nih.gov/geo). The data with accession number GSE4438 were chosen for analysis, because they represent the only Affymetrix chip-based data set in the public domain with a reasonable coverage of the <italic>Oryza sativa</italic> cv. japonica transcriptome under four different experimental conditions (Walia et&#xA0;al. <xref ref-type="bibr" rid="CR27">2007</xref>). The earlier analysis in Arabidopsis also concerned Affymetrix chip data (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). The MA expression data were mapped to the TIGR v3 annotation based on gene accession numbers.</p>
+        <p>The expression values in libraries representing biological replicates, i.e., the same tissues under the same experimental conditions, were averaged. This way, for the MPSS data 18 different libraries were generated, that cover expression in 9 tissues (callus, panicle, leaves, root, germinating seed and seedling meristem, ovary and stigma, pollen, stem) under different experimental treatments or in different developmental stages. From the microarray (MA) data, only the expression data from cv. japonica were used to allow comparison with the MPSS data. Here, 4 different libraries were generated: a sensitive japonica genotype under control conditions and under salt stress; and a tolerant japonica genotype under control conditions and under salt stress (Walia et&#xA0;al. <xref ref-type="bibr" rid="CR27">2007</xref>). The expression data is from crown and growing point tissue.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Identification of local coexpression domains</title>
+        <p>Pearson&#x2019;s correlation coefficient (<italic>R</italic>) was calculated between all adjacent pairs (duplets) of genes using the expression data from all 18 libraries. If <italic>R</italic> was higher than 0.7, the gene pair concerned was considered to be coexpressed. The value of <italic>R</italic>&#xA0;&gt;&#xA0;0.7 is generally considered a rule-of-thumb threshold (see for example bbc.botany.utoronto.ca/affydb/BAR_instructions) and is used in various analyses (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Lee et&#xA0;al. <xref ref-type="bibr" rid="CR14">2004</xref>; Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). The number of coexpressed adjacent pairs was counted. To evaluate the statistical significance of these numbers, they were compared with the number of coexpressed pairs from 100 randomizations of the population of expressed genes using the cumulative binomial distribution (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>). Previous analyses indicated that more than 100 randomizations did not result in significant changes in the numbers obtained (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). In each round of randomization, non-adjacent pairs of genes were randomly selected with replacement from the list of expressed genes that have expressed neighbors till the same total number of pairs was obtained. Similarly, coexpressed adjacent triplets, quadruplets and pentaplets were identified as series of genes with consecutive IDs in which all possible (that is, (n!/(n&#x2212;2)!)*2; where n is the number of genes involved) pair-wise<italic> R</italic>&#x2019;s should be above the cut-off of 0.7. The significance of results was evaluated with randomizations equivalent to the procedure used in case of duplets.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Duplicated genes</title>
+        <p>Duplicated genes were identified by local pair-wise protein BLAST (BLASTP 2.2.6 [Apr-09-2003]; (Altschul et&#xA0;al. <xref ref-type="bibr" rid="CR1">1997</xref>)), on all gene pairs in the rice genome. A gene pair was considered to be duplicated (dup) if BLASTP yielded an <italic>E</italic>-value&#xA0;&lt;&#xA0;0.2 (Fukuoka et&#xA0;al. <xref ref-type="bibr" rid="CR6">2004</xref>; Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>). To determine duplicated triplets, quadruplets and pentaplets, it was required that any pair of the genes concerned had a BLASTP E-value &lt;0.2.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Analyses of gene orientation and gene distance</title>
+        <p>Adjacent gene pairs were separated into tandemly, divergently and convergently transcribed pairs according to their relative direction of transcription. The number of coexpressed pairs in each orientation group was expressed as percentage relative to the total number of adjacent pairs in that group. Random pairs were made by randomly picking two non-adjacent genes from the list of expressed genes represented in pairs, analyzed for their orientation and compared with the real genome using a variant of the two-sample <italic>t</italic> test for proportions for determining the significance of a difference between two population proportions (Ott and Longnecker <xref ref-type="bibr" rid="CR20">2001</xref>). The test statistic is based on the <italic>z</italic> statistic from the normal distribution and is given by (p1&#x2212;p2)/ &#x221A; (p1*(1&#x2212;p1)/n1&#xA0;+&#xA0;p2*(1&#x2212;p2)/n2), with p1 and p2 the two sample proportions, n1 and n2 the two sample sizes, under the condition that n1*p1, n1*(1&#x2212;p1), n2*p2 and n2*(1&#x2212;p2) are all larger than 5. The <italic>z</italic> value is converted to a p value using standard normal tables.</p>
+        <p>To determine the gene distance, the intergenic distance is used. This distance is defined as the length in nucleotides from the annotated end of one gene to the annotated start of the next gene, including the UTRs when known, otherwise the translation start and stop sites were taken. The data sets excluding the duplicated gene pairs were analyzed. For each data set, gene pairs were sorted based on gene distance from short to long and bins of 1,000 pairs were taken and analyzed, excluding the last bin with less than 1,000 pairs. The advantage of using equal pair bin is that it avoids unequal number of gene pairs in different distance categories. Per 1,000-pair bin, gene distance was calculated as the average over all 1,000 pairs. For each 1,000-pair bin, the fraction of coexpressed pairs relative to the total number of pairs in each orientation group in each bin was calculated and plotted.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Functional categorization of genes </title>
+        <p>TAIR&#x2019;s GOslim, the Gene Ontology (GO) developed for plants (Berardini et&#xA0;al. <xref ref-type="bibr" rid="CR2">2004</xref>) was used to classify the genes present in local coexpression domains. The three aspects of GOslim, molecular function, biological process and cellular component, were analyzed in parallel. With Python scripts, the number of pairs of which both members could be classified in GOslim was determined, and the number of pairs of which both members fall into the same well-defined GOslim category was also determined. The GOslim categories of &#x2018;unknown&#x2019; and &#x2018;other&#x2019; were not included into well-defined categories, because they give less (or no) information about functional categorization. The percentage of coexpressed pairs falling into the same well-defined category was compared with that of non-coexpressed pairs to determine whether coexpressed genes are more enriched in the same functional category than non-coexpressed genes.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Assessing synteny between Arabidopsis and rice</title>
+        <p>The Inparanoid Eukaryotic Orthologous groups database (inparanoid.cgb.ki.se; O&#x2019;Brien et&#xA0;al. <xref ref-type="bibr" rid="CR19">2005</xref>) was used to download all known orthologous and inparalogous clusters between Arabidopsis and rice. Inparanoid defines inparalogs as paralogs that arose through gene duplication after speciation. Inparalogs can form a group of genes that together are orthologous to a gene in another species. There are 9,044 orthologous clusters between Arabidopsis (from Ensemble) and rice (from the Model Organism database) and all of them were taken into account. These clusters were downloaded on Dec. 12, 2005. In the orthologous clusters, 15,544 sequences (proteins) from Arabidopsis are inparalogs and 14,807 sequences (proteins) from rice are inparalogs. More than half of Arabidopsis and rice inparalogs are many-to-many or many to-one orthology cases. Less than half of the cases are one-to-one orthology cases.</p>
+        <p>The Ensembl protein IDs (for Arabidopsis) and the Model organism database protein IDs (for rice) in Inparanoid were first translated to their unique gene identifiers in the respective TIGR annotation by BLASTP using an <italic>E</italic>-value&#xA0;&lt;&#xA0;e<sup>&#x2212;20</sup>. This yielded 14,753 unique Arabidopsis genes and 12,428 unique rice genes as inparalogs. The pairs of genes in local coexpression domains were analyzed to determine which genes in a rice local coexpressed pair have orthologs in an Arabidopsis local coexpressed pair, and vice versa. Because of the larger coverage of genes and tissues, only the MPSS expression data were used for this analysis. As coexpressed triplets and quadruplets are always combinations of coexpressed pairs, they were not further analyzed. For comparison, the pairs of genes that are not coexpressed were analyzed to determine how many non-coexpressed pairs, or one of their member genes, have orthologs in the other plant species. The numbers were then compared between coexpressed pairs and non-coexpressed pairs to determine the significance of occurrence of syntenic local coexpression domains.</p>
+      </sec>
+    </sec>
+    <sec id="Sec10">
+      <title>Results</title>
+      <sec id="Sec11">
+        <title>Local coexpression domains consist of two to four neighboring genes</title>
+        <p>The TIGR version 3 of the rice genome has 57,915 predicted genes. This is about twice the number of genes predicted for Arabidopsis (28,952 genes; TIGR5 annotation). The coverage of the MPSS expression data for the rice genome is 40%. The expression coverage in the Affymetrix array data set we used is 26% (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). This is about half or less of the expression coverage for the Arabidopsis genome (72% in the TIGR5 update; Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). This difference can reflect the more advanced annotation of the Arabidopsis genome at this time, and/or the more complex (duplicated) organization of the rice genome. The rice genome annotation has more genes that are physically overlapping than the Arabidopsis genome. Excluding the smaller overlapping genes from the analyses, we were able to identify 12,920 gene pairs with MPSS expression data and 6,032 pairs with MA expression data in rice (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>; see also Materials and methods). Of these, 584 (4.5%) in MPSS and 320 (5.3%) in MA were identified to represent a local coexpression domain as defined as being coexpressed with a pair-wise Pearson&#x2019;s correlation coefficient larger than 0.7 (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). This percentage is similar to what we have found previously for Arabidopsis (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>) and agrees well with other findings that &#x223C;3&#x2013;5% of a genome is tightly coexpressed (Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>).
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Description of rice expression data used for whole-genome local coexpression analysis</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">MPSS</th><th align="left">MA</th></tr></thead><tbody><tr><td align="left" colspan="3"><italic>Genes with expression</italic></td></tr><tr><td align="left">Excluding overlapping genes</td><td align="left">23,146</td><td align="left">14,789</td></tr><tr><td align="left">Without expressed neighbor(s)</td><td align="left">5,081</td><td align="left">5,438</td></tr><tr><td align="left">represented in pairs</td><td align="left">18,065</td><td align="left">9,351</td></tr><tr><td align="left" colspan="3"><italic>Adjacent pairs</italic></td></tr><tr><td align="left">Total</td><td align="left">12,920</td><td align="left">6,032</td></tr><tr><td align="left">Tandemly duplicated pairs (td) </td><td align="left">1,663 (12.9%)<sup>a</sup></td><td align="left">573 (9.5%)<sup>a</sup></td></tr><tr><td align="left">Coexpressed</td><td align="left">584 (4.5%)<sup>b</sup></td><td align="left">320 (5.3%)<sup>b</sup></td></tr><tr><td align="left">Total excluding td</td><td align="left">11,257</td><td align="left">5,459 </td></tr><tr><td align="left">Coexpressed excluding td </td><td align="left">438 (3.9%)<sup>c</sup></td><td align="left">288 (5.3%)<sup>c</sup></td></tr><tr><td align="left" colspan="3"><italic>Coexpressed adjacent pairs</italic></td></tr><tr><td align="left">Total</td><td align="left">584</td><td align="left">320</td></tr><tr><td align="left">Tandemly duplicated pairs</td><td align="left">146 (25%)<sup>d</sup></td><td align="left">32 (10%)<sup>d</sup></td></tr><tr><td align="left" colspan="3"><italic>Tandemly duplicated pairs</italic></td></tr><tr><td align="left">Total</td><td align="left">1,663</td><td align="left">573</td></tr><tr><td align="left">Coexpressed</td><td align="left">146 (8.8%)<sup>e</sup></td><td align="left">32 (5.6%)<sup> e</sup></td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Percentage of tandemly duplicated pairs relative to the total number of adjacent pairs</p><p><sup>b</sup>Percentage of coexpressed adjacent pairs relative to the total number of adjacent pairs</p><p><sup>c</sup>Percentage of coexpressed adjacent pairs excluding td relative to the total number of adjacent pairs excluding tandemly duplicated pairs</p><p><sup>d</sup>Percentage of coexpressed tandemly duplicated pairs relative to the total number of coexpressed adjacent pairs</p><p><sup>e</sup>Percentage of coexpressed tandemly duplicated pairs relative to the total number of tandem duplicated pairs</p></table-wrap-foot></table-wrap></p>
+        <p>Notably duplicated genes are supposed to influence coexpression statistics due to their common origin (Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>), although a surprising finding for the Arabidopsis coexpression domains was that only a minor fraction of duplicated genes were actually coexpressed (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). The occurrence of duplicated pairs in the rice set was determined with pair-wise protein BLAST using a cut-off of <italic>E</italic>&#xA0;&lt;&#xA0;0.2 (Fukuoka et&#xA0;al. <xref ref-type="bibr" rid="CR6">2004</xref>; Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>). This identified 1,663 (12.9%) duplicated gene pairs in the MPSS gene pair data set and 573 (9.5%) duplicated gene pairs in the MA gene pair data set.</p>
+        <p>Of these, only 146 (8.8%) in the MPSS data and 32 (5.6%) in the MA data were coexpressed (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Although this percentage is somewhat higher than the percentage of coexpression in non-duplicated pairs (3.9%), the majority of all duplicated pairs (91.2% in MPSS data and 94.4% in MA data) are not coexpressed. This shows that also in rice gene duplication does not correlate well with coexpression and suggests that expression divergence is a common phenomenon after duplication (Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>). Excluding the duplicated pairs from the coexpressed sets, there are 438 gene pairs in the MPSS data and 288 gene pairs in the MA data coexpressed in rice. This accounts for 75% (=438/584) in MPSS and 90% (=288/320) in MA of all coexpressed pairs. Therefore, also in rice the occurrence of duplicated genes cannot explain the occurrence of local coexpression domains. Extending the size of the local coexpression domain to triplets, quadruplets, pentaplets and on, requiring that all pair-wise combinations of genes have a tightly correlated expression, shows that few larger local coexpression domains exist (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). No quadruplet domains could be identified when tandemly duplicated genes were excluded (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). To assess the significance of the occurrence of the various local coexpression domains, we compared the number of coexpressed pairs, triplets and quadruplets with the average of such domains in 100 randomly generated genomes using the cumulative binomial distribution (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>). Such comparisons revealed that local coexpression pairs occur in the rice genome significantly more often than expected by chance alone (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). However, when excluding the duplicated genes, triplets and quadruplets do not occur significantly more often than by chance (at <italic>P</italic>&#xA0;&lt;&#xA0;0.05) in both expression datasets. Local coexpression domains therefore consist of at most 2 genes when duplicated genes are not taken into consideration. This number appears smaller than in the Arabidopsis genome (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>), but this may reflect the lesser coverage of the annotation of the rice genome.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Local coexpression domains in the rice genome</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2"/><th align="left" colspan="2">Rice genome</th><th align="left" colspan="2">Random genome (100&#xD7;)</th></tr><tr><th align="left">Total<sup>a</sup></th><th align="left">Coexpressed<sup>b</sup></th><th align="left">Average<sup>c</sup></th><th align="left"><italic>P</italic>-value<sup>d</sup></th></tr></thead><tbody><tr><td align="left" colspan="5"><italic>Pairs</italic></td></tr><tr><td align="left">MPSS&#xA0;+&#xA0;td<sup>e</sup></td><td align="left">12,920</td><td align="left">584 (4.52%)</td><td align="left">408&#xA0;&#xB1;&#xA0;17</td><td char="&#xD7;" align="left">1.46&#xA0;&#xD7;&#xA0;10<sup>&#x2212;17</sup></td></tr><tr><td align="left">MPSS-td<sup>f</sup></td><td align="left">11,257</td><td align="left">438 (3.89%)</td><td char="." align="left">356&#xA0;&#xB1;&#xA0;21</td><td char="&#xD7;" align="left">2.17&#xA0;&#xD7;&#xA0;10<sup>&#x2212;6</sup></td></tr><tr><td align="left">MA&#xA0;+&#xA0;td<sup>g</sup></td><td align="left">6,032</td><td align="left">320 (5.30%)</td><td char="." align="left">301&#xA0;&#xB1;&#xA0;17</td><td char="&#xD7;" align="left">0.012</td></tr><tr><td align="left">MA-td<sup>h</sup></td><td align="left">5,459</td><td align="left">288 (5.28%)</td><td char="." align="left">271&#xA0;&#xB1;&#xA0;16</td><td char="&#xD7;" align="left">0.014</td></tr><tr><td align="left" colspan="5"><italic>Triplets</italic></td></tr><tr><td align="left">MPSS&#xA0;+&#xA0;td</td><td align="left">7,775</td><td align="left">23 (0.30%)</td><td align="left">8.78&#xA0;&#xB1;&#xA0;2.9</td><td char="&#xD7;" align="left">2.95&#xA0;&#xD7;&#xA0;10<sup>&#x2212;5</sup></td></tr><tr><td align="left">MPSS-td</td><td align="left">6,831</td><td align="left">13 (0.19%)</td><td align="left">7.74&#xA0;&#xB1;&#xA0;3.0</td><td char="&#xD7;" align="left">0.025</td></tr><tr><td align="left">MA&#xA0;+&#xA0;td</td><td align="left">2,461</td><td align="left">5 (0.20%)</td><td align="left">6.54&#xA0;&#xB1;&#xA0;2.7</td><td char="&#xD7;" align="left">n.s.</td></tr><tr><td align="left">MA-td</td><td align="left">2,149</td><td align="left">3 (0.14%)</td><td align="left">5.10&#xA0;&#xB1;&#xA0;2.4</td><td char="&#xD7;" align="left">n.s.</td></tr><tr><td align="left" colspan="5"><italic>Quadruplets</italic></td></tr><tr><td align="left">MPSS&#xA0;+&#xA0;td</td><td align="left">4,887</td><td align="left">3 (0.06%)</td><td char="&#xB1;" align="left">0.24&#xA0;&#xB1;&#xA0;0.47</td><td char="&#xD7;" align="left">1.81&#xA0;&#xD7;&#xA0;10<sup>&#x2212;3</sup></td></tr><tr><td align="left">MPSS-td</td><td align="left">4,318</td><td align="left">0 (0%)</td><td char="&#xB1;" align="left">0.18&#xA0;&#xB1;&#xA0;0.39</td><td char="&#xD7;" align="left">n.s.</td></tr><tr><td align="left">MA&#xA0;+&#xA0;td</td><td align="left">1,079</td><td align="left">0 (0%)</td><td char="&#xB1;" align="left">0.14&#xA0;&#xB1;&#xA0;0.37</td><td char="&#xD7;" align="left">n.s.</td></tr><tr><td align="left">MA-td</td><td align="left">nd<sup>i</sup></td><td align="left">nd</td><td char="&#xB1;" align="left">nd</td><td char="&#xD7;" align="left">nd</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Total number of pairs, triplets, quadruplets in each data set</p><p><sup>b</sup>Coexpressed pairs, triplets, quadruplets in each data set. Percentages in brackets are coexpressed relative to the total</p><p><sup>c</sup>Average plus/minus standard deviation from 100 randomizations</p><p><sup>d</sup><italic>P</italic>-value according to the cumulative binomial distribution (Cohen et al. <xref ref-type="bibr" rid="CR3">2000</xref>) for obtaining such a result by chance. <italic>P</italic>&#xA0;&lt;&#xA0;0.05 is considered significant; n.s.: not significant</p><p><sup>e</sup>MPSS data set including tandemly duplicated genes</p><p><sup>f</sup>MPSS data set excluding tandemly duplicated genes</p><p><sup>g</sup>MA data set including tandemly duplicated genes</p><p><sup>h</sup>MA data set excluding tandemly duplicated genes</p><p><sup>i</sup>Not determined</p></table-wrap-foot></table-wrap></p>
+        <p>Local coexpression domains seem randomly distributed over the genome (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>; MPSS data only). Only 10 coexpressed pairs are common between the MPSS and MA coexpressed sets, out of a total of 4,643 common pairs (excluding tandemly duplicated pairs). Detailed information about locations, orientations, expressions and gene distances (only for the pairs) for all pairs, triplets and quadruplets in both the MPSS and MA data sets are given in the supplementary data. All subsequent analyses were focused on domains consisting of non-duplicated gene pairs, unless stated differently.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Distribution of local coexpression domains over all 12 rice chromosomes. Rectangles are schematic representation of chromosomes 1&#x2013;12 from top to bottom. The numbers on the top show the scale in million bases along the chromosomes. Each gene in a local coexpression domain is depicted with a black bar. Only MPSS datasets excluding tandemly duplicated genes are shown. The orders of the drawings in each rectangle are: first lane, coexpressed pairs; second lane, coexpressed triplets; third lane, coexpressed quadruplets, fourth lane, partially syntenic coexpression domains (PSCDs) between Arabidopsis and rice</p></caption><graphic position="anchor" xlink:href="11103_2007_9209_Fig1_HTML" id="MO1"/></fig></p>
+      </sec>
+      <sec id="Sec12">
+        <title>Orientation and distance do not solely explain the occurrence of local coexpression</title>
+        <p>In yeast, there are several examples that divergently transcribed promoter regions are the cause of co-regulated neighboring genes (Korbel et&#xA0;al. <xref ref-type="bibr" rid="CR11">2004</xref>; Kruglyak and Tang <xref ref-type="bibr" rid="CR12">2000</xref>). If promoter sharing is an important mechanism for coexpression in the rice genome, divergently transcribed gene pairs should be over-represented in the sub-population of coexpressed pairs, compared to coexpressed pairs that are tandemly or convergently transcribed. For all three-orientation groups, the number of pairs and the number of coexpressed pairs in the rice genome were determined (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). For each orientation group, the fraction of coexpressed pairs relative to the total number of pairs in that group was calculated (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). None of the fractions are significantly different from each other using a statistical test for comparing population proportions (Ott and Longnecker <xref ref-type="bibr" rid="CR20">2001</xref>). The fraction of coexpressed divergent pairs in the MPSS data is the lowest of the three groups (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). Therefore, shared promoter regions cannot solely explain the coexpression of adjacent genes.
+<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Orientation of coexpressed gene pairs</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Orientation groups<sup>a</sup></th><th align="left">Total<sup>b</sup></th><th align="left">Coexpressed<sup>c</sup></th></tr></thead><tbody><tr><td align="left" colspan="3"><italic>MPSS</italic></td></tr><tr><td align="left">tan-td</td><td char="." align="char">5,621</td><td char="." align="char">239 (4.25%)</td></tr><tr><td align="left">div-td</td><td char="." align="char">2,418</td><td char="." align="char">82 (3.39%)</td></tr><tr><td align="left">con-td</td><td char="." align="char">3,218</td><td char="." align="char">117 (3.64%)</td></tr><tr><td align="left" colspan="3"><italic>MA</italic></td></tr><tr><td align="left">tan-td</td><td char="." align="char">2,707</td><td char="." align="char">143 (5.28%)</td></tr><tr><td align="left">div-td</td><td char="." align="char">1,224</td><td char="." align="char">72 (5.88%)</td></tr><tr><td align="left">con-td</td><td char="." align="char">1,528</td><td char="." align="char">73 (4.78%)</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>tan-td, div-td, con-td, respectively are the sub-groups of tandemly, divergently, convergently transcribed pairs excluding tandem duplicates</p><p><sup>b</sup>Total number of pairs in each direction group</p><p><sup>c</sup>Number of coexpressed pairs in each direction group. Percentages in the brackets are number of coexpressed pairs relative to the total number of pairs. None of the proportions are significantly different from each other according to the <italic>z</italic> test for comparing population proportions</p></table-wrap-foot></table-wrap></p>
+        <p>The physically closer two genes are, the higher the likelihood is that they are coexpressed due to either <italic>cis</italic> or <italic>trans</italic>-activation (Hershberg et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>). Therefore, we determined the intergenic distance, defined as the sequence length in nucleotides from the annotated end of one gene to the annotated start of the neighboring gene, including UTRs when known, otherwise taking the start and stop site for translation. This distance was used to investigate whether it would explain the characteristics of local coexpression domains. In Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>, the fraction of coexpressed pairs is plotted for each orientation and for each 1000-pair bin after sorting based on intergenic distance. The results show that the fraction of coexpressed pairs, irrespective of gene orientation, does not decrease with larger gene distance. When gene distance is defined as the sequence length from the start of one gene till the start of the next gene (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>), the result is similar (data not shown). As a consequence, increasing intergenic distances do not seem to be a barrier for the occurrence of local coexpression and short intergenic distances do not favor coexpression. Therefore, intergenic distance does not solely explain local coexpression in the rice genome, as it did not in the Arabidopsis genome (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>).
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Gene distance does not solely explain the occurrence of coexpression. Gene distance, defined as the length in nucleotides from the annotated end of one gene to the annotated start of the next gene relative to the strand the genome that is given, with annotated start always smaller than the annotated end. <italic>X</italic>-axis is the averaged gene distance (in base pair) in each 1,000-pair bin. The <italic>Y</italic>-axis depicts the number of pairs (<bold>A</bold>, <bold>D</bold>), number of coexpressed pairs (<bold>B</bold>, <bold>E</bold>) and the fraction of coexpressed pairs (<bold>C</bold>, <bold>F</bold>), relative to the total number of pairs in each orientation (tan: tandem pairs; div: divergent pairs; con: convergent pairs) in each 1,000-pair bin</p></caption><graphic position="anchor" xlink:href="11103_2007_9209_Fig2_HTML" id="MO2"/></fig></p>
+      </sec>
+      <sec id="Sec13">
+        <title>Functional categorization of coexpressed genes</title>
+        <p>To characterize the kind of genes that are present in the rice coexpression domains, the gene ontology (GO) developed for plants (GOslim; Berardini et&#xA0;al. <xref ref-type="bibr" rid="CR2">2004</xref>) was used. The GOslim ontology provides a controlled vocabulary to describe gene and gene product attributes in plants, focusing on three aspects of annotation: molecular function, biological process and cellular component. Each aspect has 15&#x2013;16 categories with 4&#x2013;5 categories having terms like &#x201C;unknown&#x201D; or &#x201C;other&#x201D;. To all pairs of genes, each aspect of the GOslim annotation was assigned. For each aspect, the number of pairs was determined for which both member genes were covered by a GOslim assignment. In addition, the number of pairs for which both member genes fall into the same well-defined categories (excluding the &#x201C;unknown&#x201D; and &#x201C;other&#x201D; subcategories) was determined. The fraction of the latter was compared between coexpressed pairs and non-coexpressed pairs to determine whether coexpressed pairs were enriched in the same categories (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>). In the MPSS data, the GOslim annotation coverage for both member genes in a pair is 22% for molecular function, 12% for biological process and only 3.4% for cellular component. In the MA data, these 3 percentages are: 25%, 13% and 3.7%, respectively. Comparing these figures with the GOslim coverage of the Arabidopsis genes (data from Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>, but updated to the TIGR5 annotation), which is &#x223C;94% for all 3 aspects, shows that currently the rice genome is considerably less well annotated than the Arabidopsis genome. When comparing the coexpressed and non-coexpressed pairs in rice for the fraction of gene pairs falling into the same well-defined GOslim category, there is no significant difference (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>). Therefore, also in the rice genome coexpressed gene pairs are not enriched for the same functional category.
+<table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p>Distribution of gene pairs over GOslim categories (Non-duplicated pairs)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">All<sup>a</sup></th><th align="left">Coexpressed<sup>b</sup></th><th align="left">Non-coexpressed<sup>c</sup></th><th align="left"><italic>P</italic>-value<sup>d</sup></th></tr></thead><tbody><tr><td align="left" colspan="5">MPSS</td></tr><tr><td align="left" colspan="5">&#xA0;&#xA0;&#xA0;&#xA0;GO_func</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;covered<sup>e</sup></td><td align="left">2502</td><td align="left">100</td><td align="left">2402</td><td char="." align="char" rowspan="2">0.42</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sameKnCat<sup>f</sup></td><td align="left">365 (14.6%)</td><td align="left">12 (12.0%)</td><td align="left">353 (14.7%)</td></tr><tr><td align="left" colspan="5">&#xA0;&#xA0;&#xA0;&#xA0;GO_proc</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Covered</td><td align="left">1366</td><td align="left">50</td><td align="left">1316</td><td char="." align="char" rowspan="2">0.47</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sameKnCat</td><td align="left">144 (10.5%)</td><td align="left">7 (14%)</td><td align="left">137 (10.4%)</td></tr><tr><td align="left" colspan="5">&#xA0;&#xA0;&#xA0;&#xA0;GO_comp</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Covered</td><td align="left">383</td><td align="left">17</td><td align="left">366</td><td char="." align="char" rowspan="2">0.60</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sameKnCat</td><td align="left">113 (29.5%)</td><td align="left">6 (35.3%)</td><td align="left">107 (29.2%)</td></tr><tr><td align="left" colspan="5">MA</td></tr><tr><td align="left" colspan="5">&#xA0;&#xA0;&#xA0;&#xA0;GO_func</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;covered<sup>e</sup></td><td align="left">1365</td><td align="left">83</td><td align="left">1282</td><td char="." align="char" rowspan="2">0.13</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sameKnCat<sup>f</sup></td><td align="left">177 (13.0%)</td><td align="left">7 (8.43%)</td><td align="left">170 (13.3%)</td></tr><tr><td align="left" colspan="5">&#xA0;&#xA0;&#xA0;&#xA0;GO_proc</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Covered</td><td align="left">707</td><td align="left">43</td><td align="left">664</td><td char="." align="char" rowspan="2">0.13</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sameKnCat</td><td align="left">67 (9.48%)</td><td align="left">2 (4.65%)</td><td align="left">65 (9.79%)</td></tr><tr><td align="left" colspan="5">&#xA0;&#xA0;&#xA0;&#xA0;GO_comp</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Covered</td><td align="left">202</td><td align="left">10</td><td align="left">192</td><td char="." align="char" rowspan="2">0.24</td></tr><tr><td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sameKnCat</td><td align="left">45 (22.3%)</td><td align="left">4 (40%)</td><td align="left">41 (21.4%)</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Number of neighboring pairs excluding td. All other pairs are all duplicate-free, unless stated otherwise</p><p><sup>b</sup>Number of coexpressed pairs</p><p><sup>c</sup>Number of non-coexpressed pairs</p><p><sup>d</sup><italic>P</italic> value from the standard normal tables of the <italic>z</italic> statistic for the difference of the population proportion between coexpressed pairs and non-coexpressed pairs in the rice genome; *, significant (two-tailed; <italic>P</italic>&#xA0;&lt;&#xA0;0.05). The <italic>P</italic> value is the probability under the null hypothesis that the two population proportions are the same</p><p><sup>e</sup>Number of pairs of which both members are assigned (covered) with GOslim categories</p><p><sup>f</sup>Number of pairs of which both members fall into the same &#x201C;known&#x201D; GOslim category (excluding the categories with the indications &#x2018;unknown&#x2019; and &#x2018;other&#x2019;). Percentage is the number of pairs relative to the number of pairs covered</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec14">
+        <title>Microsynteny of local coexpression domains between rice and Arabidopsis</title>
+        <p>The structural characteristics of local coexpression domains in rice and in Arabidopsis (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>) are remarkably similar. This prompts the question whether such domains also share functional characteristics and possibly consist of the same or related genes. Microsynteny in local expression domains of these two genomes would reflect conservation of such domains. The Inparanoid Eukaryotic Orthologous database (O&#x2019;Brien et&#xA0;al. <xref ref-type="bibr" rid="CR19">2005</xref>) was used to retrieve the current list of genes that are supposed to be orthologous between Arabidopsis (14,753 genes) and rice (12,428 genes), including all many-to-many relationships. The genes establishing coexpressed pairs based on MPSS expression data in either Arabidopsis (944 pairs including 116 duplicated pairs; data from Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>, but updated to the TIGR 5 annotation) or rice (584 pairs, including 146 duplicated pairs) were searched against these lists. This way, we aimed to identify the pairs of which both genes in the pair have an ortholog in the other plant and these orthologs are also coexpressed The analyses showed that there was not a single coexpressed pair in either Arabidopsis or rice of which both genes are orthologous to a gene of a coexpressed pair in the other species. Therefore, given the current annotation of the two genomes, there are no syntenic local coexpression domains between Arabidopsis and rice.</p>
+      </sec>
+      <sec id="Sec15">
+        <title>Partially syntenic local coexpression domains can occur by chance</title>
+        <p>In 34 cases though, one gene of a coexpressed pair in one plant species was orthologous to at least one gene of a coexpressed pair in the other plant. That is 3.6% of all (944) coexpressed pairs in Arabidopsis and 5.8% of all (584) coexpressed pairs in rice. We will refer to such a case as a partially syntenic coexpression domain (PSCD). To assess the significance of such partially syntenic domains, we evaluated all the genes in non-coexpressed pairs, comparing Arabidopsis (15,629 pairs including 617 duplicated pairs) and rice (12,336 pairs including 1,517 duplicated pairs) to establish whether PSCDs are more enriched in the genome than partially syntenic non-coexpressed domains (PSND). We identified 4,488 PSNDs (72 due to duplicated pairs) between all non-coexpressed pairs of genes in both plant genomes. This is 28.7% of all Arabidopsis non-coexpressed pairs and 36.4% of all rice non-coexpressed pairs. The percentage of PSNDs among non-coexpressed pairs is 6&#x2013;8 times higher than that of PSCDs from coexpressed pairs. Therefore, PSCDs do not seem to occur more often than expected by chance alone.</p>
+        <p>A complicating issue in the analysis of synteny is the occurrence of many-to-many orthologs. The Inparanoid database defines so-called inparalogs as paralogs arising through gene duplication after speciation. These can form a group of genes that together are orthologous to a gene in the other species. As a result, there can be many to many, many to one and one to one relationships. Individual member genes in many-to-many or many-to-one relationships may not be the main orthologs. Interestingly, there is one many-to-one case in which four Arabidopsis genes are all orthologs of the same single rice gene (Os07g43560.1). These 4 Arabidopsis genes are: At4g23140.2, At4g23150.1, At4g23230.1 and At4g23270.1. The first two, At4g23140.2, At4g23150.1, form a local coexpressed pair. The other two genes, At4g23230.1 and At4g23270.1, are not more than ten genes away from the previous two genes on the same chromosomal region. The latter two genes are separated from each other by a few genes. Further analysis shows that gene At4g23270.1 has a duplicated neighbor, At4g23280.1, but is not coexpressed with it. It is, however, coexpressed with its other neighbor At4g23260.1, but is not duplicated with it. Orthology is established between At4g23270.1 and the rice gene Os07g43560.1, but not between any of the neighbors of the Arabidopsis genes. The rice gene Os07g43560.1 is also coexpressed with one of its neighboring genes Os07g43540.1, but it is not a duplicate of it, while this rice gene itself is a duplicate of another neighboring gene (Os07g43570), but it is also not coexpressed with it. A schematic representation of the resulting gene configuration is given in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. Such detailed analyses may reveal local microsynteny in the twilight zone of statistical significance and evolutionary relevance.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Schematic representation of the chromosomal regions covering genes involved in a four-to-one orthology between Arabidopsis and rice. Top part of the figure is the chromosomal region from rice (from gene locus Os07g43540.1 to gene locus Os07g43570.1). Bottom part of the figure is the chromosomal region from Arabidopsis, representing 23 genes (from gene locus At4g23120 to At4g23340; the numbers in the picture do not carry &#x201C;At4g&#x201D;). Black arrows represent the four Arabidopsis and the one rice gene involved in this orthology, and dashed curved connecting lines show the orthology relationships. Black bracket-like lines depict duplication and genes connected and included within by black bracket line are duplicated to each other. Dotted lines depict coexpression relationship and genes connected and included by dotted line are coexpressed with each other</p></caption><graphic position="anchor" xlink:href="11103_2007_9209_Fig3_HTML" id="MO3"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec16" sec-type="discussion">
+      <title>Discussion</title>
+      <sec id="Sec17">
+        <title>Local coexpression domains represent only a small part of the genome</title>
+        <p>Setting stringent criteria for coexpression using MPSS and microarray expression data, the rice genome was found to contain a small but significant number of local coexpression domains that range from predominantly two, up till 4, genes, irrespective of the expression platform used for analysis. This is similar to the situation in Arabidopsis (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). It shows that a genome is essentially not a random entity with respect to the occurrence of local coexpression domains. Our results agree with other coexpression studies where strong coexpression was shown to occur only within close proximity of several genes (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Hershberg et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>; Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>; Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>). Although coexpression was shown to extend to regions covering up to 30 genes and more (Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>) and to cover chromosomal regions up to 100&#xA0;kb (Ma et&#xA0;al. <xref ref-type="bibr" rid="CR13">2005</xref>; Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>) and more, there appears to exist a decrease in the strength of coexpression with increasing distances. The local coexpression domains described here represent &#x223C;4&#x2013;5% of the potential coexpression fraction in the whole genome as found in other studies (Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>). Larger but looser coexpression domains might cover up to &#x223C;10% (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>) till 20% (Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>) of the genome. The difference in occurrence between local and longer-range weaker but still statistically significant coexpression domains is highly dependent on the method used (Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>). Moreover, the expression platforms used focus on snapshots of gene expression at the RNA level. Such data ignore various post-transcriptional regulatory mechanisms that can for example result in poor correlations between RNA and protein levels. Although we have shown before that in a transgenic set-up the creation of an artificial local coexpression domain results in markedly improved RNA/protein correlations (Mlynarova et&#xA0;al. <xref ref-type="bibr" rid="CR18">2002</xref>), this does not need to be the case for all endogenous local coexpression domains now identified.</p>
+        <p>The terms cluster or chromosomal domain and associated terms such as neighboring are generally based on a (much) more loose definition compared to the definition used here to identify local coexpression domains. Local coexpression domains require a pair-wise correlation between the expressions of ALL adjacent genes above 0.7. The larger domains are defined on the basis of the use of a sliding window of either a given sequence length (number of nucleotides) or of a given number of genes (Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>). In such a window, the average correlation is calculated and compared with simulated sets. This allows for the presence of genes within a domain that are not strongly (co)expressed but are &#x201C;carried along for a ride&#x201D; in the open chromatin domain (Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>).</p>
+        <p>The two expression data sets here analyzed show very little overlap in coexpressed pairs (only 10 out of 4,643 all common pairs). The low number of shared pairs is thought to reflect the biological background of the data sets. The MPSS data concern a broad range of tissues and experimental conditions, while the MA data only cover crown and growing point tissue under control and salt stress condition (Walia et&#xA0;al et&#xA0;al. <xref ref-type="bibr" rid="CR27">2007</xref>). The number of libraries taken into account, as well as their biological background, obviously influences the possibility of identifying significant numbers of coexpression domains above the number of domains expected by chance. Two genes evaluated in four comparably similar conditions (MA data) are predicted to have a higher likelihood of exhibiting a similar expression pattern, than when examined in 18 different (MPSS) conditions. When considering genome-wide local coexpression of genes, a wide diversity of tissues and/or conditions should be taken for analysis. Highly tissue-specific coexpression may be masked in this approach and should be analyzed by other means.</p>
+      </sec>
+      <sec id="Sec18">
+        <title>Parameters shaping local coexpression domains</title>
+        <p>The existence of local coexpression domains in rice could not be explained solely by gene orientation, such as tandemly, divergently or convergently oriented gene pairs. No relative enrichment of the proportion of coexpressed pairs was seen. The fraction of coexpressed genes in the divergent orientation was even lower than for the other two orientations (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). So shared promoter regions (for divergent pairs) and transcriptional read-through (for tandem pairs) do not explain the local coexpression domains in rice, similar to what we have concluded for Arabidopsis (Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). This is in contrast to some other studies in which shared promoter region (for divergent pairs) and transcriptional read-through established coexpression domains (Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>). Whereas we do not detect any preferred orientation to result in coexpression in rice, other studies show a higher degree of coexpression in divergent and tandemly oriented gene pairs (Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>; Zhan et&#xA0;al. <xref ref-type="bibr" rid="CR30">2006</xref>). The differences in conclusions are most likely due to the different methods used, such as the definition of coexpression of neighboring genes as well as the dataset and/or expression platform used.</p>
+        <p>Gene distance is not the explanatory factor for the occurrence of local coexpression domains in rice. No significant decrease in the fraction of coexpressed genes was observed with increasing intergenic distance (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The fraction of coexpressed pairs does not decrease even with gene distances up to 12&#xA0;kb. It shows that at a relatively large distance, neighboring genes can still be coexpressed. Another study reported that when genes &gt;12&#xA0;kb apart were taken into account, the negative correlation between coexpression and gene distance was gone (Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>). In a comparative study of 6 eukaryotic genomes, coexpression was shown to vary at chromosomal distances above 100&#xA0;kb (Fukuoka et&#xA0;al. <xref ref-type="bibr" rid="CR6">2004</xref>). This suggests that considerable coexpression of neighboring genes can occur even at large gene distance, although the coexpression may not be related to the physical distance anymore. While gene distance itself is not predictive for coexpression (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Kruglyak and Tang <xref ref-type="bibr" rid="CR12">2000</xref>), the likelihood of coexpression would favor short gene distances (Hershberg et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>; Hurst et&#xA0;al. <xref ref-type="bibr" rid="CR9">2002</xref>; Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>; Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>). It should be kept in mind that the rice data set now analyzed is far from complete in terms of its annotation, so what are now far-apart neighboring genes may be no longer directly neighboring the moment the annotation is improved. Because the characteristics of the local coexpression domains in Arabidopsis and rice are remarkably alike, the actual numbers and possibly even genes involved in local coexpression domains may be subject to change, but not the occurrence of such domains in these genomes.</p>
+        <p>With the gene ontology developed for plants (GOslim), there is no evidence that coexpressed genes are more enriched in the same functional category in comparison to non-coexpressed genes (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>). Previous studies suggested that clustering of functionally related genes would occur in all metazoans (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Lercher et&#xA0;al. <xref ref-type="bibr" rid="CR15">2003</xref>). Recent studies demonstrated a significant enrichment for coexpressed genes in the same metabolic pathway (Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>) or the same biological processes (Zhan et&#xA0;al. <xref ref-type="bibr" rid="CR30">2006</xref>), although this appeared not to be the explanation for the coexpression of neighboring genes (Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>). In worm, clusters of similarly expressed genes cover similar biological functions (Roy et&#xA0;al. <xref ref-type="bibr" rid="CR22">2002</xref>). In human, coexpression over the whole genome was shown to correlate with functional relationships between the genes (Lee et&#xA0;al. <xref ref-type="bibr" rid="CR14">2004</xref>). Our study found no enrichment of coexpressed gene pairs in the same functional category than non-coexpressed pairs, suggesting that it is not necessarily true that the natural selection maintained regional coexpression by keeping genes with similar functions in adjacent positions (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Semon and Duret <xref ref-type="bibr" rid="CR24">2006</xref>).</p>
+        <p>The genomic context of genes is supposed to play an important role in the regulation of gene expression (van Drunen et&#xA0;al. <xref ref-type="bibr" rid="CR26">1997</xref>). In a number of coexpression studies in various organisms, the occurrence of coexpression domains, whether small (local) or larger (global), sometimes independent of gene orientation and gene distance, were all supposed to be regulated at the level of higher-order chromosomal structure (Cohen et&#xA0;al. <xref ref-type="bibr" rid="CR3">2000</xref>; Hershberg et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>; Ren et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>; Spellman and Rubin <xref ref-type="bibr" rid="CR25">2002</xref>; Williams and Bowles <xref ref-type="bibr" rid="CR29">2004</xref>; Zhan et&#xA0;al. <xref ref-type="bibr" rid="CR30">2006</xref>). It will be difficult to formally exclude the possibility of transcriptional regulation as a cause of local coexpression. Co-regulated transcription could occur through shared promoter elements between the neighboring genes in coexpression domains. However, previous experience with transgene expression data indicated that the particular position of neighboring genes in a genome affects the expression of that gene considerably (Mlynarova et&#xA0;al. <xref ref-type="bibr" rid="CR17">1994</xref>, <xref ref-type="bibr" rid="CR16">1995</xref>). Two physically neighboring transgenes could only be made to into an artificial local expression domain, that is, show correlated expression, when chromatin-organizing elements were placed around the genes (Mlynarova et&#xA0;al. <xref ref-type="bibr" rid="CR18">2002</xref>). Although this experimental result indicates the importance of chromatin organization in establishing local coexpression in a plant genome, this result does not need to be the case for all coexpression domains identified. With this caveat, this study of local coexpression domains in rice that are independent of duplication, gene orientation, or gene distance strengthen the notion that the regulation of genes in such domains resides at the level of higher-order chromatin structures. Future studies using for example advanced fluorescence in&#xA0;situ hybridization (FISH) technology on interphase chromosomes (Walter et&#xA0;al. <xref ref-type="bibr" rid="CR28">2006</xref>), or the transgenic approach outlined above (Mlynarova et&#xA0;al. <xref ref-type="bibr" rid="CR18">2002</xref>), will generate further experimental support for the location and characteristics of local coexpression domains. In addition, the new approaches in and insights from epigenetics and epigenomics (Henderson and Jacobsen <xref ref-type="bibr" rid="CR7">2007</xref>), such as the genome-wide mapping and analysis of DNA methylation (Zhang et&#xA0;al. <xref ref-type="bibr" rid="CR31">2006</xref>; Zilberman et&#xA0;al. <xref ref-type="bibr" rid="CR32">2007</xref>) and future histone modification maps (Esteller <xref ref-type="bibr" rid="CR5">2007</xref>) of plants, possibly in combination with genetics (Jansen and Nap <xref ref-type="bibr" rid="CR10">2001</xref>), will be useful to get more insight into the occurrence and function of local coexpression domains in plant genomes.</p>
+      </sec>
+      <sec id="Sec19">
+        <title>Lack of microsyntenic coexpression </title>
+        <p>From an evolutionary point of view, syntenic regions between species reveal genes for conserved and important traits. Macrosynteny is generally not easily detectable after a long evolutionary time, as colinearity erodes by various mechanisms, such as transposon activity, intra or inter-chromosomal rearrangements, duplications, translocations, inversions and/or individual divergence after speciation (Salse et&#xA0;al. <xref ref-type="bibr" rid="CR23">2002</xref>). While macrosynteny may not be detectable any more for genomes that diverged more than 100&#xA0;million years ago (mya), microsynteny, i.e., conservation of local gene order and orientation, may still exist and be informative (Devos et&#xA0;al. <xref ref-type="bibr" rid="CR4">1999</xref>; Salse et&#xA0;al. <xref ref-type="bibr" rid="CR23">2002</xref>). Arabidopsis and rice are thought to have diverged about 120&#x2013;200&#xA0;mya (Salse et&#xA0;al. <xref ref-type="bibr" rid="CR23">2002</xref>). Microsyntenic local coexpression domains between Arabidopsis and rice would indicate the importance of the evolutionary conservation of regulatory systems beyond sequence similarity after the divergence of dicotyledonous and monocotyledonous plants. Analyses show that there is not a single coexpressed pair in either Arabidopsis or rice of which both genes are orthologous to a gene in a coexpressed pair in the other species. Therefore, there are no syntenic local coexpression domains between Arabidopsis and rice. Although the analyses were performed for only one monocot and one dicot and should be extended to many more genomes, the results could be taken to suggest that maintenance of coexpression has not been an important driving force in genome conservation during or after the divergence of dicotyledonous and monocotyledonous plants. Although individual genes in local coexpression domains in either rice or Arabidopsis may have an ortholog in the other species, establishing so-called partially syntenic coexpression domains (PSCDs), this does not seem to occur above chance in the context of whole-genome configurations. Without statistical significance, the occurrence of such PSCDs is unlikely to have any evolutionary relevance on a genome-wide scale. Detailed analyses of individual cases and gene locations may suggest the occurrence of local microsynteny and point to chains of evolutionary events in which the conservation of coexpression could be involved. However, more detailed studies are required to assess the functional relevance, if any, of such genomic constitutions.</p>
+      </sec>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Electronic supplementary material</title>
+      <supplementary-material id="N0x1c9d060N0x2d2a3e0" content-type="local-data">
+        <p>Below is the link to the electronic supplementary material.
+</p>
+        <media xlink:href="11103_2007_9209_MOESM1_ESM.xls" id="MOESM1" mimetype="application" mime-subtype="vnd.ms-excel">
+          <caption>
+            <p>(XLS 231 KB)</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>We thank Prof. Blake Meyers (University of Delaware) for early access to the MPSS rice expression data and Dr. Ludmila Mlynarova (Wageningen University) for discussion. This research was supported by a program subsidy from the Netherlands Organization for Scientific Research (NWO) and by the Centre for BioSystems Genomics (CBSG), which is part of the Dutch Genomics Initiative.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Altschul</surname>
+              <given-names>SF</given-names>
+            </name>
+            <name>
+              <surname>Madden</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Schaffer</surname>
+              <given-names>AA</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Gapped BLAST and PSI-BLAST: a new generation of protein database search programs</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>3389</fpage>
+          <lpage>3402</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/25.17.3389</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Altschul SF, Madden TL, Schaffer AA et&#xA0;al (1997) Gapped BLAST and PSI-BLAST: a new generation of protein database search programs. Nucleic Acids Res 25:3389&#x2013;3402 <pub-id pub-id-type="pmid">9254694</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berardini</surname>
+              <given-names>TZ</given-names>
+            </name>
+            <name>
+              <surname>Mundodi</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Reiser</surname>
+              <given-names>L</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Functional annotation of the Arabidopsis genome using controlled vocabularies</article-title>
+          <source>Plant Physiol</source>
+          <year>2004</year>
+          <volume>135</volume>
+          <fpage>745</fpage>
+          <lpage>755</lpage>
+          <pub-id pub-id-type="doi">10.1104/pp.104.040071</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Berardini TZ, Mundodi S, Reiser L et&#xA0;al (2004) Functional annotation of the Arabidopsis genome using controlled vocabularies. Plant Physiol 135:745&#x2013;755 <pub-id pub-id-type="pmid">15173566</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cohen</surname>
+              <given-names>BA</given-names>
+            </name>
+            <name>
+              <surname>Mitra</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Hughes</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Church</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>A computational analysis of whole-genome expression data reveals chromosomal domains of gene expression</article-title>
+          <source>Nat Genet</source>
+          <year>2000</year>
+          <volume>26</volume>
+          <fpage>183</fpage>
+          <lpage>186</lpage>
+          <pub-id pub-id-type="doi">10.1038/79896</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cohen BA, Mitra RD, Hughes JD, Church GM (2000) A computational analysis of whole-genome expression data reveals chromosomal domains of gene expression. Nat Genet 26:183&#x2013;186 <pub-id pub-id-type="pmid">11017073</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Devos</surname>
+              <given-names>KM</given-names>
+            </name>
+            <name>
+              <surname>Beales</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Nagamura</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Sasaki</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Arabidopsis-rice: will colinearity allow gene prediction across the eudicot-monocot divide?</article-title>
+          <source>Genome Res</source>
+          <year>1999</year>
+          <volume>9</volume>
+          <fpage>825</fpage>
+          <lpage>829</lpage>
+          <pub-id pub-id-type="doi">10.1101/gr.9.9.825</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Devos KM, Beales J, Nagamura Y, Sasaki T (1999) Arabidopsis-rice: will colinearity allow gene prediction across the eudicot-monocot divide? Genome Res 9:825&#x2013;829 <pub-id pub-id-type="pmid">10508840</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Esteller</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Cancer epigenomics: DNA methylomes and histone-modification maps</article-title>
+          <source>Nat Rev Genet</source>
+          <year>2007</year>
+          <volume>8</volume>
+          <fpage>286</fpage>
+          <lpage>298</lpage>
+          <pub-id pub-id-type="doi">10.1038/nrg2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Esteller M (2007) Cancer epigenomics: DNA methylomes and histone-modification maps. Nat Rev Genet 8:286&#x2013;298 <pub-id pub-id-type="pmid">17339880</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fukuoka</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Inaoka</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Kohane</surname>
+              <given-names>IS</given-names>
+            </name>
+          </person-group>
+          <article-title>Inter-species differences of co-expression of neighboring genes in eukaryotic genomes</article-title>
+          <source>BMC Genomics</source>
+          <year>2004</year>
+          <volume>5</volume>
+          <fpage>4</fpage>
+          <pub-id pub-id-type="doi">10.1186/1471-2164-5-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fukuoka Y, Inaoka H, Kohane IS (2004) Inter-species differences of co-expression of neighboring genes in eukaryotic genomes. BMC Genomics 5:4 <pub-id pub-id-type="pmid">14718066</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Henderson</surname>
+              <given-names>IR</given-names>
+            </name>
+            <name>
+              <surname>Jacobsen</surname>
+              <given-names>SE</given-names>
+            </name>
+          </person-group>
+          <article-title>Epigenetic inheritance in plants</article-title>
+          <source>Nature</source>
+          <year>2007</year>
+          <volume>447</volume>
+          <issue>7143</issue>
+          <fpage>418</fpage>
+          <lpage>424</lpage>
+          <pub-id pub-id-type="doi">10.1038/nature05917</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Henderson IR, Jacobsen SE (2007) Epigenetic inheritance in plants. Nature 447(7143):418&#x2013;424 <pub-id pub-id-type="pmid">17522675</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hershberg</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Yeger-Lotem</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Margalit</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>Chromosomal organization is shaped by the transcription regulatory network</article-title>
+          <source>Trends Genet</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>138</fpage>
+          <lpage>142</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.tig.2005.01.003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hershberg R, Yeger-Lotem E, Margalit H (2005) Chromosomal organization is shaped by the transcription regulatory network. Trends Genet 21:138&#x2013;142 <pub-id pub-id-type="pmid">15734572</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hurst</surname>
+              <given-names>LD</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Pal</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Natural selection promotes the conservation of linkage of co-expressed genes</article-title>
+          <source>Trends Genet</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>604</fpage>
+          <lpage>606</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0168-9525(02)02813-5</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hurst LD, Williams EJ, Pal C (2002) Natural selection promotes the conservation of linkage of co-expressed genes. Trends Genet 18:604&#x2013;606 <pub-id pub-id-type="pmid">12446137</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jansen</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Nap</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetical genomics: the added value from segregation</article-title>
+          <source>Trends Genet</source>
+          <year>2001</year>
+          <volume>17</volume>
+          <fpage>388</fpage>
+          <lpage>391</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0168-9525(01)02310-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jansen RC, Nap JP (2001) Genetical genomics: the added value from segregation. Trends Genet 17:388&#x2013;391 <pub-id pub-id-type="pmid">11418218</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Korbel</surname>
+              <given-names>JO</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>LJ</given-names>
+            </name>
+            <name>
+              <surname>Mering</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of genomic context: prediction of functional associations from conserved bidirectionally transcribed gene pairs</article-title>
+          <source>Nat Biotechnol</source>
+          <year>2004</year>
+          <volume>22</volume>
+          <fpage>911</fpage>
+          <lpage>917</lpage>
+          <pub-id pub-id-type="doi">10.1038/nbt988</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Korbel JO, Jensen LJ, von Mering C, Bork P (2004) Analysis of genomic context: prediction of functional associations from conserved bidirectionally transcribed gene pairs. Nat Biotechnol 22:911&#x2013;917 <pub-id pub-id-type="pmid">15229555</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kruglyak</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Tang</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>Regulation of adjacent yeast genes</article-title>
+          <source>Trends Genet</source>
+          <year>2000</year>
+          <volume>16</volume>
+          <fpage>109</fpage>
+          <lpage>111</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0168-9525(99)01941-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kruglyak S, Tang H (2000) Regulation of adjacent yeast genes. Trends Genet 16:109&#x2013;111 <pub-id pub-id-type="pmid">10689350</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ma</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>X</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A microarray analysis of the rice transcriptome and its comparison to Arabidopsis</article-title>
+          <source>Genome Res</source>
+          <year>2005</year>
+          <volume>15</volume>
+          <fpage>1274</fpage>
+          <lpage>1283</lpage>
+          <pub-id pub-id-type="doi">10.1101/gr.3657405</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ma L, Chen C, Liu X et&#xA0;al (2005) A microarray analysis of the rice transcriptome and its comparison to Arabidopsis. Genome Res 15:1274&#x2013;1283 <pub-id pub-id-type="pmid">16140994</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lee</surname>
+              <given-names>HK</given-names>
+            </name>
+            <name>
+              <surname>Hsu</surname>
+              <given-names>AK</given-names>
+            </name>
+            <name>
+              <surname>Sajdak</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Coexpression analysis of human genes across many microarray data sets</article-title>
+          <source>Genome Res</source>
+          <year>2004</year>
+          <volume>14</volume>
+          <fpage>1085</fpage>
+          <lpage>1094</lpage>
+          <pub-id pub-id-type="doi">10.1101/gr.1910904</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lee HK, Hsu AK, Sajdak J et&#xA0;al (2004) Coexpression analysis of human genes across many microarray data sets. Genome Res 14:1085&#x2013;1094 <pub-id pub-id-type="pmid">15173114</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lercher</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Blumenthal</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Hurst</surname>
+              <given-names>LD</given-names>
+            </name>
+          </person-group>
+          <article-title>Coexpression of neighboring genes in <italic>Caenorhabditis elegans</italic> is mostly due to operons and duplicate genes</article-title>
+          <source>Genome Res</source>
+          <year>2003</year>
+          <volume>13</volume>
+          <fpage>238</fpage>
+          <lpage>243</lpage>
+          <pub-id pub-id-type="doi">10.1101/gr.553803</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lercher MJ, Blumenthal T, Hurst LD (2003) Coexpression of neighboring genes in Caenorhabditis elegans is mostly due to operons and duplicate genes. Genome Res 13:238&#x2013;243 <pub-id pub-id-type="pmid">12566401</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mlynarova</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Jansen</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Conner</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The MAR-mediated reduction in position effect can be uncoupled from copy number-dependent expression in transgenic plants</article-title>
+          <source>Plant Cell</source>
+          <year>1995</year>
+          <volume>7</volume>
+          <fpage>599</fpage>
+          <lpage>609</lpage>
+          <pub-id pub-id-type="doi">10.1105/tpc.7.5.599</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mlynarova L, Jansen RC, Conner AJ et&#xA0;al (1995) The MAR-mediated reduction in position effect can be uncoupled from copy number-dependent expression in transgenic plants. Plant Cell 7:599&#x2013;609 <pub-id pub-id-type="pmid">12242378</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mlynarova</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Loonen</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Heldens</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Reduced position effect in mature transgenic plants conferred by the chicken lysozyme matrix-associated region</article-title>
+          <source>Plant Cell</source>
+          <year>1994</year>
+          <volume>6</volume>
+          <fpage>417</fpage>
+          <lpage>426</lpage>
+          <pub-id pub-id-type="doi">10.1105/tpc.6.3.417</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mlynarova L, Loonen A, Heldens J et&#xA0;al (1994) Reduced position effect in mature transgenic plants conferred by the chicken lysozyme matrix-associated region. Plant Cell 6:417&#x2013;426 <pub-id pub-id-type="pmid">12244242</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mlynarova</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Loonen</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mietkiewska</surname>
+              <given-names>E</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Assembly of two transgenes in an artificial chromatin domain gives highly coordinated expression in tobacco</article-title>
+          <source>Genetics</source>
+          <year>2002</year>
+          <volume>160</volume>
+          <fpage>727</fpage>
+          <lpage>740</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Mlynarova L, Loonen A, Mietkiewska E et&#xA0;al (2002) Assembly of two transgenes in an artificial chromatin domain gives highly coordinated expression in tobacco. Genetics 160:727&#x2013;740 <pub-id pub-id-type="pmid">11861574</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>O&#x2019;Brien</surname>
+              <given-names>KP</given-names>
+            </name>
+            <name>
+              <surname>Remm</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sonnhammer</surname>
+              <given-names>ELL</given-names>
+            </name>
+          </person-group>
+          <article-title>Inparanoid: a comprehensive database of eukaryotic orthologs</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>D476</fpage>
+          <lpage>D480</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/gki107</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">O&#x2019;Brien KP, Remm M, Sonnhammer ELL (2005) Inparanoid: a comprehensive database of eukaryotic orthologs. Nucleic Acids Res 33:D476&#x2013;D480 <pub-id pub-id-type="pmid">15608241</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ott</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Longnecker</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Crockett</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Jackson</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Rockwell</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Categorical data</article-title>
+          <source>An introduction to statistical methods and data analysis</source>
+          <year>2001</year>
+          <publisher-loc>Pacific Grove, CA 93950 USA</publisher-loc>
+          <publisher-name>Duxbury</publisher-name>
+          <fpage>482</fpage>
+          <lpage>485</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ott RL, Longnecker M (2001) Categorical data. In: Crockett C, Jackson L, Rockwell P et&#xA0;al (eds) An introduction to statistical methods and data analysis. Duxbury, Pacific Grove, CA 93950 USA, pp 482&#x2013;485 </citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ren</surname>
+              <given-names>XY</given-names>
+            </name>
+            <name>
+              <surname>Fiers</surname>
+              <given-names>MWEJ</given-names>
+            </name>
+            <name>
+              <surname>Stiekema</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Nap</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <article-title>Local coexpression domains of two to four genes in the genome of Arabidopsis</article-title>
+          <source>Plant Physiol</source>
+          <year>2005</year>
+          <volume>138</volume>
+          <fpage>923</fpage>
+          <lpage>934</lpage>
+          <pub-id pub-id-type="doi">10.1104/pp.104.055673</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ren XY, Fiers MWEJ, Stiekema WJ, Nap JP (2005) Local coexpression domains of two to four genes in the genome of Arabidopsis. Plant Physiol 138:923&#x2013;934 <pub-id pub-id-type="pmid">15923337</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roy</surname>
+              <given-names>PJ</given-names>
+            </name>
+            <name>
+              <surname>Stuart</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Lund</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kim</surname>
+              <given-names>SK</given-names>
+            </name>
+          </person-group>
+          <article-title>Chromosomal clustering of muscle-expressed genes in <italic>Caenorhabditis elegans</italic></article-title>
+          <source>Nature</source>
+          <year>2002</year>
+          <volume>418</volume>
+          <fpage>975</fpage>
+          <lpage>979</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Roy PJ, Stuart JM, Lund J, Kim SK (2002) Chromosomal clustering of muscle-expressed genes in Caenorhabditis elegans. Nature 418:975&#x2013;979 <pub-id pub-id-type="pmid">12214599</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Salse</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Piegu</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Cooke</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Delseny</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Synteny between <italic>Arabidopsis thaliana</italic> and rice at the genome level: a tool to identify conservation in the ongoing rice genome sequencing project</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>2316</fpage>
+          <lpage>2328</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/30.11.2316</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Salse J, Piegu B, Cooke R, Delseny M (2002) Synteny between Arabidopsis thaliana and rice at the genome level: a tool to identify conservation in the ongoing rice genome sequencing project. Nucleic Acids Res 30:2316&#x2013;2328 <pub-id pub-id-type="pmid">12034818</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Semon</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Duret</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Evolutionary origin and maintenance of coexpressed gene clusters in mammals</article-title>
+          <source>Mol Biol Evol</source>
+          <year>2006</year>
+          <volume>23</volume>
+          <fpage>1715</fpage>
+          <lpage>1723</lpage>
+          <pub-id pub-id-type="doi">10.1093/molbev/msl034</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Semon M, Duret L (2006) Evolutionary origin and maintenance of coexpressed gene clusters in mammals. Mol Biol Evol 23:1715&#x2013;1723 <pub-id pub-id-type="pmid">16757654</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spellman</surname>
+              <given-names>PT</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>Evidence for large domains of similarly expressed genes in the Drosophila genome</article-title>
+          <source>J Biol</source>
+          <year>2002</year>
+          <volume>1</volume>
+          <fpage>5</fpage>
+          <pub-id pub-id-type="doi">10.1186/1475-4924-1-5</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Spellman PT, Rubin GM (2002) Evidence for large domains of similarly expressed genes in the Drosophila genome. J Biol 1:5 <pub-id pub-id-type="pmid">12144710</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Drunen</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Oosterling</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Keultjes</surname>
+              <given-names>GM</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Analysis of the chromatin domain organisation around the plastocyanin gene reveals an MAR-specific sequence element in <italic>Arabidopsis thaliana</italic></article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>3904</fpage>
+          <lpage>3911</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/25.19.3904</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">van Drunen CM, Oosterling RW, Keultjes GM et&#xA0;al (1997) Analysis of the chromatin domain organisation around the plastocyanin gene reveals an MAR-specific sequence element in Arabidopsis thaliana. Nucleic Acids Res 25:3904&#x2013;3911 <pub-id pub-id-type="pmid">9380515</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Walia</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Wilson</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Zeng</surname>
+              <given-names>L</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Genome-wide transcriptional analysis of salinity stressed japonica and indica rice genotypes during panicle initiation stage</article-title>
+          <source>Plant Mol Biol</source>
+          <year>2007</year>
+          <volume>63</volume>
+          <fpage>609</fpage>
+          <lpage>623</lpage>
+          <pub-id pub-id-type="doi">10.1007/s11103-006-9112-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Walia H, Wilson C, Zeng L et&#xA0;al (2007) Genome-wide transcriptional analysis of salinity stressed japonica and indica rice genotypes during panicle initiation stage. Plant Mol Biol 63:609&#x2013;623 <pub-id pub-id-type="pmid">17160619</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Walter</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Joffe</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Bolzer</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Towards many colors in FISH on 3D-preserved interphase nuclei</article-title>
+          <source>Cytog Genet Res</source>
+          <year>2006</year>
+          <volume>114</volume>
+          <fpage>367</fpage>
+          <lpage>378</lpage>
+          <pub-id pub-id-type="doi">10.1159/000094227</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Walter J, Joffe B, Bolzer A et&#xA0;al (2006) Towards many colors in FISH on 3D-preserved interphase nuclei. Cytog Genet Res 114:367&#x2013;378 </citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Williams</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Bowles</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Coexpression of neighboring genes in the genome of <italic>Arabidopsis thaliana</italic></article-title>
+          <source>Genome Res</source>
+          <year>2004</year>
+          <volume>14</volume>
+          <fpage>1060</fpage>
+          <lpage>1067</lpage>
+          <pub-id pub-id-type="doi">10.1101/gr.2131104</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Williams EJ, Bowles DJ (2004) Coexpression of neighboring genes in the genome of Arabidopsis thaliana. Genome Res 14:1060&#x2013;1067 <pub-id pub-id-type="pmid">15173112</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhan</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Horrocks</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lukens</surname>
+              <given-names>LN</given-names>
+            </name>
+          </person-group>
+          <article-title>Islands of co-expressed neighbouring genes in <italic>Arabidopsis thaliana</italic> suggest higher-order chromosome domains</article-title>
+          <source>Plant J</source>
+          <year>2006</year>
+          <volume>45</volume>
+          <fpage>347</fpage>
+          <lpage>357</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1365-313X.2005.02619.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhan S, Horrocks J, Lukens LN (2006) Islands of co-expressed neighbouring genes in Arabidopsis thaliana suggest higher-order chromosome domains. Plant J 45:347&#x2013;357 <pub-id pub-id-type="pmid">16412082</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>XY</given-names>
+            </name>
+            <name>
+              <surname>Yazaki</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Sundaresan</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Genome-wide high-resolution mapping and functional analysis of DNA methylation in Arabidopsis</article-title>
+          <source>Cell</source>
+          <year>2006</year>
+          <volume>126</volume>
+          <fpage>1189</fpage>
+          <lpage>1201</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cell.2006.08.003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang XY, Yazaki J, Sundaresan A et&#xA0;al (2006) Genome-wide high-resolution mapping and functional analysis of DNA methylation in Arabidopsis. Cell 126:1189&#x2013;1201 <pub-id pub-id-type="pmid">16949657</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zilberman</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Gehring</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Tran</surname>
+              <given-names>RK</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Genome-wide analysis of <italic>Arabidopsis thaliana</italic> DNA methylation uncovers an interdependence between methylation and transcription</article-title>
+          <source>Nat Genet</source>
+          <year>2007</year>
+          <volume>39</volume>
+          <fpage>61</fpage>
+          <lpage>69</lpage>
+          <pub-id pub-id-type="doi">10.1038/ng1929</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zilberman D, Gehring M, Tran RK et&#xA0;al (2007) Genome-wide analysis of Arabidopsis thaliana DNA methylation uncovers an interdependence between methylation and transcription. Nat Genet 39:61&#x2013;69 <pub-id pub-id-type="pmid">17128275</pub-id></citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <title>Abbreviations</title>
+      <def-list>
+        <def-item>
+          <term>BLAST</term>
+          <def>
+            <p>Basic local alignment search tool</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>GO</term>
+          <def>
+            <p>Gene ontology</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>MA</term>
+          <def>
+            <p>Microarray expression data</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>MPSS</term>
+          <def>
+            <p>Massively parallel signature sequencing expression data</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>mya</term>
+          <def>
+            <p>Million years ago</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>PSCD</term>
+          <def>
+            <p>Partially syntenic coexpression domain</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>PSND</term>
+          <def>
+            <p>Partially syntenic non-coexpressed domain</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>TAIR</term>
+          <def>
+            <p>The Arabidopsis information resource</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>TIGR</term>
+          <def>
+            <p>The Institute of Genomic Research</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+    <fn-group>
+      <fn>
+        <p>
+          <bold>Electronic supplementary material</bold>
+        </p>
+        <p>The online version of this article (doi:10.1007/s11103-007-9209-0) contains supplementary material, which is available to authorized users.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

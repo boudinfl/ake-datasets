@@ -1,0 +1,2534 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Comput Aided Mol Des</journal-id>
+      <journal-title>Journal of Computer-Aided Molecular Design</journal-title>
+      <issn pub-type="ppub">0920-654X</issn>
+      <issn pub-type="epub">1573-4951</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17646925</article-id>
+      <article-id pub-id-type="pmc">2039848</article-id>
+      <article-id pub-id-type="publisher-id">9128</article-id>
+      <article-id pub-id-type="doi">10.1007/s10822-007-9128-9</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Construction of 3D models of the CYP11B family as a tool to predict ligand binding characteristics</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Roumen</surname>
+            <given-names>Luc</given-names>
+          </name>
+          <address>
+            <phone>+31-40-247 5573</phone>
+            <fax>+31-40-247 2740</fax>
+            <email>L.Roumen@tue.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Sanders</surname>
+            <given-names>Marijn P. A.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Pieterse</surname>
+            <given-names>Koen</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Hilbers</surname>
+            <given-names>Peter A. J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Plate</surname>
+            <given-names>Ralf</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Custers</surname>
+            <given-names>Erica</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>de Gooyer</surname>
+            <given-names>Marcel</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Smits</surname>
+            <given-names>Jos F. M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Beugels</surname>
+            <given-names>Ilona</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Emmen</surname>
+            <given-names>Judith</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Ottenheijm</surname>
+            <given-names>Harry C. J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Leysen</surname>
+            <given-names>Dirk</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Hermans</surname>
+            <given-names>J. J. R.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>BioModeling and BioInformatics, Eindhoven University of Technology, PO Box 513, Eindhoven, 5600 MB The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Department Medicinal Chemistry, NV Organon, PO Box 20, Oss, 5340 BH The Netherlands </aff>
+        <aff id="Aff3"><label>3</label>Department of Pharmacology, NV Organon, PO Box 20, Oss, 5340 BH The Netherlands </aff>
+        <aff id="Aff4"><label>4</label>Department of Pharmacology and Toxicology, Cardiovascular Research Institute,  University Maastricht, PO Box 616, Maastricht, 6200 MD The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>24</day>
+        <month>7</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>8</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>21</volume>
+      <issue>8</issue>
+      <fpage>455</fpage>
+      <lpage>471</lpage>
+      <history>
+        <date date-type="received">
+          <day>13</day>
+          <month>12</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>9</day>
+          <month>7</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media B.V. 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Aldosterone is synthesised by aldosterone synthase (CYP11B2). CYP11B2 has a highly homologous isoform, steroid 11&#x3B2;-hydroxylase (CYP11B1), which is responsible for the biosynthesis of aldosterone precursors and glucocorticoids. To investigate aldosterone biosynthesis and facilitate the search for selective CYP11B2 inhibitors, we constructed three-dimensional models for CYP11B1 and CYP11B2 for both human and rat. The models were constructed based on the crystal structure of <italic>Pseudomonas Putida CYP101</italic> and <italic>Oryctolagus Cuniculus CYP2C5</italic>. Small steric active site differences between the isoforms were found to be the most important determinants for the regioselective steroid synthesis. A possible explanation for these steric differences for the selective synthesis of aldosterone by CYP11B2 is presented. The activities of the known CYP11B inhibitors metyrapone, <italic>R</italic>-etomidate, <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole were determined using assays of V79MZ cells that express human CYP11B1 and CYP11B2, respectively. By investigating the inhibitors in the human CYP11B models using molecular docking and molecular dynamics simulations we were able to predict a similar trend in potency for the inhibitors as found in the in&#xA0;vitro assays. Importantly, based on the docking and dynamics simulations it is possible to understand the enantioselectivity of the human enzymes for the inhibitor fadrazole, the <italic>R</italic>-enantiomer being selective for CYP11B2 and the <italic>S</italic>-enantiomer being selective for CYP11B1.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Aldosterone synthesis</kwd>
+        <kwd>CYP11B1</kwd>
+        <kwd>CYP11B2</kwd>
+        <kwd>Homology modelling</kwd>
+        <kwd>Molecular docking</kwd>
+        <kwd>Molecular dynamics</kwd>
+        <kwd>Fadrazole</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Aldosterone is a member of the renin angiotensin aldosterone system (RAAS) that plays an important physiological role in the regulation of electrolyte homeostasis and thereby blood pressure. This endogenous mineralocorticoid exerts its function by binding to the mineralocorticoid receptor. Upon ligand binding, the protein-ligand complex is translocated to the cell nucleus, where it modulates the gene expression of proteins involved in electrolyte homeostasis [<xref ref-type="bibr" rid="CR1">1</xref>]. Aldosterone is produced predominantly in the adrenal cortex and is derived from cholesterol through various steps involving a number of dehydrogenases and cytochrome P450 enzymes (CYPs). This includes aldosterone synthase (CYP11B2), which catalyses the final steps of aldosterone biosynthesis.</p>
+      <p>Recently, various studies on the pathophysiology of heart failure have revealed that aldosterone plays a role in the formation of myocardial hypertrophy, reactive myocardial fibrosis, vascular remodelling and electrolyte imbalance. This may contribute to the development of arrhythmias, hypertension and congestive heart failure [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR3">3</xref>]. Although great therapeutic successes have been achieved by treating heart failure patients with blockers of the RAAS (CONSENSUS trial [<xref ref-type="bibr" rid="CR4">4</xref>], SOLVD trial [<xref ref-type="bibr" rid="CR5">5</xref>]), the mortality due to heart failure is still high. Therefore, exploring new therapeutic possibilities is highly desirable. Recently, it became clear that aldosterone is also a key player in heart failure. In the RALES study [<xref ref-type="bibr" rid="CR6">6</xref>], blocking the action of aldosterone using the mineralocorticoid receptor antagonist spironolactone, proved to greatly reduce mortality, hospitalisation numbers and hospitalisation time in patients with severe heart failure. Later, similar encouraging results were found for eplerenone, another mineralocorticoid receptor antagonist (EPHESUS trial [<xref ref-type="bibr" rid="CR7">7</xref>, <xref ref-type="bibr" rid="CR8">8</xref>]), in patients with post myocardial infarction. From this it can be derived that reducing aldosterone action seems highly beneficial in the treatment of heart-failure and that it is particularly worthwhile to find new pharmacological manners to interfere with this hormone.</p>
+      <p>An alternative manner to reduce aldosterone action would be not to block the mineralocorticoid receptor, but to prevent formation of the hormone itself by inhibiting its biosynthesis [<xref ref-type="bibr" rid="CR9">9</xref>]. Although the net outcome of aldosterone receptor inhibition versus aldosterone synthesis inhibition apparently is identical, a number of potential advantages for the latter approach exists: reduction of side effects as particularly observed for the antagonist spironolactone [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR10">10</xref>], prevention of compensatory aldosterone synthesis inherent to mineralocorticoid receptor blockade (of which long term effects are unknown) [<xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR12">12</xref>], and possible circumvention of inter-individual variations regarding pharmacodynamics and pharmacokinetics that are as observed for mineralocorticoid receptor antagonists [<xref ref-type="bibr" rid="CR13">13</xref>]. The clinical use of inhibitors of aromatase (CYP19, which converts androgens into estrogens) next to estrogen receptor antagonists in the treatment of breast cancer, is one of the examples that shows that the approach of ligand synthesis inhibitors clinically can be of great use, despite the existence of receptor blockers for that ligand [<xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR15">15</xref>].</p>
+      <p>The last steps of the biosynthesis of aldosterone are mediated by the mitochondrial cytochrome P450 11B family (CYP11B) (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Members of this protein family contain a heme prosthetic group in the core of the active site with which they catalyse (subsequent) oxidation reactions on C<sub>11</sub>, C<sub>18</sub> and C<sub>19</sub> on the &#x3B2;-side of the steroid skeleton (for enumeration see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). In bovine [<xref ref-type="bibr" rid="CR16">16</xref>], pig [<xref ref-type="bibr" rid="CR17">17</xref>] and frog [<xref ref-type="bibr" rid="CR18">18</xref>], aldosterone synthesis is performed by only one cytochrome, CYP11B, but in human [<xref ref-type="bibr" rid="CR19">19</xref>] and mouse [<xref ref-type="bibr" rid="CR20">20</xref>] the synthesis involves two isoforms, CYP11B1 (steroid 11&#x3B2;-hydroxylase) and CYP11B2 (aldosterone synthase). Rat possesses four isoforms for which CYP11B1 and CYP11B2 are the most important ones. CYP11B3 is only expressed in neonatal rat and carries the same activity as CYP11B2, and CYP11B4 encodes a pseudogene [<xref ref-type="bibr" rid="CR21">21</xref>].
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Biosynthesis of Aldosterone by the CYP11B family. Indicated with arrows are the possible substrate conversions performed by human CYP11B1 and CYP11B2 [<xref ref-type="bibr" rid="CR19">19</xref>]. Rat CYP11B1 and CYP11B2 possess the same activities as the human isoforms, except that rat CYP11B1 can also oxidise 11-deoxycorticosterone on C<sub>19</sub> [<xref ref-type="bibr" rid="CR21">21</xref>] </p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig1_HTML" id="MO1"/></fig></p>
+      <p>Most remarkable is the substrate specificity of the different isoforms. In both man and rat, only the CYP11B2 isoform can perform the final oxidation of C<sub>18</sub> to produce aldosterone [<xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR21">21</xref>]. For the CYP11B1 isoform, C<sub>19</sub> hydroxylation has been reported for rat but not yet for man [<xref ref-type="bibr" rid="CR21">21</xref>], and the CYP11B1 isoform in general is known to play an important role in the biosynthesis of glucocorticoids. If an inhibitor of aldosterone synthesis is to be designed, the biosynthesis of glucocorticoids should remain unaffected, indicating that the inhibition must be CYP11B2 selective.</p>
+      <p>We developed three-dimensional <italic>in&#xA0;silico</italic> models as a decision making tool to facilitate the selection of potential CYP11B2 inhibitors for synthesis and in&#xA0;vitro testing. In order to obtain specific CYP11B2 inhibitors, we also investigated its highly homologous family member CYP11B1.</p>
+      <p>The aim of this report is (1) to deduce by homology/comparative modelling the architecture of CYP11B1 and CYP11B2 around their active site, (2) to investigate protein-substrate interactions and propose a mechanism for substrate regioselectivity and (3) to validate the homology models by correlating the in&#xA0;vitro activity of four known inhibitors to <italic>in&#xA0;silico</italic> data. The inhibitors we have chosen are metyrapone [<xref ref-type="bibr" rid="CR22">22</xref>], <italic>R</italic>-etomidate [<xref ref-type="bibr" rid="CR23">23</xref>], <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole [<xref ref-type="bibr" rid="CR24">24</xref>] (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The <italic>in&#xA0;silico</italic> models not only represent an important tool in modern drug discovery but will also help in elucidating molecular mechanisms and (substrate binding) preferences of the substrate conversion of the enzymes of interest.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Chemical structures of the known CYP11B inhibitors, metyrapone, <italic>R</italic>-etomidate, <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig2_HTML" id="MO2"/></fig></p>
+    </sec>
+    <sec id="Sec2">
+      <title>Modelling considerations</title>
+      <p>Homology modelling has been widely applied to the family of cytochrome P450 enzymes and is mainly oriented towards enzyme inhibition. Before the first mammalian cytochrome P450 structures became available, modelling attempts were classically performed with crystal structures possessing sequence identities lower than 25% because no realistic alternatives were available. Homology models were often based on a template of bacterial CYP101 [<xref ref-type="bibr" rid="CR25">25</xref>&#x2013;<xref ref-type="bibr" rid="CR27">27</xref>], but the introduction of bacterial CYP102 allowed for modelling the functional properties of eukaryotic class II P450s [<xref ref-type="bibr" rid="CR28">28</xref>]. Although these homology models contain a low sequence identity with their template structures and are intuitively suboptimal, it has been shown that they can describe key features of protein-ligand interactions [<xref ref-type="bibr" rid="CR27">27</xref>, <xref ref-type="bibr" rid="CR28">28</xref>]. For example, features observed for inhibitor binding in aromatase models have provided important insights for the development of drugs [<xref ref-type="bibr" rid="CR27">27</xref>, <xref ref-type="bibr" rid="CR29">29</xref>]. Current models often still feature bacterial P450s as template [<xref ref-type="bibr" rid="CR30">30</xref>, <xref ref-type="bibr" rid="CR31">31</xref>], but methods involving the usage of multiple crystal structures for model construction may prove to be the future trend [<xref ref-type="bibr" rid="CR32">32</xref>, <xref ref-type="bibr" rid="CR33">33</xref>]. A model based on the structure of several known enzymes would be more accurate since every additional segment will improve similarity or spatial coordination of protein regions. However, structural flaws can be expected at locations where the template structures are joined and if these regions are within the active site, they need to be thoroughly refined.</p>
+      <p>Some modelling work on CYP11B1 and CYP11B2 has already been performed earlier by Belkina et&#xA0;al. [<xref ref-type="bibr" rid="CR34">34</xref>] and Ulmschneider et&#xA0;al. [<xref ref-type="bibr" rid="CR35">35</xref>]. The models of Belkina et&#xA0;al. discuss the potential spatial arrangement of the amino acids in the active site and hypothesise the hydrogen-bonding network involved in heme stabilisation. Furthermore, the effect of several amino acid mutations have been detailed. The models of Ulmschneider et&#xA0;al. focus on describing protein-inhibitor interactions and structure activity relations of their developed inhibitors. The so far published models were thoroughly characterised for those specific purposes, however, the goal of our model construction work was to investigate the regioselectivity of the natural ligands within the enzymes and to detail potential protein-ligand interactions.</p>
+      <p>For validation of our own three-dimensional models, the <italic>in&#xA0;silico</italic> data are presented in the form of molecular docking and molecular dynamics simulations. These methods are regularly used to investigate protein-ligand interactions. Because the only difference in the activity of the two isoforms CYP11B1 and CYP11B2 is the formation of aldosterone by the latter, successful 3D modelling of the isoforms relies on a careful analysis of the specific substrate conversion activities that exists between these two isoforms.</p>
+      <p>Because of this we reviewed an experimental mutation study by Bottner et&#xA0;al. [<xref ref-type="bibr" rid="CR36">36</xref>] on the human CYP11B1 and CYP11B2 proteins, performed in a similar manner as by Belkina and Ulmschneider for the currently published models [<xref ref-type="bibr" rid="CR34">34</xref>, <xref ref-type="bibr" rid="CR35">35</xref>]. The study by Bottner et&#xA0;al. showed that mutation of three residues outside the active site (L301P, E302D, A320V) is sufficient to convert the catalytic activity of CYP11B2 into that of CYP11B1, suggesting that remote steric aspects play a more important role in the substrate binding and substrate conversion than the presence of different amino acids in the active sites of both isoforms. This led us to postulate that the difference in substrate conversion is caused by a difference in the relative positioning of the substrate above the heme in the active site. To be more specific, we postulate that there is a correlation between substrate selectivity and the substrate hydroxylation distance, the distance between the heme iron and the substrate carbon. In other words, the binding mode of the natural substrate dictates which carbon atom is oxidised first, with conversion taking place on the carbon atom which is in closest proximity to the iron-oxygen complex.</p>
+      <p>For human CYP11B1 this means that C<sub>11</sub> and C<sub>18</sub> are to be in close proximity to the catalytic iron atom, with C<sub>11</sub> closest to the iron. Rat CYP11B1 possesses a similar binding mode, but we expect that it also presents C<sub>19</sub> in a position allowing oxidation. Explaining the preference for C<sub>18</sub>-hydroxylation, human and rat CYP11B2 would bind with C<sub>18</sub> closest to the iron atom and C<sub>11</sub> at a correct distance for oxidation.</p>
+      <p>To substantiate this hypothesis, the three dimensional architectures of the human and rat CYP11B enzymes were constructed using comparative modelling. For reasons of relevance only the CYP11B1 and CYP11B2 isoforms were investigated. We intend to show how knowledge of these various hydroxylation patterns of aldosterone precursors can result in working models for the substrate selective activity of the two isoforms. From here on, the human isoforms will be noted as hCYP11B1 and hCYP11B2, whereas the rat isoforms will be noted as rCYP11B1 and rCYP11B2.</p>
+      <p>As stated above, another aim was to validate the <italic>in&#xA0;silico</italic> models with in&#xA0;vitro activity data of four known inhibitors. These inhibitors were chosen for the following reasons. Metyrapone is a known inhibitor of CYP11B1 and is clinically used in the diagnosis of Cushing Syndrome [<xref ref-type="bibr" rid="CR22">22</xref>, <xref ref-type="bibr" rid="CR37">37</xref>]. <italic>R</italic>-etomidate is clinically used as anaesthetic, but it is known to be a highly potent suppressor of the CYP11B family [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR38">38</xref>]. Racemic fadrazole was designed for the selective inhibition of aromatase, a cytochrome P450 enzyme which is closely related to the CYP11B family because it oxidises steroids on C<sub>19</sub>. Next to aromatase inhibition, racemic fadrazole also shows considerable inhibition of members of the CYP11B family [<xref ref-type="bibr" rid="CR24">24</xref>, <xref ref-type="bibr" rid="CR39">39</xref>].</p>
+    </sec>
+    <sec id="Sec3" sec-type="methods">
+      <title>Methods</title>
+      <sec id="Sec4">
+        <title>Homology modelling</title>
+        <p>The amino acid sequences of the CYP11B family were taken from Swissprot [<xref ref-type="bibr" rid="CR40">40</xref>] (hCYP11B1 accession P15538, hCYP11B2 accession P19099, rCYP11B1 accession P15393, rCYP11B2 accession P30099, rCYP11B3 accession P30100) and the determination of the secondary structures of the CYP11B family members was performed using the secondary structure prediction program JPred [<xref ref-type="bibr" rid="CR41">41</xref>]. The alignment used for homology modelling was obtained with MOE-Align [<xref ref-type="bibr" rid="CR42">42</xref>] by performing a topological alignment of the cytochrome P450 enzymes for which a crystal structure is publicly available (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). The three dimensional architecture of cytochrome P450 enzymes consists of 12 alpha-helices annotated from A to L, as well as six beta-sheets, despite having a sequence identity among P450s less than 20%. Additionally, several short helices are present in various cytochrome P450 enzymes (annotated B&#x2032;, F&#x2032;, G&#x2032;, J&#x2032;, K&#x2032;) whilst being absent in others. The structural core of all cytochrome P450 enzymes consists of a four-helix bundle composed of alpha-helices D, E, I and L, and the two alpha-helices J and K. The variable structural features involved in ligand binding and substrate specificity are situated in alpha-helices A, B, B&#x2032;, F, G and their adjacent loops [<xref ref-type="bibr" rid="CR43">43</xref>&#x2013;<xref ref-type="bibr" rid="CR45">45</xref>].
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Topology alignment of human and rat CYP11B isoforms to related cytochrome P450 enzymes of which a three dimensional structure has been elucidated. Indicated with a &amp; are the Arg123 in alpha-helix B&#x2032; and Glu310 in alpha-helix I. Indicated with a * is the triple mutant L301P, E302D, A320V in alpha-helix I. Indicated with a ^ is the catalytic Thr318 in alpha-helix I. Indicated with a # is the conserved Glu459 in alpha-helix L</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig3_HTML" id="MO3"/></fig></p>
+        <p>The predicted secondary structures for the CYP11B family members were aligned to these topological features of the crystal structures, as well as by preserving several characteristic CYP features [<xref ref-type="bibr" rid="CR46">46</xref>]: W(R/K)XXR (X indicates any amino acid) in helix C connecting and stabilising the heme prosthetic group in the active site, EXXR in helix K and (W/F)XXPXX(F/Y)XPX(H/R)(W/F) following helix K&#x2032; comprising the typical meander region, and finally XXF(G/S)XGX(H/R)XCXGXX(L/F)AXXE before helix L which contains the cysteine residue by which the heme prosthetic group is bound to the enzyme. Furthermore, a glutamic acid was aligned that is thought to be involved in the formation of a catalytically important water channel [<xref ref-type="bibr" rid="CR47">47</xref>] (Glu366 in CYP101, Glu459 in the CYP11B family), and the entire helix I was aligned for its catalytic threonine (Thr252 in CYP101, Thr318 in CYP11B family) [<xref ref-type="bibr" rid="CR47">47</xref>]. As a result of small variations in loop regions, some insertions and deletions were introduced in segments outside the active site. These segments did not correspond to any of the key secondary structures.</p>
+        <p>Clearly, CYP11B1 and CYP11B2 portray a high degree of homology possessing a pair wise sequence identity percentage as high as 94% for human and 83% for rat (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>, highlighted). This emphasises the difficulty of modelling the difference between the two isoenzymes and the challenge of reaching the level of modelling accuracy that is required. For P450 enzymes for which a crystal structure is publicly available, the overall pair wise sequence identity with the CYP11B family is found to be less than 20%, whereas it is around 30% for active site residues. This low degree of homology indicates that none of the reviewed cytochromes can be used as a sole representative for modelling the CYP11B family.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Generic pair wise sequence identity (in percentages) between the human and rat CYP11B isoforms and cytochrome P450 enzymes for which a three dimensional structure has been elucidated</p></caption><table frame="hsides" rules="groups"><tbody><tr><td align="left">Chains</td><td align="left">101</td><td align="left">102</td><td align="left">107</td><td align="left">108</td><td align="left">119</td><td align="left">55</td><td align="left">51</td><td align="left">2B4</td><td align="left">2C5</td><td align="left">2C8</td><td align="left">2C9</td><td align="left">2D6</td><td align="left">3A4</td><td align="left">h11B1</td><td align="left">h11B2</td><td align="left">r11B1</td><td align="left">r11B2</td><td align="left">r11B3</td><td align="left"/></tr><tr><td align="left">CYP101</td><td char="." align="char">&#x2013;</td><td char="." align="char">17.3</td><td char="." align="char">30.2</td><td char="." align="char">37.7</td><td char="." align="char">39.6</td><td char="." align="char">38.5</td><td char="." align="char">23.5</td><td char="." align="char">21.2</td><td char="." align="char">23.1</td><td char="." align="char">30.8</td><td char="." align="char">23.1</td><td char="." align="char">11.5</td><td char="." align="char">19.6</td><td char="." align="char">26.4</td><td char="." align="char">24.5</td><td char="." align="char">24.5</td><td char="." align="char">26.4</td><td char="." align="char">26.4</td><td align="left">2CPP</td></tr><tr><td align="left">CYP102</td><td char="." align="char">16.3</td><td char="." align="char">&#x2013;</td><td char="." align="char">24.5</td><td char="." align="char">28.3</td><td char="." align="char">39.6</td><td char="." align="char">19.2</td><td char="." align="char">29.4</td><td char="." align="char">26.9</td><td char="." align="char">34.6</td><td char="." align="char">30.8</td><td char="." align="char">32.7</td><td char="." align="char">14.8</td><td char="." align="char">47.1</td><td char="." align="char">26.4</td><td char="." align="char">26.4</td><td char="." align="char">24.5</td><td char="." align="char">24.5</td><td char="." align="char">24.5</td><td align="left">1BU7</td></tr><tr><td align="left">CYP107</td><td char="." align="char">20.0</td><td char="." align="char">12.3</td><td char="." align="char">&#x2013;</td><td char="." align="char">28.3</td><td char="." align="char">50.9</td><td char="." align="char">36.5</td><td char="." align="char">21.6</td><td char="." align="char">19.2</td><td char="." align="char">21.2</td><td char="." align="char">21.2</td><td char="." align="char">25.0</td><td char="." align="char">14.3</td><td char="." align="char">21.6</td><td char="." align="char">20.8</td><td char="." align="char">18.9</td><td char="." align="char">20.8</td><td char="." align="char">18.9</td><td char="." align="char">18.9</td><td align="left">1JIN</td></tr><tr><td align="left">CYP108</td><td char="." align="char">23.2</td><td char="." align="char">15.8</td><td char="." align="char">22.1</td><td char="." align="char">&#x2013;</td><td char="." align="char">35.8</td><td char="." align="char">28.8</td><td char="." align="char">29.4</td><td char="." align="char">25.0</td><td char="." align="char">26.9</td><td char="." align="char">28.8</td><td char="." align="char">25.0</td><td char="." align="char">17.9</td><td char="." align="char">29.4</td><td char="." align="char">26.4</td><td char="." align="char">26.4</td><td char="." align="char">28.3</td><td char="." align="char">28.3</td><td char="." align="char">28.3</td><td align="left">1CPT</td></tr><tr><td align="left">CYP119</td><td char="." align="char">18.8</td><td char="." align="char">16.0</td><td char="." align="char">25.6</td><td char="." align="char">20.8</td><td char="." align="char">&#x2013;</td><td char="." align="char">34.6</td><td char="." align="char">27.5</td><td char="." align="char">28.8</td><td char="." align="char">28.8</td><td char="." align="char">32.7</td><td char="." align="char">28.8</td><td char="." align="char">25.0</td><td char="." align="char">29.4</td><td char="." align="char">26.4</td><td char="." align="char">26.4</td><td char="." align="char">28.3</td><td char="." align="char">26.4</td><td char="." align="char">26.4</td><td align="left">1F4U</td></tr><tr><td align="left">CYP55</td><td char="." align="char">21.2</td><td char="." align="char">11.2</td><td char="." align="char">28.5</td><td char="." align="char">24.7</td><td char="." align="char">24.3</td><td char="." align="char">&#x2013;</td><td char="." align="char">19.6</td><td char="." align="char">17.3</td><td char="." align="char">19.2</td><td char="." align="char">21.2</td><td char="." align="char">23.1</td><td char="." align="char">18.5</td><td char="." align="char">19.6</td><td char="." align="char">18.9</td><td char="." align="char">17.0</td><td char="." align="char">17.0</td><td char="." align="char">17.0</td><td char="." align="char">17.0</td><td align="left">1ROM</td></tr><tr><td align="left">CYP51</td><td char="." align="char">12.3</td><td char="." align="char">18.0</td><td char="." align="char">19.1</td><td char="." align="char">17.2</td><td char="." align="char">14.7</td><td char="." align="char">16.0</td><td char="." align="char">&#x2013;</td><td char="." align="char">23.1</td><td char="." align="char">28.8</td><td char="." align="char">25.0</td><td char="." align="char">25.0</td><td char="." align="char">11.1</td><td char="." align="char">35.3</td><td char="." align="char">20.8</td><td char="." align="char">20.8</td><td char="." align="char">17.0</td><td char="." align="char">20.8</td><td char="." align="char">20.8</td><td align="left">1EA1</td></tr><tr><td align="left">CYP2B4</td><td char="." align="char">14.6</td><td char="." align="char">16.7</td><td char="." align="char">16.4</td><td char="." align="char">14.0</td><td char="." align="char">15.0</td><td char="." align="char">16.0</td><td char="." align="char">16.7</td><td char="." align="char">&#x2013;</td><td char="." align="char">57.7</td><td char="." align="char">65.4</td><td char="." align="char">59.6</td><td char="." align="char">33.3</td><td char="." align="char">33.3</td><td char="." align="char">32.1</td><td char="." align="char">32.1</td><td char="." align="char">32.1</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td align="left">1SUO</td></tr><tr><td align="left">CYP2C5</td><td char="." align="char">16.8</td><td char="." align="char">17.8</td><td char="." align="char">16.6</td><td char="." align="char">14.8</td><td char="." align="char">16.9</td><td char="." align="char">15.0</td><td char="." align="char">14.9</td><td char="." align="char">51.0</td><td char="." align="char">&#x2013;</td><td char="." align="char">69.2</td><td char="." align="char">78.8</td><td char="." align="char">44.4</td><td char="." align="char">33.3</td><td char="." align="char">32.1</td><td char="." align="char">32.1</td><td char="." align="char">28.3</td><td char="." align="char">32.1</td><td char="." align="char">32.1</td><td align="left">1NR6</td></tr><tr><td align="left">CYP2C8</td><td char="." align="char">15.8</td><td char="." align="char">17.6</td><td char="." align="char">16.4</td><td char="." align="char">15.5</td><td char="." align="char">15.8</td><td char="." align="char">15.8</td><td char="." align="char">13.4</td><td char="." align="char">53.8</td><td char="." align="char">73.6</td><td char="." align="char">&#x2013;</td><td char="." align="char">69.2</td><td char="." align="char">44.4</td><td char="." align="char">31.4</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td align="left">1PQ2</td></tr><tr><td align="left">CYP2C9</td><td char="." align="char">15.6</td><td char="." align="char">18.0</td><td char="." align="char">17.4</td><td char="." align="char">15.0</td><td char="." align="char">16.6</td><td char="." align="char">15.3</td><td char="." align="char">14.3</td><td char="." align="char">51.0</td><td char="." align="char">77.3</td><td char="." align="char">78.4</td><td char="." align="char">&#x2013;</td><td char="." align="char">40.7</td><td char="." align="char">33.3</td><td char="." align="char">32.1</td><td char="." align="char">32.1</td><td char="." align="char">28.3</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td align="left">1OG2</td></tr><tr><td align="left">CYP2D6</td><td char="." align="char">13.1</td><td char="." align="char">16.9</td><td char="." align="char">14.9</td><td char="." align="char">14.3</td><td char="." align="char">14.7</td><td char="." align="char">16.0</td><td char="." align="char">16.7</td><td char="." align="char">39.6</td><td char="." align="char">40.0</td><td char="." align="char">40.6</td><td char="." align="char">38.5</td><td char="." align="char">&#x2013;</td><td char="." align="char">14.8</td><td char="." align="char">25.0</td><td char="." align="char">25.0</td><td char="." align="char">25.0</td><td char="." align="char">21.4</td><td char="." align="char">21.4</td><td align="left">2F9Q</td></tr><tr><td align="left">CYP3A4</td><td char="." align="char">14.1</td><td char="." align="char">22.0</td><td char="." align="char">19.6</td><td char="." align="char">14.5</td><td char="." align="char">17.2</td><td char="." align="char">14.8</td><td char="." align="char">16.5</td><td char="." align="char">22.8</td><td char="." align="char">22.0</td><td char="." align="char">22.9</td><td char="." align="char">21.9</td><td char="." align="char">17.9</td><td char="." align="char">&#x2013;</td><td char="." align="char">32.1</td><td char="." align="char">32.1</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td char="." align="char">30.2</td><td align="left">1W0E</td></tr><tr><td align="left">h11B1</td><td char="." align="char">16.0</td><td char="." align="char">16.3</td><td char="." align="char">14.6</td><td char="." align="char">15.5</td><td char="." align="char">16.1</td><td char="." align="char">12.0</td><td char="." align="char">14.9</td><td char="." align="char">17.4</td><td char="." align="char">17.6</td><td char="." align="char">15.8</td><td char="." align="char">17.3</td><td char="." align="char">14.9</td><td char="." align="char">17.1</td><td char="." align="char">&#x2013;</td><td char="." align="char">98.1</td><td char="." align="char">81.1</td><td char="." align="char">86.8</td><td char="." align="char">84.9</td><td align="left">&#x2013;</td></tr><tr><td align="left">h11B2</td><td char="." align="char">15.3</td><td char="." align="char">16.9</td><td char="." align="char">13.6</td><td char="." align="char">14.8</td><td char="." align="char">15.8</td><td char="." align="char">12.0</td><td char="." align="char">14.5</td><td char="." align="char">17.4</td><td char="." align="char">17.6</td><td char="." align="char">16.2</td><td char="." align="char">17.7</td><td char="." align="char">15.5</td><td char="." align="char">17.5</td><td char="." align="char"><bold>93.6</bold></td><td char="." align="char">&#x2013;</td><td char="." align="char">83.0</td><td char="." align="char">88.7</td><td char="." align="char">86.8</td><td align="left">&#x2013;</td></tr><tr><td align="left">r11B1</td><td char="." align="char">12.3</td><td char="." align="char">15.4</td><td char="." align="char">13.2</td><td char="." align="char">13.8</td><td char="." align="char">15.3</td><td char="." align="char">11.0</td><td char="." align="char">13.4</td><td char="." align="char">17.4</td><td char="." align="char">16.7</td><td char="." align="char">16.6</td><td char="." align="char">17.7</td><td char="." align="char">14.4</td><td char="." align="char">17.3</td><td char="." align="char">63.6</td><td char="." align="char">63.6</td><td char="." align="char">&#x2013;</td><td char="." align="char">88.7</td><td char="." align="char">86.8</td><td align="left">&#x2013;</td></tr><tr><td align="left">r11B2</td><td char="." align="char">15.3</td><td char="." align="char">15.8</td><td char="." align="char">14.4</td><td char="." align="char">14.5</td><td char="." align="char">16.6</td><td char="." align="char">13.0</td><td char="." align="char">14.7</td><td char="." align="char">15.9</td><td char="." align="char">16.2</td><td char="." align="char">15.8</td><td char="." align="char">17.1</td><td char="." align="char">13.5</td><td char="." align="char">16.8</td><td char="." align="char">68.2</td><td char="." align="char">68.8</td><td char="." align="char"><bold>82.6</bold></td><td char="." align="char">&#x2013;</td><td char="." align="char">98.1</td><td align="left">&#x2013;</td></tr><tr><td align="left">r11B3</td><td char="." align="char">15.4</td><td char="." align="char">15.8</td><td char="." align="char">14.4</td><td char="." align="char">14.5</td><td char="." align="char">16.6</td><td char="." align="char">13.0</td><td char="." align="char">14.7</td><td char="." align="char">15.9</td><td char="." align="char">16.2</td><td char="." align="char">15.8</td><td char="." align="char">17.1</td><td char="." align="char">13.8</td><td char="." align="char">16.8</td><td char="." align="char">68.6</td><td char="." align="char">69.2</td><td char="." align="char">83.0</td><td char="." align="char">97.3</td><td char="." align="char">&#x2013;</td><td align="left">&#x2013;</td></tr></tbody></table><table-wrap-foot><p>The bottom triangle indicates the pair wise sequence identity of the whole protein, the top triangle indicates the pair wise sequence identity of the residues within 5.0&#xA0;&#xC5; from the surface of the active site cavity of CYP101. Species information: <italic>Pseudomonas-Putida</italic> 2CPP, <italic>Bacillus Megaterium</italic> 1BU7, <italic>Saccharopolyspora-Erythreaea</italic> 1JIN, <italic>Pseudomonas</italic>-SP 1CPT, <italic>Archaeon Sulfolobus Solfataricus</italic> 1F4U, <italic>Fusarium-Oxysporum</italic> 1ROM, <italic>Mycobacterium Tuberculosis</italic> 1EA1, <italic>Oryctolagus Cuniculus</italic> 1SUO and 1NR6, <italic>Homo Sapiens</italic> 1PQ2, 1OG2, 1W0E and 2F9Q</p></table-wrap-foot></table-wrap></p>
+        <p>Because of the low sequence identity of the CYP11B family, we have chosen to create a hybrid template for hCYP11B2 using MOE-Homology [<xref ref-type="bibr" rid="CR42">42</xref>], constructed from the crystal structures of CYP101 (pdb code: 2CPP) and CYP2C5 (pdb code: 1NR6). Our criteria for using CYP101 and CYP2C5 involve similarity in functionality of both the cytochrome P450 reduction system and ligand characteristics, but importantly also involves the spatial positioning of active site regions.</p>
+        <p>Thus far, all modelling attempts on cytochrome P450 family 11 have included the usage of microsomal P450s such as CYP102 [<xref ref-type="bibr" rid="CR30">30</xref>, <xref ref-type="bibr" rid="CR34">34</xref>] and CYP2C9 [<xref ref-type="bibr" rid="CR35">35</xref>]. However, the CYP11B family belongs to the bacterial/mitochondrial cytochrome P450 class which obtains electrons from the ferredoxin reductase family in the electron transfer chain [<xref ref-type="bibr" rid="CR48">48</xref>]. Using CYP101 for the modelling of mitochondrial P450s is therefore more intuitive and has been successfully applied to other mitochondrial P450s [<xref ref-type="bibr" rid="CR33">33</xref>, <xref ref-type="bibr" rid="CR49">49</xref>].</p>
+        <p>The natural ligands of the CYP11B family are steroids, and steroids can be substrates for hepatic cytochromes that belong to the microsomal cytochrome P450 class. In CYP2C5 and CYP2D6 steroids are oxidised on the &#x3B2;-side of the steroid skeleton at carbon atoms close to C<sub>11</sub> and C<sub>18</sub> [<xref ref-type="bibr" rid="CR50">50</xref>], and their crystal structures may possess the necessary interaction features for model construction. However, investigation of the crystal structure of CYP2D6 (PDB code: 2F9Q) raised doubt on the appropriateness for its use as a template structure. The crystal structure is resolved at low resolution (3.0&#xA0;&#xC5;) in a tetramer complex. In this complex numerous amino acids participate in an extensive interaction network between the monomers and the structure was therefore excluded from our modelling work. Of the other hepatic P450 enzymes, CYP3A4 can also oxidise steroids, but its oxidation sites are on the opposite side of the steroid skeleton or on the different steroid rings. This means that the steroids bind with a rotated or reversed orientation in the active site [<xref ref-type="bibr" rid="CR51">51</xref>], which may provide different active site conformation than the CYP11B family. Furthermore, many CYP2D6 substrates are characterised by a basic nitrogen [<xref ref-type="bibr" rid="CR52">52</xref>], and the CYP2C9 substrates are mostly weakly acidic [<xref ref-type="bibr" rid="CR53">53</xref>]. These properties are found to be less desirable for modelling of the CYP11B family than the functionally similar properties of the cyclic alkane substrates of CYP101. The structures of CYP2C9 also do not provide information about the molecular basis of regioselectivity of the substrate, since a conformational change of the active site is required to allow the substrate hydroxylation sites to contact the heme [<xref ref-type="bibr" rid="CR54">54</xref>]. Because of the different ligand properties, the structures of hepatic CYP2D6, CYP2C9 and CYP3A4 were found to be less suitable as template structure.</p>
+        <p>An important decision criterion to use CYP101 as the template is also its spatial properties. When comparing its active site cavity to that of the mammalian P450s, we found that the steroidal ligands would not be able to fit into the active site cavity of the mammalian P450s with C<sub>11</sub> and C<sub>18</sub> oriented to the heme, unless additional space is introduced near helix K. Because the most important interactions between protein and ligand take place near the heme, the regions lining the active site must be modelled with the highest accuracy. From the multiple sequence alignment with the CYP11B family one can see that beta-sheet 6-1 following helix K possesses a 1 amino acid insertion in the CYP101 structure and a 1 amino acid deletion in the mammalian structures (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Although it is possible to model this site through a deletion in the mammalian structures, the resulting active site cavity would become strained. Since the structure of CYP101 is elongated, modelling a 1 amino acid insertion and relaxing the fold will create a better definition of this active site region. Taking into account that its substrate and reduction system are similar to that of the CYP11B family, CYP101 is found to possess the best structural core for the modelling of the CYP11B isoforms.</p>
+        <p>Because the structural core of the cytochrome P450 enzyme structure is the four-helix bundle comprising the helices D, E, I and L, and the two helices J and K, they should all be taken from one and the same template structure [<xref ref-type="bibr" rid="CR43">43</xref>&#x2013;<xref ref-type="bibr" rid="CR45">45</xref>]. Hence, when taking the helices I and K from CYP101, the other regions must be used as well. Within the topological alignment of these regions, the mammalian P450s contain insertions and deletions in the connectivity between helix C and D, which is an additional reason why we have decided to construct the CYP11B models using the CYP101 structure.</p>
+        <p>Using the main structural features of CYP101, the remaining variant regions of the P450 fold (helices B&#x2032;, F, G, J&#x2032; and the meaner region) were modelled with CYP2C5. CYP2C5 was chosen because after aligning the desired structures, it was found to possess slightly better spatial alignment with CYP101 than the other mammalian crystal structures, and additionally, CYP2C5 is a steroid synthase itself. Special attention was given to the modelling of helix B&#x2032; by CYP2C5 and its connection to the helices F and G. This three helical complex makes up the entrance of the active site cavity and closes the pocket like a lid. The helix B&#x2032; is predicted to be 3 turns long in the CYP11B family and there is an apparent insertion of 3 residues compared to that of the other cytochrome structures (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). In the CYP101 structure, this helix is positioned too high in the active site cavity, which is probably a reason why it is regularly seen as inappropriate to model on. We chose the structure of CYP2C5 where we extended its helix from a 2 turn length to a 3 turn length.</p>
+        <p>The first 50&#xA0;N-terminal residues corresponding to the membrane binding region of the human cytochrome 11B family were omitted from the models because no complementary sequence is present in the crystal structures of either CYP101 or CYP2C5. Some manual adjustments were made to the hCYP11B2 model to compensate for large steric hindrances and the model was refined by energy minimisation using a MOE succession method of steepest descent, conjugate gradient and truncated newton until an RMS gradient of 0.1&#xA0;kcal/(mol&#xA0;&#xC5;) was reached. The Charmm22 forcefield [<xref ref-type="bibr" rid="CR55">55</xref>] was used with a dielectric constant of 4 and all backbone atoms were tethered with a force constant of 100&#xA0;kcal/(mol&#xA0;&#xC5;<sup>2</sup>) to prevent large movements.</p>
+        <p>To investigate the influence of the triple mutant introduced in the hCYP11B2 protein by Bottner et&#xA0;al. [<xref ref-type="bibr" rid="CR36">36</xref>], a hCYP11B2-triple mutant homology model (hCYP11B2-TM) was created. The three dimensional architecture of this structure should turn out to be similar to the active site of hCYP11B1. Models for hCYP11B1, rCYP11B1 and rCYP11B2 were also constructed by amino acid replacement in the model of hCYP11B2, followed by a structural relaxation of the fold with MOE.</p>
+        <p>The four ligands 11-deoxycorticosterone (DOC), corticosterone (B), 18-hydroxy-11-deoxycorticosterone (18OH-DOC) and 18-hydroxycorticosterone (18OH-B) were fit in the active sites of all CYP11B models matching all three CYP11B hydroxylation sites (C<sub>11</sub>, C<sub>18</sub>, C<sub>19</sub>) to the oxygen atom occupying the 6th ligating position of the heme iron. First the steroids were docked into the active site using automated docking to get an impression of the relative positioning of the C<sub>11</sub>, C<sub>18</sub> and C<sub>19</sub> above the heme. Next, alternate orientations of the steroids were investigated by visual inspection, taking into account alternate folding of amino acid side chains. A distance of 2.5&#xA0;&#xC5; was chosen as a starting distance between the oxygen and carbon atoms, which is a near-optimal distance for hydrogen atom abstraction during hydroxylation [<xref ref-type="bibr" rid="CR56">56</xref>]. A threshold of 5.0&#xA0;&#xC5; was estimated to be the representative maximal distance for hydroxylation. The models were then equilibrated with MOE without tethering the backbone atoms, allowing the model active sites to diverge.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Ligand docking</title>
+        <p>The docking of all ligands was performed using GOLD v3.0 [<xref ref-type="bibr" rid="CR57">57</xref>], in order to investigate the protein-ligand interactions and investigate the application of the models for inhibitor potency prediction. The docking parameters used were taken from the <italic>default 1</italic> GOLD GA settings. These settings were used for all docking runs presented in this study. Each ligand was docked 5&#xA0;times for 100 poses each for which the GOLD Fitness score was obtained using the standard Goldscore function. The amount of docking runs and poses was taken to ensure an appropriate sampling of the ligand conformations in the active site of the protein. For the inhibitors, the fitness score was averaged for the top 10 ranking poses if the conformation was within an RMSD of 1.0&#xA0;&#xC5; from the best ranking pose (results Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). Subsequently, to get an impression of the correlation of the docking with the in&#xA0;vitro data, the Goldscore measure of binding affinity was calculated by the method reported by Verdonk et&#xA0;al. [<xref ref-type="bibr" rid="CR57">57</xref>] per &#x394;G<sub>binding</sub>&#xA0;=&#xA0;&#x2212;0.1075 * Goldscore&#x2212;2.2665 (<italic>R</italic><sup>2</sup>&#xA0;=&#xA0;0.5529, <italic>N</italic>&#xA0;=&#xA0;60, &#x394;G<sub>binding</sub> expressed in kcal/mol). The average poses were also rescored with the Chemscore scoring function [<xref ref-type="bibr" rid="CR58">58</xref>].</p>
+        <p>Docking of steroids was performed in the presence of an iron-bound oxygen atom and their conformations were afterwards checked to investigate alternate orientations of the steroid in the active site cavity. The protein structures used for docking the substrates were the unequilibrated structures, whereas for docking the inhibitors, the hCYP11B1 and hCYP11B2 models were used after they were equilibrated with the ligand 18-hydroxycorticosterone. All docking runs were performed in the absence of water molecules. For each inhibitor, the best ranked pose was used as input for the molecular dynamics study.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Molecular dynamics of inhibitors</title>
+        <p>Several molecular dynamics simulations were performed to investigate the stability of the enzyme models of hCYP11B1 and hCYP11B2, and the dynamic behaviour of the three inhibitors inside the respective active sites. The simulations were performed with the NAMD package [<xref ref-type="bibr" rid="CR59">59</xref>] using the Charmm22 forcefield [<xref ref-type="bibr" rid="CR55">55</xref>]. The protein models of hCYP11B1 and hCYP11B2 were solvated in a 80&#xA0;&#xD7;&#xA0;80&#xA0;&#xD7;&#xA0;80&#xA0;&#xC5; equilibrated water box, removing any overlapping water. Counter-ions were added to ensure an overall net charge of zero. The protein-ligand complexes were slightly equilibrated for 25&#xA0;ps at a temperature of 100&#xA0;K and were subsequently simulated for 1ns at a temperature of 310&#xA0;K in an NPT ensemble. All simulations were carried out using periodic boundary conditions. To calculate the electrostatic interactions we chose the implementation of NAMDs Particle Mesh Ewald [<xref ref-type="bibr" rid="CR60">60</xref>]. To accommodate the filling of the active site cavity volume by the three ligands, three and four explicit water molecules were positioned in the active sites of hCYP11B1 and hCYP11B2 respectively (volumes are hCYP11B1 360&#xA0;&#xC5;<sup>3</sup>, hCYP11B2 334&#xA0;&#xC5;<sup>3</sup>, etomidate 269.7&#xA0;&#xC5;<sup>3</sup>, fadrazole 241.9&#xA0;&#xC5;<sup>3</sup>, metyrapone 247.7&#xA0;&#xC5;<sup>3</sup>, water 15.5&#xA0;&#xC5;<sup>3</sup>). The positioned water molecules were optimised in the equilibration step.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Cellular assay for measuring inhibitor in&#xA0;vitro activity</title>
+        <p>For determining inhibitor potencies for CYP11B1 and CYP11B2, an assay was used in which cells overexpressing CYP11B1 or CYP11B2 convert the used steroid substrates for these cytochromes into their products. Product formation rates were assessed by HPLC. V79 cells overexpressing CYP11B1 (stably transfected with a pcDNA3.1 vector, carrying a hygromycin resistance box) were constructed at NV Organon (Oss, the Netherlands). These cells were constructed in the following manner. The full length cDNA for human CYP11B1 was obtained by PCR from human adrenal cDNA as described by Kawamoto et&#xA0;al [<xref ref-type="bibr" rid="CR61">61</xref>] and cloned into pPCR SCRIPT (Stratagene, La Jolla, USA). After digestion with Xho I and Not I, the obtained cDNA was inserted into a Xho I/Not I digested pcDNA3.1 vector (InVitrogen, Breda, Netherlands), carrying a hygromycin resistance box. Following transfection to the V79 cells, positive cells were selected based on their hygromycin resistance. The presence of the CYP11B1 gene was confirmed by PCR and the presence of 11&#x3B2;-hydroxylase activity (i.e., the ability to produce corticosterone or cortisol from 11-deoxycorticosterone or 11-deoxycortisol respectively). Although no electron-transporting proteins were co-transfected, the CYP11B1 expressing V79 cells showed abundant 11&#x3B2;-hydroxylase activity, as was previously also shown by Denner et&#xA0;al. for both CYP11B1 and CYP11B2 [<xref ref-type="bibr" rid="CR62">62</xref>]. In normal (non transfected) V79 cells, no detectable 11&#x3B2;-hydroxylase activity or PCR signals were found. V79 cells stably (over)expressing CYP11B2 were developed in the laboratory of Prof. R. Bernhardt, Institute of Biochemistry, Saarland University, Saarbr&#xFC;cken, Germany [<xref ref-type="bibr" rid="CR62">62</xref>&#x2013;<xref ref-type="bibr" rid="CR64">64</xref>].</p>
+        <p>Cells were cultured under standard conditions in DMEM/FK12 medium (Gibco, Gaitersburg, USA) supplemented with 10% foetal calf serum (Hyclone, Logan, USA), penicillin/streptomycin (100&#xA0;U/mL and 100&#xA0;&#x3BC;g/mL, respectively, Gibco), inside a humid environment of 37&#xA0;&#xB0;C, and 5%CO<sub>2</sub> atmosphere. For assessing inhibitor potencies, cells were transferred to 12 well plates and grown until they were confluent. Next, cells were incubated for 1&#xA0;h in serum-free medium with cumulative inhibitor concentrations, followed by addition of 500&#xA0;nM (0.5&#xA0;times Km) 11-deoxycorticosterone (Sigma-Aldrich, St Louis, USA) as substrate. Finally, V79 CYP11B1 cells were incubated for another 1&#xA0;h and V79 CYP11B2 cells for another 3&#xA0;h. Medium was removed and the (produced) steroids were extracted with 5&#xA0;mL diethylether from 1&#xA0;mL medium aliquots, mixed with 1&#xA0;mL 1&#xA0;M sodium-glycine buffer (pH 10.5) containing 500&#xA0;nM methylprednisolone (Sigma-Aldrich) as internal standard. Extracts were dried under nitrogen and dissolved in mobile phase for automated HPLC analysis, using a stationary phase consisting of an MR column (4.6&#xA0;&#xD7;&#xA0;50&#xA0;mm, particle size 2.5&#xA0;&#x3BC;m) and a mobile phase consisting of a mixture of 680/320/1 (v/v/v) milliQ water, acetonitrile and trifluoro-acetic acid. Detection of UV absorption was performed at 243&#xA0;nm (Shimadzu, Tokyo, Japan).</p>
+      </sec>
+    </sec>
+    <sec id="Sec8">
+      <title>Results and discussion</title>
+      <sec id="Sec9">
+        <title>Model quality</title>
+        <p>One of the theorems often applied to the quality assessment of a protein model is the Ramachandran Plot, which is an indicative measure for the correctness of the residue torsion angles. The plot is a graphic display of torsion angle &#x3C6; (C<sub>n&#x2212;1</sub>&#x2013;N<sub>n</sub>&#x2013;C<sub>&#x3B1;,n</sub>&#x2013;C<sub>n</sub>) versus torsion angle &#x3C8; (N<sub>n</sub>&#x2013;C<sub>&#x3B1;,n</sub>&#x2013;C<sub>n</sub>&#x2013;N<sub>n+1</sub>) for each residue of the protein of which the secondary structure character of the residue can be extracted. The alpha-helix character of a protein backbone is located roughly in the region where &#x2212;60&#xB0;&#xA0;&lt;&#xA0;&#x3C6;&#xA0;&lt;&#xA0;&#x2212;30&#xB0; and &#x2212;120&#xB0;&#xA0;&lt;&#xA0;&#x3C8;&#xA0;&lt;&#xA0;&#x2212;30&#xB0;, and the beta-sheet character is located roughly in the region where &#x2212;180&#xB0;&#xA0;&lt;&#xA0;&#x3C6;&#xA0;&lt;&#xA0;&#x2212;60&#xB0; and 90&#xB0;&#xA0;&lt;&#xA0;&#x3C8;&#xA0;&lt;&#xA0;180&#xB0; [<xref ref-type="bibr" rid="CR65">65</xref>]. In Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, the results of the Ramachandran Plot are summarised for both hCYP11B1 and hCYP11B2 models after they were equilibrated with the ligand 18-hydroxycorticosterone.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Validation results for the lowest energy models of CYP11B1 and CYP11B2 and the crystal structures which were used for the template, part I</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">Ramachandran Plot (core regions) (%)</th><th align="left">Ramachandran Plot (favourable regions) (%)</th><th align="left">Errat2 (quality factor, %)<sup>a</sup></th><th align="left">Verify 3D (total score)<sup>b</sup></th></tr></thead><tbody><tr><td char="." align="char" colspan="5"><italic>Template</italic> (<italic>PDB, resolution</italic>)</td></tr><tr><td align="left">CYP101 (2CPP, 1.63&#xA0;&#xC5;)</td><td char="." align="char">92.1</td><td char="." align="char">100.0</td><td char="." align="char">96.0</td><td char="." align="char">197</td></tr><tr><td align="left">CYP2C5 (1NR6, 2.10&#xA0;&#xC5;)</td><td char="." align="char">87.8</td><td char="." align="char">99.2</td><td char="." align="char">93.6</td><td char="." align="char">195</td></tr><tr><td char="." align="char" colspan="5"><italic>Model</italic></td></tr><tr><td align="left">hCYP11B1</td><td char="." align="char">78.8</td><td char="." align="char">94.7</td><td char="." align="char">84.1</td><td char="." align="char">126</td></tr><tr><td align="left">hCYP11B2</td><td char="." align="char">78.7</td><td char="." align="char">94.7</td><td char="." align="char">87.5</td><td char="." align="char">125</td></tr><tr><td align="left">hCYP11B2-TripMut</td><td char="." align="char">80.6</td><td char="." align="char">96.5</td><td char="." align="char">81.1</td><td char="." align="char">117</td></tr><tr><td align="left">rCYP11B1</td><td char="." align="char">79.7</td><td char="." align="char">96.5</td><td char="." align="char">80.2</td><td char="." align="char">113</td></tr><tr><td align="left">rCYP11B2</td><td char="." align="char">82.4</td><td char="." align="char">96.5</td><td char="." align="char">80.1</td><td char="." align="char">114</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>&#xA0;&#xA0;Outliers are positioned in the loop regions before alpha-helix F where the two template structures connect and at the end of alpha-helix D where a large insertion was introduced</p><p><sup>b</sup>&#xA0;&#xA0;Additional outliers are positioned at the end of alpha-helix G</p></table-wrap-foot></table-wrap></p>
+        <p>For both hCYP11B1 and hCYP11B2 around 95% of the residues are positioned in the favoured and core regions of the Ramachandran Plot, indicating that for hybrid models, the structures are of acceptable quality. Due to the high quantity of alpha-helices and beta-sheets, the majority of residues is positioned in the expected regions. The residues which are situated in disallowed and unfavoured regions of the plot, are located in loop regions outside the active site. In total, 9 residues in the hCYP11B1 model are situated in the disallowed regions and 15 residues in the unfavoured regions. For the hCYP11B2 model, 10 residues are situated in disallowed regions and 14 residues in the unfavoured regions. The causes for these disparities are several insertions or deletions introduced in the models for which the structural minimisation was not sufficiently adequate to correct the backbone dihedrals. In particular, these regions are a relatively large insertion between alpha-helix D and beta-sheet 3-1, and an insertion between helix G and H.</p>
+        <p>Additionally, the amino acid environment of the models was evaluated with Errat [<xref ref-type="bibr" rid="CR66">66</xref>] and Verify3D [<xref ref-type="bibr" rid="CR67">67</xref>] (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). By comparing the results, it can be seen that the models all score equally well but are less accurate than the template structures. An Errat quality factor of 95% is expected for crystal structures resolved at a resolution of 2.5&#xA0;&#xC5;. Using the Errat score per amino acid we were able to locate the deviations in the loop regions at the end of helix E where our two template structures connect and at the end of helix D where a large insertion was introduced. It is likely that in the minimisation protocol with tethered heavy atoms, the connectivity between template structures has not been fully optimised. Investigation of the amino acid environment with Verify3D resulted in similar conclusions as found with Errat and the Ramachandran data. The low scoring of Verify3D can be attributed to a bad folding of the regions around the helices D and F, and additional potential errors were located at the end of helix G, where again the two templates have been connected to each other.</p>
+        <p>Finally, the stereochemistry of the models was analysed with MOE (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> [<xref ref-type="bibr" rid="CR68">68</xref>]). Except for the already determined structural flaws in the regions around helices D, F and G, no additional flaws were found using these measurements, indicating that the overall fold of the protein is of acceptable quality.
+<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Validation results for the lowest energy models of CYP11B1 and CYP11B2 and the crystal structures which were used for the template, part II</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">MOE-protein report</th><th align="left" colspan="2">Observed CYP101 (2CPP)</th><th align="left" colspan="2">Observed CYP2C5 (1NR6)</th><th align="left" colspan="2">Observed CYP11B1 model</th><th align="left" colspan="2">Observed CYP11B2 model</th><th align="left" colspan="2">Reference values<sup>a</sup></th></tr><tr><th align="left">Parameter</th><th align="left">Mean</th><th align="left">S.D.</th><th align="left">Mean</th><th align="left">S.D.</th><th align="left">Mean</th><th align="left">S.D.</th><th align="left">Mean</th><th align="left">S.D.</th><th align="left">Mean</th><th align="left">S.D.</th></tr></thead><tbody><tr><td align="left">Trans-Omega</td><td char="." align="char">176.6</td><td char="." align="char">2.7</td><td char="." align="char">178.9</td><td char="." align="char">0.9</td><td char="." align="char">172.0</td><td char="." align="char">7.7</td><td char="." align="char">172.0</td><td char="." align="char">7.7</td><td char="." align="char">180.0</td><td char="." align="char">5.8</td></tr><tr><td align="left">C-alpha chirality</td><td char="." align="char">32.8</td><td char="." align="char">3.6</td><td char="." align="char">34.3</td><td char="." align="char">1.7</td><td char="." align="char">30.8</td><td char="." align="char">11.1</td><td char="." align="char">30.8</td><td char="." align="char">10.8</td><td char="." align="char">33.8</td><td char="." align="char">4.2</td></tr><tr><td align="left">Chi1-gauche minus</td><td char="." align="char">&#x2212;63.0</td><td char="." align="char">17.4</td><td char="." align="char">&#x2212;63.3</td><td char="." align="char">14.8</td><td char="." align="char">&#x2212;62.3</td><td char="." align="char">21.7</td><td char="." align="char">&#x2212;62.6</td><td char="." align="char">22.1</td><td char="." align="char">&#x2212;66.7</td><td char="." align="char">15.0</td></tr><tr><td align="left">Chi1-gauche plus</td><td char="." align="char">55.4</td><td char="." align="char">20.7</td><td char="." align="char">56.3</td><td char="." align="char">16.4</td><td char="." align="char">51.5</td><td char="." align="char">26.7</td><td char="." align="char">53.0</td><td char="." align="char">28.3</td><td char="." align="char">64.1</td><td char="." align="char">15.7</td></tr><tr><td align="left">Chi1-trans</td><td char="." align="char">185.3</td><td char="." align="char">13.3</td><td char="." align="char">184.2</td><td char="." align="char">12.9</td><td char="." align="char">186.3</td><td char="." align="char">21.9</td><td char="." align="char">186.8</td><td char="." align="char">20.3</td><td char="." align="char">183.6</td><td char="." align="char">16.8</td></tr><tr><td align="left">Helix phi</td><td char="." align="char">&#x2212;65.2</td><td char="." align="char">11.9</td><td char="." align="char">&#x2212;67.4</td><td char="." align="char">15.5</td><td char="." align="char">&#x2212;60.7</td><td char="." align="char">19.7</td><td char="." align="char">&#x2212;61.1</td><td char="." align="char">19.8</td><td char="." align="char">&#x2212;65.3</td><td char="." align="char">11.9</td></tr><tr><td align="left">Helix psi</td><td char="." align="char">&#x2212;41.2</td><td char="." align="char">16.5</td><td char="." align="char">&#x2212;37.6</td><td char="." align="char">17.9</td><td char="." align="char">&#x2212;42.5</td><td char="." align="char">25.1</td><td char="." align="char">&#x2212;41.9</td><td char="." align="char">25.2</td><td char="." align="char">&#x2212;39.4</td><td char="." align="char">11.3</td></tr><tr><td align="left">Chi1-pooled S.D.</td><td char="." align="char"/><td char="." align="char">15.5</td><td char="." align="char"/><td char="." align="char">13.8</td><td char="." align="char"/><td char="." align="char">22.5</td><td char="." align="char"/><td char="." align="char">21.6</td><td char="." align="char"/><td char="." align="char">15.7</td></tr><tr><td align="left">Proline phi</td><td char="." align="char">&#x2212;65.8</td><td char="." align="char">11.3</td><td char="." align="char">&#x2212;61.9</td><td char="." align="char">9.5</td><td char="." align="char">&#x2212;65.3</td><td char="." align="char">19.6</td><td char="." align="char">&#x2212;67.6</td><td char="." align="char">20.5</td><td char="." align="char">&#x2212;65.4</td><td char="." align="char">11.2</td></tr><tr><td align="left">Dihedral outliers</td><td char="." align="char" colspan="2">0</td><td char="." align="char" colspan="2">4</td><td char="." align="char" colspan="2">15</td><td char="." align="char" colspan="2">17</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">Bond angle outliers</td><td char="." align="char" colspan="2">0</td><td char="." align="char" colspan="2">0</td><td char="." align="char" colspan="2">3</td><td char="." align="char" colspan="2">4</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">Bond length outliers</td><td char="." align="char" colspan="2">0</td><td char="." align="char" colspan="2">0</td><td char="." align="char" colspan="2">0</td><td char="." align="char" colspan="2">1</td><td char="." align="char"/><td char="." align="char"/></tr></tbody></table><table-wrap-foot><p>Results were generated with the MOE module: protein Eval. The thresholds were chosen to be 5 for the Z-Score and 70 for the vanderWaals contacts</p><p><sup>a</sup>&#xA0;&#xA0;Reference values were published in a statistical survey of the high-resolution data in the Protein Data Bank <bold>[</bold><xref ref-type="bibr" rid="CR68">68</xref><bold>]</bold></p></table-wrap-foot></table-wrap></p>
+        <p>None of the structural flaws are located at residues in the active site or at residues lining the active site. The occurrence of Ramachandran errors and problems with modelling external loop regions seems an inevitable circumstance in homology modelling [<xref ref-type="bibr" rid="CR69">69</xref>, <xref ref-type="bibr" rid="CR70">70</xref>] and will probably not pose a problem for modelling protein-ligand interactions. All the abovementioned errors are expected to be alleviated during further investigation of protein-ligand interactions using molecular dynamics simulations. Therefore the current models have been selected as appropriate starting points for further analysis.</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Protein-substrate interactions</title>
+        <p>After quality assessment of the created protein models encompassing the various ligands, we investigated the steroid binding mode. All docking results from GOLD favoured the &#x3B2;-side of the steroid oriented to the heme with the C<sub>3</sub>-carbonyl pointing towards alpha-helix B&#x2032; (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). Visual inspection revealed that in case of reverse orientation of the steroid, unfavourable clashes of the C<sub>3</sub>-carbonyl in the opposite side of the pocket would occur. After docking the steroids into the active site, the protein&#x2013;ligand complexes were subjected to MOE minimisation as described in the homology modelling section. After minimisation, the distance between the heme iron atom and the different substrate hydroxylation sites (C<sub>11</sub>, C<sub>18</sub> and C<sub>19</sub>) was measured. The results are summarised in Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Hypothetical binding of 18-hydroxycorticosterone (18OH-B) inside the CYP11B2 active site for the synthesis of aldosterone. The heme prosthetic group contains a bound oxygen atom needed for catalytic function. The CYP11B2 model possesses Arg123 in alpha-helix B&#x2032; which is stabilised by Glu310 in alpha-helix I. 18OH-B possesses several hydrogen bonds: one internal hydrogen bond between the C<sub>18</sub>-hydroxyl and the C<sub>20</sub>-carbonyl, two hydrogen bonds between the C<sub>21</sub>-hydroxyl and the backbone carbonyls of Gly379 and Phe381, and finally a hydrogen bond between the C<sub>3</sub>-carbonyl and Arg123</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig4_HTML" id="MO4"/></fig><table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p>Hydroxylation distance table (iron atom&#x2013;carbon atom) after minimisation with MOE (distances in Angstrom)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2"/><th align="left" colspan="3">hCYP11B2</th><th align="left" colspan="3">hCYP11B2-TripMut</th><th align="left" colspan="3">HCYP11B1</th><th align="left" colspan="3">rCYP11B1</th><th align="left" colspan="3">rCYP11B2</th></tr><tr><th align="left">C11</th><th align="left">C18</th><th align="left">C19</th><th align="left">C11</th><th align="left">C18</th><th align="left">C19</th><th align="left">C11</th><th align="left">C18</th><th align="left">C19</th><th align="left">C11</th><th align="left">C18</th><th align="left">C19</th><th align="left">C11</th><th align="left">C18</th><th align="left">C19</th></tr></thead><tbody><tr><td align="left">DOC</td><td char="." align="char">4.72</td><td char="." align="char">4.30</td><td char="." align="char">5.61</td><td char="." align="char">4.37</td><td char="." align="char">4.65</td><td char="." align="char">5.32</td><td char="." align="char">4.30</td><td char="." align="char">4.56</td><td char="." align="char">5.48</td><td char="." align="char">4.30</td><td char="." align="char">4.75</td><td char="." align="char">4.83</td><td char="." align="char">4.70</td><td char="." align="char">4.24</td><td char="." align="char">5.54</td></tr><tr><td align="left">18OH-DOC</td><td char="." align="char">4.33</td><td char="." align="char">4.30</td><td char="." align="char">5.42<sup>a</sup></td><td char="." align="char">4.31</td><td char="." align="char">4.51</td><td char="." align="char">5.21<sup>b</sup></td><td char="." align="char">4.31</td><td char="." align="char">4.60</td><td char="." align="char">5.19<sup>b</sup></td><td char="." align="char">4.30</td><td char="." align="char">4.68</td><td char="." align="char">5.17<sup>b</sup></td><td char="." align="char">4.32</td><td char="." align="char">4.31</td><td char="." align="char">5.39<sup>a</sup></td></tr><tr><td align="left">B</td><td char="." align="char">5.39</td><td char="." align="char">4.06</td><td char="." align="char">5.46</td><td char="." align="char">5.37</td><td char="." align="char">4.40</td><td char="." align="char">5.22</td><td char="." align="char">5.43</td><td char="." align="char">4.39</td><td char="." align="char">5.28</td><td char="." align="char">5.33</td><td char="." align="char">4.49</td><td char="." align="char">4.94</td><td char="." align="char">5.28</td><td char="." align="char">4.21</td><td char="." align="char">5.20</td></tr><tr><td align="left">18OH-B</td><td char="." align="char">4.86</td><td char="." align="char">4.21</td><td char="." align="char">5.50<sup>a</sup></td><td char="." align="char">5.42</td><td char="." align="char">4.64</td><td char="." align="char">5.29<sup>c</sup></td><td char="." align="char">5.38</td><td char="." align="char">4.62</td><td char="." align="char">5.26<sup>d</sup></td><td char="." align="char">5.47</td><td char="." align="char">4.62</td><td char="." align="char">5.28<sup>d</sup></td><td char="." align="char">5.29</td><td char="." align="char">4.35</td><td char="." align="char">5.29<sup>a</sup></td></tr></tbody></table><table-wrap-foot><p>a&#xA0;&#xA0;Ligand C<sub>18</sub>-hydroxyl group forms a hydrogen bond with the C<sub>20</sub>-ketone group of the ligand</p><p>b&#xA0;&#xA0;Ligand C<sub>18</sub>-hydroxyl group forms a hydrogen bond with the iron-oxygen of the protein</p><p>c&#xA0;&#xA0;Ligand C<sub>18</sub>-hydroxyl group forms a hydrogen bond with the C<sub>11</sub>-hydroxyl group of the ligand</p><p>d&#xA0;&#xA0;Ligand C<sub>11</sub>-hydroxyl group forms a hydrogen bond with the C<sub>18</sub>-hydroxyl group of the ligand</p></table-wrap-foot></table-wrap></p>
+        <p>All ligands showed two very distinct interactions in the modelled active site cavities. Firstly, the ligands possess a steric fit for the C<sub>20</sub>-carbonyl and the C<sub>21</sub>-hydroxyl in a small cavity created between helix K and beta-sheet 6-1. Inside this cavity, the C<sub>21</sub>-hydroxyl group possesses two hydrogen bonding interactions with the protein backbones of Gly379 and Phe381 (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). The presence of these amino acids in the active site cavity coincides with the models of Belkina et&#xA0;al., but for those models, no interactions between protein and ligand were discussed [<xref ref-type="bibr" rid="CR34">34</xref>].</p>
+        <p>Secondly, the ligands possess an interaction between the C<sub>3</sub>-carbonyl and active site residue Arg123 in helix B&#x2032;. Arg123 is stabilised by Glu310 in helix I, which has further stabilising interactions with the protein backbone. Glu310 coincides with an aspartic acid in the CYP2 family which from visual inspection of the crystal structures of CYP2C5 (pdb-code 1NR6) and CYP2C9 (pdb-code 1OG5) seems to play a specific stabilising role in the active site structure; it is expected that Glu310 has the same stabilising role. The difference in chain length between an aspartic acid and a glutamic acid also determines the flexibility of helix B&#x2032;. It can move 1.5&#xA0;&#xC5; further out of the active site cavity in all CYP11B models allowing the steroid to fit parallel to the heme. The ligands also possess many hydrophobic interactions in this region, particularly with Phe130 <bold>(</bold>Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref><bold>)</bold>. Due to the close interactions with the A and B rings of the steroid skeleton, this amino acid might play an important role in substrate stabilisation. The presence of Phe130 in our models coincides with the models of Ulmschneider et&#xA0;al. [<xref ref-type="bibr" rid="CR35">35</xref>] where it is seemingly involved in ring stacking with their inhibitors.</p>
+        <p>There are also two striking differences between the CYP11B1 and CYP11B2 models. Firstly, the active site cavity near beta-sheet 6-1 is smaller in both CYP11B2 models compared to the CYP11B1 models, with rCYP11B1 being the largest. This small cavity is formed by the loop region between helix K and beta-sheet 6-1 (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). Comparing this cavity in both the hCYP11B1 and hCYP11B2 models, we find that in hCYP11B1 this cavity has a 9&#x2013;14% larger volume, dependent on amino acid flexibility as well as the probe radius chosen for calculation of the volume (differing from 1.0 to 1.5&#xA0;&#xC5;). This difference in size is caused by the folding of Leu407 which induces a 1.0&#xA0;&#xC5; outward shift of the loop region. A comparison of the models with the crystal structures of the CYP2 family reveals that the loop region in the CYP11B models is in closer proximity to helix I (by 1.5&#xA0;&#xC5;). This contact is defined by two amino acids having relatively smaller sidechains (Pro322 and Val378 in CYP11B) than observed in the CYP2C family (generally Thr/Val and Leu/Ile). Changes in helix I such as the mutant A320V between hCYP11B1 and hCYP11B2 are likely to have a direct influence on the folding of this region.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Active site volume difference between the hCYP11B1 (white) and hCYP11B2 models (orange). Shown for both hCYP11B1 and hCYP11B2 are the active site volume and the backbone trace. <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole are indicated with blue and purple respectively. It is clear to see that hCYP11B1 contains a larger active site between helix I and sheet 6-1. This cavity allows <italic>S</italic>-fadrazole to fit the cavity, but not <italic>R</italic>-fadrazole (black arrow). On the other side of the active site near Helix B&#x2032; and Arg123, hCYP11B2 contains the larger cavity, which might rationalise the better fit of <italic>R</italic>-fadrazole in the cavity</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig5_HTML" id="MO5"/></fig></p>
+        <p>Secondly, helix B&#x2032; is shifted outward by 1.1&#xA0;&#xC5; in both CYP11B2 models (the backbone RMSD of helix B&#x2032; of hCYP11B1 and hCYP11B2 is 2.13&#xA0;&#xC5;). The change in spatial positioning of this helix is probably caused by the mutants L301P and E302D in helix I, but because this region is on the surface of the protein, the exact cause is less clear. In the hCYP11B2 model, Glu302 contacts helix B&#x2032; at Lys127, which forms the counter charge for the C-terminal end of this helix. Hasemann et&#xA0;al have posed that movement of helices B&#x2032;, F and G is involved in the opening of the active site cavity [<xref ref-type="bibr" rid="CR71">71</xref>]. Changing the stabilising environment of helix B&#x2032; has a likely effect on the structural stability of the helix and may result in a loss of activity.</p>
+        <p>Introducing the triple mutant investigated by Bottner et&#xA0;al. [<xref ref-type="bibr" rid="CR36">36</xref>] by means of the hCYP11B2-TripMut model showed that the hydroxylation distance pattern of the substrates shifts as expected from hCYP11B2 to that of hCYP11B1. Both hCYP11B1 and hCYP11B2-TM display similar active site cavities near beta-sheet 6-1 (backbone RMSD 1.43&#xA0;&#xC5;) with only slight deviations in the hydroxylation distances for the ligands (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>). This confirms the behaviour of the triple mutant in enzymatic activity found by the study of Bottner et&#xA0;al. To speculate further, Bottner et&#xA0;al have shown that the A320V mutant alone or the L301P/E302D mutant alone, is not enough to significantly change aldosterone synthesis [<xref ref-type="bibr" rid="CR36">36</xref>]. Only mutation in both regions results in an almost complete loss of the aldosterone synthesis capabilities of hCYP11B2. It is likely that the subtle changes on both sides of the active site go hand-in-hand to (nearly) completely convert the activity of hCYP11B2 into that of hCYP11B1.</p>
+        <p>For DOC, our results indicate that hCYP11B1 and rCYP11B1 preferentially catalyse C<sub>11</sub>-hydroxylation, whereas hCYP11B2 and rCYP11B2 preferentially catalyse C<sub>18</sub>-hydroxylation. For both CYP11B2 models, the shifted alpha-helix B&#x2032; causes DOC to present its C<sub>18</sub> closest to the iron as it is repositioned by the strong interaction of the C<sub>3</sub>-carbonyl group with Arg123 in alpha-helix B&#x2032;. Additionally, the larger active site of rCYP11B1 around beta-sheet 6-1 allows DOC to fit further into the niche presenting C<sub>19</sub> into hydroxylation range (distance less than 5.0&#xA0;&#xC5;). A point of argument against a preferred C<sub>18</sub>-hydroxylation of DOC by CYP11B2 is that in&#xA0;vitro measurements indicate higher levels of the C<sub>11</sub>-hydroxylated product B [<xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR21">21</xref>]. However, both C<sub>11</sub>- and C<sub>18</sub>-hydroxylated products of DOC can be promptly consumed as a substrate for the production of 18OH-B and subsequently aldosterone, in in&#xA0;vitro [<xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR21">21</xref>]. This apparent discrepancy between observed and predicted regioselectivity of DOC hydroxylation by CYP11B2 may possibly indicate that other factors than hydroxylation distances are involved in the formation of the actual products.</p>
+        <p>For 18OH-DOC, the C<sub>18</sub>-hydroxyl group forms a hydrogen bond with the iron&#x2013;oxygen limiting hydroxylation to C<sub>11</sub> which is in closest proximity to the iron. In the CYP11B2 models both C<sub>11</sub> and C<sub>18</sub> are in approximately equal distance to the iron and an internal hydrogen bond is formed by the substrate between the C<sub>18</sub>-hydroxyl group and the C<sub>20</sub>-carbonyl. Although both C<sub>11</sub>- and C<sub>18</sub>-hydroxylation are shown to be possible in such a complex, oxidation on the unsubstituted C<sub>11</sub> is likely to form a more stable reaction intermediate.</p>
+        <p>In all models, the two C<sub>11</sub>-hydroxylated ligands B and 18OH-B only portray C<sub>18</sub> in close proximity to the iron, as the C<sub>11</sub>-hydroxyl group blocks access of C<sub>11</sub> to the heme iron. The positioning of the C<sub>18</sub>-hydroxyl group of 18OH-B in the active site cavity appears to determine conversion into aldosterone. In both CYP11B2 models, the natural substrate is shifted above the heme, which creates a slightly larger active site cavity near beta-sheet 6-1 for the C<sub>18</sub>-hydroxyl group to rotate in. This difference in size allows room for an internal hydrogen bond between the C<sub>18</sub>-hydroxyl group and the C<sub>20</sub>-carbonyl for both 18OH-DOC and 18OH-B. In rCYP11B1 and hCYP11B1, the C<sub>18</sub>-hydroxyl group forms a hydrogen bond with the heme oxygen atom which blocks C<sub>18</sub> for hydroxylation (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). Interestingly, in the hCYP11B2-TripMut, the C<sub>18</sub>-hydroxyl group forms an internal hydrogen bond with the C<sub>11</sub>-hydroxyl group, and thereby also blocks the C<sub>18</sub> for hydroxylation.</p>
+        <p>In conclusion, we propose that the immediate folding of the active site around the substrate C<sub>18</sub>-hydroxyl group may be the key difference between the two isoforms leading to the production of aldosterone by CYP11B2 and not by CYP11B1. To speculate further on the mechanism of the enzymatic formation of aldosterone from 18OH-B, we hypothesise that a stable internal hydrogen bond for the C<sub>18</sub>-hydroxyl group of the ligand may be essential to stabilise its C<sub>18</sub> against further oxidation. A second oxygen atom can then be inserted between C<sub>18</sub> and one of its hydrogen atoms, forming a C<sub>18</sub>-<italic>gem-</italic>diol intermediate which forms aldosterone by elimination of water. Although the formation of a C<sub>18</sub>-<italic>gem-</italic>diol has been proposed by Johnston et&#xA0;al. [<xref ref-type="bibr" rid="CR72">72</xref>], the precise mechanism of oxidation is still unknown. This proposed method of substrate stabilisation may explain the regioselectivity of the two CYP11B isoforms and can be attributed to the subtle changes observed on two sides of the active site cavity; the cavity near helix K and the positioning of helix B&#x2032;.</p>
+      </sec>
+      <sec id="Sec11">
+        <title>Protein-inhibitor interactions</title>
+        <p>The non-steroidal inhibitors, metyrapone, <italic>R</italic>-etomidate, <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole were docked flexibly into the active site of the human CYP11B models where their aromatic nitrogen atom forms a strong interaction with the sixth ligating position of the heme iron atom. The accessible electron lone pair of the heterocyclic nitrogen atom is required for heme iron complexation, a well-known interaction for non-steroidal CYP inhibitors [<xref ref-type="bibr" rid="CR73">73</xref>, <xref ref-type="bibr" rid="CR74">74</xref>].</p>
+        <p>The GOLD docking results showed all ligands to bind in one favourable conformation. The enantiomers <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole mainly favoured one particular orientation in the active site cavities of hCYP11B2 and hCYP11B1 respectively. The higher affinity of <italic>S</italic>-fadrazole to hCYP11B1 and <italic>R</italic>-fadrazole to hCYP11B2 can be attributed to the active site difference near beta-sheet 6-1 and helix I (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). The difference in affinity is determined by the steric aspects of the active site cavity allowing only <italic>S</italic>-fadrazole to fit in the active site of hCYP11B1, where <italic>R</italic>-fadrazole possesses a steric clash (black arrow). In hCYP11B2, it is less clear why <italic>R</italic>-fadrazole fits the active site best, but this is mainly determined by steric effects near helix B&#x2032;. Due to the presence of rotatable bonds, <italic>R</italic>-etomidate was able to dock in different orientations, but favoured one particular conformation with its phenyl ring pointing into the direction of helix B&#x2032;. The main flexibility observed was caused by the ethyl-ester group and the docking score of those conformations was very similar. Metyrapone was able to dock with both pyridine rings to the iron, but mainly favoured a conformation with the carbonyl facing Arg110. Since all ligands favoured only one orientation, it was this orientation that was investigated by MD.</p>
+        <p>Our in&#xA0;vitro test results show a striking enantioselectivity of fadrazole binding for the CYP11B family. We find <italic>R</italic>-fadrazole to be the most active enantiomer for CYP11B2 as well as being selective (Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). In contrast, for CYP11B1 it is <italic>S</italic>-fadrazole which appears to be the most potent enantiomer. A similar stereoselectivity as for CYP11B1 has also been described for aromatase, wwith the <italic>S</italic>-enantiomer being the better aromatase inhibitor [<xref ref-type="bibr" rid="CR75">75</xref>]. The docking results from both Goldscore and Chemscore predict the same enantioselectivity for fadrazole in the CYP11B family as observed in&#xA0;vitro, indicating that the three dimensional models contain promising accuracy for the valid prediction of enantiomer selectivity. Docking results of the two other inhibitors metyrapone and <italic>R</italic>-etomidate confirm the trend of inhibitor potency as determined by the in&#xA0;vitro experiments (Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>).
+<table-wrap id="Tab5"><label>Table&#xA0;5</label><caption><p>Correlation of docking and molecular dynamics results to in&#xA0;vitro data for both human CYP11B1 and CYP11B2 models</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">IC50 (nM)</th><th align="left">Goldscore</th><th align="left">&#x394;G Goldscore (kcal/mol)</th><th align="left">&#x394;G Chemscore (kcal/mol)</th><th align="left">U<sub>non-bonded </sub>(kcal/mol)</th></tr></thead><tbody><tr><td align="left" colspan="6">hCYP11B1</td></tr><tr><td align="left">Metyrapone</td><td char="." align="char">46.4&#xA0;&#xB1;&#xA0;10.4</td><td char="." align="char">57.33</td><td char="." align="char">&#x2212;8.43</td><td char="." align="char">&#x2212;8.73</td><td char="&#xB1;" align="char">&#x2212;48.4&#xA0;&#xB1;&#xA0;3.7</td></tr><tr><td align="left"><italic>R</italic>-Etomidate</td><td char="." align="char">0.5&#xA0;&#xB1;&#xA0;0.2</td><td char="." align="char">66.21</td><td char="." align="char">&#x2212;9.38</td><td char="." align="char">&#x2212;9.25</td><td char="&#xB1;" align="char">&#x2212;56.0&#xA0;&#xB1;&#xA0;2.4</td></tr><tr><td align="left"><italic>R</italic>-Fadrazole</td><td char="." align="char">118.6&#xA0;&#xB1;&#xA0;8.9</td><td char="." align="char">54.01</td><td char="." align="char">&#x2212;8.07</td><td char="." align="char">&#x2212;8.14</td><td char="&#xB1;" align="char">&#x2212;38.4&#xA0;&#xB1;&#xA0;2.5</td></tr><tr><td align="left"><italic>S</italic>-Fadrazole</td><td char="." align="char">39.5&#xA0;&#xB1;&#xA0;4.4</td><td char="." align="char">56.67</td><td char="." align="char">&#x2212;8.36</td><td char="." align="char">&#x2212;8.77</td><td char="&#xB1;" align="char">&#x2212;56.3&#xA0;&#xB1;&#xA0;3.4</td></tr><tr><td align="left" colspan="6">hCYP11B2</td></tr><tr><td align="left">Metyrapone</td><td char="." align="char">207.8&#xA0;&#xB1;&#xA0;4.5</td><td char="." align="char">49.99</td><td char="." align="char">&#x2212;7.64</td><td char="." align="char">&#x2212;7.95</td><td char="&#xB1;" align="char">&#x2212;36.2&#xA0;&#xB1;&#xA0;7.5</td></tr><tr><td align="left"><italic>R</italic>-Etomidate</td><td char="." align="char">1.7&#xA0;&#xB1;&#xA0;0.9</td><td char="." align="char">65.21</td><td char="." align="char">&#x2212;9.28</td><td char="." align="char">&#x2212;9.21</td><td char="&#xB1;" align="char">&#x2212;54.4&#xA0;&#xB1;&#xA0;2.9</td></tr><tr><td align="left"><italic>R</italic>-Fadrazole</td><td char="." align="char">6.0&#xA0;&#xB1;&#xA0;1.9</td><td char="." align="char">63.20</td><td char="." align="char">&#x2212;9.06</td><td char="." align="char">&#x2212;9.38</td><td char="&#xB1;" align="char">&#x2212;55.9&#xA0;&#xB1;&#xA0;3.3</td></tr><tr><td align="left"><italic>S</italic>-Fadrazole</td><td char="." align="char">171.2&#xA0;&#xB1;&#xA0;51.7</td><td char="." align="char">53.81</td><td char="." align="char">&#x2212;8.05</td><td char="." align="char">&#x2212;8.12</td><td char="&#xB1;" align="char">&#x2212;44.3&#xA0;&#xB1;&#xA0;1.8</td></tr></tbody></table><table-wrap-foot><p>Indicated are the Goldscore and the extracted Goldscore binding free energy as well as the Chemscore binding free energy. U<sub>non-bonded</sub> indicates the total non-bonded energies between the protein and the ligand for the molecular dynamics simulations</p></table-wrap-foot></table-wrap></p>
+        <p>Our human CYP11B1 and CYP11B2 models are able to rationalise the (inverse) enantioselectivity of CYP11B1 and CYP11B2 inhibition by fadrazole as observed in the in&#xA0;vitro tests. The enantioselectivity can be attributed to the small cavity size differences of the models. Both enantiomers bind with a steric fit comparable to the A, B and C rings of the endogenous substrates, where the cyanobenzyl moiety forms a &#x3C0;&#x2013;&#x3C0; stacking interaction with Phe130. In addition to the steric interactions, both enantiomers possess a strong polar interaction between their cyanide moiety and Arg123, mimicking the interaction that the C<sub>3</sub>-carbonyl of the natural substrates possesses with this amino acid.</p>
+        <p>Metyrapone was not found to possess any hydrogen bonding or polar interaction with the active site other than the aromatic nitrogen. Instead it possesses a pronounced steric fit with its second aromatic ring overlapping the space occupied by the A-ring in case of the steroidal substrate. <italic>R</italic>-etomidate, which was not designed as a CYP11B specific inhibitor, does possess a hydrogen bonding interaction. The hydrogen bond is made between its ester moiety and the catalytic Thr318, and is present in both hCYP11B1 and hCYP11B2. This may explain the non-selective inhibitory action of <italic>R</italic>-etomidate on both isoforms. Its aromatic phenyl ring also possesses strong steric interactions, overlapping the same space of the steroidal A-ring like metyrapone.</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Molecular dynamics</title>
+        <p>Given the promising prediction of the models for substrate conversion, substrate binding, inhibitor binding and the satisfying Ramachandran Plots, we conducted molecular dynamics simulations to obtain a better understanding of the dynamic behaviour of the inhibitors in the active site of the enzyme models. To investigate the structural integrity change during the simulation, we calculated the relative root mean square deviation (RMSD) over all heavy atoms (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>).
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>RMSD for the molecular dynamics simulations of the different protein-ligand complexes of the hCYP11B1 and hCYP11B2 models. Metyrapone is coloured black, <italic>R</italic>-etomidate green, <italic>R</italic>-fadrazole red, and <italic>S</italic>-fadrazole blue</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig6_HTML" id="MO6"/></fig></p>
+        <p>During the first 500&#xA0;ps, the RMSD increased and the protein still adapted towards its optimal conformation. After this point in time hardly any change in the three dimensional structures of the proteins was observed. The largest fluctuations of the protein were found in the flexible regions with peak values located in the structures around alpha-helix D (not shown). In the random coil following alpha-helix D we introduced a large insertion of seven amino acids, which elongates the alpha-helix by one turn before it connects to the following beta-sheet. Inside the water box, this region is found to protrude into the water without any stabilising protein interactions and unfolds due to interaction with water. In all the simulations we observed an opening of the active site and the continuous flow of water molecules in and out of the active site cavity. Several water molecules retained key positions, such as the water molecules that make up the channel towards the conserved Glu459 (not shown).</p>
+        <p>All the inhibitors maintained the same interactions as observed in the docking study. In Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>, the resulting poses of the inhibitors metyrapone and <italic>R</italic>-etomidate are displayed. Both possess a ring stacking with Phe130 in the active site, and <italic>R</italic>-etomidate also possesses a hydrogen bond with Thr318. Arg110 stabilises the heme in the active site. In Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>, the poses of <italic>R</italic>-fadrazole in the CYP11B2 active site and <italic>S</italic>-fadrazole in the CYP11B1 active site are compared. Here it can be seen that in the CYP11B2 model, alpha-helix B&#x2032; is moved further out of the active site. In the CYP11B2 model, Arg123 possesses a polar interaction with Glu310, whereas Phe130 provides a horizontal ring stacking for <italic>R</italic>-fadrazole. In the CYP11B1 model, <italic>S</italic>-fadrazole possesses the same interactions with the protein, although the ring stacking with Phe130 is vertical rather than horizontal. Importantly, the interaction points of the fadrazole enantiomers and those of the natural substrate coincide very well.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>CYP11B2 active site model with metyrapone (purple) and <italic>R</italic>-etomidate (blue) in the active site. Indicated are the stabilising interaction between Arg110 and the heme, as well as Phe130 which accommodates a ring stacking with the ligands. The ester group of <italic>R</italic>-etomidate possesses a hydrogen bond with Thr318</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig7_HTML" id="MO7"/></fig><fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>CYP11B1 model (orange) containing <italic>S</italic>-fadrazole (purple) in the active site and CYP11B2 model (white) containing <italic>R</italic>-fadrazole (blue) in the active site. Indicated, the stabilising interaction between Arg110 and the heme, as well as the stabilising hydrogen bonds between Arg123 and Glu310. Phe130 accommodates a ring stacking with the fadrazole enantiomers; horizontally for the <italic>R</italic>-enantiomer and vertically for the <italic>S</italic>-enantiomer</p></caption><graphic position="anchor" xlink:href="10822_2007_9128_Fig8_HTML" id="MO8"/></fig></p>
+        <p><italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole displayed different behaviour in the other protein models. <italic>R</italic>-fadrazole lost its direct interaction with the heme iron atom in the hCYP11B1 model, exchanged it for a water molecule and drifted to the top of the active site. <italic>S</italic>-fadrazole displayed a similar behaviour in the hCYP11B2 model. Repeated simulations did not change either scenario, indicating that unlike the eutomers, the distomers do not comfortably fit our starting models.</p>
+        <p>Because the complex was stable over the last 500 ps, we sampled the non-bonded interactions between the protein and the ligand for this time period (Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). These interactions contribute to the binding free energy, although the solvation effects of free ligand still need to be subtracted [<xref ref-type="bibr" rid="CR76">76</xref>]. These energies follow the same generic trend which emphasise the strong interactions for <italic>R</italic>-etomidate in both hCYP11B models and the strong interactions of <italic>S</italic>-fadrazole in hCYP11B1 and <italic>R</italic>-fadrazole in hCYP11B2 respectively.</p>
+      </sec>
+    </sec>
+    <sec id="Sec13" sec-type="conclusion">
+      <title>Conclusion</title>
+      <p>We have constructed homology models of the two isoforms of the human CYP11B family, as well as promising starting models for the rat isoforms. These models are based on the knowledge of substrate specificity, which were defined as the differences in hydroxylation distances between the active site and the C<sub>11</sub>, C<sub>18</sub> and C<sub>19</sub> of the steroid skeleton. As both hCYP11B1 and hCYP11B2 possess virtually similar active sites, the steric fit of the different steroidal ligands seems to be one of the strongest determinants for substrate specificity.</p>
+      <p>We have found that within the active site of the hCYP11B2 model, the endogenous ligand 18-hydroxycorticosterone forms a stabilising internal hydrogen bond. This is not observed for the hCYP11B1 model, which might rationalise why 18-hydroxycorticosterone is solely a substrate for CYP11B2 to yield aldosterone. In addition, the interactions of the C<sub>3</sub>-carbonyl with Arg123 in alpha-helix B&#x2032;, the interaction of the C<sub>21</sub>-hydroxyl with the backbones of Gly379 and Phe381, and the presence of Phe130 are also important for the stabilisation of the ligand in the protein active site. Determinant for the interaction of Arg123 is the presence of Glu310 in alpha-helix I, which stabilises Arg123 and alpha-helix B&#x2032; in the active site.</p>
+      <p>The known non-steroidal CYP11B inhibitors metyrapone, <italic>R</italic>-etomidate, <italic>R</italic>-fadrazole and <italic>S</italic>-fadrazole were postulated to occupy the same space in the active site as the endogenous substrates. Conclusions from both molecular docking and molecular dynamics simulations corroborate the measured activity data from in&#xA0;vitro experiments, supporting the validity of the constructed models for these ligands. Importantly, these models rationalise the enantioselectivity of fadrazole, with the <italic>R</italic>-enantiomer being most potent on CYP11B2 and the <italic>S</italic>-enantiomer being most potent in CYP11B1.</p>
+      <p>The constructed models are useful tools in trying to understand some of the molecular mechanisms involved in ligand binding and substrate conversion for the CYP11B family. As such, these models might also be appropriate tools for more detailed protein-inhibitor modelling studies as well as for ligand design or database screening, following further model optimisation and model tuning.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This research is supported by the Dutch Technology Foundation STW, applied science division of NWO and the Technology Program of the Ministry of Economic Affairs. Grant Number MFA 6504.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Connell</surname>
+              <given-names>JMC</given-names>
+            </name>
+            <name>
+              <surname>Davies</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>J Endocrinol</source>
+          <year>2005</year>
+          <volume>186</volume>
+          <fpage>1</fpage>
+          <pub-id pub-id-type="doi">10.1677/joe.1.06017</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Connell JMC, Davies E (2005) J Endocrinol 186:1 <pub-id pub-id-type="pmid">16002531</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Delcayre</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Silvestre</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Garnier</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Oubenaissa</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Cailmail</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Tatara</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Swynghedauw</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Robert</surname>
+              <given-names>V</given-names>
+            </name>
+          </person-group>
+          <source>Kidney Int</source>
+          <year>2000</year>
+          <volume>57</volume>
+          <fpage>1346</fpage>
+          <pub-id pub-id-type="doi">10.1046/j.1523-1755.2000.00973.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Delcayre C, Silvestre JS, Garnier A, Oubenaissa A, Cailmail S, Tatara E, Swynghedauw B, Robert V (2000) Kidney Int 57:1346 <pub-id pub-id-type="pmid">10760065</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Struthers</surname>
+              <given-names>AD</given-names>
+            </name>
+          </person-group>
+          <source>Am Heart J</source>
+          <year>2002</year>
+          <volume>144</volume>
+          <fpage>S2</fpage>
+          <pub-id pub-id-type="doi">10.1067/mhj.2002.129969</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Struthers AD (2002) Am Heart J 144:S2 <pub-id pub-id-type="pmid">12422134</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="other">Consensus Trial Study Group. (1987) N Eng J Med 316:1429</citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="other">Solvd Investigators (1991) N Engl J Med 325:293</citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pitt</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Zannad</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Remme</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Cody</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Castaigne</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Perez</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Palensky</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Wittes</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>N Engl J Med</source>
+          <year>1999</year>
+          <volume>341</volume>
+          <fpage>709</fpage>
+          <pub-id pub-id-type="doi">10.1056/NEJM199909023411001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pitt B, Zannad F, Remme WJ, Cody R, Castaigne A, Perez A, Palensky J, Wittes J (1999) N Engl J Med 341:709 <pub-id pub-id-type="pmid">10471456</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pitt</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Remme</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Martinez</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Lopez-Sendon</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Zannad</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Neaton</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Roniker</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Hurley</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Burns</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Bittman</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Kleiman</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Cardiovasc Drugs Ther</source>
+          <year>2001</year>
+          <volume>15</volume>
+          <fpage>79</fpage>
+          <pub-id pub-id-type="doi">10.1023/A:1011119003788</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pitt B, Williams G, Remme WJ, Martinez F, Lopez-Sendon J, Zannad F, Neaton J, Roniker B, Hurley S, Burns D, Bittman R, Kleiman J (2001) Cardiovasc Drugs Ther 15:79 <pub-id pub-id-type="pmid">11504167</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pitt</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Remme</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Zannad</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Neaton</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Martinez</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Roniker</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Bittman</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Hurley</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Kleiman</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Gatlin</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>N Engl J Med</source>
+          <year>2003</year>
+          <volume>348</volume>
+          <fpage>1309</fpage>
+          <pub-id pub-id-type="doi">10.1056/NEJMoa030207</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pitt B, Remme WJ, Zannad F, Neaton J, Martinez F, Roniker B, Bittman R, Hurley S, Kleiman J, Gatlin M (2003) N Engl J Med 348:1309 <pub-id pub-id-type="pmid">12668699</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hartmann</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Muller</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Ehmer</surname>
+              <given-names>PB</given-names>
+            </name>
+          </person-group>
+          <source>Eur J Med Chem</source>
+          <year>2003</year>
+          <volume>38</volume>
+          <fpage>363</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0223-5234(03)00049-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hartmann RW, Muller U, Ehmer PB (2003) Eur J Med Chem 38:363 <pub-id pub-id-type="pmid">12750023</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>M&#xE9;nard</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Mol Cell Endocrinol</source>
+          <year>2004</year>
+          <volume>217</volume>
+          <fpage>45</fpage>
+          <pub-id pub-id-type="doi">10.1016/j.mce.2003.10.008</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">M&#xE9;nard J (2004) Mol Cell Endocrinol 217:45 <pub-id pub-id-type="pmid">15134800</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krum</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Nolly</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Workman</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>He</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Roniker</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Krause</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Fakouhi</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <source>Hypertension</source>
+          <year>2002</year>
+          <volume>40</volume>
+          <fpage>117</fpage>
+          <pub-id pub-id-type="doi">10.1161/01.HYP.0000025146.19104.FE</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Krum H, Nolly H, Workman D, He W, Roniker B, Krause S, Fakouhi K (2002) Hypertension 40:117 <pub-id pub-id-type="pmid">12154100</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rousseau</surname>
+              <given-names>MF</given-names>
+            </name>
+            <name>
+              <surname>Gurn&#xE9;</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Duprez</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Mieghem</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Robert</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Ahn</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Galanti</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Keterslegers</surname>
+              <given-names>J-M</given-names>
+            </name>
+          </person-group>
+          <source>J Am Coll Cardiol</source>
+          <year>2002</year>
+          <volume>40</volume>
+          <fpage>1596</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0735-1097(02)02382-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rousseau MF, Gurn&#xE9; O, Duprez D, van Mieghem W, Robert A, Ahn S, Galanti L, Keterslegers J-M (2002) J Am Coll Cardiol 40:1596 <pub-id pub-id-type="pmid">12427411</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sica</surname>
+              <given-names>DA</given-names>
+            </name>
+          </person-group>
+          <source>Heart Fail Rev</source>
+          <year>2005</year>
+          <volume>10</volume>
+          <fpage>23</fpage>
+          <pub-id pub-id-type="doi">10.1007/s10741-005-2345-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sica DA (2005) Heart Fail Rev 10:23 <pub-id pub-id-type="pmid">15947888</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weinberg</surname>
+              <given-names>OK</given-names>
+            </name>
+            <name>
+              <surname>Marquez-Garban</surname>
+              <given-names>DC</given-names>
+            </name>
+            <name>
+              <surname>Pietras</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <source>Drug Res Upd</source>
+          <year>2005</year>
+          <volume>8</volume>
+          <fpage>219</fpage>
+          <pub-id pub-id-type="doi">10.1016/j.drup.2005.06.002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Weinberg OK, Marquez-Garban DC, Pietras RJ (2005) Drug Res Upd 8:219 </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Altundag</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ibrahim</surname>
+              <given-names>NK</given-names>
+            </name>
+          </person-group>
+          <source>Oncologist</source>
+          <year>2006</year>
+          <volume>11</volume>
+          <fpage>553</fpage>
+          <pub-id pub-id-type="doi">10.1634/theoncologist.11-6-553</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Altundag K, Ibrahim NK (2006) Oncologist 11:553 <pub-id pub-id-type="pmid">16794235</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wada</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Ohnishi</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Nonaka</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Okanoto</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Yamano</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>J Biochem (Tokyo)</source>
+          <year>1985</year>
+          <volume>98</volume>
+          <fpage>245</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Wada A, Ohnishi T, Nonaka Y, Okanoto M, Yamano T (1985) J Biochem (Tokyo) 98:245 <pub-id pub-id-type="pmid">4044554</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yanagibashi</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Haniu</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Shively</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Shen</surname>
+              <given-names>WH</given-names>
+            </name>
+            <name>
+              <surname>Hall</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Biol Chem</source>
+          <year>1986</year>
+          <volume>261</volume>
+          <fpage>3556</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Yanagibashi K, Haniu M, Shively JE, Shen WH, Hall P (1986) J Biol Chem 261:3556 <pub-id pub-id-type="pmid">3485096</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nonaka</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Takemori</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Halder</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Sun</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Ohta</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hatano</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Takakusu</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Okamoto</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Eur J Biochem</source>
+          <year>1995</year>
+          <volume>229</volume>
+          <fpage>249</fpage>
+          <pub-id pub-id-type="doi">10.1111/j.1432-1033.1995.tb20462.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nonaka Y, Takemori H, Halder SK, Sun T, Ohta M, Hatano O, Takakusu A, Okamoto M (1995) Eur J Biochem 229:249 <pub-id pub-id-type="pmid">7744036</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fisher</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Friel</surname>
+              <given-names>EC</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Gomez-Sanchez</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Connell</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Fraser</surname>
+              <given-names>JMC</given-names>
+            </name>
+            <name>
+              <surname>Davies</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>J Clin Encrinol Metab</source>
+          <year>2001</year>
+          <volume>86</volume>
+          <fpage>4326</fpage>
+          <pub-id pub-id-type="doi">10.1210/jc.86.9.4326</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fisher A, Friel EC, Bernhardt R, Gomez-Sanchez C, Connell C, Fraser JMC, Davies E (2001) J Clin Encrinol Metab 86:4326 </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Domalik</surname>
+              <given-names>LK</given-names>
+            </name>
+            <name>
+              <surname>Chaplin</surname>
+              <given-names>DD</given-names>
+            </name>
+            <name>
+              <surname>Kirkman</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Howard</surname>
+              <given-names>TA</given-names>
+            </name>
+            <name>
+              <surname>Seldin</surname>
+              <given-names>MF</given-names>
+            </name>
+            <name>
+              <surname>Parker</surname>
+              <given-names>KL</given-names>
+            </name>
+          </person-group>
+          <source>Mol Endocrinol</source>
+          <year>1991</year>
+          <volume>5</volume>
+          <fpage>1851</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Domalik LK, Chaplin DD, Kirkman MS, Wu RC, Liu W, Howard TA, Seldin MF, Parker KL (1991) Mol Endocrinol 5:1851 </citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Okamoto</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nonaka</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>Eur J Biochem</source>
+          <year>1991</year>
+          <volume>202</volume>
+          <fpage>897</fpage>
+          <pub-id pub-id-type="doi">10.1111/j.1432-1033.1991.tb16449.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Okamoto M, Nonaka Y (1991) Eur J Biochem 202:897 <pub-id pub-id-type="pmid">1765101</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schoneshofer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Schefzig</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Oelkers</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <source>Horm Metab Res</source>
+          <year>1979</year>
+          <volume>11</volume>
+          <fpage>306</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schoneshofer M, Schefzig B, Oelkers W (1979) Horm Metab Res 11:306 <pub-id pub-id-type="pmid">222662</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dorr</surname>
+              <given-names>HG</given-names>
+            </name>
+            <name>
+              <surname>Kuhnle</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Holthausen</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Bidlingmaier</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Knorr</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Klin Wochenschr</source>
+          <year>1984</year>
+          <volume>62</volume>
+          <fpage>1011</fpage>
+          <pub-id pub-id-type="doi">10.1007/BF01711722</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dorr HG, Kuhnle U, Holthausen H, Bidlingmaier F, Knorr D (1984) Klin Wochenschr 62:1011 <pub-id pub-id-type="pmid">6096625</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Demers</surname>
+              <given-names>LM</given-names>
+            </name>
+            <name>
+              <surname>Melby</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Wilson</surname>
+              <given-names>TE</given-names>
+            </name>
+            <name>
+              <surname>Lipton</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Harvey</surname>
+              <given-names>HA</given-names>
+            </name>
+            <name>
+              <surname>Santen</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <source>J Clin Endocrinol Metab</source>
+          <year>1990</year>
+          <volume>70</volume>
+          <fpage>1162</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Demers LM, Melby JC, Wilson TE, Lipton A, Harvey HA, Santen RJ (1990) J Clin Endocrinol Metab 70:1162 <pub-id pub-id-type="pmid">2156889</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chang</surname>
+              <given-names>Y-T</given-names>
+            </name>
+            <name>
+              <surname>Stiffelman</surname>
+              <given-names>OB</given-names>
+            </name>
+            <name>
+              <surname>Vakser</surname>
+              <given-names>IA</given-names>
+            </name>
+            <name>
+              <surname>Loew</surname>
+              <given-names>GH</given-names>
+            </name>
+            <name>
+              <surname>Bridges</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Waskell</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <source>Protein Eng</source>
+          <year>1997</year>
+          <volume>10</volume>
+          <fpage>119</fpage>
+          <pub-id pub-id-type="doi">10.1093/protein/10.2.119</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chang Y-T, Stiffelman OB, Vakser IA, Loew GH, Bridges A, Waskell L (1997) Protein Eng 10:119 <pub-id pub-id-type="pmid">9089811</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Koymans</surname>
+              <given-names>LMH</given-names>
+            </name>
+            <name>
+              <surname>Vermeulen</surname>
+              <given-names>NPE</given-names>
+            </name>
+            <name>
+              <surname>Baarslag</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Donne-Op Kelder</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Des</source>
+          <year>1993</year>
+          <volume>7</volume>
+          <fpage>281</fpage>
+          <pub-id pub-id-type="doi">10.1007/BF00125503</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Koymans LMH, Vermeulen NPE, Baarslag A, Donne-Op den Kelder GM (1993) J Comput-Aided Mol Des 7:281 <pub-id pub-id-type="pmid">8377025</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cavalli</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Greco</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Novellino</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Recanatini</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Bioorg Med Chem</source>
+          <year>2000</year>
+          <volume>8</volume>
+          <fpage>2771</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0968-0896(00)00203-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cavalli A, Greco G, Novellino E, Recanatini M (2000) Bioorg Med Chem 8:2771 <pub-id pub-id-type="pmid">11131168</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lozano</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Lopez-de-Brinas</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Centeno</surname>
+              <given-names>NB</given-names>
+            </name>
+            <name>
+              <surname>Guigo</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Sanz</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Des</source>
+          <year>1997</year>
+          <volume>11</volume>
+          <fpage>395</fpage>
+          <pub-id pub-id-type="doi">10.1023/A:1007947411145</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lozano JJ, Lopez-de-Brinas E, Centeno NB, Guigo R, Sanz F (1997) J Comput-Aided Mol Des 11:395 <pub-id pub-id-type="pmid">9334905</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Recanatini</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Cavalli</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Valenti</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Med Res Rev</source>
+          <year>2002</year>
+          <volume>22</volume>
+          <fpage>282</fpage>
+          <pub-id pub-id-type="doi">10.1002/med.10010</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Recanatini M, Cavalli A, Valenti P (2002) Med Res Rev 22:282 <pub-id pub-id-type="pmid">11933021</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Usanov</surname>
+              <given-names>SA</given-names>
+            </name>
+            <name>
+              <surname>Graham</surname>
+              <given-names>SE</given-names>
+            </name>
+            <name>
+              <surname>Lepesheva</surname>
+              <given-names>GI</given-names>
+            </name>
+            <name>
+              <surname>Azeva</surname>
+              <given-names>TN</given-names>
+            </name>
+            <name>
+              <surname>Strushkevich</surname>
+              <given-names>NV</given-names>
+            </name>
+            <name>
+              <surname>Gilep</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Estabrook</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Peterson</surname>
+              <given-names>JA</given-names>
+            </name>
+          </person-group>
+          <source>Biochemistry</source>
+          <year>2002</year>
+          <volume>41</volume>
+          <fpage>8310</fpage>
+          <pub-id pub-id-type="doi">10.1021/bi0255928</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Usanov SA, Graham SE, Lepesheva GI, Azeva TN, Strushkevich NV, Gilep AA, Estabrook RW, Peterson JA (2002) Biochemistry 41:8310 <pub-id pub-id-type="pmid">12081479</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mast</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Graham</surname>
+              <given-names>SE</given-names>
+            </name>
+            <name>
+              <surname>Andersson</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Bjorkhem</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Hill</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Peterson</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Pikuleva</surname>
+              <given-names>IA</given-names>
+            </name>
+          </person-group>
+          <source>Biochemistry</source>
+          <year>2005</year>
+          <volume>44</volume>
+          <fpage>3259</fpage>
+          <pub-id pub-id-type="doi">10.1021/bi047566a</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mast N, Graham SE, Andersson U, Bjorkhem I, Hill C, Peterson J, Pikuleva IA (2005) Biochemistry 44:3259 <pub-id pub-id-type="pmid">15736936</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="other">Mast N, Murtazina D, Liu H, Graham SE, Bjorkhem I, Halpert JR, Peterson J, Pikuleva IA (2006) 45:4404</citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="other">Gomaa MS, Simons C, Brancale A (2007) J. Steroid Biochem Mol Biol doi:10.1016/j.jsbmb.2006.09.041</citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Belkina</surname>
+              <given-names>NV</given-names>
+            </name>
+            <name>
+              <surname>Lisurek</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Ivanov</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>J Inorg Biochem</source>
+          <year>2001</year>
+          <volume>87</volume>
+          <fpage>197</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0162-0134(01)00331-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Belkina NV, Lisurek M, Ivanov AS, Bernhardt R (2001) J Inorg Biochem 87:197 <pub-id pub-id-type="pmid">11744057</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ulmschneider</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Muller-Vieira</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Mitrenga</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hartmann</surname>
+              <given-names>RW</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2005</year>
+          <volume>48</volume>
+          <fpage>1796</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm049600p</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ulmschneider S, Muller-Vieira U, Mitrenga M, Hartmann RW (2005) J Med Chem 48:1796 <pub-id pub-id-type="pmid">15771425</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bottner</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Scharauber</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>J Biol Chem</source>
+          <year>1996</year>
+          <volume>271</volume>
+          <fpage>8028</fpage>
+          <pub-id pub-id-type="doi">10.1074/jbc.271.14.8028</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bottner B, Scharauber H, Bernhardt R (1996) J Biol Chem 271:8028 <pub-id pub-id-type="pmid">8626485</pub-id></citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Avgerinos</surname>
+              <given-names>PC</given-names>
+            </name>
+            <name>
+              <surname>Yanovski</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Oldfield</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Nieman</surname>
+              <given-names>LK</given-names>
+            </name>
+            <name>
+              <surname>Cutler</surname>
+              <given-names>GB</given-names>
+            </name>
+          </person-group>
+          <source>Ann Intern Med</source>
+          <year>1994</year>
+          <volume>121</volume>
+          <fpage>318</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Avgerinos PC, Yanovski JA, Oldfield EH, Nieman LK, Cutler GB (1994) Ann Intern Med 121:318 <pub-id pub-id-type="pmid">8042820</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fellows</surname>
+              <given-names>IW</given-names>
+            </name>
+            <name>
+              <surname>Bastow</surname>
+              <given-names>MD</given-names>
+            </name>
+            <name>
+              <surname>Byrne</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Allison</surname>
+              <given-names>SP</given-names>
+            </name>
+          </person-group>
+          <source>Br Med J</source>
+          <year>1983</year>
+          <volume>287</volume>
+          <fpage>1835</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Fellows IW, Bastow MD, Byrne AJ, Allison SP (1983) Br Med J 287:1835 <pub-id pub-id-type="pmid">6322902</pub-id></citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schieweck</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Bhatnagar</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Matter</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Cancer Res</source>
+          <year>1988</year>
+          <volume>48</volume>
+          <fpage>834</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schieweck K, Bhatnagar AS, Matter A (1988) Cancer Res 48:834 <pub-id pub-id-type="pmid">2962734</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bairoch</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Boeckmann</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>1991</year>
+          <volume>19</volume>
+          <fpage>2247</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Bairoch A, Boeckmann B (1991) Nucleic Acids Res 19:2247 <pub-id pub-id-type="pmid">2041811</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cuff</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Clamp</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Siddiqui</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Finlay</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Barton</surname>
+              <given-names>JG</given-names>
+            </name>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>1998</year>
+          <volume>14</volume>
+          <fpage>892</fpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/14.10.892</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cuff JA, Clamp ME, Siddiqui AS, Finlay M, Barton JG (1998) Bioinformatics 14:892 <pub-id pub-id-type="pmid">9927721</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <citation citation-type="other">Moe (The Molecular Operating Environment) Version 2005.06, software available from Chemical Computing Group Inc., 1010 Sherbrooke Street West, Suite 910, Montreal, Canada H3A 2R7. <ext-link ext-link-type="uri" xlink:href="http://www.chemcomp.com">http://www.chemcomp.com</ext-link></citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peterson</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Graham</surname>
+              <given-names>SE</given-names>
+            </name>
+          </person-group>
+          <source>Structure</source>
+          <year>1998</year>
+          <volume>6</volume>
+          <fpage>1079</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0969-2126(98)00109-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peterson JA, Graham SE (1998) Structure 6:1079 <pub-id pub-id-type="pmid">9753700</pub-id></citation>
+      </ref>
+      <ref id="CR44">
+        <label>44.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peterson</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Graham</surname>
+              <given-names>SE</given-names>
+            </name>
+          </person-group>
+          <source>Arch Biochem Biophys</source>
+          <year>1999</year>
+          <volume>369</volume>
+          <fpage>24</fpage>
+          <pub-id pub-id-type="doi">10.1006/abbi.1999.1350</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peterson JA, Graham SE (1999) Arch Biochem Biophys 369:24 <pub-id pub-id-type="pmid">10462437</pub-id></citation>
+      </ref>
+      <ref id="CR45">
+        <label>45.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gotoh</surname>
+              <given-names>O</given-names>
+            </name>
+          </person-group>
+          <source>J Biol Chem</source>
+          <year>1992</year>
+          <volume>267</volume>
+          <fpage>83</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Gotoh O (1992) J Biol Chem 267:83 <pub-id pub-id-type="pmid">1730627</pub-id></citation>
+      </ref>
+      <ref id="CR46">
+        <label>46.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lewis</surname>
+              <given-names>DF</given-names>
+            </name>
+            <name>
+              <surname>Watson</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Lake</surname>
+              <given-names>BG</given-names>
+            </name>
+          </person-group>
+          <source>Mutat Res</source>
+          <year>1998</year>
+          <volume>410</volume>
+          <fpage>245</fpage>
+          <pub-id pub-id-type="doi">10.1016/S1383-5742(97)00040-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lewis DF, Watson E, Lake BG (1998) Mutat Res 410:245 <pub-id pub-id-type="pmid">9630657</pub-id></citation>
+      </ref>
+      <ref id="CR47">
+        <label>47.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Poulos</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Raag</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>FASEB J</source>
+          <year>1992</year>
+          <volume>6</volume>
+          <fpage>674</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Poulos TL, Raag R (1992) FASEB J 6:674 <pub-id pub-id-type="pmid">1537455</pub-id></citation>
+      </ref>
+      <ref id="CR48">
+        <label>48.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grinberg</surname>
+              <given-names>AV</given-names>
+            </name>
+            <name>
+              <surname>Hanneman</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Schiffer</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Muller</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Heinemann</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Proteins</source>
+          <year>2000</year>
+          <volume>40</volume>
+          <fpage>590</fpage>
+          <pub-id pub-id-type="doi">10.1002/1097-0134(20000901)40:4&lt;590::AID-PROT50&gt;3.0.CO;2-P</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Grinberg AV, Hanneman F, Schiffer B, Muller J, Heinemann U, Bernhardt R (2000) Proteins 40:590 <pub-id pub-id-type="pmid">10899784</pub-id></citation>
+      </ref>
+      <ref id="CR49">
+        <label>49.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vijiyakumar</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Salerno</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <source>Biochim Biophys Acta</source>
+          <year>1992</year>
+          <volume>1160</volume>
+          <fpage>281</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Vijiyakumar S, Salerno JC (1992) Biochim Biophys Acta 1160:281 <pub-id pub-id-type="pmid">1477100</pub-id></citation>
+      </ref>
+      <ref id="CR50">
+        <label>50.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hiroi</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Kishimoto</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Chow</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Imaoka</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Igarashi</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Funae</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>Endocrinol</source>
+          <year>2001</year>
+          <volume>142</volume>
+          <fpage>3901</fpage>
+          <pub-id pub-id-type="doi">10.1210/en.142.9.3901</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hiroi T, Kishimoto W, Chow T, Imaoka S, Igarashi T, Funae Y (2001) Endocrinol 142:3901 </citation>
+      </ref>
+      <ref id="CR51">
+        <label>51.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Domanski</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Harlow</surname>
+              <given-names>GR</given-names>
+            </name>
+            <name>
+              <surname>Halpert</surname>
+              <given-names>JR</given-names>
+            </name>
+          </person-group>
+          <source>Arch Biochem Biophys</source>
+          <year>1998</year>
+          <volume>350</volume>
+          <fpage>223</fpage>
+          <pub-id pub-id-type="doi">10.1006/abbi.1997.0525</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Domanski TL, Liu J, Harlow GR, Halpert JR (1998) Arch Biochem Biophys 350:223 <pub-id pub-id-type="pmid">9473295</pub-id></citation>
+      </ref>
+      <ref id="CR52">
+        <label>52.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ekins</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Groot</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <source>Drug Metab Dispos</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>936</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ekins S, de Groot MJ, Jones JP (2001) Drug Metab Dispos 29:936 <pub-id pub-id-type="pmid">11408357</pub-id></citation>
+      </ref>
+      <ref id="CR53">
+        <label>53.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Daikh</surname>
+              <given-names>BE</given-names>
+            </name>
+            <name>
+              <surname>Lasker</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Raucy</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Koop</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <source>J Pharmacol Exp Ther</source>
+          <year>1994</year>
+          <volume>271</volume>
+          <fpage>1427</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Daikh BE, Lasker JM, Raucy JL, Koop DR (1994) J Pharmacol Exp Ther 271:1427 <pub-id pub-id-type="pmid">7996455</pub-id></citation>
+      </ref>
+      <ref id="CR54">
+        <label>54.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Seifert Tatzel</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Schmid</surname>
+              <given-names>S RD</given-names>
+            </name>
+            <name>
+              <surname>Pleiss</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Proteins</source>
+          <year>2006</year>
+          <volume>64</volume>
+          <fpage>147</fpage>
+          <pub-id pub-id-type="doi">10.1002/prot.20951</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Seifert A Tatzel, S Schmid RD, Pleiss J (2006) Proteins 64:147 <pub-id pub-id-type="pmid">16639745</pub-id></citation>
+      </ref>
+      <ref id="CR55">
+        <label>55.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MacKerell</surname>
+              <given-names>AD</given-names>
+            </name>
+            <name>
+              <surname>Bashford</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Bellott</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Dunbrack</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Evanseck</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Field</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Fischer</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Gao</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Michnick</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ngo</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Nguyen</surname>
+              <given-names>DT</given-names>
+            </name>
+            <name>
+              <surname>Prodhom</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Reiher</surname>
+              <given-names>WE</given-names>
+            </name>
+            <name>
+              <surname>Roux</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Schlenkrich</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Stote</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Straub</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Watanabe</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Wiorkiewicz-Kuczera</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Yin</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Karplus</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem B</source>
+          <year>1998</year>
+          <volume>102</volume>
+          <fpage>3586</fpage>
+          <pub-id pub-id-type="doi">10.1021/jp973084f</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">MacKerell AD Jr, Bashford D, Bellott M, Dunbrack RL Jr, Evanseck JD, Field MJ, Fischer S, Gao J, Michnick S, Ngo T, Nguyen DT, Prodhom B, Reiher WE III, Roux B, Schlenkrich M, Smith JC, Stote R, Straub J, Watanabe M, Wiorkiewicz-Kuczera J, Yin D, Karplus M (1998) J Phys Chem B 102:3586 </citation>
+      </ref>
+      <ref id="CR56">
+        <label>56.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hackett</surname>
+              <given-names>JG</given-names>
+            </name>
+            <name>
+              <surname>Brueggemeier</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Hadad</surname>
+              <given-names>CM</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>2005</year>
+          <volume>127</volume>
+          <fpage>5224</fpage>
+          <pub-id pub-id-type="doi">10.1021/ja044716w</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hackett JG, Brueggemeier RW, Hadad CM (2005) J Am Chem Soc 127:5224 <pub-id pub-id-type="pmid">15810858</pub-id></citation>
+      </ref>
+      <ref id="CR57">
+        <label>57.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Verdonk</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Cole</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Hartshorn</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <source>Proteins</source>
+          <year>2003</year>
+          <volume>52</volume>
+          <fpage>609</fpage>
+          <pub-id pub-id-type="doi">10.1002/prot.10465</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Verdonk ML, Cole JC, Hartshorn MJ, Murray CW, Taylor RD (2003) Proteins 52:609 <pub-id pub-id-type="pmid">12910460</pub-id></citation>
+      </ref>
+      <ref id="CR58">
+        <label>58.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eldridge</surname>
+              <given-names>MD</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Auton</surname>
+              <given-names>TR</given-names>
+            </name>
+            <name>
+              <surname>Paolini</surname>
+              <given-names>GV</given-names>
+            </name>
+            <name>
+              <surname>Mee</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Des</source>
+          <year>1997</year>
+          <volume>11</volume>
+          <fpage>425</fpage>
+          <pub-id pub-id-type="doi">10.1023/A:1007996124545</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Eldridge MD, Murray CW, Auton TR, Paolini GV, Mee RP (1997) J Comput-Aided Mol Des 11:425 <pub-id pub-id-type="pmid">9385547</pub-id></citation>
+      </ref>
+      <ref id="CR59">
+        <label>59.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Phillips</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Braun</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Gumbart</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Tajkhorshid</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Villa</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Chipot</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Skeel</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Kale</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Schulten</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2005</year>
+          <volume>26</volume>
+          <fpage>1781</fpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20289</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Phillips JC, Braun R, Wang W, Gumbart J, Tajkhorshid E, Villa E, Chipot C, Skeel R, Kale L, Schulten K (2005) J Comput Chem 26:1781 <pub-id pub-id-type="pmid">16222654</pub-id></citation>
+      </ref>
+      <ref id="CR60">
+        <label>60.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Batcho</surname>
+              <given-names>PF</given-names>
+            </name>
+            <name>
+              <surname>Case</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Schlick</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2001</year>
+          <volume>115</volume>
+          <fpage>4003</fpage>
+          <pub-id pub-id-type="doi">10.1063/1.1389854</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Batcho PF, Case DA, Schlick T (2001) J Chem Phys 115:4003 </citation>
+      </ref>
+      <ref id="CR61">
+        <label>61.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kawamoto</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Mitsuuchi</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Toda</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Miyahara</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Yokoyama</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Nakao</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Hosoda</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Yamamoto</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Imura</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Shizuta</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>FEBS Lett</source>
+          <year>1990</year>
+          <volume>269</volume>
+          <fpage>345</fpage>
+          <pub-id pub-id-type="doi">10.1016/0014-5793(90)81190-Y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kawamoto T, Mitsuuchi Y, Toda K, Miyahara K, Yokoyama Y, Nakao K, Hosoda K, Yamamoto Y, Imura H, Shizuta Y (1990) FEBS Lett 269:345 <pub-id pub-id-type="pmid">2401360</pub-id></citation>
+      </ref>
+      <ref id="CR62">
+        <label>62.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Erdmann</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Denner</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Gerst.</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Lenz</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Endocrin Res</source>
+          <year>1995</year>
+          <volume>21</volume>
+          <fpage>425</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Erdmann B, Denner K, Gerst. H., Lenz D, Bernhardt R (1995) Endocrin Res 21:425 </citation>
+      </ref>
+      <ref id="CR63">
+        <label>63.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Denner</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Doehmer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Endocrin Res</source>
+          <year>1995</year>
+          <volume>21</volume>
+          <fpage>443</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Denner K, Doehmer J, Bernhardt R (1995) Endocrin Res 21:443 </citation>
+      </ref>
+      <ref id="CR64">
+        <label>64.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bottner</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Denner</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Bernhardt</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Eur J Biochem</source>
+          <year>1998</year>
+          <volume>252</volume>
+          <fpage>458</fpage>
+          <pub-id pub-id-type="doi">10.1046/j.1432-1327.1998.2520458.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bottner B, Denner K, Bernhardt R (1998) Eur J Biochem 252:458 <pub-id pub-id-type="pmid">9546661</pub-id></citation>
+      </ref>
+      <ref id="CR65">
+        <label>65.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ramachandran</surname>
+              <given-names>GN</given-names>
+            </name>
+            <name>
+              <surname>Sasisekharan</surname>
+              <given-names>V</given-names>
+            </name>
+          </person-group>
+          <source>Adv Prot Chem</source>
+          <year>1968</year>
+          <volume>23</volume>
+          <fpage>283</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ramachandran GN, Sasisekharan V (1968) Adv Prot Chem 23:283 </citation>
+      </ref>
+      <ref id="CR66">
+        <label>66.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Covolos</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Yeates</surname>
+              <given-names>TO</given-names>
+            </name>
+          </person-group>
+          <source>Protein Sci</source>
+          <year>1993</year>
+          <volume>2</volume>
+          <fpage>1511</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Covolos C, Yeates TO (1993) Protein Sci 2:1511 <pub-id pub-id-type="pmid">8401235</pub-id></citation>
+      </ref>
+      <ref id="CR67">
+        <label>67.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bowie</surname>
+              <given-names>JU</given-names>
+            </name>
+            <name>
+              <surname>L&#xFC;thy</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Eisenberg</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>1991</year>
+          <volume>253</volume>
+          <fpage>164</fpage>
+          <pub-id pub-id-type="doi">10.1126/science.1853201</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bowie JU, L&#xFC;thy R, Eisenberg D (1991) Science 253:164 <pub-id pub-id-type="pmid">1853201</pub-id></citation>
+      </ref>
+      <ref id="CR68">
+        <label>68.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Laskowski</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Moss</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Thornton</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <source>J Mol biol</source>
+          <year>1993</year>
+          <volume>231</volume>
+          <fpage>1049</fpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1993.1351</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Laskowski RA, Moss AS, Thornton JM (1993) J Mol biol 231:1049 <pub-id pub-id-type="pmid">8515464</pub-id></citation>
+      </ref>
+      <ref id="CR69">
+        <label>69.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rupp</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Raub</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Marian</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>H&#xF6;ltje</surname>
+              <given-names>H-D</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Des</source>
+          <year>2005</year>
+          <volume>19</volume>
+          <fpage>149</fpage>
+          <pub-id pub-id-type="doi">10.1007/s10822-005-3692-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rupp B, Raub S, Marian C, H&#xF6;ltje H-D (2005) J Comput-Aided Mol Des 19:149 <pub-id pub-id-type="pmid">16059669</pub-id></citation>
+      </ref>
+      <ref id="CR70">
+        <label>70.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tanaka</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Okuda</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Yamamoto</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>Chem Pharm Bull</source>
+          <year>2004</year>
+          <volume>52</volume>
+          <fpage>830</fpage>
+          <pub-id pub-id-type="doi">10.1248/cpb.52.830</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tanaka T, Okuda T, Yamamoto Y (2004) Chem Pharm Bull 52:830 <pub-id pub-id-type="pmid">15256703</pub-id></citation>
+      </ref>
+      <ref id="CR71">
+        <label>71.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hasemann</surname>
+              <given-names>CA</given-names>
+            </name>
+            <name>
+              <surname>Kurumbail</surname>
+              <given-names>RG</given-names>
+            </name>
+            <name>
+              <surname>Boddupalli</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Peterson</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Deisenhofer</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Structure</source>
+          <year>1995</year>
+          <volume>15</volume>
+          <fpage>41</fpage>
+          <pub-id pub-id-type="doi">10.1016/S0969-2126(01)00134-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hasemann CA, Kurumbail RG, Boddupalli SS, Peterson JA, Deisenhofer J (1995) Structure 15:41 <pub-id pub-id-type="pmid">7743131</pub-id></citation>
+      </ref>
+      <ref id="CR72">
+        <label>72.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johnston</surname>
+              <given-names>JO</given-names>
+            </name>
+            <name>
+              <surname>Wright</surname>
+              <given-names>CL</given-names>
+            </name>
+            <name>
+              <surname>Holbert</surname>
+              <given-names>GW</given-names>
+            </name>
+          </person-group>
+          <source>J Steroid Biochem Mol Biol</source>
+          <year>1995</year>
+          <volume>52</volume>
+          <fpage>17</fpage>
+          <pub-id pub-id-type="doi">10.1016/0960-0760(94)00152-C</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Johnston JO, Wright CL, Holbert GW (1995) J Steroid Biochem Mol Biol 52:17 <pub-id pub-id-type="pmid">7857870</pub-id></citation>
+      </ref>
+      <ref id="CR73">
+        <label>73.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Murray</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Drug Metab Rev</source>
+          <year>1987</year>
+          <volume>18</volume>
+          <fpage>55</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Murray M (1987) Drug Metab Rev 18:55 <pub-id pub-id-type="pmid">3311684</pub-id></citation>
+      </ref>
+      <ref id="CR74">
+        <label>74.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Poulos</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Howard</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <source>Biochemistry</source>
+          <year>1987</year>
+          <volume>26</volume>
+          <fpage>8165</fpage>
+          <pub-id pub-id-type="doi">10.1021/bi00399a022</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Poulos TL, Howard AJ (1987) Biochemistry 26:8165 <pub-id pub-id-type="pmid">3442650</pub-id></citation>
+      </ref>
+      <ref id="CR75">
+        <label>75.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Furet</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Batzl</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bhatnagar</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Francotte</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Rihs</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Lang</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>1993</year>
+          <volume>36</volume>
+          <fpage>1393</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm00062a012</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Furet P, Batzl C, Bhatnagar A, Francotte E, Rihs G, Lang M (1993) J Med Chem 36:1393 <pub-id pub-id-type="pmid">8496907</pub-id></citation>
+      </ref>
+      <ref id="CR76">
+        <label>76.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sham</surname>
+              <given-names>YY</given-names>
+            </name>
+            <name>
+              <surname>Chu</surname>
+              <given-names>ZT</given-names>
+            </name>
+            <name>
+              <surname>Tao</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Warshel</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Proteins Struct Funct Genet</source>
+          <year>2000</year>
+          <volume>39</volume>
+          <fpage>393</fpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0134(20000601)39:4&lt;393::AID-PROT120&gt;3.0.CO;2-H</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sham YY, Chu ZT, Tao H., Warshel A (2000) Proteins Struct Funct Genet 39:393 <pub-id pub-id-type="pmid">10813821</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

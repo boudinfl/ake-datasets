@@ -1,0 +1,594 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17031596</article-id>
+      <article-id pub-id-type="pmc">1705544</article-id>
+      <article-id pub-id-type="publisher-id">9178</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-006-9178-5</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Proteoglycan Breakdown of Meniscal Explants Following Dynamic Compression Using a Novel Bioreactor</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>McHenry</surname>
+            <given-names>J. A.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Zielinska</surname>
+            <given-names>Barbara</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Haut Donahue</surname>
+            <given-names>T. L.</given-names>
+          </name>
+          <address>
+            <email>thdonahu@mtu.edu</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Department of Mechanical Engineering, Michigan Technological University, Houghton, MI 49931 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>11</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>34</volume>
+      <issue>11</issue>
+      <fpage>1758</fpage>
+      <lpage>1766</lpage>
+      <history>
+        <date date-type="received">
+          <day>21</day>
+          <month>3</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>14</day>
+          <month>8</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Motivated by our interest in examining meniscal mechanotransduction processes, we report on the validation of a new tissue engineering bioreactor. This paper describes the design and performance capabilities of a tissue engineering bioreactor for cyclic compression of meniscal explants. We showed that the system maintains a tissue culture environment equivalent to that provided by conventional incubators and that its strain output was uniform and reproducible. The system incorporates a linear actuator and load cell aligned together in a frame that is contained within an incubator and allows for large loads and small displacements. A plunger with six Teflon-filled Delrin compression rods is attached to the actuator compressing up to six tissue explants simultaneously and with even pressure. The bioreactor system was used to study proteoglycan (PG) breakdown in porcine meniscal explants following various input loading tests (0&#x2013;20% strain, 0&#x2013;0.1&#xA0;MPa). The greatest PG breakdown was measured following 20% compressive strain. These strain and stress levels have been shown to correspond to partial meniscectomy. Thus, these data suggest that removing 30&#x2013;60% of meniscal tissue will result in the breakdown of meniscal tissue proteoglycans.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Apparatus</kwd>
+        <kwd>Mechanotransduction</kwd>
+        <kwd>Meniscectomy</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>INTRODUCTION</title>
+      <p>Mechanical loading of the meniscus plays a crucial role in the metabolic activity of fibrochondrocytes.<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR15">15</xref> Previous studies have demonstrated that increased load on meniscal tissue leads to an increase in proteoglycan and collagen levels,<xref ref-type="bibr" rid="CR16">16</xref> whereas unloading of meniscal tissue causes a decrease in aggrecan expression, collagen formation and cell growth.<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR3">3</xref> It is not fully understood how biomechanical and biochemical events interact to produce changes in the extracellular matrix. This lack in knowledge is, in part, due to the difficulties associated with performing real time meniscal loading experiments <italic>in vivo</italic>.</p>
+      <p>Recreating the physiological forces <italic>in vitro</italic> using tissue explants while measuring the biological response provides one method for observing the effect of mechanical stress on the meniscus;<xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR15">15</xref> however, the majority of commercially available bioreactors may not be suitable for application to meniscal loading studies. The Biopress system (The Biopress system, Flexcell International, Hillsborough, NC, USA) uses air pressure applied to a flexible bottom under each well. The Biopress has been used to apply pressures of 0.1&#xA0;MPa in previous studies on meniscal explants,<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR15">15</xref> noting strain levels of approximately 10%. Because pressures up to 10&#xA0;MPa and strains ranging from 2% to 20% are seen in the meniscus<xref ref-type="bibr" rid="CR13">13</xref>,<xref ref-type="bibr" rid="CR18">18</xref> this system may not generate high enough pressures to mimic the full range of meniscal strains thought to occur during active loading of healthy and damaged tissue <italic>in vivo</italic>. Stresses and strains are approximately 5&#x2013;10%, and 3&#xA0;MPa, respectively, in the normal healthy meniscus, but these strain levels increase with a partial meniscectomy to approximately 20% and 8&#xA0;MPa.<xref ref-type="bibr" rid="CR18">18</xref> Another biaxial tissue-loading device, previously used to compress articular cartilage explants, is able to create a maximum 400&#xA0;N axial force on as many as 12 explants at once, however, is limited to 100&#xA0;<italic>&#x3BC;</italic>m of motion.<xref ref-type="bibr" rid="CR8">8</xref></p>
+      <p>Previous studies have shown that following knee trauma, such as ACL transection, prior to any articular cartilage damage, there are signs of meniscal tissue degeneration.<xref ref-type="bibr" rid="CR10">10</xref> We have previously shown that following partial meniscectomy, the remaining meniscal tissue is subjected to an altered loading state.<xref ref-type="bibr" rid="CR18">18</xref> This altered loading state may cause a direct breakdown of matrix components such as proteoglycans (PG), or indirectly affect matrix production by induction of catabolic biomolecules.</p>
+      <p>The objectives of this study were (1) to design and build a practical, cost-effective device for applying homogeneous strains to tissue explants, and (2) to utilize the system to overload and underload meniscal tissue and measure the biochemical output. In this communication, we show that the ensuing device is a simple biocompatible design that applies accurate and reproducible strains and is made of components that can be sterilized. We utilized the bioreactor to apply both load and displacement controlled dynamic compression tests. Dynamic strain compression tests showed PG breakdown following overloading of meniscal tissue. No significant changes in concentration of PG released to the conditioned media was measured following various levels of dynamic compressive stress. A comparison between stress controlled dynamic compression versus strain controlled dynamic compression was also made.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>MATERIALS AND METHODS</title>
+      <sec id="Sec3">
+        <title>Design of Bioreactor</title>
+        <p>The frame consists of two 2.54&#xA0;cm thick parallel aluminum plates separated by 2.54&#xA0;cm diameter aluminum support rods (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Centered on the bottom plate is a load cell that is attached to a six well dish. The system is driven by a belt-driven linear actuator utilizing a control package by Animatics (Smartmotor 1720, Ultramotion, Mattituck, NY, USA). The actuator has a maximum stroke length of 5&#xA0;cm and can thrust to 2225&#xA0;N. It also has a maximum speed of 50&#xA0;cm/s with bi-directional repeatability of &#xB1;0.00762&#xA0;mm and a unidirectional repeatability of &#xB1;0.00254&#xA0;mm. Motor control was achieved by using the SmartMotor Interface (SMI). This language allows the motion of the actuator to be controlled by the signal generated by the load cell or by the displacement of the actuator. Displacement resolution for the actuator is 0.4&#xA0;<italic>&#x3BC;</italic>m.
+<fig id="Fig1"><label>FIGURE&#xA0;1.</label><caption><p>A 2-dimensional view of the assembly of the plunger, dish, and cap. The test frame is composed of two aluminum plates supported by aluminum rods. The actuator is positioned in a centered hole in the top plate and tighten into alignment with an adjustable collar.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig1_HTML" id="MO1"/></fig></p>
+        <p>A strain gage load cell (Model 1210AF, Interface, Scottsdale, AZ) with a load capacity of 1334&#xA0;N (sensitivity of &#x223C;1.3&#xA0;N) was utilized. For tests that require loads near or above 1334&#xA0;N, a dimensionally identical load cell with 8896&#xA0;N (sensitivity &#x223C;2.17&#xA0;N) (Interface, Scottsdale, AZ, USA) capacity is interchangeable with the current load cell. This design feature of interchangeable load cells allows for a larger range of loads to be accurately measured. A 2100 series signal conditioner (Vishay Instruments, Raleigh, NC, USA) amplifies the load cell signal to produce a 5&#xA0;V signal at the maximum load.</p>
+        <p>The load cell is centered on a 2.54&#xA0;cm thick aluminum plate that is the base of the system frame. A threaded stud leaving the load cell connects to the aluminum dish via a quick disconnect pin. The dish has six 10&#xA0;mm deep wells equally spaced in a circular orientation. Teflon-filled Delrin compression rods (diameter&#xA0;=&#xA0;8&#xA0;mm) for each well are press fit into a plunger which attaches to the actuator via a quick disconnect pin. To ensure only one plunger/dish orientation and to keep the compression rods centered in each well, the plunger also features two press-fit aluminum pins that slide into matching holes in the dish. An aluminum cap rests on the shoulder of the dish and houses a linear bearing that is press fit into the cap. Along the resting edge of the cap, four shallow grooves were machined to allow carbon dioxide supply to the explants during testing. The linear bearing allows the plunger to move up and down within the cap and restricts the plunger to vertical motion (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The entire frame is small enough that it can be placed in a commercially available CO<sub>2</sub> incubator to maintain physiological conditions (Model 5015, VWR, West Chester, PA, USA).
+<fig id="Fig2"><label>FIGURE&#xA0;2.</label><caption><p>A 2-dimensional drawing of the test frame shows the side and top view of the test system. The linear actuator is attached to the plunger using a quick-disconnect pin. The dish is attached to the load cell in the same manner. The cap improves alignment of the plunger by utilizing a linear bearing.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig2_HTML" id="MO2"/></fig></p>
+      </sec>
+      <sec id="Sec4">
+        <title>Accuracy Evaluation of the System</title>
+        <p>Ultra-low pressure film (Sensor Products Inc., East Hanover, NJ, USA) was used to measure well pressure during compression. First, the repeatability of the pressure film was tested by loading the film (seven times) between flat platens in a tensile testing machine (Model 8872, Instron Corp., Canton, MA, USA) to a 70&#xA0;N target load, corresponding to a pressure of 0.477&#xA0;MPa for the given indentor size. Calibration of the pressure film was also done using the tensile testing machine and included loading pieces of pressure film ranging from 0.2 to 1.64&#xA0;MPa. Pressure film analysis was completed using commercial software (Scion Image, National Institute of Standards and Technology, Gaithersburg, MD, USA) to measure the density of the pressure film samples. Film was compressed between the platens and a piece of rubber similar to the rubber used for testing well pressure.</p>
+        <p>To determine well pressure in the bioreactor, a machined plate was set on top of the dish with a 3&#xA0;mm thick piece of uniform rubber. Pressure film was placed on top of the rubber and the plunger was lowered near the surface of the film. Four tests were conducted, each to the same pressure (0.477&#xA0;MPa) to determine the repeatability of the bioreactor in load control. The film from the bioreactor was analyzed and density measured to determine the difference between each compression rod. The difference in film density and the maximum percentage error was determined to demonstrate the accuracy of the system.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Determination of Displacement Repeatability</title>
+        <p>To further investigate the accuracy of the system, the gap between the bottom of the compression rods and the bottom of the wells was measured while the system was assembled into the bioreactor. This was done by using the actuator to compress commercially available Fibre-Strand body filler (6371, The Matin Senour Comp., Cleveland, OH, USA) until the gap between the bottom of the compression rod and well bottom was filled. The actuator remained at this position until the body filler hardened completely. After plunger removal, a micrometer (2.54&#xA0;<italic>&#x3BC;</italic>m resolution) was then used to measure the thickness of the body filler. This process was repeated three times with the same plunger and dish orientation.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Compliance of the System</title>
+        <p>The compliance of the system was determined by placing a flat stainless steel plate over the wells and running a load-deformation test in the absence of menisci. The test was repeated three times and the load-deformation data recorded.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Application of the System</title>
+        <p>Pigs used in the experiment were 18&#xA0;weeks old, sacrificed 24&#xA0;h after death (received from Mayo Clinic, Rochester, MN, USA). The explants were collected from both the lateral and medial meniscus using sterile technique. The explants were 6&#xA0;mm in diameter and cut using a biopsy punch, perpendicular to the superior surface to maximize the amount of superior tissue preserved. To ensure two parallel flat faces on the cylindrical explants, a specialized cutting device was utilized. Explants were held such that a fixture containing two razorblades, 5&#xA0;mm apart, cut the tissue perpendicular to the long axis of the cylindrical explant. This ensured that each explant was the same height with parallel faces (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a).
+<fig id="Fig3"><label>FIGURE&#xA0;3.</label><caption><p>a &#x2013; Meniscus following biopsy, b &#x2013; Maximum axial strain following different partial meniscectomy simulated by FE analysis. Various percentages (5%, 10%, 30% and 60%) removed from different portion of the medial meniscus (A &#x2013; anterior, C &#x2013; central, P &#x2013; posterior). Knee loaded with 1200&#xA0;N axial force.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig3_HTML" id="MO3"/></fig></p>
+        <p>Explants were incubated at 37&#xB0;C (5% CO<sub>2</sub>) for 48&#xA0;h in growth media (89% DMEM/F-12, 10% FBS, 1% Penn/Strep) which was changed after 24&#xA0;h. For mechanical testing, the explants were placed in the six well bioreactor filled with 400&#xA0;<italic>&#x3BC;</italic>l of the test media (97% DMEM/F-12, 2% FBS, 1% Penn/Strep). The explants were loaded for 2&#xA0;h at 1&#xA0;Hz, at one of the following levels: 5%, 10%, 15% or 20% strain, 0.05 or 0.1&#xA0;MPa unconfined dynamic compression. Each loading group consisted of six explants taken from six different animals (except 15% test &#x2013; 4 animals). Control explants were placed in wells, but not exposed to compression. Previous experiments (FE analyses) showed that under two times body weight the intact knee meniscus experiences about 10% maximum compressive strain. Removal of 5&#x2013;10% of the meniscus minimally affects the maximum strain level, however, removal of 30&#x2013;60% of the meniscal body increases the maximum strain to 15% or greater. Generally speaking, 0% strain is likely underloading the tissue, 5&#x2013;10% is approximately physiological and 15&#x2013;20% is considered overloading<xref ref-type="bibr" rid="CR18">18</xref> (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b). Following compression the explants were bisected into superior and deep zone, by cutting them in half (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>), weighted and placed in 24-wells plates, in 1&#xA0;ml of fresh test media. Samples were post-incubated at 37&#xB0;C (5% CO<sub>2</sub>) for 24&#xA0;h. Post-incubation media was collected and stored at &#x2212;80&#xB0;C for future analysis.<fig id="Fig4"><label>FIGURE&#xA0;4.</label><caption><p>Cross-section of the meniscus with the direction of the cut and explants showing superior and deep zones.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig4_HTML" id="MO4"/></fig></p>
+        <p>The content of sulfated glycosaminoglycan (GAG) released to the conditioned media was assayed using dimethylmethylene blue (DMMB) dye solution.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR6">6</xref> The standard curve was generated with a known concentration of shark cartilage chondroitin sulfate C. All samples were run in duplicates. The concentration was normalized to the wet weight of the explant. GAG release was then normalized to the no load control samples for each animal.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Data Analysis</title>
+        <p>The concentration of the GAG released to the media was calculated using a standard curve (<italic>R</italic><sup>2</sup>&#xA0;&gt;&#xA0;0.85). The final value was an average from duplicates. All data is presented as mean&#xA0;&#xB1;&#xA0;standard error. A one way ANOVA followed by Fisher&#x2019;s PLSD post-hoc testing was used to measure statistical differences (<italic>p</italic>&#xA0;&lt;&#xA0;0.05 was considered significant). Paired t-tests were used at each stress or strain level to determine differences between superficial and deep zone PG release to the media.</p>
+      </sec>
+    </sec>
+    <sec id="Sec9" sec-type="results">
+      <title>RESULTS</title>
+      <sec id="Sec10">
+        <title>Accuracy Evaluation of the System</title>
+        <p>The repeatability test showed an average of 0.4773&#xA0;&#xB1;&#xA0;0.0003&#xA0;MPa. The pressure film demonstrated equal pressure in each well for each load (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). There was less than a 1% error (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>).
+<fig id="Fig5"><label>FIGURE&#xA0;5.</label><caption><p>Pressure film impressions at 0.477&#xA0;MPa under the six bioreactor compression rods.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig5_HTML" id="MO5"/></fig><table-wrap id="Tab1"><label>TABLE&#xA0;1.</label><caption><p>Results of pressure film verification.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">0.477&#xA0;MPa</th><th align="left" colspan="8">Pressure (MPa)</th></tr><tr><th align="left">Test #</th><th align="left">Rod 1</th><th align="left">Rod 2</th><th align="left">Rod 3</th><th align="left">Rod 4</th><th align="left">Rod 5</th><th align="left">Rod 6</th><th align="left">Average</th><th align="left">Std. Dev.</th></tr></thead><tbody><tr><td align="left">1</td><td char="." align="char">0.4773</td><td char="." align="char">0.4768</td><td char="." align="char">0.4771</td><td char="." align="char">0.4771</td><td char="." align="char">0.4768</td><td char="." align="char">0.4768</td><td char="." align="char">0.4770</td><td char="." align="char">0.0002</td></tr><tr><td align="left">2</td><td char="." align="char">0.4768</td><td char="." align="char">0.4769</td><td char="." align="char">0.4768</td><td char="." align="char">0.4768</td><td char="." align="char">0.4769</td><td char="." align="char">0.4772</td><td char="." align="char">0.4769</td><td char="." align="char">0.0001</td></tr><tr><td align="left">3</td><td char="." align="char">0.4773</td><td char="." align="char">0.4768</td><td char="." align="char">0.4769</td><td char="." align="char">0.4770</td><td char="." align="char">0.4769</td><td char="." align="char">0.4771</td><td char="." align="char">0.4770</td><td char="." align="char">0.0002</td></tr><tr><td align="left">4</td><td char="." align="char">0.4773</td><td char="." align="char">0.4768</td><td char="." align="char">0.4769</td><td char="." align="char">0.4768</td><td char="." align="char">0.4769</td><td char="." align="char">0.4768</td><td char="." align="char">0.4769</td><td char="." align="char">0.0002</td></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec11">
+        <title>Determination of Displacement Repeatability</title>
+        <p>The micrometer measurements from the body filler showed that the bioreactor was extremely repeatable. Well 3 had the largest standard deviation in height, 3.4&#xA0;&#xB1;&#xA0;0.01&#xA0;mm, whereas well 1 had the lowest standard deviation 3.4&#xA0;&#xB1;&#xA0;0.0015.</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Compliance of the System</title>
+        <p>The results of the compliance test indicate a linear load-deformation response (<italic>R</italic><sup>2</sup>&#xA0;&gt;&#xA0;0.99). The slope of the load-deformation curve was 3465&#xA0;&#xB1;&#xA0;200&#xA0;N/mm. Thus, for the range of strains and stresses seen in this study, the compliance is negligible.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Application of the System</title>
+        <p>To determine an appropriate post incubation time, preliminary tests were run. PG concentration in the media was monitored following 2, 4, and 6&#xA0;h and 1, 2, and 3&#xA0;days following 10% dynamic compression and for controls samples (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). The shortest time showing a strong signal was chosen to minimize the duration of the experiment (1&#xA0;day).
+<fig id="Fig6"><label>FIGURE&#xA0;6.</label><caption><p>PG concentration following different incubation time (<italic>n</italic>&#xA0;=&#xA0;2 for controls (C), <italic>n</italic>&#xA0;=&#xA0;3 for 10% compression test (10%)). Data presented is mean&#xA0;&#xB1;&#xA0;standard error.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig6_HTML" id="MO6"/></fig></p>
+        <p>The highest break down of PG was measured following 20% compressive strain for both the superior and deep zones of the meniscal explants (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>). There were significant differences between release of GAGs into the media for the overloaded condition (20%) versus physiological loading (10%) for both superior and deep zones. No significant differences were found between superficial and deep zones for any compression level. Explants exposed to pressures of either 0.05 or 0.1&#xA0;MPa did not show any significance differences in either the superior or deep zone for PG breakdown (Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>).<fig id="Fig7"><label>FIGURE&#xA0;7.</label><caption><p>PG concentration following different compression tests (<italic>n</italic>&#xA0;=&#xA0;6 except 15% test (<italic>n</italic>&#xA0;=&#xA0;4)). Data presented is mean&#xA0;&#xB1;&#xA0;standard error. *Statistically different than 20% (<italic>p</italic>&#xA0;&lt;&#xA0;0.05).</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig7_HTML" id="MO7"/></fig><fig id="Fig8"><label>FIGURE&#xA0;8.</label><caption><p>PG concentration following different load level compression tests (<italic>n</italic>&#xA0;=&#xA0;6). Data presented is mean&#xA0;&#xB1;&#xA0;standard error.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig8_HTML" id="MO8"/></fig></p>
+        <p>Displacement controlled tests showed a rapid drop in load within the first 1000 cycles with little change in the following 6200 cycles (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>). For displacement tests at or below 15% strain, loads settled just below 0.05&#xA0;MPa while the 20% strain test remained above 0.1&#xA0;MPa throughout the duration of the test. The change in pressure measured from the beginning of the test to the end is shown in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. Load controlled tests (Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>) showed a rapid increase in compressive displacement within the first 2000 cycles. The 0.05&#xA0;MPa load level reached maximum displacement near 3000 cycles and remained at that level to the end of the test. The 0.1&#xA0;MPa tests reached 18% strain near 3000 cycles but steadily increased to 20.7% strain by the final cycle. The differences in strain from the start to the end of the tests can be found in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>.<fig id="Fig9"><label>FIGURE&#xA0;9.</label><caption><p>Stress vs. time for four representative displacement control tests. Only peak values during each cycle are plotted. Stress was calculated by dividing the peak load by the initial cross-sectional area.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig9_HTML" id="MO9"/></fig><table-wrap id="Tab2"><label>Table&#xA0;2.</label><caption><p>Change in pressures over the duration of the stress-relaxation tests.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2">Strain</th><th align="left" colspan="2">Pressure (MPa)</th></tr><tr><th align="left">Start</th><th align="left">End</th></tr></thead><tbody><tr><td align="left">5%</td><td char="&#xB1;" align="char">0.166&#xA0;&#xB1;&#xA0;0.108 *#</td><td char="&#xB1;" align="char">0.038&#xA0;&#xB1;&#xA0;0.010 #</td></tr><tr><td align="left">10%</td><td char="&#xB1;" align="char">1.141&#xA0;&#xB1;&#xA0;0.103 #</td><td char="&#xB1;" align="char">0.046&#xA0;&#xB1;&#xA0;0.010 #</td></tr><tr><td align="left">15%</td><td char="&#xB1;" align="char">2.185&#xA0;&#xB1;&#xA0;0.827</td><td char="&#xB1;" align="char">0.035&#xA0;&#xB1;&#xA0;0.026 #</td></tr><tr><td align="left">20%</td><td char="&#xB1;" align="char">3.548&#xA0;&#xB1;&#xA0;0.429</td><td char="&#xB1;" align="char">0.128&#xA0;&#xB1;&#xA0;0.020</td></tr></tbody></table><table-wrap-foot><p>Data represents mean&#xA0;&#xB1;&#xA0;standard deviation. <italic>n</italic>&#xA0;=&#xA0;6 for all groups. * Significantly different than 15% (<italic>p</italic>&#xA0;&lt;&#xA0;0.05), # significantly different than 20% (<italic>p</italic>&#xA0;&lt;&#xA0;0.05).</p></table-wrap-foot></table-wrap><fig id="Fig10"><label>FIGURE&#xA0;10.</label><caption><p>Strain vs. time for two representative load control tests. Only peak strain values during each loading cycle are plotted. Strain was calculated by dividing the peak displacement by the original height of the explant.</p></caption><graphic position="anchor" xlink:href="10439_2006_9178_Fig10_HTML" id="MO10"/></fig><table-wrap id="Tab3"><label>Table&#xA0;3.</label><caption><p>Change in strains over the duration of the creep tests.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2">Pressure (MPa)</th><th align="left" colspan="2">Strain (%)</th></tr><tr><th align="left">Start</th><th align="left">End</th></tr></thead><tbody><tr><td align="left">0.05</td><td char="&#xB1;" align="char">2.6&#xA0;&#xB1;&#xA0;0.53</td><td char="&#xB1;" align="char">11.6&#xA0;&#xB1;&#xA0;1.36</td></tr><tr><td align="left">0.1</td><td char="&#xB1;" align="char">3.0&#xA0;&#xB1;&#xA0;0.12</td><td char="&#xB1;" align="char">20.7&#xA0;&#xB1;&#xA0;1.45*</td></tr></tbody></table><table-wrap-foot><p>Data represents mean&#xA0;&#xB1;&#xA0;standard deviation. <italic>n</italic>&#xA0;=&#xA0;6 for all groups. * Significantly different than 0.05&#xA0;MPa (<italic>p</italic>&#xA0;&lt;&#xA0;0.05).</p></table-wrap-foot></table-wrap></p>
+      </sec>
+    </sec>
+    <sec id="Sec14" sec-type="discussion">
+      <title>DISCUSSION</title>
+      <p>The explant compression system meets the criteria necessary to obtain a realistic representation of physiological forces present in the knee joint. This system is able to apply known pressures to six explants at once, which is important when trying to gather data for hypothesis testing. It is capable of applying physiological and supraphysiological levels of load and displacement, and has the ability to test in load or displacement control. SMI programming allows for flexibility in frequency, duration, amplitude, and waveform. The system is small enough to fit in a standard incubator and is made of materials that can endure autoclaving and alcohol. An important feature to this system is the ability to keep the explants and media sterile from the culture hood to the incubator. The plunger, dish, and cap form an enclosure that allows easy transport between the culture hood and incubator without allowing open air and bacteria to infect the sample. Since the cap incorporates a linear bearing it does not need to be removed for testing. Utilizing the system features and designing the correct protocol will help maintain a physiological loading sterile environment.</p>
+      <p>This bioreactor is capable of creating higher loads and greater displacements than previous systems used for compressing explants.<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR15">15</xref> The Biopress system (Flexcell International, Hillsborough, NC, USA) is capable of loads as high as 69&#xA0;N, whereas the current systems actuator can thrust to 2225&#xA0;N. An advantage of our system over the biaxial tissue-loading device presented in Frank <italic>et&#xA0;al</italic>. (2000), is that it can create displacements over 10&#xA0;mm with a resolution of 0.4&#xA0;<italic>&#x3BC;</italic>m.<xref ref-type="bibr" rid="CR8">8</xref> Our actuator also has a bi-directional repeatability of &#xB1;7.62&#xA0;<italic>&#x3BC;</italic>m compared to the &#xB1;25&#xA0;<italic>&#x3BC;</italic>m used in Sah <italic>et&#xA0;al</italic>. (2003).<xref ref-type="bibr" rid="CR11">11</xref> In addition, the present system is capable of 1&#xA0;Hz cyclic compression in a sinusoidal wave using displacement or load control. The bioreactor can be used to compress any tissue that fits under an 8&#xA0;mm compression rod and in a 10&#xA0;mm deep well. All surfaces are machined to a smooth, frictionless finish, to ensure the sample is exposed to pure unconfined compression. Although we believe this bioreactor to be an improvement over others, we realize that there are some limitations that need to be compensated for. For example, this system can only perform unconfined compression currently. However, the system could be modified to run confined compression tests as well by outfitting a new plunger/well assembly.</p>
+      <p>Since the stress tests were conducted at 0.05 and 0.1&#xA0;MPa, and resulted in strains between 2.6% and 20%, the compliance of the system was negligible. Similarly, for the 5% strain control tests, the loads were small enough that the compliance of the system was negligible. However, for the 10%, 15% and 20% strain control tests, stresses were between 3.548 and 0.035&#xA0;MPa. Thus, at the larger stress levels, the compliance of the system was greater. For instance, during the 10% strain control test, initially stress levels of 1.1&#xA0;MPa would lead to approximately 57&#xA0;<italic>&#x3BC;</italic>m of compliance, and thus, for the first 150 of the 7200&#xA0;s test, strains were closer to 8.8% instead of 10%. For the 15% strain test, strains were closer to 13% for the first 200&#xA0;s of the test, and as the material relaxed, the last 1&#xA0;h and 57&#xA0;min of the test were at 15% strain.</p>
+      <p>We hypothesized that PG breakdown (as determined by GAG in the media) would be high for both the underloading and overloading condition. PG breakdown was significantly increased at 20% strain. Meniscal tissue is a mechanically sensitive, and mechanical loading has been shown to regulate gene expression.<xref ref-type="bibr" rid="CR14">14</xref> Hence, we expected that loading the tissue below normal physiological levels of magnitude (underloading) would result in PG breakdown. Lack of increased PG breakdown for control samples (underloading) is surprising and needs to be further explored. Perhaps the degraded PG is not being released into the media for the control samples, whereas the overloaded samples have mechanical compression to help move the broken down PG into the media. Future studies will measure PG breakdown in the tissue explants following compression to determine the integrity of the PG within the tissue. These data suggest that removing 30&#x2013;60% of meniscal tissue, and thereby increasing tissue strains over 15% results in an increase in PG breakdown and tissue destruction. Thus, not only does meniscectomy affect the underlying articular cartilage but the remaining meniscal tissue appears to begin to breakdown, possibly leading to a change in meniscal material properties. This data is supported by previous work that showed following an ACL transection, degenerative changes were seen in the meniscus prior to any articular cartilage changes.<xref ref-type="bibr" rid="CR10">10</xref></p>
+      <p>DiMicco <italic>et&#xA0;al</italic>. showed an increase in GAG release from bovine cartilage that had been exposed to an injurious level single uniaxial, unconfined compression.<xref ref-type="bibr" rid="CR1">1</xref> Inhibitors of biosynthesis or degradative enzymes did not affect PG breakdown, suggesting that the breakdown was a mechanical consequence of compression. GAG release 1&#x2013;7&#xA0;days post injury was slowed by metalloprotease inhibitors. Shin <italic>et&#xA0;al</italic>.<xref ref-type="bibr" rid="CR12">12</xref> showed that dynamic compression (0.1&#xA0;MPa for 24&#xA0;h at 0.5&#xA0;Hz) increased both GAG synthesis as well as release to the media compared to unloaded controls. Our loading scheme was designed to simulate approximate physiological walking conditions (2&#xA0;h, 1&#xA0;Hz). It is difficult to compare our GAG data to a study of a single injurious insult, or dynamic compression for 24&#xA0;h. We created an approximate daily physiological loading environment that might occur during walking, and simulated loads from unloaded to overloaded due to meniscectomy. In the future, we will investigate the mechanisms of GAG release, whether it is mechanical damage or activation of enzymatic activity.</p>
+      <p>It was surprising that explants tested at 0.05&#xA0;MPa showed greater PG breakdown than explants tested at 0.1&#xA0;MPa for the superficial zone. One possible reason for this result might be related to the cell viability. A compression of 0.1&#xA0;MPa may induce more cell death than 0.05&#xA0;MPa of compression and hence fewer cells may be available for production of metalloproteases that may contribute to the breakdown of PG. Current studies are underway to document the degree of cell death in the explants.</p>
+      <p>It is interesting to compare the load control results to the displacement control results. Based on Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>, the 20% strain test applied an initially very high load (&#x223C;3.5&#xA0;MPa), but equilibrated at 0.1&#xA0;MPa. Similarly, the 0.1&#xA0;MPa test reached a steady state of 20% strain (Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>). Hence, we would expect to see similar levels of PG breakdown in the 20% strain test as well as the 0.1&#xA0;MPa test. This is also true for the 10% strain test and the 0.05&#xA0;MPa stress tests. For example, in the deep zone the 20% strain control test resulted in 3.7&#xA0;&#xB1;&#xA0;1.4&#xA0;ug/ml per gram of tissue, whereas the 0.1&#xA0;MPa test resulted in 1.9&#xA0;&#xB1;&#xA0;0.5&#xA0;ug/ml per gram of tissue. This large difference could be due to either &#x201C;lift-off&#x201D; (separation between loading platen and sample during a 1&#xA0;Hz test)<xref ref-type="bibr" rid="CR4">4</xref> or the initially high stress that was reached initially in the 20% displacement control tests. In contrast to the differences seen above, the 10% strain test and 0.05&#xA0;MPa stress test resulted in 1.3&#xA0;&#xB1;&#xA0;0.2 and 1.8&#xA0;&#xB1;&#xA0;0.5&#xA0;ug/ml per gram of tissue, respectively. Previous 3-D computational studies of an entire human knee joint have shown that mean contact pressures changed from 1.57&#xA0;MPa for an intact healthy meniscus to 3.09&#xA0;MPa following 60% meniscectomy.<xref ref-type="bibr" rid="CR18">18</xref> Maximum contact pressures on the superior surface of the meniscus changed from 4.7 to 7&#xA0;MPa when 60% of the meniscus was removed.<xref ref-type="bibr" rid="CR18">18</xref> The differences between stress and strain control studies noted above make the data presented difficult to interpret due to the non-physiological nature of <italic>in vitro</italic> unconfined compression studies. Clearly, this indicates that meniscal tissue may respond differentially to stress <italic>versus</italic> strain, the duration of strain levels, or most likely the loading history. Before definitive clinical implications can be made regarding the effects of meniscectomy on meniscal tissue, we must first determine if the levels of PG breakdown noted in this study correspond to changes in the load-bearing capacity of the tissue and its function in the knee joint.</p>
+      <p>One of the limitations of this study is lack of investigation of differences between the medial and lateral menisci as well as specific location within the meniscus from which explants were harvested. This likely resulted in higher standard deviations. Future studies with a larger set of animals are proposed in which lateral versus medial, anterior versus posterior and inner radial versus outer radial differences could be studied. Previous researchers have shown a difference between inner and outer radial explants.<xref ref-type="bibr" rid="CR14">14</xref> Bisection of explants has previously been shown to release many growth factors.<xref ref-type="bibr" rid="CR17">17</xref> Since all samples in this study were bisected, the relative differences found are still significant. It should be noted that the measured response may be due not only to mechanical stimuli but also growth factors released due to cutting the samples. In addition to bisecting the samples, other factors, such as FBS concentration and post-incubation time may effect the absolute concentrations of GAG analyzed in this study. Therefore, only relative comparisons between treatment groups should be considered.</p>
+      <p>In summary, this simple and practical experimental system allows for reproducible application and quantification of homogeneous stresses or strains to explants tissues, thereby providing a systemic and quantitative method for correlating external mechanical stimuli to cellular and molecular mechanisms of mechanotransduction.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>ACKNOWLEDGMENT</title>
+      <p>This study was supported by a Whitaker Foundation grant (RG-03-0047) to T.L. Haut Donahue. The authors would like to thank Steven Krage at the Mayo Clinic for procurement of the tissue samples.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>REFERENCES</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>DiMicco</surname>
+              <given-names>M. A.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Mechanisms and kinetics of glycosaminoglycan release following in vitro cartilage injury</article-title>
+          <source>Arthritis Rheum.</source>
+          <year>2004</year>
+          <volume>50</volume>
+          <issue>3</issue>
+          <fpage>840</fpage>
+          <lpage>848</lpage>
+          <pub-id pub-id-type="doi">10.1002/art.20101</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">DiMicco M. A., et al. 2004 Mechanisms and kinetics of glycosaminoglycan release following in vitro cartilage injury Arthritis Rheum., 50(3):840&#x2013;848 <pub-id pub-id-type="pmid">15022326</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Djurasovic</surname>
+              <given-names>M.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Knee joint immobilization decreases aggrecan gene expression in the meniscus</article-title>
+          <source>Am. J. Sports Med.</source>
+          <year>1998</year>
+          <volume>26</volume>
+          <issue>3</issue>
+          <fpage>460</fpage>
+          <lpage>466</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Djurasovic M., et al. 1998 Knee joint immobilization decreases aggrecan gene expression in the meniscus Am. J. Sports Med., 26(3):460&#x2013;466 <pub-id pub-id-type="pmid">9617414</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dowdy</surname>
+              <given-names>P. A.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The effect of cast immobilization on meniscal healing. An experimental study in the dog</article-title>
+          <source>Am. J. Sports Med.</source>
+          <year>1995</year>
+          <volume>23</volume>
+          <issue>6</issue>
+          <fpage>721</fpage>
+          <lpage>728</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dowdy P. A., et al. 1995 The effect of cast immobilization on meniscal healing. An experimental study in the dog. Am. J. Sports Med., 23(6):721&#x2013;728 <pub-id pub-id-type="pmid">8600741</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Evans</surname>
+              <given-names>R. C.</given-names>
+            </name>
+            <name>
+              <surname>Quinn</surname>
+              <given-names>T. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic compression augments interstitial transport of a glucose-like solute in articular cartilage</article-title>
+          <source>Biophys. J.</source>
+          <year>2006</year>
+          <volume>91</volume>
+          <issue>4</issue>
+          <fpage>1541</fpage>
+          <lpage>1547</lpage>
+          <pub-id pub-id-type="doi">10.1529/biophysj.105.080366</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Evans R. C., Quinn T. M., 2006 Dynamic compression augments interstitial transport of a glucose-like solute in articular cartilage Biophys. J., 91(4):1541&#x2013;1547 <pub-id pub-id-type="pmid">16679370</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Farndale</surname>
+              <given-names>R. W.</given-names>
+            </name>
+            <name>
+              <surname>Buttle</surname>
+              <given-names>D. J.</given-names>
+            </name>
+            <name>
+              <surname>Barrett</surname>
+              <given-names>A. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Improved quantitation and discrimination of sulphated glycosaminoglycans by use of dimethylmethylene blue</article-title>
+          <source>Biochim. Biophys. Acta.</source>
+          <year>1986</year>
+          <volume>883</volume>
+          <issue>2</issue>
+          <fpage>173</fpage>
+          <lpage>177</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Farndale R. W., Buttle D. J., Barrett A. J. (1986) Improved quantitation and discrimination of sulphated glycosaminoglycans by use of dimethylmethylene blue Biochim. Biophys. Acta., 883(2):173&#x2013;177 <pub-id pub-id-type="pmid">3091074</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Farndale</surname>
+              <given-names>R. W.</given-names>
+            </name>
+            <name>
+              <surname>Sayers</surname>
+              <given-names>C. A.</given-names>
+            </name>
+            <name>
+              <surname>Barrett</surname>
+              <given-names>A. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>A direct spectrophotometric microassay for sulfated glycosaminoglycans in cartilage cultures</article-title>
+          <source>Connect. Tissue Res.</source>
+          <year>1982</year>
+          <volume>9</volume>
+          <issue>4</issue>
+          <fpage>247</fpage>
+          <lpage>248</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Farndale R. W., Sayers C. A., Barrett A. J. 1982 A direct spectrophotometric microassay for sulfated glycosaminoglycans in cartilage cultures Connect. Tissue Res., 9(4):247&#x2013;248 <pub-id pub-id-type="pmid">6215207</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fink</surname>
+              <given-names>C.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The effect of dynamic mechanical compression on nitric oxide production in the meniscus</article-title>
+          <source>Osteoarthritis and Cartilage</source>
+          <year>2001</year>
+          <volume>9</volume>
+          <issue>5</issue>
+          <fpage>481</fpage>
+          <lpage>487</lpage>
+          <pub-id pub-id-type="doi">10.1053/joca.2001.0415</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fink, C., et al. 2001. The effect of dynamic mechanical compression on nitric oxide production in the meniscus. Osteoarthritis and Cartilage 9(5): 481&#x2013;487 <pub-id pub-id-type="pmid">11467897</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frank</surname>
+              <given-names>E. H.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A versatile shear and compression apparatus for mechanical stimulation of tissue culture explants</article-title>
+          <source>J. Biomech.</source>
+          <year>2000</year>
+          <volume>33</volume>
+          <issue>11</issue>
+          <fpage>1523</fpage>
+          <lpage>1527</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(00)00100-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Frank E. H., et al. 2000 A versatile shear and compression apparatus for mechanical stimulation of tissue culture explants J. Biomech., 33(11):1523&#x2013;1527 <pub-id pub-id-type="pmid">10940414</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grodzinsky</surname>
+              <given-names>A. J.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Cartilage tissue remodeling in response to mechanical forces</article-title>
+          <source>Annu. Rev. Biomed. Eng.</source>
+          <year>2000</year>
+          <volume>2</volume>
+          <fpage>691</fpage>
+          <lpage>713</lpage>
+          <pub-id pub-id-type="doi">10.1146/annurev.bioeng.2.1.691</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Grodzinsky A. J., et al. 2000 Cartilage tissue remodeling in response to mechanical forces Annu. Rev. Biomed. Eng., 2:691&#x2013;713 <pub-id pub-id-type="pmid">11701528</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hellio Le Graverand</surname>
+              <given-names>M. P.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Early changes in lapine menisci during osteoarthritis development: Part I: cellular and matrix alterations</article-title>
+          <source>Osteoarthritis Cartilage</source>
+          <year>2001</year>
+          <volume>9</volume>
+          <issue>1</issue>
+          <fpage>56</fpage>
+          <lpage>64</lpage>
+          <pub-id pub-id-type="doi">10.1053/joca.2000.0350</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hellio Le Graverand M. P. et al. 2001 Early changes in lapine menisci during osteoarthritis development: Part I: cellular and matrix alterations Osteoarthritis Cartilage, 9(1):56&#x2013;64 <pub-id pub-id-type="pmid">11178948</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sah</surname>
+              <given-names>R. L.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Biosynthetic response of cartilage explants to dynamic compression</article-title>
+          <source>J. Orthop. Res</source>
+          <year>1989</year>
+          <volume>7</volume>
+          <fpage>619</fpage>
+          <lpage>636</lpage>
+          <pub-id pub-id-type="doi">10.1002/jor.1100070502</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sah R. L., et al. 1989 Biosynthetic response of cartilage explants to dynamic compression J. Orthop. Res, 7:619&#x2013;636 <pub-id pub-id-type="pmid">2760736</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shin</surname>
+              <given-names>S. J.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Regulation of matrix turnover in meniscal explants: role of mechanical stress, interleukin-1, and nitric oxide</article-title>
+          <source>J. Appl. Physiol.</source>
+          <year>2003</year>
+          <volume>95</volume>
+          <issue>1</issue>
+          <fpage>308</fpage>
+          <lpage>313</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Shin S. J., et al. 2003 Regulation of matrix turnover in meniscal explants: role of mechanical stress, interleukin-1, and nitric oxide J. Appl. Physiol., 95(1):308&#x2013;313 <pub-id pub-id-type="pmid">12665533</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spilker</surname>
+              <given-names>R. L.</given-names>
+            </name>
+            <name>
+              <surname>Donzelli</surname>
+              <given-names>P. S.</given-names>
+            </name>
+            <name>
+              <surname>Mow</surname>
+              <given-names>V. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>A transversely isotropic biphasic finite element model of the meniscus</article-title>
+          <source>J. Biomech.</source>
+          <year>1992</year>
+          <volume>25</volume>
+          <issue>9</issue>
+          <fpage>1027</fpage>
+          <lpage>1045</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(92)90038-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Spilker R. L., Donzelli P. S., Mow V. C. 1992 A transversely isotropic biphasic finite element model of the meniscus J. Biomech., 25(9):1027&#x2013;1045 <pub-id pub-id-type="pmid">1517263</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Upton</surname>
+              <given-names>M. L.</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Setton</surname>
+              <given-names>L. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Region-specific constitutive gene expression in the adult porcine meniscus</article-title>
+          <source>J. Orthop. Res.</source>
+          <year>2006</year>
+          <volume>24</volume>
+          <issue>7</issue>
+          <fpage>1562</fpage>
+          <lpage>1570</lpage>
+          <pub-id pub-id-type="doi">10.1002/jor.20146</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Upton M. L., Chen J., Setton L. A. 2006 Region-specific constitutive gene expression in the adult porcine meniscus. J. Orthop. Res. 24(7):1562&#x2013;1570 <pub-id pub-id-type="pmid">16732608</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Upton</surname>
+              <given-names>M. L.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Differential effects of static and dynamic compression on meniscal cell gene expression</article-title>
+          <source>J. Orthop. Res.</source>
+          <year>2003</year>
+          <volume>21</volume>
+          <issue>6</issue>
+          <fpage>963</fpage>
+          <lpage>969</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0736-0266(03)00063-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Upton M. L., et al. 2003 Differential effects of static and dynamic compression on meniscal cell gene expression. J. Orthop. Res., 21(6):963&#x2013;969 <pub-id pub-id-type="pmid">14554206</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vailas</surname>
+              <given-names>A. C.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Adaptation of rat knee meniscus to prolonged exercise</article-title>
+          <source>J. Appl. Physiol.</source>
+          <year>1986</year>
+          <volume>60</volume>
+          <issue>3</issue>
+          <fpage>1031</fpage>
+          <lpage>1034</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Vailas A. C., et al. 1986 Adaptation of rat knee meniscus to prolonged exercise J. Appl. Physiol., 60(3):1031&#x2013;1034 <pub-id pub-id-type="pmid">3957819</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vincent</surname>
+              <given-names>T. L.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Basic FGF mediates an immediate response of articular cartilage to mechanical injury</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <year>2002</year>
+          <volume>99</volume>
+          <issue>12</issue>
+          <fpage>8259</fpage>
+          <lpage>8264</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.122033199</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vincent T. L., et al. 2002 Basic FGF mediates an immediate response of articular cartilage to mechanical injury Proc. Natl Acad. Sci. USA, 99(12):8259&#x2013;8264 <pub-id pub-id-type="pmid">12034879</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zielinska</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Haut Donahue</surname>
+              <given-names>T. L.</given-names>
+            </name>
+          </person-group>
+          <article-title>3D finite element model of medial meniscus meniscectomy;changes in contact behavior</article-title>
+          <source>J. Biomech. Eng.</source>
+          <year>2006</year>
+          <volume>128</volume>
+          <issue>1</issue>
+          <fpage>115</fpage>
+          <lpage>123</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.2132370</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zielinska B., Haut Donahue T. L. 2006 3D finite element model of medial meniscus meniscectomy;changes in contact behavior J. Biomech. Eng., 128(1):115&#x2013;123 <pub-id pub-id-type="pmid">16532624</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

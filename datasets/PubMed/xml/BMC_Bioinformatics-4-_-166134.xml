@@ -1,0 +1,1019 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">BMC Bioinformatics</journal-id>
+      <journal-title>BMC Bioinformatics</journal-title>
+      <issn pub-type="epub">1471-2105</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">12775220</article-id>
+      <article-id pub-id-type="pmc">166134</article-id>
+      <article-id pub-id-type="publisher-id">1471-2105-4-20</article-id>
+      <article-id pub-id-type="doi">10.1186/1471-2105-4-20</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Methodology Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Information extraction from full text scientific articles: Where are the keywords?</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" contrib-type="author">
+          <name>
+            <surname>Shah</surname>
+            <given-names>Parantu K</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <email>shah@embl.de</email>
+        </contrib>
+        <contrib id="A2" contrib-type="author">
+          <name>
+            <surname>Perez-Iratxeta</surname>
+            <given-names>Carolina</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <email>cperez@embl.de</email>
+        </contrib>
+        <contrib id="A3" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Bork</surname>
+            <given-names>Peer</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <email>bork@embl.de</email>
+        </contrib>
+        <contrib id="A4" contrib-type="author">
+          <name>
+            <surname>Andrade</surname>
+            <given-names>Miguel A</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <xref ref-type="aff" rid="I3">3</xref>
+          <email>andrade@embl.de</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>Biocomputing, European Molecular Biology Laboratory, Heidelberg, Germany</aff>
+      <aff id="I2"><label>2</label>Department of Bioinformatics, Max Delbr&#xFC;ck Center for Molecular Medicine, Berlin-Buch, Germany</aff>
+      <aff id="I3"><label>3</label>Present address: Bioinformatics group, Ottawa Health Research Institute, Ottawa, Canada</aff>
+      <pub-date pub-type="collection">
+        <year>2003</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>29</day>
+        <month>5</month>
+        <year>2003</year>
+      </pub-date>
+      <volume>4</volume>
+      <fpage>20</fpage>
+      <lpage>20</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2105/4/20"/>
+      <history>
+        <date date-type="received">
+          <day>5</day>
+          <month>3</month>
+          <year>2003</year>
+        </date>
+        <date date-type="accepted">
+          <day>29</day>
+          <month>5</month>
+          <year>2003</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2003 Shah et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-statement>
+        <copyright-year>2003</copyright-year>
+        <copyright-holder>Shah et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-holder>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>To date, many of the methods for information extraction of biological information from scientific articles are restricted to the abstract of the article. However, full text articles in electronic version, which offer larger sources of data, are currently available. Several questions arise as to whether the effort of scanning full text articles is worthy, or whether the information that can be extracted from the different sections of an article can be relevant.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>In this work we addressed those questions showing that the keyword content of the different sections of a standard scientific article (abstract, introduction, methods, results, and discussion) is very heterogeneous.</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>Although the abstract contains the best ratio of keywords per total of words, other sections of the article may be a better source of biologically relevant data.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>Information extraction</kwd>
+        <kwd>full text article</kwd>
+        <kwd>keyword</kwd>
+        <kwd>gene name</kwd>
+        <kwd>data mining</kwd>
+        <kwd>text mining</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Background</title>
+      <p>Most applications of information extraction from the scientific medical bibliography use the Abstract of the publication (for review see for example [<xref ref-type="bibr" rid="B1">1</xref>-<xref ref-type="bibr" rid="B3">3</xref>]). In the context of information extraction in molecular biology it is usually understood that the information to be extracted from an article are words regarding biological concepts that could synthesize the main points of the article (keywords). Therefore the Abstract of a paper is a good target for information extraction because by definition an abstract synthesizes the content of the article. Moreover, abstracts are available in public databases. However, nowadays most journals are also available in electronic version, and thus full text articles can be used for information extraction.</p>
+      <p>It is obvious that the full text of an article contains more information than its Abstract. However, in approaching full text analysis several problems must be tackled. On the one hand, the storage of full text articles requires more disk space and the analysis needs more computational capacity. On the other hand, an Abstract, as a summary, contains a high frequency of relevant terms (keywords), but this may not be the case of the rest of the article.</p>
+      <p>Other questions regard the quality of the information carried by different sections of an article. First of all, is the information in full text organized enough so that keywords can be extracted? Secondly, different biological concepts (for example, gene and protein names, tissue names, organisms, experimental conditions, etc.) may be located in different parts of the article. Or it could be that a word has a different meaning depending on the section where it is located (the word has a context dependent meaning). For example, regarding gene names, those found in the Methods section may refer mostly to analytical tools rather than being relevant to the biological phenomenology described in the whole article. In summary, it would be good to quantify and qualify the information in a full text article before embarking in large scale extraction of particular items of information.</p>
+      <p>With this goal in mind, we analyzed in this work the kind of information that is attached to different parts of an article and we tried to quantify how much information can be found in each section of an article. This should help to state some guidelines for researchers attempting to extract particular keywords (words synthesizing the content of the article) from full text articles.</p>
+    </sec>
+    <sec>
+      <title>Results</title>
+      <sec>
+        <title>Text Corpus</title>
+        <p>As previously stated, the major objective of this work was to compare the information defined as keyword content carried by different sections of a paper, especially the differences between the Abstract and the rest. Therefore, as source for our analysis we used a set of full text articles with a regular section structure, in our study having a defined Abstract, Introduction, Methods, Results, and Discussion (A, I, M, R, D). Another requirement was certain homogeneity of style across the articles (for example, a similar length of the Methods section) and, since there is great interest in the field of data mining on the detection of gene names, the subject should be related to Genetics. Thus, we chose the 104 articles published in <italic>Nature Genetics </italic>from June 1998 (volume 19, issue 2) to June 2001 (volume 28, issue 2), which comply with the AIMRD structure. Note that other journals, or even the Letters of the very same <italic>Nature Genetics</italic>, might have a different structure (for example, lacking separated I, M, R, D sections).</p>
+      </sec>
+      <sec>
+        <title>Selection of Keywords</title>
+        <p>To simplify matters, and following our previous work [<xref ref-type="bibr" rid="B4">4</xref>], we focused on the extraction of relevant words (keywords) regarding objects, detected as nouns from natural text by a standard grammatical tagger (TreeTagger, Helmut Schmid, IMS, Stuttgart University, <ext-link ext-link-type="uri" xlink:href="http://www.ims.uni-stuttgart.de/projekte/corplex/TreeTagger/"/>). In order to derive keywords from the section of an article, we first compute the associations between the words in the section. Here, we take the sentence as the unit of text to look for associations, that is, two words are associated in the context of a section if they co-occur repeatedly in sentences within that section (see METHODS).</p>
+        <p>Since words associated strongly to many other words are relevant to the matter that is dealt in the article [<xref ref-type="bibr" rid="B5">5</xref>] we use a score (<italic>K</italic>) that is higher for words with many and strong relations to other words (see METHODS). This measure is used to select words as keywords, in this case, related to objects such as proteins, genes, organisms, etc.</p>
+        <p>In order to evaluate the performance of the keyword detection, we observed how the selected keywords matched the MeSH (Medical Subject Headings, <ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/mesh/"/>) terms attached by indexers at the National Library of Medicine to these 104 articles (18.6 on average). Since MeSH terms can be composed of several words (for example, "Learning Disorders"), we selected those composed of a single word (6.80 terms on average). We noted that the most unspecific (for example, <italic>animal</italic>) were often not present in the text and thus could not be matched by a keyword as opposed to species names (<italic>mouse, mycobacterium, human</italic>), or anatomical terms (<italic>hippocampus, cerebellum, breast</italic>). Of those single-word MeSH terms, 4.91 were found on average in the article (as nouns), and 2.22 were among the set of selected keywords (above <italic>K </italic>&gt;= 0.3). Obviously, a more accurate comparison to MeSH terms would require the detection of bigrams, and trigrams (keywords composed of multiple words), but this is out the scope of our work. The recall when matching the original MeSH terms (6.80 on average) went down from 4.91 / 6.80 = 0.72 in the dictionary of 470.6 different nouns present in an article to 2.22 / 6.80 = 0.33 in the 66.6 keywords selected. However, since the size of the list of all nouns found in an article (470.6) is much larger than the number of keywords (66.6), the precision in matching the MeSH terms of an article increased from 4.91 / 470.6 = 0.010 to 2.22 / 66.6 = 0.033.</p>
+      </sec>
+      <sec>
+        <title>Keyword Selection by Section</title>
+        <p>The number of words selected upon a threshold in the <italic>K </italic>value varies for different sections (see Figure <xref ref-type="fig" rid="F1">1</xref>). The first observation is that there are a small number of words that have much better <italic>K </italic>scores than the rest. This means that the organization of words makes it possible to extract keywords for all the five considered sections.</p>
+        <fig position="float" id="F1">
+          <label>Figure 1</label>
+          <caption>
+            <p>Average number of keywords versus <italic>K </italic>for A, I, M, R, and D sections. The average number of nouns per section is, A = 52, I = 171, M = 404, R = 600, D = 331.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-20-1"/>
+        </fig>
+        <p>The number of selected words is very similar for all sections for very high values of <italic>K </italic>(above 0.8). Above a threshold on <italic>K </italic>(<italic>K </italic>&gt;= 0.5; see Table <xref ref-type="table" rid="T1">1</xref>) the resulting number of keywords is quite similar for Introduction and Methods (around 15 for each) with the other three sections producing around nine keywords. However, if one accounts for the size of the sections it is obvious that the frequency of keywords (selected with <italic>K </italic>&gt;= 0.5) per noun is the best in the Abstract (0.18), followed by the Introduction (0.08), with Methods, Results, and Discussion lagging behind. This justifies data mining strategies that focus in the analysis of Abstracts in order to minimize computational resources. However, this result already indicates that not all keywords are in the Abstract, and that therefore mining the rest of the article may be worthy.</p>
+        <table-wrap position="float" id="T1">
+          <label>Table 1</label>
+          <caption>
+            <p>Keyword selection per section.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td/>
+                <td align="center">all</td>
+                <td align="center">K &gt;= 0.3</td>
+                <td align="center">K &gt;= 0.4</td>
+                <td align="center">K &gt;= 0.5</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">A</td>
+                <td align="center">52.17</td>
+                <td align="center">19.44</td>
+                <td align="center">14.42</td>
+                <td align="center">9.77</td>
+              </tr>
+              <tr>
+                <td align="left">I</td>
+                <td align="center">171.32</td>
+                <td align="center">31.03</td>
+                <td align="center">20.47</td>
+                <td align="center">14.00</td>
+              </tr>
+              <tr>
+                <td align="left">M</td>
+                <td align="center">404.19</td>
+                <td align="center">54.24</td>
+                <td align="center">28.50</td>
+                <td align="center">15.80</td>
+              </tr>
+              <tr>
+                <td align="left">R</td>
+                <td align="center">599.98</td>
+                <td align="center">24.74</td>
+                <td align="center">12.74</td>
+                <td align="center">7.85</td>
+              </tr>
+              <tr>
+                <td align="left">D</td>
+                <td align="center">331.04</td>
+                <td align="center">26.16</td>
+                <td align="center">14.25</td>
+                <td align="center">8.75</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <p>Average number of nouns per section (all), or number of those selected as keywords for three different thresholds on the <italic>K </italic>score.</p>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Sections Display Heterogeneous Information</title>
+        <p>As a way to show that the keyword content in different sections is heterogeneous, we examined which keywords (if any) were selected in all the sections of an article. Our results indicate that, as it could be expected, not many keywords are present in every section and those are not very relevant. Even for a low threshold of <italic>K </italic>&gt;= 0.3, there is on average only one of such general keywords per article. Those are often non-informative words such as "gene", or "protein". This indicates that the information is unevenly distributed across the sections of the article, that is, different sections contain different kind of information.</p>
+        <p>We illustrate the heterogeneity of the information by section with the keywords selected (for <italic>K </italic>&gt;= 0.5) for a particular article [<xref ref-type="bibr" rid="B6">6</xref>] (Figure <xref ref-type="fig" rid="F2">2</xref>). This work deals with a mutation of the <italic>Nf1 </italic>gene of mouse (an exon loss) that produces learning deficits. The only keyword present in every section is the organism under study, the <italic>mouse</italic>. If the Methods section is excluded, only one single more keyword (<italic>mutation</italic>) is selected. Other three-section overlaps give more interesting keywords such as the name of the gene under study (<italic>Nf1</italic>, <italic>neurofibromin</italic>), a domain contained in the resulting protein (<italic>GAP</italic>), the method for testing learning performance of mice (<italic>maze</italic>), or the resulting phenotype (<italic>impairment, lethality</italic>). Keywords unique to different sections tend to correspond to the different information contained in each section. For example, the keywords unique to the Methods section deal with reagents and techniques (<italic>antibody, amersham, tris, primer</italic>).</p>
+        <fig position="float" id="F2">
+          <label>Figure 2</label>
+          <caption>
+            <p>The keywords selected for an article [<xref ref-type="bibr" rid="B6">6</xref>] with a <italic>K </italic>&gt;= 0.5 are represented as they appear in the different sections of the article.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-20-2"/>
+        </fig>
+        <p>In order to quantify the differences and similarities of content across the article we have used the number of keywords that are shared between different sections (Table <xref ref-type="table" rid="T2">2</xref>). The values indicate that the Methods section is the most different of all. In Methods, the content is usually focused on the techniques and protocols used, and not so much on the biological phenomena that is the main subject of the article. This alone explains why those keywords present in every section (for example <italic>protein, gene</italic>) are scarce and uninteresting.</p>
+        <table-wrap position="float" id="T2">
+          <label>Table 2</label>
+          <caption>
+            <p>Average number of keywords (<italic>K </italic>&gt;= 0.5) shared by two sections for the corpus of 104 articles.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td/>
+                <td align="center">A</td>
+                <td align="center">I</td>
+                <td align="center">M</td>
+                <td align="center">R</td>
+                <td align="center">D</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">A</td>
+                <td/>
+                <td align="center">2.01</td>
+                <td align="center">0.92</td>
+                <td align="center">1.77</td>
+                <td align="center">2.20</td>
+              </tr>
+              <tr>
+                <td align="left">I</td>
+                <td align="center">2.01</td>
+                <td/>
+                <td align="center">0.81</td>
+                <td align="center">1.34</td>
+                <td align="center">2.02</td>
+              </tr>
+              <tr>
+                <td align="left">M</td>
+                <td align="center">0.92</td>
+                <td align="center">0.81</td>
+                <td/>
+                <td align="center">1.55</td>
+                <td align="center">1.02</td>
+              </tr>
+              <tr>
+                <td align="left">R</td>
+                <td align="center">1.77</td>
+                <td align="center">1.34</td>
+                <td align="center">1.55</td>
+                <td/>
+                <td align="center">1.99</td>
+              </tr>
+              <tr>
+                <td align="left">D</td>
+                <td align="center">2.20</td>
+                <td align="center">2.02</td>
+                <td align="center">1.02</td>
+                <td align="center">1.99</td>
+                <td/>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>Regarding similarities between sections, A, I, and D are evenly similar among them, and R is the closest to M, as it is shown when plotting the distance matrix of Table <xref ref-type="table" rid="T2">2</xref> as a dendogram (see Figure <xref ref-type="fig" rid="F3">3</xref>). This is probably due to the fact that the Results section deals with the protocols used, although not as explicitly as the Methods section. The Discussion focuses again on the biological results (stressing their relation to the current knowledge) without detailing the techniques that have already been explained in Methods and justified in Results.</p>
+        <fig position="float" id="F3">
+          <label>Figure 3</label>
+          <caption>
+            <p>In order to display graphically the similarity between sections regarding keyword content, we took the inverse of the average number of shared keywords (Table <xref ref-type="table" rid="T2">2</xref>) as a measure of dissimilarity between sections, and we plotted it as a dendogram (using [<xref ref-type="bibr" rid="B19">19</xref>]).</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-20-3"/>
+        </fig>
+        <p>This result indicates that each section contains certain keywords that are unique to the section. In the following we try to characterize what are the differences in content between sections.</p>
+      </sec>
+      <sec>
+        <title>Qualitative Analysis of Subjects per Section</title>
+        <p>To make a deeper analysis of the kind of information present in each of the sections, we classified in seven categories a set of words present in our corpus of 104 articles (among the most frequent nouns). In order to do so as unambiguously as possible, we selected words that matched MeSH descriptors also consisting on that single word and belonging to only one major MeSH category (see METHODS). We added another category not present in MeSH, that of "Units, Dimensions, &amp; Parts" in order to account for many terms that are currently not MeSH terms but are of interest to us.</p>
+        <p>The results (See Figure <xref ref-type="fig" rid="F4">4a</xref>) indicate that the large sections are a good source of keywords, obviously Methods gathering many terms related to techniques. Introduction, Results and Discussion contain a good deal of information regarding diseases. However, again, the Abstract section is shown as the best source for most subjects regarding frequency of keywords (Figure <xref ref-type="fig" rid="F4">4b</xref>) except for those typical of the Methods section (Techniques &amp; Equipment; Chemicals &amp; Drugs).</p>
+        <fig position="float" id="F4">
+          <label>Figure 4</label>
+          <caption>
+            <p>Word categories present in the five sections under analysis. Classes according to MeSH are A (Anatomy), B (Organisms), C (Diseases), D (Chemicals &amp; Drugs), E (Techniques &amp; Equipment), G (Biological Sciences). An additional class X was defined in this work (Units, Dimensions, &amp; Parts). The number of words used for the analysis was 36 (class A), 14 (B), 11 (C), 47 (D), 33 (E), 41 (G), 49 (X). <bold>(a) </bold>Average number of occurrence of words of each subset per section. <bold>(b) </bold>Frequency of words of each subset per total number of words for each section.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-20-4"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>Distribution of Gene Names</title>
+        <p>Since the detection of gene and protein names is a very important subject, broadly used for the detection of macromolecular interactions (see for example [<xref ref-type="bibr" rid="B7">7</xref>]), and because, as stated in the introduction, we are concerned about the relevance of matching gene names in different sections of an article, we examined the distribution of gene names across sections.</p>
+        <p>From a long list of genes names derived from the SWISSPROT database [<xref ref-type="bibr" rid="B8">8</xref>], we selected a very restricted set of 539 genes whose names are composed of three letters followed by one single digit, thus very difficult to be mistaken to other words not being genes. For example, there are gene names called <italic>Not </italic>or <italic>That</italic>. Shorter names (e.g. <italic>A6</italic>) can also be a problem. A total of 224 gene names out of the 539 was matched in 76 of the 104 articles. The Results section was the one with the greatest number of unique gene names (Figure <xref ref-type="fig" rid="F5">5a</xref>). Again, the Abstract, and then the Introduction, are the sections with the highest frequency of these names (Figure <xref ref-type="fig" rid="F5">5b</xref>).</p>
+        <fig position="float" id="F5">
+          <label>Figure 5</label>
+          <caption>
+            <p>Distribution of matches to a set of 224 gene names across sections. <bold>(a) </bold>Average number of unique gene names per section. <bold>(b) </bold>Frequency of different gene names per total of nouns for each section.</p>
+          </caption>
+          <graphic xlink:href="1471-2105-4-20-5"/>
+        </fig>
+        <p>In order to illustrate the problems that affect gene-name identification if context is ignored (even using gene names apparently easy to recognize) (discussed for example in [<xref ref-type="bibr" rid="B9">9</xref>]) we checked manually the context of gene names that were exclusively mentioned in the Methods section. Of the 224 genes, just 24 were mentioned in the Methods section of the corresponding 14 articles and not elsewhere (see Table <xref ref-type="table" rid="T3">3</xref>). In five of the 14 articles, the name was referring to a non-gene object (three restriction endonucleases, a vector name, and a fibroblast cell strain). In five articles, the gene was mentioned in a technical context (usually, the gene mRNA level was used for analysis of cell state) and no biological process involving the gene was described. In only five articles we found the mention of the gene name relevant (See Table <xref ref-type="table" rid="T3">3</xref>). Additionally, we noted that of these 24 gene names, at least two (<italic>Pbp2</italic>, <italic>Pom1</italic>) could refer to two non-homologous (unrelated) genes, and another one (<italic>Sac1</italic>) to four; such polysemous gene names complicate gene identification from text. Biologists are aware of such problems (see for example [<xref ref-type="bibr" rid="B10">10</xref>]). In summary, extreme caution should be applied with gene names appearing uniquely in the Methods section because the context of gene names there is very different to that seen in the rest of the article. If automated methods to extract gene names from text are applied to the Methods section, those that explore the context of gene names using part-of-speech tagging (for example, [<xref ref-type="bibr" rid="B11">11</xref>]) or Hidden Markov Models (for example, [<xref ref-type="bibr" rid="B7">7</xref>]) should then perform better than those that just take co-occurrences of gene names [<xref ref-type="bibr" rid="B12">12</xref>,<xref ref-type="bibr" rid="B13">13</xref>].</p>
+        <table-wrap position="float" id="T3">
+          <label>Table 3</label>
+          <caption>
+            <p>Detection of gene names appearing only in the Methods section.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td/>
+                <td/>
+                <td align="left">Ref</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td/>
+                <td align="left">Restriction endonucleases</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Msp1</italic>
+                </td>
+                <td align="left">v27.n3.277</td>
+              </tr>
+              <tr>
+                <td align="left">Incorrect:</td>
+                <td align="left">
+                  <italic>Pst1</italic>
+                </td>
+                <td align="left">v19.n4.340</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Sac1</italic>
+                </td>
+                <td align="left">v27.n4.375</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Vector name</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Psg5</italic>
+                </td>
+                <td align="left">v23.n3.287</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Cell strain</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Tig3</italic>
+                </td>
+                <td align="left">v26.n3.291</td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <hr/>
+                </td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Definition of a Yeast strain</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Can1, Leu2, Lys2, Trp1</italic>
+                </td>
+                <td align="left">v26.n4.415</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">In array</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Faf1</italic>
+                </td>
+                <td align="left">v20.n3.266</td>
+              </tr>
+              <tr>
+                <td align="left">Correct (technical context):</td>
+                <td align="left">Growth detection</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Mcm5, Mcm6</italic>
+                </td>
+                <td align="left">v25.n3.263</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Platelet mRNA analysis</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Pbp2</italic>
+                </td>
+                <td align="left">v23.n2.166</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Primers used to determine embryo sex</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Zfy1, Zfy2</italic>
+                </td>
+                <td align="left">v27.n1.31</td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <hr/>
+                </td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Analysis of mutant phenotypes</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Pmd1</italic>
+                </td>
+                <td align="left">v24.n4.355</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">cDNA probe</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Rab2</italic>
+                </td>
+                <td align="left">v19.n2.134</td>
+              </tr>
+              <tr>
+                <td align="left">Correct:</td>
+                <td align="left">SNP found in cDNA</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Add3, Npr2</italic>
+                </td>
+                <td align="left">v22.n3.239</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Identifier given</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Pom1</italic>
+                </td>
+                <td align="left">v28.n3.223</td>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">Detection of meiosis specific genes</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">
+                  <italic>Mei4, Mek1, Sps4, Zip1</italic>
+                </td>
+                <td align="left">v26.n4.415</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <p>Ref: reference of the article in <italic>Nature Genetics </italic>by volume, issue number and first page of the article.</p>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+    </sec>
+    <sec>
+      <title>Discussion</title>
+      <p>There is a clear need for doing information extraction of biological data from full text scientific articles and the means for doing it are there with computers better suited for faster computation every day and new methodologies for Natural Language Processing that can be used for biomedical literature (see for example [<xref ref-type="bibr" rid="B14">14</xref>]). Regarding the source of data, the full text electronic versions of journals are now more the rule than the exception, with initiatives in the way towards the construction of large public repositories of such information (although hotly debated; see about PubMed Central [<xref ref-type="bibr" rid="B15">15</xref>,<xref ref-type="bibr" rid="B16">16</xref>]).</p>
+      <p>In this work we have shown that the distribution of information (as keywords) in full text articles is heterogeneous and that there is certain correspondence of article sections with different kind and density of relevant data. The Abstracts are shown as the best repository from the point of view of having many keywords in a short space, justifying previous information extraction approaches. The lack of large repositories of full text articles in contrast to the current eleven million of references (many of them with their abstract) in the MEDLINE database, are another advantage of the Abstract approach.</p>
+      <p>However, we have shown that there is much more relevant information (at least in a ratio of 1:4 regarding gene names, anatomical terms, organism names, etc.) in the rest of the article. We have demonstrated that the information is structured enough to get important numbers of relevant keywords, but that for certain words (such as gene names) caution has to be taken regarding the context of the word.</p>
+      <p>We propose that the text mining of full text articles should be approached with different strategies for different sections. Beyond the Abstract, the Introduction looks like the best place to look for protein and gene names (and interactions) since it is probably describing current knowledge. The Discussion section, that interprets the results and put them in context with the current knowledge, looks like the third best place for mining such information, with Methods probably as the worst place. The Results section could be problematic given its mixed nature between Methods and the rest.</p>
+      <p>Regarding other subjects, such as keywords about biological concepts (species, tissues, diseases, etc.), again the Abstract and then the Introduction section look like the best sections to mine regarding frequency of such keywords, but Results and especially Discussion seem better from a quantitative point of view. The Methods section is clearly appropriated for looking for technical data, measurements, and chemicals. Respect to chemicals, again, their context can be completely different in this section compared to the rest.</p>
+    </sec>
+    <sec>
+      <title>Conclusions</title>
+      <p>Extraction of biological information from full text looks promising, but context must be regarded. Part of this context is given by the situation of the text under analysis within the article. Therefore, tuning the extraction of information to the section is probably a good strategy, and for particular tasks some sections should be avoided.</p>
+      <p>We have shown that the kind of simplistic annotation that constitutes tagging a fragment of an article as belonging to a characteristic section is already useful for text mining. But further tagging using markup codes in XML style [<xref ref-type="bibr" rid="B17">17</xref>] identifying biological objects and concepts (under development; see for example [<xref ref-type="bibr" rid="B18">18</xref>] or the GENIA project <ext-link ext-link-type="uri" xlink:href="http://www-tsujii.is.s.u-tokyo.ac.jp/GENIA/"/>) could ultimately make text mining a children's game. We hope for future interfaces for writers of Molecular Biology articles that should do the job upon validation by the authors (for example, marking every occurrence of a gene name with a unique and stable link to any of the existing gene sequence databases). For this to happen, the collaboration between both scientists and publishers will be very important.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>Methods</title>
+      <sec>
+        <title>Derivation of Associations between the words of a section</title>
+        <p>Given a section from an article, we split the text in sentences using a standard part of speech tagger (TreeTagger). We only computed associations between the words identified from the tagging as nouns. Following [<xref ref-type="bibr" rid="B4">4</xref>], the association between two words (<italic>w</italic><sub><italic>i</italic></sub>,<italic>w</italic><sub><italic>j</italic></sub>) (for example, "cell" and "cycle") can be modeled as the degree of inclusion of one word into the other (<inline-graphic xlink:href="1471-2105-4-20-i1.gif"/>) which can defined as the fuzzy binary relation given by: <inline-graphic xlink:href="1471-2105-4-20-i2.gif"/>, that is, the ratio of the number sentences where both words <italic>w</italic><sub><italic>i </italic></sub>and <italic>w</italic><sub><italic>j </italic></sub>co-occur to the number of sentences the word <italic>w</italic><sub><italic>i </italic></sub>occurs. This is an asymmetric relation very appropriate to model hierarchical relations between words as they happen in natural text. For example, in some Cell Biology context, the word "cycle" could appear always related to the word "cell" (as in "cell cycle"), but the word "cell" can be related to many other words such as in "cell growth", "cell membrane", or "cell nucleus". Accordingly, the inclusion value of the word "cycle" into "cell" will be close to one and the inclusion value of the word "cell" into the word "cycle" will be close to zero.</p>
+      </sec>
+      <sec>
+        <title>Selection of Keywords</title>
+        <p>We identify a word as relevant for the text analyzed if it establishes many and strong relations to other words (following [<xref ref-type="bibr" rid="B4">4</xref>]). Therefore, in a given section, we define a score for a word <italic>w</italic><sub><italic>i </italic></sub>that is equal to <inline-graphic xlink:href="1471-2105-4-20-i3.gif"/>, normalized to the maximum value found for <italic>K </italic>of any word in that section. Then, the keywords of the section are defined as those words that have a <italic>K </italic>score above a certain value.</p>
+      </sec>
+      <sec>
+        <title>Classification of Words in Subjects</title>
+        <p>In order to classify words into categories we used the following procedure. We chose the MeSH (Medical Subjects Headings) classification from the National Library of Medicine. All MeSH terms (including official synonyms) composed of one single word were selected and then the stem of the word was computed using TreeTagger. The words present in our corpus of 104 articles were ordered by frequency and all words occurring more than 200 times were selected. Those matching the selected single-word MeSH headers from six categories (A, B, C, D, E, and G; See the caption of Figure <xref ref-type="fig" rid="F4">4</xref> for descriptions) were selected as belonging to those classes. In order to avoid possible miss-annotations, words matching more than one category were discarded. Manual analysis of the resulting table of associations was carried out in order to check the associations and to make new ones. A new class not present in MeSH (the X class of "Units, Dimensions, &amp; Parts") was generated in order to include a large number of terms mainly present in the Methods section.</p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Authors' Contributions</title>
+      <p>PS carried out the analysis of the keyword distribution from a database of full text articles. CP developed and applied the method to compute keywords. MA prepared the figures (except fig 2 by PS) and conceptualised the structure of the paper. PB and MA co-directed the project and contributed to the final manuscript. All authors collaborated during the whole length of the project. All authors read and approved the final manuscript.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <sec>
+        <title>Acknowledgements</title>
+        <p>We are grateful to the developers and maintainers of the different databases used in this work (SWISSPROT, MeSH, <italic>Nature Genetics </italic>full text repository), to Helmut Schmid (IMS, Stuttgart University) for distributing TreeTagger, to Harindar S. Keer for help with the data management, and to the members of our group at EMBL-Heidelberg for fruitful discussions.</p>
+      </sec>
+    </ack>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Automated extraction of information in molecular biology</article-title>
+          <source>FEBS Lett</source>
+          <year>2000</year>
+          <volume>476</volume>
+          <fpage>12</fpage>
+          <lpage>17</lpage>
+          <pub-id pub-id-type="pmid">10878241</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0014-5793(00)01661-6</pub-id>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shah</surname>
+              <given-names>ParantuK</given-names>
+            </name>
+            <name>
+              <surname>Perez-Iratxeta</surname>
+              <given-names>Carolina</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>Peer</given-names>
+            </name>
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MiguelA</given-names>
+            </name>
+          </person-group>
+          <article-title>Information extraction from full text scientific articles: Where are the keywords?</article-title>
+          <source>BMC Bioinformatics</source>
+          <year>2003</year>
+          <volume>4</volume>
+          <fpage>20</fpage>
+          <pub-id pub-id-type="pmid">12775220</pub-id>
+          <pub-id pub-id-type="doi">10.1186/1471-2105-4-20</pub-id>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>de Bruijn</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Baud R and Ruch P</surname>
+            </name>
+          </person-group>
+          <article-title>Literature mining in molecular biology.</article-title>
+          <source>Proceedings of the EFMI Workshop on Natural Language: Processing in Biomedical Applications</source>
+          <year>2002</year>
+          <publisher-name>Nicosia, Cyprus</publisher-name>
+          <fpage>1</fpage>
+          <lpage>5</lpage>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perez-Iratxeta</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Keer</surname>
+              <given-names>HS</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MA</given-names>
+            </name>
+          </person-group>
+          <article-title>Computing fuzzy associations for the analysis of biological literature</article-title>
+          <source>Biotechniques</source>
+          <year>2002</year>
+          <volume>32</volume>
+          <fpage>1380</fpage>
+          <lpage>1385</lpage>
+          <pub-id pub-id-type="pmid">12074170</pub-id>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perez-Iratxeta</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MA</given-names>
+            </name>
+          </person-group>
+          <article-title>XplorMed: a tool for exploring MEDLINE abstracts</article-title>
+          <source>Trends Biochem Sci</source>
+          <year>2001</year>
+          <volume>26</volume>
+          <fpage>573</fpage>
+          <lpage>575</lpage>
+          <pub-id pub-id-type="pmid">11551795</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0968-0004(01)01926-0</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Costa</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Huynh</surname>
+              <given-names>DP</given-names>
+            </name>
+            <name>
+              <surname>Pulst</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Viskochil</surname>
+              <given-names>DH</given-names>
+            </name>
+            <name>
+              <surname>Silva</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Brannan</surname>
+              <given-names>CI</given-names>
+            </name>
+          </person-group>
+          <article-title>Learning deficits, but normal development and tumor predisposition, in mice lacking exon 23a of Nf1</article-title>
+          <source>Nat Genet</source>
+          <year>2001</year>
+          <volume>27</volume>
+          <fpage>399</fpage>
+          <lpage>405</lpage>
+          <pub-id pub-id-type="pmid">11279521</pub-id>
+          <pub-id pub-id-type="doi">10.1038/86898</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Collier</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Nobata</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Tsujii</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Extracting the names of genes and gene products with a Hidden Markov Model</article-title>
+          <source>COLING'2000</source>
+          <year>2000</year>
+          <fpage>201</fpage>
+          <lpage>207</lpage>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bairoch</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Apweiler</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>The SWISS-PROT protein sequence database and its supplement TrEMBL in 2000</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2000</year>
+          <volume>28</volume>
+          <fpage>45</fpage>
+          <lpage>48</lpage>
+          <pub-id pub-id-type="pmid">10592178</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/28.1.45</pub-id>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stapley</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Benoit</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Bibliometrics: information retrieval and visualization from co-occurrence of gene names in MedLine abstracts</article-title>
+          <source>Proceedings of the Pacific Symposium on Biocomputing</source>
+          <year>2000</year>
+          <publisher-name>Oahu, Hawaii, World ScientificPress</publisher-name>
+          <fpage>526</fpage>
+          <lpage>537</lpage>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Luan</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Kudla</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Harter</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Gruissem</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Chory</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Renaming genes and duplication of gene names in the literature</article-title>
+          <source>Plant Cell</source>
+          <year>2001</year>
+          <volume>13</volume>
+          <fpage>2391</fpage>
+          <lpage>2392</lpage>
+          <pub-id pub-id-type="pmid">11701876</pub-id>
+          <pub-id pub-id-type="doi">10.1105/tpc.13.11.2391</pub-id>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tanabe</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Wilbur</surname>
+              <given-names>WJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Tagging gene and protein names in biomedical text</article-title>
+          <source>Bioinformatics</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>1124</fpage>
+          <lpage>1132</lpage>
+          <pub-id pub-id-type="pmid">12176836</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/18.8.1124</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stapley B.J.</surname>
+              <given-names>Benoit G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Bibliometrics: Information Retrieval and
+Visualization from co-occurrence of gene names in MedLine abstracts</article-title>
+          <source>Proceedings of the Pacific Symposium onBiocomputing</source>
+          <year>2000</year>
+          <publisher-name>Oahu, Hawaii, World ScientificPress</publisher-name>
+          <fpage>526</fpage>
+          <lpage>537</lpage>
+        </citation>
+      </ref>
+      <ref id="B13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jenssen</surname>
+              <given-names>TK</given-names>
+            </name>
+            <name>
+              <surname>Laegreid</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Komorowski</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hovig</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>A literature network of human genes for high-throughput analysis of gene expression</article-title>
+          <source>Nat Genet</source>
+          <year>2001</year>
+          <volume>28</volume>
+          <fpage>21</fpage>
+          <lpage>28</lpage>
+          <pub-id pub-id-type="pmid">11326270</pub-id>
+          <pub-id pub-id-type="doi">10.1038/88213</pub-id>
+        </citation>
+      </ref>
+      <ref id="B14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>de Bruijn</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Getting to the (c)ore of knowledge: mining biomedical literature</article-title>
+          <source>Int J Med Inf</source>
+          <year>2002</year>
+          <volume>67</volume>
+          <fpage>7</fpage>
+          <lpage>18</lpage>
+          <pub-id pub-id-type="pmid">12460628</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S1386-5056(02)00050-3</pub-id>
+        </citation>
+      </ref>
+      <ref id="B15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roberts</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>PubMed Central: The GenBank of the published literature</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>2001</year>
+          <volume>98</volume>
+          <fpage>381</fpage>
+          <lpage>382</lpage>
+          <pub-id pub-id-type="pmid">11209037</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.98.2.381</pub-id>
+        </citation>
+      </ref>
+      <ref id="B16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eisen</surname>
+              <given-names>MB</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>PO</given-names>
+            </name>
+            <name>
+              <surname>Varmus</surname>
+              <given-names>HE</given-names>
+            </name>
+          </person-group>
+          <article-title>Public-access group supports PubMed Central</article-title>
+          <source>Nature</source>
+          <year>2002</year>
+          <volume>419</volume>
+          <fpage>111</fpage>
+          <pub-id pub-id-type="pmid">12226637</pub-id>
+          <pub-id pub-id-type="doi">10.1038/419111c</pub-id>
+        </citation>
+      </ref>
+      <ref id="B17">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>St. Laurent</surname>
+              <given-names>Simon</given-names>
+            </name>
+          </person-group>
+          <source>XML Elements of Style</source>
+          <year>2000</year>
+          <publisher-name>New York, McGraw-Hill</publisher-name>
+        </citation>
+      </ref>
+      <ref id="B18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ettinger</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>The complexity of comparing reaction systems</article-title>
+          <source>Bioinformatics</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>465</fpage>
+          <lpage>469</lpage>
+          <pub-id pub-id-type="pmid">11934746</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/18.3.465</pub-id>
+        </citation>
+      </ref>
+      <ref id="B19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huson</surname>
+              <given-names>DH</given-names>
+            </name>
+          </person-group>
+          <article-title>SplitsTree: analyzing and visualizing evolutionary data</article-title>
+          <source>Bioinformatics</source>
+          <year>1998</year>
+          <volume>14</volume>
+          <fpage>68</fpage>
+          <lpage>73</lpage>
+          <pub-id pub-id-type="pmid">9520503</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/14.1.68</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

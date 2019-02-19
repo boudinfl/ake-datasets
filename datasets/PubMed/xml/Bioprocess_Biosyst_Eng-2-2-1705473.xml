@@ -1,0 +1,766 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioprocess Biosyst Eng</journal-id>
+      <journal-title>Bioprocess and Biosystems Engineering</journal-title>
+      <issn pub-type="ppub">1615-7591</issn>
+      <issn pub-type="epub">1615-7605</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16614826</article-id>
+      <article-id pub-id-type="pmc">1705473</article-id>
+      <article-id pub-id-type="publisher-id">59</article-id>
+      <article-id pub-id-type="doi">10.1007/s00449-006-0059-y</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>On-line optimization of glutamate production based on balanced metabolic control by RQ</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Xiao</surname>
+            <given-names>Jie</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Shi</surname>
+            <given-names>Zhongping</given-names>
+          </name>
+          <address>
+            <phone>+86-510-85819730</phone>
+            <fax>+86-510-85802870</fax>
+            <email>zpshi@sytu.edu.cn</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Gao</surname>
+            <given-names>Pei</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Feng</surname>
+            <given-names>Haojie</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Duan</surname>
+            <given-names>Zuoying</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Mao</surname>
+            <given-names>Zhonggui</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Key Laboratory of Industrial Biotechnology, Ministry of Education, School of Biotechnology, Southern Yangtze University, Wuxi, People&#x2019;s Republic of China </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>14</day>
+        <month>4</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>7</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>29</volume>
+      <issue>2</issue>
+      <fpage>109</fpage>
+      <lpage>117</lpage>
+      <history>
+        <date date-type="received">
+          <day>2</day>
+          <month>3</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>22</day>
+          <month>3</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>In glutamate fermentations by <italic>Corynebacterium glutamicum</italic>, higher glutamate concentration could be achieved by constantly controlling dissolved oxygen concentration (DO) at a lower level; however, by-product lactate also severely accumulated. The results of analyzing activities changes of the two key enzymes, glutamate and lactate dehydrogenases involved with the fermentation, and the entire metabolic network flux analysis showed that the lactate overproduction was because the metabolic flux in TCA cycle was too low to balance the glucose glycolysis rate. As a result, the respiratory quotient (RQ) adaptive control based &#x201C;balanced metabolic control&#x201D; (BMC) strategy was proposed and used to regulate the TCA metabolic flux rate at an appropriate level to achieve the metabolic balance among glycolysis, glutamate synthesis, and TCA metabolic flux. Compared with the best results of various DO constant controls, the BMC strategy increased the maximal glutamate concentration by about 15% and almost completely repressed the lactate accumulation with competitively high glutamate productivity.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Glutamate fermentation</kwd>
+        <kwd>Intracellular enzymes activities</kwd>
+        <kwd>Metabolic balancing</kwd>
+        <kwd>Metabolic flux analysis</kwd>
+        <kwd>On-line optimization</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>For more than a few decades, the <italic>Corynebacterium</italic> spp. bacteria have been used for amino acids productions, including the commercially important products of glutamate, glutamine, and lysine. Among the amino acids mentioned earlier, <sc>L</sc>-glutamate is the largest fermentative product, which occupies about 53% of the world&#x2019;s amino acids market [<xref ref-type="bibr" rid="CR1">1</xref>]. It is also particularly important in food industries and widely used as an important starting substance for the synthesis of various and useful pharmaceutical and healthy products. The previous research works [<xref ref-type="bibr" rid="CR2">2</xref>&#x2013;<xref ref-type="bibr" rid="CR4">4</xref>] have revealed that primary by-products, such as lactate, accumulated during <sc>L</sc>-glutamate fermentation if the operating condition was improperly controlled, which in turn deteriorated the fermentation performance in terms of both glutamate productivity and yield.</p>
+      <p>To cope with the problem, the metabolic reaction network (flux) model (MR model) or technique, as its appearance in the early 1990s, has been recognized as an useful system analysis tool and thus widely used in those areas such as metabolic flux distribution analysis [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR5">5</xref>], determination of the bottleneck controlling the targeted metabolic product formation [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR7">7</xref>], recognition of fermentation phases [<xref ref-type="bibr" rid="CR8">8</xref>], and calculation of theoretical or maximum yields [<xref ref-type="bibr" rid="CR9">9</xref>, <xref ref-type="bibr" rid="CR10">10</xref>], etc. However, the research reports of using MR model for on-line physiological state prediction or process control are very limited [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR12">12</xref>], and the study stayed on on-line recognition of different fermentation phases or physiological states so as to provide information for the subsequent process control, such as whether substrate should be added or whether the fermentation should be terminated [<xref ref-type="bibr" rid="CR11">11</xref>], determination of glucose feeding rate to avoid the acetate or ethanol overproduction in <italic>Escherichia coli</italic> or <italic>Saccharomyces cerevisiae</italic> fed-batch cultivation [<xref ref-type="bibr" rid="CR12">12</xref>], etc. Optimization of fermentation processes by MR model was mostly limited on using the feed-forward type&#x2019;s off-line control strategy with the MR model as the constraint conditions [<xref ref-type="bibr" rid="CR13">13</xref>&#x2013;<xref ref-type="bibr" rid="CR14">14</xref>].</p>
+      <p>On the other hand, analysis of key enzymes in metabolic network of cells was also very important, as those key enzyme generally play important roles in regulating and overproducing the targeted metabolic products. As a result, extensive research works with regard to the enzymes activities under different operating conditions have been carried out. Among them, the enzymes activities in fermentation by <italic>Corynebacterium glutamicum</italic> such as the influence of NH<sub arrange="stack">4</sub><sup arrange="stack">+</sup> concentration on <italic>C. glutamicum</italic> growth and glutamate dehydrogenase (GDH) [<xref ref-type="bibr" rid="CR15">15</xref>], activity of phosphoenolpyruvate carboxylase responsible for the anaplerotic reactions in lysine continuous production by <italic>C. glutamicum</italic> under different dilution rates [<xref ref-type="bibr" rid="CR16">16</xref>, <xref ref-type="bibr" rid="CR17">17</xref>], as well as lactate dehydrogenase (LDH) for pyruvate overproduction under different dilution rates with lactate as the sole carbon source [<xref ref-type="bibr" rid="CR18">18</xref>], were investigated. The metabolic network models were also built for <italic>C. glutamicum</italic> under different operating conditions, aiming at achieving metabolic flux distribution information concerning the overproduction of targeted metabolites or substrate utilization [<xref ref-type="bibr" rid="CR17">17</xref>&#x2013;<xref ref-type="bibr" rid="CR19">19</xref>], as well as on-line prediction of the targeted products formation and analysis of the entire metabolic fluxes [<xref ref-type="bibr" rid="CR3">3</xref>].</p>
+      <p>In our previous study [<xref ref-type="bibr" rid="CR3">3</xref>], we found that dissolved oxygen (DO) largely affected the metabolic flux distribution and the glutamate fermentation performance. The comprehensive analysis or evaluation of a fermentation process by the MR model-based metabolic flux analysis integrated with the intracellular enzymes activities monitoring, might gain a deeper insight into the entire fermentation process and the metabolic regulation mechanisms, so as to supply a more comprehensive and accurate information base for the subsequent process control and optimization of the fermentation process.</p>
+      <p>In this study, combining our previous study on on-line metabolic flux analysis of the glutamate fermentation by <italic>C. glutamicum</italic>, the two major enzymes (GDH and LDH), which possibly dominated the overall glutamate metabolism, were carefully investigated. Then, based on the comprehensive evaluation results of both the metabolic flux analysis and intracellular enzymes activities monitoring, a new optimization strategy of &#x201C;balanced metabolic control (BMC)&#x201D; was proposed and verified experimentally, aiming to increase the glutamate production yield, while completely repressing the by-product overproduction simultaneously.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <sec id="Sec3">
+        <title>Microorganism and fermentation conditions</title>
+        <p><italic>Corynebacterium glutamicum</italic> S<sub>9114</sub>, kept by the laboratory was used throughout this study. The same medium and seed culture conditions described in our previous study [<xref ref-type="bibr" rid="CR3">3</xref>] were used.</p>
+        <p><italic>Corynebacterium glutamicum</italic> S<sub>9114</sub> was cultured for glutamate production at 32&#xB0;C in a 5&#xA0;L fermentor (BIOTECH-5BG, Baoxing Co., China) containing about 3.4&#xA0;L medium. Concentrated glucose was fed based on requirement to ensure the substrate concentration above a suitable level (15&#xA0;g/L) throughout the fermentation period. pH was controlled at 7.1&#xA0;&#xB1;&#xA0;0.1 by automatic addition of 25% (w/w) ammonia water which also supplied the nitrogen source required for glutamate synthesis. DO was controlled at various levels by automatically or manually controlling the agitation speed based on particular requirements. The air aeration rate and fermentor pressure were kept constantly at 1.60&#xA0;vvm and 0.07&#xA0;MPa, respectively.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Analytical methods</title>
+        <p>The concentrations of cells, glucose, glutamate, and lactate were measured with the same methods as reported in our previous study [<xref ref-type="bibr" rid="CR3">3</xref>]. The CO<sub>2</sub> and O<sub>2</sub> concentrations (partial pressure) in the inlet and exhaust gas were on-line measured by a gas analyzer (LKM2000A, Lokas Co. Ltd, Korea). The collected on-line data were smoothly filtered, and then oxygen uptake rate (OUR) and CO<sub>2</sub> evolution rate (CER) were on-line calculated based on the literature reported method [<xref ref-type="bibr" rid="CR20">20</xref>]. Respiratory quotient (RQ) was determined by its definition (RQ&#xA0;=&#xA0;CER/OUR) using the on-line measured OUR and CER data.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Extraction and assay of the GDH and LDH</title>
+        <p>The two key enzymes dominating glutamate fermentation and metabolism, the NADPH and NADH dependent GDH and LDH were detected by spectrophotometric method, and the relevant stoichiometric reactions could be written as follows:
+<disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\alpha\hbox{-}{\hbox{ketoglutarate}}({\hbox{a-KG}}) + {\hbox{NH}}^{ + }_{4} + {\hbox{NADPH}}{\mathop \Leftrightarrow \limits^{{\text{GDH}}} }{\hbox{Glutamate}}+{\hbox{NADP}},$$\end{document}</tex-math></disp-formula><disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\hbox{Pyruvate}} + {\hbox{NADH}}{\mathop \Leftrightarrow \limits^{{\text{LDH}}} }{\hbox{Lactate}} + {\hbox{NAD}}.$$\end{document}</tex-math></disp-formula> The enzymes in the reverse direction of glutamate and lactate consumption were not considered and assayed in this case. Cells were collected by centrifugation and then suspended in 25&#xA0;mmol/L Tris&#x2013;HCl buffer, pH&#xA0;7.5. The suspension was sonicated by a sonifier (JY92-II, Scientz Biotechnology Co., China) at 0&#xB0;C for a total period of 10&#xA0;min (pulse on, 1&#xA0;s; pulse off, 3&#xA0;s). Cell debris was removed by centrifugation at 9,400<italic>g</italic>, 4&#xB0;C, for 20&#xA0;min, the supernatant was then used as the cell-free crude enzyme. GDH was assayed with a spectrophotometer (UV-2100, Unico, Shanghai, China) at 340&#xA0;nm by measuring the optical variation within 1&#xA0;min, with 0.05&#xA0;mL supernatant and 2.95&#xA0;ml GDH reaction mixture consisting of 13.3&#xA0;mmol/L &#x3B1;-ketoglutaric acid, 15&#xA0;mmol/L NH<sub>4</sub>Cl, and 1.67&#xA0;mmol/L NADPH (Sigma Chemical Co., St Louis, MO, USA) in phosphate buffer (pH&#xA0;7.5) at 37&#xB0;C. LDH was assayed in the same condition but with the LDH reaction mixture containing 0.757&#xA0;mmol/L pyruvic acid and 1.67&#xA0;mmol/L NADH (Sigma Chemical Co., St Louis, MO, USA). Protein was measured by Bradford method with bovine serum albumin as the standard. Enzyme-specific activity (GDH or LDH) was expressed as units/mg-protein, where 1&#xA0;U was defined as the quantity of enzyme that converted 1&#xA0;&#x3BC;mol of NAD(P)H per minute.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>On-line control system</title>
+        <p>The on-line measured RQ data were sent to a PC in which a control program written with Visual-Basic (Microsoft Inc., USA) was embedded. Based on the RQ set-points and the measured RQ, the PC on-line regulated the agitation rate of the fermentor (AGT) with a discrete PI control manner described by Eq.&#xA0;<xref rid="Equ3" ref-type="">3</xref> , which renewed the agitation rate at an interval of 5&#xA0;min.
+<disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\begin{aligned} &amp; {\hbox{AGT}}(k) = {\hbox{AGT}}(k - 1) + C_{0} {\left[ {{\hbox{RQ}}(k) - {\hbox{RQ}}_{\hbox{set}} } \right]} + C_{1} {\left[ {{\hbox{RQ}}(k - 1) - {\hbox{RQ}}_{\hbox{set}} } \right],} \\ &amp; \hbox{where}\quad C_{0} = K_{C} {\left({1 + \frac{1}{{\tau _{\rm I} }}} \right)}\quad C_{1} = - K_{C} \\ \end{aligned} $$\end{document}</tex-math></disp-formula> In Eq.&#xA0;<xref rid="Equ3" ref-type="">3</xref>, <italic>k</italic> represented the current control instant; RQ<sub>set</sub> was the RQ set-point which might be subject to changes during the control; <italic>K</italic><sub><italic>C</italic></sub> and &#x3C4;<sub>I</sub> were proportional and integral constants of the feedback controller, respectively. K<sub><italic>C</italic></sub> and &#x3C4;<sub>I</sub> were determined by Coon&#x2013;Cohen method by observing the RQ response to a step change in the input (agitation rate) during a certain period of the glutamate production phase.</p>
+      </sec>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Results and discussion</title>
+      <sec id="Sec8">
+        <title>The changing patterns of glutamate and lactate production, as well as the GDH and LDH activities at different DO control levels</title>
+        <p>Constant control of DO is generally considered as the simplest optimization control method for the aerobic fermentations with aeration. Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a, c, d showed the time courses of glutamate, lactate, cells, and residual glucose concentrations when DO was constantly controlled at 10 and 50% (saturation level), respectively. The results showed that, glutamate and lactate formation pattern strongly depended on the DO control level. A higher glutamate production rate could be achieved when the DO was controlled at a lower level of 10% and the final glutamate concentration reached about 91.5&#xA0;g/L at 34&#xA0;h, while the final glutamate concentration stopped at a lower level of 72.7&#xA0;g/L (30&#xA0;h) when controlling DO at 50%. On the other hand, lactate severely accumulated up to 28&#xA0;g/L when DO was controlled at a lower level of 10%, while almost no lactate accumulation occurred when controlling DO at 50%. These results suggested that the enzymatic activities of GDH and LDH under lower and higher DO level might be quite different.<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Time courses of glutamate, lactate, cells and glucose concentrations, as well as the key enzymes activities at different DO control levels. <bold>a</bold> Glutamate concentration: (<italic>filled circle</italic>) DO 10%, (<italic>filled triangle</italic>) DO 50%; lactate concentration: (<italic>open circle</italic>) DO 10%, (<italic>open triangle</italic>) DO 50%. <bold>b</bold> GDH activity: (<italic>filled circle</italic>) DO 10%, (<italic>open circle</italic>) DO 50%; LDH activity: (<italic>filled triangle</italic>) DO 10%, (<italic>open triangle</italic>) DO 50%. <bold>c</bold> Cells concentration: (<italic>filled circle</italic>) DO 10%, (<italic>filled triangle</italic>) DO 50%. <bold>d</bold> Glucose concentration: (<italic>filled circle</italic>) DO 10%, (<italic>filled triangle</italic>) DO 50%</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig1_HTML" id="MO1"/></fig></p>
+        <p>Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b indicated the changing pattern of the GDH and LDH activities under the same DO control levels. The GDH activity for the lower DO case (10%) was much higher and declined slower than that of the higher DO case (50%) after experiencing the enzymatic activity peak of about 1.8&#xA0;U/mg-protein around 12&#x2013;13&#xA0;h. This result could at least explain or account for the fact that, higher glutamate production rate and accumulation occurred at lower DO control level in the initial and middle production phases of 8&#x2013;20&#xA0;h. The slow down of glutamate production rate in the late production stage (20&#x2013;30&#xA0;h) and the final stoppage of glutamate production were due to the reduction of the co-enzyme NADPH regeneration rate, which will be further discussed in the following section. As for the LDH activities, from the result of severe lactate&#x2019;s accumulation at lower DO level, it was speculated that the LDH activity under lower DO level (10%) should also be much higher than that of the higher DO case. However, the result did not agree with the expectation. Although the LDH activity under lower DO level was slightly higher than that of the higher DO for the majority of the fermentation period, this result could not stand for the large difference in the lactate accumulation under different DO levels.</p>
+        <p>It should be noted that the cell concentration could reach a constant and stabilized level of about 20&#xA0;g/L prior to production phase (Fig. <xref rid="Fig1" ref-type="fig">1</xref>c) for all of the constant DO control cases, therefore using the unit of &#x201C;U/mg-protein&#x201D; could actually reflect the total enzyme activity.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>The changing patterns of glutamate and lactate production, as well as the GDH and LDH activities at anaerobic fermentation condition</title>
+        <p>Generally, it is considered that the anaerobic condition is extremely harmful to glutamate production. To verify the above speculation, an experiment under extremely low DO level was conducted. In the fermentation, DO was initially controlled at 30%, and the agitation rate was manually reduced to bring DO down to 0% instantly at 12&#xA0;h. Then, the same agitation rate was kept for the next 6&#xA0;h. During this period, the fermentation could be considered as implemented under anaerobic condition, glutamate production stopped and lactate overflowed as shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a. At 18&#xA0;h, the automatic control of DO was resumed to quickly bring DO back to 30%, a partial recovery of glutamate production was observed. However, the final glutamate concentration ended at a very low level of about 45&#xA0;g/L. As shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b, during the anaerobic period, GDH activity sharply dropped to a level of 0.87&#xA0;U/mg from the original 1.86&#xA0;U/mg, and could not be recovered again even when DO was resumed back to 30% level. The results indicated that the occurrence of anaerobic condition even for a short period would be both fatal and irretrievable to glutamate fermentation.<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>The changing pattern of the products formation and the key enzymes activities when DO control level was subject to a sudden change during 12&#x2013;18&#xA0;h, and maintained at extremely low level during the period. <bold>a</bold> The changing patterns of glutamate and lactate concentrations, as well as the DO control level, <italic>filled circle</italic>: glutamate concentration, <italic>open triangle</italic>: lactate concentration, <italic>solid line</italic>: DO. <bold>b</bold> The changing patterns of the key enzyme activities, <italic>filled circle</italic>: GDH activity, <italic>open triangle</italic>: LDH activity</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig2_HTML" id="MO2"/></fig></p>
+      </sec>
+      <sec id="Sec10">
+        <title>The glucose consumption rates (glycolysis rates) at different DO control levels</title>
+        <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> showed the average glucose consumption rates under different DO control levels during the production phase. Apparently, under regular (aerobic) fermentation, the glycolysis rate did not depend on the DO control level, and the changing patterns of glycolysis rate at different DO levels were basically the same.<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>The time courses of glucose consumption rate at different DO levels. <italic>Open circle</italic>: DO&#xA0;=&#xA0;10%, batch no. 050331; <italic>open triangle</italic>: DO&#xA0;=&#xA0;50%, batch no. 050407</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig3_HTML" id="MO3"/></fig></p>
+      </sec>
+      <sec id="Sec11">
+        <title>The mechanism analysis of lactate overflow and the control strategy of BMC</title>
+        <p>For the purpose of easily interpreting the experimental results, the metabolic flow chart of glutamate fermentation by <italic>C. glutamicum</italic> as shown in our previous study [<xref ref-type="bibr" rid="CR3">3</xref>] was simplified and re-depicted in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. The metabolic fluxes changes at 10, 20, and 30&#xA0;h of the fermentations with the DO constant controls (10, 50%) and BMC were also depicted. As shown in the map, glucose was converted into pyruvate through EMP pathway, and supplemented with PP pathway to produce NADPH for structuring glutamate synthesis precursors by cells. The pyruvate formed either entered TCA cycle via pyruvate dehydrogenase, generating the energy as well as co-enzyme substances such as ATP, NADH, etc. for the entire metabolic network operations, or was converted into lactate with LDH as the enzymatic catalyst (<italic>r</italic><sub>5</sub>, Eq.&#xA0;<xref rid="Equ2" ref-type="">2</xref>). At &#x3B1;-KG (&#x3B1;-ketoglutaric acid) node of TCA cycle, the glutamate synthesis reaction (<italic>r</italic><sub>6</sub>) with GDH as the enzymatic catalyst (Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref>) occurred. As shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, with the constant DO control strategy, the decrease of the DO control level enhanced the metabolic fluxes of both glutamate and lactate formation; while the metabolic flux of TCA after the &#x3B1;-KG node (<italic>r</italic><sub>4</sub>) sharply decreased, and the TCA cycle was almost completely shut down when controlling DO at 10% level (also refer to Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>).<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Simplified metabolic flow chart and the relevant metabolic fluxes changes during the fermentations. <italic>Broken line</italic>: very low metabolic flux or channels shut down; <italic>solid line</italic>: moderate metabolic flux; <italic>bold solid line</italic>: enhanced metabolic flux. <bold>a</bold>: at 10&#xA0;h; <bold>b</bold>: at 20&#xA0;h; <bold>c</bold>: at 30&#xA0;h</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig4_HTML" id="MO4"/></fig><fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Comparison of RQ and calculated TCA metabolic flux rate at different DO control levels</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig5_HTML" id="MO5"/></fig></p>
+        <p>A higher enzyme activity in vivo reflects a higher potential in reaction rate catalyzed by the enzyme. However, it never means that the relevant reaction rate must be high, as the reaction rate also depends on other factors, such as the coenzyme (NADPH, NADH) activity as well as the reactant concentration. As shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a, b, at the end of the fermentation, the glutamate synthesis completely stopped even though GDH activity still remained at a higher level. The calculation results in our previous report [<xref ref-type="bibr" rid="CR3">3</xref>] showed that at the end of the fermentation, the coenzyme NADPH regeneration rate had decreased to 5&#x2013;20% of its peak level (figure not presented). Therefore, it could be concluded that, the glutamate synthesis stoppage was due to the significant reduction of NADPH regeneration rate instead of the reduction in GDH activity.</p>
+        <p>In general, the enzymes catalyzing interaction assures an intracellular carbon fluxes balance. This means that in glutamate fermentation, glycolysis rate (<italic>r</italic><sub>1</sub>) should balance with glutamate synthesis (<italic>r</italic><sub>6</sub>), lactate formation (<italic>r</italic><sub>5</sub>), as well as the TCA metabolic flux (<italic>r</italic><sub>4</sub>) that was involved with CO<sub>2</sub> release. As a result, from Figs.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, <xref rid="Fig4" ref-type="fig">4</xref>, and <xref rid="Fig5" ref-type="fig">5</xref>, we could speculate that the severe lactate accumulation at lower DO control (DO&#xA0;=&#xA0;10%) was due to the carbon metabolic balance rather than the higher LDH activity by the following facts. First, the changing patterns of glycolysis rate (<italic>r</italic><sub>1</sub>) at different DO levels were almost the same; second, no significant differences in LDH activities were shown under different DO level; Third, the metabolic flux of TCA significantly decreased with the decrease in DO control level. Under the lower DO level, even though GDH activity was higher, the higher glutamate synthesis rate (<italic>r</italic><sub>6</sub>) still could not completely balance with the glycolysis rate (<italic>r</italic><sub>1</sub>), as TCA cycle was almost closed completely and the TCA metabolic flux (<italic>r</italic><sub>4</sub>) was very low. Under this circumstance, lactate had to be overflowed or excreted (<italic>r</italic><sub>5</sub>) into the broth to achieve the entire intracellular carbon balance. On the other hand, under the higher DO level, GDH activity was relatively low, but the TCA cycle was nearly open for a complete oxidation. Under this condition, lactate was not necessarily overflowed, as the glutamate synthesis rate (<italic>r</italic><sub>6</sub>) plus the higher TCA metabolic flux (<italic>r</italic><sub>4</sub>) were big enough to balance with the glycolysis rate (<italic>r</italic><sub>1</sub>), even though LDH exhibited almost equivalent activity as compared with that of the lower DO case.</p>
+        <p>Is there an effective way to solve the problem of simultaneous accumulation of the main product (glutamate) and by-product (lactate)? Two ways of using genetic engineering technique could be considered as the solution: (1) to use genetic engineering technique to knock-out the genes coding for LDH; (2) to use certain LDH inhibitors to eliminate the LDH action without affecting GDH and entire fermentation activities at the same time. These are direct and straightforward solutions, but might be very complicated and difficult to realize. Based on the metabolic analysis mentioned earlier, an alternative solution, the &#x201C;BMC&#x201D; strategy as shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, which is adaptively regulating of the TCA metabolic fluxes at an appropriate level to achieve the metabolic balance among glycolysis, glutamate synthesis, and TCA metabolic flux for enhancement of the glutamate synthesis and repression of lactate overflow, seemed to be easier to implement and more realistic.</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Possibility of using and realizing the BMC strategy</title>
+        <p>The necessary conditions for realization of BMC existed in the following two aspects: (1) the rates of the glutamate synthesis (<italic>r</italic><sub>6</sub>) plus the TCA metabolic flux (<italic>r</italic><sub>4</sub>) should just balance with the glycolysis rate (<italic>r</italic><sub>1</sub>); (2) DO should be controlled at a reasonably lower level to assure a higher GDH activity. To achieve the target, an on-line measurable or predictable state variable that could actually reflect the TCA metabolic flux changes, must be available. Based on our experimental results and the on-line metabolic flux calculation in the previous study, we found RQ are related with the TCA metabolic flux (<italic>r</italic><sub>4</sub>) closely, and could be considered as the on-line feedback index for realization of BMC.</p>
+        <p>Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> depicted the time course of RQ and the TCA metabolic flux (<italic>r</italic><sub>4</sub>) for the cases of constantly controlling DO at 10 and 50%, respectively. For both cases, RQ almost followed the same changing patterns during the growth phase. However, during the glutamate production phase, the changing patterns of RQ and TCA metabolic flux under different DO levels were apparently different. RQ almost stayed constantly around 0.80 in the case of controlling DO at 50%, while RQ gradually declined into the range of 0.5&#x2013;0.6 for the case of controlling DO at 10%. Theoretically, RQ&#xA0;=&#xA0;1.0 means that TCA cycle is fully opened and glucose is completely converted into CO<sub>2</sub> and H<sub>2</sub>O via TCA cycle. In glutamate fermentation, a lower RQ (for example, RQ&#xA0;=&#xA0;0.5&#x2013;0.6) reflected the fact that, TCA cycle was almost completely shut down in order to direct the carbon flux to the glutamate synthesis at &#x3B1;-KG node. On the other hand, a higher RQ meant that the TCA metabolic flux was too high that a large portion of carbon was oxidased into CO<sub>2</sub> and H<sub>2</sub>O accompanyied with large quantities of NADH and ATP formation, which actually caused the &#x201C;inefficient carbon cycle&#x2018;&#x2019;. Based on Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>, If we could carefully and adaptively control RQ at a suitable level, maintaining the TCA metabolic flux at a moderate level in between the fluxes of lower and higher DO levels, while still directing major carbon flux to the glutamate synthesis, then the BMC might be realized and lactate overflow be relieved.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>The performance and experimental result of the BMC strategy</title>
+        <p>Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> showed one complete data set of the BMC control results. The BMC was activated at 11&#xA0;h after the fermentation entered into production phase, where the two controller parameters, <italic>K</italic><sub>C</sub> and &#x3C4;<sub>I</sub> were set at 20 and 3, respectively. As shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, the set-point of RQ was changed three times during the fermentation (RQ<sub>set</sub>: 0.80, 11&#x2013;15&#xA0;h, initial stage of production phase; 0.70, 15&#x2013;28&#xA0;h, middle stage; 0.60, 28&#x2013;35&#xA0;h, final stage). The principle of changing RQ<sub>set</sub> was to assure that DO does not subject to either a higher (&#x2265;40%) or a very low level (&#x2264;5%) for a relatively longer time (1&#xA0;h) in order to keep a higher GDH activity: if DO stayed at higher level for relatively long time, then it initiatively reduced the RQ<sub>set</sub> down; if DO stayed at very low level for relatively long time, then it initiatively brings the RQ<sub>set</sub> up. By using DO as the complementary indicator in this way, RQ could be controlled around its set-point, with the agitation rate stably staying in the range of 450&#x2013;750&#xA0;rpm without reaching its upper limit (950&#xA0;rpm) or low limit (450&#xA0;rpm) even for a short time. With this control strategy, DO fluctuated at a lower range of 5&#x2013;40% so that a higher GDH activity could be maintained. The BMC control led to an excellent fermentation performance as compared with those of the DO constant controls: the maximal glutamate concentration reached 101.6&#xA0;g/L at 34&#xA0;h which was about an 11% increase over the best result of the DO constant controls (91.5&#xA0;g/L, DO&#xA0;=&#xA0;10%); the lactate concentration at the corresponding time was only 0.11&#xA0;g/L which was only 14% of the best result of the DO constant controls (0.8&#xA0;g/L, DO&#xA0;=&#xA0;50%). To verify the repeatability of BMC control&#x2019;s performance, the same experiment was repeated once. Again, a maximal glutamate concentration of 98.8&#xA0;g/L was obtained at 38&#xA0;h, with the lactate accumulation of only 1.04&#xA0;g/L at the same time.<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>The experimental results and control performance using the BMC optimization strategy. <italic>Filled circle</italic>: glutamate concentration; <italic>open triangle</italic>: lactate concentration; <italic>open circle</italic>: cells concentration; <italic>filled square</italic>: glucose concentration</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig6_HTML" id="MO6"/></fig></p>
+        <p>It should be noted that constant RQ control strategy could not lead to a good fermentation performance. We did three constant RQ control experiments setting RQ at 0.6, 0.7, and 0.8, respectively. The glutamate production stopped at very low level (40&#x2013;60&#xA0;g/L) for all of the three cases. In the first two cases, constantly controlling RQ at 0.6 and 0.7 caused DO to drop to zero level, or the anaerobic environmental condition in other word, in the initial production stage. The cells metabolic and GDH activities were largely damaged as suggested by Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> and relevant discussion. In the third case, the high RQ set-point (RQ&#xA0;=&#xA0;0.8) caused a continuous rise-up and high level of DO (from 20 to 70%), which reduced the GDH activity and deteriorated glutamate production in turn. As a result, the adaptive RQ control (step-wise changing RQ set-points) in simultaneous consideration of DO change has to be adopted to satisfy the two conditions of obtaining an appropriate <italic>r</italic><sub>4</sub> flux and a reasonable lower DO level for realizing the BMC, as described in the previous section.</p>
+        <p>Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> showed the changing patterns of the TCA metabolic flux (<italic>r</italic><sub>4</sub>) when using the BMC control and the DO constant controls. Apparently, the BMC strategy controlled the TCA metabolic flux at an appropriate level just in between those of higher and lower DO levels. This realized the target of &#x201C;balanced metabolism&#x201D;, which led to a higher glutamate production and almost completely repressed the lactate accumulation.<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>The calculated TCA metabolic fluxes of the BMC strategy and the DO constant controls</p></caption><graphic position="anchor" xlink:href="449_2006_59_Fig7_HTML" id="MO7"/></fig></p>
+        <p>Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> indicated that CO<sub>2</sub> yield (total CO<sub>2</sub> released quantity versus total glucose consumed quantity) of the BMC was also just in between those of higher and lower DO constant control cases, which supported the BMC idea from the other side. However, it should be noted that, besides channel <italic>r</italic><sub>4</sub>, the CO<sub>2</sub> release also occurred at the other routes in the entire metabolic network, the shutdown of TCA cycle never meant the total CO<sub>2</sub> production would cease. The effectiveness of the BMC strategy was also supported by the metabolic fluxes changes results shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. The moderate TCA metabolic flux (<italic>r</italic><sub>4</sub>) simultaneously ensured a higher glutamate synthetic flux and an almost nil lactate formation flux.<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>The materials and carbon balances of the balanced metabolic control (BMC) and dissolved oxygen (DO) constant controls</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Batch no.</th><th align="left">Glucose consumed (g)</th><th align="left">Glutamate produced (g)</th><th align="left">Lactate produced (g)</th><th align="left">Cells<sup>a</sup> (g)</th><th align="left">CO<sub>2</sub> released (g)</th><th align="left">Carbon balance<sup>b</sup> (%)</th><th align="left">CO<sub>2</sub>/Glucose (&#x2212;) (%)</th></tr></thead><tbody><tr><td align="left">DO&#xA0;=&#xA0;10%</td><td char="." align="char">839.2</td><td char="." align="char">384.0</td><td char="." align="char">102.0</td><td char="." align="char">90.8</td><td char="." align="char">352.9</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">C-content</td><td char="." align="char">335.6</td><td char="." align="char">156.7</td><td char="." align="char">40.8</td><td char="." align="char">46.9</td><td char="." align="char">96.2</td><td char="." align="char">101.5</td><td char="." align="char">28.6</td></tr><tr><td align="left">DO&#xA0;=&#xA0;50%</td><td char="." align="char">530.2</td><td char="." align="char">265.2</td><td char="." align="char">3.2</td><td char="." align="char">77.1</td><td char="." align="char">262.9</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">C-content</td><td char="." align="char">212.1</td><td char="." align="char">108.2</td><td char="." align="char">1.3</td><td char="." align="char">39.8</td><td char="." align="char">71.7</td><td char="." align="char">104.2</td><td char="." align="char">33.9</td></tr><tr><td align="left">RQ-BMC</td><td char="." align="char">716.7</td><td char="." align="char">406.4</td><td char="." align="char">0.4</td><td char="." align="char">60.7</td><td char="." align="char">335.9</td><td char="." align="char"/><td char="." align="char"/></tr><tr><td align="left">C-content</td><td char="." align="char">286.7</td><td char="." align="char">165.9</td><td char="." align="char">0.18</td><td char="." align="char">31.4</td><td char="." align="char">91.6</td><td char="." align="char">100.8</td><td char="." align="char">31.9</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>The dry cell weight, using the composition of strain <italic>C. glutamicum</italic> AJ-3462 (C<sub>4.71</sub>H<sub>8.02</sub>O<sub>1.92</sub>N, Ref.#11) as the calculation reference</p><p><sup>b</sup>Ratio of the total production (glutamate, lactate, cell, and CO<sub>2</sub>) to total consumption (glucose)</p></table-wrap-foot></table-wrap></p>
+        <p>Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> summarized the results and performance of the BMC and the DO constant controls. In consideration of the repeatability of the different control strategies, the experiments of constantly controlling DO at 10 and 50%, as well as BMC were repeated at least twice and then the averaged values were calculated for performance evaluation. The table evaluated the two different control strategies in terms of the four major fermentation performance index: maximal glutamate concentration, lactate accumulation quantity, glutamate productivity, and conversion rate from glucose to glutamate. The BMC showed an equivalent performance in the terms of productivity and conversion rate as compared with the best results of the DO constant controls. However, BMC strategy greatly improved the other two performance index: maximal glutamate concentration was increased by about 15% (with respect to DO&#xA0;=&#xA0;10% case) and lactate accumulation was decreased by about 36% (with respect to DO&#xA0;=&#xA0;50% case).<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>The summarized results of the BMC and DO constant control</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Batch no.</th><th align="left">Conversion rate (%)</th><th align="left">Glutamate concentration (g/L)</th><th align="left">Lactate concentration (g/L)</th><th align="left">Productivity (g/L/h)</th></tr></thead><tbody><tr><td align="left" colspan="5">Constant DO controls</td></tr><tr><td align="left">&#xA0;050331 (DO&#xA0;=&#xA0;10%)</td><td char="." align="char">49.38</td><td char="." align="char">83.00</td><td char="." align="char">27.90</td><td char="." align="char">2.86</td></tr><tr><td align="left">&#xA0;050526 (DO&#xA0;=&#xA0;10%)</td><td char="." align="char">43.62</td><td char="." align="char">91.50</td><td char="." align="char">25.50</td><td char="." align="char">2.69</td></tr><tr><td align="left">&#xA0;DO&#xA0;=&#xA0;10%, average</td><td char="." align="char">46.50</td><td char="." align="char">87.25</td><td char="." align="char">26.45</td><td char="." align="char">2.77</td></tr><tr><td align="left">&#xA0;050407 (DO&#xA0;=&#xA0;50%)</td><td char="." align="char">44.51</td><td char="." align="char">74.20</td><td char="." align="char">1.00</td><td char="." align="char">2.56</td></tr><tr><td align="left">&#xA0;050512 (DO&#xA0;=&#xA0;50%)</td><td char="." align="char">53.40</td><td char="." align="char">72.80</td><td char="." align="char">0.80</td><td char="." align="char">2.43</td></tr><tr><td align="left">&#xA0;DO&#xA0;=&#xA0;50%, average</td><td char="." align="char">48.96</td><td char="." align="char">73.50</td><td char="." align="char">0.90</td><td char="." align="char">2.49</td></tr><tr><td align="left">&#xA0;050427 (DO&#xA0;=&#xA0;30%)</td><td char="." align="char">55.55</td><td char="." align="char">83.20</td><td char="." align="char">18.60</td><td char="." align="char">2.19</td></tr><tr><td align="left" colspan="5">Balanced metabolic control by RQ (RQ-BMC)</td></tr><tr><td align="left">&#xA0;050509 (RQ-BMC)</td><td char="." align="char">56.71</td><td char="." align="char">101.60</td><td char="." align="char">0.11</td><td char="." align="char">2.99</td></tr><tr><td align="left">&#xA0;050516 (RQ-BMC)</td><td char="." align="char">49.80</td><td char="." align="char">98.80</td><td char="." align="char">1.04</td><td char="." align="char">2.60</td></tr><tr><td align="left">&#xA0;RQ-BMC, average</td><td char="." align="char">53.26</td><td char="." align="char">100.20</td><td char="." align="char">0.58</td><td char="." align="char">2.80</td></tr></tbody></table></table-wrap></p>
+      </sec>
+    </sec>
+    <sec id="Sec14">
+      <title>Summary</title>
+      <p>A novel fermentation optimization method&#x2014;the &#x201C;balanced metabolic control&#x201D; (BMC) strategy was proposed and successfully used by feedback controlling RQ to regulate the TCA metabolic flux rate at an appropriate level to achieve the metabolic balance among glycolysis, glutamate synthesis, and TCA metabolic flux for glutamate fermentation. The proposed BMC strategy greatly improved the fermentation performance in the two terms of maximal glutamate concentration and the lactate overflow repression. The maximal glutamate concentration increased by about 15% compared with the best results of the DO constant controls, and furthermore, the lactate overproduction occurred in the DO constant control cases could be completely relieved when using the BMC strategy. As a result, the proposed BMC strategy is expected to be applicable for optimization of other aerobic amino acids fermentations in potential.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This study was partially sponsored by The Science Foundation Committee of Jiangsu province, China, project number BK-2003021. The authors thank the Committee for the kind financial support.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eggeling</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Sahm</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title><sc>L</sc>-glutamate and <sc>L</sc>-lysine: traditional products with impetuous development</article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>1999</year>
+          <volume>52</volume>
+          <fpage>146</fpage>
+          <lpage>153</lpage>
+          <pub-id pub-id-type="doi">10.1007/s002530051501</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Eggeling L, Sahm H (1999) L-glutamate and L-lysine: traditional products with impetuous development. Appl Microbiol Biotechnol 52:146&#x2013;153 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Takac</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Cahk</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Mavituna</surname>
+              <given-names>F</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Metabolic flux distribution for the optimized production of <sc>L</sc>-glutamate</article-title>
+          <source>Enzyme Microb Technol</source>
+          <year>1998</year>
+          <volume>23</volume>
+          <fpage>286</fpage>
+          <lpage>300</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0141-0229(98)00047-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Takac S, Cahk G, Mavituna F, et&#xA0;al (1998) Metabolic flux distribution for the optimized production of L-glutamate. Enzyme Microb Technol 23:286&#x2013;300 </citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Shi</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Gao</surname>
+              <given-names>P</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>On-line prediction of products concentrations in glutamate fermentation using metabolic network model and linear programming</article-title>
+          <source>Biochem Eng J</source>
+          <year>2005</year>
+          <volume>25</volume>
+          <issue>2</issue>
+          <fpage>99</fpage>
+          <lpage>108</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.bej.2005.03.012</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang C, Shi Z, Gao P, et&#xA0;al (2005) On-line prediction of products concentrations in glutamate fermentation using metabolic network model and linear programming. Biochem Eng J 25(2):99&#x2013;108 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Uy</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Delaunay</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Goergen</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Dynamics of glutamate synthesis and excretion fluxes in batch and continuous cultures of temperatures-triggered <italic>Corynebacterium glutamicum</italic></article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2005</year>
+          <volume>27</volume>
+          <fpage>153</fpage>
+          <lpage>162</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00449-004-0393-x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Uy D, Delaunay S, Goergen J, et&#xA0;al (2005) Dynamics of glutamate synthesis and excretion fluxes in batch and continuous cultures of temperatures-triggered Corynebacterium glutamicum. Bioprocess Biosyst Eng 27:153&#x2013;162 <pub-id pub-id-type="pmid">15614534</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vallino</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Stephanopoulos</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Metabolic flux distributions in <italic>Corynebacterium glutamicum</italic> during growth and lysine overproduction</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1993</year>
+          <volume>41</volume>
+          <fpage>633</fpage>
+          <lpage>646</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.260410606</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vallino JJ, Stephanopoulos G (1993) Metabolic flux distributions in Corynebacterium glutamicum during growth and lysine overproduction. Biotechnol Bioeng 41:633&#x2013;646 <pub-id pub-id-type="pmid">18609599</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gulik</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Heijnen</surname>
+              <given-names>JJ</given-names>
+            </name>
+          </person-group>
+          <article-title>A metabolic network stoichiometry analysis of microbial growth and product formation</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1995</year>
+          <volume>48</volume>
+          <fpage>681</fpage>
+          <lpage>698</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.260480617</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gulik WM, Heijnen JJ (1995) A metabolic network stoichiometry analysis of microbial growth and product formation. Biotechnol Bioeng 48:681&#x2013;698 <pub-id pub-id-type="pmid">18623538</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhao</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Baba</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Mori</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Analysis of metabolic and physiological responses to gnd knockout in <italic>Escherichia coli</italic> by using C-13 tracer experiment and enzyme activity measurement</article-title>
+          <source>FEMS Microbiol Lett</source>
+          <year>2003</year>
+          <volume>220</volume>
+          <fpage>295</fpage>
+          <lpage>301</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0378-1097(03)00133-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhao I, Baba T, Mori H, et&#xA0;al (2003) Analysis of metabolic and physiological responses to gnd knockout in Escherichia coli by using C-13 tracer experiment and enzyme activity measurement. FEMS Microbiol Lett 220:295&#x2013;301 <pub-id pub-id-type="pmid">12670695</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shi</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>On-line metabolic pathway analysis based on metabolic signal flow diagram</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1998</year>
+          <volume>58</volume>
+          <fpage>139</fpage>
+          <lpage>148</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0290(19980420)58:2/3&lt;139::AID-BIT5&gt;3.0.CO;2-M</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shi H, Shimizu K (1998) On-line metabolic pathway analysis based on metabolic signal flow diagram. Biotechnol Bioeng 58:139&#x2013;148 <pub-id pub-id-type="pmid">10191383</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Savinell</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Palsson</surname>
+              <given-names>BO</given-names>
+            </name>
+          </person-group>
+          <article-title>Network analysis of intermediary metabolism using linear optimization&#x2014;I. Development of mathematical formalism</article-title>
+          <source>J Theor Biol</source>
+          <year>1992</year>
+          <volume>154</volume>
+          <fpage>421</fpage>
+          <lpage>454</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0022-5193(05)80161-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Savinell JM, Palsson BO (1992) Network analysis of intermediary metabolism using linear optimization&#x2014;I. Development of mathematical formalism. J Theor Biol 154:421&#x2013;454 <pub-id pub-id-type="pmid">1593896</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Varma</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Boesch</surname>
+              <given-names>BW</given-names>
+            </name>
+            <name>
+              <surname>Palsson</surname>
+              <given-names>BO</given-names>
+            </name>
+          </person-group>
+          <article-title>Biochemical production capabilities of <italic>Escherichia coli</italic></article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1993</year>
+          <volume>42</volume>
+          <fpage>59</fpage>
+          <lpage>73</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.260420109</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Varma A, Boesch BW, Palsson BO (1993) Biochemical production capabilities of Escherichia coli. Biotechnol Bioeng 42:59&#x2013;73 <pub-id pub-id-type="pmid">18609648</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Takiguchi</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Shioya</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>An on-line physiological state recognition system for the lysine fermentation process based on a metabolic reaction model</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1997</year>
+          <volume>55</volume>
+          <fpage>170</fpage>
+          <lpage>181</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0290(19970705)55:1&lt;170::AID-BIT18&gt;3.0.CO;2-Q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Takiguchi N, Shimizu H, Shioya S (1997) An on-line physiological state recognition system for the lysine fermentation process based on a metabolic reaction model. Biotechnol Bioeng 55:170&#x2013;181 <pub-id pub-id-type="pmid">18636455</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jobe</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Herwig</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Surzyn</surname>
+              <given-names>M</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Generally applicable fed-batch culture concept based on the detection of metabolic state by on-line balancing</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2003</year>
+          <volume>82</volume>
+          <fpage>627</fpage>
+          <lpage>639</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.10610</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jobe AM, Herwig C, Surzyn M, et&#xA0;al (2003) Generally applicable fed-batch culture concept based on the detection of metabolic state by on-line balancing. Biotechnol Bioeng 82:627&#x2013;639 <pub-id pub-id-type="pmid">12673762</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tada</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Kishimoto</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Omasa</surname>
+              <given-names>T</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Constrained optimization of <sc>L</sc>-lysine production based on metabolic flux using a mathematical programming method</article-title>
+          <source>J Biosci Bioeng</source>
+          <year>2001</year>
+          <volume>91</volume>
+          <issue>4</issue>
+          <fpage>344</fpage>
+          <lpage>351</lpage>
+          <pub-id pub-id-type="doi">10.1263/jbb.91.344</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tada K, Kishimoto M, Omasa, T, et&#xA0;al (2001) Constrained optimization of L-lysine production based on metabolic flux using a mathematical programming method. J Biosci Bioeng 91(4):344&#x2013;351 <pub-id pub-id-type="pmid">16233002</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Takiguchi</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Tanaka</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A maximum production strategy of lysine based on a simplified model derived from a metabolic reaction network</article-title>
+          <source>Metab Eng</source>
+          <year>1999</year>
+          <volume>1</volume>
+          <fpage>209</fpage>
+          <lpage>308</lpage>
+          <pub-id pub-id-type="doi">10.1006/mben.1999.0127</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shimizu H, Takiguchi N, Tanaka H, et&#xA0;al (1999) A maximum production strategy of lysine based on a simplified model derived from a metabolic reaction network. Metab Eng 1:209&#x2013;308 </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Coello</surname>
+              <given-names>MN</given-names>
+            </name>
+            <name>
+              <surname>Hadjsassi</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Lebeault</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of the growth rate on the enzymatic activities of <sc>L</sc>-lysine-producing cells of <italic>Corynebacterium glutamicum</italic></article-title>
+          <source>World J Microbiol Biotechnol</source>
+          <year>2001</year>
+          <volume>17</volume>
+          <fpage>337</fpage>
+          <lpage>341</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1016644517437</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Coello MN, Hadjsassi A, Lebeault JM (2001) Effect of the growth rate on the enzymatic activities of L-lysine-producing cells of Corynebacterium glutamicum. World J Microbiol Biotechnol 17:337&#x2013;341 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tesch</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Eikmanns</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Graaf</surname>
+              <given-names>AAD</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Ammonia assimilation in <italic>Corynebacterium glutamicum</italic> and a glutamate dehydrogenase-deficient mutant</article-title>
+          <source>Biotechnol Lett</source>
+          <year>1998</year>
+          <volume>20</volume>
+          <issue>10</issue>
+          <fpage>953</fpage>
+          <lpage>957</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1005442618575</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tesch M, Eikmanns BJ, Graaf AAD, et&#xA0;al (1998) Ammonia assimilation in Corynebacterium glutamicum and a glutamate dehydrogenase-deficient mutant. Biotechnol Lett 20(10):953&#x2013;957 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wendisch</surname>
+              <given-names>VF</given-names>
+            </name>
+            <name>
+              <surname>Graff</surname>
+              <given-names>AAD</given-names>
+            </name>
+            <name>
+              <surname>Sahm</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Quantitative determination of metabolic fluxes during cultivation of two carbon sources: comparative analyses with <italic>Corynebacterium glutamicum</italic> during growth on acetate and/or glucose</article-title>
+          <source>J Bacteriol</source>
+          <year>2000</year>
+          <volume>182</volume>
+          <issue>11</issue>
+          <fpage>3088</fpage>
+          <lpage>3096</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.182.11.3088-3096.2000</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wendisch VF, Graff AAD, Sahm H, et&#xA0;al (2000) Quantitative determination of metabolic fluxes during cultivation of two carbon sources: comparative analyses with Corynebacterium glutamicum during growth on acetate and/or glucose. J Bacteriol 182(11):3088&#x2013;3096 <pub-id pub-id-type="pmid">10809686</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cocaign-Bousquet</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Lindley</surname>
+              <given-names>ND</given-names>
+            </name>
+          </person-group>
+          <article-title>Pyruvate overflow and carbon flux with the central metabolic pathways of <italic>Corynebacterium glutamicum</italic> during growth on lactate</article-title>
+          <source>Enzyme Microb Technol</source>
+          <year>1995</year>
+          <volume>17</volume>
+          <fpage>260</fpage>
+          <lpage>267</lpage>
+          <pub-id pub-id-type="doi">10.1016/0141-0229(94)00023-K</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cocaign-Bousquet M, Lindley ND (1995) Pyruvate overflow and carbon flux with the central metabolic pathways of Corynebacterium glutamicum during growth on lactate. Enzyme Microb Technol 17:260&#x2013;267 </citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Tanaka</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Nakato</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Nagahisa</surname>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Effects of changes in enzyme activities on metabolic flux redistribution around the 2-oxoglutarate branch in glutamate production by <italic>Corynebacterium glutamicum</italic></article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2003</year>
+          <volume>25</volume>
+          <fpage>291</fpage>
+          <lpage>298</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Shimizu H, Tanaka H, Nakato A, Nagahisa, et&#xA0;al (2003) Effects of changes in enzyme activities on metabolic flux redistribution around the 2-oxoglutarate branch in glutamate production by Corynebacterium glutamicum. Bioprocess Biosyst Eng 25:291&#x2013;298 <pub-id pub-id-type="pmid">14505173</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ye</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Metabolic pathway analysis of recombinant <italic>saccharomyces cerevisiae</italic> with a galactose-inducible promotor based on a signal flow model approach</article-title>
+          <source>J Biosci Bioeng</source>
+          <year>1995</year>
+          <volume>80</volume>
+          <fpage>541</fpage>
+          <lpage>551</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Jin S, Ye K, Shimizu K (1995) Metabolic pathway analysis of recombinant saccharomyces cerevisiae with a galactose-inducible promotor based on a signal flow model approach. J Biosci Bioeng 80:541&#x2013;551 </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

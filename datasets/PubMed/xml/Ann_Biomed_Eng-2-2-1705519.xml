@@ -1,0 +1,1319 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="correction">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17228405</article-id>
+      <article-id pub-id-type="pmc">1705519</article-id>
+      <article-id pub-id-type="publisher-id">9120</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-006-9120-x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Erratum</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A Modeling Study of Notch Noise Responses of Type III Units in the Gerbil Dorsal Cochlear Nucleus</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Zheng</surname>
+            <given-names>Xiaohan</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Voigt</surname>
+            <given-names>Herbert F.</given-names>
+          </name>
+          <degrees>Ph.D.</degrees>
+          <address>
+            <email>hfv@bu.edu</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Biomedical Engineering Department and Hearing Research Center, Boston University, 44 Cummington Street, Boston, MA 02215 USA </aff>
+        <aff id="Aff2"><label>2</label>Department of Biomedical Engineering, Boston University, 44 Cummington Street, Boston, MA 02215-2407 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>11</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>34</volume>
+      <issue>12</issue>
+      <fpage>1935</fpage>
+      <lpage>1946</lpage>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, Inc. 2006</copyright-statement>
+      </permissions>
+      <related-article related-article-type="corrected-article" id="N0x1c6e020N0x2ce20e0" ext-link-type="doi" xlink:href="10.1007/s10439-005-9073-5"/>
+      <abstract>
+        <p>A computational model of the neural circuitry of the gerbil dorsal cochlear nucleus (DCN), based on the MacGregor&#x2019;s neuromime model, was used to simulate type III unit (P-cell) responses to notch noise stimuli. The DCN patch model is based on a previous computational model of the cat DCN [Hancock, K. E., and H. F. Voigt. <italic>Ann. Biomed. Eng.</italic> 27:73&#x2013;87, 1999]. According to the experimental study of Parsons <italic>et&#xA0;al.</italic> [<italic>Ann. Biomed. Eng.</italic> 29:887&#x2013;896, 2001], the responses of gerbil DCN type III units to notch noise stimuli are similar to those of cat DCN type IV units, which are thought to be spectral notch detectors. This suggests that type III units in the gerbil DCN may serve as spectral notch detectors. In this modeling study, a simplified notch noise response plot&#x2014;spike discharge rate vs. notch cutoff frequency plot&#x2014;was used to compare model responses to the experimental results. Parameter estimation and sensitivity analysis of three connection parameters within the DCN patch have been studied and shows the model is robust, providing reasonable fits to the experimental data from 14 of 15 type III units examined [work supported by a grant from NIDCD, Boston University&#x2019;s Biomedical Engineering department and Hearing Research Center].</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Hearing</kwd>
+        <kwd>Sound localization</kwd>
+        <kwd>Parameter estimation</kwd>
+        <kwd>Sensitivity analysis</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>INTRODUCTION</title>
+      <p>The cochlear nucleus (CN) is the sole target of auditory nerve fibers and is the first brainstem nucleus in the ascending auditory pathway. The dorsal part of the cochlear nucleus (DCN) is one of its three sub-nuclei and has initial integration functions. The DCN&#x2019;s role in audition appears, in part, to be involved in sound localization in the median plane equidistant from the two ears where the traditional sound source location cues, interaural time and level differences, are absent. For broadband signals, the pinna attenuates energy in a narrow band whose center frequency can be correlated with sound source elevation. The pinnae-induced attenuation is called a spectral notch. These notches are seen in the head-related transfer functions (HRTFs), which are the Fourier transforms of the impulse responses from free space sound sources to the tympanic membrane. These spectral features are found in human, cat and gerbil HRTFs.<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR13">13</xref> Principal cells of the DCN, type III units in the gerbil<xref ref-type="bibr" rid="CR15">15</xref> and type IV units in the cat,<xref ref-type="bibr" rid="CR22">22</xref> exhibit sharp sensitivity to notch noise signals.<xref ref-type="bibr" rid="CR14">14</xref>,<xref ref-type="bibr" rid="CR18">18</xref> This suggests that the DCN is a spectral notch detector across different species.</p>
+      <p>The previous study of Hancock and Voigt<xref ref-type="bibr" rid="CR6">6</xref> used a computational model of the DCN to model the responses of three type IV units to notch noises and presented close fits to the physiological data recorded by Spirou and Young.<xref ref-type="bibr" rid="CR18">18</xref> The gerbil DCN has fewer type IV units than the cat DCN (11% type IV units in gerbil vs. 31% in cat)<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR17">17</xref> and is comprised primarily of type III units (62%).<xref ref-type="bibr" rid="CR2">2</xref> As the principal units in gerbil DCN, type III units undoubtedly play an important role in gerbil sound localization. In this study, we used the same computational model to fit the physiological data obtained from the gerbil DCN by Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> Despite the fact that type III units have quite different responses to tones than type IV units, this study shows that by modifying the connectivities within the neuron groups we can simulate both type III and type IV units as notch detectors. Also in this work we have good fits for 14 out of 15 type III units in gerbil; this is substantially more modeling data than previously presented and points to the robustness of the DCN model.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>RESPONSE MAP SCHEME AND RATE VS. CUTOFF FREQUENCY PLOTS</title>
+      <p>A response map (RM) is a plot of excitatory and inhibitory responses to tonal stimuli shown in a stimulus frequency vs. sound pressure level plane. It is a popular method to categorize the neurons in the CN of unanethetized, decerebrate animals.<xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR23">23</xref> Type III units are characterized by their RMs (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A), which show a center V-shape excitation region flanked by side-band inhibition. The tip of the excitation region points to the unit&#x2019;s best frequency (BF), the frequency to which the unit was most sensitive. In Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A, there are seven discharge-rate vs. frequency curves shown for seven sound pressure levels presented. RMs of type IV units typically show an excitatory region over BF and an inhibitory area above that ranging over a broad frequency range; sometimes a narrow excitatory area appears off BF (see Fig.&#xA0;1 of Ref. <xref ref-type="bibr" rid="CR6">6</xref>).<fig id="Fig1"><label>FIGURE 1.</label><caption><p>Physiology of a type III unit: (A) Response map composed of rate vs. frequency curves of unit L021199 1.01 in Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref>. Excitatory responses are shaded black while inhibitory responses left blank. (B) Rate-level curves when given wideband noise and notch noise stimuli. Only four notch noise responses with notch (nw) widths 1.0 kHz, 2.0 kHz, 4.0 kHz, and 8.0&#xA0;kHz are shown. (C) Rate vs. Cutoff frequency plot. Here notch widths varies systematically from 0.5 to 8.0&#xA0;kHz in step of 0.5&#xA0;kHz. The average rates are calculated from the range of 46&#x2013;54&#xA0;dB SPL as shown by black bar in (B).</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig1_HTML" id="MO1"/></fig></p>
+      <p>Responses to broadband noise, in addition to tones, are used to classify units in the DCN. We also used the same notch noise (NN) stimuli in the model simulations as in the physiological experiments.<xref ref-type="bibr" rid="CR15">15</xref> These have band reject notches of 30&#xA0;dB centered at the BF with varying widths. In Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B, discharge-rate vs. level curves are plotted for broadband noise and four NN stimuli with widths of 1, 2, 4, and 8&#xA0;kHz. These responses were taken from a series of responses to BF-centered NN stimuli whose widths systematically varied from 0.5 to 8.5&#xA0;kHz with a 0.5&#xA0;kHz step. For Unit L021199 1.01 in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> there were 16 NN stimuli applied with widths from 0.5 to 8.0&#xA0;kHz. Only four NN responses are plotted for clarity.</p>
+      <p>To summarize the information in these rate-level curves, Spirou and Young<xref ref-type="bibr" rid="CR18">18</xref> further characterized NN responses with rate vs. cutoff frequency plots (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>C), where the firing rates to each NN were averaged over a range of sound levels from 46 to 54&#xA0;dB SPL, where the inhibition reached the maximum, as indicated with black bar on the abscissa in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B. The cutoff frequencies included both the notch noise&#x2019;s lowpass and the highpass cutoff frequencies, thus the average rate of each notch noise response is plotted twice. In such plots, 11 of 15 units in Parsons <italic>et&#xA0;al.</italic>'s experimental data showed a specific &#x201C;Mexican Hat&#x201D; shape, indicating that when increasing the notch width, the average response rate dropped sharply from excitatory to inhibitory and then showed some degree of recovery. The unit in the figure was excited by the broad-band noise and NN with narrow-notch width (0.5&#xA0;kHz, not shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B but shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>C), but was inhibited by NN with wider widths (from 1.0 to 6.0&#xA0;kHz, also shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>C). Also it showed some degree of recovery to a less inhibitory stage when NN with an even wider notch was applied (from 6.5 to 8.0&#xA0;kHz, shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>C). This recovery was seen in 11 of 15 units in the paper of Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> Similar responses to NN have been found in type IV units in cat by Spirou and Young.<xref ref-type="bibr" rid="CR18">18</xref></p>
+      <p>This demonstrated the sensitivity of type III units in gerbils to the NNs. Thus, type III units in gerbils are capable of detecting spectral notches as do type IV units in cats.
+<fig id="Fig2"><label>FIGURE 2.</label><caption><p>Conceptual model of gerbil dorsal cochlear nucleus circuitry. Only inhibitory connections are shown. The size of the triangles indicates connection strength. The horizontal axis represents the input from the auditory nerve fibers with increasing frequency, which target&#xA0;all cells. Modified from Davis <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR2">2</xref></p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig2_HTML" id="MO2"/></fig></p>
+    </sec>
+    <sec id="Sec3">
+      <title>CONCEPTUAL MODEL OF DCN CIRCUITRY</title>
+      <p>To illustrate the functional role of type III units in the gerbil DCN, the conceptual model from Davis <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR2">2</xref> was chosen (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The gerbil DCN conceptual model is more complex than the cat model since the principal cells in gerbils can be either type III units or type IV units, including subtypes of type IV units: type IV-i and type IV-T units. In addition, besides type II units and the wide band inhibitor (WBI) units, type III-i units were included in the circuitry to provide necessary inhibitory input to type IV-i units. In this paper, however, we only discuss the properties and responses of type III units, thus only type II units and WBI units are taken as inhibitors.</p>
+      <p>Auditory nerve (AN) fibers provide excitatory inputs to type II units, type III units and WBI units. However, DCN units show spontaneous activity even after destruction of the cochlea.<xref ref-type="bibr" rid="CR9">9</xref> Thus non-specific afferents (NSA) were added to the principal cells in our computational model to provide noncochlear inputs to the DCN (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). In order not to confuse physiologically defined unit types and model unit types, we use different names to distinguish them (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>).<fig id="Fig3"><label>FIGURE 3.</label><caption><p>A patch of DCN model. Five cell populations are organized in a tonotopic manner with frequency step equal to 0.005 octaves. The excitatory and inhibitory connections are shown in a single frequency slice. P cells, representing type III units in gerbil and type IV units in cat; I2 cells, type II units; W cells, providing wide band inhibition; AN fibers, the auditory nerve fiber input. Modified From Hancock and Voigt, 1999.<xref ref-type="bibr" rid="CR6">6</xref></p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig3_HTML" id="MO3"/></fig></p>
+      <p>Fusiform cells in gerbil DCN are mostly type III units in intracellular recording and marking experiments by Hancock and Voigt<xref ref-type="bibr" rid="CR7">7</xref> whereas type II units arise from vertical cells in the DCN<xref ref-type="bibr" rid="CR21">21</xref> and WBI units are thought to project from the posteroventral CN.<xref ref-type="bibr" rid="CR20">20</xref> In addition, WBI units send inhibitory connections to both type IV units (principal units in cat) and type II units in cat DCN. We are assuming that these connections to the gerbil principal units remain intact.<table-wrap id="Tab1"><label>TABLE 1.</label><caption><p>Physiological unit types with corresponding model unit types.</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Physiological unit type</th><th>Model unit type</th></tr></thead><tbody><tr><td>Type III units</td><td>P-cells</td></tr><tr><td>Type II units</td><td>I2-cells</td></tr><tr><td>Wideband inhibitors</td><td>W-cells</td></tr><tr><td>Auditory nerve fibers</td><td>AN-fibers</td></tr></tbody></table></table-wrap></p>
+    </sec>
+    <sec id="Sec4" sec-type="methods">
+      <title>METHODS</title>
+      <sec id="Sec5">
+        <title>Organization of the DCN Model</title>
+        <p>The gerbil model is based on a previous computational model of the cat DCN<xref ref-type="bibr" rid="CR6">6</xref> (see Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). The model contains five cell groups that are arranged into 800 isofrequency slices centered at 5&#xA0;kHz with two octaves below and above in intervals of 0.005 octaves. Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows the connections among the model cells within a single frequency slice, where P-cells represent the principal cells, I2-cells represent interneuron inhibitors with type II responses and W-cells represent wide band inhibitors. AN-fibers excite P-cells, I2-cells and W-cells. W-cells inhibit P-cells and I2-cells. I2-cells inhibit P-cells. P-cells also are excited by non-specific afferents.</p>
+        <p>The relationship among the model cells can be discussed in terms of the connection parameters as shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. For a given population of model cells (e.g., P-cells), the target cell &#x201C;B&#x201D; will receive N inputs from the &#x201C;A&#x201D; source cells, which are chosen from a band of &#x201C;A&#x201D; source cells with bandwidth BW, offset from the BF of B by C. The subscript <inline-formula id="IEq1"><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm A} \to {\rm B}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq1.gif --></inline-formula> indicates the source unit, A to the target unit, B. In the simulations shown here, all the P-cells&#x2019; BFs will be 5&#xA0;kHz.<fig id="Fig4"><label>FIGURE 4.</label><caption><p>Group connection parameters. B is the target cell and a group of source cells A connect to it. <inline-formula id="IEq2"><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{A \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq2.gif --></inline-formula> and <inline-formula id="IEq3"><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tau _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq3.gif --></inline-formula> are the step increase and time constant in response to the input spikes. Here B cell receives N inputs from A cells, which are randomly chosen from a band of bandwidth and center frequency offset specified cells.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig4_HTML" id="MO4"/></fig><table-wrap id="Tab2"><label>TABLE 2.</label><caption><p>Intrinsic parameters.</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Population</th><th>&#x3C4;<sub>m</sub> (ms)</th><th>&#x3B8; (mV)</th><th><italic>b</italic><sub>k</sub></th><th>&#x3C4;<sub>k</sub> (ms)</th><th><italic>E</italic><sub>k</sub> (mV)</th><th><italic>E</italic><sub>ex</sub> (mV)</th><th><italic>E</italic><sub>in</sub> (mV)</th></tr></thead><tbody><tr><td>W-cells</td><td>5.0</td><td>4.0</td><td>2.00</td><td>1.0</td><td>&#x2212;10</td><td>+70</td><td>&#x2212;10</td></tr><tr><td>I2-cells</td><td>6.0</td><td>14.5</td><td>1.75</td><td>1.0</td><td>&#x2212;10</td><td>+70</td><td>&#x2212;10</td></tr><tr><td>P-cells</td><td>10.0</td><td>7.5</td><td>2.00</td><td>1.0</td><td>&#x2212;10</td><td>+70</td><td>&#x2212;10</td></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec6">
+        <title>Neuron Model</title>
+        <p>The neuron model (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>) is based on the MacGregor neuromime model,<xref ref-type="bibr" rid="CR10">10</xref> which is a parallel circuit model containing the membrane capacitance, leakage conductance, a potassium channel branch and the excitatory/inhibitory connection branches. Each excitatory or inhibitory input will add a branch, with the variable conductance controlled by the parameters, step &#x3C3; and time constant &#x3C4;.<fig id="Fig5"><label>FIGURE 5.</label><caption><p>(A) <italic>V</italic><sub>m</sub> is the membrane potential relative to rest; <italic>C</italic><sub>m</sub> is membrane capacitance; <italic>G</italic> is resting conductance; <italic>G</italic><sub>k</sub> and <italic>E</italic><sub>k</sub> are variable conductance and reversal potential of potassium; <italic>G</italic><sub>ex/in</sub> and <italic>E</italic><sub>ex/in</sub> are excitatory/inhibitory synaptic conductance and reversal potential. (B) Expression of connection synapse conductance. Target cell will undergo a step increase and exponential decay, time constant in response to input spikes.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig5_HTML" id="MO5"/></fig></p>
+        <p>Event time is recorded when the membrane potential exceeds its threshold, &#x3B8;, and the potassium conductance is activated to induce the cell&#x2019;s refractory period. Thus, the computation is reduced by leaving out the details of action potential generation. The following equations describe the neuronmime model:
+<disp-formula id="Equ1"><label>1</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tau _{\rm m} \frac{{dV_{\rm m} }}{{dt}} = - V_{\rm m} - g_{\rm k} (V_{\rm m} - E_{\rm k} )\\
+-\, g_{{\rm ex}} (V_{\rm m} - E_{{\rm ex}} ) - g_{{\rm in}} (V_{\rm m} - E_{{\rm in}} ),$$\end{document}</tex-math></disp-formula><disp-formula id="Equ2"><label>2</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$\tau _{\rm k} \frac{{dg_{\rm k} }}{{dt}} = - g_{\rm k} + b_{\rm k} S,$$\end{document}</tex-math></disp-formula><disp-formula id="Equ3"><label>3</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$S = \left\{ {\begin{array}{@{}cc@{}}{0,} &amp; {V_{\rm m} &lt; 0} \\{1,} &amp; {V_{\rm m} \ge 0} \\\end{array}} \right\}$$\end{document}</tex-math></disp-formula>
+where <italic>g</italic><sub>k</sub> = <italic>G</italic><sub>k</sub>/<italic>G</italic>, <italic>g</italic><sub>ex</sub> = <italic>G</italic><sub>ex</sub>/<italic>G</italic>, and <italic>g</italic><sub>in</sub> = <italic>G</italic><sub>in</sub>/<italic>G</italic>; <italic>G</italic>, <italic>G</italic><sub>k</sub>, <italic>G</italic><sub>ex</sub>, and <italic>G</italic><sub>in</sub> represent respectively the conductances of neuron membrane, potassium channel, excitatory synaptic inputs and inhibitory synaptic inputs. The latter three are normalized by <italic>G</italic> to simplify the equations. <italic>V</italic><sub>m</sub> is the membrane potential. <italic>E</italic><sub>k</sub>, <italic>E</italic><sub>ex</sub>, and <italic>E</italic><sub>in</sub> represent the reversal potentials. &#x3C4;<sub>m</sub> and &#x3C4;<sub>k</sub> are the membrane time constant and the refractory time constant. Equation (1) states the current fluxes across the neuronal membrane. Equation (2) states the change of the potassium conductance, where <italic>b</italic><sub>k</sub> represents the sensitivity to potassium conductance. <italic>S</italic> is the spiking variable with two alternative values: 1 indicates a cell is firing.<table-wrap id="Tab3"><label>TABLE 3.</label><caption><p>Connection parameters.</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Connection <inline-formula id="IEq4"><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm A} \to {\rm B}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq4.gif --></inline-formula></th><th><inline-formula id="IEq5"><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm C}_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq5.gif --></inline-formula> (octave)</th><th><inline-formula id="IEq6"><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq6.gif --></inline-formula> (octave)</th><th><inline-formula id="IEq7"><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm N}_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq7.gif --></inline-formula></th><th><inline-formula id="IEq8"><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq8.gif --></inline-formula></th><th><inline-formula id="IEq9"><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tau _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq9.gif --></inline-formula> (ms)</th></tr></thead><tbody><tr><td><inline-formula id="IEq10"><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm AN} \to {\rm W}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq10.gif --></inline-formula></td><td align="left">0.0</td><td>Varies</td><td>140</td><td>0.06</td><td>10</td></tr><tr><td><inline-formula id="IEq11"><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm AN} \to {\rm I}2$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq11.gif --></inline-formula></td><td align="left">0.0</td><td>0.4</td><td>48</td><td>0.55</td><td>10</td></tr><tr><td><inline-formula id="IEq12"><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm AN} \to {\rm P}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq12.gif --></inline-formula></td><td align="left">0.0</td><td>0.4</td><td>48</td><td>Varies</td><td>10</td></tr><tr><td><inline-formula id="IEq13"><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm W} \to {\rm I}2$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq13.gif --></inline-formula></td><td align="left">0.0</td><td>0.1</td><td>15</td><td>1.40</td><td>10</td></tr><tr><td><inline-formula id="IEq14"><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm W} \to {\rm P}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq14.gif --></inline-formula></td><td align="left">0/0.2</td><td>0.1</td><td>15</td><td>Varies</td><td>10</td></tr><tr><td><inline-formula id="IEq15"><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm I}2 \to {\rm P}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq15.gif --></inline-formula></td><td align="left">&#x2212;0.2/0</td><td>0.6</td><td>21</td><td>0.1</td><td>1</td></tr><tr><td><inline-formula id="IEq16"><tex-math id="M19">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm NSA} \to {\rm P}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq16.gif --></inline-formula></td><td align="left">n/a</td><td>n/a</td><td>15</td><td>0.15</td><td>3</td></tr></tbody></table></table-wrap></p>
+        <p>For target cell B, the variable conductance that represents synapses from source cells A is described by
+<disp-formula id="Equ4"><label>4</label><tex-math id="M20">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$\tau _{{\rm A} \to {\rm B}} \frac{{dg_{{\rm A} \to {\rm B}} }}{{dt}} = - g_{{\rm A} \to {\rm B}} + \sigma _{{\rm A} \to {\rm B}} \sum\limits_{i = 1}^{N_{{\rm A} \to {\rm B}} } {S_{{\rm A}_i} } $$\end{document}</tex-math></disp-formula>
+where <italic>S</italic><sub>A</sub> are the input spikes.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Parameter Values</title>
+        <p>In the model, we used four intrinsic (&#x3C4;<sub>m</sub>, &#x3B8;, <italic>b</italic><sub>k</sub>, and &#x3C4;<sub>k</sub>) and five connection parameters (<inline-formula id="IEq17"><tex-math id="M21">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq17.gif --></inline-formula>, <inline-formula id="IEq18"><tex-math id="M22">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq18.gif --></inline-formula>, <inline-formula id="IEq19"><tex-math id="M23">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$N_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq19.gif --></inline-formula>, <inline-formula id="IEq20"><tex-math id="M24">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq20.gif --></inline-formula>, and <inline-formula id="IEq21"><tex-math id="M25">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tau _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq21.gif --></inline-formula>). The intrinsic parameter set describes the membrane properties of the cell, which determines the steady firing rate and the threshold sound pressure level of the single cell. The connection parameter set describes the connections between two groups of cells; this is used to specify the connectivity within the neuronal circuitry of the model. We used the intrinsic values in the former work of Hancock and Voigt<xref ref-type="bibr" rid="CR6">6</xref> (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>), as they have little or no effect on the spectral response characteristics.
+<fig id="Fig6"><label>FIGURE 6.</label><caption><p>Best fit of Unit L041499 13.01 and parameter sensitivity analysis. (A) Best fit of the model to physiological data. The best frequency of physiological data and the center frequency of the model data have been lined up through simply translation of the physiological data rate vs. cutoff frequency plot. The circles represents the physiological data and the solid line represents the best fit of the model. The dashed line represents the average spontaneous rate of the physiological data. The minimum error &#x424;<sub>min</sub> and the values of the three important parameters of the best fit are shown in the upper left. (B)&#x2013;(D) Contours of equal &#x424;/&#x424;<sub>min</sub> (1.5, 2, 5, 10, and 15, from inside to outside) showing the sensitivity of the fit to the parameter values. <inline-formula id="IEq22"><tex-math id="M26">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq22.gif --></inline-formula>, <inline-formula id="IEq23"><tex-math id="M27">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm AN} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq23.gif --></inline-formula>, and <inline-formula id="IEq24"><tex-math id="M28">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq24.gif --></inline-formula> are held to be the value in the best fit corresponsively in plots (B), (C), and (D).</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig6_HTML" id="MO6"/></fig><fig id="Fig7"><label>FIGURE 7.</label><caption><p>Best fit of Unit L110199 2.01 and parameter analysis. Organized as in Fig. <xref rid="Fig6" ref-type="fig">6</xref> except that in the contours plots (B&#x2013;D) equal &#x3A6;/&#x3A6;<sub>min</sub> of 1.1 was added to show the center.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig7_HTML" id="MO7"/></fig><fig id="Fig8"><label>FIGURE 8.</label><caption><p>Best fit of Unit L122299 4.01 and parameter analysis. Organized as in Fig. <xref rid="Fig6" ref-type="fig">6</xref>.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig8_HTML" id="MO8"/></fig></p>
+        <p>MacGregor<xref ref-type="bibr" rid="CR11">11</xref> pointed out that the steady state effect of one population on its target is proportional only to the product <inline-formula id="IEq25"><tex-math id="M29">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$N_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq25.gif --></inline-formula><inline-formula id="IEq26"><tex-math id="M30">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq26.gif --></inline-formula><inline-formula id="IEq27"><tex-math id="M31">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\tau _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq27.gif --></inline-formula>, which enabled us to set only one parameter from these three to be a free parameter; here we chose <inline-formula id="IEq28"><tex-math id="M32">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq28.gif --></inline-formula>, the strength from cell A to B. Thus, only three connection parameters, <inline-formula id="IEq29"><tex-math id="M33">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq29.gif --></inline-formula>, <inline-formula id="IEq30"><tex-math id="M34">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq30.gif --></inline-formula>, and <inline-formula id="IEq31"><tex-math id="M35">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{{\rm A} \to {\rm B}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq31.gif --></inline-formula> were taken into account in the simulations. The values of the parameters are listed in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>.</p>
+        <p>As in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>, three parameters were set to be main parameters that vary: <inline-formula id="IEq32"><tex-math id="M36">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq32.gif --></inline-formula>, <inline-formula id="IEq33"><tex-math id="M37">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm AN} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq33.gif --></inline-formula>, and <inline-formula id="IEq34"><tex-math id="M38">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq34.gif --></inline-formula>. Center offset <inline-formula id="IEq35"><tex-math id="M39">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{{\rm I}2 \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq35.gif --></inline-formula> and <inline-formula id="IEq36"><tex-math id="M40">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq36.gif --></inline-formula> were set to two possible values 0/&#x2212;0.2 octaves and 0/0.2 octaves respectively according to the physiological data in cross-correlation studies. <inline-formula id="IEq37"><tex-math id="M41">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm I}2 \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq37.gif --></inline-formula> was set to 0.1 to obtain type III RM properties. Non-specific afferent firing rate was set to 80, 90, or 120&#xA0;spikes/s according to the various spontaneous rates of type III units.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Auditory Nerve Model</title>
+        <p>AN-fibers were based on the model described by Carney.<xref ref-type="bibr" rid="CR1">1</xref> The input to the AN-fiber is a sound pressure signal and the output is a spike train. Each fiber consists of a gammatone filter that provides the frequency selectivity, a nonlinear process that generates an inner hair cell potential and a compartmental model of neurotransmitter release. This in turn creates an instantaneous firing probability. AN-fiber thresholds and spontaneous activity rates were randomly assigned from physiological distributions of these parameters.<xref ref-type="bibr" rid="CR5">5</xref></p>
+        <p>In order to save time, all stimuli were processed by the auditory nerve filter bank once and the spike time responses were saved for use in subsequent simulations of the DCN circuitry.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Simulation Protocol and Data Analysis</title>
+        <p>All simulations were carried out on an IBM pSeries 655, which is a 48-processor system composed of six nodes. Each p655 node consists of eight Power4 processors running at 1.1&#xA0;GHz and sharing 16&#xA0;GB of memory. There are three levels of cache on this machine. Each processor has a 32&#xA0;KB L1 cache and then each pair of processors share a 1.41&#xA0;MB L2 cache, and each p655 node shares a 128&#xA0;MB L3 cache.</p>
+        <p>To create RMs, the model was stimulated by 50-ms tone bursts presented every 250&#xA0;ms with a 32-ms delay while sound pressure levels varied from 0 to 60&#xA0;dB SPL in 2&#xA0;dB SPL steps and the frequency varied in 0.1 octave steps within a three octave band above and below 5&#xA0;kHz. Thus, there are 31 frequency slices in one RM simulation. The spikes of the last 40&#xA0;ms of each trial were used to compute the spontaneous rate and the spikes of the last 40&#xA0;ms of each tone burst were used to compute the driven rate. In this paper, RMs composed of rate vs. frequency curves for seven levels were plotted (0&#x2013;60&#xA0;dB SPL in 10&#xA0;dB SPL steps). This is because the physiological data were taken only to 60&#xA0;dB SPL due to increasing recording artifacts above these levels. At each level, the horizontal line represents the unit&#x2019;s spontaneous discharge rate; excitation and inhibition are shown as rates above and below this line, respectively. The excitatory region was filled black and the inhibitory region left blank.</p>
+        <p>We used the same notch noises and broadband noise stimuli to obtain rate-level data as in Hancock and Voigt.<xref ref-type="bibr" rid="CR6">6</xref> In the simulation the sound level was varied from 0 to 90&#xA0;dB SPL in 2&#xA0;dB SPL steps and the noise bursts were presented for 200&#xA0;ms in 1000-ms trials.</p>
+        <p>To obtain rate vs. notch cutoff frequency plots, the firing rates from 46 to 54&#xA0;dB SPL were averaged to capture the most inhibitory area, consistent with Hancock and Voigt.<xref ref-type="bibr" rid="CR6">6</xref> These plots are sometimes referred to as &#x201C;Mexican Hats.&#x201D;
+<table-wrap id="Tab4"><label>TABLE 4.</label><caption><p>Data fits for all 15 type III units.</p></caption><table frame="hsides" rules="groups"><thead><tr><th/><th>In Ref</th><th>Unit</th><th>BF</th><th>SR</th><th>&#x3A6;<sub>min</sub></th><th>NSA</th><th><inline-formula id="IEq38"><tex-math id="M42">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm C}_{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq38.gif --></inline-formula></th><th><inline-formula id="IEq39"><tex-math id="M43">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm C}_{{\rm I}2 \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq39.gif --></inline-formula></th><th><inline-formula id="IEq40"><tex-math id="M44">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq40.gif --></inline-formula></th><th><inline-formula id="IEq41"><tex-math id="M45">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm AN} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq41.gif --></inline-formula></th><th><inline-formula id="IEq42"><tex-math id="M46">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq42.gif --></inline-formula></th></tr></thead><tbody><tr><td>1</td><td>Fig. 3A</td><td>L122299 3.01</td><td>4.3</td><td>38</td><td>3.4</td><td>90</td><td>0</td><td>0</td><td>3.25<sup>a</sup></td><td>0.25</td><td>0.90</td></tr><tr><td>2</td><td>Fig. 3B</td><td>L021199 1.01</td><td>4.7</td><td>77</td><td>3.8</td><td>120</td><td>0.2</td><td>0</td><td>3.25<sup>a</sup></td><td>0.45</td><td>1.80</td></tr><tr><td>3</td><td>Fig. 3C</td><td>L110199 2.01</td><td>2.6</td><td>13</td><td>2.4</td><td>80</td><td>0</td><td>0</td><td>3.00</td><td>0.12</td><td>0.25</td></tr><tr><td>4</td><td>Fig. 4A</td><td>L111799 9.01</td><td>4.9</td><td>9</td><td>2.8</td><td>80</td><td>0.2</td><td>&#x2212;0.2</td><td>2.00</td><td>0.12</td><td>0.25</td></tr><tr><td>5</td><td>Fig. 4B</td><td>L122299 4.01</td><td>11.0</td><td>14</td><td>4.7</td><td>80</td><td>0</td><td>&#x2212;0.2</td><td>1.25</td><td>0.24</td><td>0.90</td></tr><tr><td>6</td><td>Fig. 4C</td><td>L110199 11.02</td><td>4.2</td><td>12</td><td>11.0</td><td>80</td><td>0</td><td>0</td><td>1.00<sup>a</sup></td><td>0.15</td><td>0.05<sup>a</sup></td></tr><tr><td>7</td><td>Fig. 4D</td><td>L102599 7.01</td><td>10.2</td><td>26</td><td>5.1</td><td>90</td><td>0</td><td>0</td><td>1.50</td><td>0.25</td><td>0.70</td></tr><tr><td>8</td><td>Fig. 4E</td><td>L041499 16.01</td><td>3.8</td><td>30</td><td>8.1</td><td>80</td><td>0.2</td><td>&#x2212;0.2</td><td>2.50</td><td>0.12</td><td>0.20</td></tr><tr><td>9</td><td>Fig. 4F</td><td>L021199 4.01</td><td>7.1</td><td>15</td><td>2.8</td><td>80</td><td>0</td><td>0</td><td>3.25<sup>a</sup></td><td>0.18</td><td>0.25</td></tr><tr><td>10</td><td>Fig. 4G</td><td>L102599 8.01</td><td>6.4</td><td>22</td><td>5.6</td><td>80</td><td>0</td><td>0</td><td>1.50</td><td>0.12</td><td>0.40</td></tr><tr><td>11</td><td>Fig. 4H</td><td>L041499 13.01</td><td>1.2</td><td>35</td><td>2.4</td><td>80</td><td>0</td><td>0</td><td>1.25</td><td>0.24</td><td>0.80</td></tr><tr><td>12</td><td>Fig. 4I</td><td>L041499 1.02</td><td>1.3</td><td>9</td><td>9.8</td><td>80</td><td>0.2</td><td>0</td><td>3.25<sup>a</sup></td><td>0.06</td><td>0.15</td></tr><tr><td>13</td><td>Fig. 4J</td><td>L041499 1.01</td><td>1.2</td><td>49</td><td>5.8</td><td>80</td><td>0</td><td>&#x2212;0.2</td><td>1.00<sup>a</sup></td><td>0.24</td><td>0.90</td></tr><tr><td>14</td><td>Fig. 4K</td><td>L040700 3.01</td><td>11.4</td><td>20</td><td>1.3</td><td>80</td><td>0.2</td><td>0</td><td>3.00</td><td>0.24</td><td>0.25</td></tr><tr><td>15</td><td>Fig. 4L</td><td>L040700 7.01</td><td>15.1</td><td>24</td><td>0.4</td><td>120</td><td>0</td><td>0</td><td>2.75</td><td>0.45</td><td>2.00<sup>a</sup></td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>. Ref. refers to Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref>; BF in kHz, SR in spikes/s, NSA in spikes/s.</p><p><sup>a</sup>The parameter value reached the parameter limit.</p></table-wrap-foot></table-wrap></p>
+      </sec>
+    </sec>
+    <sec id="Sec10" sec-type="results">
+      <title>RESULTS</title>
+      <sec id="Sec11">
+        <title>Fit of the Model to Physiological Data and Parameter Sensitivity Analysis</title>
+        <p>Discharge rate versus cutoff frequency plots were used to evaluate the effectiveness of our DCN model quantitatively when fit to the physiological data obtained by Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> The physiological discharge rate versus cutoff frequency plots were translated along the frequency axis to align the BF of the unit to that of the model at 5&#xA0;kHz without shape change in logarithmic frequency plots. This operation was done mathematically by scaling the cutoff frequencies by CF/BF, where CF is the center frequency of model and BF is the best frequency of physiological data. This operation also made the after-translation physiological data look like that obtained by notch noise stimuli centered at 5&#xA0;kHz while notch widths scaled by the factor CF/BF. Then linear interpolation was used to obtain &#x201C;new&#x201D; physiological data corresponding to model data cutoff frequencies and this made comparison of fits among different units possible. Here we used an objective function, &#x3A6;, to demonstrate quantitatively the fit of one unit, or for comparisons across the units as done by Hancock and Voigt<xref ref-type="bibr" rid="CR6">6</xref>:
+<disp-formula id="Equ5"><label>5</label><tex-math id="M47">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Phi = \frac{1}{N}\sum\limits_{i = 1}^N {\left( {\frac{{y_{\rm d} (i) - y_{\rm m} (i)}}{{\max (y_{\rm d} )}}} \right)^2 } \times 500,$$\end{document}</tex-math></disp-formula>
+where <italic>y</italic><sub>d</sub> and <italic>y</italic><sub>m</sub> are the mean firing rates in the physiological data and model results respectively, and <italic>N</italic> is the total number of cutoff frequencies used in the comparison. The value of the objective function is scaled by 500 to make it more readable, consistent with Hancock and Voigt.<xref ref-type="bibr" rid="CR6">6</xref></p>
+        <p>The three parameters <inline-formula id="IEq43"><tex-math id="M48">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq43.gif --></inline-formula>, <inline-formula id="IEq44"><tex-math id="M49">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm AN} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq44.gif --></inline-formula>, and <inline-formula id="IEq45"><tex-math id="M50">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq45.gif --></inline-formula>, were systematically varied to get the &#x201C;best fit&#x201D; (minimum &#x3A6;, &#x3A6;<sub>min</sub>) and also to show contours of equal goodness or quality of fit. Center offsets <inline-formula id="IEq46"><tex-math id="M51">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{{\rm I}2 \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq46.gif --></inline-formula> and <inline-formula id="IEq47"><tex-math id="M52">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq47.gif --></inline-formula>, were set to 0 or &#x2212;0.2 octaves and 0 or 0.2 octaves respectively, and the fitting results were only slightly different with similar &#x3A6;<sub>min</sub> when best fits were obtained. Non-specific afferent (NSA) firing rate was set to 80, 90, or 120&#xA0;spikes/s to adjust to the various spontaneous rates of type III units and this improved the fits, especially for some low-spontaneous rate units. An alternative way to adjust spontaneous rate was to vary the connection strength of NSA to P-cells as in Hancock and Voigt.<xref ref-type="bibr" rid="CR6">6</xref> These two methods show no difference from each other since P-cells are the only targets of the NSA and the different firing rates of NSA or the strength of the connection between NSA and P-cells will only affect the total NSA excitatory inputs to P-cells.</p>
+        <p>Figures&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>&#x2013;<xref rid="Fig8" ref-type="fig">8</xref>A show the best fits to three physiological units labeled Unit L041499 13.01, Unit L110199 2.01 and Unit L122299 4.01. Figures&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>&#x2013;<xref rid="Fig8" ref-type="fig">8</xref>B&#x2013;D are contours showing parameter sensitivity analyses of these parameters. As shown in the figures, <inline-formula id="IEq48"><tex-math id="M53">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq48.gif --></inline-formula> varied from 1.0 to 3.25 octaves in steps of 0.25 octaves; <inline-formula id="IEq49"><tex-math id="M54">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm AN} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq49.gif --></inline-formula> varied from 0.05 to 0.5 or from 0.03 to 0.3; and <inline-formula id="IEq50"><tex-math id="M55">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq50.gif --></inline-formula> varied from 0.1 to 1.0 or from 0.05 to 0.5</p>
+        <p>Very good fits are obtained for these three units. Not only are the values of &#x3A6;<sub>min</sub> small, but the centers of the contours are shown clearly and the contours themselves resemble ellipses.<fig id="Fig9"><label>FIGURE 9.</label><caption><p>Response maps and rate-level plots for notch noise stimuli. (A, B) Response map composed of rate vs. frequency curves plot of Unit L041499 13.01 and the model using the set of best fit parameters in Fig. <xref rid="Fig6" ref-type="fig">6</xref>. The best frequency of this unit is 1.2&#xA0;kHz and has been moved to 5&#xA0;kHz with the same method in &#x201C;Mexican Hat&#x201D; plots for easier comparison to model RM. (C, D) Rate-level curves of broad-band noise and notch noise responses of the unit and the model data.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig9_HTML" id="MO9"/></fig><fig id="Fig10"><label>FIGURE 10.</label><caption><p>Response maps and rate-level plots responding to notch noise stimuli. Unit L110199 2.01. The best frequency of this unit is 2.6&#xA0;kHz. Picture is organized as in Fig. <xref rid="Fig9" ref-type="fig">9</xref>.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig10_HTML" id="MO10"/></fig></p>
+        <p>Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref> shows the results for all 15 units. Of the 15 units from Parsons <italic>et&#xA0;al.</italic>, <xref ref-type="bibr" rid="CR15">15</xref> eight units had best fits within closed ellipses. Another six units also gave good fits, although the <inline-formula id="IEq51"><tex-math id="M56">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq51.gif --></inline-formula> parameter in these cases was actually at its limit (four reaching the upper limit and one reaching the lower limit of the parameter range, one reaching the upper limit of <inline-formula id="IEq52"><tex-math id="M57">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\sigma _{{\rm W} \to {\rm P}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq52.gif --></inline-formula>). These 14 units had values of &#x3A6;<sub>min</sub> &lt; 9.8, which shows that the model is robust. The final unit was difficult to fit because the rate vs. notch noise cutoff frequency plot showed additional features (see Parsons <italic>et&#xA0;al.</italic>, Fig.&#xA0;4C).<xref ref-type="bibr" rid="CR15">15</xref></p>
+      </sec>
+      <sec id="Sec12">
+        <title>Comparisons Between Physiological Data and Model Data: Response Maps and Notch Noise Rate-Level Curves</title>
+        <p>Since the rate vs. notch noise cutoff frequency curves are the functions that were modeled, to what extent do the model RMs and notch noise rate-level curves resemble their physiological counterparts? Figures&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>&#x2013;<xref rid="Fig11" ref-type="fig">11</xref>A and B show the physiological RMs together with the model RMs for the units of Figures&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>&#x2013;<xref rid="Fig8" ref-type="fig">8</xref>. The model RMs were simulated using the model parameters set found when &#x3A6; = &#x3A6;<sub>min</sub>. For two sets of RMs we found that the model RMs show insufficient excitatory regions across the frequency axis when high-level tone bursts are given. This occurs in another five units where the physiological data show wide excitatory regions and indicates that our model parameters may need adjustment to get better tone responses for these units. All three model RMs, however, show nice center excitatory regions and sideband inhibitory regions, which is characteristic of type III units.</p>
+        <p>Figures&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>&#x2013;<xref rid="Fig11" ref-type="fig">11</xref>C and D show the rate-level curves corresponding to the BBN and NN stimuli. For Unit L041499 13.01 and Unit L110199 2.01 (Figures&#xA0;<xref rid="Fig9" ref-type="fig">9</xref> and <xref rid="Fig10" ref-type="fig">10</xref>), the maximum notch widths could not reach 8.0&#xA0;kHz since the units had low BFs (1.2 and 2.6&#xA0;kHz). Unit L122299 4.01 has a higher BF at 11.0&#xA0;kHz and the notch width was varied from 0.5 to 8.5&#xA0;kHz as in Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> In general, the responses to BBN are greatest in both model and physiological data, but there are great differences in shape, maximum rate, saturation rates and thresholds. The model&#x2019;s curves for the NN stimuli are qualitatively similar to the physiology, but again several differences are observed. The model seems to be providing more inhibition than that found in the physiology.</p>
+      </sec>
+    </sec>
+    <sec id="Sec13" sec-type="discussion">
+      <title>DISCUSSION</title>
+      <p>Spirou and Young<xref ref-type="bibr" rid="CR18">18</xref> showed that type IV units in the cat DCN (projection neurons) are notch detectors. Hancock and Voigt<xref ref-type="bibr" rid="CR6">6</xref> used a computational model of cat DCN circuitry, whose P-cells had type IV response properties to show that these also have notch noise sensitivity and that the variability seen in the units&#x2019; responses to notch noise are accounted for by parameter variations rather than different circuit arrangements. The gerbil DCN shows far fewer type IV units than the cat and the projection neurons in gerbil DCN are predominately type III units. Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> showed that gerbil type III units are sensitive to notch noises in much the same way as cat DCN type IV units. Thus, it appears that DCN projection neurons from both species are doing the same analysis on notch noise and thus may play similar roles in sound source detection in the median plane.</p>
+      <p>This study demonstrates that the same computational model used to model the notch noise behavior in cat type IV units can be used to model type III unit notch noise sensitivity in gerbil DCN. The fact that we can use the same neural circuit to model the DCN in both species suggests that perhaps this aspect of the DCN neural circuit is invariant across species.</p>
+      <p>The Parsons <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR15">15</xref> data set of 15 type III units provided a rich database to test our model. In all, the model provided reasonable fits to 14 type III units. Prior to this, notch noise responses from only three type IV units from cat were available for modeling.<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR18">18</xref> The objective function used here is the same one used in Hancock and Voigt<xref ref-type="bibr" rid="CR6">6</xref>; this allowed direct comparisons to that study. In this study, the RMs of the model P-cells with the best-fit parameters were compared to the physiological units&#x2019; RMs. The model RMs had excitatory center regions with inhibitory surrounds. These are similar to the physiological RMs and correspond to type III units. The model rate-level curves to broadband noise were similar to the physiological data, but the rate-level curves to notch noise showed many differences. Of course, these data are not part of the objective function used and so we would expect differences. It is possible to modify the objective function to include the rate-level curves, the RMs, or both, and this may be done in the future.<fig id="Fig11"><label>FIGURE 11.</label><caption><p>Response maps and rate-level plots responding to notch noise stimuli. Unit L122299 4.01. The best frequency of this unit is 11.0&#xA0;kHz. Picture is organized as in Fig. <xref rid="Fig9" ref-type="fig">9</xref>.</p></caption><graphic position="anchor" xlink:href="10439_2006_9120_Fig11_HTML" id="MO11"/></fig></p>
+      <p>Our model also shows reduced sensitivity to <inline-formula id="IEq53"><tex-math id="M58">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq53.gif --></inline-formula> in half of the units. Four units reached the upper limit of <inline-formula id="IEq54"><tex-math id="M59">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}} = 3.25$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq54.gif --></inline-formula> octave and two units reached the lower limit of <inline-formula id="IEq55"><tex-math id="M60">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}} = 1.00$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq55.gif --></inline-formula> octave, which indicates that better fits might be obtained by extending the range of <inline-formula id="IEq56"><tex-math id="M61">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\rm BW}_{{\rm AN} \to {\rm W}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9120_Article_IEq56.gif --></inline-formula>. This is not possible in the present version of the model, which is limited to a four octave frequency range.</p>
+      <p>Non-specific afferent (NSA) firing rate affected the &#x3A6;<sub>min</sub> in a significant way for some units. This was not true, however, for most of the units, where NSA firing rates of 80, 90, and 120&#xA0;spikes/s produced similar &#x3A6;<sub>min</sub>. The best-fit parameter values and sensitivity plots, however, would change significantly when different rates applied. In general, the parameters of the best fits showed no specific relations to unit BF or spontaneous rates.</p>
+      <p>The DCN computational models for cat and gerbil are identical in form and differ only in connectivity. The model is still incomplete, however, in that it lacks model cartwheel cells, granule cells and other cell types known to exist. The CN also receives input from somatosensory neurons that subserve tactile and kinesthetic sensations from the trigeminal ganglion<xref ref-type="bibr" rid="CR16">16</xref> the interpolar and caudal spinal trigeminal ganglion,<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR25">25</xref> cuneate nucleus<xref ref-type="bibr" rid="CR19">19</xref> as well as from other locations. These indicate that in addition to auditory function, the CN is involved in sensory integration at a very early stage in the brain. These are not currently in the model, but provide rich directions to explore in the future.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>ACKNOWLEDGMENTS</title>
+      <p>This work was supported by grant from the NIDCD and Boston University&#x2019;s Biomedical Engineering department and Hearing Research Center. We appreciate the comments on earlier versions of this manuscript from Dr. Barbara Shinn-Cunningham, Rapeechai Navawongse, and Seth Newburg.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>REFERENCES</title>
+      <ref id="CR1">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carney</surname>
+              <given-names>L. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>A model for the responses of low-frequency auditory-nerve fibers in cat</article-title>
+          <source>J Acoust. Soc. Am.</source>
+          <year>1993</year>
+          <volume>93</volume>
+          <fpage>401</fpage>
+          <lpage>417</lpage>
+          <pub-id pub-id-type="doi">10.1121/1.405620</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Carney, L. H. A model for the responses of low-frequency auditory-nerve fibers in cat. J Acoust. Soc. Am. 93:401&#x2013;417, 1993. <pub-id pub-id-type="pmid">8423257</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davis</surname>
+              <given-names>K. A.</given-names>
+            </name>
+            <name>
+              <surname>Ding</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Benson</surname>
+              <given-names>T. E.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Response properties of units in the dorsal cochlear nucleus of unanesthetized decerebrate gerbil</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1996</year>
+          <volume>75</volume>
+          <fpage>1411</fpage>
+          <lpage>1431</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Davis, K. A., J. Ding, T. E. Benson, and H. F. Voigt. Response properties of units in the dorsal cochlear nucleus of unanesthetized decerebrate gerbil. J. Neurophysiol. 75:1411&#x2013;1431, 1996. <pub-id pub-id-type="pmid">8727387</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ding</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Benson</surname>
+              <given-names>T. E.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Acoustic and current-pulse responses of identified neurons in the dorsal cochlear nucleus of unanesthetized, decerebrate gerbils</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1999</year>
+          <volume>82</volume>
+          <fpage>3434</fpage>
+          <lpage>3457</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ding, J., T. E. Benson, and H. F. Voigt. Acoustic and current-pulse responses of identified neurons in the dorsal cochlear nucleus of unanesthetized, decerebrate gerbils. J. Neurophysiol. 82:3434&#x2013;3457, 1999. <pub-id pub-id-type="pmid">10601474</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Evans</surname>
+              <given-names>E. F.</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>P. G.</given-names>
+            </name>
+          </person-group>
+          <article-title>The responses of single neurones in the cochlear nucleus of the cat as a function of their location and the anaesthetic state</article-title>
+          <source>Exp. Brain Res.</source>
+          <year>1973</year>
+          <volume>17</volume>
+          <fpage>402</fpage>
+          <lpage>427</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Evans, E. F., and P. G. Nelson. The responses of single neurones in the cochlear nucleus of the cat as a function of their location and the anaesthetic state. Exp. Brain Res. 17:402&#x2013;427, 1973. <pub-id pub-id-type="pmid">4725899</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hancock</surname>
+              <given-names>K. E.</given-names>
+            </name>
+            <name>
+              <surname>Davis</surname>
+              <given-names>K. A.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Modeling inhibition of type II units in the dorsal cochlear nucleus</article-title>
+          <source>Biol. Cybern.</source>
+          <year>1997</year>
+          <volume>76</volume>
+          <fpage>419</fpage>
+          <lpage>428</lpage>
+          <pub-id pub-id-type="doi">10.1007/s004220050355</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hancock, K. E., K. A. Davis, and H. F. Voigt. Modeling inhibition of type II units in the dorsal cochlear nucleus. Biol. Cybern. 76:419&#x2013;428, 1997. <pub-id pub-id-type="pmid">9263430</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hancock</surname>
+              <given-names>K. E.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Wideband inhibition of dorsal cochlear nucleus type IV units in cat: A computational model</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>73</fpage>
+          <lpage>87</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.150</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hancock, K. E., and H. F. Voigt. Wideband inhibition of dorsal cochlear nucleus type IV units in cat: A computational model. Ann. Biomed. Eng. 27:73&#x2013;87, 1999. <pub-id pub-id-type="pmid">9916763</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hancock</surname>
+              <given-names>K. E.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Intracellularly labeled fusiform cells in dorsal cochlear nucleus of the gerbil. I. Physiological response properties</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>2002</year>
+          <volume>87</volume>
+          <fpage>2505</fpage>
+          <lpage>2519</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hancock, K. E., and H. F. Voigt. Intracellularly labeled fusiform cells in dorsal cochlear nucleus of the gerbil. I. Physiological response properties. J. Neurophysiol. 87:2505&#x2013;2519, 2002. <pub-id pub-id-type="pmid">11976387</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Itoh</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Kamiya</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Mitani</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Yasui</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Takada</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Mizuno</surname>
+              <given-names>N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Direct projections from the dorsal column nuclei and the spinal trigeminal nuclei to the cochlear nuclei in the cat</article-title>
+          <source>Brain Res.</source>
+          <year>1987</year>
+          <volume>400</volume>
+          <fpage>145</fpage>
+          <lpage>150</lpage>
+          <pub-id pub-id-type="doi">10.1016/0006-8993(87)90662-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Itoh, K., H. Kamiya, A. Mitani, Y. Yasui, M. Takada, and N. Mizuno. Direct projections from the dorsal column nuclei and the spinal trigeminal nuclei to the cochlear nuclei in the cat. Brain Res. 400:145&#x2013;150, 1987. <pub-id pub-id-type="pmid">2434184</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Koerber</surname>
+              <given-names>K. C.</given-names>
+            </name>
+            <name>
+              <surname>Pfeiffer</surname>
+              <given-names>R. R.</given-names>
+            </name>
+            <name>
+              <surname>Warr</surname>
+              <given-names>W. B.</given-names>
+            </name>
+            <name>
+              <surname>Kiang</surname>
+              <given-names>N. Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Spontaneous spike discharges from single-units in the cochlear nucleus after destruction of the cochlea</article-title>
+          <source>Exp. Neurol.</source>
+          <year>1966</year>
+          <volume>16</volume>
+          <fpage>119</fpage>
+          <lpage>130</lpage>
+          <pub-id pub-id-type="doi">10.1016/0014-4886(66)90091-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Koerber, K. C., R. R. Pfeiffer, W. B. Warr, and N. Y. Kiang. Spontaneous spike discharges from single-units in the cochlear nucleus after destruction of the cochlea. Exp. Neurol. 16:119&#x2013;130, 1966. <pub-id pub-id-type="pmid">5922930</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MacGregor</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+          <source>Neural and Brain Modeling</source>
+          <year>1987</year>
+          <publisher-loc>San Diego</publisher-loc>
+          <publisher-name>Academic</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">MacGregor, R. J. Neural and Brain Modeling. San Diego, CA: Academic, 1987. </citation>
+      </ref>
+      <ref id="CR11">
+        <label>11</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MacGregor</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+          <source>Theoretical Mechanics of Biological Neural Networks</source>
+          <year>1993</year>
+          <publisher-loc>San Diego</publisher-loc>
+          <publisher-name>Academic</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">MacGregor, R. J. Theoretical Mechanics of Biological Neural Networks. San Diego, CA: Academic, 1993. </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Maki</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Furukawa</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Hirahara</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Acoustical cues for sound localization by gerbils in an ecologically realistic environment</article-title>
+          <source>Assoc. Res. Otolaryngol. Abs.</source>
+          <year>2003</year>
+          <volume>26</volume>
+          <fpage>352</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Maki, K., S. Furukawa, and T. Hirahara. Acoustical cues for sound localization by gerbils in an ecologically realistic environment. Assoc. Res. Otolaryngol. Abs. 26:352, 2003. </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Musivant</surname>
+              <given-names>A. D.</given-names>
+            </name>
+            <name>
+              <surname>Butler</surname>
+              <given-names>R. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of monaural spectral cues on binaural localization</article-title>
+          <source>J. Acoust. Soc. Am.</source>
+          <year>1985</year>
+          <volume>77</volume>
+          <fpage>202</fpage>
+          <lpage>208</lpage>
+          <pub-id pub-id-type="doi">10.1121/1.392259</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Musivant, A. D., and R. A. Butler. Influence of monaural spectral cues on binaural localization. J. Acoust. Soc. Am. 77:202&#x2013;208, 1985. <pub-id pub-id-type="pmid">3973215</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nelken</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Young</surname>
+              <given-names>E. D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Two separate inhibitory mechanisms shape the responses of dorsal cochlear nucleus type IV units to narrowband and wideband stimuli</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1994</year>
+          <volume>71</volume>
+          <fpage>2446</fpage>
+          <lpage>2462</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Nelken, I., and E. D. Young. Two separate inhibitory mechanisms shape the responses of dorsal cochlear nucleus type IV units to narrowband and wideband stimuli. J. Neurophysiol. 71:2446&#x2013;2462, 1994. <pub-id pub-id-type="pmid">7931527</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Parsons</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>Lim</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Type III units in the gerbil dorsal cochlear nucleus may be spectral notch detectors</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>887</fpage>
+          <lpage>896</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1408924</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Parsons, J. E., E. Lim, and H. F. Voigt. Type III units in the gerbil dorsal cochlear nucleus may be spectral notch detectors. Ann. Biomed. Eng. 29:887&#x2013;896, 2001. <pub-id pub-id-type="pmid">11764319</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shore</surname>
+              <given-names>S. E.</given-names>
+            </name>
+            <name>
+              <surname>Vass</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Wys</surname>
+              <given-names>N. L.</given-names>
+            </name>
+            <name>
+              <surname>Altschuler</surname>
+              <given-names>R. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Trigeminal ganglion innervates the auditory brainstem</article-title>
+          <source>J. Comp. Neurol.</source>
+          <year>2000</year>
+          <volume>419</volume>
+          <fpage>271</fpage>
+          <lpage>285</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1096-9861(20000410)419:3&lt;271::AID-CNE1&gt;3.0.CO;2-M</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shore, S. E., Z. Vass, N. L. Wys, and R. A. Altschuler. Trigeminal ganglion innervates the auditory brainstem. J. Comp. Neurol. 419:271&#x2013;285, 2000. <pub-id pub-id-type="pmid">10723004</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shofner</surname>
+              <given-names>W. P.</given-names>
+            </name>
+            <name>
+              <surname>Young</surname>
+              <given-names>E. D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Excitatory/inhibitory response types in the cochlear nucleus: relationships to discharge patterns and responses to electrical stimulation of the auditory nerve</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1985</year>
+          <volume>54</volume>
+          <fpage>917</fpage>
+          <lpage>939</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Shofner, W. P., and E. D. Young. Excitatory/inhibitory response types in the cochlear nucleus: relationships to discharge patterns and responses to electrical stimulation of the auditory nerve. J. Neurophysiol. 54:917&#x2013;939, 1985. <pub-id pub-id-type="pmid">4067627</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spirou</surname>
+              <given-names>G. A.</given-names>
+            </name>
+            <name>
+              <surname>Young</surname>
+              <given-names>E. D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Organization of dorsal cochlear nucleus type IV unit response maps and their relationship to activation by bandlimited noise</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1991</year>
+          <volume>66</volume>
+          <fpage>1750</fpage>
+          <lpage>1768</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Spirou, G. A., and E. D. Young. Organization of dorsal cochlear nucleus type IV unit response maps and their relationship to activation by bandlimited noise. J. Neurophysiol. 66:1750&#x2013;1768, 1991. <pub-id pub-id-type="pmid">1765805</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weinberg</surname>
+              <given-names>R. J.</given-names>
+            </name>
+            <name>
+              <surname>Rustioni</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>A cuneocochlear pathway in the rat</article-title>
+          <source>Neuroscience</source>
+          <year>1987</year>
+          <volume>20</volume>
+          <fpage>209</fpage>
+          <lpage>219</lpage>
+          <pub-id pub-id-type="doi">10.1016/0306-4522(87)90013-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Weinberg, R. J., and A. Rustioni. A cuneocochlear pathway in the rat. Neuroscience 20:209&#x2013;219, 1987. <pub-id pub-id-type="pmid">3561761</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Winter</surname>
+              <given-names>I. M.</given-names>
+            </name>
+            <name>
+              <surname>Palmer</surname>
+              <given-names>A. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Level dependence of cochlear nucleus onset unit responses and facilitation by second tones or broadband noise</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1995</year>
+          <volume>73</volume>
+          <fpage>141</fpage>
+          <lpage>159</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Winter, I. M., and A. R. Palmer. Level dependence of cochlear nucleus onset unit responses and facilitation by second tones or broadband noise. J. Neurophysiol. 73:141&#x2013;159, 1995. <pub-id pub-id-type="pmid">7714560</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Young</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+          <article-title>D. Identification of response properties of ascending axons from dorsal cochlear nucleus</article-title>
+          <source>Brain Res.</source>
+          <year>1980</year>
+          <volume>200</volume>
+          <fpage>23</fpage>
+          <lpage>37</lpage>
+          <pub-id pub-id-type="doi">10.1016/0006-8993(80)91091-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Young, E. D. Identification of response properties of ascending axons from dorsal cochlear nucleus. Brain Res. 200:23&#x2013;37, 1980. <pub-id pub-id-type="pmid">7417810</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Young</surname>
+              <given-names>E. D.</given-names>
+            </name>
+            <name>
+              <surname>Brownell</surname>
+              <given-names>W. E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Responses to tones and noise of single cells in dorsal cochlear nucleus of unanesthetized cats</article-title>
+          <source>J. Neurophysiol.</source>
+          <year>1976</year>
+          <volume>39</volume>
+          <fpage>282</fpage>
+          <lpage>300</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Young, E. D., and W. E. Brownell. Responses to tones and noise of single cells in dorsal cochlear nucleus of unanesthetized cats. J. Neurophysiol. 39:282&#x2013;300, 1976. <pub-id pub-id-type="pmid">1255224</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Young</surname>
+              <given-names>E. D.</given-names>
+            </name>
+            <name>
+              <surname>Voigt</surname>
+              <given-names>H. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Response properties of type II and type III units in the dorsal cochlear nucleus</article-title>
+          <source>Hear. Res.</source>
+          <year>1982</year>
+          <volume>6</volume>
+          <fpage>153</fpage>
+          <lpage>169</lpage>
+          <pub-id pub-id-type="doi">10.1016/0378-5955(82)90051-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Young, E. D., and H. F. Voigt. Response properties of type II and type III units in the dorsal cochlear nucleus. Hear. Res. 6:153&#x2013;169, 1982. <pub-id pub-id-type="pmid">7061349</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24</label>
+        <citation citation-type="other">Zheng, X., and H. F. Voigt. A modeling study of notch noise responses of type III units in the gerbil dorsal cochlear nucleus. <italic>Assoc. Res. Otolaryngol. Abs.</italic> 440, 2005.</citation>
+      </ref>
+      <ref id="CR25">
+        <label>25</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Shore</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Projections from the trigeminal nuclear complex to the cochlear nuclei: A retrograde and anterograde tracing study in the guinea pig</article-title>
+          <source>J. Neurosci Res.</source>
+          <year>2004</year>
+          <volume>78</volume>
+          <fpage>901</fpage>
+          <lpage>907</lpage>
+          <pub-id pub-id-type="doi">10.1002/jnr.20343</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhou, J., and S. Shore. Projections from the trigeminal nuclear complex to the cochlear nuclei: A retrograde and anterograde tracing study in the guinea pig. J. Neurosci Res. 78:901&#x2013;907, 2004. <pub-id pub-id-type="pmid">15495211</pub-id></citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p>Originaly published Online First February 9, 2006, <bold>DOI:</bold>http://dx.doi.org/10.1007/s10439-005-9073-5. This article was originally published online in an uncorrected form. The corrected article is reprinted in its entirety here.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

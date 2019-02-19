@@ -1,0 +1,1629 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Comput Aided Mol Des</journal-id>
+      <journal-title>Journal of Computer-Aided Molecular Design</journal-title>
+      <issn pub-type="ppub">0920-654X</issn>
+      <issn pub-type="epub">1573-4951</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18217218</article-id>
+      <article-id pub-id-type="pmc">2270916</article-id>
+      <article-id pub-id-type="publisher-id">9166</article-id>
+      <article-id pub-id-type="doi">10.1007/s10822-007-9166-3</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>How to do an evaluation: pitfalls and traps</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Hawkins</surname>
+            <given-names>Paul C. D.</given-names>
+          </name>
+          <address>
+            <phone>+1-505-4737385</phone>
+            <fax>+1-505-4730833</fax>
+            <email>phawkins@eyesopen.com</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Warren</surname>
+            <given-names>Gregory L.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Skillman</surname>
+            <given-names>A. Geoffrey</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Nicholls</surname>
+            <given-names>Anthony</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">OpenEye Scientific Software, 9, Bisbee Court, Suite D, Santa Fe, NM 87508 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>23</day>
+        <month>1</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>22</volume>
+      <issue>3-4</issue>
+      <fpage>179</fpage>
+      <lpage>190</lpage>
+      <history>
+        <date date-type="received">
+          <day>28</day>
+          <month>11</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>18</day>
+          <month>12</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2008</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The recent literature is replete with papers evaluating computational tools (often those operating on 3D structures) for their performance in a certain set of tasks. Most commonly these papers compare a number of docking tools for their performance in cognate re-docking (pose prediction) and/or virtual screening. Related papers have been published on ligand-based tools: pose prediction by conformer generators and virtual screening using a variety of ligand-based approaches. The reliability of these comparisons is critically affected by a number of factors usually ignored by the authors, including bias in the datasets used in virtual screening, the metrics used to assess performance in virtual screening and pose prediction and errors in crystal structures used.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Software evaluation</kwd>
+        <kwd>Pose prediction</kwd>
+        <kwd>Coordinate error</kwd>
+        <kwd>Virtual screening</kwd>
+        <kwd>Property bias</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Based on the large number of papers recently published, it has become obvious that a large proportion of the computational chemistry community, both in academia and in industry, is very interested in evaluating and comparing software for a number of different purposes. A large number of publications have appeared over the last 5&#xA0;years or so that are focused on the evaluation of docking tools for pose prediction [<xref ref-type="bibr" rid="CR1">1</xref>], virtual screening [<xref ref-type="bibr" rid="CR2">2</xref>] and affinity prediction [<xref ref-type="bibr" rid="CR3">3</xref>]. There have also been a number of recent publications examining the performance of ligand-based tools in similar tasks. The ligand-based tools have also been evaluated in the areas of pose reproduction (by conformer generators [<xref ref-type="bibr" rid="CR4">4</xref>&#x2013;<xref ref-type="bibr" rid="CR6">6</xref>]), virtual screening [<xref ref-type="bibr" rid="CR7">7</xref>] and affinity prediction [<xref ref-type="bibr" rid="CR8">8</xref>]. In the following sections some issues with studies on pose prediction and virtual screening will be discussed.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Pose prediction</title>
+      <p>A common method of evaluating a docking program is to gauge its performance in cognate re-docking or self-docking. In this process a ligand is extracted from a co-crystal structure with its target protein and the program is challenged to pose the ligand as closely as possible to its experimentally identified structure. It may be argued that cognate re-docking is not a task commonly faced in the normal use of docking tools, since cross-docking (docking of a ligand into a structure with which it was not crystallised) is the actual application of a docking tool [<xref ref-type="bibr" rid="CR9">9</xref>]. However, the exercise remains popular, doubtless in part due to the relative ease of execution of a self-docking study and partly for comparison with previous studies. As has been pointed out previously [<xref ref-type="bibr" rid="CR10">10</xref>], comparing docking programs for their ability to predict the bioactive pose of a ligand is difficult for a number of reasons, some of which are obvious while others are subtler. However, the operational difficulties in comparing programs in a robust way should not cause other sources of error to be ignored. It is a truism that it is meaningless to compute a property with greater precision than the accuracy of the experiment that measures that property. Unfortunately, as will be seen in subsequent sections, this is often ignored by authors of papers in the area of pose prediction.</p>
+      <p>When comparing tools for pose prediction, the heavy atom root mean square deviation (RMSD) between the computed and experimental poses is the de&#xA0;facto standard. A regrettably common method to compare docking tools for pose prediction success&#x2013;&#x2013;illustrated, for example, in the papers presenting results from the MolDock program [<xref ref-type="bibr" rid="CR11">11</xref>] or the Glide XP evaluation [<xref ref-type="bibr" rid="CR8">8</xref>]&#x2013;&#x2013;is to compare the average RMSDs across a set of structures. The use of the average RMSD admits of many possible problems of interpretation, not least of which is the biasing of the average by a few very large or very small numbers. In the case of the MolDock results, the mean RMSD across a set of structures was used to suggest that the performance of MolDock was comparable to that of GLIDE and superior to that of Surflex (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). However, the use of the median RMSD, which is far less biased by a few extrema, suggests a different conclusion&#x2014;that MolDock is in fact somewhat superior to Surflex, but not as good as GLIDE. For a similar analysis on the drawbacks of using average RMSD as a comparator, see Cole et&#xA0;al. [<xref ref-type="bibr" rid="CR10">10</xref>]. A number that is noticeably absent from this, and all other comparisons of docking tools using RMSD, is an error bar on the average RMSD (which can be calculated by bootstrapping). Without such an error bar it is impossible to assert that any tool compared in this study is actually better than any other.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Comparison of RMSD results from a set of docking engines</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">MolDock</th><th align="left">GLIDE</th><th align="left">Surflex</th></tr></thead><tbody><tr><td align="left">Mean</td><td char="." align="char">1.38</td><td char="." align="char">1.38</td><td char="." align="char">1.86</td></tr><tr><td align="left">SD</td><td char="." align="char">1.49</td><td char="." align="char">1.74</td><td char="." align="char">2.02</td></tr><tr><td align="left">Median</td><td char="." align="char">0.92</td><td char="." align="char">0.69</td><td char="." align="char">1.10</td></tr></tbody></table></table-wrap></p>
+      <p>A separate issue with these two experiments involves contamination of the dataset used to evaluate the performance of the tools. In the case of the Glide results the RMSD&#x2019;s given are not to the deposited crystallographic pose but rather to one that results from a pre-processing step, as noted by the authors of the MolDock paper [<xref ref-type="bibr" rid="CR11">11</xref>]. As such this is not an &#x201C;apples to apples&#x201D; comparison, since the Glide pre-processing step optimizes protein and ligand coordinates using the force-field component of the Glide scoring function, which necessarily introduces bias in the structure. In the MolDock case the authors have essentially trained the MolDock fitness function on the 77 complexes that they use to evaluate its performance. As such the reported results give no indication of the likelihood of success in predicting a pose for a system upon which MolDock was not trained.</p>
+      <p>The RMSD between two poses is a geometric measure, comparing the atomic positions between the experimental structure and the docked or predicted structure. Other metrics based on comparing the geometry of the experimental and the computed pose have been developed, such as relative displacement error (RDE) [<xref ref-type="bibr" rid="CR12">12</xref>]. These, and all other atom-based metrics, suffer from the drawbacks pointed out by Cole et&#xA0;al. [<xref ref-type="bibr" rid="CR10">10</xref>]. A more serious problem for metrics like RMSD and RDE is that they attempt to indicate the quality of reproduction of a <italic>model</italic> for the data, not the crystallographic data itself, i.e., the electron density. This disconnection between RMSD as a metric of quality for pose prediction and the original crystallographic data has been a cause for concern. Some attempts have been made to arrive at metrics that better reflect the reproduction of the actual crystallographic data, in particular real-space refinement (RSR) [<xref ref-type="bibr" rid="CR13">13</xref>]. Unfortunately, RSR has not been widely used, possibly because it is more difficult to calculate than atom-based metrics like RMSD or RDE. Other metrics that are not based purely on atom position, such as interaction-based accuracy classification (IBAC) [<xref ref-type="bibr" rid="CR14">14</xref>], try to reflect the ultimate use of the predicted pose, i.e., determining the nature of the interactions that the ligand makes with the protein. While the IBAC approach has value in that it assesses a computed pose by its interactions with the protein, it is not amenable to automation; it is therefore tedious to assemble sufficient data to make statistically robust comparisons between tools based on IBAC.</p>
+      <p>However, the problem of choosing which metric to use to compare pose prediction studies is dwarfed by the difficulty in choosing a dataset of protein&#x2013;ligand co-complexes upon which to perform the comparison. A widespread tendency in conformer reproduction and pose prediction studies is to ignore even the possibility of error in the crystal structures that are being reproduced. Crystal structures are often treated as perfect, infinitely precise and accurate representations of the atomic details of a protein&#x2013;ligand complex. There are a number of reasons why this is not so; a few will be discussed in the following paragraphs.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>Crystal structures are models</title>
+      <p>This statement makes up the warp and weft of crystallography, yet in the transition of crystallographic data from crystallographer to computational chemist the distinction between the actual data and a model for that data is often lost. The actual data in crystallography is, of course, diffraction data leading to electron density. The atom positions that make up a crystal structure are a model that attempts to explain this data in as complete a fashion as possible. This is illustrated in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Fitting atoms into electron density produces a crystallographic model</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig1_HTML" id="MO1"/></fig></p>
+      <p>The process of fitting or modeling the atoms (of a ligand or of a protein) into the electron density is not always straightforward, and the problems are often more serious when the fitting of a ligand into density is being carried out. The sources of these problems include:<list list-type="order"><list-item><p>Incomplete or fragmentary density;</p></list-item><list-item><p>The electron density not defining the positions of all atoms unambiguously;</p></list-item><list-item><p>Poor structural parameters are used for the fitting process, which can give inappropriate conformations (particularly of ligands);</p></list-item><list-item><p>Errors by the users, arising from careless treatment of the data or lack of expertise with small molecules.</p></list-item></list></p>
+      <p>A variety of metrics can be calculated for a given crystal structure that attempts to give an indication of the quality of the model. While no single number can encompass the quality of a structure, some of the metrics of quality are more useful than others. The most commonly used is the nominal resolution. This is a measure only of the quantity (of data collected) and not of the quality of the data nor, most especially, of the quality of the model fitted to that data. (For a discussion on the problems with resolution, see Ref. [<xref ref-type="bibr" rid="CR15">15</xref>]) It is therefore unfortunate that nominal resolution is often the only criterion used to select a protein structure, and that its meaning is often misconstrued. For example, in a paper [<xref ref-type="bibr" rid="CR16">16</xref>] by Nissink et&#xA0;al. the following incorrect statement is made: &#x201C;The resolution of a protein structure is directly related to the accuracy of the data.&#x201D; Not only is this statement not entirely true, it also confuses what the nominal resolution means (quantity of data collected) with the accuracy of a model, which are two very different things. A metric that does attempt to assess the quality of the fit of the crystallographic model to the source data is the so-called <italic>R</italic><sub>free</sub>, introduced by Brunger [<xref ref-type="bibr" rid="CR17">17</xref>]. <italic>R</italic><sub>free</sub> is an indication of how well an atomic model explains a small percentage of the density data that was omitted during the fitting process, and is thus an unbiased metric that can be reliably used to distinguish a well fitted model from a poorly fitted model. Unfortunately, <italic>R</italic><sub>free</sub> is infrequently used as a metric of quality when selecting crystal structures for docking studies or other purposes (see Ref. [<xref ref-type="bibr" rid="CR18">18</xref>] for the use of <italic>R</italic><sub>free</sub> as a criterion for selection of structures). More frequent use of <italic>R</italic><sub>free</sub> as one of a set of metrics for selection of crystal structures could help to avoid the selection of poorly fitted models for pose reproduction.</p>
+    </sec>
+    <sec id="Sec4">
+      <title>Crystal structures have unavoidable imprecision</title>
+      <p>As already discussed, nominal resolution is not a metric of quality for a structure and although <italic>R</italic><sub>free</sub> indicates the quality of the fit of the model to the original data it can provide no estimate of the uncertainty in the atomic positions within that model. It is often assumed that the experimental uncertainty in the atomic positions in a crystallographic model can be estimated by use of the isotropic B-factor, which is supposedly a measure of the thermally driven fluctuation in atomic positions. However B-factors are a refined parameter and so they cannot be compared between structures without detailed knowledge of the restraints used [<xref ref-type="bibr" rid="CR19">19</xref>]. It is therefore impermissible to use low B-factors as a sure indication of low positional uncertainty. Nor is it possible that there exists a uniform cut-off for B-factors that indicates low positional uncertainty in all structures, though such an assumption is frequently made [<xref ref-type="bibr" rid="CR20">20</xref>]. Another potential problem with B-factors is that they can be over-refined in the pursuit of better quality metrics for a structure. An example is given in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>, which shows the ligand (leucinol) from the structure 5ER1 from the RCSB [<xref ref-type="bibr" rid="CR21">21</xref>] annotated with its B-factors. The B-factors for every atom in the ligand are &lt;1. In contrast, B-factors even for well-located atoms in high quality models, are generally not &lt;5 [<xref ref-type="bibr" rid="CR22">22</xref>]. In this instance the crystallographer has over-refined the B-factors of the ligand atoms in order to improve the quality of the overall model. In this model the B-factors are unphysically low only as a consequence of a pathology of the refinement process. Accordingly, B-factors as an indication of local mobility in a protein structure should be treated with caution, as they are not simply an experimentally derived quantity but are free parameters in the refinement process.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>B-factors for the ligand in the 5ER1 crystal structure</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig2_HTML" id="MO2"/></fig></p>
+      <p>An alternative to using the average B-factor for estimating the uncertainty of the position of atoms an atom in a structure is the average coordinate precision (or diffraction-component precision index, DPI). The DPI expresses the average precision for the atomic coordinates in a protein structure [<xref ref-type="bibr" rid="CR23">23</xref>] and as such can be used as a measure of the experimental precision of the atomic positions in that structure. The original formulation of DPI was very complex and has recently been recast in a more easily calculable way by Blow [<xref ref-type="bibr" rid="CR24">24</xref>]. The use of DPI as a metric of quality for crystal structures used for docking studies was introduced to the computational community by Goto et&#xA0;al. [<xref ref-type="bibr" rid="CR18">18</xref>], and their formula is given in Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref><xref ref-type="fn" rid="Fn1">1</xref>.</p>
+      <p>
+        <disp-formula id="Equ1">
+          <label>1</label>
+          <tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \sigma {\left( {r{\text{, }}B_{{{\text{avg}}}} } \right)} = 2.2 N{_{\text{atoms}}} ^{{1/2}} V{_{{\text{a}}}} ^{{1/2}} n{_{{{\text{obs}}}}} ^{ - 5/6} R_{{{\text{free}}}} $$\end{document}</tex-math>
+        </disp-formula>
+      </p>
+      <p>In this treatment the standard error of position, &#x3C3;(<italic>r</italic>), is related to the number of atoms in the unit cell, <italic>N</italic><sub>atoms</sub>, the volume of the unit cell, <italic>V</italic><sub>a</sub>, the number of crystallographic observations, <italic>n</italic><sub>obs</sub> and the <italic>R</italic><sub>free</sub>. It should be noted that the formula presented by Goto et&#xA0;al. is not precisely the same formula that Blow derives in his paper. In Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref> the prefactor is given as 2.2, while in the original work by Blow the prefactor is given as 1.28. This is because Blow is calculating coordinate error for a particular axis, &#x3C3;(x, y, or z), while Goto et&#xA0;al. are calculating the error in the distance, &#x3C3;(<italic>r</italic>), giving rise to the &#x221A;3 difference between the two prefactors. As such it is appropriate to consider the error in the coordinates, &#x3C3;(x, y, z) as a measure of the uncertainty in the atomic positions, and the error in inter-atomic distances, &#x3C3;(<italic>r</italic>), when comparing a computed and an experimental structure.</p>
+      <p>The resolution of a crystallographic model, as has been mentioned, is often used to select protein structures for pose prediction by docking or conformer generation studies, on the assumption that resolution imparts some information on the quality and precision of the model. The DPI is a much more direct estimate of the reliability of crystallographic models when it comes to comparing experimental and computed atom positions (as is done in conformer reproduction or pose prediction). It is therefore of interest to compare the nominal resolution for a large number of &#x201C;good quality&#x201D; crystal structures with the DPI (&#x3C3;(<italic>r</italic>)) for the same structures. A good dataset for this comparison is provided by the extensive investigations performed by Kirchmair et&#xA0;al. [<xref ref-type="bibr" rid="CR4">4</xref>]. Here 776 co-crystal structures were used to provide experimental ligand structures that were then compared to sets of computed conformations from conformer generation applications. For 556 of these crystal structures there exists sufficient data to allow the DPI to be calculated and the relationship between the nominal resolution for these structures and their DPI is shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. It is obvious from Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> that the statement by Kirchmair that &#x201C;0.5&#xA0;&#xC5; approximately represents the accuracy of protein X-ray crystallography&#x201D; is not supported by the actual properties of the crystal structures they studied. In fact, in those cases where the DPI can be calculated, almost 56% of the structures from their paper have DPIs&#xA0;&gt;&#xA0;0.5&#xA0;&#xC5;.<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Coordinate error for 556 structures from the paper by Kirchmair et&#xA0;al. [<xref ref-type="bibr" rid="CR4">4</xref>]</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig3_HTML" id="MO3"/></fig></p>
+      <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> illustrates a number of other interesting points. While the expectation that greater coordinate precision will arise from structures with better nominal resolution is generally borne out by the data, there are many exceptions. Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> shows some examples of structures where the nominal resolution gives an unexpected estimation of coordinate precision. In the top half of the table are structures with good nominal resolution but unexpectedly high DPI, while the lower half of the table shows some structures with low nominal resolution and either unexpectedly low or unexpectedly high DPIs. Accordingly, simply using nominal resolution as a metric of quality for structures to be used in a pose prediction or conformer generation study is insufficient to guarantee that structures of appropriate quality will be used.<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Resolution and DPI for selected structures from the Kirchmair dataset</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">PDB code</th><th align="left">Resolution (&#xC5;)</th><th align="left">DPI (&#xC5;)</th></tr></thead><tbody><tr><td align="left">1FC7</td><td char="." align="char">1.38</td><td char="." align="char">0.69</td></tr><tr><td align="left">1FDO</td><td char="." align="char">1.38</td><td char="." align="char">0.60</td></tr><tr><td align="left">1JJT</td><td char="." align="char">1.8</td><td char="." align="char">1.37</td></tr><tr><td align="left">1JJE</td><td char="." align="char">1.8</td><td char="." align="char">1.25</td></tr><tr><td align="left">1CIB</td><td char="." align="char">2.5</td><td char="." align="char">5.54</td></tr><tr><td align="left">1ILH</td><td char="." align="char">2.76</td><td char="." align="char">0.14</td></tr><tr><td align="left">1C8M</td><td char="." align="char">2.8</td><td char="." align="char">0.18</td></tr><tr><td align="left">1QJX</td><td char="." align="char">2.8</td><td char="." align="char">0.25</td></tr></tbody></table></table-wrap></p>
+      <p>With the DPI for a structure in hand one can set a lower limit on the precision with which a computed conformation can reproduce an experimental one&#x2014;the RMSD between the two conformations cannot be less than the DPI for the experimental structure. It can be seen that over half (55.6%) of the structures in this set has DPIs&#xA0;&gt;&#xA0;0.5&#xA0;&#xC5;, while Kirchmair et&#xA0;al. report pose reproduction statistics both at &lt;0.1&#xA0;&#xC5; and at &lt;0.5&#xA0;&#xC5; RMSD. Since in over half of the structures in this dataset the DPI is &gt;0.5&#xA0;&#xC5;, Kirchmair et&#xA0;al. report pose reproductions at &lt;0.5&#xA0;&#xC5; RMSD that are more precise than the accuracy of the source data allows. This analysis is made on the conservative assumption that the error in the atomic positions in the computed pose is zero. In the Goto et&#xA0;al. paper [<xref ref-type="bibr" rid="CR18">18</xref>] the assumption is made that the errors in the computed pose are the same as for the experimental pose. In this analysis a computed and experimental pose must be different by an RMSD of &#x221A;2&#xA0;&#xD7;&#xA0;DPI for the difference to be significant, which would mean that an even higher proportion of the poses in the Kirchmair set have been reproduced with a greater precision than the experimental accuracy.</p>
+      <p>The same tendency to reproduce experimental data with a precision greater than the experimental accuracy is seen frequently in pose prediction experiments with docking engines. In Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> nominal resolution is plotted against the DPI for crystal structures from two well known docking validation sets, those for GOLD [<xref ref-type="bibr" rid="CR25">25</xref>] and GLIDE [<xref ref-type="bibr" rid="CR3">3</xref>]. The two graphs are plotted on the same scale to allow direct comparison. On each graph is also plotted an estimate of the theoretical lower limit for the atomic precision (the pink line). A formula describing the relationship between nominal resolution and DPI is given in Eq.&#xA0;<xref rid="Equ2" ref-type="">2</xref><xref ref-type="fn" rid="Fn2">2</xref> below, based on a derivation by Blow [<xref ref-type="bibr" rid="CR24">24</xref>].<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>The nominal resolution versus the coordinate error for a subset of the Gold (structures with resolution &lt;2.5&#xA0;&#xC5;) and the Glide data sets</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig4_HTML" id="MO4"/></fig></p>
+      <p>
+        <disp-formula id="Equ2">
+          <label>2</label>
+          <tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \sigma {\left( {r{\text{, }}B_{{{\text{avg}}}}}\right)} = 0.22{\left({1 + s}\right)}^{{1/2}}V{_{M}}^{{-1/2}} C^{{-5/6}}R_{{{\text{free}}}} d{_{{\min }}}^{{5/2}} $$\end{document}</tex-math>
+        </disp-formula>
+      </p>
+      <p>The variables found in Eq.&#xA0;<xref rid="Equ2" ref-type="">2</xref> are as follows: <italic>s</italic> is the percent solvent present in the crystal, <italic>V</italic><sub><italic>m</italic></sub> is the asymmetric unit volume to molecular weight ratio, <italic>C</italic> is the completeness of the data, and <italic>d</italic><sub>min</sub> is the nominal resolution of the structure. The ideal lines shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> were calculated using Eq.&#xA0;<xref rid="Equ2" ref-type="">2</xref> and assuming an <italic>s</italic> of 0.0, a <italic>V</italic><sub><italic>m</italic></sub> of 2.5, a <italic>C</italic> of 100%, and that <italic>R</italic><sub>free</sub> is equal to the resolution/10.</p>
+      <p>Inspection of Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> shows that the GOLD set contains one structure (1YEE) whose calculated DPI lies below the theoretical lower limit. This is probably due to a mistranscription error in the PDB file. The PDB file for the 1YEE structure gives the number of reflections as 77209, while the number of unique reflections is 21342&#x2014;a disparity that cannot be reconciled by reference to the data redundancy for this structure. Accordingly the calculated DPI for 1YEE is too low because the reported number of reflections is erroneously high. In the GLIDE set all structures have DPIs higher than our predicted theoretical minimum. In fact, in this set 52% of the structures have a DPI&#xA0;&gt;&#xA0;0.5&#xA0;&#xC5;, and in 31% of the cases the reported RMSD for redocking is less than the DPI (so that the prediction is more precise than experimental accuracy allows). This is only one example of a publication in which protein structures are assumed to be free of uncertainty in their atomic positions; the literature abounds with others.</p>
+      <p>The combination of <italic>R</italic><sub>free</sub> and the DPI for a structure can give a good <italic>overall</italic> picture of the quality of a model and the reliability of the atom positions within that model. In spite of the availability of these and other measures of quality, there are a number of test sets of protein co-crystal structures used for evaluating docking engines that appear to have been selected by other criteria that do not relate in any way to their quality [<xref ref-type="bibr" rid="CR26">26</xref>]. Accordingly, the results from these studies should be treated with some caution.</p>
+    </sec>
+    <sec id="Sec7">
+      <title>Crystal structures have avoidable errors</title>
+      <p>The <italic>R</italic><sub>free</sub> and the DPI are global measures of quality; other, local, measures of quality are also useful. For example, if a small portion of the atoms in a structure have been poorly fitted to the density, this will not be revealed by any global measure of fit. Only a local measure would reveal the error. A relatively common problem in co-crystal structures in the PDB is poor fitting of small molecules to the density, giving unrealistic ligand structures. These poorly fitted ligand structures are then used as a &#x201C;standard&#x201D; to judge the quality of a docking program&#x2019;s or conformer generator&#x2019;s performance. While the poor quality of some ligand structures in PDB models has been known for some time [<xref ref-type="bibr" rid="CR27">27</xref>], these reports have been anecdotal and few systematic attempts to avoid such poorly solved structures (other than visual inspection) appear to have been undertaken. If appropriate attention is not paid to selecting good quality ligand structures, then a dataset could be constructed that contains ligand structures that have significant errors. For pose prediction studies, poorly solved ligand structures in the dataset must be avoided. It is senseless to try to computationally reproduce an &#x201C;experimental&#x201D; ligand structure that has been incorrectly fitted to the electron density. Examples of some possible errors in ligand structures that should result in structures that are not computationally reproducible are shown in Figs.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> and <xref rid="Fig6" ref-type="fig">6</xref>.<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Ligand conformation from 1A8T structure. The conformation has two serious atom&#x2013;atom clashes</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig5_HTML" id="MO5"/></fig><fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Ligand conformation from the 1A4K structure. The cis-amide group is an error of fitting</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig6_HTML" id="MO6"/></fig></p>
+      <p>In the case of the 1A8T structure (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>), the deposited ligand coordinates contain two serious atom&#x2013;atom clashes that give the resulting conformation very high energy (28.4&#xA0;kcal/mol above a refitted structure by the MMFF94 forcefield [<xref ref-type="bibr" rid="CR28">28</xref>]). The deposited coordinates are clearly in error in this case and no docking engine or conformer generator should be expected to reproduce such a structure.</p>
+      <p>The error shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> for the 1A4k structure is of a more subtle nature. Here the crystallographer has fitted a highly strained cis-amide into the electron density with no compelling reason from the electron density to do so. The amide group is packing against a tyrosine residue from a symmetry mate in the unit cell, and makes no polar interaction with it. The corresponding trans-amide, which fits the experimental density just as well, is 15.5&#xA0;kcal/mol lower in energy (using the MMFF94 force-field). Also this trans amide is able to make a hydrogen bond (with a backbone carbonyl group) that is not available to the cis conformation. Once again, this model should not be reproduced by a docking engine or conformer generator, as it is obviously not the correct solution.</p>
+      <p>One of the only studies that bears on the issue of ligand strain was published by Perola and Charifson in 2004 [<xref ref-type="bibr" rid="CR29">29</xref>]. The authors examined ligand strain in a number of public structures from the RCSB database and proprietary structures from Vertex internal collection and found that 10% of the ligand structures examined had high strain (10&#xA0;kcal/mol or greater above the global minimum). The two examples discussed above, 1A8T and 1A4K, are both part of the Perola dataset. Clearly these two ligand structures have high strain energies due to errors in fitting and not due to a fundamental property of the ligand&#x2019;s conformation in complex with the protein. Close examination of the rest of the models for the ligands (where structure factors are available) showed that a number of them are incorrect, and re-solving them provided lower energy structures in about 85% of the cases [<xref ref-type="bibr" rid="CR30">30</xref>]. Recent re-examination of the Perola dataset by the Snyder group has provided further insights into the large strain energies originally reported [<xref ref-type="bibr" rid="CR31">31</xref>]. It is therefore most likely that the vast majority of ligand conformations in complex with a protein show strain energies less than 6&#xA0;kcal/mol, unless the ligand is rather large [<xref ref-type="bibr" rid="CR32">32</xref>]. Those ligand conformations with strain energies higher than 10&#xA0;kcal/mol are almost certainly incorrect. As such low ligand strain should be among the criteria for selection of structures for pose prediction, as structures with high strain are very likely to arise from errors in the fitting process.</p>
+      <p>It is clear from the foregoing discussion that, while crystal structures are an invaluable source of information on protein&#x2013;ligand binding, these structures are not without many sources of confounding errors. These errors, those inherent to the data and the process of fitting, as well as those introduced by human error or the insufficiencies of the fitting program, should be borne in mind before using crystal structure data. The selection of a reliable set of structures for pose prediction is a therefore not a trivial task. An excellent study considering these issues can be found in Hartshorn et&#xA0;al. [<xref ref-type="bibr" rid="CR33">33</xref>].</p>
+    </sec>
+    <sec id="Sec8">
+      <title>Virtual screening</title>
+      <p>Virtual screening can be defined as any method that ranks a set of compounds by some score. Successful virtual screening relies on having a scoring method that assigns good scores to interesting molecules (usually defined as active against a target protein of interest) and worse scores to uninteresting (inactive) molecules. Accordingly a successful virtual screen will provide, from the top of this ranked list, a set of compounds for experimental screening that is highly enriched in active molecules. This topic has been of great interest both in academia and in the pharmaceutical industry in recent years, and a large number of publications have appeared on the subject. While a few of the publications have investigated virtual screening conducted prospectively [<xref ref-type="bibr" rid="CR34">34</xref>&#x2013;<xref ref-type="bibr" rid="CR36">36</xref>], the vast majority have been concentrated in the area of retrospective virtual screening. In the rest of this article we shall concern ourselves solely with the retrospective experiments. The goal of such experiments is often to identify an application that performs well on a given target, or across a wide range of targets, with a view to utilizing this application in prospective virtual screens.</p>
+      <p>There are a number of approaches to quantitating the success of a particular tool for virtual screening. The most often used, and simplest to calculate, is enrichment at a given percentage of the database screened. Enrichment (EF) is defined according to Eq.&#xA0;<xref rid="Equ3" ref-type="">3</xref><xref ref-type="fn" rid="Fn3">3</xref> (Hits<sub arrange="stack">sampled</sub><sup arrange="stack">x%</sup>&#xA0;=&#xA0;number of hits found at x% of the database screened, N<sub arrange="stack">sampled</sub><sup arrange="stack">x%</sup>&#xA0;=&#xA0;number of compounds screened at x% of the database, Hits<sub>total</sub>&#xA0;=&#xA0;number of actives in entire database, N<sub>total</sub>&#xA0;=&#xA0;number of compounds in entire database).</p>
+      <p>
+        <disp-formula id="Equ3">
+          <label>3</label>
+          <tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{EF}} = (\text{Hits}{_{\text{sampled}}}^{\text{x\%}}/{\text{N}}{_{\text{sampled}}}^{\text{x\%}}) \times {\text{(N}}_{{{\text{total}}}} {\text{/Hits}}_{{{\text{total}}}} {\text{) }} $$\end{document}</tex-math>
+        </disp-formula>
+      </p>
+      <p>Enrichment appears to measure the quantity of most interest to those performing virtual screening: the ability of a tool to place a large proportion of the active compounds at the top of the ranked list. Enrichment is also simple to calculate and understand, so it seems the ideal metric with which to compare tools for their virtual screening performance. However, enrichment suffers from a number of significant drawbacks, especially when comparing results between studies or using enrichment to predict future performance:<list list-type="order"><list-item><p>It is dependent on the structure of the dataset, in that datasets with larger proportions of actives will have a narrower range of possible enrichments.</p></list-item><list-item><p>It penalizes ranking one active compound above another.</p></list-item><list-item><p>It exhibits pernicious behaviour at the cut-off at which the enrichment is calculated.</p></list-item><list-item><p>It gives no weight to where in the ranked list a known active compound appears. Thus to calculate enrichment at 1% in a virtual screen of 10,000 compounds, the number of actives (N) in the top ranked 100 compounds is needed. However the enrichment at 1% is the same whether the N active compounds are ranked at the very top of the list or at the very bottom of the top ranked 100.</p></list-item><list-item><p>It is difficult to calculate analytically errors in enrichment, and there is no available literature for such a calculation.</p></list-item></list></p>
+      <p>With regard to point (i), experiments performed on different datasets cannot be compared when using enrichment, as the dynamic range of enrichment will be different for different datasets, but there are several cases where this has been done [<xref ref-type="bibr" rid="CR37">37</xref>]. Early enrichment can also suggest overly impressive performance for tools that rank a small fraction of the active molecules very early in the list, but fail to give good ranks to the majority of the actives [<xref ref-type="bibr" rid="CR37">37</xref>]. It has been shown by Seifert [<xref ref-type="bibr" rid="CR38">38</xref>] that enrichment does not detect significant pathologies in the ranking function. Other metrics have been developed by some groups specifically to address some of these problems: RIE by Merck [<xref ref-type="bibr" rid="CR39">39</xref>], cumulative probability by Molsoft [<xref ref-type="bibr" rid="CR40">40</xref>] and average number of outranking decoys by Schrodinger [<xref ref-type="bibr" rid="CR3">3</xref>]. These metrics have, historically, only been used by the groups that invented them and are thus not useful for comparison to studies conducted by other groups. This lack of direct comparability across studies is compounded by the fact that these metrics cannot be converted into a more commonly used metric that could be used to compare results. Also, as with enrichment, it is unknown how to estimate analytically errors in any of these metrics.</p>
+      <p>A metric used to determine success in detecting a signal in a background of noise is the receiver operator characteristic (ROC). The ROC curve is derived by plotting noise (fraction of false positives) on the x-axis versus signal (fraction of true positives) on the y-axis. The area under the ROC curve (AUC) is a widely used measure in a variety of fields including medical statistics, criminology and bioinformatics [<xref ref-type="bibr" rid="CR41">41</xref>, <xref ref-type="bibr" rid="CR42">42</xref>]. When applied to virtual screening the ROC illustrates success in ranking actives (signal) above decoys (noise). The AUC for the ROC curve shows performance of a given tool when screening across the entire database is examined, not just at fixed, early points in the screen as enrichment does. The theoretically perfect performance of a virtual screening application gives the maximum area under a ROC curve (1.0), while random performance of a tool gives an AUC of 0.5. Areas under the curve of less than 0.5 imply a systematic ranking of decoys higher than known actives. For recent applications of the ROC curve in virtual screening, see [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR43">43</xref>]. The AUC for the ROC curve is also known as the &#x2018;discrimination&#x2019;. Discrimination is defined as the fraction of occurrences that a randomly chosen true positive (active) is given a better score than a randomly chosen true negative (decoy). This number then allows prediction of the likely effectiveness of a tool in experiments <italic>that have not yet been conducted</italic>. This predictive ability is not provided by metrics such as enrichment, cumulative probability and average number of outranking decoys, because while the ROC describes a property of the application studied, the other metrics essentially describe a property of the experiment. The AUC assesses virtual screening performance across the entire database and many practitioners of virtual screening are, rightly, most concerned about early performance of the tools they use. This is one reason why enrichment is so commonly used to measure success. The metric of early performance based on the ROC curve is the true positive rate at fixed false positive rates. The true positive rate at a false positive rate of, for example, 1% is a much more robust measure than the enrichment at 1% and provides similar information about the early performance of a tool.</p>
+      <p>The AUC also offers the advantage that a statistically robust estimate of its errors can be estimated analytically from the AUC itself, using a method developed by Hanley [<xref ref-type="bibr" rid="CR41">41</xref>]. This is not a property possessed by enrichment, average number of outranking decoys etc. For these metrics errors can only be estimated (by bootstrapping or other approaches) from the raw data, which is rarely provided. The error in the AUC, as with other metrics, is reduced by increasing the number of positives (active compounds) and by increasing the number of negatives (inactives). The Hanley treatment shows that the error in the AUC is most significantly reduced by increasing the number of actives, while increasing the number of decoys has a much smaller impact on the error. Therefore virtual screening datasets with high proportions of active compounds will provide results with lower error bars for the AUC. With the error for an AUC available, meaningful comparisons can be made between two or more different tools. However the other metrics used for virtual screening mentioned above do not allow an analytical estimation of their errors. Comparisons designed to determine which tool is superior for a given purpose, that are based on metrics assumed to be free of errors, are fraught with difficulty.</p>
+      <p>While the choice of metric may affect the relative ranking of tools compared on the same datasets, the composition of those datasets has a very profound effect on the results generated. Until very recently it has been common practice to assemble a dataset for virtual screening by seeding a set of active molecules against a target of interest into a background of compounds (decoys) chosen essentially at random. These decoys compounds were often drawn from public sources such as vendor catalogues. An example of this approach is the seminal paper on virtual screening by docking from the Rognan lab where decoy compounds were selected at random from the publicly available compounds [<xref ref-type="bibr" rid="CR44">44</xref>]. This set of decoys, or a subset thereof, has been used extensively since its publication in 2000 [<xref ref-type="bibr" rid="CR2">2</xref> and references therein] so that this same set of decoy compounds has been used in more than 45 different published virtual screening experiments on a wide variety of target systems. Given the huge variety in the types of active molecules camouflaged in this same set of decoys it seems intuitively obvious that in some cases the active compounds for a given target will be very easily discriminated from these decoys. As such a number of the virtual screening experiments performed using this set of decoy compounds have given good results purely due to differences in simple properties between the actives and the decoys (<italic>vide infra</italic>). In the Rognan dataset there were 10 active compounds for each of the targets studied and 990 randomly selected decoys. There are two problems arising from constructing a dataset in this way. The first is that the small number of active compounds means that the errors can be very high (<italic>vide supra</italic>). The second is that trivial property differences between the active compounds and the decoys can result in undeservedly good performance. The first issue, low prevalence, is still widespread in retrospective virtual screening studies. Although low prevalence reduces the reliability of the results, many virtual screening experiments are still conducted using very low numbers of active compounds. Reasons for this could include a desire to mimic &#x201C;real&#x201D; HTS experiments, where hit rates are often on the order of 0.01&#x2013;0.1% [<xref ref-type="bibr" rid="CR45">45</xref>] or to allow enrichment, the most commonly used metric for success in these studies, the maximal dynamic range. Tribelleau et&#xA0;al. [<xref ref-type="bibr" rid="CR43">43</xref>] show that the dynamic range of enrichment, the difference between random and maximal performance, decreases as the proportion of active molecules in a dataset rises. For a recent example of a retrospective virtual screening study with deliberately large numbers of actives, providing high statistical power and small error bars, see Ref. [<xref ref-type="bibr" rid="CR37">37</xref>].</p>
+      <p>The second issue, systematic differences in simple properties between decoys and actives in retrospective virtual screening experiments, is much more serious. As has been pointed out in a number of publications, scoring functions in docking programs, which are almost always additive, are sensitive to molecular size or heavy atom count, the number of hydrogen bonds that the molecule can make etc. Accordingly, systematic differences in these simple molecular properties between actives and decoys will cause systematic differences in ranking. For example, active compounds with higher average heavy atom counts will tend to rank better than the decoys when scored by a function that is sensitive to heavy atom count. For a fuller discussion of this issue see Verdonk et&#xA0;al. [<xref ref-type="bibr" rid="CR46">46</xref>]. An example of the influence of the selection methods for decoys on virtual screening performance is shown in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>. In this figure, two retrospective virtual screening studies against CDK-2 using the docking tool FRED [<xref ref-type="bibr" rid="CR47">47</xref>] are compared using ROC curves. In both cases the same actives were docked against the same co-crystal structure, while different decoy compounds were used. In one case (the green line), the decoys were chosen at random from the Maybridge compound collection [<xref ref-type="bibr" rid="CR48">48</xref>], in the other (the red line), decoys were chosen to match the properties of the actives based on simple 1D properties. The striking difference, especially in early performance, is obvious. Clearly the performance of FRED is heavily affected by the nature of the decoy compounds, and to obtain a predictive indication of the utility of FRED in virtual screening decoy sets similar to those giving the red line should be used. It is worthy of note that the AUC&#x2019;s for the two experiments shown are different by more than their respective 95% confidence intervals, so that this difference is indeed statistically significant.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Effect of decoy selection method on virtual screening by docking</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig7_HTML" id="MO7"/></fig></p>
+      <p>Another example of how much of the signal that separates active from inactive compounds arises from systematic differences between their properties is shown in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>. In these eight examples, drawn from the Surflex-Dock dataset [<xref ref-type="bibr" rid="CR2">2</xref>], the performance of three 3D virtual screening methods&#x2013;&#x2013;Surflex-Dock, ROCS [<xref ref-type="bibr" rid="CR49">49</xref>] and FRED&#x2013;&#x2013;is compared to a simple 1D method. In this 1D approach [<xref ref-type="bibr" rid="CR46">46</xref>, <xref ref-type="bibr" rid="CR50">50</xref>], compounds are ranked by distance in an Euclidean property space to the centre of the space defined by the active compounds. The Euclidean space is defined by five simple molecular properties: number of donors, number of acceptors, number of rotatable bonds, XlogP and 0.01&#xA0;&#xD7;&#xA0;molecular weight. This concept of ranking compounds by distance in a high dimensional Euclidean property space has recently been published as a virtual screening method, known as DACCS [<xref ref-type="bibr" rid="CR51">51</xref>].
+<fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>AUCs for various virtual screening methods on part of the Surflex-Dock validation set</p></caption><graphic position="anchor" xlink:href="10822_2007_9166_Fig8_HTML" id="MO8"/></fig></p>
+      <p>It is clear from Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> that in four of the eight cases (OPPA, HIV-PR, TK and PARP) the active compounds are very dissimilar from the background set, as the 1D ranking method gives very good virtual screening performance. In a fifth case (TS) the performance of 1D method is as good as any of the 3D methods, although none of the tools perform particularly well. Accordingly, judging virtual screening performance for any tool using such datasets is unlikely to be productive as most of the &#x201C;signal&#x201D; separating actives from decoys lies purely in differences in simple molecular properties. A further confounding issue with these datasets is that a large number of the active compounds in these sets are close structural analogues of one another. For ligand-based methods this high structural similarity amongst the actives can cause the actives to be very easily discriminated from the decoys, while a structure-based method may have more difficulty. Accordingly, while property bias is an important consideration in constructing decoy sets, analogue bias should be carefully considered when selecting sets of active compounds.</p>
+      <p>A recent effort to avoid some pathologies arising from poorly selected decoy sets has come from the work of Huang et&#xA0;al. [<xref ref-type="bibr" rid="CR52">52</xref>] with the Database of Useful Decoys, or DUD. In this work decoys were selected to match the same simple molecular properties of the active compounds using a similar approach to that mentioned earlier, so that the decoys are not trivially separable from the actives. DUD represents a very wide-ranging dataset (actives against 40 target proteins) that has been designed to evaluate the underlying performance of docking tools, and not the sensitivity of that tool&#x2019;s scoring metric to differences in simple molecular properties. Note that the DUD decoy selection approach uses a discontinuous representation of the molecular properties, while the approach mentioned above uses a continuous representation. The similarity between these two approaches for <italic>decoy</italic> selection and the DACCS approach for <italic>active</italic> selection is striking. It is a topic of further investigation whether much of the reported success of the DACCS method is due to over-training/poor active compound selection.</p>
+      <p>The work of Huang et&#xA0;al. with the DUD dataset showed that, at least for DOCK, this approach of specifically matching the properties of the decoys to those of the actives can produce more difficult decoy sets than those chosen purely for drug-likeness in a number of cases. It should be noted that the differences in performance reported in the DUD paper are essentially anecdotal, since no error bars are reported. With that caveat in mind inspection of Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> of the DUD paper, in which comparisons of performance of DOCK between the DUD &#x201C;own&#x201D; decoy sets and some commonly available agnostic decoys are shown, is instructive. In 10 of the 12 cases presented the DUD &#x201C;own&#x201D; decoy set is the most challenging of the four decoy sets compared, implying that a property-matched decoy set can provide a more difficult background set than an &#x201C;agnostic&#x201D; or general decoy set. For a drug-like decoy set chosen without specific reference to the active compounds being screened for, which is therefore to be expected to be less challenging than decoy sets designed with specific reference to the actives being searched for, see Ref [<xref ref-type="bibr" rid="CR53">53</xref>]. The DUD datasets also have relatively high prevalence (the design goal was to achieve a prevalence close to 3%, though this varies slightly from target to target), giving the results generated with DUD reasonably low errors (except for those cases where the number of actives is small). This is not to say that DUD is perfectly constructed&#x2013;&#x2013;there are still some large differences between the properties of the actives and the decoys in some cases and in some cases there are so few active molecules that statistically robust results cannot be generated. An important property not considered in the selection of the DUD decoys is formal charge. As such, there are some sets of the DUD actives that are easily discriminated from the decoys based on formal charge. For example, the mean formal charge on the neuraminidase ligands is +1.76, while the mean charge on the decoys is +0.76. For acetylcholinesterase, the mean charge on the actives is &#x2212;1.68, while the mean charge on the decoys is &#x2212;0.76. As with the datasets illustrated in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>, the DUD active sets were not chosen with a view to structural diversity and some of the active sets consist entirely of closely analogous compounds. Very recently the original DUD dataset has been extended by adding more active compounds and by clustering the actives to remove trivially graph similar actives from the set [<xref ref-type="bibr" rid="CR54">54</xref>]. This makes &#x201C;DUD 2.0&#x201D; a suitable dataset not only for docking approaches but also ligand-based techniques. It should be noted that there is a limit to the acceptable level of similarity between actives and presumptive decoys. When the decoys are too similar to the actives the assumption that the decoys are inactive becomes increasingly untenable, giving rise to large numbers of &#x201C;false false positives&#x201D;. Accordingly the problem of decoy selection is not yet completely solved, and may not admit of a single solution for all problems or tools. However, since in retrospective work the point is purely to gain a measure of the expectation of performance in as yet unperformed studies, the use of carefully designed decoy sets is mandatory.</p>
+      <p>It is unfortunate that the docking targets in DUD (39 crystal structures and 1 homology model) were not selected with as much care as the small molecule datasets. In 6 of the 38 co-crystal structures in DUD (there is one apo structure in the set), the DPIs are 1.5&#xA0;&#xC5; or more, resulting in significant uncertainty in the positioning of any atom in these structures. These structures are ALR2 (1AH3), COX-2 (1CX2), EGFR (1M17), GR (1M2XZ), InhA (1P44) and p38 (1KV2). Accordingly docking results from these structures should be interpreted with great care.</p>
+    </sec>
+    <sec id="Sec10" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>Large numbers of evaluations and comparisons of tools for pose prediction and virtual screening have been published in recent years, an indication of significant interest in identifying tools that will have robust performance in one or both of these areas. Unfortunately the vast majority of these studies have been invalidated by poor choice of datasets, lack of consideration of error in source data and use of metrics that do not permit robust comparisons. For those papers using crystal structure data, too little account is taken both of the unavoidable imprecision in these structures and of the errors of fitting that are regrettably frequently seen in structures in the RCSB. In many cases nominal resolution, a measure of the quantity of data gathered, is confused with a measure of quality for the structure and other metrics indicating quality and reliability (DPI and <italic>R</italic><sub>free</sub>) are ignored. When performing pose prediction geometric measures such as RMSD are almost always used to compare the experimental and predicted pose. These measures are uniformly used without taking into account either the inevitable imprecision in the atomic positions in crystal structures or the fact that using geometric measures necessarily implies comparing a model for the source data with a computed pose. In almost no cases are crystal structures inspected for errors in fitting. Without taking all these sources of error into account the results of any publication that uses crystal structure data will be suspect and of little use in deciding what tools are the most suitable for the task at hand. In papers concerned with virtual screening there has been, until recently, too little focus on eliminating trivial reasons for good performance from a given tool. The DUD dataset [<xref ref-type="bibr" rid="CR52">52</xref>] has illustrated ways in which challenging virtual screening datasets can be constructed and, since it is publicly available, DUD offers the opportunity for a common benchmark upon which a wide variety of tools can be compared. The plethora of metrics used to judge and compare virtual screening performance serves merely to confuse the field rather then to clarify it. The lack of confidence intervals on metrics for success makes meaningful comparisons between tools almost impossible to interpret. The AUC for ROC offers great promise as a metric for virtual screening, as it offers the possibility of predictive value along with robust errors. For an exemplary use of ROC in virtual screening tests see a recent paper by Jain [<xref ref-type="bibr" rid="CR55">55</xref>]. It is hoped that the field will soon converge to a single metric of virtual screening performance, such as the ROC, that will allow robust and direct comparisons between tools and between studies.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgement</title>
+      <p>The authors wish to thank Annie Lux, MFA for editing and proof-reading of the manuscript.</p>
+      <p><bold>Open Access</bold> This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Warren</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Webster Andrews</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Capelli</surname>
+              <given-names>A-M</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>LaLonde</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lambert</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Lindvall</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nevins</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Semus</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Senger</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Tedesco</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Wall</surname>
+              <given-names>ID</given-names>
+            </name>
+            <name>
+              <surname>Woolven</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Peishoff</surname>
+              <given-names>CE</given-names>
+            </name>
+            <name>
+              <surname>Head</surname>
+              <given-names>MSJ</given-names>
+            </name>
+          </person-group>
+          <source>Med Chem</source>
+          <year>2006</year>
+          <volume>49</volume>
+          <fpage>5912</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm050362n</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Warren G, Webster Andrews C, Capelli A-M, Clarke B, LaLonde J, Lambert MH, Lindvall M, Nevins N, Semus S, Senger S, Tedesco G, Wall ID, Woolven JM, Peishoff CE, Head MSJ (2006) Med Chem 49:5912 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pham</surname>
+              <given-names>TA</given-names>
+            </name>
+            <name>
+              <surname>Jain</surname>
+              <given-names>AN</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2006</year>
+          <volume>49</volume>
+          <fpage>5856</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm050040j</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pham TA, Jain AN (2006) J Med Chem 49:5856 <pub-id pub-id-type="pmid">17004701</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Freisner</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Murphy</surname>
+              <given-names>RB</given-names>
+            </name>
+            <name>
+              <surname>Repasky</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Frye</surname>
+              <given-names>LL</given-names>
+            </name>
+            <name>
+              <surname>Greenwood</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Halgren</surname>
+              <given-names>TA</given-names>
+            </name>
+            <name>
+              <surname>Sanschagrin</surname>
+              <given-names>PC</given-names>
+            </name>
+            <name>
+              <surname>Mainz</surname>
+              <given-names>DT</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2007</year>
+          <volume>47</volume>
+          <fpage>1564</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Freisner RA, Murphy RB, Repasky MP, Frye LL, Greenwood JR, Halgren TA, Sanschagrin PC, Mainz DT (2007) J Med Chem 47:1564 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kirchmair</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Wolber</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Laggner</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Langer</surname>
+              <given-names>TJ</given-names>
+            </name>
+          </person-group>
+          <source>Chem Inf Model</source>
+          <year>2006</year>
+          <volume>46</volume>
+          <fpage>1848</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci060084g</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kirchmair J, Wolber G, Laggner C, Langer TJ (2006) Chem Inf Model 46:1848 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bostrom</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Greenwood</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Gottfries</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Graphics Model</source>
+          <year>2003</year>
+          <volume>21</volume>
+          <fpage>449</fpage>
+          <pub-id pub-id-type="doi">10.1016/S1093-3263(02)00204-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bostrom J, Greenwood JR, Gottfries J (2003) J Mol Graphics Model 21:449 </citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bohme-Leite</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Gomes</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Miteva</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Chomilier</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Villoutreix</surname>
+              <given-names>BO</given-names>
+            </name>
+            <name>
+              <surname>Tuffery</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2007</year>
+          <volume>35</volume>
+          <fpage>W568</fpage>
+          <pub-id pub-id-type="doi">10.1093/nar/gkm289</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bohme-Leite T, Gomes D, Miteva MA, Chomilier J, Villoutreix BO, Tuffery P (2007) Nucleic Acids Res 35:W568 <pub-id pub-id-type="pmid">17485475</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hawkins</surname>
+              <given-names>PCD</given-names>
+            </name>
+            <name>
+              <surname>Skillman</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Nicholls</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2007</year>
+          <volume>50</volume>
+          <fpage>74</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm0603365</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hawkins PCD, Skillman AG, Nicholls A (2007) J Med Chem 50:74 <pub-id pub-id-type="pmid">17201411</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Evans</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Doman</surname>
+              <given-names>TN</given-names>
+            </name>
+            <name>
+              <surname>Thorner</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Bodkin</surname>
+              <given-names>MJ</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Model</source>
+          <year>2007</year>
+          <volume>47</volume>
+          <fpage>1248</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci7000082</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Evans DA, Doman TN, Thorner DA, Bodkin MJ (2007) J Chem Inf Model 47:1248 <pub-id pub-id-type="pmid">17477520</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Erickson</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Jalaie</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Robertson</surname>
+              <given-names>DH</given-names>
+            </name>
+            <name>
+              <surname>Lewis</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Vieth</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2004</year>
+          <volume>47</volume>
+          <fpage>45</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm030209y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Erickson JA, Jalaie M, Robertson DH, Lewis RA, Vieth M (2004) J Med Chem 47:45 <pub-id pub-id-type="pmid">14695819</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cole</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Nissink</surname>
+              <given-names>JWM</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Proteins: Struct Funct Bioinformat</source>
+          <year>2005</year>
+          <volume>60</volume>
+          <fpage>325</fpage>
+          <pub-id pub-id-type="doi">10.1002/prot.20497</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cole JC, Murray CW, Nissink JWM, Taylor RD, Taylor R (2005) Proteins: Struct Funct Bioinformat 60:325 </citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thomsen</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Christensen</surname>
+              <given-names>MK</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2006</year>
+          <volume>49</volume>
+          <fpage>3315</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm051197e</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Thomsen R, Christensen MK (2006) J Med Chem 49:3315 <pub-id pub-id-type="pmid">16722650</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abagyan</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Totrov</surname>
+              <given-names>MM</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Biol</source>
+          <year>1997</year>
+          <volume>268</volume>
+          <fpage>678</fpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1997.0994</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Abagyan RA, Totrov MM (1997) J Mol Biol 268:678 <pub-id pub-id-type="pmid">9171291</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="other">
+          <ext-link ext-link-type="uri" xlink:href="http://www.eyesopen.com/about/events/cup7/schmitt/060308_present4CUP7_SS.pdf">http://www.eyesopen.com/about/events/cup7/schmitt/060308_present4CUP7_SS.pdf</ext-link>
+        </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kroemer</surname>
+              <given-names>RT</given-names>
+            </name>
+            <name>
+              <surname>Vulpetti</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>McDonald</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Rohrer</surname>
+              <given-names>DC</given-names>
+            </name>
+            <name>
+              <surname>Trosset</surname>
+              <given-names>J-Y</given-names>
+            </name>
+            <name>
+              <surname>Giordanetto</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Cotesta</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>McMartin</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Kihlen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Stouten</surname>
+              <given-names>PFW</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Comput Sci</source>
+          <year>2004</year>
+          <volume>44</volume>
+          <fpage>871</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci049970m</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kroemer RT, Vulpetti A, McDonald JJ, Rohrer DC, Trosset J-Y, Giordanetto F, Cotesta S, McMartin C, Kihlen M, Stouten PFW (2004) J Chem Inf Comput Sci 44:871 <pub-id pub-id-type="pmid">15154752</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kleywegt</surname>
+              <given-names>GJ</given-names>
+            </name>
+          </person-group>
+          <source>Acta Cryst</source>
+          <year>2000</year>
+          <volume>D56</volume>
+          <fpage>249</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Kleywegt GJ (2000) Acta Cryst D56:249 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nissink</surname>
+              <given-names>JMW</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Hartshorn</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Verdonk</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Cole</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Proteins: Struct Funct Genetics</source>
+          <year>2002</year>
+          <volume>49</volume>
+          <fpage>457</fpage>
+          <pub-id pub-id-type="doi">10.1002/prot.10232</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nissink JMW, Murray C, Hartshorn M, Verdonk ML, Cole JC, Taylor R (2002) Proteins: Struct Funct Genetics 49:457 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Br&#xFC;nger</surname>
+              <given-names>AT</given-names>
+            </name>
+          </person-group>
+          <source>Nature</source>
+          <year>1993</year>
+          <volume>355</volume>
+          <fpage>527</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Br&#xFC;nger AT (1993) Nature 355:527 </citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goto</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kataoka</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Hirayama</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2004</year>
+          <volume>47</volume>
+          <fpage>6804</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm0493818</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Goto J, Kataoka R, Hirayama N (2004) J Med Chem 47:6804 <pub-id pub-id-type="pmid">15615529</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tronrud</surname>
+              <given-names>DE</given-names>
+            </name>
+          </person-group>
+          <source>J Appl Cryst</source>
+          <year>1996</year>
+          <volume>29</volume>
+          <fpage>100</fpage>
+          <pub-id pub-id-type="doi">10.1107/S002188989501421X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tronrud DE (1996) J Appl Cryst 29:100 </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bostrom</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Design</source>
+          <year>2002</year>
+          <volume>15</volume>
+          <fpage>1137</fpage>
+          <pub-id pub-id-type="doi">10.1023/A:1015930826903</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bostrom J (2002) J Comput-Aided Mol Design 15:1137 </citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="other">Berman HM, Westbrook J, Feng Z, Gilliland G, Bhat TN, Weissig H, Shindyalov IH, Bourne PE (2000) Nucleic Acids Res 28:235 <ext-link ext-link-type="uri" xlink:href="http://www.rcsb.org">http://www.rcsb.org</ext-link></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hooft</surname>
+              <given-names>RWW</given-names>
+            </name>
+            <name>
+              <surname>Vriend</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Sander</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Abola</surname>
+              <given-names>EE</given-names>
+            </name>
+          </person-group>
+          <source>Nature</source>
+          <year>1996</year>
+          <volume>381</volume>
+          <fpage>272</fpage>
+          <pub-id pub-id-type="doi">10.1038/381272a0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hooft RWW, Vriend G, Sander C, Abola EE (1996) Nature 381:272 <pub-id pub-id-type="pmid">8692262</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cruickshank</surname>
+              <given-names>DW</given-names>
+            </name>
+          </person-group>
+          <source>Acta Cryst</source>
+          <year>1999</year>
+          <volume>D55</volume>
+          <fpage>583</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Cruickshank DW (1999) Acta Cryst D55:583 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Blow</surname>
+              <given-names>DM</given-names>
+            </name>
+          </person-group>
+          <source>Acta Cryst</source>
+          <year>2002</year>
+          <volume>D58</volume>
+          <fpage>792</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Blow DM (2002) Acta Cryst D58:792 </citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="other">
+          <ext-link ext-link-type="uri" xlink:href="http://www.ccdc.cam.ac.uk/products/life_sciences/validate/astex/pdb_entries">http://www.ccdc.cam.ac.uk/products/life_sciences/validate/astex/pdb_entries</ext-link>
+        </citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bursulaya</surname>
+              <given-names>BD</given-names>
+            </name>
+            <name>
+              <surname>Totrov</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Abagyan</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Brooks</surname>
+              <given-names>CL</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Design</source>
+          <year>2003</year>
+          <volume>17</volume>
+          <fpage>1</fpage>
+          <pub-id pub-id-type="doi">10.1023/B:JCAM.0000017496.76572.6f</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bursulaya BD, Totrov M, Abagyan R, Brooks CL III (2003) J Comput-Aided Mol Design 17:1 </citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jones</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Willett</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Glen</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Leach</surname>
+              <given-names>AR</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Biol</source>
+          <year>1997</year>
+          <volume>267</volume>
+          <fpage>727</fpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1996.0897</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jones G, Willett P, Glen RC, Leach AR, Taylor R (1997) J Mol Biol 267:727 <pub-id pub-id-type="pmid">9126849</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Halgren</surname>
+              <given-names>TA</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>1996</year>
+          <volume>17</volume>
+          <fpage>490</fpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1096-987X(199604)17:5/6&lt;490::AID-JCC1&gt;3.0.CO;2-P</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Halgren TA (1996) J Comput Chem 17:490 </citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perola</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Charifson</surname>
+              <given-names>PS</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2004</year>
+          <volume>47</volume>
+          <fpage>2499</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm030563w</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Perola E, Charifson PS (2004) J Med Chem 47:2499 <pub-id pub-id-type="pmid">15115393</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="other">
+          <ext-link ext-link-type="uri" xlink:href="http://www.eyesopen.com/about/events/cup7/stahl/Stahl_cup7_pdb_mistakes.pdf">http://www.eyesopen.com/about/events/cup7/stahl/Stahl_cup7_pdb_mistakes.pdf</ext-link>
+        </citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="other">
+          <ext-link ext-link-type="uri" xlink:href="http://www.farma.ku.dk/index.php/Computational-Chemistry-Ligan/4613/0/">http://www.farma.ku.dk/index.php/Computational-Chemistry-Ligan/4613/0/</ext-link>
+        </citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="other">Bostrom J, Grant A (2007) In: Mannhold R (ed) Drug properties: measurement and computation, Chapter 8. Wiley-VCH, Weinheim, Germany</citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hartshorn</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Verdonk</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Chessari</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Brewerton</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Mooij</surname>
+              <given-names>WTM</given-names>
+            </name>
+            <name>
+              <surname>Mortenson</surname>
+              <given-names>PN</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>CW</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2007</year>
+          <volume>50</volume>
+          <fpage>726</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm061277y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hartshorn MJ, Verdonk ML, Chessari G, Brewerton SC, Mooij WTM, Mortenson PN, Murray CW (2007) J Med Chem 50:726 <pub-id pub-id-type="pmid">17300160</pub-id></citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perola</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Xu</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Kollmeyer</surname>
+              <given-names>TM</given-names>
+            </name>
+            <name>
+              <surname>Kaufmann</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Prendergast</surname>
+              <given-names>FG</given-names>
+            </name>
+            <name>
+              <surname>Pang</surname>
+              <given-names>Y-P</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2000</year>
+          <volume>43</volume>
+          <fpage>401</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm990408a</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Perola E, Xu K, Kollmeyer TM, Kaufmann SH, Prendergast FG, Pang Y-P (2000) J Med Chem 43:401 <pub-id pub-id-type="pmid">10669567</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jenkins</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Kao</surname>
+              <given-names>RYT</given-names>
+            </name>
+            <name>
+              <surname>Shapiro</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Proteins: Struct Funct Genet</source>
+          <year>2003</year>
+          <volume>50</volume>
+          <fpage>81</fpage>
+          <pub-id pub-id-type="doi">10.1002/prot.10270</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jenkins JL, Kao RYT, Shapiro R (2003) Proteins: Struct Funct Genet 50:81 <pub-id pub-id-type="pmid">12471601</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Forino</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Jung</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Easton</surname>
+              <given-names>JB</given-names>
+            </name>
+            <name>
+              <surname>Houghton</surname>
+              <given-names>PJ</given-names>
+            </name>
+            <name>
+              <surname>Pellechia</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2005</year>
+          <volume>48</volume>
+          <fpage>2278</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm048962u</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Forino M, Jung D, Easton JB, Houghton PJ, Pellechia M (2005) J Med Chem 48:2278 <pub-id pub-id-type="pmid">15801821</pub-id></citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McGaughey</surname>
+              <given-names>GB</given-names>
+            </name>
+            <name>
+              <surname>Sheridan</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Bayly</surname>
+              <given-names>CI</given-names>
+            </name>
+            <name>
+              <surname>Culberson</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Kreatsoulas</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Lindsley</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Maiorov</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Truchon</surname>
+              <given-names>J-F</given-names>
+            </name>
+            <name>
+              <surname>Cornell</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Model</source>
+          <year>2007</year>
+          <volume>47</volume>
+          <fpage>1504</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci700052x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McGaughey GB, Sheridan RP, Bayly CI, Culberson JC, Kreatsoulas C, Lindsley S, Maiorov V, Truchon J-F, Cornell WD (2007) J Chem Inf Model 47:1504 <pub-id pub-id-type="pmid">17591764</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Seifert</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Model</source>
+          <year>2006</year>
+          <volume>46</volume>
+          <fpage>1456</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci060027n</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Seifert M (2006) J Chem Inf Model 46:1456 <pub-id pub-id-type="pmid">16711765</pub-id></citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sheridan</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Singh</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Fluder</surname>
+              <given-names>EM</given-names>
+            </name>
+            <name>
+              <surname>Kearsley</surname>
+              <given-names>SK</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Comput Sci</source>
+          <year>2001</year>
+          <volume>41</volume>
+          <fpage>1395</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci0100144</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sheridan RP, Singh SB, Fluder EM, Kearsley SK (2001) J Chem Inf Comput Sci 41:1395 <pub-id pub-id-type="pmid">11604041</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bursulaya</surname>
+              <given-names>BD</given-names>
+            </name>
+            <name>
+              <surname>Totrov</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Abagyan</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Brooks</surname>
+              <given-names>CL</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Aided Mol Des</source>
+          <year>2003</year>
+          <volume>17</volume>
+          <fpage>1</fpage>
+          <pub-id pub-id-type="doi">10.1023/B:JCAM.0000017496.76572.6f</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bursulaya BD, Totrov M, Abagyan R, Brooks CL III (2003) J Comput Aided Mol Des 17:1 <pub-id pub-id-type="pmid">12926852</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hanley</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>McNeil</surname>
+              <given-names>BJ</given-names>
+            </name>
+          </person-group>
+          <source>Radiology</source>
+          <year>1982</year>
+          <volume>143</volume>
+          <fpage>29</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hanley JA, McNeil BJ (1982) Radiology 143:29 <pub-id pub-id-type="pmid">7063747</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baldi</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2000</year>
+          <volume>16</volume>
+          <fpage>412</fpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/16.5.412</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Baldi P (2000) Bioinformatics 16:412 <pub-id pub-id-type="pmid">10871264</pub-id></citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tribelleau</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Acher</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Brabet</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Pin</surname>
+              <given-names>J-P</given-names>
+            </name>
+            <name>
+              <surname>Bertrand</surname>
+              <given-names>H-O</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2005</year>
+          <volume>48</volume>
+          <fpage>2534</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm049092j</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tribelleau N, Acher F, Brabet I, Pin J-P, Bertrand H-O (2005) J Med Chem 48:2534 <pub-id pub-id-type="pmid">15801843</pub-id></citation>
+      </ref>
+      <ref id="CR44">
+        <label>44.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bissantz</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Folkers</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Rognan</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2000</year>
+          <volume>43</volume>
+          <fpage>4759</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm001044l</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bissantz C, Folkers G, Rognan D (2000) J Med Chem 43:4759 <pub-id pub-id-type="pmid">11123984</pub-id></citation>
+      </ref>
+      <ref id="CR45">
+        <label>45.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sills</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Weiss</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Pham</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Schweitzer</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>JJ</given-names>
+            </name>
+          </person-group>
+          <source>J Biomol Screening</source>
+          <year>2002</year>
+          <volume>7</volume>
+          <fpage>191</fpage>
+          <pub-id pub-id-type="doi">10.1177/108705710200700304</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sills MA, Weiss D, Pham Q, Schweitzer R, Wu Y, Wu JJ (2002) J Biomol Screening 7:191 </citation>
+      </ref>
+      <ref id="CR46">
+        <label>46.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Verdonk</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Berdini</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Hartshorn</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Mooij</surname>
+              <given-names>WTM</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Watson</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Comput Sci</source>
+          <year>2004</year>
+          <volume>44</volume>
+          <fpage>793</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci034289q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Verdonk ML, Berdini V, Hartshorn MJ, Mooij WTM, Murray CW, Taylor RD, Watson P (2004) J Chem Inf Comput Sci 44:793 <pub-id pub-id-type="pmid">15154744</pub-id></citation>
+      </ref>
+      <ref id="CR47">
+        <label>47.</label>
+        <citation citation-type="other">FRED version 2.1&#x2014;<ext-link ext-link-type="uri" xlink:href="http://www.eyesopen.com">http://www.eyesopen.com</ext-link></citation>
+      </ref>
+      <ref id="CR48">
+        <label>48.</label>
+        <citation citation-type="other"><ext-link ext-link-type="uri" xlink:href="http://www.maybridge.com">http://www.maybridge.com</ext-link>. Accessed November 2005</citation>
+      </ref>
+      <ref id="CR49">
+        <label>49.</label>
+        <citation citation-type="other">ROCS version 2.1&#x2014;<ext-link ext-link-type="uri" xlink:href="http://www.eyesopen.com">http://www.eyesopen.com</ext-link></citation>
+      </ref>
+      <ref id="CR50">
+        <label>50.</label>
+        <citation citation-type="other">
+          <ext-link ext-link-type="uri" xlink:href="http://www.eyesopen.com/about/events/cup7/hawkins/Hawkins_UKqsar_06_ph.png">http://www.eyesopen.com/about/events/cup7/hawkins/Hawkins_UKqsar_06_ph.png</ext-link>
+        </citation>
+      </ref>
+      <ref id="CR51">
+        <label>51.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Godden</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Bajorath</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Inf Model</source>
+          <year>2006</year>
+          <volume>46</volume>
+          <fpage>1094</fpage>
+          <pub-id pub-id-type="doi">10.1021/ci050510i</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Godden JW, Bajorath J (2006) J Chem Inf Model 46:1094 <pub-id pub-id-type="pmid">16711729</pub-id></citation>
+      </ref>
+      <ref id="CR52">
+        <label>52.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Shiochet</surname>
+              <given-names>BK</given-names>
+            </name>
+            <name>
+              <surname>Irwin</surname>
+              <given-names>JJ</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2006</year>
+          <volume>49</volume>
+          <fpage>6789</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm0608356</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Huang N, Shiochet BK, Irwin JJ (2006) J Med Chem 49:6789 <pub-id pub-id-type="pmid">17154509</pub-id></citation>
+      </ref>
+      <ref id="CR53">
+        <label>53.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Freisner</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Banks</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Murphy</surname>
+              <given-names>RB</given-names>
+            </name>
+            <name>
+              <surname>Halgren</surname>
+              <given-names>TA</given-names>
+            </name>
+            <name>
+              <surname>Klicic</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Mainz</surname>
+              <given-names>DT</given-names>
+            </name>
+            <name>
+              <surname>Repasky</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Knoll</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Shelly</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>JK</given-names>
+            </name>
+            <name>
+              <surname>Shaw</surname>
+              <given-names>DE</given-names>
+            </name>
+            <name>
+              <surname>Francis</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Shenkin</surname>
+              <given-names>PS</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2004</year>
+          <volume>47</volume>
+          <fpage>1739</fpage>
+          <pub-id pub-id-type="doi">10.1021/jm0306430</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Freisner RA, Banks JL, Murphy RB, Halgren TA, Klicic JJ, Mainz DT, Repasky MP, Knoll EH, Shelly M, Perry JK, Shaw DE, Francis P, Shenkin PS (2004) J Med Chem 47:1739 <pub-id pub-id-type="pmid">15027865</pub-id></citation>
+      </ref>
+      <ref id="CR54">
+        <label>54.</label>
+        <citation citation-type="other"><ext-link ext-link-type="uri" xlink:href="http://dud.docking.org">http://dud.docking.org</ext-link>. Accessed 5th November 2007</citation>
+      </ref>
+      <ref id="CR55">
+        <label>55.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jain</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <source>J Comput-Aided Mol Des</source>
+          <year>2007</year>
+          <volume>21</volume>
+          <fpage>281</fpage>
+          <pub-id pub-id-type="doi">10.1007/s10822-007-9114-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jain AJ (2007) J Comput-Aided Mol Des 21:281 <pub-id pub-id-type="pmid">17387436</pub-id></citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <title>Abbreviations</title>
+      <def-list>
+        <def-item>
+          <term>AUC</term>
+          <def>
+            <p>Area under the curve</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>DPI</term>
+          <def>
+            <p>Diffraction-coordinate precision index</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>RMSD</term>
+          <def>
+            <p>Root mean square deviation</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>ROC</term>
+          <def>
+            <p>Receiver operator characteristic</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+    <fn-group>
+      <fn id="Fn1">
+        <label>1</label>
+        <p>Goto et al.&#x2019;s formula to calculate DPI.</p>
+      </fn>
+      <fn id="Fn2">
+        <label>2</label>
+        <p>Blow&#x2019;s derivation for the relationship between nominal resolution and atomic precision using the Goto et&#xA0;al. [<xref ref-type="bibr" rid="CR18">18</xref>] coefficient.</p>
+      </fn>
+      <fn id="Fn3">
+        <label>3</label>
+        <p>Enrichment calculation.</p>
+      </fn>
+      <fn>
+        <p>An erratum to this article can be found at 
+						<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s10822-008-9201-z">http://dx.doi.org/10.1007/s10822-008-9201-z</ext-link></p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

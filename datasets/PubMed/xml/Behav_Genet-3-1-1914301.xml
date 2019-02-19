@@ -1,0 +1,1644 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Behav Genet</journal-id>
+      <journal-title>Behavior Genetics</journal-title>
+      <issn pub-type="ppub">0001-8244</issn>
+      <issn pub-type="epub">1573-3297</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17534709</article-id>
+      <article-id pub-id-type="pmc">1914301</article-id>
+      <article-id pub-id-type="publisher-id">9156</article-id>
+      <article-id pub-id-type="doi">10.1007/s10519-007-9156-1</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Variance Decomposition Using an IRT Measurement Model</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>van den Berg</surname>
+            <given-names>St&#xE9;phanie M.</given-names>
+          </name>
+          <address>
+            <phone>+31-20-5988824</phone>
+            <fax>+31-20-5988832</fax>
+            <email>SM.van.den.Berg@psy.vu.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Glas</surname>
+            <given-names>Cees A. W.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Boomsma</surname>
+            <given-names>Dorret I.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Department of Biological Psychology, Vrije Universiteit Amsterdam, Van der Boechorststraat 1, Amsterdam, 1081 BT The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Department of Research Methodology, Measurement, and Data Analysis, University of Twente, Enschede, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>30</day>
+        <month>5</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>7</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>37</volume>
+      <issue>4</issue>
+      <fpage>604</fpage>
+      <lpage>616</lpage>
+      <history>
+        <date date-type="received">
+          <day>23</day>
+          <month>8</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>12</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Large scale research projects in behaviour genetics and genetic epidemiology are often based on questionnaire or interview data. Typically, a number of items is presented to a number of subjects, the subjects&#x2019; sum scores on the items are computed, and the variance of sum scores is decomposed into a number of variance components. This paper discusses several disadvantages of the approach of analysing sum scores, such as the attenuation of correlations amongst sum scores due to their unreliability. It is shown that the framework of Item Response Theory (IRT) offers a solution to most of these problems. We argue that an IRT approach in combination with Markov chain Monte Carlo (MCMC) estimation provides a flexible and efficient framework for modelling behavioural phenotypes. Next, we use data simulation to illustrate the potentially huge bias in estimating variance components on the basis of sum scores. We then apply the IRT approach with an analysis of attention problems in young adult twins where the variance decomposition model is extended with an IRT measurement model. We show that when estimating an IRT measurement model and a variance decomposition model simultaneously, the estimate for the heritability of attention problems increases from 40% (based on sum scores) to 73%.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Item response theory</kwd>
+        <kwd>MCMC</kwd>
+        <kwd>Bayesian statistics</kwd>
+        <kwd>Measurement</kwd>
+        <kwd>Attention problems</kwd>
+        <kwd>Sum scores</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media, LLC 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1">
+      <title>Introduction</title>
+      <p>In quantitative genetics, one is interested in the extent to which variation in certain characteristics is heritable. Heritability is expressed in terms of the proportion of the variance of a trait in a population that can be attributed to genetic differences. This genetic variance component can be estimated in, for example, the classical twin design (Boomsma et&#xA0;al. <xref ref-type="bibr" rid="CR4">2002a</xref>) in which the covariance structures of monozygotic and dizygotic twins are compared.</p>
+      <p>However, it is not always straightforward to estimate variance components. A variance component is only meaningful when measures are expressed on a scale of at least interval level. Moreover, many statistical methods require the phenotype to be normally distributed. Many phenotypes are not expressed in clearly defined units and are at best ordinal in character (e.g., conservatism, extraversion). Some traits have even only a nominal character (e.g., psychiatric disorders). There are several ways of dealing with such nominal data. One possibility is to focus on concordance rates and compute recurrence risk ratios (Risch <xref ref-type="bibr" rid="CR42">1990</xref>, <xref ref-type="bibr" rid="CR43">2001)</xref>. Alternatively, one might assume a latent continuous trait with a threshold above which individuals are affected and estimate the heritability on that latent trait (Lynch and Walsh <xref ref-type="bibr" rid="CR32">1998</xref>; Falconer <xref ref-type="bibr" rid="CR13">1965</xref>; Crittenden <xref ref-type="bibr" rid="CR8">1961</xref>). This method can also be used with ordinal data.</p>
+      <p>For some traits, it is convenient to have multiple indicators (items). For example one might have for a particular disease 10 symptoms that each can be scored as absent (0) or present (1). For each individual one can then compute a sum score that indicates to what extent the individual is affected by the disease. Such sum scores usually show a normal distribution or do so after an appropriate transformation. It is typically assumed that the normally distributed scores or transformations thereof reflect a continuous interval scale and the variance of the sum scores is subsequently decomposed. This approach follows classical test theory (CTT) where it is assumed that the observed score (the sum score) is the aggregate of a true score and a random component, usually referred to as measurement error. When decomposing the variance of sum scores, the measurement error variance (the unreliability) ends up as part of the non-shared environmental variance. As a result, when the reliability of a scale is low (i.e., the measurement error is large) and the analysis is based on sum scores, the heritability of the actual trait is significantly underestimated.</p>
+      <p>Modelling sum scores is appropriate if the sum scores are highly reliable (for instance because they are based on a large number of correlated items) and well validated. Furthermore, there should be enough variation and the distribution should be more or less normal. Finally, there should be no data missing. If these requirements do not hold, item response theory (IRT) provides a well-established alternative to classical test theory. This paper introduces the basics of the IRT framework, after which its advantages over a sum score approach are discussed. Next, it is argued that IRT models should be estimated simultaneously with the variance decomposition model, which can be done using a Bayesian approach with Markov-chain Monte Carlo estimation. Lastly, a simulation study shows the potential bias when estimating variance components on the basis of sum scores and the Bayesian method is illustrated with an empirical data set on attention problems.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Item response theory models</title>
+      <p>In IRT models&#x2014;as opposed to CTT&#x2014;the influence of the items and the respondents are explicitly modelled by distinct sets of parameters. In these models, an assumed continuous latent variable <italic>&#x3B8;</italic> reflects the trait and every item is identified by thresholds <italic>&#x3B2;</italic> where a response in one category becomes more likely than a response in an adjacent category. It is usually assumed that the latent variables <italic>&#x3B8;</italic><sub><italic>j</italic></sub> are drawn from a normal distribution, that is, <italic>&#x3B8;</italic><sub><italic>j</italic></sub> are independently and identically distributed <italic>N</italic>(<italic>&#x3BC;</italic>, <italic>&#x3C3;</italic><sup>2</sup>), though this assumption is not always necessary to identify the model parameters. The probability of the presence of the symptom <italic>i</italic> in individual <italic>j</italic>, <italic>p</italic>(<italic>Y</italic><sub><italic>ij</italic></sub>&#xA0;=&#xA0;1), is a function of the difference between the individual&#x2019;s trait score <italic>&#x3B8;</italic><sub><italic>j</italic></sub> and the parameter <italic>&#x3B2;</italic><sub><italic>i</italic></sub>, with <italic>&#x3B2;</italic><sub><italic>i</italic></sub> indicating the location on the scale where the presence of a symptom becomes more probable than its absence. In the case of multiple symptoms, we have <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ p(Y_{{ij}} = 1) = \Phi (\theta _{j} - \beta _{i} ), $$\end{document}</tex-math></disp-formula>with 
+<inline-formula id="IEq1"><!-- Alternate image not processed: 10519_2007_9156_Article_IEq1.gif --><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \Phi (.) $$\end{document}</tex-math></inline-formula> denoting the cumulative standard normal distribution function. That is, the probability of the presence of symptom <italic>i</italic> in person <italic>j</italic> is a function of both a person&#x2019;s liability score <italic>&#x3B8;</italic><sub><italic>j</italic></sub> and a symptom (or item) parameter <italic>&#x3B2;</italic><sub><italic>i</italic></sub>. In the IRT framework, this model is referred to as the one-parameter normal ogive model, or 1PNO (Lawley <xref ref-type="bibr" rid="CR25">1943</xref>; Lord <xref ref-type="bibr" rid="CR27">1952</xref>, <xref ref-type="bibr" rid="CR28">1953)</xref>. This model is identified with a location restriction, for example, <italic>&#x3BC;</italic>&#xA0;=&#xA0;0. The variance of the latent trait, <italic>&#x3C3;</italic><sup>2</sup>, can be estimated and can be interpreted as the covariance of the items: the larger the variance, the higher the reliability of the scale.</p>
+      <p>An alternative parameterisation replaces the normal ogive by a logistic curve, that is,</p>
+      <p>
+        <disp-formula id="Equ2">
+          <label>2</label>
+          <tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ p(Y_{{ij}} = 1) = \Psi (\theta _{j} - \beta _{i} ), $$\end{document}</tex-math>
+        </disp-formula>
+      </p>
+      <p>where <disp-formula id="Equa"><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \Psi (x) = \frac{{\exp (x)}} {{1 + \exp (x)}}. $$\end{document}</tex-math></disp-formula></p>
+      <p>This version of the model is known as the one-parameter logistic model (1PLM), or Rasch model (Rasch <xref ref-type="bibr" rid="CR40">1960</xref>). To illustrate the model, consider an individual with a score <italic>&#x3B8;</italic><sub><italic>j</italic></sub> of 1 on the latent trait, and a particular item with parameter <italic>&#x3B2;</italic>&#xA0;=&#xA0;1. Then the probability of a positive response from this individual on this item equals exp(1&#xA0;&#x2212;&#xA0;1)/(1&#xA0;+&#xA0;exp(1&#xA0;&#x2212;&#xA0;1))&#xA0;=&#xA0;exp(0)/(1&#xA0;+&#xA0;exp(0))&#xA0;=&#xA0;1/2&#xA0;=&#xA0;50%. An individual with a score higher than 1 has a higher probability of showing a positive response, whereas an individual scoring lower than 1 has a lower probability. Individuals with a latent score of &#x2212;1 have a probability of exp(&#x2212;2)/(1&#xA0;+&#xA0;exp(&#x2212;2))&#xA0;=&#xA0;12%. With a simple multiplicative transformation of the scale, the logistic and normal ogive curves are very similar and indistinguishable for all practical work (see, for instance, Lord <xref ref-type="bibr" rid="CR29">1980</xref>).</p>
+      <p>In the Rasch model, as well as in the 1PNO model, all items have the same correlation (&#x2018;&#x2018;factor loading&#x2019;&#x2019;) with the underlying latent trait. Analogous to factor models, it is possible to estimate factor loadings that differ across items. In the IRT framework these factor loadings are referred to as discrimination parameters <italic>&#x3B1;</italic><sub><italic>i</italic></sub>. These parameters indicate the extent to which an item <italic>i</italic> loads onto the latent trait, and the model becomes</p>
+      <p>
+        <disp-formula id="Equ3">
+          <label>3</label>
+          <tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ p(Y_{{ij}} = 1|\theta _{j} ,\alpha _{i} ,\beta _{i} ) = \Psi (\alpha _{i} \theta _{j} - \beta _{i} ). $$\end{document}</tex-math>
+        </disp-formula>
+      </p>
+      <p>An alternative form in the literature replaces <italic>&#x3B1;&#x3B8;</italic>&#xA0;&#x2212;&#xA0;<italic>&#x3B2;</italic> with <italic>&#x3B1;</italic>(<italic>&#x3B8;</italic>&#xA0;&#x2212;&#xA0;<italic>&#x3B2;</italic>). This leads to a somewhat different interpretation of the <italic>&#x3B2;</italic>-parameters (they are scaled differently) but it only involves a reparameterisation.</p>
+      <p>Essentially, a one-parameter model can be described by a two-parameter model where all <italic>&#x3B1;</italic> parameters are equal. In order to identify the model and estimate <italic>&#x3B1;</italic>, however, the variance of the latent trait should be fixed. Thus, a one-parameter model with a large variance of the latent trait is equivalent to a two-parameter model with large discrimination parameter <italic>&#x3B1;</italic> that is equal for all items together with a fixed variance of the latent trait.</p>
+      <p>The two-parameter model must be identified by both a location and a scale restriction. The former can be the same restriction as above, that is, <italic>&#x3BC;</italic>&#xA0;=&#xA0;0. The latter can be the additional restriction that the variance of the latent distribution is equal to one, that is, the model is identified by assuming a standard normal distribution, <italic>N</italic>(0,1), for the latent ability parameters <italic>&#x3B8;</italic><sub><italic>j</italic></sub>. Alternatively one fixes one of the discrimination parameters to unity. Generally, however, this identification solution is not advisable, because the standard errors of the parameters blow up if the discrimination parameter chosen for the identification is poorly identified.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>IRT models for polytomous data</title>
+      <p>Often, measurement is based on items or symptoms with more than two categories. For example, answers can be coded as 0 (not at all), 1 (somewhat, sometimes) and 2 (a lot, often). Typically in CTT approaches in behaviour genetics the sum of these item scores is regarded to represent a person&#x2019;s score on the trait of interest and is used for the statistical inference.</p>
+      <p>There are several IRT models for ordered categories (e.g., Samejima <xref ref-type="bibr" rid="CR46">1969</xref>; Masters <xref ref-type="bibr" rid="CR33">1982</xref>). These have different rationales and are not reparameterisations of each other, but the practical implications for preferring one over the other are often negligible. Here we describe a continuation-ratio model (Tutz <xref ref-type="bibr" rid="CR49">1990</xref>; Verhelst et&#xA0;al. <xref ref-type="bibr" rid="CR54">1997</xref>). This model allows the transformation of a polytomous item into a set of dichotomous items, which facilitates model estimation. The response to a polytomous item is viewed as a set of responses to an ordered sequence of virtual dichotomous items: it is assumed that the respondent is administered virtual items until an incorrect or negative response is given. So, in this approach, an item with <italic>M</italic> categories labelled <italic>m&#xA0;=&#xA0;0</italic>,..., <italic>M&#xA0;&#x2212;&#xA0;</italic>1, the response is dummy-coded into <italic>M&#xA0;</italic>&#x2212;&#xA0;1 dichotomous quasi-items. As an example, for an item with <italic>m&#xA0;=</italic>&#xA0;3 categories we make two new virtual items. A score of 2 would be coded as correct responses to both virtual items. A score of 1 on the original item would be coded as a correct response to the first virtual item and an incorrect response to the second virtual item. A score of 0 would be coded as an incorrect response to the first virtual item and the second virtual item would be coded as not administered (missing). Now the responses to all virtual items can be modelled by an IRT model for dichotomous items, such as the models given by Eqs. 1, 2 or 3 and can be estimated by any IRT software package that can handle dichotomous items in combination with missing data. There are also IRT packages that estimate models for polytomous items directly (e.g., Multilog; Thissen et&#xA0;al. <xref ref-type="bibr" rid="CR48">2003</xref>).</p>
+    </sec>
+    <sec id="Sec4">
+      <title>Advantages of using an IRT framework compared to analysing sum scores</title>
+      <p>We will discuss four advantages of using IRT: (1) it supports construct validity and the scoring rule (e.g., a scoring rule might consist of taking the unweighted sum of symptoms as an estimate of a person&#x2019;s liability), (2) it supports the use of incomplete item administration designs and handling of missing data, (3) it supports accounting for measurement error, and (4) it can handle floor and ceiling effects.</p>
+      <p>An IRT framework allows one to explicitly model the relationship between item scores and the phenotype of interest. Any combination of items can of course be summed (weighted or unweighted), but this does not guarantee that the sum score reflects a meaningful construct. The meaningfulness of the measurement can be directly assessed in an IRT framework. Fit to an IRT model is empirical evidence that the observed responses can be explained by an underlying structure. The latent variable of the IRT model should, of course, be an appropriate representation of the construct to be measured.</p>
+      <p>The IRT model that fits the data determines the score rule of the measurement instrument. If, for instance, a one-parameter model does not fit the data, but a two-parameter model does, the sum score where the items scores are weighted with their respective discrimination parameters is a sufficient statistic for <italic>&#x3B8;</italic><sub><italic>j</italic></sub> (Lord and Novick <xref ref-type="bibr" rid="CR30">1968</xref>). So some items can be more important or sensitive indicators of a trait than others. Modelling the item data in a variance decomposition analysis allows the separate evaluation of model fit regarding the measurement model and the variance decomposition model.</p>
+      <p>In addition, group differences can be modelled, through differences in means, variances and variance components, and through differences in the way symptoms relate to the latent trait. For instance, one or more symptoms may show a higher incidence rate in one group (indicated by a difference in <italic>&#x3B2;</italic>-parameters across groups, e.g., females and males), or be a more sensitive indicator for the trait in a particular group (indicated by a difference in <italic>&#x3B1;</italic>-parameters across groups). Such violations of measurement invariance are usually referred to as differential item functioning (DIF).</p>
+      <p>A practical advantage of the analysis of data using an IRT framework is the use of incomplete item administration designs and handling of missing data. In some situations, intentionally incomplete item administration designs can greatly improve the efficiency of data collection. With an IRT approach one can also effectively deal with problems specific to longitudinal research where items differ across waves. When using IRT models in a maximum likelihood or a Bayesian framework, it is easy to include individuals that have missing data on one or more items if the data are missing at random (Little and Rubin <xref ref-type="bibr" rid="CR26">1987</xref>). When data are not missing at random, the non-randomness can be modelled within an IRT framework by expanding the model with an IRT model that describes the pattern of the missing data (see, for instance, Moustaki and Knott <xref ref-type="bibr" rid="CR35">2000</xref>; Moustaki and O&#x2019;Muircheartaigh <xref ref-type="bibr" rid="CR36">2000</xref>; Holman and Glas <xref ref-type="bibr" rid="CR22">2005</xref>). The encompassing framework for handling missing data using IRT offers an important advantage over classical test theory. In classical test theory sum scores are only meaningful if the items are the same in all individuals and at all measurement waves.</p>
+      <p>The third advantage of the analysis of data using an IRT framework is that it accounts for measurement error. Unreliability suppresses the correlation between measurements (attenuation). Particularly when using a scale with only a few items, the correlations amongst sum score variables may be grossly attenuated. Clearly, this has important implications for the estimation of variance components in genetic research. In an IRT framework, the problem can be solved by, instead of focussing on sum scores, considering the correlations between <italic>latent</italic> variables (see, for instance, B&#xE9;guin and Glas <xref ref-type="bibr" rid="CR3">2001</xref>; Fox and Glas <xref ref-type="bibr" rid="CR15">2003</xref>). These so-called latent correlations can be seen as estimates of correlations corrected for attenuation. A simulation study and an application of IRT to real data in a later section will show the possible extent of such attenuation effects on the estimation of heritability.</p>
+      <p>The fourth advantage of IRT has to do with floor and ceiling effects. A problem of analysing sum scores that represent indices of psychopathology is that these scores show a skewed distribution in the general population (Van den Oord et&#xA0;al. <xref ref-type="bibr" rid="CR53">2003</xref>; Derks et&#xA0;al. <xref ref-type="bibr" rid="CR10">2004</xref>). These skewed distributions result from the fact that many behavioural phenotypes are assessed using questions that relate to symptoms that are relatively rare in the population. These distributional violations may have important implications for the inference regarding relative variance components when analysing sum scores (Derks et&#xA0;al. <xref ref-type="bibr" rid="CR10">2004</xref>). In an IRT framework one is essentially free to specify the distribution of the latent trait (in some cases, it can even be estimated). In most cases, with polygenic traits, a normal distribution seems the most reasonable alternative (a mixture approach may be more suitable for traits with only a few large QTL effects). When in turn the variance of the normally distributed latent trait is decomposed into genetic and non-genetic variance, the inference is unbiased if the assumptions of the model are correct.</p>
+    </sec>
+    <sec id="Sec5">
+      <title>Variance decomposition: the one-step and the two-step approach</title>
+      <p>In IRT models, the latent scores <italic>&#x3B8;</italic><sub><italic>j</italic></sub> are typically assumed to be random draws from a normal distribution. When we are interested in the extent to which individual differences on the latent trait are heritable, we only need to decompose the variance of the <italic>&#x3B8;</italic><sub><italic>j</italic></sub>s using, for example, the classical twin design. There are two approaches. The first approach is to first estimate the parameters of the IRT model using standard IRT software (such as, Bilog, Multilog, Parscale, Testfact, ConQuest, OPLM), and then to have the same software estimate each individual score on the latent trait. Next, one uses these estimates of the <italic>&#x3B8;</italic><sub><italic>j</italic></sub>s as observed values in a standard variance decomposition analysis. This we call the two-step approach.</p>
+      <p>There are several disadvantages to this two-step approach. First of all, in the IRT model fitting phase, the usual IRT estimation software cannot handle the dependency in the data inherent in twin and family designs. In some cases, with simple designs such as with sibling pairs only, weighting of the data would come a long way in solving this problem, but with more complex family designs, weighting is not a satisfactory solution.</p>
+      <p>Second, when estimating latent scores for each individual, the estimates of the <italic>&#x3B8;</italic><sub><italic>j</italic></sub>s, just like sum scores in the CTT tradition, are not simply observations but estimates with error variance. When computing the confidence intervals for the heritability estimates in the second phase, this uncertainty on the latent scores is not taken into account and the heritability confidence intervals are consequently too narrow and the estimates biased downwards. Moreover, in an IRT framework, the confidence intervals for estimates of individual latent scores are dependent on their location on the scale (actually, the number of items with <italic>&#x3B2;</italic>-parameters that are similar in magnitude to the person score <italic>&#x3B8;</italic> and the items&#x2019; discriminatory power, <italic>&#x3B1;</italic>), whereas in the variance decomposition, it is assumed that measurement error (as included in the non-shared environmental variance component) is independent of location (cf. CTT). For example, many psychopathology scales have only items that refer to relatively rare symptoms. As a consequence, many individuals in the general population score 0, which does not necessarily imply that all actually have the trait to the exact same degree. In other words, the scale provides very little information on the trait on the low end. In contrast, the upper end of the scale usually shows more variation, which may imply that the measures are more reliable (more items that discriminate between individuals). Thus, a priori it seems likely that psychopathological scales have more discriminatory power at the upper end of the scale than at the lower end. Of course, this is not a bad thing, since these scales were designed to discriminate between the healthy and the sick. Therefore it seems reasonable to forego the assumption of equal reliability across the scale and take differing reliabilities into account.</p>
+      <p>Actually, using the two-step approach the heritability coefficient estimate will be about the same as when the analysis is carried out on sum scores. This is because IRT estimates and sum scores correlate highly, well over 0.90 in the case of two-parameter models. When applying a one-parameter model, the correlation will be practically one, because a basic assumption of the Rasch model is that a sum score is a sufficient statistic for the score on the latent trait. Therefore, all persons with the same sum score will get the same estimate on the latent trait. Thus, a third problem of the two-step approach is that it neither solves the attenuation problem, nor the non-normality, nor the ceiling effects.</p>
+      <p>In order to take full advantage of the IRT approach, it is critical to estimate both the measurement model and the variance decomposition model simultaneously, using a one-step approach. However, computationally this is rather challenging. Below, it is shown how this can be done using software for Bayesian estimation procedures. In an application in a later section, we demonstrate the one-step approach for the estimation of heritability with both simulated and empirical data.</p>
+    </sec>
+    <sec id="Sec6">
+      <title>Bayesian estimation using a Markov chain Monte Carlo algorithm </title>
+      <p>In twin studies, a widespread method of estimating variance components is through structural equation modelling (SEM). For continuous traits with normal distributions, this is a flexible approach in that it is able to accommodate all linear models and allows for testing of equality of means, variances, covariances and variance components across subpopulations. However, with more elaborate models with discrete or categorical observed variables, SEM maximum likelihood (ML) estimation or ML procedures for estimating generalised linear mixed models such as GLAMM (Rabe-Hesketh and Skrondal <xref ref-type="bibr" rid="CR39">2005</xref>) soon reach computational boundaries. An alternative method is Bayesian statistical modelling with Markov chain Monte Carlo (MCMC) estimation algorithms (see also Eaves et&#xA0;al. <xref ref-type="bibr" rid="CR11">2005</xref>).</p>
+      <p>In the Bayesian approach, inference is based on the posterior density of the model parameters, <italic>P</italic>(<italic>&#x3B7;</italic>|<italic>Y</italic>), where <italic>&#x3B7;</italic> represents the vector of model parameters and <italic>Y</italic> the observed data. By Bayes&#x2019; rule, the density <italic>P</italic>(<italic>&#x3B7;</italic>|<italic>Y</italic>) is proportional to the product of the likelihood of the data given the model parameters <italic>P</italic>(<italic>Y</italic>|<italic>&#x3B7;</italic>) and the marginal density for <italic>&#x3B7;</italic>, <italic>P</italic>(<italic>&#x3B7;</italic>), that is,</p>
+      <p>
+        <disp-formula id="Equ4">
+          <label>4</label>
+          <tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ P\;(\eta {\text{ $|$ }}Y)\; \propto \;P(Y{\text{ $|$ }}\eta )P(\eta ). $$\end{document}</tex-math>
+        </disp-formula>
+      </p>
+      <p>The marginal distribution of <italic>&#x3B7;</italic> is termed the <italic>prior</italic> distribution (prior in the sense of before the data have been taken into account), and must be specified by the user. The model provides us with the likelihood function <italic>P</italic>(<italic>Y</italic>|<italic>&#x3B7;</italic>), and hence the <italic>posterior</italic> distribution of <italic>&#x3B7;</italic> is determined (posterior in the sense of after the data have been taken into account). The posterior distribution is a description of the probabilities of possible values for <italic>&#x3B7;</italic> given the observed data and forms the basis for statistical inference. We may, for example, take the mean or the median of this distribution as our point estimate for <italic>&#x3B7;</italic>. Further, the interval between the 2.5th and the 97.5th percentile of the posterior distribution provides the so-called central 95% credibility region, which is analogous to a 95% confidence interval in the ML framework. For more on Bayesian statistics, the reader is referred to the introductions by Box and Tiao (<xref ref-type="bibr" rid="CR6">1973</xref>) and Gelman et&#xA0;al. (<xref ref-type="bibr" rid="CR17">2004</xref>).</p>
+      <p>Sometimes it is easy to compute the posterior distribution analytically, but very often this is not possible. One can then use computer simulation to draw a sample of <italic>&#x3B7;</italic>-values from the posterior distribution. The mean or median of the posterior distribution can then be approximated by the mean or median of the sampled <italic>&#x3B7;</italic>-values, and approximate credibility regions can be determined in a similar way. In practice, the joint posterior distribution of all model parameters is usually quite complicated. Therefore, the complete set of parameters is split up into a number of subsets in such a way that the conditional posterior distribution of each subset given all other parameters has a tractable form and can be easily sampled from. This approach is known as Gibbs sampling (Geman and Geman <xref ref-type="bibr" rid="CR19">1984</xref>; Gelfand et&#xA0;al. <xref ref-type="bibr" rid="CR16">1990</xref>; Gelman et&#xA0;al. <xref ref-type="bibr" rid="CR17">2004</xref>), which is a special case of an MCMC algorithm. When however the conditional posterior distribution of a subset of the parameters is not easy or even impossible to sample from directly, other MCMC algorithms can be used, where one samples from a similar proposal distribution and uses a decision rule to either accept or reject a sample so that the accepted values can be regarded drawings from the target distribution.</p>
+      <p>In each iteration of an MCMC algorithm, a sample is taken from each conditional posterior distribution for each subset of the parameter space, given the current values of the other parameters. After a number of so-called &#x2018;&#x2018;burn-in&#x2019;&#x2019; iterations, necessary for a chain to achieve stationarity (i.e., approaching the target distribution: the joint posterior distribution) sufficiently closely, the subsequent draws can be regarded as sampled from the joint posterior distribution.</p>
+      <p>The application of the Bayesian approach with MCMC sampling to IRT models is mainly motivated by the fact that IRT models with complex dependency structures require the evaluation of multiple integrals to solve the estimation equations in a likelihood-based framework. This problem is avoided in an MCMC framework. In recent years, the fully Bayesian approach has been adopted to the estimation of IRT models with multiple raters, multiple item types, missing data (Patz and Junker <xref ref-type="bibr" rid="CR37">1999a</xref>, <xref ref-type="bibr" rid="CR38">b)</xref>, testlet structures (Bradlow et&#xA0;al. <xref ref-type="bibr" rid="CR7">1999</xref>, Wainer et&#xA0;al. <xref ref-type="bibr" rid="CR55">2000</xref>), latent classes (Hoijtink and Molenaar <xref ref-type="bibr" rid="CR21">1997</xref>), models with a multi-level structure on the ability parameters (Fox and Glas <xref ref-type="bibr" rid="CR14">2001</xref>, <xref ref-type="bibr" rid="CR15">2003)</xref> and the item parameters (Janssen et&#xA0;al. <xref ref-type="bibr" rid="CR23">2000</xref>), and multidimensional IRT models (B&#xE9;guin and Glas <xref ref-type="bibr" rid="CR3">2001</xref>). In behaviour genetics, the approach has been taken up by Eaves and his co-workers (Eaves et&#xA0;al, <xref ref-type="bibr" rid="CR11">2005</xref>; Eaves et&#xA0;al. <xref ref-type="bibr" rid="CR12">2004</xref>).</p>
+      <p>In IRT research, the Gibbs sampler is used in two versions: a version with a normal ogive representation such as in Eq. 1, introduced by Albert (<xref ref-type="bibr" rid="CR2">1992</xref>), and a version with a logistic representation introduced by Patz and Junker (<xref ref-type="bibr" rid="CR37">1999a</xref>). Below, a logistic version will be used for simulated and real data, implemented in the freely obtainable MCMC software package WinBUGS (<ext-link ext-link-type="uri" xlink:href="http://www.mrc-bsu.cam.ac.uk/bugs/">http://www.mrc-bsu.cam.ac.uk/bugs/</ext-link>).</p>
+      <p>Genetic models may be specified in WinBUGS as follows. Under the assumption that an ACE variance decomposition model (additive genetic, shared environmental and non-shared environmental effects) is appropriate for a latent trait <italic>&#x3B8;</italic>, the model can be parameterised as a linear random effects model (see also Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR50">2006a</xref>):</p>
+      <p><disp-formula id="Equ5"><label>5</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \theta _{{jk}} = a{\text{1}}_{k} + a{\text{2}}_{{jk}} + c_{k} + e_{{jk}} , $$\end{document}</tex-math></disp-formula>where <italic>c</italic><sub><italic>k</italic></sub> denotes the environmental effect for being a member of family <italic>k</italic>, and <italic>e</italic><sub><italic>jk</italic></sub> denotes the environmental effect of being individual <italic>j</italic> in family <italic>k</italic>. The genetic component is split into <italic>a</italic>1 and <italic>a</italic>2 to model the different genetic correlations amongst monozygotic (MZ) and dizygotic (DZ) twins (cf. Jinks and Fulker <xref ref-type="bibr" rid="CR24">1970</xref>). The genetic correlation in MZ twins is usually assumed 1.0 and in DZ twins 0.5, in other words, the genetic covariance in MZ twins is twice as large as in DZ twins. Therefore, if we let the random effect <italic>a</italic>1 be constant within all families and we let <italic>a</italic>2 vary within families only for DZ twins (but be constant for MZ twins), and then fix the variances of <italic>a</italic>1 and <italic>a</italic>2 to be equal, the genetic covariance in MZ twins will be twice as large as in DZ twins. The variance of <italic>a</italic>1 and <italic>a</italic>2 together, VAR(<italic>a</italic>1)&#xA0;+&#xA0;VAR(<italic>a</italic>2)&#xA0;=&#xA0;2 * VAR(<italic>a</italic>1) can then be interpreted as the variance due to additive genetic effects. We assume that <italic>a</italic>1&#xA0;&#x223C;&#xA0;<italic>N</italic>(0, &#xBD; <italic>&#x3C3;</italic><sup>2</sup><sub><italic>a</italic></sub>), <italic>a</italic>2&#xA0;&#x223C;&#xA0;<italic>N</italic>(0, &#xBD; <italic>&#x3C3;</italic><sup>2</sup><sub><italic>a</italic></sub>), <italic>c</italic>&#xA0;&#x223C;&#xA0;<italic>N</italic>(0, <italic>&#x3C3;</italic><sup>2</sup><sub><italic>c</italic></sub>), and <italic>e&#xA0;&#x223C;</italic>&#xA0;<italic>N</italic>(0, <italic>&#x3C3;</italic><sup>2</sup><sub><italic>e</italic></sub>).</p>
+      <p>The case for the ADE model can be derived similarly (Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR50">2006a</xref>). For some estimation problems, it might be computationally more convenient to model sum and differences scores, instead of the latent scores for the twins separately (Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR50">2006a</xref>; Robert and Casella <xref ref-type="bibr" rid="CR44">2004</xref>, p. 396; cf. Boomsma and Molenaar <xref ref-type="bibr" rid="CR75">1986</xref>).</p>
+    </sec>
+    <sec id="Sec7">
+      <title>Simulation</title>
+      <p>To illustrate the effect of attenuation on heritability estimates, 101 datasets were generated consisting of 400 MZ twin pairs and 600 DZ twin pairs. A standard normally distributed latent trait was simulated with an additive genetic component of 72% and a non-shared environmental component of 28%. The 1PL IRT model was used to simulate responses to 14 dichotomous items, where the <italic>&#x3B2;</italic> parameter values ranged from 0.5 to 3.5, with increments of 0.25. This corresponds to questionnaire items that are rarely endorsed by people. The simulated item data were fitted using a model with additive genetic and non-shared environmental effects (AE model) on a latent trait and a 1PL measurement model.</p>
+      <p>Next, sum scores were computed and these were analysed with an AE model. Since the distribution of the sum scores is positively skewed, the AE analysis was also performed after a logarithmic transformation of the sum scores.</p>
+      <p>The simulations were carried out using the software package <!-- WARNING: Literal has not been converted -->. For each replicated data set, we computed the twin correlations for the latent scores, the twin correlations of the sum scores and the twin correlations for the log-transformed sum scores. The three types of analyses were carried out in WinBUGS. After a burn-in phase of 1000 iterations, the characterisation of the posterior distribution for the model parameters was based on 1000 iterations from 2 independent Markov chains. From each of the 3 (analyses) * 101 (replicated data sets) marginal posterior distributions for the heritability we took the mean and the median as point estimates.</p>
+      <p>Further simulations were carried out to illustrate the attenuation effect and the bias in variance components. For simple genetic models, the twin correlations are sufficient statistics for the variance decomposition. Therefore it is enough to show how correlations based on sum scores behave as a function of number of items and beta parameters. Data were simulated using bivariate normally distributed latent values, with correlations 0.9, 0.7, 0.5, 0.3 and 0.1. These latent values were used to simulate corresponding sum scores using a one-parameter logistic IRT measurement model under a variety of conditions. First of all, we used different degrees of discrimination of the items (i.e., the variance of the latent trait: 0.676, 1 and 100). Second, we varied the way in which the items are distributed across the scale, either evenly scattered so that sum score distributions are symmetrical, or only scattered on the upper half part of the scale, that is, using only items that less than 50% of the population endorses, which results in positively skewed sum score distributions (cf. Derks et&#xA0;al. <xref ref-type="bibr" rid="CR10">2004</xref>; van den Oord et&#xA0;al. <xref ref-type="bibr" rid="CR53">2003</xref>). Third, we varied the number of items (5, 10, 20, 50, 100) to investigate attenuation.</p>
+    </sec>
+    <sec id="Sec8">
+      <title>Simulation results</title>
+      <p>Taking the median parameter values from the 101 data sets, the simulated latent data correlated 0.72 in MZ twins and 0.36 in DZ twins, just as would be expected. The sum scores correlated 0.45 in MZ twins and 0.21 in DZ twins (medians of the 101 data sets) and the log-transformed sum scores correlated 0.41 and 0.20, respectively. Thus, twin correlations are severely attenuated when analysing sum scores, even with 14 items.</p>
+      <p>Analysing the simulated item data with a 1PL IRT model, using the one-step approach, we recovered the true 72% value for the heritability coefficient closely (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). When analysing the raw sum scores using a normal AE model, either with or without transformation, the heritability point estimate dropped considerably, to about 42%. Thus, when the true model is an IRT model and the number of items is limited, an analysis of raw or transformed sum scores can lead to extensive underestimation of heritability.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Simulation results. Reported heritability values are the medians of the 101 posterior means and medians, standard deviations between parentheses</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2">Method of analysis</th><th align="left" colspan="2">Heritability coefficient point estimates</th></tr><tr><th align="left">Posterior mean</th><th align="left">Posterior median</th></tr></thead><tbody><tr><td align="left">1PL IRT model</td><td align="left">0.7232 (0.0585)</td><td align="left">0.7245 (0.0589)</td></tr><tr><td align="left">Sum scores continuous model</td><td align="left">0.4364 (0.0393)</td><td align="left">0.4369 (0.0395)</td></tr><tr><td align="left">Log-transformed sum scores</td><td align="left">0.4046 (0.0403)</td><td align="left">0.4047 (0.0406)</td></tr></tbody></table></table-wrap></p>
+      <p>For each condition of latent correlation, number of items, and variance of the latent variable, we simulated 100,000 twin pairs and correlated their sum scores. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A shows the result for the condition where the variance was 1 and the items were nicely scattered across the distribution of the latent values, between &#x2212;2&#xBD; and 2&#xBD; times the standard deviation (1). The attenuation effect is clearly dependent on the number of items: with 100 items, the correlation on the basis of the sum scores is very close to the true correlations. An analysis treating the sum scores as bivariately normal and applying a variance decomposition will approximate the true proportions. Moreover, the degree of the attenuation is proportional to the true correlation: with 5 items, a true correlation of 0.9 will be attenuated to a correlation of 0.55 (61%) and a true correlation of 0.1 will be attenuated to a correlation of 0.06 (60%). Therefore, when the analysis on 5 items is based on the sum score, and the true MZ correlation equals twice the DZ correlation, this ratio is maintained when analysing sum scores. Thus, when applying an AE model, heritability will be underestimated, but no artifactual shared environmental effects or dominance genetic effects will appear as a result of analysing sum scores.
+<fig id="Fig1"><label>Fig&#xA0;1</label><caption><p>Correlations of simulated sum scores as a function of true correlation at the latent level, variance of the latent trait (quality of the scale), and scatter of the item <italic>&#x3B2;</italic> parameters (entire scale or only top half, i.e., all&#xA0;&gt;&#xA0;0)</p></caption><graphic position="anchor" xlink:href="10519_2007_9156_Fig1_HTML" id="MO1"/></fig></p>
+      <p>Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B shows the result for a scale with slightly worse discrimination: the variance of the trait is now only 0.767. The items are again nicely scattered, between &#x2212;2&#xBD; SD (&#x2212;2.05) and 2&#xBD; SD (2.05). Thus, we retain the spread of the <italic>&#x3B2;</italic> values in terms of the SD, so that the expected proportion of individuals scoring a particular number of items remains equal across simulation situation; the resultant distribution of the sum scores will be equal. But now, due to the decreased sensitivity of the scale, the number of items has a more pronounced effect on the attenuation. The sum score correlations are now lower than under the model with variance&#xA0;=&#xA0;1. However, the attenuation effect is still proportional to the true correlations.</p>
+      <p>Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>C shows an extreme situation where the items have high discriminatory power. The variance is now 100, and the items are evenly scattered between &#x2212;25 and 25. Note that again, we retain the scatter of the beta values in terms of the SD, and again the sum score distribution will not be different from the earlier simulations. However, with such a sensitive scale, practically everybody that scores less than 1 SD below the mean will show a sum score of 16% of the total number of items. Everybody with a latent score higher than 1 SD below the mean will show a sum score of 84% of the number of items. Moreover, the data will show a scalogram pattern, for example with 3 items with increasing difficulty, the only observed patterns will be 111, 110, 100 and 000. Such a pattern will not be observed when the variance is 1, and even less so with a variance of 0.767: more individuals will then show patterns like 101 and 011, etc. Again, attenuation occurs when the number of items is limited, but the effect is much less pronounced, and again the attenuation is proportional across the different correlations. In this situation, an analysis of sum scores will yield reasonable estimates for the variance components given a sufficient number of items.</p>
+      <p>Actually, when the raw item data follow the scalogram pattern, the true correlations and the corresponding variance components will be recovered when applying a threshold model (Lynch and Walsh <xref ref-type="bibr" rid="CR32">1998</xref>). This is also true when the data follow a scalogram pattern but the items are not evenly scattered across the scale and the sum score distribution is skewed: applying a threshold model will recover the true correlations (cf. Derks et&#xA0;al. <xref ref-type="bibr" rid="CR10">2004</xref>). However, when applying an ordinary variance component analysis, ignoring its non-normality will yield biased estimates, underestimating the effects of shared environment and overestimating the effects of dominance (cf. Derks et&#xA0;al. <xref ref-type="bibr" rid="CR10">2004</xref>). This because when the items are not evenly scattered and the sum score distribution is skewed, the attenuation effect is no longer proportional to the true correlations (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>D): small correlations are more severely attenuated than large correlations. In case the true DZ correlation equals half the true MZ correlation, DZ:MZ&#xA0;=&#xA0;1:2, the correlations of the sum scores will show a smaller ratio, DZ:MZ&#xA0;&lt;&#xA0;1:2, usually an indication of dominance genetic effects or epistasis. This is hard to see from the Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>D, but with 5 items, the simulated sum score correlation is 0.83667 when the true correlation is 0.9 (92.96%), 0.42429 when the true correlation is 0.5 (84.86%), and 0.076575 when the true correlation is 0.1 (76.58%). Suppose we could analyse the true correlations, 0.9 and 0.5. One would then conclude that additive genetic variance accounts for 80% of the variance, non-shared environmental effects 10% and the shared environmental effects for the remaining 10%. Now if we would base our analysis on the observed sum score correlations 0.84 and 0.42, we would conclude that there are no shared environmental effects. One can imagine that when the true correlations are 0.90 and 0.45 one would conclude dominance effects to be absent, whereas if one would analyse observed sum scores correlations, one would find evidence for dominance genetic variance, the extent of which is dependent on the number of items.</p>
+      <p>Now, scalogram pattern data that fit a Guttman scale model are extremely rare. More often, item data follow a pattern that can be explained by the more lenient IRT model. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>E shows the attenuation effect when the true model is a one-parameter IRT model with variance 1, where all items are endorsed by fewer than half the participants (i.e., all <italic>&#x3B2;</italic> parameters larger than the average latent score). Again we see that under the usual IRT model, the attenuation effect depends on the number of items and again we see that due to the skewness of the sum score distribution, the attenuation is not proportional to the true correlation. For example, with five items the simulated sum score correlation equals 0.591256 for true correlation 0.9 (66%), 0.316222 for true correlation 0.5 (63%), and 0.056567 for true correlation 0.1 (57%). When true correlations are again 0.9 and 0.5, the most likely model would be, when based on an analysis of the sum scores with 5 items, 5% dominance genetic variance, 61% additive genetic variance and 34% non-shared environmental variance.</p>
+      <p>Thus, also under the IRT model, analysing sum scores leads to an underestimation of shared environmental effects and an overestimation of dominance genetic effects when the sum score distributions are skewed.</p>
+    </sec>
+    <sec id="Sec9">
+      <title>An application</title>
+      <p>We illustrate the decomposition of variance using an IRT measurement model with data from the Netherlands Twin Registry (NTR; Boomsma et&#xA0;al. <xref ref-type="bibr" rid="CR5">2002b</xref>). Attention problems were measured with the Young Adult Self-Report (YASR; Achenbach <xref ref-type="bibr" rid="CR1">1997</xref>). We used data collected in the year 2000 from 460 males and 966 females from MZ twin pairs, 288 males from DZ same-sex twin pairs, 561 females from DZ same-sex twin pairs, and 305 males and 441 females from opposite sex twin pairs. All twins were between 18 and 30&#xA0;years (inclusive). All available data were used, including data from incomplete pairs and individuals with several items missing. It was assumed that data were missing at random (cf. Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR52">2006c</xref>).</p>
+      <p>The attention problems (AP) subscale of the YASR consists of seven items (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>) with three ordered response categories (0&#xA0;=&#xA0;Not true, 1&#xA0;=&#xA0;Somewhat or Sometimes True, 2&#xA0;=&#xA0;Very True or Often True). In children, sum scores typically show a high heritability with a significant non-additive genetic component (Rietveld et&#xA0;al. <xref ref-type="bibr" rid="CR41">2004</xref>). In young adults, AP sum scores also showed heritability (40%), but no non-additive genetic component (Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR52">2006c</xref>).
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Items of the attention problems subscale of the young adult self-report (YASR; Achenbach <xref ref-type="bibr" rid="CR1">1997</xref>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Item</th><th align="left">Description</th></tr></thead><tbody><tr><td align="left">1</td><td align="left">I act too young for my age</td></tr><tr><td align="left">2</td><td align="left">I have trouble concentrating or paying attention</td></tr><tr><td align="left">3</td><td align="left">I daydream a lot </td></tr><tr><td align="left">4</td><td align="left">My school work or job performance is poor</td></tr><tr><td align="left">5</td><td align="left">I am too dependent on others </td></tr><tr><td align="left">6</td><td align="left">I fail to finish things I should do</td></tr><tr><td align="left">7</td><td align="left">My behaviour is irresponsible</td></tr></tbody></table></table-wrap></p>
+      <p>Here, we estimate A and E variance components using a 1PL measurement model. A main effect of sex, <italic>&#x3B4;</italic>, was modelled on the latent trais. The seven original items with three response categories were transformed into 14 dichotomous dummy items for each individual as described above. A separate <italic>&#x3B2;</italic>-parameter was estimated for each dummy item, so that for each original item there are two <italic>&#x3B2;</italic>-parameters. For the variance components, locally non-informative (&#x2018;&#x2018;flat&#x2019;&#x2019;) inverse gamma priors were used, and for the <italic>&#x3B2;</italic> and <italic>&#x3B4;</italic> parameters we used locally non-informative normal priors. The parameterisation modelled the variances of sum and differences scores for the latent trait (Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR50">2006a</xref>). The appendix gives the WinBUGS script. Three independent MCMC chains were used with randomised starting values. The chains converged rapidly to the stationary distribution with relatively low autocorrelations. The first 1000 iterations were discarded as burn-in samples, and a further 1000 iterations were used for inference.</p>
+    </sec>
+    <sec id="Sec10">
+      <title>Results </title>
+      <p>Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> gives the descriptives of the marginal posterior distribution of the parameter values. The estimate for heritability based on the mean of the posterior distribution is 73%. The main effect of sex on the latent trait, with females scoring higher than males, is just significant, as zero is not included in the central 95% credibility region. Values of the <italic>&#x3B2;</italic>-parameters are all around zero or positive, indicating that the AP scale is most sensitive for individuals with considerable attention problems but has a hard time discriminating individuals with relatively few problems with attention. This results in the severely skewed distributions of sum scores.
+<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Descriptives of marginal posterior distributions for the AE variance decomposition model using the 1PL IRT model for polytomous items with a main effect for sex</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Parameter</th><th align="left">Mean</th><th align="left">SD</th><th align="left">2&#xBD;th percentile</th><th align="left">Median</th><th align="left">97&#xBD;th percentile</th></tr></thead><tbody><tr><td align="left"><italic>&#x3C3;</italic><sup>2</sup><sub>a</sub></td><td char="." align="char">0.84</td><td char="." align="char">0.07</td><td char="." align="char">0.71</td><td char="." align="char">0.84</td><td char="." align="char">0.99</td></tr><tr><td align="left"><italic>&#x3C3;</italic><sup>2</sup><sub>e</sub></td><td char="." align="char">0.32</td><td char="." align="char">0.06</td><td char="." align="char">0.20</td><td char="." align="char">0.32</td><td char="." align="char">0.44</td></tr><tr><td align="left"><italic>&#x3B4;</italic></td><td char="." align="char">&#x2212;0.13</td><td char="." align="char">0.05</td><td char="." align="char">&#x2212;0.24</td><td char="." align="char">&#x2212;0.13</td><td char="." align="char">&#x2212;0.02</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>11</sub></td><td char="." align="char">0.25</td><td char="." align="char">0.05</td><td char="." align="char">0.15</td><td char="." align="char">0.25</td><td char="." align="char">0.34</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>12</sub></td><td char="." align="char">2.76</td><td char="." align="char">0.10</td><td char="." align="char">2.56</td><td char="." align="char">2.76</td><td char="." align="char">2.96</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>21</sub></td><td char="." align="char">&#x2212;0.76</td><td char="." align="char">0.05</td><td char="." align="char">&#x2212;0.86</td><td char="." align="char">&#x2212;0.76</td><td char="." align="char">&#x2212;0.66</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>22</sub></td><td char="." align="char">2.44</td><td char="." align="char">0.08</td><td char="." align="char">2.30</td><td char="." align="char">2.45</td><td char="." align="char">2.60</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>31</sub></td><td char="." align="char">&#x2212;0.43</td><td char="." align="char">0.05</td><td char="." align="char">&#x2212;0.53</td><td char="." align="char">&#x2212;0.43</td><td char="." align="char">&#x2212;0.33</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>32</sub></td><td char="." align="char">1.84</td><td char="." align="char">0.08</td><td char="." align="char">1.71</td><td char="." align="char">1.84</td><td char="." align="char">1.98</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>41</sub></td><td char="." align="char">1.90</td><td char="." align="char">0.06</td><td char="." align="char">1.78</td><td char="." align="char">1.90</td><td char="." align="char">2.02</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>42</sub></td><td char="." align="char">3.96</td><td char="." align="char">0.20</td><td char="." align="char">3.58</td><td char="." align="char">3.96</td><td char="." align="char">4.36</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>51</sub></td><td char="." align="char">0.22</td><td char="." align="char">0.05</td><td char="." align="char">0.13</td><td char="." align="char">0.22</td><td char="." align="char">0.32</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>52</sub></td><td char="." align="char">3.03</td><td char="." align="char">0.10</td><td char="." align="char">2.83</td><td char="." align="char">3.02</td><td char="." align="char">3.23</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>61</sub></td><td char="." align="char">0.62</td><td char="." align="char">0.05</td><td char="." align="char">0.53</td><td char="." align="char">0.62</td><td char="." align="char">0.73</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>62</sub></td><td char="." align="char">3.90</td><td char="." align="char">0.15</td><td char="." align="char">3.63</td><td char="." align="char">3.90</td><td char="." align="char">4.19</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>71</sub></td><td char="." align="char">2.57</td><td char="." align="char">0.07</td><td char="." align="char">2.44</td><td char="." align="char">2.57</td><td char="." align="char">2.71</td></tr><tr><td align="left"><italic>&#x3B2;</italic><sub>72</sub></td><td char="." align="char">4.61</td><td char="." align="char">0.31</td><td char="." align="char">4.05</td><td char="." align="char">4.60</td><td char="." align="char">5.27</td></tr><tr><td align="left"><italic>h</italic><sup>2</sup></td><td char="." align="char">0.73</td><td char="." align="char">0.05</td><td char="." align="char">0.63</td><td char="." align="char">0.72</td><td char="." align="char">0.82</td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>: First index of the betas refers to the item (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>) and the second to the threshold</p></table-wrap-foot></table-wrap></p>
+      <p>The estimate for the heritability (73%) is much larger than the one reported earlier based on sum scores (40%, Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR52">2006c</xref>). In the current sample, twin correlations for sum scores are very much like those reported earlier (MZ:0.45, DZ:0.17). By applying an IRT measurement model the twin correlation estimates for the latent trait are much higher, 0.76 for MZ twins and 0.30 for DZ twins. For comparison, when using a two-step approach, first estimating IRT model parameters in Multilog and then estimating latent scores for each individual (correlation between sum score and IRT estimate: 0.98), the results showed twin correlations nearly identical to those based on sum scores.</p>
+      <p>The 1PL IRT measurement model could easily be extended to include discrimination parameters (&#x2018;&#x2018;factor loadings&#x2019;&#x2019;). It is most convenient to constrain these to be positive through the specification of lognormal priors where for instance <italic>&#x3B1;</italic>&#xA0;=&#xA0;exp(<italic>&#x3B3;</italic>) and <italic>&#x3B3;</italic>&#xA0;&#x223C;&#xA0;<italic>N</italic>(0, 100). In this case, the heritability estimate was not affected by this extension of the model (results not shown).</p>
+    </sec>
+    <sec id="Sec11">
+      <title>Discussion</title>
+      <p>We have compared an IRT model with a sum score approach with indirectly measured phenotypes. Under a range of conditions, the IRT framework is to be preferred over using sum scores. For example, in longitudinal studies with data missing by design or changing measurement instruments, when some items in a questionnaire change across birth cohorts or across different ages or when item data are missing, a sum score approach may no longer be appropriate, but in many cases the analysis can still be meaningfully carried out in an IRT framework using parameter expansion (see, for instance, Glas <xref ref-type="bibr" rid="CR20">1998</xref>).</p>
+      <p>When a simple IRT model does not fit the data, one could consider deleting or changing bad fitting items, and/or deleting bad fitting persons. Alternatively, one could consider using more general IRT models that offer many possibilities of obtaining model fit. General frameworks for multi-level and multi-dimensional IRT models are outlined in Skrondal and Rabe-Hesketh (<xref ref-type="bibr" rid="CR47">2004</xref>) and De Boeck and Wilson (<xref ref-type="bibr" rid="CR9">2004</xref>). In the specific context of genetic modelling, it might also occur that a particular subset of items show relatively high genetic correlations compared to the remaining items. In that case a more appropriate model would be an independent pathway model for categorical or ordinal traits (see for instance Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR51">2006b</xref>).</p>
+      <p>Good fit to a one-dimensional IRT model is empirical evidence that the observed item responses can be explained by one continuous underlying trait. When it further can be concluded that the scale is meaningful (based on item analysis and association with external measures to assess its validity), and the assumption of measurement invariance across different subpopulations is tenable (Lubke et&#xA0;al. <xref ref-type="bibr" rid="CR31">2004</xref>), the approach effectively deals with non-normal distributions of sum scores in for instance psychopathology (Van den Oord et&#xA0;al. <xref ref-type="bibr" rid="CR53">2003</xref>).</p>
+      <p>Moreover, when the measurement model and the variance decomposition model are estimated simultaneously, the variance decomposition deals appropriately with the dependency in the data when estimating IRT model parameters and testing the model&#x2019;s assumptions, and the IRT measurement model deals appropriately with the estimation of the heritability coefficient (correcting for attenuation to obtain an unbiased point estimate) and the reporting of the confidence intervals (correcting for location-dependent uncertainty of person scores on the latent trait).</p>
+      <p>Our simulations showed the dramatic extent of the attenuation effect and the bias in estimating variance components due to imperfect measurement. Particularly when sum score distributions are skewed, underestimation of shared environmental effects and overestimation of dominance genetic effects may occur. The bias in variance components was also illustrated with an empirical data set: instead of finding a heritability estimate of 40% for attention problems with a sum score (Van den Berg et&#xA0;al. <xref ref-type="bibr" rid="CR52">2006c</xref>), a heritability estimate of 73% was obtained when including a measurement model and estimating it simultaneously with the variance decomposition model. This example provides an additional illustration of the bias in variance components due to the analysis of sum scores. However, it should be noted that model fit was not assessed, nor was the assumption of measurement invariance tested. This requires further study.</p>
+      <p>The crucial element of the one-step approach that leads to unbiased point estimates is the inclusion of the appropriate probabilistic measurement model so that the estimation takes into account the unreliability of the measurement. The probabilistic modelling allows for the fact that twins with identical response patterns may have different scores on the latent trait, and also, that twins with non-identical response patterns may have exactly the same score on the latent trait. Discriminatory power of the items and the number of items are both crucial to the heritability estimated based on sum scores: the fewer the items and the worse the discrimination of the items (i.e., the smaller the variance of the latent trait in the one-parameter model; the smaller the factor loadings in the two-parameter model), the more biased the estimation will be when the analysis is performed on sum scores. High quality scales with a large number of items (say, more than 50) with high discriminatory power that are scattered across the entire scale can indeed be analysed with sum scores, but any other scale should be analysed using the IRT framework if one is interested in an unbiased heritability estimate with trustworthy confidence intervals.</p>
+      <p>Future work should focus on the assessment of model fit in the context of genetic models. It is only sensible to apply a one-step IRT approach when the data actually conform to an IRT measurement model. If data do not fit an IRT model, for instance when there is differential item functioning across subpopulations, the approach will still lead to biased estimates. A crucial first step therefore is assessing model fit and checking measurement invariance.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work was supported by grants from the Netherlands Organisation for Scientific Research, NWO 575-25-006 and NWO 051-02-060, 668-772.</p>
+    </ack>
+    <app-group>
+      <app id="App1">
+        <title>Appendix: WinBUGS script</title>
+        <sec id="Sec13">
+          <title>AE decomposition with 1PL IRT measurement model and main effect of sex</title>
+          <p>
+            <list list-type="bullet">
+              <list-item>
+                <p># The model is parameterised using the sum of latent</p>
+              </list-item>
+              <list-item>
+                <p># liabilities in a twin pair and the</p>
+              </list-item>
+              <list-item>
+                <p># difference.</p>
+              </list-item>
+              <list-item>
+                <p># Nfammz: number of MZ twin pairs, Nfamdz: number</p>
+              </list-item>
+              <list-item>
+                <p># of DZ twin pairs, specified in the</p>
+              </list-item>
+              <list-item>
+                <p># data matrix</p>
+              </list-item>
+              <list-item>
+                <p># Ymz[i, k]: the <italic>k</italic>th datapoint from the <italic>i</italic>th MZ twin pair;</p>
+              </list-item>
+              <list-item>
+                <p># Ymz[i, 1] is a covariate that is not used in this analysis</p>
+              </list-item>
+              <list-item>
+                <p># Ymz[i, 2] is a dummy code for sex of the first twin</p>
+              </list-item>
+              <list-item>
+                <p># (1&#xA0;=&#xA0;male), the next 14 data points relate # to the items</p>
+              </list-item>
+              <list-item>
+                <p># for the first twin, Ymz[i, 17] is a dummy code for sex of </p>
+              </list-item>
+              <list-item>
+                <p># second twin, the last</p>
+              </list-item>
+              <list-item>
+                <p># 14 datapoints relate to the second twin.</p>
+              </list-item>
+              <list-item>
+                <p># Ydz[i, k]: the <italic>k</italic>th datapoint from the <italic>i</italic>th DZ twin pair;</p>
+              </list-item>
+              <list-item>
+                <p># Winbugs uses precision parameters instead of variance</p>
+              </list-item>
+              <list-item>
+                <p># parameters for the distributions.</p>
+              </list-item>
+              <list-item>
+                <p># tau.summz: the inverse of sigma2.summz, being the</p>
+              </list-item>
+              <list-item>
+                <p># variance of the summed latent scores</p>
+              </list-item>
+              <list-item>
+                <p># of MZ twin pairs.</p>
+              </list-item>
+            </list>
+          </p>
+          <p>
+            <table-wrap id="Taba">
+              <label>&#xA0;</label>
+              <caption>
+                <p>&#xA0;</p>
+              </caption>
+              <table frame="hsides" rules="groups">
+                <tbody>
+                  <tr>
+                    <td align="left">Model</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;for(i in 1:Nfammz) </td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Summz[i]&#xA0;&#x223C;&#xA0;dnorm(0, tau.summz)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;difmz[i]&#xA0;&#x223C;&#xA0;dnorm(0, tau.difmz)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;for( k in 3:16)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;logit(p1[i,k])&#xA0;&lt;- (summz[i]&#xA0;+&#xA0;difmz[i])/2&#xA0;+&#xA0;Ymz[i,2]*delta&#xA0;&#x2212;&#xA0;beta[k&#xA0;&#x2212;&#xA0;2]</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Ymz[i,k]&#xA0;&#x223C;&#xA0;dbern(p1[i,k])</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;for(k in 18:31)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;logit(p1[i,k])&#xA0;&lt;- (summz[i]&#xA0;&#x2212;&#xA0;difmz[i])/2&#xA0;+&#xA0;Ymz[i,17]*delta&#xA0;&#x2212;&#xA0;beta[k&#xA0;&#x2212;&#xA0;17] </td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Ymz[i,k]&#xA0;&#x223C;&#xA0;dbern(p1[i,k])</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}&#xA0;&#xA0;&#xA0;&#xA0;</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;for(i in 1:Nfamdz) </td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;sumdz[i]&#xA0;&#x223C;&#xA0;dnorm(0, tau.sumdz)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;difdz[i]&#xA0;&#x223C;&#xA0;dnorm(0, tau.difdz)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;for(k in 3:16)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;logit(p2[i,k])&#xA0;&lt;- (sumdz[i]&#xA0;+&#xA0;difdz[i])/2&#xA0;+&#xA0;Ydz[i,2]*delta&#xA0;&#x2212;&#xA0;beta[k&#xA0;&#x2212;&#xA0;2] </td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Ydz[i,k]&#xA0;&#x223C;&#xA0;dbern(p2[i,k])</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; for(k in 18:31)</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;{</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;logit(p2[i,k])&#xA0;&lt;- (sumdz[i]&#xA0;&#x2212;&#xA0;difdz[i])/2&#xA0;+&#xA0;Ydz[i,17]*delta&#xA0;&#x2212;&#xA0;beta[k&#xA0;&#x2212;&#xA0;17] </td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Ydz[i,k]&#xA0;&#x223C;&#xA0;dbern(p2[i,k])</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}</td>
+                  </tr>
+                  <tr>
+                    <td align="left">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </table-wrap>
+          </p>
+          <p>
+            <list list-type="bullet">
+              <list-item>
+                <p># winbugs works with precision parameters, i.e., the</p>
+              </list-item>
+              <list-item>
+                <p># inverted variances</p>
+              </list-item>
+              <list-item>
+                <p>tau.summz&#xA0;&lt;- 1/sigma2.summz</p>
+              </list-item>
+              <list-item>
+                <p>tau.sumdz&#xA0;&lt;- 1/sigma2.sumdz</p>
+              </list-item>
+              <list-item>
+                <p>tau.difmz&#xA0;&lt;- 1/sigma2.difmz</p>
+              </list-item>
+              <list-item>
+                <p>tau.difdz&#xA0;&lt;- 1/sigma2.difdz</p>
+              </list-item>
+              <list-item>
+                <p># variance decomposition, see Van den Berg et&#xA0;al., Twin</p>
+              </list-item>
+              <list-item>
+                <p># Res Hum Genet, 9(3), 334&#x2013;342.</p>
+              </list-item>
+              <list-item>
+                <p>sigma2.summz&#xA0;&lt;- 4*VarA&#xA0;+&#xA0;2*VarE</p>
+              </list-item>
+              <list-item>
+                <p>sigma2.sumdz&#xA0;&lt;- 3*VarA&#xA0;+&#xA0;2*VarE</p>
+              </list-item>
+              <list-item>
+                <p>sigma2.difmz&#xA0;&lt;- 2*VarE</p>
+              </list-item>
+              <list-item>
+                <p>sigma2.difdz&#xA0;&lt;- VarA&#xA0;+&#xA0;2*VarE</p>
+              </list-item>
+              <list-item>
+                <p># specification of inverse gamma priors for variance</p>
+              </list-item>
+              <list-item>
+                <p># components</p>
+              </list-item>
+              <list-item>
+                <p>VarA&#xA0;&lt;- 1/invVarA</p>
+              </list-item>
+              <list-item>
+                <p>VarE&#xA0;&lt;- 1/invVarE</p>
+              </list-item>
+              <list-item>
+                <p>invVarA&#xA0;&#x223C;&#xA0;dgamma(0.10, 0.10)</p>
+              </list-item>
+              <list-item>
+                <p>invVarE&#xA0;&#x223C;&#xA0;dgamma(0.10, 0.10)</p>
+              </list-item>
+              <list-item>
+                <p># sample the heritability parameter</p>
+              </list-item>
+              <list-item>
+                <p>h2&#xA0;&lt;- VarA/(VarA&#xA0;+&#xA0;VarE)</p>
+              </list-item>
+              <list-item>
+                <p># remaining priors</p>
+              </list-item>
+              <list-item>
+                <p>delta&#xA0;&#x223C;&#xA0;dnorm(0, 0.01) # the sex effect</p>
+              </list-item>
+              <list-item>
+                <p>for (i in 1:14)</p>
+              </list-item>
+              <list-item>
+                <p>{</p>
+              </list-item>
+              <list-item>
+                <p>beta[i]&#xA0;&#x223C;&#xA0;dnorm(0, 0.01) # item parameters</p>
+              </list-item>
+              <list-item>
+                <p>}</p>
+              </list-item>
+              <list-item>
+                <p>}</p>
+              </list-item>
+            </list>
+          </p>
+        </sec>
+      </app>
+    </app-group>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Achenbach</surname>
+              <given-names>TM</given-names>
+            </name>
+          </person-group>
+          <source>Manual for the young adult self-report and young adult behavior checklist</source>
+          <year>1997</year>
+          <publisher-loc>Burlington, VT</publisher-loc>
+          <publisher-name>University of Vermont, Department of Psychiatry</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Achenbach TM (1997) Manual for the young adult self-report and young adult behavior checklist. University of Vermont, Department of Psychiatry, Burlington, VT </citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Albert</surname>
+              <given-names>JH</given-names>
+            </name>
+          </person-group>
+          <article-title>Bayesian estimation of normal ogive item response functions using Gibbs sampling</article-title>
+          <source>J Educ Stat</source>
+          <year>1992</year>
+          <volume>17</volume>
+          <fpage>251</fpage>
+          <lpage>269</lpage>
+          <pub-id pub-id-type="doi">10.2307/1165149</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Albert JH (1992) Bayesian estimation of normal ogive item response functions using Gibbs sampling. J Educ Stat 17:251&#x2013;269 </citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>B&#xE9;guin</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Glas</surname>
+              <given-names>CAW</given-names>
+            </name>
+          </person-group>
+          <article-title>MCMC estimation of multidimensional IRT models</article-title>
+          <source>Psychometrika</source>
+          <year>2001</year>
+          <volume>66</volume>
+          <fpage>541</fpage>
+          <lpage>562</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02296195</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">B&#xE9;guin AA, Glas CAW (2001) MCMC estimation of multidimensional IRT models. Psychometrika 66:541&#x2013;562 </citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+            <name>
+              <surname>Busjahn</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Peltonen</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Classical twin studies and beyond</article-title>
+          <source>Nat Rev Genet</source>
+          <year>2002</year>
+          <volume>3</volume>
+          <fpage>872</fpage>
+          <lpage>882</lpage>
+          <pub-id pub-id-type="doi">10.1038/nrg932</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Boomsma DI, Busjahn A, Peltonen L (2002a) Classical twin studies and beyond. Nat Rev Genet 3:872&#x2013;882 <pub-id pub-id-type="pmid">12415317</pub-id></citation>
+      </ref>
+      <ref id="CR75">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+            <name>
+              <surname>Molenaar</surname>
+              <given-names>PCM</given-names>
+            </name>
+          </person-group>
+          <article-title>Using LISREL to analyze genetic and environmental covariance structure</article-title>
+          <source>Behav Genet</source>
+          <year>1986</year>
+          <volume>16</volume>
+          <fpage>237</fpage>
+          <lpage>250</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01070799</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Boomsma DI, Molenaar PCM (1986). Using LISREL to analyze genetic and environmental covariance structure. Behav Genet 16:237&#x2013;250 <pub-id pub-id-type="pmid">3755040</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+            <name>
+              <surname>Vink</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Beijsterveldt</surname>
+              <given-names>CEM</given-names>
+            </name>
+            <name>
+              <surname>Geus</surname>
+              <given-names>EJC</given-names>
+            </name>
+            <name>
+              <surname>Beem</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Mulder</surname>
+              <given-names>EJCM</given-names>
+            </name>
+            <name>
+              <surname>Riese</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Netherlands Twin Register: a focus on longitudinal research</article-title>
+          <source>Twin Res</source>
+          <year>2002</year>
+          <volume>5</volume>
+          <fpage>401</fpage>
+          <lpage>406</lpage>
+          <pub-id pub-id-type="doi">10.1375/136905202320906174</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Boomsma DI, Vink JM, Beijsterveldt CEM, De Geus EJC, Beem AL, Mulder EJCM, Riese H et al (2002b) Netherlands Twin Register: a focus on longitudinal research. Twin Res 5:401&#x2013;406 <pub-id pub-id-type="pmid">12537867</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Box</surname>
+              <given-names>GEP</given-names>
+            </name>
+            <name>
+              <surname>Tiao</surname>
+              <given-names>GC</given-names>
+            </name>
+          </person-group>
+          <source>Bayesian inference in statistical analysis</source>
+          <year>1973</year>
+          <publisher-loc>Reading, Mass</publisher-loc>
+          <publisher-name>Addison-Wesly</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Box GEP, Tiao GC (1973) Bayesian inference in statistical analysis. Addison-Wesly, Reading, Mass </citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bradlow</surname>
+              <given-names>ET</given-names>
+            </name>
+            <name>
+              <surname>Wainer</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+          </person-group>
+          <article-title>A Bayesian random effects model for testlets</article-title>
+          <source>Psychometrika</source>
+          <year>1999</year>
+          <volume>64</volume>
+          <fpage>153</fpage>
+          <lpage>168</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02294533</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bradlow ET, Wainer H, Wang X (1999) A Bayesian random effects model for testlets. Psychometrika 64:153&#x2013;168 </citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Crittenden</surname>
+              <given-names>LB</given-names>
+            </name>
+          </person-group>
+          <article-title>An interpretation of familial aggregation based on multiple genetic and environmental factors</article-title>
+          <source>Ann New York Acad Sci</source>
+          <year>1961</year>
+          <volume>91</volume>
+          <fpage>769</fpage>
+          <lpage>780</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1749-6632.1961.tb31106.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Crittenden LB (1961) An interpretation of familial aggregation based on multiple genetic and environmental factors. Ann New York Acad Sci 91:769&#x2013;780 <pub-id pub-id-type="pmid">13696504</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="other">De Boeck P, Wilson M (eds) (2004) Explanatory item response models: a generalized linear and nonlinear approach. Springer, New York, NJ</citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Derks</surname>
+              <given-names>EM</given-names>
+            </name>
+            <name>
+              <surname>Dolan</surname>
+              <given-names>CV</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of censoring on parameter estimates and power in genetic modeling</article-title>
+          <source>Twin Res</source>
+          <year>2004</year>
+          <volume>7</volume>
+          <fpage>659</fpage>
+          <lpage>669</lpage>
+          <pub-id pub-id-type="doi">10.1375/1369052042663832</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Derks EM, Dolan CV, Boomsma DI (2004) Effects of censoring on parameter estimates and power in genetic modeling. Twin Res 7:659&#x2013;669 <pub-id pub-id-type="pmid">15607017</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eaves</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Erkanli</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Silberg</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Angold</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Maes</surname>
+              <given-names>HH</given-names>
+            </name>
+            <name>
+              <surname>Foley</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Application of Bayesian inference using Gibbs sampling to item-response theory modelling of multi-symptom genetic data</article-title>
+          <source>Behav Genet</source>
+          <year>2005</year>
+          <volume>35</volume>
+          <fpage>765</fpage>
+          <lpage>780</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10519-005-7284-z</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Eaves L, Erkanli A, Silberg J, Angold A, Maes HH, Foley D (2005) Application of Bayesian inference using Gibbs sampling to item-response theory modelling of multi-symptom genetic data. Behav Genet 35:765&#x2013;780 <pub-id pub-id-type="pmid">16273316</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eaves</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Silberg</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Foley</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Bulik</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Maes</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Erkanli</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Angold</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Costello</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Worthman</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetic and environmental influences on the relative timing of pubertal change</article-title>
+          <source>Twin Res</source>
+          <year>2004</year>
+          <volume>7</volume>
+          <fpage>471</fpage>
+          <lpage>481</lpage>
+          <pub-id pub-id-type="doi">10.1375/1369052042335278</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Eaves L, Silberg J, Foley D, Bulik C, Maes H, Erkanli A, Angold A, Costello EJ, Worthman C (2004) Genetic and environmental influences on the relative timing of pubertal change. Twin Res 7:471&#x2013;481 <pub-id pub-id-type="pmid">15527663</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Falconer</surname>
+              <given-names>DS</given-names>
+            </name>
+          </person-group>
+          <article-title>The inheritance of liability to certain diseases, estimated from the incidence among relatives</article-title>
+          <source>Ann Hum Genet</source>
+          <year>1965</year>
+          <volume>29</volume>
+          <fpage>51</fpage>
+          <lpage>71</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Falconer DS (1965) The inheritance of liability to certain diseases, estimated from the incidence among relatives. Ann Hum Genet 29:51&#x2013;71 </citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fox</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Glas</surname>
+              <given-names>CAW</given-names>
+            </name>
+          </person-group>
+          <article-title>Bayesian estimation of a multilevel IRT model using Gibbs sampling</article-title>
+          <source>Psychometrika</source>
+          <year>2001</year>
+          <volume>66</volume>
+          <fpage>271</fpage>
+          <lpage>288</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02294839</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fox JP, Glas CAW (2001) Bayesian estimation of a multilevel IRT model using Gibbs sampling. Psychometrika 66:271&#x2013;288 </citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fox</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Glas</surname>
+              <given-names>CAW</given-names>
+            </name>
+          </person-group>
+          <article-title>Bayesian modeling of measurement error in predictor variables</article-title>
+          <source>Psychometrika</source>
+          <year>2003</year>
+          <volume>68</volume>
+          <fpage>169</fpage>
+          <lpage>191</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02294796</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fox JP, Glas CAW. (2003) Bayesian modeling of measurement error in predictor variables. Psychometrika 68:169&#x2013;191 </citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelfand</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>AFM</given-names>
+            </name>
+          </person-group>
+          <article-title>Sampling-based approaches to calculating marginal densities</article-title>
+          <source>J Am Stat Ass</source>
+          <year>1990</year>
+          <volume>85</volume>
+          <fpage>398</fpage>
+          <lpage>409</lpage>
+          <pub-id pub-id-type="doi">10.2307/2289776</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gelfand AE, Smith AFM (1990) Sampling-based approaches to calculating marginal densities. J Am Stat Ass 85:398&#x2013;409 </citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelman</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Carlin</surname>
+              <given-names>JB</given-names>
+            </name>
+            <name>
+              <surname>Stern</surname>
+              <given-names>HS</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>DB</given-names>
+            </name>
+          </person-group>
+          <source>Bayesian data analysis</source>
+          <year>2004</year>
+          <edition>2</edition>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Chapman and Hall</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Gelman A, Carlin JB, Stern HS, Rubin DB (2004) Bayesian data analysis, 2nd edn. Chapman and Hall, London </citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Geman</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Geman</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Stochastic relaxation, Gibbs distributions and the Bayesian restoration of images</article-title>
+          <source>IEEE Trans Pattern Anal Mach Intell</source>
+          <year>1984</year>
+          <volume>6</volume>
+          <fpage>721</fpage>
+          <lpage>741</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Geman S, Geman D (1984) Stochastic relaxation, Gibbs distributions and the Bayesian restoration of images. IEEE Trans Pattern Anal Mach Intell 6:721&#x2013;741 </citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Glas</surname>
+              <given-names>CAW</given-names>
+            </name>
+          </person-group>
+          <article-title>Detection of differential item functioning using Lagrange multiplier tests</article-title>
+          <source>Stat Sinica</source>
+          <year>1998</year>
+          <volume>8</volume>
+          <fpage>647</fpage>
+          <lpage>667</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Glas CAW (1998) Detection of differential item functioning using Lagrange multiplier tests. Stat Sinica 8:647&#x2013;667 </citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hoijtink</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Molenaar</surname>
+              <given-names>IW</given-names>
+            </name>
+          </person-group>
+          <article-title>A multidimensional item response model: Constrained latent class analysis using the Gibbs Sampler and posterior predictive checks</article-title>
+          <source>Psychometrika</source>
+          <year>1997</year>
+          <volume>62</volume>
+          <fpage>171</fpage>
+          <lpage>189</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02295273</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hoijtink H, Molenaar IW (1997) A multidimensional item response model: Constrained latent class analysis using the Gibbs Sampler and posterior predictive checks. Psychometrika 62:171&#x2013;189 </citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Holman</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Glas</surname>
+              <given-names>CAW</given-names>
+            </name>
+          </person-group>
+          <article-title>Modelling non-ignorable missing data mechanisms with item response theory models</article-title>
+          <source>Brit J Math Stat Psy</source>
+          <year>2005</year>
+          <volume>58</volume>
+          <fpage>1</fpage>
+          <lpage>17</lpage>
+          <pub-id pub-id-type="doi">10.1348/000711005X47168</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Holman R, Glas CAW (2005) Modelling non-ignorable missing data mechanisms with item response theory models. Brit J Math Stat Psy, 58:1&#x2013;17 </citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Janssen</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Tuerlinckx</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Meulders</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Boeck</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>A hierarchical IRT model for criterion-referenced measurement</article-title>
+          <source>J Educ Behav Stat</source>
+          <year>2000</year>
+          <volume>25</volume>
+          <fpage>285</fpage>
+          <lpage>306</lpage>
+          <pub-id pub-id-type="doi">10.2307/1165207</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Janssen R, Tuerlinckx F, Meulders M, de Boeck P (2000) A hierarchical IRT model for criterion-referenced measurement. J Educ Behav Stat 25:285&#x2013;306 </citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jinks</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Fulker</surname>
+              <given-names>DW</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of the biometrical genetical, MAVA, and classical approaches to the analysis of human behavior</article-title>
+          <source>Psych Bull</source>
+          <year>1970</year>
+          <volume>73</volume>
+          <fpage>311</fpage>
+          <lpage>349</lpage>
+          <pub-id pub-id-type="doi">10.1037/h0029135</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jinks JL, Fulker DW (1970) Comparison of the biometrical genetical, MAVA, and classical approaches to the analysis of human behavior. Psych Bull 73:311:349 </citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lawley</surname>
+              <given-names>DN</given-names>
+            </name>
+          </person-group>
+          <article-title>On problems connected with item selection and test construction</article-title>
+          <source>P Roy Soc Edinb A</source>
+          <year>1943</year>
+          <volume>62</volume>
+          <fpage>74</fpage>
+          <lpage>82</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Lawley DN (1943) On problems connected with item selection and test construction. P Roy Soc Edinb A 62:74&#x2013;82 </citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Little</surname>
+              <given-names>RJA</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>DB</given-names>
+            </name>
+          </person-group>
+          <source>Statistical analysis with missing data</source>
+          <year>1987</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>John Wiley</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Little RJA, Rubin DB (1987) Statistical analysis with missing data. John Wiley, New York </citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="other">Lord FM (1952) A theory of test scores. Psychometric Monograph No 7. Psychometric Society, New York</citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lord</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <article-title>The relation of test score to the trait underlying the test</article-title>
+          <source>Educ Psychol Meas</source>
+          <year>1953</year>
+          <volume>13</volume>
+          <fpage>517</fpage>
+          <lpage>548</lpage>
+          <pub-id pub-id-type="doi">10.1177/001316445301300401</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lord FM (1953) The relation of test score to the trait underlying the test. Educ Psychol Meas 13:517&#x2013;548 </citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lord</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>Applications of item response theory to practical testing problems</source>
+          <year>1980</year>
+          <publisher-loc>Hillsdale, NJ</publisher-loc>
+          <publisher-name>Erlbaum</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Lord FM (1980) Applications of item response theory to practical testing problems. Erlbaum, Hillsdale, NJ </citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="other">Lord FM, Novick MR (1968) Statistical theories of mental test scores. Addison-Wesley, Reading</citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lubke</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Dolan</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Neale</surname>
+              <given-names>MC</given-names>
+            </name>
+          </person-group>
+          <article-title>Implications of absence of measurement invariance for detecting sex limitation and genotype by environment interaction</article-title>
+          <source>Twin Res</source>
+          <year>2004</year>
+          <volume>7</volume>
+          <fpage>292</fpage>
+          <lpage>298</lpage>
+          <pub-id pub-id-type="doi">10.1375/136905204774200578</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lubke G, Dolan C, Neale MC (2004) Implications of absence of measurement invariance for detecting sex limitation and genotype by environment interaction. Twin Res 7:292&#x2013;298 <pub-id pub-id-type="pmid">15193174</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lynch</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Walsh</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <source>Genetics and analysis of quantitative traits</source>
+          <year>1998</year>
+          <publisher-loc>Sunderland, MA</publisher-loc>
+          <publisher-name>Sinauer</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Lynch M, Walsh B (1998) Genetics and analysis of quantitative traits Sinauer, Sunderland, MA </citation>
+      </ref>
+      <ref id="CR33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Masters</surname>
+              <given-names>GN</given-names>
+            </name>
+          </person-group>
+          <article-title>A Rasch model for partial credit scoring</article-title>
+          <source>Psychometrika</source>
+          <year>1982</year>
+          <volume>47</volume>
+          <fpage>149</fpage>
+          <lpage>174</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02296272</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Masters GN (1982) A Rasch model for partial credit scoring. Psychometrika 47:149&#x2013;174 </citation>
+      </ref>
+      <ref id="CR35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moustaki</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Knott</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Weighting for item non-response in attitude scales using latent variable models with covariates</article-title>
+          <source>J R Stat Soc Ser A</source>
+          <year>2000</year>
+          <volume>163</volume>
+          <fpage>445</fpage>
+          <lpage>459</lpage>
+          <pub-id pub-id-type="doi">10.1111/1467-985X.00177</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Moustaki I, Knott M (2000) Weighting for item non-response in attitude scales using latent variable models with covariates. J R Stat Soc Ser A 163:445&#x2013;459 </citation>
+      </ref>
+      <ref id="CR36">
+        <citation citation-type="other">Moustaki I, O&#x2019;Muircheartaigh C (2000) A one dimensional latent trait model to infer attitude from nonresponse for nominal data. Statistica 60:259&#x2013;276</citation>
+      </ref>
+      <ref id="CR37">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Patz</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Junker</surname>
+              <given-names>BW</given-names>
+            </name>
+          </person-group>
+          <article-title>A straightforward approach to Markov chain Monte Carlo methods for item response theory models</article-title>
+          <source>J Educ Behav Stat</source>
+          <year>1999</year>
+          <volume>24</volume>
+          <fpage>146</fpage>
+          <lpage>178</lpage>
+          <pub-id pub-id-type="doi">10.2307/1165199</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Patz RJ, Junker BW (1999a) A straightforward approach to Markov chain Monte Carlo methods for item response theory models. J Educ Behav Stat 24:146&#x2013;178 </citation>
+      </ref>
+      <ref id="CR38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Patz</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Junker</surname>
+              <given-names>BW</given-names>
+            </name>
+          </person-group>
+          <article-title>Applications and extensions of MCMC in IRT: Multiple item types, missing data, and rated responses</article-title>
+          <source>J Educ Behav Stat</source>
+          <year>1999</year>
+          <volume>24</volume>
+          <fpage>342</fpage>
+          <lpage>366</lpage>
+          <pub-id pub-id-type="doi">10.2307/1165367</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Patz RJ, Junker BW (1999b) Applications and extensions of MCMC in IRT: Multiple item types, missing data, and rated responses. J Educ Behav Stat 24:342&#x2013;366 </citation>
+      </ref>
+      <ref id="CR39">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rabe-Hesketh</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Skrondal</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Multilevel and longitudinal modeling using stata</source>
+          <year>2005</year>
+          <publisher-loc>College Station, TX</publisher-loc>
+          <publisher-name>Stata Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Rabe-Hesketh S, Skrondal A (2005) Multilevel and longitudinal modeling using stata. Stata Press, College Station, TX </citation>
+      </ref>
+      <ref id="CR40">
+        <citation citation-type="other">Rasch G (1960) Probabilistic models for some intelligence and attainment tests. Danish Institute for Educational Research, Copenhagen</citation>
+      </ref>
+      <ref id="CR41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rietveld</surname>
+              <given-names>MJH</given-names>
+            </name>
+            <name>
+              <surname>Hudziak</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Bartels</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Beijsterveldt</surname>
+              <given-names>CEM</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+          </person-group>
+          <article-title>Heritability of attention problems in children: longitudinal results from a study of twins, age 3 to 12</article-title>
+          <source>J Child Psychol &amp; Psychiat</source>
+          <year>2004</year>
+          <volume>45</volume>
+          <fpage>577</fpage>
+          <lpage>588</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1469-7610.2004.00247.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rietveld MJH, Hudziak JJ, Bartels M, van Beijsterveldt CEM, Boomsma DI (2004) Heritability of attention problems in children: longitudinal results from a study of twins, age 3 to 12. J Child Psychol &amp; Psychiat 45:577&#x2013;588 <pub-id pub-id-type="pmid">15055376</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Risch</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>Linkage strategies for genetically complex traits, I: multilocus models</article-title>
+          <source>Am J Hum Genet</source>
+          <year>1990</year>
+          <volume>46</volume>
+          <fpage>222</fpage>
+          <lpage>228</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Risch N (1990) Linkage strategies for genetically complex traits, I: multilocus models. Am J Hum Genet 46:222&#x2013;228 <pub-id pub-id-type="pmid">2301392</pub-id></citation>
+      </ref>
+      <ref id="CR43">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Risch</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>The genetic epidemiology of cancer: Interpreting family and twin studies and their implications for molecular genetic approaches</article-title>
+          <source>Cancer Epidem Biomar</source>
+          <year>2001</year>
+          <volume>10</volume>
+          <fpage>733</fpage>
+          <lpage>741</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Risch N (2001) The genetic epidemiology of cancer: Interpreting family and twin studies and their implications for molecular genetic approaches. Cancer Epidem Biomar 10:733&#x2013;741 </citation>
+      </ref>
+      <ref id="CR44">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Robert</surname>
+              <given-names>CP</given-names>
+            </name>
+            <name>
+              <surname>Casella</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>Monte Carlo statistical methods</source>
+          <year>2004</year>
+          <edition>2</edition>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Springer</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Robert CP, Casella G (2004) Monte Carlo statistical methods, 2nd edn. Springer, New York </citation>
+      </ref>
+      <ref id="CR45">
+        <citation citation-type="other">Rubin DB, Thomas N (2001) Using parameter expansion to improve the performance of the EM algorithm for multidimensional IRT population-survey models. In: Boomsma A, van Duijn MAJ, Snijders TAB (eds) Essays on item response theory. Springer, New York, NJ, pp 193&#x2013;204</citation>
+      </ref>
+      <ref id="CR46">
+        <citation citation-type="other">Samejima F (1969) Estimation of latent ability using a pattern of graded scores. Psychometrika, Monograph Supplement, No. 17</citation>
+      </ref>
+      <ref id="CR47">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Skrondal</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Rabe-Hesketh</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Generalized latent variable modeling</source>
+          <year>2004</year>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Chapman and Hall/CRC</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Skrondal A, Rabe-Hesketh S (2004) Generalized latent variable modeling. Chapman and Hall/CRC, London </citation>
+      </ref>
+      <ref id="CR48">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thissen</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>WH</given-names>
+            </name>
+            <name>
+              <surname>Bock</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <source>Multilog (version 7) [Computer software]</source>
+          <year>2003</year>
+          <publisher-loc>Lincolnwood, IL</publisher-loc>
+          <publisher-name>Scientific Software International</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Thissen D, Chen WH, Bock RD (2003) Multilog (version 7) [Computer software]. Scientific Software International, Lincolnwood, IL </citation>
+      </ref>
+      <ref id="CR49">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tutz</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Sequential item response models with an ordered response</article-title>
+          <source>Brit J Math Stat Psy</source>
+          <year>1990</year>
+          <volume>43</volume>
+          <fpage>39</fpage>
+          <lpage>55</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Tutz G (1990) Sequential item response models with an ordered response. Brit J Math Stat Psy 43:39&#x2013;55 </citation>
+      </ref>
+      <ref id="CR50">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berg</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Beem</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+          </person-group>
+          <article-title>Fitting genetic models using MCMC algorithms with BUGS</article-title>
+          <source>Twin Res Hum Genet</source>
+          <year>2006</year>
+          <volume>9</volume>
+          <fpage>334</fpage>
+          <lpage>349</lpage>
+          <pub-id pub-id-type="doi">10.1375/twin.9.3.334</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Van den Berg SM, Beem L, Boomsma DI (2006a) Fitting genetic models using MCMC algorithms with BUGS. Twin Res Hum Genet 9:334&#x2013;349 <pub-id pub-id-type="pmid">16790144</pub-id></citation>
+      </ref>
+      <ref id="CR51">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berg</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Setiawan</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Bartels</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Polderman</surname>
+              <given-names>TJC</given-names>
+            </name>
+            <name>
+              <surname>Vaart</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+          </person-group>
+          <article-title>Individual differences in puberty onset in girls: Bayesian estimation of heritabilities and genetic correlations</article-title>
+          <source>Behav Genet</source>
+          <year>2006</year>
+          <volume>36</volume>
+          <fpage>261</fpage>
+          <lpage>270</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10519-005-9022-y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Van den Berg SM, Setiawan A, Bartels M, Polderman TJC, van der Vaart AW, Boomsma DI (2006b) Individual differences in puberty onset in girls: Bayesian estimation of heritabilities and genetic correlations. Behav Genet 36:261&#x2013;270 <pub-id pub-id-type="pmid">16408250</pub-id></citation>
+      </ref>
+      <ref id="CR52">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berg</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Willemsen</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Geus</surname>
+              <given-names>EJC</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetic etiology of stability of attention problems in young adulthood</article-title>
+          <source>Am J Med Genet, Part B: Neuropsych Genet</source>
+          <year>2006</year>
+          <volume>141B</volume>
+          <fpage>55</fpage>
+          <lpage>60</lpage>
+          <pub-id pub-id-type="doi">10.1002/ajmg.b.30251</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Van den Berg SM, Willemsen G, de Geus EJC, Boomsma DI (2006c) Genetic etiology of stability of attention problems in young adulthood. Am J Med Genet, Part B: Neuropsych Genet 141B:55&#x2013;60 </citation>
+      </ref>
+      <ref id="CR53">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oord</surname>
+              <given-names>EJCG</given-names>
+            </name>
+            <name>
+              <surname>Pickles</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Waldman</surname>
+              <given-names>ID</given-names>
+            </name>
+          </person-group>
+          <article-title>Normal variation and abnormality: an empirical study of the liability distributions underlying depression and delinquency</article-title>
+          <source>J Child Psychol Psych</source>
+          <year>2003</year>
+          <volume>44</volume>
+          <fpage>180</fpage>
+          <lpage>192</lpage>
+          <pub-id pub-id-type="doi">10.1111/1469-7610.00112</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Van den Oord EJCG, Pickles A, Waldman ID (2003) Normal variation and abnormality: an empirical study of the liability distributions underlying depression and delinquency. J Child Psychol Psych 44:180&#x2013;192 </citation>
+      </ref>
+      <ref id="CR54">
+        <citation citation-type="other">Verhelst ND, Glas CAW, de Vries HH (1997) A steps model to analyze partial credit. In: van der Linden WJ, Hambleton RK (eds) Handbook of modern item response theory. Springer, New York, pp 123&#x2013;138</citation>
+      </ref>
+      <ref id="CR55">
+        <citation citation-type="other">Wainer H, Bradlow ET, Du Z (2000) Testlet response theory: an analog for the 3PL model useful in testlet-based adaptive testing. In: van der Linden WJ, Glas CAW (eds) Computerized adaptive testing: theory and practice. Kluwer Academic Publishers, Boston, MA, pp 245&#x2013;269</citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p>Edited by Stacey Cherny</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

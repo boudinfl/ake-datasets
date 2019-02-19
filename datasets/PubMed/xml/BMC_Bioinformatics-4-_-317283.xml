@@ -1,0 +1,592 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="product-review">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">BMC Bioinformatics</journal-id>
+      <journal-title>BMC Bioinformatics</journal-title>
+      <issn pub-type="epub">1471-2105</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">14667255</article-id>
+      <article-id pub-id-type="pmc">317283</article-id>
+      <article-id pub-id-type="publisher-id">1471-2105-4-61</article-id>
+      <article-id pub-id-type="doi">10.1186/1471-2105-4-61</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Software</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>PubMatrix: a tool for multiplex literature mining</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Becker</surname>
+            <given-names>Kevin G</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>beckerk@grc.nia.nih.gov</email>
+        </contrib>
+        <contrib id="A2" contrib-type="author">
+          <name>
+            <surname>Hosack</surname>
+            <given-names>Douglas A</given-names>
+          </name>
+          <xref ref-type="aff" rid="I3">3</xref>
+          <email>DHosack@niaid.nih.gov</email>
+        </contrib>
+        <contrib id="A3" contrib-type="author">
+          <name>
+            <surname>Dennis</surname>
+            <given-names>Glynn</given-names>
+            <suffix>Jr</suffix>
+          </name>
+          <xref ref-type="aff" rid="I3">3</xref>
+          <email>GDennis@niaid.nih.gov</email>
+        </contrib>
+        <contrib id="A4" contrib-type="author">
+          <name>
+            <surname>Lempicki</surname>
+            <given-names>Richard A</given-names>
+          </name>
+          <xref ref-type="aff" rid="I3">3</xref>
+          <email>RLempicki@niaid.nih.gov</email>
+        </contrib>
+        <contrib id="A5" contrib-type="author">
+          <name>
+            <surname>Bright</surname>
+            <given-names>Tiffani J</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>bright1@umbc.edu</email>
+        </contrib>
+        <contrib id="A6" contrib-type="author">
+          <name>
+            <surname>Cheadle</surname>
+            <given-names>Chris</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>Cheadlec@mail.nih.gov</email>
+        </contrib>
+        <contrib id="A7" contrib-type="author">
+          <name>
+            <surname>Engel</surname>
+            <given-names>Jim</given-names>
+          </name>
+          <xref ref-type="aff" rid="I2">2</xref>
+          <email>engelj@grc.nia.nih.gov</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>Gene Expression and Genomics Unit, National Institutes of Health, Baltimore, MD, USA</aff>
+      <aff id="I2"><label>2</label>NCTS, National Institute on Aging, National Institutes of Health, Baltimore, MD, USA</aff>
+      <aff id="I3"><label>3</label>Laboratory of Immunopathogenesis and Bioinformatics, SAIC-Frederick, Inc., Frederick MD, USA</aff>
+      <pub-date pub-type="collection">
+        <year>2003</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>12</month>
+        <year>2003</year>
+      </pub-date>
+      <volume>4</volume>
+      <fpage>61</fpage>
+      <lpage>61</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2105/4/61"/>
+      <history>
+        <date date-type="received">
+          <day>29</day>
+          <month>7</month>
+          <year>2003</year>
+        </date>
+        <date date-type="accepted">
+          <day>10</day>
+          <month>12</month>
+          <year>2003</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2003 Becker et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-statement>
+        <copyright-year>2003</copyright-year>
+        <copyright-holder>Becker et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-holder>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>Molecular experiments using multiplex strategies such as cDNA microarrays or proteomic approaches generate large datasets requiring biological interpretation. Text based data mining tools have recently been developed to query large biological datasets of this type of data. PubMatrix is a web-based tool that allows simple text based mining of the NCBI literature search service PubMed using any two lists of keywords terms, resulting in a frequency matrix of term co-occurrence.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>For example, a simple term selection procedure allows automatic pair-wise comparisons of approximately 1&#x2013;100 search terms versus approximately 1&#x2013;10 modifier terms, resulting in up to 1,000 pair wise comparisons. The matrix table of pair-wise comparisons can then be surveyed, queried individually, and archived. Lists of keywords can include any terms currently capable of being searched in PubMed. In the context of cDNA microarray studies, this may be used for the annotation of gene lists from clusters of genes that are expressed coordinately. An associated PubMatrix public archive provides previous searches using common useful lists of keyword terms.</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>In this way, lists of terms, such as gene names, or functional assignments can be assigned genetic, biological, or clinical relevance in a rapid flexible systematic fashion. <ext-link ext-link-type="uri" xlink:href="http://pubmatrix.grc.nia.nih.gov/"/></p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>Literature mining</kwd>
+        <kwd>microarray</kwd>
+        <kwd>Proteomic</kwd>
+        <kwd>PubMed</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Background</title>
+      <p>With the advent of high throughput genomic and proteomic approaches, the ability to generate data has outstripped the ability to assign biological relevance. Searching the MEDLINE literature database of greater than 14 million entries one-by-one makes establishing biological significance a daunting task. The basic PubMed search window contains a typical single search box for the input of simple keyword combinations. PubMed does allows complex searches using advanced search options, but this requires some knowledge of string search assembly, and an understanding of the PubMed Entrez programming utilities. These are still relatively obscure for many molecular biologists.</p>
+      <p>Literature mining approaches have been developed to place multiplex biological datasets into context relative to published medical literature. Computational tools such as PubGene [<xref ref-type="bibr" rid="B1">1</xref>], VxInsight [<xref ref-type="bibr" rid="B2">2</xref>], MedMiner [<xref ref-type="bibr" rid="B3">3</xref>], EASE [<xref ref-type="bibr" rid="B4">4</xref>], MeshMap[<xref ref-type="bibr" rid="B5">5</xref>], XPLORMED [<xref ref-type="bibr" rid="B11">11</xref>], AbXtract [<xref ref-type="bibr" rid="B12">12</xref>], and HAPI [13] are available which allow the user to query more complex gene name or keyword combinations, including multiplex proteomic or cDNA microarray results, versus literature citations in PubMed with defined types of output. These computational tools use different strategies in literature mining and in some cases produce statistical significance or graphical displays.</p>
+      <p>Similarly, literature based annotation projects such as the GO project [<xref ref-type="bibr" rid="B9">9</xref>] have devised a complex hierarchical annotation system using expert annotators based on a defined controlled vocabulary. This is important due to significant problems with nomenclature in molecular biology. Although quite useful, the GO approach does not allow for flexibility, variable interpretation, or individual investigator input in the hierarchies assigned to individual genes. In this report, we describe a simple, freely accessible, web based application for basic literature mining of PubMed that performs automatic multiplex Boolean queries. This allows the naive user to assign biological relevance and annotate gene lists through PubMed.</p>
+      <sec>
+        <title>Implementation</title>
+        <p>PubMatrix is a CGI front-end application, which submits queries consisting of search and modifier terms against NCBI's PubMed database and presents the results as a matrix of document hits. Results are stored in a database for retrieval and are presented as hyperlinks to the user for rerunning individual queries of interest. The application runs on an Apache http server using the PERL programming language and a MySQL database for storing terms and results.</p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Results</title>
+      <p>PubMatrix is a simple intuitive multiplex comparison tool requiring no user understanding of algorithm design, perl, or scripting, and minimal instruction time. It allows automatic systematic searching of PubMed followed by a quick intuitive survey of results, and as such, dramatically reduces the investigator time needed to query PubMed as compared to a gene-by-gene approach. Moreover, it is systematic and objective. Unlike typical PubMed searches performed on an ad hoc basis, the 1<sup>st </sup>and the 1000<sup>th </sup>query are searched in an unbiased manner. This helps avoid becoming distracted with seemingly interesting comparisons early on in a traditional literature search session. It is flexible in the sense that any list of terms in almost any combination may be used. With PubMatrix, large lists of keywords can be compared and, when used with lists of gene names and function, may be used to analyze and annotate microarray gene lists and datasets. GO keywords may be used to annotate gene lists in a semi-automated fashion. Additionally, the ability to save searches in an archive allows sharing among collaborators and public accessibility of curated lists of useful search results and search terms.</p>
+      <p>Figure <xref ref-type="fig" rid="F1">1</xref> shows the web interface for PubMatrix. Data entry begins with creating two lists of keyword terms, (figure <xref ref-type="fig" rid="F1">1</xref>) SEARCH TERMS and MODIFIER TERMS. These can be any simple words or strings of words. Typically official gene symbols (TP53, CTLA4, etc.) can be used for microarray or proteomic data. These lists can be pasted into the appropriate data entry boxes on the page or loaded as a text file through the browser. Essentially any search combination that can be loaded into the basic PubMed search window can be run in PubMatrix in matrix file format. This gives a broad search capability as compared to PubGene [<xref ref-type="bibr" rid="B1">1</xref>], which is limited to gene identifiers only. Terms in either list can contain PubMed field limits (i.e. author, title, abstract, journal, publication date, etc.) subject to PubMed/Entrez formatting specifications [<xref ref-type="bibr" rid="B10">10</xref>]. Compound terms in either list can be used as well. Like PubMed, success in using PubMatrix is dependent upon the quality of the input terms. If terms are general, you may end up with general results, if they are too specific, you may limit the search inappropriately. As in PubMed, PubMatrix makes no provision for nomenclature curation and provides no measure of statistical significance. General terms may be appropriate for some searches while specific terms may be useful for others. If the terms used are inappropriate or non-specific, the search will return inappropriate and low quality results; <italic>quisquiliarum ineo quisquiliarum egredior</italic>.</p>
+      <fig position="float" id="F1">
+        <label>Figure 1</label>
+        <caption>
+          <p>The PubMatrix Data Input Page <ext-link ext-link-type="uri" xlink:href="http://pubmatrix.grc.nia.nih.gov/"/></p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-61-1"/>
+      </fig>
+      <p>There is currently a 100 SEARCH TERM and 10 MODIFIER TERM limit on the search capability due to NLM automatic script searching restrictions. The size and speed of PubMatrix is largely determined by NLM restrictions. In unrestricted tests, PubMatrix rapidly returned results using term lists of over 10,000 terms. The size limit of 100 &#xD7; 10 will generally accommodate a gene list from a published summary table of microarray results or genes from a cluster produced from a typical clustering program. After data entry, the PubMatrix program then performs pairwise comparisons of each SEARCH term against each MODIFIER term using the Boolean operator "AND", capturing only the pairwise frequency counts found in PubMed. It does not capture the actual PubMed record. Relative frequencies are then presented in an html matrix table (Fig <xref ref-type="fig" rid="F2">2</xref>) of control terms versus search terms. This table can then be surveyed or sorted for positive hits. Clicking on a single frequency number in the matrix table then performs a de-novo individual query for that single pairwise combination in PubMed. In this way the user can drill down or focus on specific interesting combinations.</p>
+      <fig position="float" id="F2">
+        <label>Figure 2</label>
+        <caption>
+          <p>The report page from a simple search of gene names versus neural modifier terms. All reported numbers are hyperlinked and will initiate a de-novo search for that specific term combination.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-61-2"/>
+      </fig>
+      <p>Productive searches using broadly useful control term lists have been assembled into an associated PubMatrix public archive. These previously used search term lists may be commonly useful and may aid other investigators in subsequent searches. Examples include, official gene symbols, functional descriptors, cytogenetic bands, or polymorphic markers. Likewise, non-molecular term lists have been used and archived which may be broadly useful, such as commonly prescribed drugs, common diseases, and meeting speakers, among others. For example, prior to a meeting, an attendee can rapidly search all the meeting speakers names against important keywords found in the meeting program to provide a one-page summary of speakers scientific interests. Archived term lists can be copied to initiate new searches with new modifier term combinations. Table <xref ref-type="table" rid="T1">1</xref> gives examples of categorical lists of terms used in PubMatrix. Searches using these term lists can be found in the PubMatrix: Public Results page.</p>
+      <table-wrap position="float" id="T1">
+        <label>Table 1</label>
+        <caption>
+          <p>Examples of categorical search lists</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <td align="left">
+                <bold>Category</bold>
+              </td>
+              <td align="left">
+                <bold>Examples</bold>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">Official Gene Symbols</td>
+              <td align="left">APOB, ACE, BDNF, CD45, ...</td>
+            </tr>
+            <tr>
+              <td align="left">Polymorphic markers</td>
+              <td align="left">D1S478, D6S470, D13S193, ...</td>
+            </tr>
+            <tr>
+              <td align="left">DNA sites</td>
+              <td align="left">AAATTT, CAGCAG, TTTTTT, ...</td>
+            </tr>
+            <tr>
+              <td align="left">Chromosomal bands</td>
+              <td align="left">1ter*, 1p36*, 1p35*....Xq27*, Xter*</td>
+            </tr>
+            <tr>
+              <td align="left">Countries</td>
+              <td align="left">sweden, canad*, mexic*, finland, ...</td>
+            </tr>
+            <tr>
+              <td align="left">Common Prescription drugs</td>
+              <td align="left">acetaminophen, acyclovir, albuterol, alprazolam, ...</td>
+            </tr>
+            <tr>
+              <td align="left">Common diseases</td>
+              <td align="left">atopic dermatitis, asthma, crohn's, Celiac, Graves',...</td>
+            </tr>
+            <tr>
+              <td align="left">Date of Publication</td>
+              <td align="left">1973 [dp], 1974 [dp]......2000 [dp], 2001 [dp], 2002 [dp]</td>
+            </tr>
+            <tr>
+              <td align="left">Meeting Speakers</td>
+              <td align="left">Weiss A, Pierce SK, Kupfer A,...</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <p>PubMatrix tables can be combined or processed further to provide visual displays or summaries of complete experiments or large datasets in the context of medical literature. Figure <xref ref-type="fig" rid="F3">3</xref> shows a display of cDNA microarray results of an ovarian cancer cell line treated with the drug cisplatin. The literature results are displayed in the context of gene expression ratios (Z-ratios). Similarly, Figure <xref ref-type="fig" rid="F4">4</xref> shows a comprehensive term list of human cytogeneic bands covering the human genome (1p36*, 1p35*, 1p34*...Xter*) versus the single term "Autoimmune". When displayed by chromosome, major autoimmune loci are identified. These include the major histocompatibility complex, chromosome 2q (CTLA4), as well as APECED on 21q. Figures <xref ref-type="fig" rid="F3">3</xref> and <xref ref-type="fig" rid="F4">4</xref> were displayed in MS EXCEL using the 3-D chart view option. Moreover, PubMatrix tables can be pasted into spreadsheet programs and imported into other types of data visualization programs such as CLUSTER/TREEVIEW [<xref ref-type="bibr" rid="B11">11</xref>] or SPOTFIRE [<xref ref-type="bibr" rid="B12">12</xref>] for graphic display and manipulation.</p>
+      <fig position="float" id="F3">
+        <label>Figure 3</label>
+        <caption>
+          <p>Gene expression results (Z-ratio) of cisplatin treatment of an ovarian tumor cell line versus keywords relevant to cisplatin resistance. This graph was constructed in MS EXCEL directly from a PubMatrix search result table using the 3D chart view option after adding gene expression values (Z-ratios).</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-61-3"/>
+      </fig>
+      <fig position="float" id="F4">
+        <label>Figure 4</label>
+        <caption>
+          <p>Visual display of chromosomal-band term list versus the term. "autoimmune". Search terms were 313 sequential human chromosomal bands (1pter, 1p36, 1p35, 1p34, etc....Xq26, Xq27, Xq28, Xqter) versus the single modifier term "autoimmune". This graph was constructed in MS EXCEL using 3D chart view option after separating individual chromosome results into individual columns.</p>
+        </caption>
+        <graphic xlink:href="1471-2105-4-61-4"/>
+      </fig>
+    </sec>
+    <sec>
+      <title>Conclusions</title>
+      <p>PubMatrix allows a simple systematic approach to query the medical literature in PubMed with comparative keyword lists. It performs simple automatic queries and greatly reduces analysis time. In this way, increasingly large datasets generated by high-throughput multiplex assays such as proteomic or microarray assays can be mined, archived, displayed, and annotated for biological and disease relevance.</p>
+    </sec>
+    <sec>
+      <title>Availability and requirements</title>
+      <p>PubMatrix is available for free use at this URL: <ext-link ext-link-type="uri" xlink:href="http://pubmatrix.grc.nia.nih.gov/"/></p>
+    </sec>
+    <sec>
+      <title>Authors' contributions</title>
+      <p>KGB and TJB conceived the approach and participated in early design and testing. DAH, GD, RAL, and CC participated in software design and testing. JE participated in web design, database development, and algorithm modification. All authors read and approved the final manuscript</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <sec>
+        <title>Acknowledgements</title>
+        <p>The authors would like to thank E. Hovig and D. Wheeler for helpful discussions, and C. Sherman-Baust and P. Morin for sharing of data.</p>
+      </sec>
+    </ack>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jenssen</surname>
+              <given-names>TK</given-names>
+            </name>
+            <name>
+              <surname>Laegreid</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Komorowski</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hovig</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>A literature network of human genes for high-throughput analysis of gene expression</article-title>
+          <source>Nat Genet</source>
+          <year>2001</year>
+          <volume>28</volume>
+          <fpage>21</fpage>
+          <lpage>28</lpage>
+          <pub-id pub-id-type="pmid">11326270</pub-id>
+          <pub-id pub-id-type="doi">10.1038/88213</pub-id>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kim</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Lund</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kiraly</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Duke</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Jiang</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Stuart</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Eizinger</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Wylie</surname>
+              <given-names>BN</given-names>
+            </name>
+            <name>
+              <surname>Davidson</surname>
+              <given-names>GS</given-names>
+            </name>
+          </person-group>
+          <article-title>A gene expression map for Caenorhabditis elegans</article-title>
+          <source>Science</source>
+          <year>2001</year>
+          <volume>293</volume>
+          <fpage>2087</fpage>
+          <lpage>2092</lpage>
+          <pub-id pub-id-type="pmid">11557892</pub-id>
+          <pub-id pub-id-type="doi">10.1126/science.1061603</pub-id>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tanabe</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Scherf</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>LH</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>JK</given-names>
+            </name>
+            <name>
+              <surname>Hunter</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Weinstein</surname>
+              <given-names>JN</given-names>
+            </name>
+          </person-group>
+          <article-title>MedMiner: an Internet text-mining tool for biomedical information, with application to gene expression profiling</article-title>
+          <source>Biotechniques</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>1210</fpage>
+          <lpage>4</lpage>
+          <comment>1216&#x2013;1217</comment>
+          <pub-id pub-id-type="pmid">10631500</pub-id>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hosack</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Dennis</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Sherman</surname>
+              <given-names>BT</given-names>
+            </name>
+            <name>
+              <surname>Lane</surname>
+              <given-names>HC</given-names>
+            </name>
+            <name>
+              <surname>Lempicki</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>Identifying biological themes within lists of genes with EASE</article-title>
+          <source>Genome Biology</source>
+          <year>2003</year>
+          <volume>4</volume>
+          <fpage>R70</fpage>
+          <pub-id pub-id-type="pmid">14519205</pub-id>
+          <pub-id pub-id-type="doi">10.1186/gb-2003-4-10-r70</pub-id>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Srinivasan</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>MeSHmap: a text mining tool for MEDLINE</article-title>
+          <source>Proc AMIA Symp</source>
+          <year>2001</year>
+          <fpage>642</fpage>
+          <lpage>646</lpage>
+          <pub-id pub-id-type="pmid">11825264</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perez-Iratxeta</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Perez</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Bork</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MA</given-names>
+            </name>
+          </person-group>
+          <article-title>Update on XplorMed: A web server for exploring scientific literature</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>3866</fpage>
+          <lpage>3868</lpage>
+          <pub-id pub-id-type="pmid">12824439</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg538</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Valencia</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Automatic annotation for biological sequences by extraction of keywords from MEDLINE abstracts. Development of a prototype system</article-title>
+          <source>Proc Int Conf Intell Syst Mol Biol</source>
+          <year>1997</year>
+          <volume>5</volume>
+          <fpage>25</fpage>
+          <lpage>32</lpage>
+          <pub-id pub-id-type="pmid">9322011</pub-id>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Masys</surname>
+              <given-names>DR</given-names>
+            </name>
+            <name>
+              <surname>Welsh</surname>
+              <given-names>JB</given-names>
+            </name>
+            <name>
+              <surname>Fink</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Gribskov</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Klacansky</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Corbeil</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Use of keyword hierarchies to interpret gene expression patterns</article-title>
+          <source>Bioinformatics</source>
+          <year>2001</year>
+          <volume>7</volume>
+          <fpage>319</fpage>
+          <lpage>26</lpage>
+          <pub-id pub-id-type="pmid">11301300</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/17.4.319</pub-id>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <collab>The Gene Ontology Consortium</collab>
+          </person-group>
+          <article-title>Gene Ontology: tool for the unification of biology</article-title>
+          <source>Nature Genetics</source>
+          <year>2000</year>
+          <volume>25</volume>
+          <fpage>25</fpage>
+          <lpage>29</lpage>
+          <pub-id pub-id-type="pmid">10802651</pub-id>
+          <pub-id pub-id-type="doi">10.1038/75556</pub-id>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="other">
+          <article-title>Entrez Programming Utilities</article-title>
+          <ext-link ext-link-type="uri" xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/query/static/eutils_help.html"/>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eisen</surname>
+              <given-names>MB</given-names>
+            </name>
+            <name>
+              <surname>Spellman</surname>
+              <given-names>PT</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>PO</given-names>
+            </name>
+            <name>
+              <surname>Botstein</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Cluster analysis and display of genome-wide expression patterns</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>1998</year>
+          <volume>95</volume>
+          <fpage>14863</fpage>
+          <lpage>8</lpage>
+          <pub-id pub-id-type="pmid">9843981</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.95.25.14863</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Asher</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Decision analytics software solutions for proteomics analysis</article-title>
+          <source>J Mol Graph Model</source>
+          <year>2000</year>
+          <volume>18</volume>
+          <fpage>79</fpage>
+          <lpage>82</lpage>
+          <pub-id pub-id-type="pmid">10935212</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

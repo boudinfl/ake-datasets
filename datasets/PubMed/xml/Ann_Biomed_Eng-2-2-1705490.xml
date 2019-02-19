@@ -1,0 +1,1174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17048104</article-id>
+      <article-id pub-id-type="pmc">1705490</article-id>
+      <article-id pub-id-type="publisher-id">9190</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-006-9190-9</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Automatic Regulation of Hemodynamic Variables in Acute Heart Failure by a Multiple Adaptive Predictive Controller Based on Neural Networks</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Kashihara</surname>
+            <given-names>Koji</given-names>
+          </name>
+          <address>
+            <phone>+81-48-462-1111</phone>
+            <fax>+81-48-467-6938</fax>
+            <email>kojikasi@mail.goo.ne.jp</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">RIKEN, Brain Science Institute, 2-1, Hirosawa, Wako-shi, Saitama, 351-0198 Japan </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>18</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>34</volume>
+      <issue>12</issue>
+      <fpage>1846</fpage>
+      <lpage>1869</lpage>
+      <history>
+        <date date-type="received">
+          <day>16</day>
+          <month>8</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>29</day>
+          <month>8</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Automated drug-delivery systems that can tolerate various responses to therapeutic agents have been required to control hemodynamic variables with heart failure. This study is intended to evaluate the control performance of a multiple adaptive predictive control based on neural networks (MAPC<sub>NN</sub>) to regulate the unexpected responses to therapeutic agents of cardiac output (CO) and mean arterial pressure (MAP) in cases of heart failure. The NN components in the MAPC<sub>NN</sub> learned nonlinear responses of CO and MAP determined by hemodynamics of dogs with heart failure. The MAPC<sub>NN</sub> performed ideal control against unexpected (1) drug interactions, (2) acute disturbances, and (3) time-variant responses of hemodynamics [average errors between setpoints (+35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and &#xB1;0&#xA0;mmHg in MAP) and observed responses; 6.4, 3.7, and 4.2&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and 1.6, 1.4, and 2.7&#xA0;mmHg (10.5, 20.8, and 15.3&#xA0;mmHg without a vasodilator) in MAP] during 120-min closed-loop control. The MAPC<sub>NN</sub> could also regulate the hemodynamics in actual heart failure of a dog. Robust regulation of hemodynamics by the MAPC<sub>NN</sub> was attributable to the ability of on-line adaptation to adopt various responses and predictive control using the NN. Results demonstrate the feasibility of applying the MAPC<sub>NN</sub> using a simple NN to clinical situations.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Cardiac output</kwd>
+        <kwd>Mean arterial pressure</kwd>
+        <kwd>Therapeutic agents</kwd>
+        <kwd>An automated drug infusion system</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>INTRODUCTION</title>
+      <p>Hemodynamic variables in a critical care patient with heart failure must be monitored during and after cardiac surgery. The hemodynamic conditions must then be regulated using infusion of several drugs. In particular, cardiac output (CO) and mean arterial pressure (MAP) are primary target variables because increased CO is required with suppressing myocardial oxygen consumption and MAP must be kept at the lowest level that can adequately maintain coronary circulation with decreasing systemic vascular resistance (SVR).<xref ref-type="bibr" rid="CR14">14</xref> Combined infusion of an inotropic agent such as dobutamine (DBT) or dopamine and a vasodilator such as sodium nitroprusside (SNP) or nitroglycerin has proven effective for patients with heart failure to regulate hemodynamics.<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR13">13</xref>,<xref ref-type="bibr" rid="CR25">25</xref> Inotropic agents increase the force and velocity of cardiac muscle contraction and result in enhancing CO. Vasodilators reduce SVR and result in the decrease of the afterload of the heart, which thereby decreases MAP and increases stroke volume secondarily.<xref ref-type="bibr" rid="CR3">3</xref>,<xref ref-type="bibr" rid="CR14">14</xref></p>
+      <p>Multivariable automated drug-delivery systems have been developed to help busy physicians or anesthesiologists use several drugs in many critical tasks to regulate the various hemodynamics that occur during heart failure.<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR21">21</xref>,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR28">28</xref>,<xref ref-type="bibr" rid="CR32">32</xref>,<xref ref-type="bibr" rid="CR33">33</xref> In simulation and animal studies undertaken during early system development, adaptive controllers demonstrated the feasibility of application of a multivariable drug-delivery system to simultaneously control CO and MAP using a combination of an inotropic agent and a vasodilator.<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR28">28</xref> In subsequent stages, multiple models and adaptive predictive controllers have been developed to adequately adjust the hemodynamic parameters in the presence of nonlinear physiological responses<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR32">32</xref> and drug interactions.<xref ref-type="bibr" rid="CR21">21</xref>,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR33">33</xref> Fuzzy controls have also shown optimal performance in regulation of multivariable hemodynamics with heart failure.<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR31">31</xref> However, patients with heart failure may have nonlinear and time-variant responses under unexpected variability to drugs and drug interactions with disturbances. Under such unknown conditions, the model-based controllers might require the preparation of numerous linear models to describe the various heart-failure patient responses to drugs,<xref ref-type="bibr" rid="CR21">21</xref>,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR33">33</xref> and the fuzzy controllers might require many rules based on the expert knowledge and heuristics of physicians or anesthesiologists for drug therapy of heart failure.<xref ref-type="bibr" rid="CR6">6</xref></p>
+      <p>The controllers that can adjust adaptively to unexpected responses with heart failure are required in actual clinical situations. Because neural networks (NN) might be one of the simple tools used for nonlinear and time-variant system responses in the presence of the unknown response variability and interactions with exogenous perturbation,<xref ref-type="bibr" rid="CR15">15</xref>,<xref ref-type="bibr" rid="CR27">27</xref> the application of the NN to drug-delivery systems has been desired.<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR17">17</xref> To our knowledge, the multivariable controller using the NN for hemodynamic variables with heart failure has not been tested whereas the NN controllers have engendered the MAP controls such as post-operative hypertension<xref ref-type="bibr" rid="CR1">1</xref> and during acute hypotension<xref ref-type="bibr" rid="CR9">9</xref>. Therefore, this study is intended to develop a multiple adaptive predictive control based on NN (MAPC<sub>NN</sub>) for hemodynamic variables and to evaluate its control performance under unexpected responses to drugs during CO and MAP regulation using SNP and DBT in heart failure. To be assured of a control algorithm before animal experiments, the MAPC<sub>NN</sub> was tested under largely unexpected (1) drug interactions, (2) acute disturbances, and (3) time-variant hemodynamic responses which can be freely operated. Finally, the performance of the MAPC<sub>NN</sub> was tested by actual hemodynamics of a canine left heart failure.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>MATERIALS AND METHODS</title>
+      <p>This section fundamentally includes three parts: (i) &#x2018;<italic>Modeling of Pharmacological Response</italic>&#x2019;, which explains the method for the development of a computer response model that allows testing of the MAPC<sub>NN</sub>, (ii) &#x2018;<italic>Development of Controller</italic>&#x2019;, and (iii) &#x2018;<italic>Evaluation of Controller</italic>&#x2019;, which is the actual test of the MAPC<sub>NN</sub>. In addition, the animal study was divided into two parts. First, to model the pharmacological response in (i), animal experiments were performed using dogs with heart failure. Five of eleven dogs were used for every drug infusion. Then, for additional validation of the developed controller after computer simulations, an animal experiment was performed using one dog with heart failure.</p>
+      <sec id="Sec3">
+        <title>Modeling of Pharmacological Response</title>
+        <p>To produce the response models to therapeutic agents in acute heart failure, the following animal study, which conformed to <italic>the Guide for the Care and Use of Laboratory Animals published by the US National Institutes of Health</italic>, was performed. Microsphere embolization of the left main coronary artery induced acute ischemic heart failure in dogs (<italic>n</italic>&#xA0;=&#xA0;5, 26&#x2013;32&#xA0;kg) that were anesthetized with pentobarbital sodium and ventilated artificially. A double-lumen catheter was introduced into the right femoral vein for administration of pharmaceutical agents using a computer-controllable infusion pump (CFV-3200; Nihon Kohden, Tokyo, Japan). An in-line electromagnetic flow probe (MFV-2100; Nihon Kohden) was used to measure CO; MAP was measured through a fluid-filled catheter and a pressure transducer (DX-200; Nihon Kohden). The CO and MAP were digitized at a 10-Hz sampling rate through a 12-bit digital-to-analog converter connected to a laboratory computer.</p>
+        <p>The total number of all animals used for modeling was 11. The orders of drug infusions were the following four: (i) 3, 6, and 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in DBT and 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in SNP (<italic>n</italic>&#xA0;=&#xA0;2 of 11 animals); (ii) 3 and 6&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in DBT (<italic>n</italic>&#xA0;=&#xA0;3); (iii) 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in DBT (<italic>n</italic>&#xA0;=&#xA0;3); and (iv) 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in SNP (<italic>n</italic>&#xA0;=&#xA0;3). Specifically, five of all animals were used for each drug infusion rate. The hemodynamic variables [<italic>n</italic>&#xA0;=&#xA0;9 except for the two animals in the above case (iii), the 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in DBT (<italic>n</italic>&#xA0;=&#xA0;3), because of no measurements] were changed to &#x2212;60.2&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO (<italic>p</italic>&#xA0;&lt;&#xA0;0.01, paired t-test) and +4.9&#xA0;mmHg in MAP (not significant) before (CO, mean&#xA0;&#xB1;&#xA0;S.E.M&#xA0;=&#xA0;132.0&#xA0;&#xB1;&#xA0;11.2&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>; and MAP, 92.8&#xA0;&#xB1;&#xA0;3.2&#xA0;mmHg) and immediately after (CO, mean&#xA0;&#xB1;&#xA0;S.E.M&#xA0;=&#xA0;71.8&#xA0;&#xB1;&#xA0;6.2&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>; and MAP, 97.7&#xA0;&#xB1;&#xA0;4.3&#xA0;mmHg) the heart failure; for hemodynamics immediately before each drug infusion, see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A.). The period between two trials of drug infusions was 10&#xA0;min in each animal. To prevent the washout process of a catheter in the above case (i), both the drug infusions of DBT and SNP (<italic>n</italic>&#xA0;=&#xA0;2), a double-lumen catheter was used.
+<fig id="Fig1"><label>FIGURE&#xA0;1.</label><caption><p>Single-drug dose responses in canine left heart failure (<italic>n</italic>&#xA0;=&#xA0;5). A. Step responses of the change of cardiac output (&#x394;CO, <italic>left</italic>) and mean arterial blood pressure (&#x394;MAP, <italic>right</italic>) from the baseline after induced acute heart failure during 10-min infusion of (a) dobutamine (DBT) at 3, 6, and 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and (b) sodium nitroprusside (SNP) at 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>. Data digitized at 10&#xA0;Hz were averaged every 30&#xA0;s. Data are mean&#xA0;&#xB1;&#xA0;S.E.M. B. Unit impulse responses of &#x394;CO (<italic>left</italic>) and &#x394;MAP (<italic>right</italic>) calculated from data of (a) DBT infusion at 3, 6, and 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and (b) SNP infusion at 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in dogs. CO response of SNP at 1&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> was eliminated because of impossible fit to step response.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig1_HTML" id="MO1"/></fig></p>
+        <p>In this study, component models comprising a first order dynamic system cascaded with a nonlinear sigmoidal function were used to model the responses of CO and MAP with heart failure. After pharmacodynamics for the evaluation of controllers was represented by a linear first-order transfer function,<xref ref-type="bibr" rid="CR18">18</xref> a sigmoidal function was applied to the linear model to express the nonlinear characteristic with a component model approximating the positive step response.<xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR30">30</xref> The procedure to produce the model responses can be described as follows.</p>
+        <p>First, simple models for responses to therapeutic agents were produced from experimental data in canine left-heart failure. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A shows the step responses of CO and MAP changed (&#x394;CO and &#x394;MAP) from baseline values immediately before each drug infusion after inducing the acute heart failure during 10-min (a) DBT and (b) SNP infusions. The step responses of &#x394;CO and &#x394;MAP during infusion of DBT at 3, 6, and 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> or SNP at 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> were averaged every 30&#xA0;s. Then, each single-input single-output response [&#x394;<italic>&#x177;</italic>(<italic>t</italic>)] of the four step responses (DBT-CO, DBT-MAP, SNP-CO, and SNP-MAP loops as input&#x2013;output relationships) was approximated to the linear first-order delay system with a pure time delay in the continuous-time domain, as <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta \mathop y\limits^ \wedge (t) = K\left[ {1 - {\hbox{exp}}\left( { - \frac{{t - L}} {{T_{\rm c} }}} \right)} \right] $$\end{document}</tex-math></disp-formula> where <italic>K</italic> is a proportional gain, <italic>L</italic> is a pure time delay, and <italic>T</italic><sub>c</sub> is a time constant. If <italic>t</italic>&#xA0;&lt;&#xA0;<italic>L</italic> then &#x394;<italic>&#x177;</italic>(<italic>t</italic>)&#xA0;=&#xA0;0. The fitted parameters to the averaged step responses (<italic>n</italic>&#xA0;=&#xA0;5) in the single infusion of DBT or SNP were acquired by least squares method and used for calculation of the following unit impulse response (i.e., the response to the infusion of 1&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> of a given drug).</p>
+        <p>Second, the linear-model response [&#x394;<italic>y</italic><sup>*</sup>(<italic>t</italic>)] was calculated by the convolution integral in the discrete-time domain: <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta y^* (t) = \sum\limits_{\tau = 0}^{N_{\rm m} } {g(\tau )\Delta Tu(t - \tau )} $$\end{document}</tex-math></disp-formula> where <disp-formula id="Equa"><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ g(\tau ) = \frac{{K_{\rm u} }} {{T_{\rm c} }}\exp \left( { - \frac{{\tau - L}} {{T_{\rm c} }}} \right) $$\end{document}</tex-math></disp-formula>.</p>
+        <p>In those equations, <italic>u</italic>(<italic>t</italic>) is the drug infusion rate, &#x394;<italic>T</italic> is the sampling interval, and <italic>N</italic><sub>m</sub> is the finite number of terms in the model for the unit impulse response. The unit impulse response is <italic>g</italic>(<italic>t</italic>), as calculated from the derived values of the step response of Eq. (1). The proportional gain of a unit impulse response is <italic>K</italic><sub>u</sub>; <italic>T</italic><sub>c</sub> and <italic>L</italic> are the same values as Eq. (1). For the simulation study, &#x394;<italic>T</italic> and <italic>N</italic><sub>m</sub> were set, respectively, to 30&#xA0;s and 20. According to this method, the unit impulse responses of &#x394;CO and &#x394;MAP during infusions of DBT at 3, 6, and 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and SNP at 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> were calculated from the fitting parameters to the average step responses (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B, the CO response to SNP at 1&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> was excepted because of the impossible fit to the step response). Although some differences existed among unit impulse responses at those infusion rates, as shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>B, in the present study, median values (i.e. 6&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in DBT and 2&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in SNP) were used for the following simulations because they characterized the effects of drugs on hemodynamics well. Numerical data in <italic>K</italic><sub>u</sub>, <italic>T</italic><sub>c</sub>, <italic>L</italic>, and <italic>g</italic>(<italic>t</italic>) used for the simulation study are shown in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> (<italic>left</italic>).
+<table-wrap id="Tab1"><label>TABLE&#xA0;1.</label><caption><p>Model parameters in linear-fitting and nonlinear-fitting functions.</p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="bottom" align="left" rowspan="2">Drug-response</th><th align="left" colspan="4">Linear</th><th align="left" colspan="3">Nonlinefsar</th></tr><tr><th align="left">Proportional gain (<italic>K</italic><sub>u</sub>)</th><th align="left">Time constant (<italic>T</italic><sub>c</sub>)</th><th align="left">Pure time delay (<italic>L</italic>)</th><th align="left"><italic>R</italic><sup>2</sup></th><th align="left">Response range (<italic>p</italic><sub>1</sub>)</th><th align="left">Coefficient of gain (<italic>p</italic><sub>2</sub>)</th><th align="left"><italic>R</italic><sup>2</sup></th></tr></thead><tbody><tr><td align="left">DBT-CO</td><td char="." align="char">15.8</td><td char="." align="char">164.3</td><td char="." align="char">30</td><td char="." align="char">0.98</td><td char="." align="char">105.3</td><td char="." align="char">0.028</td><td char="." align="char">0.99</td></tr><tr><td align="left">DBT-MAP</td><td char="." align="char">4.4</td><td char="." align="char">65.2</td><td char="." align="char">30</td><td char="." align="char">0.75</td><td char="." align="char">22.8</td><td char="." align="char">0.145</td><td char="." align="char">0.98</td></tr><tr><td align="left">SNP-CO</td><td char="." align="char">3.0</td><td char="." align="char">40.6</td><td char="." align="char">60</td><td char="." align="char">0.28</td><td char="." align="char">37.7</td><td char="." align="char">0.051</td><td char="." align="char">0.80</td></tr><tr><td align="left">SNP-MAP</td><td char="." align="char">&#x2212;12.5</td><td char="." align="char">209.4</td><td char="." align="char">60</td><td char="." align="char">0.96</td><td char="." align="char">-26.2</td><td char="." align="char">&#x2212;0.085</td><td char="." align="char">0.99</td></tr></tbody></table><table-wrap-foot><p>Fitting parameters (<italic>K</italic><sub>u</sub>, <italic>T</italic><sub>c</sub>, <italic>L</italic>, <italic>p</italic><sub>1</sub>, and <italic>p</italic><sub>2</sub>) in a single-input single-output relationship. The <italic>K</italic><sub>u</sub> [ml&#xA0;&#x3BC;g<sup>&#x2212;1</sup> in DBT-CO and SNP-CO loops or mmHg (&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>)<sup>&#x2212;1</sup> in DBT-MAP and SNP-MAP loops], <italic>T</italic><sub>c</sub> (s), and <italic>L</italic> (s) are the parameters of Eq. (2). The <italic>p</italic><sub>1</sub> and <italic>p</italic><sub>2</sub> are the parameters of Eq. (3). <italic>R</italic><sup>2</sup> shows a multiple coefficient of determination.</p></table-wrap-foot></table-wrap></p>
+        <p>Third, to express the nonlinear response to a single drug infusion, the &#x394;<italic>y</italic><sup>*</sup>(<italic>t</italic>) in Eq. (2) as the linear model response was modified through a sigmoidal function:<xref ref-type="bibr" rid="CR30">30</xref><disp-formula id="Equ3"><label>3</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta y'(t) = p_1 \tanh \left( {\frac{{p_2 \Delta y^* (t)}} {2}} \right) $$\end{document}</tex-math></disp-formula> in which <italic>p</italic><sub>1</sub> is the parameter of the response range, which shows the difference between the maximum and minimum values of &#x394;<italic>y</italic>&#x2032;(<italic>t</italic>) as the nonlinear model response, and <italic>p</italic><sub>2</sub> is the parameter of the coefficient of gain. Parameters <italic>p</italic><sub>1</sub> and <italic>p</italic><sub>2</sub> were determined by nonlinear least-squares method for the simulation study [Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> (<italic>right</italic>) and Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>A]. Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>A contains the average values in &#x394;CO and &#x394;MAP responses of the final 30&#xA0;s during 10-min infusions of DBT at 3, 6, and 9&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and SNP at 1, 2, and 4&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A). The &#x394;CO and &#x394;MAP responses tested in simulations were over the ranges of the averaged responses in actual hemodynamics of dogs with heart failure.
+<fig id="Fig2"><label>FIGURE&#xA0;2.</label><caption><p>A. Nonlinear responses of &#x394;CO and &#x394;MAP in infusion of DBT or SNP. Circles (&#x2022;) show experimental data for dogs with heart failure; solid lines are curves fitted to the averaged data. Dashed lines show the limits of the tested range [one-third (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1/3) to three-times (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;3) responses compared with the averaged data (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1) in Eq. (4)] in simulations. B. Multi-input multi-output model responses for &#x394;CO and &#x394;MAP. System inputs are the infusion rates of DBT and SNP; outputs are the &#x394;CO and &#x394;MAP. The outputs were determined by the first-order dynamic systems cascaded with nonlinear sigmoidal functions. The proportional gains of patient sensitivities to drugs and drug interactions are shown as <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, and <italic>b</italic><sub>2</sub>.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig2_HTML" id="MO2"/></fig></p>
+        <p>Finally, the model responses containing patient sensitivities to therapeutic agents and drug interactions are expressed as <disp-formula id="Equ4"><label>4</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \left\{ \begin{aligned}{} &amp; \Delta CO_{\bmod } (t) = a_1  \Delta CO'_1 (t) + a_2  \Delta CO'_2 (t) \\ &amp; \Delta MAP_{\bmod } (t) = b_1  \Delta MAP'_1 (t) + b_2  \Delta MAP'_2 (t) \\ \end{aligned} \right. $$\end{document}</tex-math></disp-formula>, where &#x394;CO<sub>mod</sub>(<italic>t</italic>) is the model response containing sensitivities to drugs and drug interactions of DBT and SNP; &#x394;CO<sub>1</sub>&#x2032;(<italic>t</italic>) and &#x394;CO<sub>2</sub>&#x2032;(<italic>t</italic>), respectively, indicate the nonlinear responses to single infusions of DBT and SNP; and <italic>a</italic><sub>1</sub> and <italic>a</italic><sub>2</sub>, respectively, represent the proportional gain of patient sensitivity to DBT and SNP. The model response containing sensitivities to drugs and drug interactions of SNP and DBT is &#x394;MAP<sub>mod</sub>(<italic>t</italic>). The respective nonlinear responses to single infusions of SNP and DBT are &#x394;MAP<sub>1</sub>&#x2032;(<italic>t</italic>) and &#x394;MAP<sub>2</sub>&#x2032;(<italic>t</italic>). The respective proportional gains of patient sensitivity to SNP and DBT are denoted as <italic>b</italic><sub>1</sub> and <italic>b</italic><sub>2</sub> (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>B). In particular, <italic>a</italic><sub>2</sub> and <italic>b</italic><sub>2</sub> can be defined as the strength of the drug interaction when the two treatments for DBT-CO and SNP-MAP loops are performed.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Development of Controller</title>
+        <sec id="Sec5">
+          <title>Control Design</title>
+          <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> portrays a block diagram of a MAPC<sub>NN</sub> system for adaptation to various patient responses with heart failure. Treating the multiple loops in the therapy for heart failure separately allows setting of a clear goal of NN learning for the various patient responses during closed-loop control. On the other hand, in the completely separated controllers, the total control performance will be late because one controller performs the drug therapy after detection of the drug interaction disturbance induced by performing an action taken by the other controller. Therefore, the MAPC<sub>NN</sub> in this study includes two module controllers for the DBT-CO loop considering the effects of SNP on CO and the SNP-MAP loop considering the effects of DBT on MAP.
+<fig id="Fig3"><label>FIGURE&#xA0;3.</label><caption><p>A block diagram showing multiple adaptive predictive control using neural networks (MAPC<sub>NN</sub>) to regulate CO and MAP. The <italic>r</italic> is a target value, and <italic>e</italic>(<italic>t</italic>) is the error between the target value and observed value. The value <italic>e</italic>(<italic>t</italic>&#xA0;+&#xA0;<italic>i</italic>) represents the error between the target value and output predicted by the NN. Thick lines show the learning loop in the NN; dotted lines show the prediction loop using the NN.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig3_HTML" id="MO3"/></fig></p>
+          <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>A depicts one of the two NN structures in MAPC<sub>NN</sub> tested for the simulation study. The MAPC<sub>NN</sub> is a control system in which the NN recursively learns patient characteristics using their observed responses to drug infusions only once every 30&#xA0;s during closed-loop control (<italic>Learning Loop</italic>). It subsequently determines the future outputs using the learned NN (<italic>Prediction Loop</italic>). A multilayer feed-forward NN with two hidden layers (&#x394;<italic>y</italic><sub>NN</sub>) emulated the nonlinear responses in &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub>. The &#x394;<italic>y</italic><sub>NN</sub> is predicted through NN as <disp-formula id="Equ5"><label>5</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta y_{{\rm{NN}}} (t) = f\left[ {\Delta y_{{\hbox{mod}}} (t - 1),\,\Delta y_{{\hbox{mod}}} (t - 2),\,u_1 (t - 1),\, \ldots ,\,u_1 (t - 6),\,u_2 (t - 1),\, \ldots ,\,u_2 (t - 6)} \right] $$\end{document}</tex-math></disp-formula> where &#x394;<italic>y</italic><sub>mod</sub>(<italic>t</italic>&#x2212;1) and &#x394;<italic>y</italic><sub>mod</sub>(<italic>t</italic>&#x2212;2) are model responses of past &#x394;CO or &#x394;MAP; <italic>u</italic><sub>1</sub>(<italic>t</italic>&#x2212;1),..., and <italic>u</italic><sub>1</sub>(<italic>t</italic>&#x2212;6) or <italic>u</italic><sub>2</sub>(<italic>t</italic>&#x2212;1),... and <italic>u</italic><sub>2</sub>(<italic>t</italic>&#x2212;6) represent the past 3-min infusion rates of DBT or SNP. Here, to determine the length of the history of model response and infusion rates as inputs to the NN, the accuracy of NN learning was tested under various lengths of components (for a detailed protocol, refer to the following paragraph &#x201C;<italic>Learning of Initial Weights in NN</italic>&#x201D;). Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B shows the average values (final 500 points) in the absolute error between the &#x394;CO<sub>mod</sub> and &#x394;CO<sub>NN</sub> responses (<italic>left</italic>) or &#x394;MAP<sub>mod</sub> and &#x394;MAP<sub>NN</sub> responses (<italic>right</italic>) from the trained NN [100,000 times, <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1 in Eq. (4)] under various input&#x2013;output components to the NN input. The numbers of the input units (<italic>m</italic>) to a single NN component and of the units in the first (<italic>n</italic><sub>1</sub>) and second (<italic>n</italic><sub>2</sub>) hidden layers of the NN were set to the same as that of components to the NN input. For example, if the inputs to the NN were 14 (the past 3&#xA0;min in both the two drug inputs and the past 1&#xA0;min in the model response), then <italic>m</italic>&#xA0;=&#xA0;<italic>n</italic><sub>1</sub>&#xA0;=&#xA0;<italic>n</italic><sub>2</sub>&#xA0;=&#xA0;14. Learning rates of the two NN in both the CO and MAP controls were set to <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2. The starting weights of NN were given at random every trial. In the past history of infusion rates, the error between the NN and model responses in the past 2-min infusion rates (eight components in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B: four in DBT and four in SNP) showed adequate accuracy, although that in the past 1-min infusion rates (four components) was not demonstrably accurate in both the CO and MAP responses. Here, it was predicted that the pure time delays to drug inputs were different among patients and that the NN was required to express the characteristics of the transient response to a drug input adequately considering the effect of the other drug input. Therefore, to adjust the NN response to the changes of hemodynamics with noise and disturbances during the real-time control, the infusion rates of the past 3&#xA0;min in both drugs (total 12 components: 6 components in each drug) were, on the safe side, selected for both the CO and MAP controls in the present study. In the past history of model response, the accuracy of NN learning was the almost equal among the cases of the past 1, 1.5, and 2&#xA0;min (2, 3, and 4 components in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>B) in both the CO and MAP responses, whereas that in the past 30&#xA0;s (1 component) showed inadequate accuracy. Accordingly, the length of the past history of model response was determined as 1&#xA0;min (2 components) in both the CO and MAP controls.
+<fig id="Fig4"><label>FIGURE&#xA0;4.</label><caption><p>A. A single component of a four-layer feed-forward NN with two hidden layers in MAPC<sub>NN</sub> to emulate the characteristics of a patient. The number of units in each hidden layer of the NN was set to 14 (numerically equal to the input units). A hyperbolic tangent function was used as the output of each unit. B. Average values (final 500 points) in the absolute error between the &#x394;CO<sub>mod</sub> and &#x394;CO<sub>NN</sub> responses (<italic>left</italic>) or &#x394;MAP<sub>mod</sub> and &#x394;MAP<sub>NN</sub> responses (<italic>right</italic>) from the trained NN [100,000 times, <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1 in Eq. (4)] under various lengths of input&#x2013;output components to NN input. C. The absolute error between the model response and the predicted response by NN in (a) &#x394;CO (<italic>left</italic>) or (b) &#x394;MAP (<italic>right</italic>).</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig4_HTML" id="MO4"/></fig></p>
+          <p>In the simulation study, the number of input units to a single NN component was <italic>m</italic>&#xA0;=&#xA0;14; the numbers of units in the first and second hidden layers of the NN were <italic>n</italic><sub>1</sub>&#xA0;=&#xA0;<italic>n</italic><sub>2</sub>&#xA0;=&#xA0;14, being equal to the input units. The weights in the single NN were 435: 196 in the input to first hidden layer, 196 in the first to second hidden layer, 14 in the second hidden layer to output layer, and 29 for biases (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>A). The two NN for the controls of DBT-CO and SNP-MAP loops had identical structures.</p>
+          <p>In the learning loop, a single NN was trained by the output of &#x394;CO<sub>mod</sub> or &#x394;MAP<sub>mod</sub> to the random inputs of DBT and SNP using the backpropagation algorithm in an on-line mode, showing that the error function is calculated after presentation of an input. The prediction loop in the MAPC<sub>NN</sub> determines the optimal DBT or SNP infusion rate that minimizes the cost function using the updated NN through the learning loop every 30&#xA0;s. <disp-formula id="Equ6"><label>6</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \left\{ \begin{aligned}{} &amp; J_1 (t) = q_1 \left[ {u_1 (t) - u_1 (t - 1)} \right]^2 + \sum\limits_{i = 1}^{N_{p1} } {\left[ {r_1 (t + i) - \Delta {\hbox{CO}}_{{\rm{NN}}} (t + i)} \right]^2 } \\ &amp; J_2 (t) = q_2 \left[ {u_2 (t) - u_2 (t - 1)} \right]^2 + \sum\limits_{i = 1}^{N_{p2} } {\left[ {r_2 (t + i) - \Delta {\hbox{MAP}}_{{\rm{NN}}} (t + i)} \right]^2 } \\ \end{aligned} \right. $$\end{document}</tex-math></disp-formula></p>
+          <p>Therein, the cost function [<italic>J</italic><sub>1</sub>(<italic>t</italic>), <italic>J</italic><sub>2</sub>(<italic>t</italic>)] comprises the weight of input change (<italic>q</italic><sub>1</sub>, <italic>q</italic><sub>2</sub>), the prediction range (<italic>N</italic><sub><italic>p</italic>1</sub>, <italic>N</italic><sub><italic>p</italic>2</sub>), and the setpoint (<italic>r</italic><sub>1</sub>, <italic>r</italic><sub>2</sub>) in the controllers for the DBT-CO loop or the SNP-MAP loop. The physiological responses predicted by the NN are indicated as &#x394;CO<sub>NN</sub> and &#x394;MAP<sub>NN</sub>. The controller based on the NN for each loop predicts future outputs using past inputs of infusion rates of DBT and SNP. The optimization of the infusion rates [<italic>u</italic><sub>1</sub>(<italic>t</italic>), <italic>u</italic><sub>2</sub>(<italic>t</italic>)] was performed using a Nelder&#x2013;Mead Simplex algorithm.<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR27">27</xref></p>
+        </sec>
+        <sec id="Sec6">
+          <title>Determination of Control Parameters</title>
+          <sec id="Sec7">
+            <title>Learning of Initial Weights in NN</title>
+            <p>The two NN, respectively, learned &#x394;CO<sub>mod</sub> response in the DBT-CO loop and &#x394;MAP<sub>mod</sub> response in the SNP-MAP loop to determine the initial weights in the NN for the MAPC<sub>NN</sub>. The starting weights in the NN before learning the model response were given at random between &#x2212;1 and 1. Subsequently, the infusion rates of DBT and SNP were given at random between &#x2212;4 and 6&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>. Here, both the plus and minus signs as drug inputs (artificial infusions) to the NN were used because the learning of NN was inferred to be more effective than that under a plus sign alone as the drug input to the NN in the trial and error and previous studies.<xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR27">27</xref> Learning of the NN for &#x394;CO<sub>mod</sub> or &#x394;MAP<sub>mod</sub> responses was repeated 100,000 times. The &#x394;CO<sub>mod</sub> was divided by 200, and &#x394;MAP<sub>mod</sub> was divided by 100 for normalization during NN learning.</p>
+            <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>C shows the absolute error between the &#x394;CO<sub>mod</sub> and &#x394;CO<sub>NN</sub> responses (<italic>left</italic>) or &#x394;MAP<sub>mod</sub> and &#x394;MAP<sub>NN</sub> responses (<italic>right</italic>) from the trained NN in the average patient sensitivity [<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1 in Eq. (4)]. Learning rates of the two NN for the following simulation study were set to <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2 showing a suitable number by trial and error in both the &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub>. Learning results of the NN, respectively, showed errors of 2.5&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in the DBT-CO loop and 1.5&#xA0;mmHg in the SNP-MAP loop.</p>
+          </sec>
+          <sec id="Sec8">
+            <title>Controller Tuning</title>
+            <p>Optimal values of the range of prediction (<italic>N</italic><sub><italic>p</italic>1</sub>, <italic>N</italic><sub><italic>p</italic>2</sub>) and the weight of input (<italic>q</italic><sub>1</sub>, <italic>q</italic><sub>2</sub>) in the cost function (6) of the controller were explored using the model patient responses, &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub>, to determine the initial controller parameters. The prediction range was set to <italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;4, 8, or 12, and the weight of input was set to <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, 0.1, or 1. The learning rates of &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> were fixed at <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2. To regulate the control speed and stability simultaneously, the setpoint of &#x394;CO was guided by the linear function <italic>r</italic><sub>1</sub>&#xA0;=&#xA0;35<italic>t</italic>/600&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> during the 10&#xA0;min following the start of the closed-loop control. Thereafter, it was maintained at <italic>r</italic><sub>1</sub>&#xA0;=&#xA0;35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>. The setpoint of &#x394;MAP was set to <italic>r</italic><sub>2</sub>&#xA0;=&#xA0;&#xB1;0&#xA0;mmHg. The duration of the closed-loop control was set to 40&#xA0;min.</p>
+            <p>Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> shows simulation results of the MAPC<sub>NN</sub> using average responses of &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> [<italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, and <italic>b</italic><sub>2</sub> in Eq. (4) were set to unity]. The controller suppressed a control speed instead of facilitating stable control with the increase of the weight of input (<italic>q</italic><sub>1</sub>&#xA0;<italic>=&#xA0;q</italic><sub>2</sub>&#xA0;=&#xA0;0.01&#x2192;1) at each range of prediction (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;4, 8, or 12). On the other hand, when the weight of the input is small (<italic>q</italic><sub>1</sub>&#xA0;<italic>=&#xA0;q</italic><sub>2</sub>&#xA0;=&#xA0;0.01), the controller performed a slightly aggressive control with the decreased range of prediction (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12&#x2192;4). The relationship at the large weight of input (<italic>q</italic><sub>1</sub>&#xA0;<italic>=&#xA0;q</italic><sub>2</sub>&#xA0;=&#xA0;1) was opposite because of the strong effects of the input weight at the small range of prediction (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;4). For subsequent simulations, the parameters (<italic>N</italic><sub><italic>p</italic>1</sub>, <italic>N</italic><sub><italic>p</italic>2</sub>, <italic>q</italic><sub>1</sub>, <italic>q</italic><sub>2</sub>) in the MAPC<sub>NN</sub> were set to <italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12 and <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01 considering the settling time which reflects control speed and stability. In this case, the settling time within &#xB1;3&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> was 660&#xA0;s; its time within &#xB1;2&#xA0;mmHg in &#x394;MAP<sub>mod</sub> was 990&#xA0;s. The average absolute value of error between a setpoint and model response in &#x394;CO<sub>mod</sub> or &#x394;MAP<sub>mod</sub> over the entire control period (average error) for 40&#xA0;min was 2.8&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO or 0.5&#xA0;mmHg in &#x394;MAP.
+<fig id="Fig5"><label>FIGURE&#xA0;5.</label><caption><p>Simulation results of the MAPC<sub>NN</sub> under average responses of &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> [<italic>a</italic><sub>1</sub>&#xA0;<italic>=&#xA0;a</italic><sub>2</sub>&#xA0;<italic>=&#xA0;b</italic><sub>1</sub>&#xA0;<italic>=&#xA0;b</italic><sub>2</sub>&#xA0;<italic>=</italic>&#xA0;1]. The input weight was changed to <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, 0.1 or 1 fixing the range of prediction at <italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;(A) 4, (B) 8, or (C) 12. The NN learning rate was set to <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2 under all conditions.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig5_HTML" id="MO5"/></fig></p>
+          </sec>
+        </sec>
+      </sec>
+      <sec id="Sec9">
+        <title>Evaluation of Controller</title>
+        <sec id="Sec10">
+          <title>Simulations</title>
+          <p>To evaluate the control performance, a simulation study in MAPC<sub>NN</sub>, which expressed the repeatability and freely operated physiological parameters such as nonlinearity and interaction,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR30">30</xref> was performed under unexpected changes of patient responses to therapeutic agents with acute disturbances using the model response based on experimental data of canine heart failure. Increased CO to more than 95&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>, while keeping MAP within the normal range (80&#x2013;100&#xA0;mmHg) is desirable to treat acute heart failure.<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR7">7</xref> Therefore, the control objectives in this study were to increase the low CO (mean&#xA0;&#xB1;&#xA0;S.E.M.&#xA0;=&#xA0;67.5&#xA0;&#xB1;&#xA0;3.4&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>, Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A) at the setpoint of +35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> (&#x394;CO&#xA0;=&#xA0;+35<italic>t</italic>/600 within 10&#xA0;min after the start of closed-loop control) using DBT infusion and to simultaneously maintain the normal MAP (mean&#xA0;&#xB1;&#xA0;S.E.M.&#xA0;=&#xA0;96.7&#xA0;&#xB1;&#xA0;2.0&#xA0;mmHg, Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A) at the setpoint (&#x394;MAP&#xA0;=&#xA0;&#xB1;0&#xA0;mmHg) using SNP infusion when hypertension is induced by treatment for DBT-CO loop in acute heart failure. The infusion rates were basically bounded as 0&#xA0;&#x2264;&#xA0;<italic>u</italic><sub>1</sub>(<italic>t</italic>)&#xA0;&#x2264;&#xA0;10 in DBT and 0&#xA0;&#x2264;&#xA0;<italic>u</italic><sub>2</sub>(<italic>t</italic>)&#xA0;&#x2264;&#xA0;6 in SNP to avoid an overdose or drug toxicity.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR22">22</xref> Hemodynamic control was simulated under the following cases: drug interactions between DBT and SNP, acute disturbances, and time-variant changes of physiological parameters.</p>
+          <sec id="Sec11">
+            <title>Drug Interactions</title>
+            <p>Grasping and estimating the acts of drug interactions are difficult for hemodynamic control using multiple drugs.<xref ref-type="bibr" rid="CR6">6</xref>,<xref ref-type="bibr" rid="CR30">30</xref> To examine the controller&#x2019;s robustness for wide ranges of patients&#x2019; sensitivity to drugs and drug interactions, parameters (<italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, <italic>b</italic><sub>2</sub>) in Eq. (4) were changed to 2, 1/3, or 3 every 40&#xA0;min for 120-min control (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>A). Hemodynamic responses were unknown to the NN because the NN learned only the average model responses (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1). The controller was also tested under various combinations for sensitivities to drugs and drug interactions. The model parameters, <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, and <italic>b</italic><sub>2</sub> in Eq. (4), were set to one of 1/3 (Low), 1 (Mid.), and 3 (High), and all combinations were tested with or without the limitations of drug infusion rates. The control duration was 40&#xA0;min.
+<fig id="Fig6"><label>FIGURE&#xA0;6.</label><caption><p>Simulation results of MAPC<sub>NN</sub> with unexpected patient sensitivities and drug interactions. A in the top graph displays changes of parameters (<italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, <italic>b</italic><sub>2</sub>) in Eq. (4). B(a) and C(a) in the graph display setpoints, &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> (solid lines), and predicted outputs by NN (dashed lines). B(b) and C(b) are the time courses of weights changed from the baseline at the starting time in the NN for controllers in the DBT-CO and SNP-MAP loops: weights between input and first hidden layers (top), first and second hidden layers (middle), and second hidden and output layers (bottom). D. Infusion rates of DBT (solid line) and SNP (dashed line).</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig6_HTML" id="MO6"/></fig></p>
+            <p>To know the limitation of the control performance, the MAPC<sub>NN</sub> was tested under very low (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1/5 or 1/10) and high (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;5 or 10) sensitivities to drugs and drug interactions. The limitations of infusion rates of drugs were eliminated to emphasize the control performance. The control duration was 40&#xA0;min.</p>
+          </sec>
+          <sec id="Sec12">
+            <title>Acute Disturbances</title>
+            <p>Bolus infusion of drugs during and after cardiac surgery often introduces severe disturbances to a controller. Hemorrhage, patient-position changes, and changes in anesthesia levels will modulate patient response characteristics.<xref ref-type="bibr" rid="CR10">10</xref>,<xref ref-type="bibr" rid="CR20">20</xref> To examine the controller&#x2019;s performance during acute disturbances, the MAPC<sub>NN</sub> against acute hypertension was simulated using the &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> responses for 120&#xA0;min. Exogenous perturbations were added to the patient responses ranging within &#xB1;10&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and +20&#xA0;mmHg in &#x394;MAP<sub>mod</sub>. To mimic physiological variation, random noises within &#xB1;3&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and &#xB1;2&#xA0;mmHg in &#x394;MAP<sub>mod</sub> were also added [Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>A(a) and B(a)].</p>
+            <p>To implicate the limitation of the control performance, the MAPC<sub>NN</sub> was tested under very severe situations with random noise and exogenous perturbations over physiological responses: (i) very huge amplitudes of random noise, (ii) very large and (iii) acute disturbances. First, (i) three levels of huge amplitudes of random noise (level 1: &#xB1;5&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and &#xB1;5&#xA0;mmHg in &#x394;MAP<sub>mod</sub>, level 2: &#xB1;25&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and &#xB1;25&#xA0;mmHg, and level 3: &#xB1;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and &#xB1;50&#xA0;mmHg) were added to model responses (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1) during drug treatment for 40&#xA0;min [Figs.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>A(a) and B(a)]. The random noises among the three levels had the same pattern except for the amplitude. Next, (ii) the MAPC<sub>NN</sub> was evaluated under very huge disturbances (level 1: &#x2212;20&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and +20&#xA0;mmHg in &#x394;MAP<sub>mod</sub>, level 2: &#x2212;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and +50&#xA0;mmHg, and level 3: &#x2212;100&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and +100&#xA0;mmHg; <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1; Fig.&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>A). Finally, (iii) the MAPC<sub>NN</sub> was tested under very acute disturbances with model responses in high sensitivities to drugs and drug interactions (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;3). At 20&#xA0;min after the start of control for 80&#xA0;min, the acute disturbances of three levels [10 (level 1), 5 (level 2), and 0 (level 3) min to reaching the offset values of &#x2212;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and +50&#xA0;mmHg in &#x394;MAP<sub>mod</sub> after the start of the disturbances] were added (Fig.&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>B). In those simulations, the limitations of infusion rates of drugs were eliminated to elucidate the limitations of the control performance.</p>
+          </sec>
+          <sec id="Sec13">
+            <title>Time-variant Changes</title>
+            <p>Patient responses to therapeutic agents have a nonlinear and time-variant nature. If the delay of a plant, which reflects the infusion rate of drugs through the catheter, internal patient circulation and perfusion delay, and the drug-recirculation characteristics of a patient,<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR26">26</xref>,<xref ref-type="bibr" rid="CR30">30</xref> is not known accurately or changes during drug infusions, infusion delays will engender an unstable condition. Therefore, the controller robustness was tested under the change of the infusion delay in this study. The pure time delays [<italic>L</italic> in the unit impulse response of Eq. (2)] of patient responses to therapeutic agents were varied from 30 to 90&#xA0;s in CO responses and 60 to 120&#xA0;s in MAP responses to DBT and SNP infusions during the closed loop control [Fig.&#xA0;<xref rid="Fig12" ref-type="fig">12</xref>A(a)]. The parameters (<italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, <italic>b</italic><sub>2</sub>) in Eq. (4) were varied from 1/3 to 3 to examine the controller performance under time-variant and wide ranges of patient sensitivities to drugs and drug interactions [Fig.&#xA0;<xref rid="Fig12" ref-type="fig">12</xref>A(b)]. The exogenous perturbations were added to the time-variant patient responses ranging within &#xB1;10&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and +20&#xA0;mmHg in &#x394;MAP<sub>mod.</sub> Random noises within &#xB1;3&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and &#xB1;2&#xA0;mmHg were added to &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> responses [Fig.&#xA0;<xref rid="Fig12" ref-type="fig">12</xref>B(a) and C(a)]. The control duration was 120&#xA0;min.</p>
+          </sec>
+        </sec>
+        <sec id="Sec14">
+          <title>Animal Study</title>
+          <p>To evaluate the control performance in MAPC<sub>NN</sub> under the unknown physiological responses such as nonlinearity and drug interaction, the simultaneous control of CO and MAP was performed using a dog with acute heart failure. Acute ischemic heart failure in an anesthetized and ventilated dog (23&#xA0;kg) was induced by microsphere embolization of the left main coronary artery. A double-lumen catheter was introduced into the right femoral vein for administration of drugs using an infusion pump (CFV-3200; Nihon Kohden, Tokyo, Japan). CO was measured by an electromagnetic flow probe (MFV-2100; Nihon Kohden), and MAP was measured through a pressure transducer (DX-200; Nihon Kohden) at a 10-Hz sampling rate through a 12-bit digital-to-analog converter.</p>
+          <p>The control objective was to increase the low CO (62.4&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) at the setpoint (+40%) using DBT infusion and to maintain the MAP (73.9&#xA0;mmHg) at the setpoint (&#x394;MAP&#xA0;=&#xA0;&#xB1;0&#xA0;mmHg) using SNP infusion in acute heart failure. The closed-loop control duration was 60&#xA0;min. The infusion rates were bounded as 0&#xA0;&#x2264;&#xA0;<italic>u</italic><sub>1</sub>(<italic>t</italic>)&#xA0;&#x2264;&#xA0;10 in DBT and 0&#xA0;&#x2264;&#xA0;<italic>u</italic><sub>2</sub>(<italic>t</italic>)&#xA0;&#x2264;&#xA0;6 in SNP.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="Sec15" sec-type="results">
+      <title>RESULTS</title>
+      <sec id="Sec16">
+        <title>Simulations</title>
+        <sec id="Sec17">
+          <title>Drug Interactions</title>
+          <p>Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> shows simulation results of closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under unknown patient sensitivities to drugs and drug interactions. The &#x394;CO in the DBT-CO loop converged on the setpoint (+35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) within approximately 15&#xA0;min, according to the guided setpoint during the first 40-min control period, regardless of unanticipated patient sensitivities and drug interactions (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;2). The control for the &#x394;MAP in the SNP-MAP loop minimally suppressed the hypertension (+4.2 vs. +15.0&#xA0;mmHg with or without SNP infusion) induced by the DBT infusion. At 40 and 80&#xA0;min of the closed-loop control, patient sensitivities and drug interactions were widely changed (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;2 to 1/3 and 1/3 to 3). The &#x394;CO converged on the setpoint robustly, whereas the &#x394;CO showed transient and large changes (+35.0 showing the setpoint to +14.9 and to +99.3&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> at approximately 50 and 85&#xA0;min). Although &#x394;MAP was decreased acutely by the change of patient sensitivity and drug interaction (&#xB1;0 to &#x2212;20.7&#xA0;mmHg at approximately 85&#xA0;min), it returned robustly to a normal level. The average errors between setpoints and observed responses were 6.4&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and 1.6&#xA0;mmHg (10.5&#xA0;mmHg without SNP infusion) in MAP during 120-min closed-loop control. Weights and biases of two NN were adjusted to optimal values [Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>B(b) and C(b)] when the unexpected changes occurred. The infusion rates of DBT and SNP were adjusted smoothly to optimal levels corresponding to the unknown patient responses to drugs.</p>
+          <p>Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> shows average errors between setpoints and model responses in &#x394;CO and &#x394;MAP during closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under the various sensitivities to drugs and drug interactions. The control performance was overall accurate and a tendency excited for dependence on the sensitivity of CO to DBT (i.e., parameter <italic>a</italic><sub>1</sub>); the control performance was increased as the sensitivity of CO to DBT increased (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;1/3&#x2192;3). However, in some cases, great hypertension was observed during control, as displayed in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A; although the CO control was smoothly completed under such cases, the great hypertension was induced because of the high interaction of DBT infusion used for CO treatment (i.e. <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;3). The maximum values of the hypertension in cases 1 (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>a</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>b</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, and <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;High&#x2019;), 2 (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>a</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>b</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Mid.&#x2019;, and <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;High&#x2019;), and 3 (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>a</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;Mid.&#x2019;, <italic>b</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, and <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;High&#x2019;) were 60.3, 39.4, and 33.8&#xA0;mmHg, respectively. Here, &#x2018;Low&#x2019;&#xA0;=&#xA0;1/3, &#x2018;Mid.&#x2019;&#xA0;=&#xA0;1, and &#x2018;High&#x2019;&#xA0;=&#xA0;3. In case 2, the infusion rates of DBT were slightly disturbed and the estimation error between the NN and &#x394;CO responses oscillated. However, the &#x394;CO in case 2 was unaffected by the oscillation of DBT infusion because of the low sensitivity of CO to DBT (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;). Infusion rates of SNP in all cases were saturated at around 8&#xA0;min because of the limitation of drug infusion. After the saturation, the infusion rate of SNP in case 1 was decreased at around 12&#xA0;min.
+<table-wrap id="Tab2"><label>TABLE&#xA0;2.</label><caption><p>Average errors between setpoints and model responses in CO and MAP under various sensitvities to drugs and drug interactions.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" colspan="2">CO (<italic>a</italic><sub>1</sub>):</th><th align="left" colspan="3">Low</th><th align="left" colspan="3">Mid.</th><th align="left" colspan="3">High</th></tr><tr><th align="left" colspan="2">CO (<italic>a</italic><sub>2</sub>):</th><th align="left"/><th align="left"/><th align="left"/><th align="left"/><th align="left"/><th align="left"/><th align="left"/><th align="left"/><th align="left"/></tr><tr><th align="left">MAP (<italic>b</italic><sub>1</sub>)</th><th align="left">MAP (<italic>b</italic><sub>2</sub>)</th><th align="left">Low</th><th align="left">Mid.</th><th align="left">High</th><th align="left">Low</th><th align="left">Mid.</th><th align="left">High</th><th align="left">Low</th><th align="left">Mid.</th><th align="left">High</th></tr></thead><tbody><tr><td align="left" rowspan="3">Low</td><td align="left">Low</td><td char="." align="char">5.5 (0.5)</td><td char="." align="char">4.8 (0.4)</td><td char="." align="char">3.4 (0.3)</td><td char="." align="char">2.9 (0.3)</td><td char="." align="char">2.7 (0.3)</td><td char="." align="char">2.2 (0.2)</td><td char="." align="char">1.3 (0.1)</td><td char="." align="char">1.2 (0.1)</td><td char="." align="char">1.2 (0.1)</td></tr><tr><td align="left">Mid.</td><td char="." align="char">5.3 (10.3)</td><td char="." align="char">4.1 (4.8)</td><td char="." align="char">3.0 (1.0)</td><td char="." align="char">3.3 (1.9)</td><td char="." align="char">2.6 (1.0)</td><td char="." align="char">2.0 (0.7)</td><td char="." align="char">1.3 (0.5)</td><td char="." align="char">1.2 (0.5)</td><td char="." align="char">1.2 (0.4)</td></tr><tr><td align="left">High</td><td char="." align="char">5.7 (45.0*)</td><td char="." align="char">3.8 (25.1*)</td><td char="." align="char">4.2 (3.0)</td><td char="." align="char">3.5 (17.3)</td><td char="." align="char">2.9 (6.1)</td><td char="." align="char">2.2 (1.6)</td><td char="." align="char">4.2 (3.4)</td><td char="." align="char">3.9 (3.5)</td><td char="." align="char">1.5 (1.2)</td></tr><tr><td align="left" rowspan="3">Mid.</td><td align="left">Low</td><td char="." align="char">6.0 (1.2)</td><td char="." align="char">5.7 (1.2)</td><td char="." align="char">5.8 (1.1)</td><td char="." align="char">3.2 (0.6)</td><td char="." align="char">2.9 (0.6)</td><td char="." align="char">2.4 (0.5)</td><td char="." align="char">1.5 (0.4)</td><td char="." align="char">1.4 (0.4)</td><td char="." align="char">1.3 (0.3)</td></tr><tr><td align="left">Mid.</td><td char="." align="char">5.5 (0.6)</td><td char="." align="char">4.7 (0.5)</td><td char="." align="char">3.5 (0.4)</td><td char="." align="char">3.2 (0.5)</td><td char="." align="char">2.8 (0.5)</td><td char="." align="char">2.1 (0.4)</td><td char="." align="char">1.6 (0.4)</td><td char="." align="char">1.4 (0.4)</td><td char="." align="char">1.3 (0.3)</td></tr><tr><td align="left">High</td><td char="." align="char">5.3 (29.6*)</td><td char="." align="char">3.8 (12.2)</td><td char="." align="char">3.4 (1.9)</td><td char="." align="char">3.3 (3.9)</td><td char="." align="char">2.7 (1.4)</td><td char="." align="char">2.0 (1.0)</td><td char="." align="char">1.9 (1.1)</td><td char="." align="char">1.7 (0.9)</td><td char="." align="char">1.3 (0.7)</td></tr><tr><td align="left" rowspan="3">High</td><td align="left">Low</td><td char="." align="char">6.0 (2.5)</td><td char="." align="char">5.9 (2.5)</td><td char="." align="char">6.2 (2.3)</td><td char="." align="char">2.8 (0.7)</td><td char="." align="char">2.8 (0.6)</td><td char="." align="char">2.7 (0.7)</td><td char="." align="char">1.3 (0.6)</td><td char="." align="char">1.3 (0.5)</td><td char="." align="char">1.3 (0.4)</td></tr><tr><td align="left">Mid.</td><td char="." align="char">6.0 (4.1)</td><td char="." align="char">6.2 (3.9)</td><td char="." align="char">7.0 (3.4)</td><td char="." align="char">2.9 (0.6)</td><td char="." align="char">2.8 (0.6)</td><td char="." align="char">2.5 (0.6)</td><td char="." align="char">1.4 (0.6)</td><td char="." align="char">1.3 (0.5)</td><td char="." align="char">1.3 (0.4)</td></tr><tr><td align="left">High</td><td char="." align="char">5.6 (1.0)</td><td char="." align="char">4.8 (0.7)</td><td char="." align="char">6.4 (4.3)</td><td char="." align="char">3.2 (0.8)</td><td char="." align="char">2.9 (0.8)</td><td char="." align="char">2.3 (1.3)</td><td char="." align="char">2.0 (1.6)</td><td char="." align="char">1.8 (1.6)</td><td char="." align="char">1.5 (1.5)</td></tr></tbody></table><table-wrap-foot><p>The numbers show the average errors in CO (left) and MAP (right). &#x2018;Low&#x2019;&#xA0;=&#xA0;1/3, &#x2018;Mid.&#x2019;&#xA0;=&#xA0;1, and &#x2018;High&#x2019;&#xA0;=&#xA0;3 in the parameters in Eq. (4). The sign of * shows the cases of large hypertension (for detailed results, see Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>).</p></table-wrap-foot></table-wrap><fig id="Fig7"><label>FIGURE&#xA0;7.</label><caption><p>Simulation results of MAPC<sub>NN</sub> under cases of great hypertension (A) with and (B) without the limitation of drug infusion rates. Parameters (<italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, <italic>b</italic><sub>2</sub>) in Eq. (4) are <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>a</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>b</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, and <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;High&#x2019; in case 1, <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>a</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>b</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Mid.&#x2019;, and <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;High&#x2019; in case 2, and <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, <italic>a</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;Mid.&#x2019;, <italic>b</italic><sub>1</sub>&#xA0;=&#xA0;&#x2018;Low&#x2019;, and <italic>b</italic><sub>2</sub>&#xA0;=&#xA0;&#x2018;High&#x2019; in case 3. &#x2018;Low&#x2019;, &#x2018;Mid.&#x2019;, and &#x2018;High&#x2019; are 1/3, 1, and 3, respectively. The hemodynamic responses (<italic>top</italic>), the error between the model response and the predicted response by NN during control (<italic>middle</italic>), and infusion rates of DBT and SNP (<italic>bottom</italic>) in &#x394;CO (<italic>left</italic>) or &#x394;MAP (<italic>right</italic>).</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig7_HTML" id="MO7"/></fig></p>
+          <p>To elucidate the control performance without the limitation of infusion rates of drug inputs, the MAPC<sub>NN</sub> was also tested under the same cases 1, 2, and 3 (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B). However, great hypertension was not improved by SNP infusion without the drug input limitation (63.8, 39.8, and 38.4&#xA0;mmHg in cases 1, 2, and 3) compared with those with the limitation of the drug input. In cases 2 and 3, the drug infusion rates in DBT were disturbed and the estimation errors between the NN and &#x394;CO responses had some oscillations. In addition, in all cases, the infusion rates of SNP were decreased after increasing to around 10&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>, irrespective of the remaining the hypertension.</p>
+          <p>Figure&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> shows the closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under (A) very low (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1/5 or 1/10) and (B) high (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;5 or 10) sensitivities to drugs and drug interactions. Under very low sensitivities to drugs and drug interactions, the &#x394;CO response was not able to reach the setpoint (&#xB1;35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) because of the slight sensitivity of CO to DBT (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;1/5 or 1/10), but it finally converged on a stable value (Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>A, <italic>left</italic>). Estimation errors between the NN and model responses in &#x394;CO had oscillations under such conditions. On the other hand, under very high sensitivities to drugs and drug interactions, both the &#x394;CO and &#x394;MAP responses oscillated depending on the degree of sensitivities to drugs [maximum amplitudes between observed values and setpoints: (+)9.2&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and (&#x2212;)18.8&#xA0;mmHg in <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;5 or (+)35.9&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and (&#x2212;)54.1&#xA0;mmHg in <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;10, Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>B]. However, the MAPC<sub>NN</sub> had a tendency to suppress oscillations in the &#x394;CO and &#x394;MAP responses gradually. The estimation error between the NN and model responses and the infusion rates of drugs were also disturbed.
+<fig id="Fig8"><label>FIGURE&#xA0;8.</label><caption><p>Simulation results of MAPC<sub>NN</sub> with (A) very low (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1/5 or 1/10) or (B) very high (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;5 or 10) patients&#x2019; sensitivities to drugs and drug interactions. The hemodynamic responses (<italic>top</italic>), the error between the model response and the predicted response by NN during control (<italic>middle</italic>), and infusion rates of DBT and SNP (<italic>bottom</italic>) in &#x394;CO (<italic>left</italic>) or &#x394;MAP (<italic>right</italic>). The limitations of drug infusion rates were eliminated.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig8_HTML" id="MO8"/></fig></p>
+        </sec>
+        <sec id="Sec18">
+          <title>Acute Disturbances</title>
+          <p>Figure&#xA0;<xref rid="Fig9" ref-type="fig">9</xref> shows closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under unexpected acute disturbances with background noise. The &#x394;CO converged on the setpoint (+35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) within approximately 12&#xA0;min according to the guided setpoint during the first 40-min control period, regardless of the added random noise (&#xB1;3&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) with expected patient responses (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1). The appropriate infusion of SNP for control of &#x394;MAP<sub>mod</sub> with random noise (&#xB1;2&#xA0;mmHg) suppressed hypertension (+3.5 vs. +15.4&#xA0;mmHg with or without SNP treatment) induced by DBT infusion. At 40 and 80&#xA0;min of the closed-loop control, acute disturbances were added to the &#x394;CO<sub>mod</sub> (+10 and &#x2212;10&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) and &#x394;MAP<sub>mod</sub> (+20 and +10&#xA0;mmHg) responses. The MAPC<sub>NN</sub> suppressed the transient change of CO minimally and the CO converged on the setpoint as quickly as possible. The induced transient hypertension was suppressed robustly by optimal infusion of SNP (+6.7 vs. +31.0&#xA0;mmHg with or without SNP treatment in the added disturbance at 40&#xA0;min). Average errors between setpoints and observed responses were 3.7&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and 1.4&#xA0;mmHg (20.8&#xA0;mmHg without SNP) in MAP during 120-min closed-loop control. Weights and biases of two NN were adjusted to the optimal values when the unexpected changes occurred [Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>A(c) and B(c)]. Changes of biases were linked to those of the acute disturbances and physiological variation. The infusion rates of DBT and SNP were adjusted smoothly to optimal levels corresponding to the unknown disturbances.
+<fig id="Fig9"><label>FIGURE&#xA0;9.</label><caption><p>Simulation results of MAPC<sub>NN</sub> with unknown disturbances. In the graph, A(a) and B(a) show changes of acute disturbances and random noise added to &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> responses. A(b) and B(b) represent setpoints, &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> (solid lines), and predicted outputs by NNs (dashed lines). A(c) and B(c) indicate weight changes in NN for the controllers in DBT-CO and SNP-MAP loops: weights between the input and first hidden layers (top), first and second hidden layers (middle), and second hidden and output layers (bottom). C. Infusion rates of DBT (solid line) and SNP (dashed line).</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig9_HTML" id="MO9"/></fig></p>
+          <p>Figure&#xA0;<xref rid="Fig10" ref-type="fig">10</xref> shows the closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under very large amplitudes of random noise [levels 1 (&#xB1;5 in both &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub>), 2 (&#xB1;25), and 3 (&#xB1;50), Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>A(a) and B(a); <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1]. Although the &#x394;CO and &#x394;MAP responses [Figs.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>A(b) and B(b)] approached the setpoints, they depended directly on the appearance patterns and the amplitudes in large random noise. The infusion rates in DBT and SNP and the estimation errors between the NN and model responses were also reflected by changes of random noise.<fig id="Fig10"><label>FIGURE&#xA0;10.</label><caption><p>Simulation results of MAPC<sub>NN</sub> with large random noise. A(a) and B(a) show changes of large random noise added to &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> responses. Noise level 1 (&#xB1;5 in &#x394;CO<sub>mod</sub> and &#xB1;5&#xA0;mmHg in &#x394;MAP<sub>mod</sub>), level 2 (&#xB1;25&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1 </sup>and &#xB1;25&#xA0;mmHg), and level 3 (&#xB1;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1 </sup>and &#xB1;50&#xA0;mmHg). A(b) and B(b) represent setpoints, &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> responses (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1). A(c) and B(c) indicate the error between the model response and the predicted response by NN during control. A(d) and B(d) are Infusion rates of DBT and SNP. The limitations of drug infusion rates were eliminated.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig10_HTML" id="MO10"/></fig></p>
+          <p>Figure&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>A shows the closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under huge disturbances [levels 1 (&#x2212;20&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and +20&#xA0;mmHg in &#x394;MAP<sub>mod</sub>), 2 (&#x2212;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and +50&#xA0;mmHg), and 3 (&#x2212;100&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and +100&#xA0;mmHg); <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;1]. In the disturbance of level 1, the &#x394;CO and &#x394;MAP responses converged on the setpoints, whereas the estimation error between the NN and model responses in &#x394;CO exhibited some oscillations around 60&#x2013;65&#xA0;min. At level 2, the CO control was completed well. However, the MAP did not reach the setpoint because of the large disturbance and the interaction from DBT used for the CO control. In addition, the infusion rate of SNP was decreased at around 30&#xA0;min irrespective of the hypertension of approximately 40&#xA0;mmHg. The MAP response did not oscillate and converged on a steady state being far from the setpoint. At level 3, neither the &#x394;CO nor &#x394;MAP responses reached the setpoints. The infusion rate of SNP was increased instantaneously by receiving a great disturbance at 20&#xA0;min, and it was decreased at around 25&#xA0;min regardless of remaining the large hypertension of approximately 120&#xA0;mmHg. The estimation error between the NN and model responses in &#x394;CO showed oscillation at approximately 40&#xA0;min.<fig id="Fig11"><label>FIGURE&#xA0;11.</label><caption><p>Simulation results of MAPC<sub>NN</sub> with (A) very huge and (B) acute disturbances. A: huge disturbance level 1 (&#x2212;20&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO<sub>mod</sub> and +20&#xA0;mmHg in &#x394;MAP<sub>mod</sub>), level 2 (&#x2212;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and +50&#xA0;mmHg), and level 3 (&#x2212;100&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> and +100&#xA0;mmHg). B: acute disturbance level 1 (10&#xA0;min to the added disturbance of &#x2212;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO and +50&#xA0;mmHg in &#x394;MAP), level 2 (5&#xA0;min), and level 3 (0&#xA0;min); <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;3 in Eq. (4). The hemodynamic responses (<italic>top</italic>), the error between the model response and the predicted response by NN during control (<italic>middle</italic>), and infusion rates of DBT and SNP (<italic>bottom</italic>) in &#x394;CO (<italic>left</italic>) or &#x394;MAP (<italic>right</italic>). The limitations of drug infusion rates were eliminated.</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig11_HTML" id="MO11"/></fig></p>
+          <p>Figure&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>B shows the closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under very acute disturbances with high sensitivities to drugs and drug interactions [levels 1 (10&#xA0;min to the added disturbances of &#x2212;50&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in &#x394;CO and +50&#xA0;mmHg in &#x394;MAP), 2 (5&#xA0;min), and 3 (0&#xA0;min); <italic>a</italic><sub>1</sub>&#xA0;=&#xA0;<italic>a</italic><sub>2</sub>&#xA0;=&#xA0;<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;3]. At levels 1 and 2, although the &#x394;CO and &#x394;MAP responses showed small oscillations because of the acute disturbances, they converged on the setpoints by 80&#xA0;min. In level 3 (step input of disturbance), the &#x394;CO and &#x394;MAP received the effects of the step input of the very acute disturbances at 20&#xA0;min directly. Although &#x394;CO and &#x394;MAP responses were disturbed until 70&#xA0;min, those values tended to converge on the setpoints eventually. In particular, the infusion rate of SNP at level 3 was increased acutely to 20&#xA0;&#x3BC;g&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> against the large hypertension of 50&#x2013;60&#xA0;mmHg induced by the very acute disturbance with high amplitude of 50&#xA0;mmHg at 20&#xA0;min; in turn, the excessive hypotension after the acute hypertension was induced by the high sensitivity of MAP to the SNP used for the MAP control (<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;3). However, the infusion rate of SNP was adjusted to the optimal value at approximately 70&#xA0;min.</p>
+        </sec>
+        <sec id="Sec19">
+          <title>Time-variant Changes</title>
+          <p>Figure&#xA0;<xref rid="Fig12" ref-type="fig">12</xref> shows the closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;12, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.01, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under the unknown time-variant responses containing time delays to therapeutic agents with acute disturbances. The &#x394;CO converged on the setpoint (+35&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>) within approximately 10&#xA0;min according to the guided setpoint during the first 40-min control, irrespective of time-variant patient sensitivities and drug interactions with added noise; it showed only slight oscillation (&#xB1;5&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup>). The SNP infusion for the control of &#x394;MAP suppressed the hypertension (+6.1 and +22.8&#xA0;mmHg with and without SNP treatment) induced by DBT infusion beforehand. At 40&#xA0;min of the closed-loop control, acute disturbances (&#x2212;10&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and +20&#xA0;mmHg in MAP) were added to the patient responses. The &#x394;CO and &#x394;MAP quickly converged on the setpoint within approximately 10&#xA0;min, whereas the transient hypertension was induced (+9.4 vs. +38.9&#xA0;mmHg with or without SNP). The average errors between setpoints and observed responses were 4.2&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and 2.7&#xA0;mmHg (15.3&#xA0;mmHg without a vasodilator) in MAP during 120-min closed-loop control. The weights and biases of two NN were adjusted to optimal values when the unexpected changes occurred [Fig.&#xA0;<xref rid="Fig12" ref-type="fig">12</xref>B(c) and C(c)]. Changes of biases were linked to those of the time-variant responses and acute disturbances. The infusion rates of DBT and SNP were adjusted to optimal levels corresponding to the unknown time-variant responses.
+<fig id="Fig12"><label>FIGURE&#xA0;12.</label><caption><p>Simulation results of MAPC<sub>NN</sub> under unknown time-variant responses with disturbances. A(a) in the graph displays changes of the parameters of the time delays (<italic>L</italic>) in the unit impulse response of Eq. (2). A(b) indicates changes of the parameters (<italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, <italic>b</italic><sub>1</sub>, <italic>b</italic><sub>2</sub>) in Eq. (4). B(a) and C(a) show changes of acute disturbances and random noise added to &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> responses. B(b) and C(b) denote setpoints, &#x394;CO<sub>mod</sub> and &#x394;MAP<sub>mod</sub> (solid lines), and predicted outputs by NN (dashed lines). B(c) and C(c) are the weight changes in NN for controllers in DBT-CO and SNP-MAP loops: weights between input and first hidden layers (top), first and second hidden layers (middle), and second hidden and output layers (bottom). D. Infusion rates of DBT (solid line) and SNP (dashed line).</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig12_HTML" id="MO12"/></fig></p>
+        </sec>
+      </sec>
+      <sec id="Sec20">
+        <title>Animal Study</title>
+        <p>Figure&#xA0;<xref rid="Fig13" ref-type="fig">13</xref> shows results of closed-loop control by MAPC<sub>NN</sub> (<italic>N</italic><sub><italic>p</italic>1</sub>&#xA0;=&#xA0;<italic>N</italic><sub><italic>p</italic>2</sub>&#xA0;=&#xA0;8, <italic>q</italic><sub>1</sub>&#xA0;=&#xA0;<italic>q</italic><sub>2</sub>&#xA0;=&#xA0;0.3, and <italic>K</italic><sub><italic>n</italic>1</sub>&#xA0;=&#xA0;<italic>K</italic><sub><italic>n</italic>2</sub>&#xA0;=&#xA0;0.2) under the actual response of canine left heart failure. The CO in the DBT-CO loop converged on the setpoint within approximately 10&#xA0;min regardless of the unknown response containing nonlinear, drug interaction, and the effects of arterial baroreflex with physiological variation in actual heart failure. The control for the &#x394;MAP in the SNP-MAP loop suppressed the acute hypertension (+20&#xA0;mmHg) induced by the DBT infusion. Whereas the large disturbance like arrhythmia was induced at around 38&#xA0;min during the control, the CO and MAP were appropriately controlled by the MAPC<sub>NN</sub> adjusting the infusion rates of DBT and SNP to the optimal levels. The average errors between setpoints and observed responses were 7.3&#xA0;ml&#xA0;kg<sup>&#x2212;1</sup>&#xA0;min<sup>&#x2212;1</sup> in CO and 6.4&#xA0;mmHg in MAP during 60-min closed-loop control.
+<fig id="Fig13"><label>FIGURE&#xA0;13.</label><caption><p>Results of hemodynamic regulation by means of MAPC<sub>NN</sub> under canine left heart failure. Raw data of CO (top) and MAP (middle) responses during DBT and SNP infusions. Bottom in the graph is the Infusion rates of DBT (solid line) and SNP (dashed line).</p></caption><graphic position="anchor" xlink:href="10439_2006_9190_Fig13_HTML" id="MO13"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec21" sec-type="discussion">
+      <title>DISCUSSION</title>
+      <p>The development of automatic drug-delivery systems requires a controller that can adapt to the various patient responses in clinical situations. The MAPC<sub>NN</sub> was confirmed to be robust with respect to uncertainty in drug interactions, acute disturbances, time-variant responses containing time delays to therapeutic agents (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, <xref rid="Fig9" ref-type="fig">9</xref>, and <xref rid="Fig12" ref-type="fig">12</xref>), and the actual response of a dog with heart failure (Fig.&#xA0;<xref rid="Fig13" ref-type="fig">13</xref>) because of its ability to learn nonlinear and time-variant changes of the system during the on-line control.</p>
+      <p>The infusion of DBT increased MAP as well as CO in acute left heart failure of dogs [Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A(a)]. The DBT infusion does not generally act on the SVR whereas both the CO and SVR affect MAP.<xref ref-type="bibr" rid="CR14">14</xref> Therefore, the increase of MAP during DBT infusion in this study would have resulted mainly from increasing the CO induced by the actions of the beta receptors (<italic>&#x3B2;</italic><sub>1</sub>, <italic>&#x3B2;</italic><sub>2</sub>) of cardiac smooth muscle<xref ref-type="bibr" rid="CR30">30</xref> rather than the SVR. On the other hand, the SNP infusion resulted in the decrease of MAP and the increase of CO between middle and high doses [Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>A(b)] because of the decrease of SVR (afterload of a heart) by SNP and secondarily increased CO.<xref ref-type="bibr" rid="CR6">6</xref> In addition, the SNP treatment might have suppressed the increase in preload through the decrease of SVR because of increasing venous compliance for retaining the blood in the veins and lowering the venous return to the heart in case of congestive heart failure. In the simultaneous regulation of CO and MAP, the control for CO induced hypertension (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, <xref rid="Fig9" ref-type="fig">9</xref>, <xref rid="Fig12" ref-type="fig">12</xref>, and <xref rid="Fig13" ref-type="fig">13</xref>) because the primary control target in this study was the increase of low CO in acute heart failure. The MAPC<sub>NN</sub> was able to suppress the hypertension using optimal infusion of SNP as well as increasing CO using DBT to an optimal target value because the combined infusion of an inotropic agent and a vasodilator would have acted effectively.<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR13">13</xref>,<xref ref-type="bibr" rid="CR25">25</xref></p>
+      <p>Application of MAPC<sub>NN</sub> to a multiple hemodynamic control accomplished the regulation of CO and MAP under various changes of the patient&#x2019;s responses to drugs and disturbances (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, <xref rid="Fig9" ref-type="fig">9</xref>, <xref rid="Fig12" ref-type="fig">12</xref>, and <xref rid="Fig13" ref-type="fig">13</xref>). In particular, regardless of the large change of patient sensitivities as shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, the MAPC<sub>NN</sub> robustly adjusted the acute and large changes to generate a stable condition. Similarly to the previous controllers,<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR10">10</xref> the MAPC<sub>NN</sub> suppressed those disturbances performed stabilized control under unexpected acute disturbances (Figs.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref> and <xref rid="Fig12" ref-type="fig">12</xref>). Under time-variant patient responses with pure time delays, which are a crucial obstacle to stable control,<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR26">26</xref> the MAPC<sub>NN</sub> provided sufficient control performance (Fig.&#xA0;<xref rid="Fig12" ref-type="fig">12</xref>). Regardless of actual nonlinear response, drug interaction, and partial disturbances with arrhythmia, the MAPC<sub>NN</sub> could regulate the CO and MAP simultaneously (Fig.&#xA0;<xref rid="Fig13" ref-type="fig">13</xref>). The superior control performance resulted from the function to adjust the weights and biases of the NN to optimal points during the on-line control (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, <xref rid="Fig9" ref-type="fig">9</xref>, and <xref rid="Fig12" ref-type="fig">12</xref>).</p>
+      <p>Only the two-NN models of average responses with heart failure were considered in the calculation of the appropriate multiple drug infusion rates of DBT and SNP (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>) to mitigate the enormous number of trials associated with the control design. Model predictive controllers or fuzzy controllers might require an extremely lengthy set-up stage to prepare the model banks as linear models of patients&#x2019; responses to drugs or to provide the experienced rules describing various cases in clinical settings whereas the controllers are an effective means of adjusting to various patients&#x2019; sensitivities to drugs<xref ref-type="bibr" rid="CR21">21</xref> and describing nonlinear responses to drugs<xref ref-type="bibr" rid="CR5">5</xref>. A controller based on NN solves those problems because it decreases the number of models required for the control design of the various changes of hemodynamics clearly.</p>
+      <p>Irrespective of the wide range over physiological responses (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) in simulations and actual response of a dog with heart failure containing the effects of baroreflex and the full renin&#x2013;angiotensin system induced by long-term control,<xref ref-type="bibr" rid="CR14">14</xref> CO and MAP in the MAPC<sub>NN</sub> promptly approached the setpoints because of the optimization of both the stability and speed for the MAPC<sub>NN</sub> (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, <xref rid="Fig9" ref-type="fig">9</xref>, <xref rid="Fig12" ref-type="fig">12</xref>, and <xref rid="Fig13" ref-type="fig">13</xref>). Therefore, the designed MAPC<sub>NN</sub> will be feasible for application to automatic drug therapy in heart failures. However, when rapid treatment using drugs against more acute and large disturbances is required during hemodynamic controls, another supplemental system might be required.<xref ref-type="bibr" rid="CR9">9</xref> Diagnoses of characteristics of patients&#x2019; responses to drugs or tuning weights of NNs during closed-loop controls<xref ref-type="bibr" rid="CR1">1</xref> may also be effective for hemodynamic controls to accelerate the NN learning speed. In addition, because the fluid infusion, blood transfusion, anesthesia, and muscular blockade as well as the therapeutic agents controlled in this study are common in clinical practice,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR29">29</xref> the controllers that can adjust physiological responses to further multiple drugs will be desired. The MAPC<sub>NN</sub> tested herein can be extended simply to multivariate control systems under such clinical conditions for drug therapy with heart failure.</p>
+      <p>The MAPC<sub>NN</sub> was tested under various conditions over physiological responses to elucidate the limitations of the control performance (Figs.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>, <xref rid="Fig8" ref-type="fig">8</xref>, <xref rid="Fig10" ref-type="fig">10</xref>, and <xref rid="Fig11" ref-type="fig">11</xref>). Regardless of such severe conditions, the hemodynamics during MAPC<sub>NN</sub> learning very large changes of the sensitivities to drugs and drug interactions and the disturbances using NN tended to converge on the setpoints with some oscillations observed, insofar as those responses were within the possible range of the control using DBT and SNP (e.g., Figures&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>B and <xref rid="Fig11" ref-type="fig">11</xref>B). On the other hand, there existed cases for which it was obviously impossible for MAPC<sub>NN</sub> to control the hemodynamics (Figs.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>, <xref rid="Fig8" ref-type="fig">8</xref>A, and <xref rid="Fig11" ref-type="fig">11</xref>A). For example, when the interaction from DBT for the CO control to MAP was very large (<italic>b</italic><sub>2</sub>&#xA0;=&#xA0;3) and the sensitivity of MAP to SNP was small (<italic>b</italic><sub>1</sub>&#xA0;=&#xA0;1/3 or 1, Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>), the MAPC<sub>NN</sub> was actually incapable of attenuating the induced hypertension. Those cases resulted from nonlinear model responses to drugs in the present study; the hemodynamic responses, therefore, would have saturated because of the range of nonlinear model responses, regardless of the increase of drug infusion rates.</p>
+      <p>The NN in the MAPC<sub>NN</sub> under the severe conditions seems to have tried to learn and adapt to the situations during real-time control. In cases of large error between actual responses and predicted responses where the NN in the MAPC<sub>NN</sub> learned the average responses before the control (e.g. the CO responses of case 2 in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>A, cases 2 and 3 in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>B, and cases 1 and 3 in Fig.&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>A), the hemodynamics during the control exhibited oscillation and the NN in the MAPC<sub>NN</sub> would have tried to learn the severely changed situation again. In addition, when the hemodynamic response showed incorrect or opposite response to the drug input compared with the learned average response by the NN before the control [e.g. cases of not reaching the setpoint and converging on a stable state regardless of the DBT infusion for CO control because of very low sensitivity to the drug (<italic>a</italic><sub>1</sub>&#xA0;=&#xA0;1/5 or 1/10, Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>A) and of the opposite effect of SNP on MAP, speciously, because of the very large disturbances (levels 2 and 3 in Fig.&#xA0;<xref rid="Fig11" ref-type="fig">11</xref>A) compared with the learning response], the drug infusion rate of the MAPC<sub>NN</sub> was decreased despite the remainder of the low CO or hypertension during the closed-loop control with real-time NN learning. Therefore, these simulation results suggest the following two points. First, in those cases such as the high interaction over the drug effect on the target physiological parameter and the incorrect or opposite responses to drugs compared with those of previously learned NN, improvement of the strategy in drug treatment would be required; alternatively, the MAPC<sub>NN</sub> would fall into a situation of control impossibility. Second, the physiological variations related with responses to anesthesia, antiarrhythmic drug, and muscle relaxant, the external disturbances, and the artificial background noise must be set to the smallest possible values to bring out the best performance of the controller.</p>
+      <p>Several limitations are apparent in present study. First, the modeling for the CO and MAP responses to drugs might depend on the protocols of animal experiments such as the order and washout period of drug infusions. The protocol in the present animal study was, therefore, described in detail (reference &#x2018;<italic>Modeling of Pharmacological Response</italic>&#x2019; in the &#x2018;MATERIALS AND METHODS&#x2019; section). Second, one (low CO and normal MAP) of the heart-failure conditions was tested using the present animal study. The kinds of heart failures are various in actual patients. Therefore, further animal studies will be required. Finally, an electromagnetic flow probe was used for CO measurement in the present study. However, in an actual clinical setting, the common technique for CO measurement (e.g., the thermodilution technique using a pulmonary artery catheter<xref ref-type="bibr" rid="CR19">19</xref>) has a slower response than that of an electromagnetic probe. The high accuracy of a flow probe, such as the time resolution (at least 30&#xA0;s as used for this experiment), and the pure time delay from an actual response (as few response delays as possible) would be required to acquire the results that were obtained in the present study.</p>
+    </sec>
+    <sec id="Sec22" sec-type="conclusion">
+      <title>CONCLUSIONS</title>
+      <p>The MAPC<sub>NN</sub> was designed and evaluated in simulation and animal studies to regulate the nonlinear responses of CO and MAP in acute heart failure using DBT and SNP under unexpected changes of patient sensitivities to drugs, drug interactions, acute disturbances, and time-variant responses to therapeutic agents. The MAPC<sub>NN</sub> showed robust control performance irrespective of various unexpected responses to drugs over actual physiological responses (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) and actual response of a dog in heart failure. Flexibility of a NN coupled with an adaptive control mechanism will enable the regulation of various physiological responses to drugs with heart failures.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgment</title>
+      <p>The animal study was supported by the National Cardiovascular Center Research Institute (2001.10&#x2013;2004.3).</p>
+    </ack>
+    <app-group>
+      <app id="App1">
+        <title>APPENDIX</title>
+        <p>The error signal is propagated back through the network, thereby modifying the weights before the next input presentation. The backpropagation algorithm is performed in the following order: output layer, second hidden layer, and first hidden layer. All connection weights are adjusted to decrease the error function by the backpropagation learning rule based on the gradient decent method.<xref ref-type="bibr" rid="CR23">23</xref> The error function, <italic>E</italic> is <disp-formula id="Equb"><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\rm E} = \frac{1} {2}  \varepsilon ^2 = \frac{1} {2}  \left( {\Delta y_{{\rm{mod}}} - \Delta y_{{\rm{NN}}} } \right)^2 $$\end{document}</tex-math></disp-formula>, where &#x394;<italic>y</italic><sub>mod</sub> is the model response as a supervised signal, &#x394;<italic>y</italic><sub>NN</sub> is the &#x394;<italic>y</italic><sub>mod</sub> predicted by the NN before update of the connection weights, and <italic>&#x3B5;</italic> is the error between &#x394;<italic>y</italic><sub>mod</sub> and &#x394;<italic>y</italic><sub>NN</sub>. The error is back-propagated through the network. The connection weight is generally updated by gradient descent of <italic>E</italic> as a function of weights:<xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR27">27</xref><disp-formula id="Equc"><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ w^* = w + K_{\rm{n}} \Delta w $$\end{document}</tex-math></disp-formula>, where <disp-formula id="Equd"><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \Delta w = \frac{{\partial E}} {{\partial w}} = \frac{{\partial E}} {{\partial \varepsilon }}\frac{{\partial \varepsilon }} {{\partial y_{NN} }}\frac{{\partial y_{{\rm{NN}}} }} {{\partial w}} = - \varepsilon \frac{{\partial y_{{\rm{NN}}} }} {{\partial w}} $$\end{document}</tex-math></disp-formula>, and in which <italic>w*</italic> is the single weight of each connection after updating, <italic>w</italic> is the single weight of each connection before updating, &#x394;<italic>w</italic> is the modified weight, and <italic>K</italic><sub><italic>n</italic></sub> (<italic>K</italic><sub><italic>n</italic>1</sub> and <italic>K</italic><sub><italic>n</italic>2</sub> in the DBT-CO and SNP-MAP loops) is the learning rate. For detailed equations, refer to the previous article.<xref ref-type="bibr" rid="CR9">9</xref></p>
+      </app>
+    </app-group>
+    <ref-list id="Bib1">
+      <title>REFERENCES</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>C. T.</given-names>
+            </name>
+            <name>
+              <surname>Lin</surname>
+              <given-names>W. L.</given-names>
+            </name>
+            <name>
+              <surname>Kuo</surname>
+              <given-names>T. S.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>C. Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive control of arterial blood pressure with a learning controller based on multilayer neural networks</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1997</year>
+          <volume>44</volume>
+          <fpage>601</fpage>
+          <lpage>609</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.594901</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chen C. T., W. L. Lin, T. S. Kuo, C. Y. Wang (1997) Adaptive control of arterial blood pressure with a learning controller based on multilayer neural networks. IEEE Trans. Biomed. Eng. 44:601&#x2013;609 <pub-id pub-id-type="pmid">9210820</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Delapasse</surname>
+              <given-names>J. S.</given-names>
+            </name>
+            <name>
+              <surname>Behbehani</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Tsui</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Klein</surname>
+              <given-names>K. W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Accommodation of time delay variations in automatic infusion of sodium nitroprusside</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1994</year>
+          <volume>41</volume>
+          <fpage>1083</fpage>
+          <lpage>1091</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.335846</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Delapasse J. S., K. Behbehani, K. Tsui, K. W. Klein (1994) Accommodation of time delay variations in automatic infusion of sodium nitroprusside. IEEE Trans. Biomed. Eng. 41:1083&#x2013;1091 <pub-id pub-id-type="pmid">8001997</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Forrester</surname>
+              <given-names>J. S.</given-names>
+            </name>
+            <name>
+              <surname>Diamond</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Chatterjee</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Swan</surname>
+              <given-names>H. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Medical therapy of acute myocardial infarction by application of hemodynamic subsets (second of two parts)</article-title>
+          <source>N Engl. J. Med.</source>
+          <year>1976</year>
+          <volume>295</volume>
+          <fpage>1404</fpage>
+          <lpage>1413</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Forrester J. S., G. Diamond, K. Chatterjee, H. J. Swan (1976) Medical therapy of acute myocardial infarction by application of hemodynamic subsets (second of two parts). N Engl. J. Med. 295:1404&#x2013;1413 <pub-id pub-id-type="pmid">790194</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gingrich</surname>
+              <given-names>K. J.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Modeling the hemodynamic response to dopamine in acute heart failure</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1991</year>
+          <volume>38</volume>
+          <fpage>267</fpage>
+          <lpage>272</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.133208</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gingrich K. J., R. J. Roy (1991) Modeling the hemodynamic response to dopamine in acute heart failure. IEEE Trans. Biomed. Eng. 38:267&#x2013;272 <pub-id pub-id-type="pmid">2066140</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gopinath</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Bequette</surname>
+              <given-names>B. W.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Yu</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Issues in the design of a multirate model-based controller for a nonlinear drug infusion system</article-title>
+          <source>Biotechnol. Prog.</source>
+          <year>1995</year>
+          <volume>11</volume>
+          <fpage>318</fpage>
+          <lpage>332</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp00033a013</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gopinath R., B. W. Bequette, R. J. Roy, H. Kaufman, C. Yu (1995) Issues in the design of a multirate model-based controller for a nonlinear drug infusion system. Biotechnol. Prog. 11:318&#x2013;332 <pub-id pub-id-type="pmid">7619401</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Held</surname>
+              <given-names>C. M.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiple drug hemodynamic control by means of a supervisory-fuzzy rule-based adaptive control system: Validation on a model</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1995</year>
+          <volume>42</volume>
+          <fpage>371</fpage>
+          <lpage>385</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.376130</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Held C. M., R. J. Roy (1995) Multiple drug hemodynamic control by means of a supervisory-fuzzy rule-based adaptive control system: Validation on a model. IEEE Trans. Biomed. Eng. 42:371&#x2013;385 <pub-id pub-id-type="pmid">7729836</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>J. W.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiple-drug hemodynamic control using fuzzy decision theory</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1998</year>
+          <volume>45</volume>
+          <fpage>213</fpage>
+          <lpage>228</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.661269</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Huang J. W., R. J. Roy (1998) Multiple-drug hemodynamic control using fuzzy decision theory. IEEE Trans. Biomed. Eng. 45:213&#x2013;228 <pub-id pub-id-type="pmid">9473844</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Isaka</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Sebald</surname>
+              <given-names>A. V.</given-names>
+            </name>
+          </person-group>
+          <article-title>Control strategies for arterial blood pressure regulation</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1993</year>
+          <volume>40</volume>
+          <fpage>353</fpage>
+          <lpage>363</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.222328</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Isaka S., A. V. Sebald (1993) Control strategies for arterial blood pressure regulation. IEEE Trans. Biomed. Eng. 40:353&#x2013;363 <pub-id pub-id-type="pmid">8375872</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kashihara</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Kawada</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Uemura</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Sugimachi</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Sunagawa</surname>
+              <given-names>K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive predictive control of arterial blood pressure based on a neural network during acute hypotension</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>1365</fpage>
+          <lpage>1383</lpage>
+          <pub-id pub-id-type="doi">10.1114/B:ABME.0000042225.19806.34</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kashihara K., T. Kawada, K. Uemura, M. Sugimachi, K. Sunagawa (2004) Adaptive predictive control of arterial blood pressure based on a neural network during acute hypotension. Ann. Biomed. Eng. 32:1365&#x2013;1383 <pub-id pub-id-type="pmid">15535055</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Martin</surname>
+              <given-names>J. F.</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>N. T.</given-names>
+            </name>
+            <name>
+              <surname>Quinn</surname>
+              <given-names>M. L.</given-names>
+            </name>
+            <name>
+              <surname>Schneider</surname>
+              <given-names>A. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Supervisory adaptive control of arterial pressure during cardiac surgery</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1992</year>
+          <volume>39</volume>
+          <fpage>389</fpage>
+          <lpage>393</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.126611</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Martin J. F., N. T. Smith, M. L. Quinn, A. M. Schneider (1992) Supervisory adaptive control of arterial pressure during cardiac surgery. IEEE Trans. Biomed. Eng. 39:389&#x2013;393 <pub-id pub-id-type="pmid">1592404</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McInnis</surname>
+              <given-names>B. C.</given-names>
+            </name>
+            <name>
+              <surname>Deng</surname>
+              <given-names>L. Z.</given-names>
+            </name>
+          </person-group>
+          <article-title>Automatic control of blood pressures with multiple drug inputs</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>1985</year>
+          <volume>13</volume>
+          <fpage>217</fpage>
+          <lpage>225</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">McInnis B. C., L. Z. Deng (1985) Automatic control of blood pressures with multiple drug inputs. Ann. Biomed. Eng. 13:217&#x2013;225 <pub-id pub-id-type="pmid">4037454</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Meretoja</surname>
+              <given-names>O. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of sodium nitroprusside and dobutamine on the haemodynamic effects produced by each other</article-title>
+          <source>Acta Anaesthesiol. Scand.</source>
+          <year>1980</year>
+          <volume>24</volume>
+          <fpage>195</fpage>
+          <lpage>198</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Meretoja O. A. (1980) Influence of sodium nitroprusside and dobutamine on the haemodynamic effects produced by each other. Acta Anaesthesiol. Scand. 24:195&#x2013;198 <pub-id pub-id-type="pmid">7445937</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Miller</surname>
+              <given-names>R. R.</given-names>
+            </name>
+            <name>
+              <surname>Awan</surname>
+              <given-names>N. A.</given-names>
+            </name>
+            <name>
+              <surname>Joye</surname>
+              <given-names>J. A.</given-names>
+            </name>
+            <name>
+              <surname>Maxwell</surname>
+              <given-names>K. S.</given-names>
+            </name>
+            <name>
+              <surname>DeMaria</surname>
+              <given-names>A. N.</given-names>
+            </name>
+            <name>
+              <surname>Amsterdam</surname>
+              <given-names>E. A.</given-names>
+            </name>
+            <name>
+              <surname>Mason</surname>
+              <given-names>D. T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Combined dopamine and nitroprusside therapy in congestive heart failure. Greater augmentation of cardiac performance by addition of inotropic stimulation to afterload reduction</article-title>
+          <source>Circulation</source>
+          <year>1977</year>
+          <volume>55</volume>
+          <fpage>881</fpage>
+          <lpage>884</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Miller R. R., N. A. Awan, J. A. Joye, K. S. Maxwell, A. N. DeMaria, E. A. Amsterdam, D. T. Mason (1977) Combined dopamine and nitroprusside therapy in congestive heart failure. Greater augmentation of cardiac performance by addition of inotropic stimulation to afterload reduction. Circulation 55:881&#x2013;884 <pub-id pub-id-type="pmid">858184</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mohrman</surname>
+              <given-names>D. E.</given-names>
+            </name>
+            <name>
+              <surname>Heller</surname>
+              <given-names>L. J.</given-names>
+            </name>
+          </person-group>
+          <source>Cardiovascular physiology</source>
+          <year>1997</year>
+          <edition>4</edition>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>McGraw-Hill</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Mohrman D. E., L. J. Heller, (1997) Cardiovascular physiology, 4th ed. New York: McGraw-Hill </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Narendra</surname>
+              <given-names>K. S.</given-names>
+            </name>
+            <name>
+              <surname>Parthasarathy</surname>
+              <given-names>K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification and control of dynamic systems using neural networks</article-title>
+          <source>IEEE Trans. Neural Netw.</source>
+          <year>1990</year>
+          <volume>1</volume>
+          <fpage>4</fpage>
+          <lpage>27</lpage>
+          <pub-id pub-id-type="doi">10.1109/72.80202</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Narendra K. S., K. Parthasarathy (1990) Identification and control of dynamic systems using neural networks. IEEE Trans. Neural Netw. 1:4&#x2013;27 <pub-id pub-id-type="pmid">18282820</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nelder</surname>
+              <given-names>J. A.</given-names>
+            </name>
+            <name>
+              <surname>Mead</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>A simplex method for function minimization</article-title>
+          <source>Comput. J.</source>
+          <year>1965</year>
+          <volume>7</volume>
+          <fpage>308</fpage>
+          <lpage>313</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Nelder J. A., R. Mead (1965) A simplex method for function minimization. Comput. J. 7:308&#x2013;313 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>O&#x2019;Hara</surname>
+              <given-names>D. A.</given-names>
+            </name>
+            <name>
+              <surname>Bogen</surname>
+              <given-names>D. K.</given-names>
+            </name>
+            <name>
+              <surname>Noordergraaf</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>The use of computers for controlling the delivery of anesthesia</article-title>
+          <source>Anesthesiology</source>
+          <year>1992</year>
+          <volume>77</volume>
+          <fpage>563</fpage>
+          <lpage>581</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">O&#x2019;Hara D. A., D. K. Bogen, A. Noordergraaf (1992) The use of computers for controlling the delivery of anesthesia. Anesthesiology 77:563&#x2013;581 <pub-id pub-id-type="pmid">1519793</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Parker</surname>
+              <given-names>R. S.</given-names>
+            </name>
+            <name>
+              <surname>Doyle</surname>
+              <given-names>F. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Control-relevant modeling in drug delivery</article-title>
+          <source>Adv. Drug Deliv. Rev.</source>
+          <year>2001</year>
+          <volume>48</volume>
+          <fpage>211</fpage>
+          <lpage>228</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0169-409X(01)00114-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Parker R. S., F. J. Doyle III (2001) Control-relevant modeling in drug delivery. Adv. Drug Deliv. Rev. 48:211&#x2013;228 <pub-id pub-id-type="pmid">11369083</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pinsky</surname>
+              <given-names>M. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Why measure cardiac output?</article-title>
+          <source>Crit. Care.</source>
+          <year>2003</year>
+          <volume>7</volume>
+          <issue>2</issue>
+          <fpage>114</fpage>
+          <lpage>116</lpage>
+          <pub-id pub-id-type="doi">10.1186/cc1863</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pinsky M. R. (2003) Why measure cardiac output? Crit. Care. 7(2):114&#x2013;116 <pub-id pub-id-type="pmid">12720554</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Quinn</surname>
+              <given-names>M. L.</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>N. T.</given-names>
+            </name>
+            <name>
+              <surname>Mandel</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>J. F.</given-names>
+            </name>
+            <name>
+              <surname>Schneider</surname>
+              <given-names>A. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Automatic control of arterial pressure in the operating room: Safety during episodes of artifact and hypotension?</article-title>
+          <source>Anesthesiology</source>
+          <year>1988</year>
+          <volume>68</volume>
+          <fpage>A327</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Quinn M. L., N. T. Smith, J. E. Mandel, J. F. Martin, A. M. Schneider (1988) Automatic control of arterial pressure in the operating room: Safety during episodes of artifact and hypotension? Anesthesiology 68:A327 </citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rao</surname>
+              <given-names>R. R.</given-names>
+            </name>
+            <name>
+              <surname>Aufderheide</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Bequette</surname>
+              <given-names>B. W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Experimental studies on multiple-model predictive control for automated regulation of hemodynamic variables</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>2003</year>
+          <volume>50</volume>
+          <fpage>277</fpage>
+          <lpage>288</lpage>
+          <pub-id pub-id-type="doi">10.1109/TBME.2003.808813</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rao R. R., B. Aufderheide, B. W. Bequette (2003) Experimental studies on multiple-model predictive control for automated regulation of hemodynamic variables. IEEE Trans. Biomed. Eng. 50:277&#x2013;288 <pub-id pub-id-type="pmid">12669984</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rao</surname>
+              <given-names>R. R.</given-names>
+            </name>
+            <name>
+              <surname>Bequette</surname>
+              <given-names>B. W.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Simultaneous regulation of hemodynamic and anesthetic states: A simulation study</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>2000</year>
+          <volume>28</volume>
+          <fpage>71</fpage>
+          <lpage>84</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.255</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rao R. R., B. W. Bequette, R. J. Roy (2000) Simultaneous regulation of hemodynamic and anesthetic states: A simulation study. Ann. Biomed. Eng. 28:71&#x2013;84 <pub-id pub-id-type="pmid">10645790</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="other">Rumelhart D. E., G. E. Hinton, R. J. Williams. Learning internal representations by error propagation. In: J. L. McClelland, D. E. Rumelhart, and The PDP research group (eds), Parallel Distributed Processing. Vol. 1, MIT Press, Cambridge, MA, 1986</citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="other">Serna V., R. Roy, H. Kaufman. Adaptive control of multiple drug infusions. Presented at the Am. Contr. Conf., San Francisco, CA, 1983, pp. 22&#x2013;24</citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stemple</surname>
+              <given-names>D. R.</given-names>
+            </name>
+            <name>
+              <surname>Kleiman</surname>
+              <given-names>J. H.</given-names>
+            </name>
+            <name>
+              <surname>Harrison</surname>
+              <given-names>D. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Combined nitroprusside-dopamine therapy in severe chronic congestive heart failure. Dose-related hemodynamic advantages over single drug infusions</article-title>
+          <source>Am. J. Cardiol.</source>
+          <year>1978</year>
+          <volume>42</volume>
+          <fpage>267</fpage>
+          <lpage>275</lpage>
+          <pub-id pub-id-type="doi">10.1016/0002-9149(78)90909-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stemple D. R., J. H. Kleiman, D. C. Harrison (1978) Combined nitroprusside-dopamine therapy in severe chronic congestive heart failure. Dose-related hemodynamic advantages over single drug infusions. Am. J. Cardiol. 42:267&#x2013;275 <pub-id pub-id-type="pmid">685839</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stern</surname>
+              <given-names>K. S.</given-names>
+            </name>
+            <name>
+              <surname>Chizeck</surname>
+              <given-names>H. J.</given-names>
+            </name>
+            <name>
+              <surname>Walker</surname>
+              <given-names>B. K.</given-names>
+            </name>
+            <name>
+              <surname>Krishnaprasad</surname>
+              <given-names>P. S.</given-names>
+            </name>
+            <name>
+              <surname>Dauchot</surname>
+              <given-names>P. J.</given-names>
+            </name>
+            <name>
+              <surname>Katona</surname>
+              <given-names>P. G.</given-names>
+            </name>
+          </person-group>
+          <article-title>The self-tuning controller: Comparison with human performance in the control of arterial pressure</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>1985</year>
+          <volume>13</volume>
+          <fpage>341</fpage>
+          <lpage>357</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02407765</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stern K. S., H. J. Chizeck, B. K. Walker, P. S. Krishnaprasad, P. J. Dauchot, P. G. Katona (1985) The self-tuning controller: Comparison with human performance in the control of arterial pressure. Ann. Biomed. Eng. 13:341&#x2013;357 <pub-id pub-id-type="pmid">4073623</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Takahashi</surname>
+              <given-names>Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive predictive control of nonlinear time-varying system using neural network</article-title>
+          <source>IEEE Int. Conf. Neural Netw.</source>
+          <year>1993</year>
+          <volume>3</volume>
+          <fpage>1464</fpage>
+          <lpage>1468</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Takahashi Y. (1993) Adaptive predictive control of nonlinear time-varying system using neural network. IEEE Int. Conf. Neural Netw. 3:1464&#x2013;1468 </citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Voss</surname>
+              <given-names>G. I.</given-names>
+            </name>
+            <name>
+              <surname>Katona</surname>
+              <given-names>P. G.</given-names>
+            </name>
+            <name>
+              <surname>Chizeck</surname>
+              <given-names>H. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive multivariable drug delivery: Control of arterial pressure and cardiac output in anesthetized dogs</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1987</year>
+          <volume>34</volume>
+          <fpage>617</fpage>
+          <lpage>623</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Voss G. I., P. G. Katona, H. J. Chizeck (1987) Adaptive multivariable drug delivery: Control of arterial pressure and cardiac output in anesthetized dogs. IEEE Trans. Biomed. Eng. 34:617&#x2013;623 <pub-id pub-id-type="pmid">3623588</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Westenskow</surname>
+              <given-names>D. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Automating patient care with closed-loop control</article-title>
+          <source>MD Comput.</source>
+          <year>1986</year>
+          <volume>3</volume>
+          <fpage>14</fpage>
+          <lpage>20</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Westenskow D. R. (1986) Automating patient care with closed-loop control. MD Comput. 3:14&#x2013;20 <pub-id pub-id-type="pmid">3574027</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Woodruff</surname>
+              <given-names>E. A.</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>J. F.</given-names>
+            </name>
+            <name>
+              <surname>Omens</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>A model for the design and evaluation of algorithms for closed-loop cardiovascular therapy</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1997</year>
+          <volume>44</volume>
+          <fpage>694</fpage>
+          <lpage>705</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.605426</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Woodruff E. A., J. F. Martin, M. Omens (1997) A model for the design and evaluation of algorithms for closed-loop cardiovascular therapy. IEEE Trans. Biomed. Eng. 44:694&#x2013;705 <pub-id pub-id-type="pmid">9254983</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ying</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>McEachern</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Eddleman</surname>
+              <given-names>D. W.</given-names>
+            </name>
+            <name>
+              <surname>Sheppard</surname>
+              <given-names>L. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Fuzzy control of mean arterial pressure in postsurgical patients with sodium nitroprusside infusion</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1992</year>
+          <volume>39</volume>
+          <fpage>1060</fpage>
+          <lpage>1070</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.161338</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ying H., M. McEachern, D. W. Eddleman, L. C. Sheppard (1992) Fuzzy control of mean arterial pressure in postsurgical patients with sodium nitroprusside infusion. IEEE Trans. Biomed. Eng. 39:1060&#x2013;1070 <pub-id pub-id-type="pmid">1452172</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yu</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>A circulatory model for combined nitroprusside-dopamine therapy in acute heart failure</article-title>
+          <source>Med. Prog. Technol.</source>
+          <year>1990</year>
+          <volume>16</volume>
+          <fpage>77</fpage>
+          <lpage>88</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Yu C., R. J. Roy, H. Kaufman (1990) A circulatory model for combined nitroprusside-dopamine therapy in acute heart failure. Med. Prog. Technol. 16:77&#x2013;88 <pub-id pub-id-type="pmid">2138700</pub-id></citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yu</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Roy</surname>
+              <given-names>R. J.</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Bequette</surname>
+              <given-names>B. W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiple-model adaptive predictive control of mean arterial pressure and cardiac output</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1992</year>
+          <volume>39</volume>
+          <fpage>765</fpage>
+          <lpage>778</lpage>
+          <pub-id pub-id-type="doi">10.1109/10.148385</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yu C., R. J. Roy, H. Kaufman, B. W. Bequette (1992) Multiple-model adaptive predictive control of mean arterial pressure and cardiac output. IEEE Trans. Biomed. Eng. 39:765&#x2013;778 <pub-id pub-id-type="pmid">1505992</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,1215 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Med Internet Res</journal-id>
+      <journal-id journal-id-type="publisher-id">JMIR</journal-id>
+      <journal-title-group>
+        <journal-title>Journal of Medical Internet Research</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1438-8871</issn>
+      <publisher>
+        <publisher-name>Gunther Eysenbach</publisher-name>
+        <publisher-loc>Centre for Global eHealth Innovation, Toronto, Canada</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16403716</article-id>
+      <article-id pub-id-type="pmc">1550689</article-id>
+      <article-id pub-id-type="publisher-id">v7i5e52</article-id>
+      <article-id pub-id-type="doi">10.2196/jmir.7.5.e52</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Architecture for Knowledge-Based and Federated Search of Online Clinical Evidence</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="contrib1" contrib-type="author" corresp="yes">
+          <name>
+            <surname>Coiera</surname>
+            <given-names>Enrico</given-names>
+          </name>
+          <degrees>MB</degrees>
+          <degrees>BS</degrees>
+          <degrees>PhD</degrees>
+          <xref ref-type="aff" rid="aff1">1</xref>
+          <address>
+            <institution>Centre for Health Informatics</institution>
+            <institution>University of New South Wales</institution>
+            <addr-line>Sydney</addr-line>
+            <addr-line>UNSW 2052 NSW</addr-line>
+            <country>Australia</country>
+            <phone>+61 (2) 9385 9026</phone>
+            <fax>+61 (2) 9385 9006</fax>
+            <email>e.coiera@unsw.edu.au</email>
+          </address>
+        </contrib>
+        <contrib id="contrib2" contrib-type="author">
+          <name>
+            <surname>Walther</surname>
+            <given-names>Martin</given-names>
+          </name>
+          <degrees>BCompSci</degrees>
+          <degrees>MAI</degrees>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib id="contrib3" contrib-type="author">
+          <name>
+            <surname>Nguyen</surname>
+            <given-names>Ken</given-names>
+          </name>
+          <degrees>BEng</degrees>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib id="contrib4" contrib-type="author">
+          <name>
+            <surname>Lovell</surname>
+            <given-names>Nigel H</given-names>
+          </name>
+          <degrees>PhD</degrees>
+          <xref ref-type="aff" rid="aff2">2</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1" rid="aff1">
+        <sup>1</sup>
+        <institution>Centre for Health Informatics</institution>
+        <institution>University of New South Wales</institution>
+        <addr-line>Sydney</addr-line>
+        <country>Australia</country>
+      </aff>
+      <aff id="aff2" rid="aff2">
+        <sup>2</sup>
+        <institution>Graduate School of Biomedical Engineering</institution>
+        <institution>University of New South Wales</institution>
+        <addr-line>Sydney</addr-line>
+        <country>Australia</country>
+      </aff>
+      <contrib-group>
+        <contrib contrib-type="reviewer">
+          <name>
+            <surname>Hersh</surname>
+            <given-names>William</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="reviewer">
+          <name>
+            <surname>Isaacksz</surname>
+            <given-names>Shiran</given-names>
+          </name>
+        </contrib>
+      </contrib-group>
+      <pub-date pub-type="collection">
+        <season>Oct-Dec</season>
+        <year>2005</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>24</day>
+        <month>10</month>
+        <year>2005</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>5</issue>
+      <elocation-id>e52</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>15</day>
+          <month>12</month>
+          <year>2004</year>
+        </date>
+        <date date-type="rev-request">
+          <day>01</day>
+          <month>3</month>
+          <year>2005</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>05</day>
+          <month>10</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>13</day>
+          <month>9</month>
+          <year>2005</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Enrico Coiera, Martin Walther, Ken Nguyen, Nigel H Lovell.  Originally published in the Journal of Medical Internet Research (http://www.jmir.org), 24.10.2005.  Except where otherwise noted, articles published in the Journal of Medical Internet Research are distributed under the terms of the Creative Commons Attribution License (http://www.creativecommons.org/licenses/by/2.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited, including full bibliographic	details and the URL (see "please cite as" above), and this statement is included.</copyright-statement>
+        <copyright-year>2005</copyright-year>
+      </permissions>
+      <self-uri xlink:type="simple" xlink:href="http://www.jmir.org/2005/5/e52/"/>
+      <abstract>
+        <sec sec-type="background">
+          <title>Background</title>
+          <p>It is increasingly difficult for clinicians to keep up-to-date with the rapidly growing biomedical literature. Online evidence retrieval methods are now seen as a core tool to support evidence-based health practice. However, standard search engine technology is not designed to manage the many different types of evidence sources that are available or to handle the very different information needs of various clinical groups, who often work in widely different settings.</p>
+        </sec>
+        <sec sec-type="objectives">
+          <title>Objectives</title>
+          <p>The objectives of this paper are (1) to describe the design considerations and system architecture of a wrapper-mediator approach to federate search system design, including the use of knowledge-based, meta-search filters, and (2) to analyze the implications of system design choices on performance measurements.</p>
+        </sec>
+        <sec sec-type="methods">
+          <title>Methods</title>
+          <p>A trial was performed to evaluate the technical performance of a federated evidence retrieval system, which provided access to eight distinct online resources, including e-journals, PubMed, and electronic guidelines. The Quick Clinical system architecture utilized a universal query language to reformulate queries internally and utilized meta-search filters to optimize search strategies across resources. We recruited 227 family physicians from across Australia who used the system to retrieve evidence in a routine clinical setting over a 4-week period. The total search time for a query was recorded, along with the duration of individual queries sent to different online resources.</p>
+        </sec>
+        <sec sec-type="results">
+          <title>Results</title>
+          <p>Clinicians performed 1662 searches over the trial. The average search duration was 4.9 &#xB1; 3.2 s (N = 1662 searches). Mean search duration to the individual sources was between 0.05 s and 4.55 s. Average system time (ie, system overhead) was 0.12 s.</p>
+        </sec>
+        <sec sec-type="conclusions">
+          <title>Conclusions</title>
+          <p>The relatively small system overhead compared to the average time it takes to perform a search for an individual source shows that the system achieves a good trade-off between performance and reliability. Furthermore, despite the additional effort required to incorporate the capabilities of each individual source (to improve the quality of search results), system maintenance requires only a small additional overhead.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>Evidence-based medicine</kwd>
+        <kwd>clinical decision support systems</kwd>
+        <kwd>information retrieval</kwd>
+        <kwd>meta-search filters</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="introduction">
+      <title>Introduction</title>
+      <p>Clinicians need to keep up-to-date with the biomedical literature in order to practice according to the best available evidence. However, this has become increasingly difficult as the amount of medical literature a clinician needs to consider grows exponentially [<xref ref-type="bibr" rid="ref1">1</xref>,<xref ref-type="bibr" rid="ref2">2</xref>]. As a result, the effort required to find a specific piece of evidence increases year after year [<xref ref-type="bibr" rid="ref3">3</xref>]. Clinicians typically work under time pressure, which compounds the problem. The need to develop robust methods and tools to support evidence access is now widely recognized. Online evidence retrieval methods are increasingly seen as a core tool in support of evidence-based health care [<xref ref-type="bibr" rid="ref4">4</xref>]. In the traditional model of online evidence services, clinicians have access to a number of online information sources, such as journals, databases, and Medline, each with its own idiosyncrasies and search interfaces. This means users need to know which resources are most suitable for their current question and how the search query must be formulated for a given resource. Interoperability standards for the efficient dissemination of content are being developed (eg, the Open Archive Initiative [<xref ref-type="bibr" rid="ref5">5</xref>]), but until the majority of content adheres to such standards, there is still a need to search through heterogenous data sources.</p>
+      <p>The meta-search engine approach [<xref ref-type="bibr" rid="ref6">6</xref>,<xref ref-type="bibr" rid="ref7">7</xref>] addresses many of the limitations of these models by providing a mechanism to search all the available resources at one time and by translating user queries into the respective query languages of each resource. This typically uses a least-common-denominator approach, directly passing on user keywords to different information sources without regard for the specific capabilities or limitations of these resources. For example, a meta-search engine often disregards the rich query language available with some resources in order to simplify the overall meta-search process. Consequently, while the user expects the meta-search to return an integrated set of search results, the reality is that some resources would have been able to perform much better had they been queried individually; the user is unaware of the variations in search quality across the different resources that have been queried for them. Variants of the standard meta-search engine approach have been shown [<xref ref-type="bibr" rid="ref8">8</xref>] to provide search capabilities beyond the least common denominator but still require users to select the resources they wish to search. One solution to this problem is to &#x201C;federate&#x201D; the different resources so that they more genuinely behave as one uniform data source. A federated search system may perform a <italic>syntactic reformulation</italic> of a user query, translating it into queries that have been optimized for the native query language of individual evidence sources. <italic>Semantic reformulation</italic> is also possible [<xref ref-type="bibr" rid="ref9">9</xref>]. For example, user keywords may be translated into equivalent keywords or phrases using a terminological system.</p>
+      <p>However, a federated search can still produce an excessive number of candidate documents, or hits, many of them failing reasonable tests of relevance. One way to improve the chance of retrieving clinically relevant information is to pre-program a search system with specialist bibliographic knowledge using <italic>search filters</italic>. Search filters capture expert strategies for searching that are known to improve the precision of searches. For example, Medline offers a small set of &#x201C;clinical queries,&#x201D; which are pre-defined and validated search filters optimized to retrieve documents that are most likely to be clinically relevant, emphasizing disease etiology, diagnosis, therapy, or prognosis [<xref ref-type="bibr" rid="ref10">10</xref>,<xref ref-type="bibr" rid="ref11">11</xref>]. Such search filters are necessarily highly customized to the capabilities of individual information sources and their native search engines. For a federated search system to consistently use search filters, it would need to develop a generalized approach to search filters, or <italic>meta-search filters</italic>. Quick Clinical (QC) [<xref ref-type="bibr" rid="ref4">4</xref>] is a federated evidence retrieval system designed to meet the specific needs of clinicians. Its design incorporates the novel use of meta-search filters to optimize search strategies, and it is based upon a wrapper-mediator architecture built around a universal query language. This paper describes the system architecture of QC and the technical challenges to the design of online evidence retrieval systems, and it reports on the technical performance of the system from a clinical trial with primary care physicians.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>Methods</title>
+      <sec>
+        <title>The Quick Clinical System</title>
+        <sec>
+          <title>User Interface</title>
+          <p>In the QC user model, a user is presented with a single query interface, which connects to an arbitrarily large number of federated knowledge sources and incorporates query specific meta-search filters called &#x201C;profiles.&#x201D; QC guides users to first consider the purpose of their search through selection of a profile, and it then asks them to provide specific keywords related to that search task. As a consequence, users are guided through a process that structures their query for them and improves the chances that they will ask a well-formed query and receive an appropriate answer. <xref ref-type="fig" rid="figure1">Figure 1</xref> depicts the QC search interface. On the left hand is a list of search filters that describe typical search tasks and that are customized to the specific information needs of different user groups. <xref ref-type="fig" rid="figure1">Figure 1</xref> shows filters specifically designed for use by primary care physicians.</p>
+          <fig id="figure1" position="float">
+            <label>Figure 1</label>
+            <caption>
+              <p>The QC search query user interface</p>
+            </caption>
+            <graphic xlink:href="jmir_v7i5e52_fig1"/>
+          </fig>
+          <p>In QC, individual profiles are able to define different keyword types, such as &#x201C;disease,&#x201D; which describe the keyword classes typically associated with that profile. Thus, on the right of the interface are four fields where users can provide keywords describing the specific attributes of their search. Selection of a different profile may thus alter the keyword types requested from the user for a given search. QC then translates and submits search queries to the sources specified in the chosen profile, collects and processes the results, and presents them to the user as a list of documents (<xref ref-type="fig" rid="figure2">Figure 2</xref>). The title of a document is followed by the link and a short abstract of the content. A user can drill-down into a specific group of results by source type (eg, journal articles or guidelines).</p>
+          <fig id="figure2" position="float">
+            <label>Figure 2</label>
+            <caption>
+              <p>Screenshot of a QC results page</p>
+            </caption>
+            <graphic xlink:href="jmir_v7i5e52_fig2"/>
+          </fig>
+        </sec>
+        <sec>
+          <title>Quick Clinical System Architecture</title>
+          <sec>
+            <title>Overview</title>
+            <p>Most information sources such as websites, online texts, and databases have their own proprietary search interface, including query language and format for the display of results. Therefore, a federated meta-search engine that wishes to query a number of different information sources needs to first represent a user query using some internal query language [<xref ref-type="bibr" rid="ref13">13</xref>] and then translate that internal query into the specific query languages of the relevant data sources. A well-documented [<xref ref-type="bibr" rid="ref12">12</xref>] approach to this problem is to use a &#x201C;wrapper&#x201D; (<xref ref-type="fig" rid="figure3">Figure 3</xref>), which acts as an adapter between the proprietary language of individual information sources and the internal language used within a meta-search system. In QC, the internal query language is called the unified query language (UQL). Each information source known to QC has its own wrapper that translates queries from UQL into the native language of the source. As a result, internal components of QC only need to know UQL and not the individual query languages of the data sources. System maintenance is also simplified since the introduction of a new data source to the system only requires one new wrapper component to be generated. Once the results of a search are returned by an information source, the information must again be translated into a standard output format for presentation to the user, which, in QC, is called the unified response language (UReL). UReL also allows other components in the system to modify the presentation of search results without needing to understand the presentation format of individual sources (eg, to remove duplicate documents). In <xref ref-type="fig" rid="figure3">Figure 3</xref>, a search is initiated from the user interface, which forwards a query (in XML) to the mediator. The mediator splits the query into several subqueries and sends these to the appropriate wrapper (via a capability manager if required). Finally, the wrapper translates the query into the native query language of the data source (eg, in HTML for Web data sources). Similarly, the result from the data source gets translated back into the system&#x2019;s XML representation and sent back to the user interface.</p>
+            <fig id="figure3" position="float">
+              <label>Figure 3</label>
+              <caption>
+                <p>Architecture overview of Quick Clinical</p>
+              </caption>
+              <graphic xlink:href="jmir_v7i5e52_fig3"/>
+            </fig>
+          </sec>
+          <sec>
+            <title>Unified Query Language</title>
+            <p>UQL is used to represent queries obtained from users in a consistent internal way, and UQL statements identify query elements such as the external information sources to be searched and a set of search attributes used to delimit the search. For example, UQL expressions can store date range delimiters for a search. UQL also contains statements that indicate whether or not QC needs to process the query further. For example, we may wish to remove duplicate items obtained from different sources. In our current implementation, UQL is implemented using XML. To define the structure of the data within the XML document we use a data type definition (DTD), which allows various internal components of QC to validate the XML data received in the UQL query. The following example illustrates how a UQL query might look in XML.</p>
+            <preformat xml:space="preserve" position="float">
+&lt;QUERY keyword = "iron AND deficiency"
+  profile = "treatment"
+  duplicateRemoval = "yes"
+  sortBy = "rank"
+  useLexicalVariants = "yes"
+  timeout = "20"
+  dateRangeBeginDay = "1"
+  dateRangeBeginMonth = "1"
+  dateRangeBeginYear = "1999" &gt;
+ &lt;SOURCE name = "PubMed" /&gt;
+ &lt;SOURCE name = "Harrison&#x2019;s online" /&gt;
+ &lt;SOURCE name = "Merck" /&gt;
+ &lt;SOURCE name = "MIMS" /&gt;
+&lt;/QUERY&gt;
+                      </preformat>
+          </sec>
+          <sec>
+            <title>Unified Response Language</title>
+            <p>Similarly to the UQL, the unified response language (UReL) is used internally to guide display of information to users, also represented using XML. Each separate result, or &#x201C;article,&#x201D; from a source can be broken up into smaller chunks and given meta-data labels to represent the different sections of the data (eg, abstracts from journal articles). Since the majority of sources accessed by QC are journals, the data that are retrieved typically contain document elements such as Title, Author(s), Journal Name, Date of Publication, and the URL where the electronic version of the paper is accessed. Other sources, such as drug descriptions from pharmaceutical compendia, have sections such as Drug Name and Manufacturer. These different document elements, based upon the typical sources QC expects to find, are defined as specific fields in the UReL definition. The following example illustrates how a set of documents retrieved by QC might be represented in UReL.</p>
+            <preformat xml:space="preserve" position="float">
+&lt;RESULT&gt;
+ &lt;ARTICLE&gt;
+  &lt;LINK&gt;
+   &lt;HREF&gt;
+     http://www.ncbi.nlm.nih.gov:80
+     /entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed
+     &amp;list_uids=12198020&amp;dopt=Abstract
+   &lt;/HREF&gt;
+   &lt;LINKNAME&gt;Abstract&lt;/LINKNAME&gt;
+  &lt;/LINK&gt;
+  &lt;AUTHORLIST&gt;Heath AL, 
+    Skeaff CM, 
+    Gibson RS.
+  &lt;/AUTHORLIST&gt;
+  &lt;TITLE&gt;
+    Dietary treatment of iron deficiency
+  &lt;/TITLE&gt;
+  &lt;DATE&gt;
+   &lt;YEAR&gt;2002&lt;/YEAR&gt;
+   &lt;MONTH&gt;9&lt;/MONTH&gt;
+  &lt;/DATE&gt;
+  &lt;SOURCE&gt;PubMed&lt;/SOURCE&gt;
+ &lt;/ARTICLE&gt;
+ &lt;ARTICLE&gt;
+  &lt;LINK&gt;
+   &lt;HREF&gt;
+     http://mims.hcn.net.au
+     /ifmx-nsapi/mims-data/?MIval=2MIMS_abbr_pi
+     &amp;product_code=288
+     &amp;product_name=Ferrum+H+Injection
+   &lt;/HREF&gt;
+   &lt;LINKNAME&gt;More Information&lt;/LINKNAME&gt;
+  &lt;/LINK&gt;
+  &lt;AUTHORLIST&gt;
+    Sigma Pharmaceuticals Pty Ltd.
+  &lt;/AUTHORLIST&gt;
+  &lt;TITLE&gt;Ferrum H Injection&lt;/TITLE&gt;
+  &lt;SOURCE&gt;MIMS&lt;/SOURCE&gt;
+ &lt;/ARTICLE&gt;
+&lt;/RESULT&gt;
+                      </preformat>
+          </sec>
+          <sec>
+            <title>Wrappers</title>
+            <p>For every information source known to QC, there is a specific wrapper that translates a UQL query into the native query language and format of the source. The wrapper also extracts the relevant information from the HTML result pages returned by the search engine and re-expresses it in UReL. <xref ref-type="fig" rid="figure4">Figure 4</xref> shows the basic architecture of wrappers in our current system. Each wrapper has three main components: a feeder, extraction rules, and a sieve. The feeder converts the user query into the native query language of the data source. The data source responds to the query and returns HTML raw data. The feeder passes the raw data to the sieve, which converts it to UReL in XML format by using the extraction rules for the data source. The UReL is then sent back via other components to the user interface, which can interpret the XML and display the results.</p>
+            <fig id="figure4" position="float">
+              <label>Figure 4</label>
+              <caption>
+                <p>Wrapper components</p>
+              </caption>
+              <graphic xlink:href="jmir_v7i5e52_fig4"/>
+            </fig>
+          </sec>
+          <sec>
+            <title>Mediator</title>
+            <p>A key requirement of a multisource information retrieval system is the ability to perform concurrent searches on multiple sources with a single query [<xref ref-type="bibr" rid="ref6">6</xref>,<xref ref-type="bibr" rid="ref7">7</xref>]. The mediator addresses this requirement. The mediator first analyzes a query and determines how many sources are to be searched. It then creates a separate search job for each of these sources and forwards the search job to other system components. Additionally, the mediator collects individual results as they arrive and amalgamates them for the user into a single result. By introducing parallelism, the time to perform a search across a number of resources should be reduced to the duration of the slowest source. However, the potential drawback of parallel processing is the increased administration overhead of running multiple parallel processes within a system. As a rule of thumb, we would expect the benefits of parallel execution should increase with the number of sources queried, as response times for Web resources can be many seconds long, and computational execution of processes to manage parallel search are typically much less than one second.</p>
+            <p>Connection speed and latency of response time from sources are, for practical purposes, nondeterministic in an Internet environment, and a meta-search engine can therefore experience large fluctuations in responses from the same source under different circumstances. Latency is subject to network traffic conditions, making it impossible to guarantee that all resources that are queried at a particular time will respond predictably and equally. To counter this, the mediator has a time-out feature. If a response is not received within the time-out specified by a profile, the mediator will cancel a subsearch and forward all the results currently available from other sources to the user interface. This effectively guarantees a defined response time irrespective of the state of the individual data sources and provides some control over the speed/accuracy trade-off.</p>
+          </sec>
+          <sec>
+            <title>Capability Manager</title>
+            <p>Search capabilities vary considerably between the search engines that QC might wish to interrogate, and some sources will have limitations in their ability to process search queries. One approach to this problem is to try to raise all sources to as high a level of common performance as possible by emulating missing capabilities locally, usually by modifying the query and/or search result [<xref ref-type="bibr" rid="ref13">13</xref>]. A trivial example is mimicking the ability to perform a Boolean search when a data source does not have this capability. To emulate a Boolean AND, a meta-search engine would perform two parallel individual searches on the source and then itself perform the Boolean operation on the two results.</p>
+            <p>In QC, a capability manager (CM) is responsible for mimicking a range of search capabilities and is located between the mediator and wrapper. The CM may modify a query and/or the result depending on the capabilities of the sources about to be queried. Capabilities of the CM within the QC system included the following:</p>
+            <list list-type="bullet">
+              <list-item>
+                <p>Date-CM: search within a date range</p>
+              </list-item>
+              <list-item>
+                <p>Duplicate-CM: remove document duplicates</p>
+              </list-item>
+              <list-item>
+                <p>Sort-CM: sort results by title, author, document rank, or date</p>
+              </list-item>
+              <list-item>
+                <p>Lexical-CM: expand a search term with lexical variants of the term. A lexical variant is a synonym, pluralization, hyphenation, or other modification that changes the text but not its meaning. Lexical variants are particularly important in the medical domain [<xref ref-type="bibr" rid="ref14">14</xref>] because many concepts can be expressed in Latin or English (eg, cardio vs heart). Moreover, there is a common confusion between terms in American English versus British English (eg, hemoglobin vs haemoglobin, epinephrine vs adrenaline).</p>
+              </list-item>
+            </list>
+            <p>QC uses a stacking mechanism to insert individual CMs into the processing of queries for wrappers and the processing of results from a source. A component called the search planner, containing simple rules, is responsible for stacking the CMs. This means that the sequence of CMs can be ordered to ensure the correct outcome of query or result translations. Theoretically, this corresponds to a composition of operations. A lexical variant CM, for example, has to replace the search terms in the query before the wrapper executes the search. The Date-CM, on the other hand, can only perform its job after the successful execution of the wrapper.</p>
+          </sec>
+          <sec>
+            <title>Search Filters</title>
+            <p>Expert searchers typically will use search strategies that are more likely to accurately locate information, based upon an understanding of the specific capabilities of an evidence source. There is an increasing interest in the writing of search filters which capture such strategies, usually focusing on the major evidence repositories like Medline [<xref ref-type="bibr" rid="ref10">10</xref>,<xref ref-type="bibr" rid="ref11">11</xref>]. Search filters are designed for typical clinical queries such as &#x201C;diagnosis&#x201D; or &#x201C;prescribing,&#x201D; and they are crafted to find evidence most likely to satisfy the query by first selectively searching resources identified to be of high quality and, second, by automatically adding specialist keywords to the general question posed by a user. Within QC, search filters are stored in the profiles function. For example, if a clinician selects the &#x201C;diagnosis&#x201D; filter and enters the search term &#x201C;asthma,&#x201D; QC can add in the additional terms when it queries Medline [<xref ref-type="bibr" rid="ref10">10</xref>]:</p>
+            <p>sensitivity and specificity [MESH] OR sensitivity [WORD] OR diagnosis [SH] OR diagnostic use [SH] OR specificity [WORD]</p>
+            <p>These terms have been shown to significantly enhance the quality of Medline results, but they are unlikely to be known to a typical clinical user.</p>
+            <p>Unlike standard search filters, QC profiles are meta-search filters because they encode search filters for multiple different sources. Profiles thus encode expert search strategies that are most likely to answer a certain class of query, and they encode, among other things, the most appropriate content sources to search (<xref ref-type="table" rid="table1">Table 1</xref>). For a primary care physician, these search profiles might be for diagnosis, prescription, review, and treatment [<xref ref-type="bibr" rid="ref4">4</xref>], but any set of profiles can be created within QC to meet the specific query types and search contexts of different users. In <xref ref-type="table" rid="table1">Table 1</xref>, the Treatment profile describes a set of nine separate source-specific search filters, which collectively describe the search strategy believed most likely to retrieve an accurate search result from each resource. The # symbol delimits keyword variables that are to be instantiated with user keywords. For example, #1# represents the keyword type &#x201C;disease,&#x201D; and QC&#x2019;s mediator component will substitute the user-provided keywords for &#x201C;disease&#x201D; throughout the profile, prior to sending the query to the individual wrappers for the different sources. More than one search string can be created for an individual source (eg, TGL 1 and TGL 2) as a single strategy may not always retrieve all the relevant documents.</p>
+            <table-wrap id="table1" position="float">
+              <label>Table 1</label>
+              <caption>
+                <p>Quick Clinical meta-search filters</p>
+              </caption>
+              <table frame="hsides" rules="groups" border="1" cellpadding="7" cellspacing="0" width="573">
+                <col width="86" span="1"/>
+                <col width="457" span="1"/>
+                <thead>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">
+                      <bold>Source</bold>
+                    </td>
+                    <td rowspan="1" colspan="1">
+                      <bold>Search String</bold>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">TGL1</td>
+                    <td rowspan="1" colspan="1">(#1# AND #2# AND #3# AND #4#) AND+ ("treatment" OR "therapy" OR "therapeutic use")</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">TGL2</td>
+                    <td rowspan="1" colspan="1">(#1# AND #3#) AND+ ("treatment" OR "therapy" OR "therapeutic use")</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">HealthInsite3</td>
+                    <td rowspan="1" colspan="1">#1# AND #2# AND #3# AND #4#</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">HealthInsite4</td>
+                    <td rowspan="1" colspan="1">#1# AND #3#</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">PubMed5</td>
+                    <td rowspan="1" colspan="1">(#1# ATTR+ [Title] AND #3# ATTR+ [Title] AND #4# ATTR+ [Title] ATTR+ /ther)<break/>English 10 years Human</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">PubMed6</td>
+                    <td rowspan="1" colspan="1">#1# ATTR+ [Title] AND (#3# ATTR+ [Title] OR #4# ATTR+ [Title]) ATTR+ /drug ATTR+ ther<break/>English 10 years Human</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">Merck7</td>
+                    <td rowspan="1" colspan="1">((#1# AND #3# AND #4#) OR (#1# AND #3#)) AND+ ("treatment" OR "therapy")</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">Harrison&#x2019;s8</td>
+                    <td rowspan="1" colspan="1">Disconnected</td>
+                  </tr>
+                  <tr valign="top">
+                    <td rowspan="1" colspan="1">Harrison&#x2019;s9</td>
+                    <td rowspan="1" colspan="1">Disconnected</td>
+                  </tr>
+                </tbody>
+              </table>
+            </table-wrap>
+          </sec>
+          <sec>
+            <title>System Platform</title>
+            <p>The system was constructed using Java, the Struts Web application framework, and a MySQL database and is deployed on a RedHat Linux platform. The user interface (JSP, servlet, and HTML pages) is deployed through an Apache Web server connected to a Tomcat servlet engine. The Apache-Tomcat platform incorporates load balancing and fail-over and is suitable for scalability and large-scale deployment.</p>
+          </sec>
+        </sec>
+        <sec>
+          <title>Technical Evaluation</title>
+          <p>QC has undergone a series of clinical evaluations, which have been reported separately [<xref ref-type="bibr" rid="ref4">4</xref>,<xref ref-type="bibr" rid="ref15">15</xref>,<xref ref-type="bibr" rid="ref16">16</xref>].</p>
+          <p>In total, 227 family physicians from across Australia participated in a trial of QC. Clinicians who had a computer with Internet access in their consulting rooms were recruited and asked to use QC for 4 weeks in routine care. Each participant was given a personal username and password to access the system. All clinicians completed an online pre-trial survey. QC was configured to search a set of eight sources, including remote sites such as PubMed, online journals such as <italic>BMJ</italic> and the <italic>Medical Journal of Australia (MJA)</italic>, and locally cached sources such as <italic>The Merck Manual</italic> and Therapeutic Guidelines Australia.</p>
+          <p>For every search, the time from the request arriving at the system to the time when the results were sent back to the user was recorded (<xref ref-type="fig" rid="figure5">Figure 5</xref>; search time = system time + slowest source time). Note that there is a cap on search time when the time-out cuts in. Time-outs are search-profile dependent and were set at either 15 or 30 s. The time it took to conduct the search on the individual sources was also recorded. The time taken to send data between QC and the user&#x2019;s computer (user time) is not incorporated in these measurements.</p>
+          <p>In the following section we report on the technical performance of the architecture and then reflect on its suitability for supporting evidence retrieval in clinical practice.</p>
+          <fig id="figure5" position="float">
+            <label>Figure 5</label>
+            <caption>
+              <p>Search time metrics</p>
+            </caption>
+            <graphic xlink:href="jmir_v7i5e52_fig5"/>
+          </fig>
+        </sec>
+      </sec>
+    </sec>
+    <sec sec-type="results">
+      <title>Results</title>
+      <p>In the pre-trial questionnaire, 40% of the clinicians reported having a broadband (ADSL, cable, satellite) connection, while 43% used a 56k or 64k modem connection. The remaining 17% either did not know the type of connection used or had a slower connection. A total of 1662 searches were performed over the trial.</p>
+      <sec>
+        <title>Search Speed</title>
+        <p>Under local network conditions (LAN, 100MBit), the user time (from starting the search on a client computer to displaying the results) was approximately 1.5 s. However, since most users accessed the system through the Internet, latency was significantly longer and slowed down the overall search speed.</p>
+        <p>The average search time was 4.9 s, with a standard deviation of 3.2 s (N = 1662 searches). <xref ref-type="fig" rid="figure6">Figure 6</xref> shows the distribution of all search times over the trial. There are four distinctive features in this chart. The first is a small peak at 1 s (ie, searches that took up to 1 s to complete). The second feature is a peak around the mean value. Third, there is a small peak at 15 s, and, fourth, there is a small peak at 30 s.</p>
+        <fig id="figure6" position="float">
+          <label>Figure 6</label>
+          <caption>
+            <p>Distribution of search time for all 1662 searches</p>
+          </caption>
+          <graphic xlink:href="jmir_v7i5e52_fig6"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>System Time</title>
+        <p>System time for a search was computed by subtracting the duration of the slowest source in every search from the search time (see <xref ref-type="fig" rid="figure5">Figure 5</xref>). From the system time histogram in <xref ref-type="fig" rid="figure7">Figure 7</xref>, it can be seen that for the majority of the searches the system takes between 100 ms and 130 ms (mean = 117.9 ms; SD = 68.4 ms; N = 1614 [48 searches had missing data, hence 1614 searches]).</p>
+        <fig id="figure7" position="float">
+          <label>Figure 7</label>
+          <caption>
+            <p>Distribution of the system time for 1614 searches</p>
+          </caption>
+          <graphic xlink:href="jmir_v7i5e52_fig7"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>System Time Versus Number of Individual Sources Involved</title>
+        <p>Depending on the search profile selected, the system will query a certain number of information sources and combine the results. To illustrate the dependency between system time and the number of sources queried, <xref ref-type="table" rid="table2">Table 2</xref> shows average system time versus the number of sources queried in a search. The number of sources queried is predefined by the search profile, and none of the search profiles tested queried five, six, or eight sources.</p>
+        <table-wrap id="table2" position="float">
+          <label>Table 2</label>
+          <caption>
+            <p>System time vs number of sources queried</p>
+          </caption>
+          <table frame="hsides" rules="groups" border="1" cellpadding="0" cellspacing="0" width="359">
+            <col width="142" span="1"/>
+            <col width="80" span="1"/>
+            <col width="137" span="1"/>
+            <thead>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">
+                  <bold>Number of Sources Queried</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>N</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Average System Time (ms)</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">1</td>
+                <td rowspan="1" colspan="1">48</td>
+                <td rowspan="1" colspan="1">18.1</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">2</td>
+                <td rowspan="1" colspan="1">9</td>
+                <td rowspan="1" colspan="1">31.8</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">3</td>
+                <td rowspan="1" colspan="1">15</td>
+                <td rowspan="1" colspan="1">73.3</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">4</td>
+                <td rowspan="1" colspan="1">7</td>
+                <td rowspan="1" colspan="1">59.7</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">5</td>
+                <td rowspan="1" colspan="1">0</td>
+                <td rowspan="1" colspan="1">-</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">6</td>
+                <td rowspan="1" colspan="1">0</td>
+                <td rowspan="1" colspan="1">-</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">7</td>
+                <td rowspan="1" colspan="1">1373</td>
+                <td rowspan="1" colspan="1">122.2</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">8</td>
+                <td rowspan="1" colspan="1">0</td>
+                <td rowspan="1" colspan="1">-</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">9</td>
+                <td rowspan="1" colspan="1">162</td>
+                <td rowspan="1" colspan="1">122.6</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Speed and Reliability of Individual Data Sources</title>
+        <p>In addition to the performance measurements of the whole searches, the speed and reliability of the individual data sources was measured. Reliability was measured as the number of error cases (ie, queries that were not answered due to an error condition, such as a network error, an HTTP error, or queries that timed out). Reliability and speed figures are summarized in <xref ref-type="table" rid="table3">Table 3</xref>.</p>
+        <table-wrap id="table3" position="float">
+          <label>Table 3</label>
+          <caption>
+            <p>Reliability and speed of data sources</p>
+          </caption>
+          <table frame="hsides" rules="groups" border="1" cellpadding="1" cellspacing="0" width="540">
+            <col width="89" span="1"/>
+            <col width="64" span="1"/>
+            <col width="69" span="1"/>
+            <col width="59" span="1"/>
+            <col width="41" span="1"/>
+            <col width="55" span="1"/>
+            <col width="55" span="1"/>
+            <col width="45" span="1"/>
+            <col width="45" span="1"/>
+            <thead>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">
+                  <bold>Source</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Type</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Number of Searches</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Number of Errors</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Error (%)</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Mean Speed (s)</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>SD (s)</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Min (s)</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Max (s)</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Merck</td>
+                <td rowspan="1" colspan="1">Local</td>
+                <td rowspan="1" colspan="1">2144</td>
+                <td rowspan="1" colspan="1">0</td>
+                <td rowspan="1" colspan="1">0.0</td>
+                <td rowspan="1" colspan="1">0.06</td>
+                <td rowspan="1" colspan="1">0.11</td>
+                <td rowspan="1" colspan="1">0.01</td>
+                <td rowspan="1" colspan="1">2.89</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">TGL</td>
+                <td rowspan="1" colspan="1">Local</td>
+                <td rowspan="1" colspan="1">2193</td>
+                <td rowspan="1" colspan="1">0</td>
+                <td rowspan="1" colspan="1">0.0</td>
+                <td rowspan="1" colspan="1">0.05</td>
+                <td rowspan="1" colspan="1">0.12</td>
+                <td rowspan="1" colspan="1">0.01</td>
+                <td rowspan="1" colspan="1">2.85</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">BMJ</td>
+                <td rowspan="1" colspan="1">Remote</td>
+                <td rowspan="1" colspan="1">73</td>
+                <td rowspan="1" colspan="1">1</td>
+                <td rowspan="1" colspan="1">1.4</td>
+                <td rowspan="1" colspan="1">4.55</td>
+                <td rowspan="1" colspan="1">3.92</td>
+                <td rowspan="1" colspan="1">0.99</td>
+                <td rowspan="1" colspan="1">17.5</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">HealthInsite</td>
+                <td rowspan="1" colspan="1">Remote</td>
+                <td rowspan="1" colspan="1">2993</td>
+                <td rowspan="1" colspan="1">55</td>
+                <td rowspan="1" colspan="1">1.8</td>
+                <td rowspan="1" colspan="1">3.09</td>
+                <td rowspan="1" colspan="1">1.08</td>
+                <td rowspan="1" colspan="1">1.08</td>
+                <td rowspan="1" colspan="1">22.3</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">MedlinePlus</td>
+                <td rowspan="1" colspan="1">Remote</td>
+                <td rowspan="1" colspan="1">653</td>
+                <td rowspan="1" colspan="1">0</td>
+                <td rowspan="1" colspan="1">0.0</td>
+                <td rowspan="1" colspan="1">1.87</td>
+                <td rowspan="1" colspan="1">1.36</td>
+                <td rowspan="1" colspan="1">1.09</td>
+                <td rowspan="1" colspan="1">12.5</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">MIMS</td>
+                <td rowspan="1" colspan="1">Remote</td>
+                <td rowspan="1" colspan="1">650</td>
+                <td rowspan="1" colspan="1">3</td>
+                <td rowspan="1" colspan="1">0.5</td>
+                <td rowspan="1" colspan="1">0.98</td>
+                <td rowspan="1" colspan="1">1.14</td>
+                <td rowspan="1" colspan="1">0.28</td>
+                <td rowspan="1" colspan="1">8.30</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">MJA</td>
+                <td rowspan="1" colspan="1">Remote</td>
+                <td rowspan="1" colspan="1">58</td>
+                <td rowspan="1" colspan="1">1</td>
+                <td rowspan="1" colspan="1">1.7</td>
+                <td rowspan="1" colspan="1">0.25</td>
+                <td rowspan="1" colspan="1">0.31</td>
+                <td rowspan="1" colspan="1">0.10</td>
+                <td rowspan="1" colspan="1">1.73</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">PubMed</td>
+                <td rowspan="1" colspan="1">Remote</td>
+                <td rowspan="1" colspan="1">3288</td>
+                <td rowspan="1" colspan="1">39</td>
+                <td rowspan="1" colspan="1">1.2</td>
+                <td rowspan="1" colspan="1">3.76</td>
+                <td rowspan="1" colspan="1">1.69</td>
+                <td rowspan="1" colspan="1">1.87</td>
+                <td rowspan="1" colspan="1">15.0</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Total</td>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1">12052</td>
+                <td rowspan="1" colspan="1">99</td>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Mean</td>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1"/>
+                <td rowspan="1" colspan="1">0.8</td>
+                <td rowspan="1" colspan="1">1.83</td>
+                <td rowspan="1" colspan="1">0.63<xref ref-type="table-fn" rid="table3fn1">*</xref></td>
+                <td rowspan="1" colspan="1">0.68</td>
+                <td rowspan="1" colspan="1">10.4</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="table3fn1">
+              <p><sup>*</sup> standard error of the mean</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>The most reliable sources were the locally indexed sources Merck (<italic>The Merck Manual</italic>) and TGL (Therapeutic Guidelines Australia), both which did not have any error cases. On the other end of the scale are HealthInsite (a national consumer site for health information) and <italic>MJA</italic>. The slowest source in the trial was <italic>BMJ</italic>, with an average of 4.55 s to process a query (SD = 3.92 s; N = 73). This was followed by PubMed, which returned results at an average of 3.76 s (SD = 1.69 s; N = 3288). The two locally indexed sources (Merck and TGL) returned search results within an average of 0.061 s and 0.047 s, respectively. However, the two local sources do have a relatively large standard deviation. <xref ref-type="fig" rid="figure8">Figure 8</xref> shows the distribution of query times to the eight individual data sources.</p>
+        <fig id="figure8" position="float">
+          <label>Figure 8</label>
+          <caption>
+            <p>Histogram of search times for each of the eight data sources (x-axis is time taken for a search, in ms; y-axis is number of searches)</p>
+          </caption>
+          <graphic xlink:href="jmir_v7i5e52_fig8"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec sec-type="discussion">
+      <title>Discussion</title>
+      <sec>
+        <title>System Time</title>
+        <p>From the results of the system time versus source time, we can observe that system-processing time is only a fraction of the total search time. However, there are exceptions, namely when local data sources are used exclusively. From a user&#x2019;s perspective this still would not be an issue as the overall user time is greater by at least a factor of ten. It could, however, become a problem in a situation where many searches are dependant on the result of a previous search and have to be executed in series. System time has thus been kept relatively short, removing the initial reservation that too much parallelism could slow down the system excessively. From <xref ref-type="table" rid="table3">Table 3</xref> it can be seen that the system time generally increases in line with the number of sources queried (with the exception of four sources queried). However, the order of this increase does not appear to be squared or even exponential, but rather linear.</p>
+      </sec>
+      <sec>
+        <title>Search Times</title>
+        <p>The four distinct features in the histogram of search times described in <xref ref-type="fig" rid="figure6">Figure 6</xref> are due to the nature of the data sources and the value of the time-outs. The first small peak at 1 s is from search profiles that use exclusively local data sources. The second feature is a peak around the mean value and is caused by the six Internet resources. The small peak at 15 s is due to the large number of search profiles that have this value as a time-out. And finally, the tiny peak at 30 s is where the remaining searches time out.</p>
+        <p>It was to be expected that local sources would be more reliable and have a shorter latency in response time. This is due to the controlled environment, compared to the uncontrolled Internet environment of the external sources. It is interesting to note the difference between the six external data sources. While some sources are very popular (eg, PubMed) and therefore are expected to be busy, others might lack the resources to keep up with demand. The time-out value of individual data sources is a trade-off between speed and quality of results and is determined by the intended usage of the system. However, under certain circumstances there are optimizations that can be carried out without affecting quality of results. For example, the search duration histogram for HealthInsite (<xref ref-type="fig" rid="figure8">Figure 8</xref>; top right) reveals that if a search has not completed within 10&#xA0;s it is highly unlikely it will complete within 15&#xA0;s. Therefore, a time-out value of 15 s can safely be reduced to 10 s without significantly compromising search quality.</p>
+      </sec>
+      <sec>
+        <title>Future Work</title>
+        <p>The current QC architecture has demonstrated in trials that it meets the technical design goals set for it, and it provides good evidence that our general approach to federated searching is sustainable and maintainable. We intend to pursue research and development in areas of current interest to meta-search engines, information retrieval systems, and artificial intelligence. These include automatic wrapper generation [<xref ref-type="bibr" rid="ref17">17</xref>,<xref ref-type="bibr" rid="ref18">18</xref>] so that new data sources can be easily integrated into QC. Using this approach, a component could automatically generate a wrapper from knowledge of the data source query inputs and results. Another area of continued research will be automated data source consistency checking. Data sources often change in their formats, and this needs to be monitored with either automated or human intervention in order to modify wrappers accordingly. A third area will be intelligent search agents [<xref ref-type="bibr" rid="ref19">19</xref>]. We envisage incorporating an intelligent agent that will guide users through the search process, using domain knowledge to help frame clinical questions and choose search parameters. This agent could learn to work with its user. An area of continued development will be semantic understanding of result sets. We would like QC to combine search results into a meaningful coherent story that presents a concise, relevant, and digestible response to the user [<xref ref-type="bibr" rid="ref20">20</xref>]. These approaches, coupled with user support, will allow us to develop and improve the system with a view to it becoming an integral part of a clinician&#x2019;s daily practice. Even without these enhancements, we have demonstrated that the QC framework is a functional and useful approach for the delivery of online, just-in-time clinical evidence.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work was supported by a National Health and Medical Research Council Development Grant and an Australian Research Council SPIRT grant, in partnership with Merck Sharp and Dohme (Australasia) Pty Ltd.</p>
+    </ack>
+    <fn-group>
+      <fn fn-type="conflict">
+        <p>Quick Clinical was developed by researchers at the Centre for Health Informatics at the University of New South Wales, and the university and some of the authors could benefit from commercial exploitation of QC or its technologies.</p>
+      </fn>
+    </fn-group>
+    <ref-list>
+      <ref id="ref1">
+        <label>1</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Coiera</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Information economics and the Internet</article-title>
+          <source>J Am Med Inform Assoc</source>
+          <year>2000</year>
+          <volume>7</volume>
+          <issue>3</issue>
+          <fpage>215</fpage>
+          <lpage>221</lpage>
+          <pub-id pub-id-type="pmid">10833157</pub-id>
+          <pub-id pub-id-type="medline">20290754</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref2">
+        <label>2</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lawrence</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Giles</surname>
+              <given-names>CL</given-names>
+            </name>
+          </person-group>
+          <article-title>Searching the world wide Web </article-title>
+          <source>Science</source>
+          <year>1998</year>
+          <month>4</month>
+          <day>3</day>
+          <volume>280</volume>
+          <issue>5360</issue>
+          <fpage>98</fpage>
+          <lpage>100</lpage>
+          <pub-id pub-id-type="medline">0009525866</pub-id>
+          <pub-id pub-id-type="doi">10.1126/science.280.5360.98</pub-id>
+          <pub-id pub-id-type="pmid">9525866</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref3">
+        <label>3</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hersh</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <source>Information retrieval: a health and biomedical perspective. 2nd edition</source>
+          <year>2003</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Springer-Verlag</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="ref4">
+        <label>4</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Magrabi</surname>
+              <given-names>Farah</given-names>
+            </name>
+            <name>
+              <surname>Coiera</surname>
+              <given-names>Enrico W</given-names>
+            </name>
+            <name>
+              <surname>Westbrook</surname>
+              <given-names>Johanna I</given-names>
+            </name>
+            <name>
+              <surname>Gosling</surname>
+              <given-names>A Sophie</given-names>
+            </name>
+            <name>
+              <surname>Vickland</surname>
+              <given-names>Victor</given-names>
+            </name>
+          </person-group>
+          <article-title>General practitioners' use of online evidence during consultations</article-title>
+          <source>Int J Med Inform</source>
+          <year>2005</year>
+          <month>1</month>
+          <volume>74</volume>
+          <issue>1</issue>
+          <fpage>1</fpage>
+          <lpage>12</lpage>
+          <pub-id pub-id-type="medline">15626631</pub-id>
+          <pub-id pub-id-type="pii">S1386-5056(04)00205-9</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.ijmedinf.2004.10.003</pub-id>
+          <pub-id pub-id-type="pmid">15626631</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref5">
+        <label>5</label>
+        <element-citation publication-type="webpage">
+          <source>Open Archives Initiative</source>
+          <date-in-citation>2005 Sep 19</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.openarchives.org/">http://www.openarchives.org/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref6">
+        <label>6</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arens</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Chee</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Hsu</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Knoblock</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Retrieving and integrating data from multiple information sources</article-title>
+          <source>Int J Intell Coop Inform</source>
+          <year>1993</year>
+          <volume>2</volume>
+          <issue>2</issue>
+          <fpage>127</fpage>
+          <lpage>158</lpage>
+          <pub-id pub-id-type="doi">10.1142/S0218215793000071</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref7">
+        <label>7</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bergamaschi</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Deneventano</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Integration of information from multiple sources of textual data</article-title>
+          <source>Intelligent Information Agents</source>
+          <year>1999</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Springer</publisher-name>
+          <fpage>53</fpage>
+          <lpage>77</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref8">
+        <label>8</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schmitt</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Schmidt</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>METALICA: an enhanced meta search engine for literature catalogs</article-title>
+          <conf-name>Second Asian Conference on Digital Libraries</conf-name>
+          <conf-date>1999</conf-date>
+          <conf-loc>Taipei, Taiwan</conf-loc>
+        </element-citation>
+      </ref>
+      <ref id="ref9">
+        <label>9</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Coiera</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>Guide to Health Informatics</source>
+          <year>2003</year>
+          <publisher-loc>London, UK</publisher-loc>
+          <publisher-name>Arnold</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="ref10">
+        <label>10</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Haynes</surname>
+              <given-names>R B</given-names>
+            </name>
+            <name>
+              <surname>Wilczynski</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Mckibbon</surname>
+              <given-names>K A</given-names>
+            </name>
+            <name>
+              <surname>Walker</surname>
+              <given-names>C J</given-names>
+            </name>
+            <name>
+              <surname>Sinclair</surname>
+              <given-names>J C</given-names>
+            </name>
+          </person-group>
+          <article-title>Developing optimal search strategies for detecting clinically sound studies in MEDLINE</article-title>
+          <source>J Am Med Inform Assoc</source>
+          <year>1994</year>
+          <volume>1</volume>
+          <issue>6</issue>
+          <fpage>447</fpage>
+          <lpage>458</lpage>
+          <pub-id pub-id-type="pmid">7850570</pub-id>
+          <pub-id pub-id-type="medline">95153434</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref11">
+        <label>11</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ingui</surname>
+              <given-names>B J</given-names>
+            </name>
+            <name>
+              <surname>Rogers</surname>
+              <given-names>M A</given-names>
+            </name>
+          </person-group>
+          <article-title>Searching for clinical prediction rules in MEDLINE</article-title>
+          <source>J Am Med Inform Assoc</source>
+          <year>2001</year>
+          <volume>8</volume>
+          <issue>4</issue>
+          <fpage>391</fpage>
+          <lpage>397</lpage>
+          <pub-id pub-id-type="pmid">11418546</pub-id>
+          <pub-id pub-id-type="medline">21311701</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref12">
+        <label>12</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Hemmje</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Neuhold</surname>
+              <given-names>EJ</given-names>
+            </name>
+          </person-group>
+          <article-title>ADMIRE: an adaptive data model for meta search engines</article-title>
+          <source>Computer Networks (The International Journal of Computer and Telecommunications Networking)</source>
+          <year>2000</year>
+          <volume>33</volume>
+          <issue>1</issue>
+          <fpage>431</fpage>
+          <lpage>448</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref13">
+        <label>13</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levy</surname>
+              <given-names>AY</given-names>
+            </name>
+            <name>
+              <surname>Rajamaran</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Ordille</surname>
+              <given-names>JJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Querying heterogeneous information sources using source descriptions</article-title>
+          <conf-name>Twenty-Second International Conference on Very Large Databases</conf-name>
+          <conf-date>September, 1996</conf-date>
+          <conf-loc>Mumbai, India</conf-loc>
+          <fpage>251</fpage>
+          <lpage>262</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref14">
+        <label>14</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Divita</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Browne</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Rindflesch</surname>
+              <given-names>TC</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluating lexical variant generation to improve information retrieval</article-title>
+          <conf-name>AMIA Annual Symposium</conf-name>
+          <conf-date>1998</conf-date>
+          <conf-loc>Philadelphia, Penn</conf-loc>
+          <fpage>775</fpage>
+          <lpage>779</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref15">
+        <label>15</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Westbrook</surname>
+              <given-names>Johanna I</given-names>
+            </name>
+            <name>
+              <surname>Coiera</surname>
+              <given-names>Enrico W</given-names>
+            </name>
+            <name>
+              <surname>Gosling</surname>
+              <given-names>A Sophie</given-names>
+            </name>
+          </person-group>
+          <article-title>Do online information retrieval systems help experienced clinicians answer clinical questions?</article-title>
+          <source>J Am Med Inform Assoc</source>
+          <year>2005</year>
+          <volume>12</volume>
+          <issue>3</issue>
+          <fpage>315</fpage>
+          <lpage>321</lpage>
+          <pub-id pub-id-type="medline">15684126</pub-id>
+          <pub-id pub-id-type="pii">M1717</pub-id>
+          <pub-id pub-id-type="doi">10.1197/jamia.M1717</pub-id>
+          <pub-id pub-id-type="pmid">15684126</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref16">
+        <label>16</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Westbrook</surname>
+              <given-names>Johanna I</given-names>
+            </name>
+            <name>
+              <surname>Gosling</surname>
+              <given-names>A Sophie</given-names>
+            </name>
+            <name>
+              <surname>Coiera</surname>
+              <given-names>Enrico W</given-names>
+            </name>
+          </person-group>
+          <article-title>The impact of an online evidence system on confidence in decision making in a controlled setting</article-title>
+          <source>Med Decis Making</source>
+          <year>2005</year>
+          <volume>25</volume>
+          <issue>2</issue>
+          <fpage>178</fpage>
+          <lpage>185</lpage>
+          <pub-id pub-id-type="medline">15800302</pub-id>
+          <pub-id pub-id-type="pii">25/2/178</pub-id>
+          <pub-id pub-id-type="doi">10.1177/0272989X05275155</pub-id>
+          <pub-id pub-id-type="pmid">15800302</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref17">
+        <label>17</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chidlovskii</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Ragetli</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>de Rijke</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Automatic wrapper generation for web search engines</article-title>
+          <conf-name>Web-Age Information Management, First International Conference</conf-name>
+          <conf-date>June 21-23, 2000</conf-date>
+          <conf-loc>Shanghai, China</conf-loc>
+          <fpage>399</fpage>
+          <lpage>410</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref18">
+        <label>18</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kushmerick</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>Wrapper induction: efficiency and expressiveness</article-title>
+          <source>Artif Intell</source>
+          <year>2000</year>
+          <volume>118</volume>
+          <issue>1-2</issue>
+          <fpage>15</fpage>
+          <lpage>68</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0004-3702(99)00100-9</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref19">
+        <label>19</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zick</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>The work of information mediators: a comparison of librarians and intelligent software agents</article-title>
+          <source>First Monday</source>
+          <year>2000</year>
+          <month>5</month>
+          <volume>5</volume>
+          <issue>5</issue>
+        </element-citation>
+      </ref>
+      <ref id="ref20">
+        <label>20</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levy</surname>
+              <given-names>AY</given-names>
+            </name>
+          </person-group>
+          <article-title>Combining artificial intelligence and databases for data integration</article-title>
+          <source>Artificial Intelligence Today: Recent Trends and Developments. Lecture Notes in Comput Sci</source>
+          <year>1999</year>
+          <fpage>249</fpage>
+          <lpage>268</lpage>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <title>Abbreviations</title>
+      <def-list>
+        <def-item>
+          <term id="abb1">CM</term>
+          <def>
+            <p>capability manager</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb2">QC</term>
+          <def>
+            <p>Quick Clinical</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb3">UQL</term>
+          <def>
+            <p>unified query language</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb4">UReL</term>
+          <def>
+            <p>unified response language</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+  </back>
+</article>
+</pmc-articleset>

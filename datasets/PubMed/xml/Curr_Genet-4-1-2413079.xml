@@ -1,0 +1,892 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="brief-report">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Curr Genet</journal-id>
+      <journal-title>Current Genetics</journal-title>
+      <issn pub-type="ppub">0172-8083</issn>
+      <issn pub-type="epub">1432-0983</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18408930</article-id>
+      <article-id pub-id-type="pmc">2413079</article-id>
+      <article-id pub-id-type="publisher-id">189</article-id>
+      <article-id pub-id-type="doi">10.1007/s00294-008-0189-7</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Technical Note</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A codon-optimized luciferase from <italic>Gaussia princeps</italic> facilitates the in vivo monitoring of gene expression in the model alga <italic>Chlamydomonas reinhardtii</italic></article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Shao</surname>
+            <given-names>Ning</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Bock</surname>
+            <given-names>Ralph</given-names>
+          </name>
+          <address>
+            <phone>+49-331-5678700</phone>
+            <fax>+49-331-5678701</fax>
+            <email>rbock@mpimp-golm.mpg.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Max-Planck-Institut f&#xFC;r Molekulare Pflanzenphysiologie, Am M&#xFC;hlenberg 1, 14476 Potsdam-Golm, Germany </aff>
+      </contrib-group>
+      <author-notes>
+        <fn fn-type="com">
+          <p>Communicated by A. Grossman.</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="epub">
+        <day>12</day>
+        <month>4</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>6</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>53</volume>
+      <issue>6</issue>
+      <fpage>381</fpage>
+      <lpage>388</lpage>
+      <history>
+        <date date-type="received">
+          <day>10</day>
+          <month>1</month>
+          <year>2008</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>20</day>
+          <month>3</month>
+          <year>2008</year>
+        </date>
+        <date date-type="accepted">
+          <day>29</day>
+          <month>3</month>
+          <year>2008</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2008</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The unicellular green alga <italic>Chlamydomonas reinhardtii</italic> has emerged as a superb model species in plant biology. Although the alga is easily transformable, the low efficiency of transgene expression from the <italic>Chlamydomonas</italic> nuclear genome has severely hampered functional genomics research. For example, poor transgene expression is held responsible for the lack of sensitive reporter genes to monitor gene expression in vivo, analyze subcellular protein localization or study protein&#x2013;protein interactions. Here, we have tested the luciferase from the marine copepod <italic>Gaussia princeps</italic> (<italic>G-Luc</italic>) for its suitability as a sensitive bioluminescent reporter of gene expression in <italic>Chlamydomonas</italic>. We show that a <italic>Gaussia</italic> luciferase gene variant, engineered to match the codon usage in the <italic>Chlamydomonas</italic> nuclear genome, serves as a highly sensitive reporter of gene expression from both constitutive and inducible algal promoters. Its bioluminescence signal intensity greatly surpasses previously developed reporters for <italic>Chlamydomonas</italic> nuclear gene expression and reaches values high enough for utilizing the reporter as a tool to monitor responses to environmental stresses in vivo and to conduct high-throughput screenings for signaling mutants in <italic>Chlamydomonas</italic>.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Reporter gene</kwd>
+        <kwd>
+          <italic>Chlamydomonas reinhardtii</italic>
+        </kwd>
+        <kwd>Luciferase</kwd>
+        <kwd>
+          <italic>Gaussia princeps</italic>
+        </kwd>
+        <kwd>Heat-inducible expression</kwd>
+        <kwd>Bioluminescence</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The unicellular green alga <italic>Chlamydomonas reinhardtii</italic> has become an invaluable model organism for plant biology (Harris <xref ref-type="bibr" rid="CR8">2001</xref>; Gutman and Niyogi <xref ref-type="bibr" rid="CR6">2004</xref>; Pr&#xF6;schold et al. <xref ref-type="bibr" rid="CR17">2005</xref>). It represents one of the simplest photosynthetic eukaryotes, can be easily grown at large scale either photoautotrophically, mixotrophically or heterotrophically, and can be propagated sexually or asexually. Moreover, <italic>Chlamydomonas</italic> combines a powerful genetics with the availability of unique genetic and genomic resources: all three genomes are fully sequenced (nuclear, plastid, and mitochondrial; Merchant et al. <xref ref-type="bibr" rid="CR14">2007</xref>), large mutant collections have been established, and all three genomes are amenable to genetic manipulation by transformation (Hippler et al. <xref ref-type="bibr" rid="CR9">1998</xref>; Remacle et al. <xref ref-type="bibr" rid="CR18">2006</xref>). One of the few drawbacks of <italic>Chlamydomonas</italic> is that it has been notoriously difficult to express transgenes to reasonably high levels from the nuclear genome. Use of specialized promoters (Schroda et al. <xref ref-type="bibr" rid="CR20">2000</xref>; Fischer and Rochaix <xref ref-type="bibr" rid="CR3">2001</xref>) and adjustment of the transgene&#x2019;s codon usage to that of the highly GC-rich nuclear genome of the alga (Fuhrmann et al. <xref ref-type="bibr" rid="CR4">1999</xref>, <xref ref-type="bibr" rid="CR5">2004</xref>) helped in some cases, but no general solution to the problem has been found to date. This is highly unfortunate, because a number of valuable tools available in higher plants currently cannot be used routinely in <italic>Chlamydomonas</italic>. These include all applications of in vivo reporters of gene expression, such as, promoter-YFP/GFP fusions for gene expression analyses and subcellular localization studies, as well as fluorescence resonance energy transfer (FRET) and biomolecular fluorescence complementation (BiFC) for monitoring protein&#x2013;protein interactions.</p>
+      <p>Recently, codon-optimized reporter genes have been developed for nuclear and chloroplast expression in <italic>C. reinhardtii</italic>. Two such genes have been developed for nuclear expression: a <italic>gfp</italic> gene encoding the green fluorescent protein from the jellyfish <italic>Aequorea victoria</italic> (Fuhrmann et al. <xref ref-type="bibr" rid="CR4">1999</xref>) and a luciferase gene (<italic>R-Luc</italic>) from the sea pansy <italic>Renilla reniformis</italic> (Fuhrmann et al. <xref ref-type="bibr" rid="CR5">2004</xref>). Synthetic luciferase and <italic>gfp</italic> genes were also designed for chloroplast transformation and successfully used to measure plastid gene expression (Minko et al. <xref ref-type="bibr" rid="CR15">1999</xref>; Mayfield and Schultz <xref ref-type="bibr" rid="CR13">2004</xref>; Barnes et al. <xref ref-type="bibr" rid="CR1">2005</xref>). However, the use of these reporter genes for nuclear transformation is still far from being routine. While both reporters allowed detection or quantitation of the expression of some (fusion) genes (Fuhrmann et al. <xref ref-type="bibr" rid="CR4">1999</xref>; Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>), their generally low sensitivity has precluded the universal use of these reporters.</p>
+      <p>To overcome these limitations, we have explored a recently discovered new luciferase for its suitability as a more sensitive reporter of gene expression in <italic>Chlamydomonas</italic>. The luciferase from the copepod marine organism <italic>Gaussia princeps</italic> represents one of the smallest and brightest bioluminescent proteins known to date (Tannous et al. <xref ref-type="bibr" rid="CR22">2005</xref>; Remy and Michnick <xref ref-type="bibr" rid="CR19">2006</xref>). In an ATP-independent reaction, it catalyzes the oxidation of the substrate coelenterazine resulting in light emission at a wavelength of 480&#xA0;nm. The <italic>Gaussia</italic> luciferase gene (<italic>G-Luc</italic>) has been successfully used as a reporter of gene expression in mammalian cells (Tannous et al. <xref ref-type="bibr" rid="CR22">2005</xref>) and could also be split and used for the detection of protein&#x2013;protein interactions by protein fragment complementation assays (Remy and Michnick <xref ref-type="bibr" rid="CR19">2006</xref>). It encodes a non-toxic, monomeric protein of only 185 amino acids and this small size may make it particularly suitable for expression in recalcitrant species.</p>
+      <p>We report here the development of the luciferase gene from <italic>G. princeps</italic> as a sensitive reporter gene for the in vivo monitoring of gene expression in <italic>Chlamydomonas</italic>. A codon-optimized version of the gene fused to <italic>Chlamydomonas</italic> expression signals generated more than 7-fold higher bioluminescence activity than the <italic>R-Luc</italic> gene from <italic>R. reniformis</italic>. Furthermore, <italic>G-Luc</italic> displayed drastically higher signal intensity than <italic>R-Luc</italic> in luminescence imaging (about 40-fold), thus facilitating the in vivo monitoring of responses to environmental stress stimuli in <italic>C. reinhardtii</italic>.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <sec id="Sec3">
+        <title>Algal strains and culture conditions</title>
+        <p><italic>Chlamydomonas reinhardtii</italic> strain 325 (CW15<sub>,</sub><italic>mt+, arg</italic>7&#x2013;8) was used in this study (kindly provided by Dr. Christoph F. Beck, University of Freiburg, Germany). Cultures were grown mixotrophically in Tris&#x2013;acetate phosphate (TAP) medium (Harris <xref ref-type="bibr" rid="CR7">1989</xref>) on a rotary shaker at 23&#xB0;C under continuous irradiation with white light (55&#xA0;&#x3BC;E&#xA0;m<sup>&#x2212;2</sup>&#xA0;s<sup>&#x2212;1</sup>). The TAP medium was supplemented with 100&#xA0;mg&#xA0;l<sup>&#x2212;1</sup> of arginine when required.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Nucleic acid manipulations</title>
+        <p>The coding region of the <italic>G. princeps</italic> luciferase gene (<italic>G-Luc</italic>) was synthesized de novo according to the nuclear codon usage of <italic>C. reinhardtii</italic> (GenScript, Piscataway, NJ). The synthetic <italic>G-Luc</italic> gene (GenBank accession number EU372000) was ligated as <italic>Nde</italic>I/<italic>Eco</italic>RI fragment into the similarly digested <italic>PsaD</italic> expression cassette (Fischer and Rochaix <xref ref-type="bibr" rid="CR3">2001</xref>). Analogously, a codon-optimized <italic>R. reniformis</italic> luciferase gene (<italic>R-Luc</italic>; Fuhrmann et al. <xref ref-type="bibr" rid="CR5">2004</xref>) was cloned as <italic>Nde</italic>I/<italic>Eco</italic>RI fragment into the <italic>PsaD</italic> cassette. For inducible expression, the <italic>G-Luc</italic> coding region was excised by digestion with <italic>Hinc</italic>II and <italic>Bam</italic>HI and inserted into an inducible expression cassette driven by the <italic>Hsp70A</italic> promoter (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>; Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b).<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Codon usage optimization of the <italic>G. princes</italic> luciferase and construction of expression cassettes for the transformation of <italic>Chlamydomonas reinhardtii</italic>. <bold>a</bold> Adaptation of the <italic>G-Luc</italic> gene to the codon usage in the nuclear genome of <italic>Chlamydomonas reinhardtii</italic>. The relative frequencies of the individual codons of the native <italic>G-Luc</italic> gene (GenBank accession number AY015993) in the <italic>Chlamydomonas</italic> nuclear genome are indicated by <italic>grey bars</italic> with the most frequently used triplet in <italic>Chlamydomonas</italic> set to 100%. The synthetic <italic>G-Luc</italic> gene (<italic>diamonds</italic>) was optimized by changing all codons to the most frequently used ones in <italic>Chlamydomonas reinhardtii</italic>. <bold>b</bold><italic>G-Luc</italic> and <italic>R-Luc</italic> expression cassettes. To comparatively assess constitutive expression levels, the <italic>G-Luc</italic> (<italic>dark grey box</italic>) and <italic>R-Luc</italic> (<italic>hatched box</italic>) coding regions were inserted into the <italic>PsaD</italic> expression cassette (<italic>PsaD</italic> promoter and 5&#x2032; UTR shown as <italic>open box</italic>; Fischer and Rochaix <xref ref-type="bibr" rid="CR3">2001</xref>). Both the <italic>R-Luc</italic> (Fuhrmann et al. <xref ref-type="bibr" rid="CR5">2004</xref>) and the <italic>G-Luc</italic> genes are optimized with regard to the codon usage in the <italic>Chlamydomonas</italic> nuclear genome. For inducible expression, the <italic>Hsp70A</italic> promoter (from position &#x2212;23 to &#x2212;285 with respect to the translation initiation codon of <italic>Hsp70A</italic>) was fused to a gene fragment containing the 5&#x2032; UTR and the first three exons of the <italic>Hsp70B</italic> gene (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>). The positions of the three heat shock elements (<italic>HSE, black boxes</italic>) within the promoter region are indicated. <italic>Light grey bars</italic> represent exons, introns are depicted as <italic>broken lines</italic>. The third exon of <italic>Hsp70B</italic> was fused to the coding region of <italic>R-Luc</italic> and <italic>G-Luc</italic>, respectively. The 3&#x2032; UTR of the reporter gene cassettes is derived from <italic>RBCS2</italic>, a nuclear gene for the small subunit of Rubisco (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>)</p></caption><graphic position="anchor" xlink:href="294_2008_189_Fig1_HTML" id="MO1"/></fig></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Nuclear transformation of <italic>Chlamydomonas</italic></title>
+        <p><italic>Chlamydomonas</italic> nuclear co-transformation was carried out using the glass bead method (Kindle <xref ref-type="bibr" rid="CR10">1990</xref>). Plasmid DNA used for transformation was purified by PEG precipitation. Prior to transformation, plasmid pCB412 containing the <italic>C. reinhardtii</italic><italic>ARG7</italic> gene as selectable marker was linearized by digestion with <italic>Eco</italic>RI; all <italic>Luc</italic> constructs were linearized with <italic>Sca</italic>I. Co-transformation and selection for arginine prototrophy were employed to introduce the <italic>Luc</italic> constructs into the <italic>Chlamydomonas</italic> nuclear genome. Arginine prototrophic clones were selected on TAP medium. Transformants harboring the <italic>Luc</italic> constructs were identified by luciferase assays.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Bioluminescence assays</title>
+        <p>Coelenterazine (P.J.K. GmbH; Kleinblittersdorf, Germany), the substrate for <italic>G-Luc</italic> and <italic>R-Luc</italic>, was dissolved in ethanol (1&#xA0;mM stock solution). To assay luciferase activity, <italic>C.&#xA0;reinhardtii</italic> cultures were grown in liquid TAP medium under constant illumination (55&#xA0;&#x3BC;E&#xA0;m<sup><bold>&#x2212;</bold>2</sup>&#xA0;s<sup><bold>&#x2212;</bold>1</sup>) to a final cell density of 3&#x2013;6&#xA0;&#xD7;&#xA0;10<sup>6</sup>&#xA0;cells&#xA0;ml<sup><bold>&#x2212;</bold>1</sup>. After sampling, cells were spun down, resuspended in the same volume of sample buffer [1.5&#xA0;mM Tris&#x2013;HCl (pH&#xA0;7.8), 1&#xA0;mM EDTA], and frozen at &#x2212;20&#xB0;C for at least 20&#xA0;min. After thawing, 20&#xA0;&#x3BC;l samples were transferred to 96-well, white microtiter plates and 125&#xA0;&#x3BC;l of the assay buffer [0.1&#xA0;M K<sub>2</sub>HPO<sub>4</sub> (pH&#xA0;7.6), 0.5&#xA0;M NaCl, 1&#xA0;mM EDTA] was added to each well. Following incubation at room temperature for 15&#xA0;min in the dark, bioluminescence was assayed using a luminometer (MicroBeta TriLux; PerkinElmer) by auto-injecting the substrate (coelenterazine 0.01&#xA0;mM; 50&#xA0;&#x3BC;l per well). The luminescence units are presented as luminescence counts per second (LCPS). The background was normalized by measuring wells containing only buffer or buffer with cells lacking the <italic>Luc</italic> gene. Inducible expression of the <italic>Luc</italic> fusion genes was normalized to the chlorophyll content of the cultures (Porra et al. <xref ref-type="bibr" rid="CR16">1989</xref>). The induction factor was calculated by comparison with untreated cells.</p>
+        <p>For in vivo luminescence imaging, <italic>C.&#xA0;reinhardtii</italic> cultures were grown in TAP medium under constant illumination (55&#xA0;&#x3BC;E&#xA0;m<sup>&#x2212;2</sup>&#xA0;s<sup>&#x2212;1</sup>) to a final density of 1&#x2013;2&#xA0;<bold>&#xD7;</bold>&#xA0;10<sup>6</sup>&#xA0;cells&#xA0;ml<sup>&#x2212;1</sup>. A volume of 3&#xA0;&#x3BC;l cell suspension were spotted onto TAP agar plates and incubated under constant illumination (55&#xA0;&#x3BC;E m<sup>&#x2212;2</sup>&#xA0;s<sup>&#x2212;1</sup>) for 4&#xA0;days. Luminescence of the cells was visualized in the presence of the substrate (coelenterazine 0.05&#xA0;mM) using an ultra sensitive Photon Counting Camera (C2400-30H; Hamamatsu). Samples imaged in the absence of the substrate served as control. The luminescence images were acquired and processed with the HPD-LIS software (Hamamatsu) using an integration time of 20&#xA0;min and linear signal intensity.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>RNA gel blot analyses</title>
+        <p>Total cellular RNA was extracted according to published protocols (von Gromoff et al. <xref ref-type="bibr" rid="CR23">1989</xref>). RNA samples (15&#xA0;&#x3BC;g total RNA) were electrophoresed in formaldehyde-containing 1% agarose gels and blotted onto Hybond XL membranes (GE Healthcare). To produce a hybridization probe for detection of <italic>G-Luc</italic> transcripts, the coding region of the gene was excised from a plasmid clone. A <italic>Hsp70A</italic>-specific probe was prepared from a plasmid clone originally described as <italic>hsp70-2</italic> (von Gromoff et al. <xref ref-type="bibr" rid="CR23">1989</xref>). The probes were purified by agarose gel electrophoresis following extraction of the DNA fragments of interest from excised gel slices using the Nucleospin Extract II kit (Macherey-Nagel, D&#xFC;ren, Germany) and then radiolabeled with <sup>32</sup>P-dCTP using the MegaPrime kit (GE Healthcare). Hybridizations were performed at 65&#xB0;C in Church buffer (Church and Gilbert <xref ref-type="bibr" rid="CR2">1984</xref>).</p>
+      </sec>
+    </sec>
+    <sec id="Sec8" sec-type="results">
+      <title>Results</title>
+      <sec id="Sec9">
+        <title>Design of the <italic>Gaussia</italic> luciferase as reporter gene for <italic>Chlamydomonas</italic></title>
+        <p>Bioluminescent proteins are widely used as reporter genes to measure gene expression, determine subcellular protein localization, and study protein&#x2013;protein interactions. Luciferases are nontoxic, bioluminescent reporter proteins suitable to monitor gene expression quantitatively. Unfortunately, the previously constructed <italic>Chlamydomonas</italic>-specific <italic>Renilla</italic> luciferase (Fuhrmann et al. <xref ref-type="bibr" rid="CR5">2004</xref>) suffers from low sensitivity, presumably due to low expression levels and/or low protein stability. As in mammalian cells, the luciferase from the marine copepod <italic>G. princeps</italic> proved to be a much more sensitive reporter than firefly and <italic>Renilla</italic> luciferases (Tannous et al. <xref ref-type="bibr" rid="CR22">2005</xref>); we set out to test this luciferase as a reporter gene in <italic>C. reinhardtii</italic>.</p>
+        <p>Previous work had shown that, in <italic>Chlamydomonas</italic>, adaptation of the codon usage of trangenes significantly improves expression levels (Fuhrmann et al. <xref ref-type="bibr" rid="CR4">1999</xref>, <xref ref-type="bibr" rid="CR5">2004</xref>). As the codon usage in the native luciferase from <italic>G. princeps</italic> deviated strongly from that in nuclear genes of <italic>C. reinhardtii</italic>, we adjusted all codons to the most preferred triplets in <italic>Chlamydomonas</italic> (according to the codon usage table for <italic>Chlamydomonas</italic>: <ext-link ext-link-type="uri" xlink:href="http://www.kazusa.org.jp/codon">http://www.kazusa.org.jp/codon</ext-link>; Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a). Following this codon optimization in silico, the gene was resynthesized and will be subsequently referred to as <italic>G-Luc</italic> standing for <italic>Gaussia</italic> luciferase gene (GenBank accession number EU372000). In all subsequent experiments, <italic>G-Luc</italic> was compared side-by-side to the <italic>Renilla</italic> luciferases (Fuhrmann et al. <xref ref-type="bibr" rid="CR5">2004</xref>), referred to as <italic>R-Luc</italic>.</p>
+        <p>Both luciferase genes were cloned into two different expression cassettes: (1) the <italic>PsaD</italic> cassette (Fischer and Rochaix <xref ref-type="bibr" rid="CR3">2001</xref>), whose promoter is constitutively active at least under photosynthetic conditions and (2) an inducible expression cassette driven by the <italic>Hsp70A</italic> promoter fused to the 5&#x2032; region of the <italic>Hsp70B</italic> gene (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>; Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b). This heat shock gene promoter was shown previously to positively respond to a variety of inducing signals, including heat stress, light, retrograde signals from the plastid, and reactive oxygen species (von Gromoff et al. <xref ref-type="bibr" rid="CR23">1989</xref>; Kropat et al. <xref ref-type="bibr" rid="CR12">1997</xref>; Kropat and Beck <xref ref-type="bibr" rid="CR11">1998</xref>; Schroda et al. <xref ref-type="bibr" rid="CR20">2000</xref>; Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>). All gene constructs were introduced into arginine-auxotroph <italic>Chlamydomonas</italic> cells by glass bead-mediated co-transformation followed by selection for arginine prototrophy.</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Expression and heat inducibility of the <italic>Gaussia</italic> luciferase reporter</title>
+        <p>To compare the sensitivity of the <italic>Chlamydomonas</italic>-specific <italic>G-Luc</italic> as a reporter gene with that of the previously designed <italic>R-Luc</italic>, 24 transgenic clones from each construct with the constitutive <italic>PsaD</italic> promoter were randomly chosen and the six best-expressing ones were assayed for their luciferase activities. While only three out of six best <italic>R-Luc</italic> clones had significant luciferase activity, all six <italic>G-Luc</italic> clones showed high activity (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a). Moreover, when the activities were compared quantitatively, the <italic>G-Luc</italic> clones displayed, on average, more than 7-fold higher bioluminescence signal intensity than the <italic>R-Luc</italic> clones (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a), indicating that the new <italic>G-Luc</italic> is more sensitive and more efficient than previously established reporter genes for <italic>Chlamydomonas</italic>. The very high luciferase activities measured indicate that <italic>G-Luc</italic> will also be suitable for reporting expression from promoters that are considerably weaker than the <italic>PsaD</italic> promoter.<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Comparison of <italic>G-Luc</italic> and <italic>R-Luc</italic> activity in transgenic <italic>Chlamydomonas reinhardtii</italic> strains. <bold>a</bold> Expression of <italic>G-Luc</italic> and <italic>R-Luc</italic> under the control of the constitutive <italic>PsaD</italic> promoter. For each construct, bioluminescence assays with six independent transformants were performed using a luminescence counter. The <italic>bars</italic> represent the mean of three independent experiments. The standard deviation is indicated. <bold>b</bold> Heat induction of the <italic>G-Luc</italic> and <italic>R-Luc</italic> reporters under the control of the <italic>Hsp70A</italic> promoter. Expression of luciferase in transformants harboring the P<italic>Hsp70A-Luc</italic> constructs was induced by a temperature shift from 23 to 40&#xB0;C for 1&#xA0;h. After a 1&#xA0;h recovery phase at room temperature, luciferase activity was assayed and the induction factors were calculated by comparison with untreated samples. Four arbitrarily chosen transformants were assayed for each luciferase construct. The <italic>bars</italic> represent the mean of three independent experiments, the standard deviation is indicated. The basal expression levels of the transformants under non-inducing conditions were 105, 5, 133 and 2&#xA0;LCPS&#xA0;&#x3BC;g<sup>&#x2212;1</sup> chlorophyll for the four <italic>R-Luc</italic> clones and 4, 5, 37 and 18&#xA0;LCPS&#xA0;&#x3BC;g<sup>&#x2212;1</sup> chlorophyll for the four <italic>G-Luc</italic> clones</p></caption><graphic position="anchor" xlink:href="294_2008_189_Fig2_HTML" id="MO2"/></fig></p>
+        <p>Next we wanted to compare the two luciferase genes when expressed under the control of the inducible <italic>Hsp70A</italic> promoter. To this end, inducibility was determined by measuring luciferase activities in the uninduced and induced states for the four best-expressing co-transformants from each construct (identified among 32 randomly picked clones). Transgene expression was induced by shifting the growth temperature of the algal culture from 23 to 40&#xB0;C for 1&#xA0;h. While background expression under non-inducing conditions was comparably low in <italic>R-Luc</italic> and <italic>G-Luc</italic> transformants, the <italic>G-Luc</italic> transformants showed much higher bioluminescence under inducing conditions (on average more than 7-fold; Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b). This confirms the higher sensitivity of the <italic>G-Luc</italic> reporter for another expression cassette (<italic>Hsp70A</italic> promoter&#xA0;+&#xA0;<italic>RbcS</italic> terminator) and, moreover, indicates that <italic>G-Luc</italic> can be used as a highly sensitive reporter gene for measuring inducible gene expression in <italic>C. reinhardtii</italic>.</p>
+      </sec>
+      <sec id="Sec11">
+        <title>Luciferase imaging and assessment of protein stability</title>
+        <p>One of the most powerful applications of luminescent reporter proteins is their use in genetic screens for mutants in cellular signal transduction pathways. This usually requires detection of the reporter gene activity by imaging techniques to facilitate high-throughput screening of mutagenized organisms. Unfortunately, due to the lack of sufficiently sensitive reporters, this has not been possible in <italic>Chlamydomonas</italic> to date. We, therefore, were interested in testing whether the sensitivity of our new <italic>G-Luc</italic> reporter gene was sufficiently high to allow visualization of gene expression by luciferase imaging.</p>
+        <p>To this end, we assayed luciferase activity from both the constitutive and the inducible expression constructs in vivo using a photon-counting camera. Even the best-expressing clone with <italic>R-Luc</italic> controlled by the <italic>PsaD</italic> expression cassette (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a) did not show enough luminescence to be detectable by luciferase imaging (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a). In contrast, <italic>G-Luc</italic> activity was sufficiently strong to be readily detectable (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a). Similar results were obtained for inducible expression from the <italic>Hsp70A</italic> promoter. While <italic>R-Luc</italic> activity was barely above the detection limit, inducibility of <italic>G-Luc</italic> expression was detected with high sensitivity (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b).<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>In vivo assay of <italic>Gaussia</italic> luciferase and <italic>Renilla</italic> luciferase activities in <italic>Chlamydomonas reinhardtii</italic> by visualizing luminescence with a photon-counting camera. <italic>Left panels</italic> show photographs of the algal colonies prior to luminescence imaging, <italic>right panels</italic> show the luminescence images. The clones with the highest luciferase expression levels in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> were used. <bold>a</bold> For detection of luciferase activity in living algae, wild-type cells (<italic>WT</italic>) and transformants harboring the P<italic>psaD R-Luc</italic> or P<italic>psaD G-Luc</italic> constructs (strains R1 and G9 from Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a) were spotted in three replicas onto agar-solidified medium and grown under normal light conditions (55&#xA0;&#x3BC;E&#xA0;m<sup>&#x2212;2</sup>&#xA0;s<sup>&#x2212;1</sup>) for 4&#xA0;days. The ratio of luciferase signal intensities of P<italic>psaD G-Luc</italic>:P<italic>psaD R-Luc</italic> was approximately 40 (40.4&#xA0;&#xB1;&#xA0;2.5); the signal intensity of P<italic>psaD R-Luc</italic> was only slightly above background (P<italic>psaD R-Luc</italic>: WT&#xA0;=&#xA0;3.4&#xA0;&#xB1;&#xA0;1.5). <bold>b</bold> Luminescence of the P<italic>Hsp70A-Luc</italic> transformants induced by heat shock. The cultures were shifted from 23 to 40&#xB0;C for 1&#xA0;h. After recovery at room temperature for 1&#xA0;h, the luminescence image was taken with a photon-counting camera. Luminescence intensities are color-coded with the maximum set to 1.3&#xA0;&#xD7;&#xA0;10<sup>5</sup></p></caption><graphic position="anchor" xlink:href="294_2008_189_Fig3_HTML" id="MO3"/></fig></p>
+        <p>Different possible explanations can account for the much better performance of <italic>G-Luc</italic> compared to <italic>R-Luc</italic>: higher expression rates, higher enzymatic activity or higher stability of the <italic>Gaussia</italic> enzyme. To distinguish between these possibilities, we performed stability assays by measuring luciferase activities in dependence on the temperature. To this end, algal cultures were subjected to 30&#xA0;min of high temperature incubation followed by a 30&#xA0;min recovery phase at room temperature prior to measurement of luciferase activity. If the <italic>Gaussia</italic> enzyme were indeed more stable than the <italic>Renilla</italic> enzyme, its activity should decline less sharply with temperature. This was indeed the case (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a): while the <italic>Renilla</italic> luciferase suffered a strong temperature-dependent decline in activity, the <italic>Gaussia</italic> enzyme was much less affected, suggesting that higher enzyme stability contributes substantially to the superior performance of <italic>G-Luc</italic>.<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Monitoring the heat stress response in <italic>Chlamydomonas</italic> strains expressing luciferase constructs driven by the heat-inducible <italic>Hsp70A</italic> promoter. <bold>a</bold> Assessment of the thermostability of the <italic>Gaussia</italic> and <italic>Renilla</italic> luciferases. P<italic>psaD</italic>-<italic>Luc</italic> transformants were subjected to 30&#xA0;min of high temperature treatment as indicated followed by a 30&#xA0;min recovery phase at room temperature. Luciferase activities were measured with a luminescence counter. Note the high temperature sensitivity of the <italic>Renilla</italic> enzyme with all activity being lost at temperatures above 46&#xB0;C. In contrast, the <italic>Gaussia</italic> enzyme appears to be much more stable, facilitating its use as a sensitive reporter of heat stress-induced gene expression. <bold>b</bold> Visualization of the heat stress response with <italic>G-Luc</italic>. For luciferase imaging, wild-type cells (<italic>WT</italic>) and transformants harboring P<italic>Hsp70A R-Luc</italic>, P<italic>Hsp70A G-Luc</italic> or P<italic>&#x2206;HSE</italic><italic>G-Luc</italic> (<italic>G-Luc</italic> fusion to a <italic>Hsp70A</italic> promoter lacking the HSE region; Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>) were spotted in three replicas on agar plates, grown under normal light conditions (55&#xA0;&#x3BC;E&#xA0;m<sup>&#x2212;2</sup>&#xA0;s<sup>&#x2212;1</sup>) for 4&#xA0;days, photographed (<italic>left picture</italic>), and then shifted from 23 to 47&#xB0;C for 15&#xA0;min. After 3.5&#xA0;h at room temperature (<italic>RT</italic>), the luminescence of the transformants upon substrate addition was recorded with a photon-counting camera (<italic>right picture</italic>). <bold>c</bold> Analysis of the kinetics of luciferase induction in a P<italic>Hsp70A G-Luc</italic> transformant exposed to heat stress. Colonies of the P<italic>Hsp70A G-Luc</italic> strain growing on a TAP agar plate were exposed to 40 or 47&#xB0;C for 15&#xA0;min. After 1, 3 or 5&#xA0;h recovery at RT, the luminescence of the colonies was visualized using a photon-counting camera. <bold>d</bold> Comparison of the induction of <italic>G-Luc</italic> expression by heat stress with induction of the endogenous <italic>Hsp70A</italic> gene at the mRNA level. Expression from the <italic>Hsp70A</italic> promoter was induced by a 15-min incubation at 40 or 47&#xB0;C, and then followed over time by incubation at room temperature (RT) for the time spans indicated. The induction kinetics of luciferase expression from the <italic>Hsp70A</italic> promoter parallels that of the endogenous <italic>Hsp70A</italic> gene</p></caption><graphic position="anchor" xlink:href="294_2008_189_Fig4_HTML" id="MO4"/></fig></p>
+        <p>To explore the heat inducibility of <italic>G-Luc</italic> under the control of the <italic>Hsp70A</italic> promoter in somewhat greater detail, we sought to identify optimum experimental conditions for conducting genetic screens for signaling mutants. We, therefore, tested different combinations of temperatures of the heat shock and recovery times and also included a control construct, in which the heat-shock elements (HSE) were deleted from the <italic>Hsp70A</italic> promoter (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>). As expected, this deletion completely abolished heat inducibility under all conditions tested (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b and data not shown). Efficient heat induction of the <italic>G-Luc</italic> reporter was achieved in a wide temperature range, from 40 to 47&#xB0;C (cp. Figs.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b, <xref rid="Fig4" ref-type="fig">4</xref>b). However, heat shock at higher temperatures required longer recovery times at room temperature before luciferase activity could be visualized by imaging. Whereas following heat shock at 40&#xB0;C, maximum bioluminescence was measured after 1&#xA0;h recovery, a recovery phase of 3&#xA0;h was required to obtain similarly high bioluminescence after a heat shock at 47&#xB0;C (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>c).</p>
+        <p>Next we wanted to confirm that heat induction of luciferase activity parallels <italic>G-Luc</italic> mRNA accumulation. This was clearly the case upon both induction at 40&#xB0;C and induction at 47&#xB0;C (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>d). At both temperatures, mRNA levels peaked at about the same time as enzyme activities (cp. Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>c, d). Moreover, the kinetics of <italic>G-Luc</italic> mRNA accumulation correlated, by and large, with heat induction of the endogenous <italic>Hsp70A</italic> gene (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>d), ultimately confirming that the luciferase reporter faithfully mirrors promoter activity.</p>
+        <p>Having established that <italic>G-Luc</italic> expression can be readily monitored by luminescence imaging, we finally wanted to provide a quantitative assessment of the superior performance of the <italic>G-Luc</italic> reporter by direct luciferase imaging of primary transformants. To this end, Petri dishes with transformed <italic>Chlamydomonas</italic> colonies were exposed to the substrate and analyzed by luminescence imaging (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). While transformation with <italic>G-Luc</italic> produced a high number of brightly luminescing colonies, <italic>R-Luc</italic> luminescence was much lower and barely detectable (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). These data ultimately confirm the much higher sensitivity of the <italic>G-Luc</italic> reporter and its suitability for luminescence imaging.<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>In vivo assay of <italic>Gaussia</italic> luciferase and <italic>Renilla</italic> luciferase activities in primary <italic>Chlamydomonas</italic> transformants by visualizing luminescence with a photon-counting camera. Co-transformation experiments were conducted using identical amounts of linearized DNA (500&#xA0;ng <italic>Luc</italic>-containing plasmid&#xA0;+&#xA0;100&#xA0;ng <italic>ARG7</italic>-containing plasmid) and identical amounts of algal cells. <italic>Upper panels</italic> show photographs of the algal colonies prior to luminescence imaging, <italic>lower panels</italic> show the luminescence images. Luminescence intensities are color-coded with the maximum set to 1.3&#xA0;&#xD7;&#xA0;10<sup>5</sup>. <bold>a</bold> Luminescence of P<italic>psaD-Luc</italic> transformants. The ratio of total-plate luminescence of P<italic>psaD G-Luc</italic>:P<italic>psaD R-Luc</italic> was approximately 36. <bold>b</bold> Luminescence of P<italic>Hsp70A-Luc</italic> transformants induced by heat shock. The cultures were shifted from 23 to 40&#xB0;C for 1&#xA0;h. After recovery at room temperature for 1&#xA0;h, the luminescence image was taken. The ratio of total-plate luminescence of P<italic>Hsp70A G-Luc</italic>:P<italic>Hsp70A R-Luc</italic> was approximately 16. Note that a large fraction of the non-luminescing colonies is not co-transformed (i.e., harbors the selectable marker gene but not the luciferase reporter)</p></caption><graphic position="anchor" xlink:href="294_2008_189_Fig5_HTML" id="MO5"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec12" sec-type="discussion">
+      <title>Discussion</title>
+      <p>In this work, we have established the luciferase from the marine copepod <italic>G. princeps</italic> as a novel and highly sensitive bioluminescent reporter in the model alga <italic>C. reinhardtii</italic>. The <italic>G-Luc</italic> reporter outperforms previously developed reporter genes for <italic>Chlamydomonas</italic>, improves the monitoring of gene expression and, most importantly, represents the first nuclear reporter gene that is sufficiently sensitive to facilitate in vivo imaging in <italic>Chlamydomonas</italic>. This expands the toolbox available for <italic>Chlamydomonas</italic> genetics and cell biology and will make possible experimental approaches that theretofore could not be taken in <italic>Chlamydomonas</italic>. First and foremost, the possibility to conduct large-scale mutant screens by bioluminescence imaging of live algal colonies will facilitate powerful genetic strategies for the isolation of novel components of all those signal transduction cascades that modify gene expression by targeting specific promoters. For example, the inducible promoter used in this study (<italic>Hsp70A</italic>) is the target of several distinct signal transduction pathways in response to heat, retrograde signals from the chloroplast, and reactive oxygen species (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>). Mutagenesis of our algal strains expressing <italic>G-Luc</italic> from this promoter (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b, c), followed by selection for mutants incapable of inducing the luciferase gene in response to a specific stress stimulus, should allow the genetic dissection of the underlying signal transduction pathways. Our preliminary results indicate that reactive oxygen species, which are much weaker inducers of the promoter than heat stress (Shao et al. <xref ref-type="bibr" rid="CR21">2007</xref>), induce <italic>G-Luc</italic> expression sufficiently strongly to facilitate such a screen in a microtiter plate format, although screening on agar plates will require further optimization and improvement of the assay sensitivity.</p>
+      <p>In mammalian cells, a split version of the <italic>Gaussia</italic> luciferase was successfully used for the detection of protein&#x2013;protein interactions in vivo by protein fragment complementation assays (Remy and Michnick <xref ref-type="bibr" rid="CR19">2006</xref>). As currently no method is available to identify protein&#x2013;protein interactions in <italic>Chlamydomonas</italic> cells, the development of screens for protein interaction partners seems to be a particularly promising future application of the <italic>G-Luc</italic> reporter.</p>
+      <p>It should be noted that thus far, the <italic>G-luc</italic> reporter gene has been tested only in cell wall-deficient <italic>Chlamydomonas</italic> strains, which are easily transformable. It remains to be tested whether substrate uptake or luminescence imaging are influenced by the more rigid walls present in strains with wild type-like cell wall structure.</p>
+      <p>Although the <italic>Chlamydomonas</italic>-specific <italic>G-Luc</italic> described here provides a workable reporter of gene expression that is significantly more sensitive than previously established reporter genes, our data indicate that the superior performance of the <italic>Gaussia</italic> luciferase gene is not due to its better expression in <italic>C. reinhardtii</italic>, but rather due to its very high enzyme stability. Most probably, the adaptation of other widely used reporter genes to <italic>C. reinhardtii</italic> (like the genes for the fluorescent proteins GFP and YFP) will require a general solution to the transgene expression problem in <italic>Chlamydomonas</italic>. This could be achieved by either developing novel expression tools or generating dedicated expression strains in which the suspected epigenetic transgene silencing mechanism is inactivated.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors thank Dr. Christoph Beck (University Freiburg, Germany) for providing algal strains and the cloned HSP70A promoter and Dr. Jean-David Rochaix (University Geneva, Switzerland) for the PsaD expression cassette. Authors are grateful to Dr. Marc Lohse (MPI-MP) for help with codon usage adaptation. This research was supported by grants from the Deutsche Forschungsgemeinschaft (Forschergruppe FOR 504 &#x201C;Gene Expression and Proteome Dynamics in <italic>Chlamydomonas reinhardtii</italic>&#x201D;) and the Bundesministerium f&#xFC;r Bildung und Forschung (Systems Biology Initiative FORSYS, project GoFORSYS).</p>
+      <p><bold>Open Access</bold> This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Barnes</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Franklin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Schultz</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Henry</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Coragliotti</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mayfield</surname>
+              <given-names>SP</given-names>
+            </name>
+          </person-group>
+          <article-title>Contribution of 5&#x2032;- and 3&#x2032;-untranslated regions of plastid mRNAs to the expression of <italic>Chlamydomonas reinhardtii</italic> chloroplast genes</article-title>
+          <source>Mol Genet Genomics</source>
+          <year>2005</year>
+          <volume>274</volume>
+          <fpage>625</fpage>
+          <lpage>636</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00438-005-0055-y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Barnes D, Franklin S, Schultz J, Henry R, Brown E, Coragliotti A, Mayfield SP (2005) Contribution of 5&#x2032;- and 3&#x2032;-untranslated regions of plastid mRNAs to the expression of Chlamydomonas reinhardtii chloroplast genes. Mol Genet Genomics 274:625&#x2013;636 <pub-id pub-id-type="pmid">16231149</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Church</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Gilbert</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <article-title>Genomic sequencing</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1984</year>
+          <volume>81</volume>
+          <fpage>1991</fpage>
+          <lpage>1995</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.81.7.1991</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Church GM, Gilbert W (1984) Genomic sequencing. Proc Natl Acad Sci USA 81:1991&#x2013;1995 <pub-id pub-id-type="pmid">6326095</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fischer</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Rochaix</surname>
+              <given-names>J-D</given-names>
+            </name>
+          </person-group>
+          <article-title>The flanking regions of PsaD drive efficient gene expression in the nucleus of the green alga <italic>Chlamydomonas reinhardtii</italic></article-title>
+          <source>Mol Genet Genomics</source>
+          <year>2001</year>
+          <volume>265</volume>
+          <fpage>888</fpage>
+          <lpage>894</lpage>
+          <pub-id pub-id-type="doi">10.1007/s004380100485</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fischer N, Rochaix J-D (2001) The flanking regions of PsaD drive efficient gene expression in the nucleus of the green alga Chlamydomonas reinhardtii. Mol Genet Genomics 265:888&#x2013;894 <pub-id pub-id-type="pmid">11523806</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fuhrmann</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Oertel</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Hegemann</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>A synthetic gene coding for the green fluorescent protein (GFP) is a versatile reporter in <italic>Chlamydomonas reinhardtii</italic></article-title>
+          <source>Plant J</source>
+          <year>1999</year>
+          <volume>19</volume>
+          <fpage>353</fpage>
+          <lpage>361</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-313X.1999.00526.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fuhrmann M, Oertel W, Hegemann P (1999) A synthetic gene coding for the green fluorescent protein (GFP) is a versatile reporter in Chlamydomonas reinhardtii. Plant J 19:353&#x2013;361 <pub-id pub-id-type="pmid">10476082</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fuhrmann</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hausherr</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Ferbitz</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Sch&#xF6;dl</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Heitzer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hegemann</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Monitoring dynamic expression of nuclear genes in <italic>Chlamydomonas reinhardtii</italic> by using a synthetic luciferase reporter gene</article-title>
+          <source>Plant Mol Biol</source>
+          <year>2004</year>
+          <volume>55</volume>
+          <fpage>869</fpage>
+          <lpage>881</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Fuhrmann M, Hausherr A, Ferbitz L, Sch&#xF6;dl T, Heitzer M, Hegemann P (2004) Monitoring dynamic expression of nuclear genes in Chlamydomonas reinhardtii by using a synthetic luciferase reporter gene. Plant Mol Biol 55:869&#x2013;881 <pub-id pub-id-type="pmid">15604722</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gutman</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Niyogi</surname>
+              <given-names>KK</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>Chlamydomonas</italic> and <italic>Arabidopsis</italic>. A dynamic duo</article-title>
+          <source>Plant Physiol</source>
+          <year>2004</year>
+          <volume>135</volume>
+          <fpage>607</fpage>
+          <lpage>610</lpage>
+          <pub-id pub-id-type="doi">10.1104/pp.104.041491</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gutman BL, Niyogi KK (2004) Chlamydomonas and Arabidopsis. A dynamic duo. Plant Physiol 135:607&#x2013;610 <pub-id pub-id-type="pmid">15208408</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Harris</surname>
+              <given-names>EH</given-names>
+            </name>
+          </person-group>
+          <source>The <italic>Chlamydomonas</italic> sourcebook</source>
+          <year>1989</year>
+          <publisher-loc>San Diego</publisher-loc>
+          <publisher-name>Academic Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Harris EH (1989) The Chlamydomonas sourcebook. Academic Press, San Diego </citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Harris</surname>
+              <given-names>EH</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>Chlamydomonas</italic> as a model organism</article-title>
+          <source>Annu Rev Plant Physiol Plant Mol Biol</source>
+          <year>2001</year>
+          <volume>52</volume>
+          <fpage>363</fpage>
+          <lpage>406</lpage>
+          <pub-id pub-id-type="doi">10.1146/annurev.arplant.52.1.363</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Harris EH (2001) Chlamydomonas as a model organism. Annu Rev Plant Physiol Plant Mol Biol 52:363&#x2013;406 <pub-id pub-id-type="pmid">11337403</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hippler</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Redding</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Rochaix</surname>
+              <given-names>J-D</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>Chlamydomonas</italic> genetics, a tool for the study of bioenergetic pathways</article-title>
+          <source>Biochim Biophys Acta</source>
+          <year>1998</year>
+          <volume>1367</volume>
+          <fpage>1</fpage>
+          <lpage>62</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0005-2728(98)00136-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hippler M, Redding K, Rochaix J-D (1998) Chlamydomonas genetics, a tool for the study of bioenergetic pathways. Biochim Biophys Acta 1367:1&#x2013;62 <pub-id pub-id-type="pmid">9784589</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kindle</surname>
+              <given-names>KL</given-names>
+            </name>
+          </person-group>
+          <article-title>High-frequency nuclear transformation of <italic>Chlamydomonas reinhardtii</italic></article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1990</year>
+          <volume>87</volume>
+          <fpage>1228</fpage>
+          <lpage>1232</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.87.3.1228</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kindle KL (1990) High-frequency nuclear transformation of Chlamydomonas reinhardtii. Proc Natl Acad Sci USA 87:1228&#x2013;1232 <pub-id pub-id-type="pmid">2105499</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kropat</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Beck</surname>
+              <given-names>CF</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of photoreceptor and signaling pathway for light induction of the <italic>Chlamydomonas</italic> heat-shock gene HSP70A</article-title>
+          <source>Photochem Photobiol</source>
+          <year>1998</year>
+          <volume>68</volume>
+          <fpage>414</fpage>
+          <lpage>419</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Kropat J, Beck CF (1998) Characterization of photoreceptor and signaling pathway for light induction of the Chlamydomonas heat-shock gene HSP70A. Photochem Photobiol 68:414&#x2013;419 </citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kropat</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Oster</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>R&#xFC;diger</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Beck</surname>
+              <given-names>CF</given-names>
+            </name>
+          </person-group>
+          <article-title>Chlorophyll precursors are signals of chloroplast origin involved in light induction of nuclear heat-shock genes</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1997</year>
+          <volume>94</volume>
+          <fpage>14168</fpage>
+          <lpage>14172</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.94.25.14168</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kropat J, Oster U, R&#xFC;diger W, Beck CF (1997) Chlorophyll precursors are signals of chloroplast origin involved in light induction of nuclear heat-shock genes. Proc Natl Acad Sci USA 94:14168&#x2013;14172 <pub-id pub-id-type="pmid">9391171</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mayfield</surname>
+              <given-names>SP</given-names>
+            </name>
+            <name>
+              <surname>Schultz</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Development of a luciferase reporter gene, luxCt, for <italic>Chlamydomonas reinhardtii</italic> chloroplast</article-title>
+          <source>Plant J</source>
+          <year>2004</year>
+          <volume>37</volume>
+          <fpage>449</fpage>
+          <lpage>458</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-313X.2003.01965.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mayfield SP, Schultz J (2004) Development of a luciferase reporter gene, luxCt, for Chlamydomonas reinhardtii chloroplast. Plant J 37:449&#x2013;458 <pub-id pub-id-type="pmid">14731263</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Merchant</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Prochnik</surname>
+              <given-names>SE</given-names>
+            </name>
+            <name>
+              <surname>Vallon</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Harris</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Karpowicz</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Witman</surname>
+              <given-names>GB</given-names>
+            </name>
+            <name>
+              <surname>Terry</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Salamov</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Fritz-Laylin</surname>
+              <given-names>LK</given-names>
+            </name>
+            <name>
+              <surname>Mar&#xE9;chal-Drouard</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Marshall</surname>
+              <given-names>WF</given-names>
+            </name>
+            <name>
+              <surname>Qu</surname>
+              <given-names>L-H</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>DR</given-names>
+            </name>
+            <name>
+              <surname>Sanderfoot</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Spalding</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Kapitonov</surname>
+              <given-names>VV</given-names>
+            </name>
+            <name>
+              <surname>Ren</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Ferris</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Lindquist</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Shapiro</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Lucas</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Grimwood</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Schmutz</surname>
+              <given-names>J</given-names>
+            </name>
+            <collab> Chlamydomonas Annotation Team</collab>
+            <collab>JGI Annotation Team</collab>
+            <name>
+              <surname>Grigoriev</surname>
+              <given-names>IV</given-names>
+            </name>
+            <name>
+              <surname>Rokhsar</surname>
+              <given-names>DS</given-names>
+            </name>
+            <name>
+              <surname>Grossman</surname>
+              <given-names>AR</given-names>
+            </name>
+          </person-group>
+          <article-title>The <italic>Chlamydomonas</italic> genome reveals the evolution of key animal and plant functions</article-title>
+          <source>Science</source>
+          <year>2007</year>
+          <volume>318</volume>
+          <fpage>245</fpage>
+          <lpage>251</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1143609</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Merchant SS, Prochnik SE, Vallon O, Harris EH, Karpowicz SJ, Witman GB, Terry A, Salamov A, Fritz-Laylin LK, Mar&#xE9;chal-Drouard L, Marshall WF, Qu L-H, Nelson DR, Sanderfoot AA, Spalding MH, Kapitonov VV, Ren Q, Ferris P, Lindquist E, Shapiro H, Lucas SM, Grimwood J, Schmutz J, Chlamydomonas Annotation Team, JGI Annotation Team, Grigoriev IV, Rokhsar DS, Grossman AR (2007) The Chlamydomonas genome reveals the evolution of key animal and plant functions. Science 318:245&#x2013;251 <pub-id pub-id-type="pmid">17932292</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Minko</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Holloway</surname>
+              <given-names>SP</given-names>
+            </name>
+            <name>
+              <surname>Nikaido</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Carter</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Odom</surname>
+              <given-names>OW</given-names>
+            </name>
+            <name>
+              <surname>Johnson</surname>
+              <given-names>CH</given-names>
+            </name>
+            <name>
+              <surname>Herrin</surname>
+              <given-names>DL</given-names>
+            </name>
+          </person-group>
+          <article-title>Renilla luciferase as a vital reporter for chloroplast gene expression in <italic>Chlamydomonas</italic></article-title>
+          <source>Mol Gen Genet</source>
+          <year>1999</year>
+          <volume>262</volume>
+          <fpage>421</fpage>
+          <lpage>425</lpage>
+          <pub-id pub-id-type="doi">10.1007/s004380051101</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Minko I, Holloway SP, Nikaido S, Carter M, Odom OW, Johnson CH, Herrin DL (1999) Renilla luciferase as a vital reporter for chloroplast gene expression in Chlamydomonas. Mol Gen Genet 262:421&#x2013;425 <pub-id pub-id-type="pmid">10589828</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Porra</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Kriedemann</surname>
+              <given-names>PE</given-names>
+            </name>
+          </person-group>
+          <article-title>Determination of accurate extinction coefficients and simultaneous equations for assaying chlorophylls a and b extracted with four different solvents: verification of the concentration of chlorophyll standards by atomic absorption spectroscopy</article-title>
+          <source>Biochim Biophys Acta</source>
+          <year>1989</year>
+          <volume>975</volume>
+          <fpage>384</fpage>
+          <lpage>394</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0005-2728(89)80347-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Porra RJ, Thompson WA, Kriedemann PE (1989) Determination of accurate extinction coefficients and simultaneous equations for assaying chlorophylls a and b extracted with four different solvents: verification of the concentration of chlorophyll standards by atomic absorption spectroscopy. Biochim Biophys Acta 975:384&#x2013;394 </citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pr&#xF6;schold</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Harris</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Coleman</surname>
+              <given-names>AW</given-names>
+            </name>
+          </person-group>
+          <article-title>Portrait of a species: <italic>Chlamydomonas reinhardtii</italic></article-title>
+          <source>Genetics</source>
+          <year>2005</year>
+          <volume>170</volume>
+          <fpage>1601</fpage>
+          <lpage>1610</lpage>
+          <pub-id pub-id-type="doi">10.1534/genetics.105.044503</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pr&#xF6;schold T, Harris EH, Coleman AW (2005) Portrait of a species: Chlamydomonas reinhardtii. Genetics 170:1601&#x2013;1610 <pub-id pub-id-type="pmid">15956662</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Remacle</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Cardol</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Coosemans</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Gaisne</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bonnefoy</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>High-efficiency biolistic transformation of <italic>Chlamydomonas</italic> mitochondria can be used to insert mutations in complex I genes</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2006</year>
+          <volume>103</volume>
+          <fpage>4771</fpage>
+          <lpage>4776</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0509501103</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Remacle C, Cardol P, Coosemans N, Gaisne M, Bonnefoy N (2006) High-efficiency biolistic transformation of Chlamydomonas mitochondria can be used to insert mutations in complex I genes. Proc Natl Acad Sci USA 103:4771&#x2013;4776 <pub-id pub-id-type="pmid">16537419</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Remy</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Michnick</surname>
+              <given-names>SW</given-names>
+            </name>
+          </person-group>
+          <article-title>A highly sensitive protein&#x2013;protein interaction assay based on <italic>Gaussia</italic> luciferase</article-title>
+          <source>Nat Methods</source>
+          <year>2006</year>
+          <volume>3</volume>
+          <fpage>977</fpage>
+          <lpage>979</lpage>
+          <pub-id pub-id-type="doi">10.1038/nmeth979</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Remy I, Michnick SW (2006) A highly sensitive protein&#x2013;protein interaction assay based on Gaussia luciferase. Nat Methods 3:977&#x2013;979 <pub-id pub-id-type="pmid">17099704</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schroda</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bl&#xF6;cker</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Beck</surname>
+              <given-names>CF</given-names>
+            </name>
+          </person-group>
+          <article-title>The HSP70A promoter as a tool for the improved expression of transgenes in <italic>Chlamydomonas</italic></article-title>
+          <source>Plant J</source>
+          <year>2000</year>
+          <volume>21</volume>
+          <fpage>121</fpage>
+          <lpage>131</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-313x.2000.00652.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schroda M, Bl&#xF6;cker D, Beck CF (2000) The HSP70A promoter as a tool for the improved expression of transgenes in Chlamydomonas. Plant J 21:121&#x2013;131 <pub-id pub-id-type="pmid">10743653</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shao</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Krieger-Liszkay</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Schroda</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Beck</surname>
+              <given-names>CF</given-names>
+            </name>
+          </person-group>
+          <article-title>A reporter system for the individual detection of hydrogen peroxide and singlet oxygen: its use for the assay of reactive oxygen species produced in vivo</article-title>
+          <source>Plant J</source>
+          <year>2007</year>
+          <volume>50</volume>
+          <fpage>475</fpage>
+          <lpage>487</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1365-313X.2007.03065.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shao N, Krieger-Liszkay A, Schroda M, Beck CF (2007) A reporter system for the individual detection of hydrogen peroxide and singlet oxygen: its use for the assay of reactive oxygen species produced in vivo. Plant J 50:475&#x2013;487 <pub-id pub-id-type="pmid">17376156</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tannous</surname>
+              <given-names>BA</given-names>
+            </name>
+            <name>
+              <surname>Kim</surname>
+              <given-names>D-E</given-names>
+            </name>
+            <name>
+              <surname>Fernandez</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Weissleder</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Breakefield</surname>
+              <given-names>XO</given-names>
+            </name>
+          </person-group>
+          <article-title>Codon-optimized Gaussia luciferase cDNA for mammalian gene expression in culture and in vivo</article-title>
+          <source>Mol Therapy</source>
+          <year>2005</year>
+          <volume>11</volume>
+          <fpage>435</fpage>
+          <lpage>443</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.ymthe.2004.10.016</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tannous BA, Kim D-E, Fernandez JL, Weissleder R, Breakefield XO (2005) Codon-optimized Gaussia luciferase cDNA for mammalian gene expression in culture and in vivo. Mol Therapy 11:435&#x2013;443 </citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gromoff</surname>
+              <given-names>ED</given-names>
+            </name>
+            <name>
+              <surname>Treier</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Beck</surname>
+              <given-names>CF</given-names>
+            </name>
+          </person-group>
+          <article-title>Three light-inducible heat shock genes of <italic>Chlamydomonas reinhardtii</italic></article-title>
+          <source>Mol Cell Biol</source>
+          <year>1989</year>
+          <volume>9</volume>
+          <fpage>3911</fpage>
+          <lpage>3918</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">von Gromoff ED, Treier U, Beck CF (1989) Three light-inducible heat shock genes of Chlamydomonas reinhardtii. Mol Cell Biol 9:3911&#x2013;3918 <pub-id pub-id-type="pmid">2779571</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

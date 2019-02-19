@@ -1,0 +1,1170 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioprocess Biosyst Eng</journal-id>
+      <journal-title>Bioprocess and Biosystems Engineering</journal-title>
+      <issn pub-type="ppub">1615-7591</issn>
+      <issn pub-type="epub">1615-7605</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16770590</article-id>
+      <article-id pub-id-type="pmc">1705536</article-id>
+      <article-id pub-id-type="publisher-id">69</article-id>
+      <article-id pub-id-type="doi">10.1007/s00449-006-0069-9</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Production of a recombinant polyester-cleaving hydrolase from <italic>Thermobifida fusca</italic> in <italic>Escherichia coli</italic></article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Dresler</surname>
+            <given-names>Karolin</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van den Heuvel</surname>
+            <given-names>Joop</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>M&#xFC;ller</surname>
+            <given-names>Rolf-Joachim</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Deckwer</surname>
+            <given-names>Wolf-Dieter</given-names>
+          </name>
+          <address>
+            <phone>+49-531-6181100</phone>
+            <email>wdd@gbf.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Biochemical Engineering Group TU-BCE, GBF Braunschweig, Gesellschaft f&#xFC;r Biotechnologische Forschung, Mascheroder Weg 1, 38124 Braunschweig, Germany </aff>
+        <aff id="Aff2"><label>2</label>Department of Structural Biology, GBF Braunschweig, Gesellschaft f&#xFC;r Biotechnologische Forschung, Mascheroder Weg 1, 38124 Braunschweig, Germany </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>13</day>
+        <month>6</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>8</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>29</volume>
+      <issue>3</issue>
+      <fpage>169</fpage>
+      <lpage>183</lpage>
+      <history>
+        <date date-type="received">
+          <day>10</day>
+          <month>5</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>15</day>
+          <month>5</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The hydrolase (<italic>Thermobifida fusca</italic> hydrolase; TfH) from <italic>T. fusca</italic> was produced in <italic>Escherichia coli</italic> as fusion protein using the OmpA leader sequence and a His<sub>6</sub> tag. Productivity could be raised more than 100-fold. Both batch and fed-batch cultivations yield comparable cell specific productivities whereas volumetric productivities differ largely. In the fed-batch cultivations final rTfH concentrations of 0.5&#xA0;g&#xA0;L<sup>&#x2212;1</sup> could be achieved. In batch cultivations the generated rTfH is translocated to the periplasm wherefrom it is completely released into the extracellular medium. In fed-batch runs most of the produced rTfH remains as soluble protein in the cytoplasm and only a fraction of about 35% is translocated to the periplasm. Migration of periplasmic proteins in the medium is obviously coupled with growth rate and this final transport step possibly plays an important role in product localization and efficacy of the Sec translocation process.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Recombinant protein expression</kwd>
+        <kwd>Batch culture</kwd>
+        <kwd>Fed-batch culture</kwd>
+        <kwd>Sec pathway</kwd>
+        <kwd>Purification</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Since more than 15&#xA0;years, the interest in biodegradable plastics (polymeric materials which can be cleaved by enzymes and assimilated by microorganisms, respectively) is steadily raising and nowadays a number of commercial products are on the market. Polymers containing ester groups, especially polyesters, play a central role as they are easily subject to microbial attack, the degradation rate being largely dependent on their physical structure and chemical composition. First attempts to produce biodegradable plastics were based on natural polymers like poly(&#x3B2;-hydroxybutyrate) (PHB). However, their material properties proved to be insufficient and could not compete with those of synthetic polyesters. Tokiwa and Suzuki [<xref ref-type="bibr" rid="CR1">1</xref>] already showed that also synthetic aliphatic polyesters are accessible to a biological degradation. However, aliphatic polyesters exhibit similar disadvantages concerning their material properties (e.g. minor tensile strength, low melting points) and therefore are hardly applicable for every day life products. On the other hand, polyesters such as poly(ethylene-terephthalate) (PET) and poly(butylene-terephthalate) (PBT) exhibit excellent material properties, but were classified as non-biodegradable. Therefore, aliphatic&#x2013;aromatic copolyesters, which combine both acceptable use properties and sufficient biodegradability [<xref ref-type="bibr" rid="CR2">2</xref>] were developed. The material properties desired for specific applications can be easily adjusted by the ratio of the aliphatic to the aromatic diacid [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR4">4</xref>]. Commercial products are available now under the trade name Ecoflex<sup>&#xAE;</sup> (BASF AG, Germany).</p>
+      <p>Recently, a thermophilic actinomycete was isolated and identified as <italic>Thermobifida fusca</italic> (former name: <italic>Thermomonospora fusca</italic>) exhibiting a remarkable degradation capability for aliphatic&#x2013;aromatic copolyesters [<xref ref-type="bibr" rid="CR5">5</xref>, <xref ref-type="bibr" rid="CR6">6</xref>]. The extracellular hydrolase (TfH) responsible for the degradation of these copolyesters was purified from the culture broth and classified as a serine hydrolase with the highly conserved G-H-S-M-G motif [<xref ref-type="bibr" rid="CR7">7</xref>]. The mature hydrolase consists of 261 amino acids, corresponding to a molecular weight of 28.2&#xA0;kDa. Maximum activity was found at 65&#x2013;70&#xB0;C. The extracellular hydrolase gene was located on an operon containing two nearly identical genes (<italic>bta1</italic> and <italic>bta2</italic>) with an amino acid identity of 92% [<xref ref-type="bibr" rid="CR6">6</xref>].</p>
+      <p>The enzyme is only expressed by <italic>T. fusca</italic> if a polyester, such as poly(1,4-butandiole adipate-<italic>co</italic>-1,4-butandiole terephthalate) (BTA) or poly (&#x3B5;-caprolactone) (PCL) is present in the medium. Gouda et al. [<xref ref-type="bibr" rid="CR8">8</xref>] observed, that the amount of enzyme excreted in the medium correlates with the amount of polyester added to the culture. This induction behaviour as well as adsorption and inhibition phenomena [<xref ref-type="bibr" rid="CR8">8</xref>] complicate a large-scale production of this enzyme (TfH) and therefore, a simpler to handle recombinant expression system for producing TfH, independent of the presence of the polymer was highly desirable, particularly, as recent investigations showed that TfH is capable of degrading even PET [<xref ref-type="bibr" rid="CR9">9</xref>].</p>
+      <p>In this paper, we report on the heterologous expression of the polyester-degrading hydrolase from <italic>T. fusca</italic> in <italic>E. coli</italic> TG1. To this end, the TfH-encoding gene (<italic>bta1</italic>) was cloned together with a C-terminal His<sub>6</sub>-affinity tag and the <italic>omp</italic>A-secretion signal under the control of a thermo-inducible promoter. This strategy should enable translocation of the gene product by the Sec-transport system from the cytoplasm into the periplasmic space, where the properly folded TfH should accumulate after cleavage of the OmpA sequence. Several cultivation strategies and purification routes were considered. The aim of the investigations was to provide sufficient amounts of TfH for larger-scale polyester degradation studies (low purification grade) and a highly purified TfH for mechanistic studies and structural analysis.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <sec id="Sec3">
+        <title>Cloning of the recombinant His<sub>6</sub>-tagged TfH</title>
+        <p><italic>Escherichia coli</italic> TG1 (DSM 6056) was used for the production of the recombinant hydrolase from <italic>Thermobifida fusca</italic> (rTfH). TG1 is characterized by the following genetic markers: <italic>supE hsd&#x394;5 thi&#x394;(lac-proAB)</italic> F&#xB4;<italic>[traD36 proAB</italic><sup><italic>+</italic></sup><italic> lacI</italic><sup><italic>q</italic></sup><italic> lacZ&#x394;M15]</italic> [<xref ref-type="bibr" rid="CR10">10</xref>].</p>
+        <p>The vector pCytexP1-<italic>Omp</italic>A<italic>-bta</italic>1 [<xref ref-type="bibr" rid="CR6">6</xref>] was digested with <italic>Nde</italic>I and <italic>Eco</italic>RI to obtain a DNA fragment consisting of 876&#xA0;bp. This DNA fragment was used as a template to clone a His<sub>6</sub> tag at the C-terminal end using the primer set <italic>bta</italic>1-rev (5&#x2032;-TAC TTA GGA TCC TTA TCA GTG GTG GTG GTG GTG GTG CTC GAG GAA CGG GCA GGT GGA GCG-3&#x2032;) and <italic>bta</italic>1-for (5&#x2032;-GTC ATG GGC CAC TCC ATG GGC-3&#x2032;). The DNA fragment was amplified using VENT DNA polymerase (New England Biolabs, USA), the cycle programme was run at 95&#xB0;C for 2&#xA0;min, 30 cycles of 30&#xA0;s at 95&#xB0;C, 30&#xA0;s at 50&#xB0;C and 2&#xA0;min at 55&#xB0;C, followed by an extension reaction for 5&#xA0;min at 55&#xB0;C. The reaction mixture was designed according to the description of the manufacturer. The resulting PCR-fragment <italic>rbta</italic>1&#x2013;His<sub>6</sub> was purified using the JETQUICK PCR Fragment purification kit (GENOMED GmbH, Germany). <italic>rbta</italic>1&#x2013;His<sub>6</sub> was ligated to a DNA fragment obtained from the digestion of the origin vector with <italic>Nco</italic>I and <italic>Bam</italic>HI. The resulting plasmid pCYTEXP1-<italic>Omp</italic>A-<italic>bta1</italic>-His<sub>6</sub> with the secretion signal of OmpA, the hydrolase from <italic>T. fusca</italic> (TfH) and the affinity tag was used for the expression of rTfH.</p>
+        <p>Transformation of pCYTEXP1-<italic>Omp</italic>A-<italic>bta1-</italic>His<sub>6</sub> into <italic>E. coli</italic> TG1 was done by electroporation. Expression of the recombinant TfH (rTfH) was controlled by the strong tandem promoter &#x3BB;p<sub>R</sub>p<sub>L</sub>, which is expressed by the thermolabile repressor cI857.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Media</title>
+        <p>Louria-Bertani medium (LB medium): 10&#xA0;g&#xA0;L<sup>-1</sup> tryptone, 10&#xA0;g&#xA0;L<sup>&#x2212;1</sup> NaCl 5&#xA0;g&#xA0;L<sup>&#x2212;1</sup>, yeast extract and 0.8&#xA0;g&#xA0;L<sup>&#x2212;1</sup> glucose was used for cultivations of <italic>E. coli</italic> TG1 in the complex medium [<xref ref-type="bibr" rid="CR11">11</xref>]. The medium was autoclaved at 121&#xB0;C for 20&#xA0;min. Before cultivation, ampicillin (100&#xA0;&#x3BC;g&#xA0;mL<sup>&#x2212;1</sup>) was added.</p>
+        <p>A defined medium as described by Korz et al. [<xref ref-type="bibr" rid="CR12">12</xref>] was used for batch and fed-batch cultivation of <italic>E. coli</italic> TG1. The medium contained (per litre): (NH<sub>4</sub>)<sub>2</sub>PO<sub>4</sub> 4&#xA0;g, KH<sub>2</sub>PO<sub>4</sub> 13.3&#xA0;g, citric acid 1.7&#xA0;g, glucose 25&#xA0;g, MgSO<sub>4</sub> 1.2&#xA0;g, trace elements (Fe(III)citrate&#xB7;H<sub>2</sub>O 100&#xA0;mg, CoCl<sub>2</sub>&#xB7;6H<sub>2</sub>O 2.5&#xA0;mg, MnCl<sub>2</sub>&#xB7;4H<sub>2</sub>O 15&#xA0;mg, CuCl<sub>2</sub>&#xB7;2H<sub>2</sub>O 1.5&#xA0;mg, H<sub>3</sub>BO<sub>3</sub> 3&#xA0;mg, Na<sub>2</sub>MoO<sub>4</sub>&#xB7;2H<sub>2</sub>O 2.5&#xA0;mg, Zn(CH<sub>3</sub>COO)<sub>2</sub>&#xB7;2H<sub>2</sub>O 13&#xA0;mg, EDTA 8.4&#xA0;mg) and 100&#xA0;&#x3BC;L antifoam (Sigma Antifoam 204, Sigma-Aldrich, USA). MgSO<sub>4</sub> and glucose solution were autoclaved separately from the phosphate buffer and trace elements at 121&#xB0;C for 20&#xA0;min. pH was adjusted to 6.8 with 5&#xA0;M NaOH, before. Ampicillin 100&#xA0;mg&#xA0;L<sup>&#x2212;1</sup> and thiamine hydrochloride 4.5&#xA0;mg&#xA0;L<sup>&#x2212;1</sup> were sterilized by filtration (Sterivex, cut off of 0.2&#xA0;&#x3BC;m, Millipore, USA) and added before starting the cultivation.</p>
+        <p>The feed solution for fed-batch cultivations contained the following components (in 1&#xA0;L demineralized water): glucose 300&#xA0;g, MgSO<sub>4</sub> 7.6&#xA0;g, trace elements (Fe(III)citrate&#xB7;H<sub>2</sub>O 16.2&#xA0;mg, CoCl<sub>2</sub>&#xB7;6H<sub>2</sub>O 1.5&#xA0;mg, MnCl<sub>2</sub>&#xB7;4H<sub>2</sub>O 8.9&#xA0;mg, CuCl<sub>2</sub>&#xB7;2H<sub>2</sub>O 0.9&#xA0;mg, H<sub>3</sub>BO<sub>3</sub> 1.9&#xA0;mg, Na<sub>2</sub>MoO<sub>4</sub>&#xB7;2H<sub>2</sub>O 1.5&#xA0;mg, Zn(CH<sub>3</sub>COO)<sub>2</sub>&#xB7;2H<sub>2</sub>O 6.1&#xA0;mg, EDTA 4.9&#xA0;mg), thiamine hydrochloride 4.5&#xA0;mg and ampicillin 100&#xA0;mg. The feed solution was sterilized by filtration.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Cultivation</title>
+        <p>A bioreactor (Biostat B2 , B. Braun, Melsungen, Germany) with 2&#xA0;L working volume connected to an exhaust gas analysis unit (S710, Sick Maihak, Germany) was used for the cultivations. Bioreactor control was done by a computer, operating the MFCS software (B. Braun). Feed and base reservoirs were stored on scales connected to the computer. Starting conditions of the reactor were set to 30&#xB0;C, 500&#xA0;rpm, pH 6.8 and 1&#xA0;L&#xA0;min<sup>&#x2212;1</sup> airflow. pH was controlled by adding either 25% NH<sub>3</sub> (in case of the complex medium: 5&#xA0;M NaOH) or 1&#xA0;M H<sub>3</sub>PO<sub>4</sub>. The minimum level of dissolved oxygen (<italic>p</italic>O<sub>2</sub>) was set to 20% and was adjusted automatically by the stirrer speed and aeration rate. If the stirrer speed and aeration rate run at maximum, pure O<sub>2</sub> had to be enriched to the inlet airflow. Antifoam was added manually to the cultivation under sterile conditions, if necessary.</p>
+        <p>Pre-cultures were carried out in the respective medium of the main culture by inoculation with a glycerol stock of <italic>E. coli</italic> TG1 containing the plasmid pCYTEXP1-<italic>Omp</italic>A-<italic>bta</italic>1-His<sub>6</sub> at 30&#xB0;C and 180&#xA0;rpm for 12&#xA0;h. Batch and fed-batch cultivation in the bioreactor was started by adding 20&#xA0;mL of preculture.</p>
+        <p>In batch cultivation, induction of rTfH production was started at an OD of 0.5&#x2013;0.6 by raising the cultivation temperature from 30 to 39&#xB0;C or 42&#xB0;C, respectively, within about 15&#xA0;min.</p>
+        <p>In the fed-batch cultivation, feed was started after the initial glucose was consumed as indicated by a sharp increase in <italic>p</italic>O<sub>2</sub>. An exponential feed profile was used. For a desired specific growth rate &#x3BC;<sub>set</sub> (h<sup>&#x2212;1</sup>), the volumetric feed rate <italic>F</italic><sub>glc</sub> (L&#xA0;h<sup>&#x2212;1</sup>) was calculated from (Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref>) [<xref ref-type="bibr" rid="CR13">13</xref>]: <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ F_{\rm glc} = \frac{{\mu_{\rm set}} {\text{(}}XV{\text{)}}_0 {\text{e}}^{{\mu_{\rm set} t_{\rm f} }} } {{Y_{{\rm X/S}} S}}$$\end{document}</tex-math></disp-formula> where (<italic>XV</italic>)<sub>0 </sub>is the biomass (g) at feed start, <italic>t</italic><sub>f</sub> the time (h) after feed start, <italic>Y</italic><sub>X/S</sub> the biomass yield coefficient (0.4&#xA0;g&#xA0;g<sup>&#x2212;1</sup>) and <italic>S</italic> the glucose concentration in the feed (g&#xA0;L<sup>&#x2212;1</sup>). Substrate consumption by maintenance is not considered in Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref>. Therefore, the actual growth rate may be less than the set value (&#x3BC;<sub>set</sub>&#xA0;=&#xA0;0.12&#xA0;h<sup>&#x2212;1</sup>). Feed rate and volume variations were corrected automatically by the MFCS software. The expression of rTfH was initiated at a biomass level of about 40&#xA0;g&#xA0;L<sup>&#x2212;1</sup> by shifting the temperature to 39&#xB0;C, which was found optimal in the preliminary runs. After induction, the feed-rate profiles were kept constant at the value of the induction time or it was continously increased as given by Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref> for &#x3BC;<sub>set</sub>&#xA0;=&#xA0;0.12&#xA0;h<sup>&#x2212;1</sup>.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Analytical methods</title>
+        <p>Cell-mass concentration was followed by OD at 600&#xA0;nm (Ultrospec 3100 pro, Amersham Biosciences, Sweden). For the determination of the dry cell weight (DCW), 1&#xA0;mL of the culture was added in triplicate to pre-weighed tubes and centrifuged for 5&#xA0;min at 13,000<italic>g</italic> and 4&#xB0;C. After a subsequent washing step, the pellet was dried until constant mass at 45&#xB0;C under vacuum.</p>
+        <p>Extracellular glucose and metabolites such as acetate, formate, succinate, propionate and isobutyrate were determined in the supernatant. To this end, the supernatant was heated up to 80&#xB0;C for 5&#xA0;min and centrifuged (13,000<italic>g</italic>, 10&#xA0;min, 4&#xB0;C) to eliminate the precipitated proteins. The supernatant was additionally filtered (pore size 0.2&#xA0;&#x3BC;m) before applied into the HPLC (Shimadzu, Japan) using an Aminex HPX-87H column (Biorad, USA). 5&#xA0;mM H<sub>2</sub>SO<sub>4</sub> with a flow rate of 0.6&#xA0;mL&#xA0;min<sup>&#x2212;1</sup> was used as mobile phase at a temperature of 60&#xB0;C.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Electrophoresis</title>
+        <p>SDS-PAGE was performed with a Mini Protean<sup>&#xAE;</sup> 3 apparatus (Bio-Rad, USA) according to the manufacturer&#x2019;s recommendations. The samples were run on 12% polyacrylamide gel. Molecular mass marker was purchased from Bio-Rad. Proteins were stained with Comassie-Blue [<xref ref-type="bibr" rid="CR11">11</xref>] or silver [<xref ref-type="bibr" rid="CR14">14</xref>].</p>
+        <p>Proteins were transferred onto a 0.45-&#x3BC;m PVDF membrane (Immobilon&#x2122;-P Transfer Membrane, USA) using a Semi-Dry Transfer Unit (Semiphor&#x2122; Hoefer TE<sup>&#xAE;</sup> 70 Series, Amersham Bioscience, Sweden). rTfH was detected by Comassie-Blue staining.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Hydrolase activity</title>
+        <p>Hydrolase activity was measured by monitoring the cleavage of <italic>p</italic>-nitrophenylpalmitate (<italic>p</italic>NPP) as described by Schmidt-Dannert et al. [<xref ref-type="bibr" rid="CR15">15</xref>]. The released <italic>p</italic>-nitrophenol was determined spectrophotometrically (Ultrospec 3100 pro, Amersham Biosciences, Sweden). <italic>p</italic>NPP solution was freshly prepared by mixing 1&#xA0;mL <italic>p</italic>NPP dissolved in 2-propanol at a concentration of 3&#xA0;g&#xA0;L<sup>&#x2212;1</sup> with 9&#xA0;mL 20&#xA0;mM phosphate buffer (pH 7.1, sodium taurocholate 2.3&#xA0;g&#xA0;L<sup>&#x2212;1</sup>, gum arabic 1.1&#xA0;g&#xA0;L<sup>&#x2212;1</sup>). Immediately after addition of the enzyme sample the absorption was measured at 400&#xA0;nm and 25&#xB0;C against a sample without enzyme for 2&#xA0;min. One unit was defined as the amount of enzyme that caused the release of 1&#xA0;&#x3BC;mol <italic>p</italic>-nitrophenol per minute under test conditions. The extinction coefficient of <italic>p</italic>-nitrophenol is 9.62&#xA0;cm<sup>2</sup>&#xA0;&#x3BC;mol<sup>&#x2212;1</sup>. To compare the photometrically determined <italic>p</italic>NPP activity units with a previously used activity test [<xref ref-type="bibr" rid="CR8">8</xref>] the cleavage of the polyester bonds of PCL (poly(&#x3B5;-caprolactone)) films in a pHstat titration system was additionally measured as described by Gouda et al. [<xref ref-type="bibr" rid="CR8">8</xref>]. It was found that one <italic>p</italic>NPP enzyme unit corresponds to three PCL units.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Localization of rTfH</title>
+        <p>In this paper, it is discriminated among the various rTfH fractions located in the extracellular medium, the periplasmic space and the cytoplasm as soluble or insoluble protein. The extracellular fraction (EF) was obtained from the culture supernatant after centrifugation (13,000<italic>g</italic>, 5&#xA0;min, 4&#xB0;C). A variation of the protocol of Neu et al. [<xref ref-type="bibr" rid="CR16">16</xref>] was used to obtain the periplasmic fraction (PF). Biomass (about 37&#xA0;mg) corresponding to ten OD was resuspended in 1&#xA0;mL ice-cold 30&#xA0;mM Tris&#x2013;HCl (pH 8.0) containing 20% sucrose and 1&#xA0;mM EDTA and after incubation for 10&#xA0;min at room temperature centrifuged at 13,000<italic>g</italic> and 4&#xB0;C for 10&#xA0;min. The supernatant was separated from the cell pellet and stored at an ice bath. The cell pellet was again resuspended in 1&#xA0;mL ice-cold 5&#xA0;mM MgSO<sub>4</sub> solution and was slightly rotated on ice for 10&#xA0;min. After centrifugation the supernatant was pooled with the previously obtained supernatant giving the total periplasmic proteins (PF). Each fraction (EF and PF) was stored at &#x2212;20&#xB0;C until further use.</p>
+        <p>Soluble proteins harboured in the cytoplasm were obtained by resuspending the cells in 275&#xA0;&#x3BC;L PBS buffer [<xref ref-type="bibr" rid="CR11">11</xref>] [pH 7.2, 10% (v/v) BugBuster, 0.1% (v/v) benzonase (both Novagen, USA), 275&#xA0;U lysozyme], slightly rotated at room temperature for 20&#xA0;min and centrifuged at 13,000<italic>g</italic> and 4&#xB0;C for 25&#xA0;min. The supernatant formed the soluble cytoplasmic fraction (sCF). To gain the insoluble cytoplasmic protein fraction (iCF) cells were again resuspended in PBS buffer (10% (v/v) BugBuster, 27.5&#xA0;U lysozyme) and after incubation for 5&#xA0;min diluted sixfold with PBS buffer (1% (v/v) BugBuster). After centrifugation at 5,000<italic>g</italic> and 4&#xB0;C for 15&#xA0;min cells were washed twice with 800&#xA0;&#x3BC;L PBS (1% (v/v) BugBuster). Final centrifugation was done at 13,000<italic>g</italic> and 4&#xB0;C for 25&#xA0;min. The pellet was then resuspended in 275&#xA0;&#x3BC;L of 1% (w/v) SDS.</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Purification of rTfH</title>
+        <p>To gain a rTfH solution of low purification grade 75&#xA0;mg biomass was resuspended in 2&#xA0;mL ice-cold PBS buffer, pH 7.2 [<xref ref-type="bibr" rid="CR11">11</xref>]. Cells were disrupted by ultrasonification (Sonopuls HD 2070, Sonotrode UW 2070, Bandelin electronics, Germany) in an ice bath using three intervals each of 30&#xA0;s pulse and 2&#xA0;min break. Subsequently, disrupted cell were denaturated by heat at 55&#xB0;C for 10&#xA0;min, and centrifuged (13,000<italic>g</italic>, 25&#xA0;min, 4&#xB0;C). The supernatant was stored at &#x2212;20&#xB0;C.</p>
+        <p>Highly purified rTfH was recovered from the extracellular and the PF (see <xref rid="Sec9" ref-type="sec">Localization of rTfH</xref> section). Chelating Sepharose&#x2122; Fast Flow Gel (Amersham Bioscience) was activated as described by the manufacturer and added to the solution harbouring rTfH (1&#xA0;mL chromatographic material was used for 400&#xA0;U). The suspension was stirred for 1&#xA0;h and filled then into a XK 26/60-column (Amersham-Bioscience) and after the chromatographic material has settled, the column was connected to the FPLC system (LCC-500 Plus, Amersham Bioscience, Sweden). Column was washed with 3 column volumes (CV) binding buffer containing 20&#xA0;mM Tris (pH 7.5), 500&#xA0;mM NaCl and 10&#xA0;mM imidazole at a flow rate of 4&#xA0;mL&#xA0;min<sup>&#x2212;1</sup>. Elution of the bound rTfH was done by a linear increase of the imidazole concentration to 500&#xA0;mM within 3 CV. Fractions with activity were pooled and concentrated by ultrafiltration (Amicon Stirred Cell 1050 or 1010, Amicon, USA) using a regenerated cellulose membrane (YM Ultrafiltration Membranes, cut off: 10&#xA0;kDa, Amicon, USA). 6&#xB1;0.5&#xA0;mL of the concentrated enzyme was applied manually to the gel filtration column (HiLoad 26/60 Superdex 75 prep grade, Amersham Bioscience) equilibrated with 0.9% NaCl. The flow rate was set to 2&#xA0;mL&#xA0;min<sup>&#x2212;1</sup> to elute the proteins. Fractions with activity were pooled and stored at &#x2212;20&#xB0;C until further use. Whenever necessary, rTfH solution was concentrated by ultrafiltration.</p>
+      </sec>
+      <sec id="Sec11">
+        <title>Protein determination</title>
+        <p>Protein was determined by Roti<sup>&#xAE;</sup>-Nanoquant (Roth, Germany) as described by the manufacturer.</p>
+      </sec>
+    </sec>
+    <sec id="Sec12" sec-type="results">
+      <title>Results </title>
+      <sec id="Sec13">
+        <title>Batch cultivations</title>
+        <p><italic>E. coli</italic> TG1 harbouring the plasmid pCYTEXP1-<italic>Omp</italic>A-<italic>bta</italic>1-His<sub>6</sub> was firstly cultivated batchwise with complex medium in 1&#xA0;L scale monitoring OD, DCW, glucose and metabolites in the supernatant. At an OD of about 0.6, cultivation temperature was raised to either 39 or 42&#xB0;C to induce rTfH production. After starting induction, generation of rTfH was pursued by the spectrophotometric assay in the extracellular and PFs. Results are shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Expression of rTfH in <italic>E. coli</italic> TG1 during batch cultivation with LB medium. Cells grew at 30&#xB0;C to an OD of 0.6 before starting induction by a temperature shift to 39 or 42&#xB0;C, <bold>a</bold> growth and CO<sub>2</sub> generation, <bold>b</bold> rTfH activity in different locations, extracellular fraction (EF; <italic>open square</italic>), periplasmic fraction (PF; <italic>open circle</italic><bold>)</bold>, sum of all fractions (<italic>continuous line</italic>), <bold>c</bold> glucose and acetate in broth</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig1_HTML" id="MO1"/></fig></p>
+        <p>Glucose present in the complex medium is quickly consumed at about 1.4&#x2013;2&#xA0;h after induction (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>c). Consumption of glucose is accompanied by formation of acetate, its extracellular concentration peaks at 39&#xB0;C at 2&#xA0;h (3&#xA0;h at 42&#xB0;C, respectively), which is remetabolized after total glucose consumption. The consumption pattern is reflected by biomass development and CO<sub>2</sub> generation (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a) which show a two- and three-phase behaviour, respectively. Firstly growth rate is highest as long as glucose is available (induction at 39&#xB0;C). The following consumption of the intermediate acetate leads to reduced growth rate. After acetate consumption the growth rate further declines and finally growth ceases, however, CO<sub>2</sub> evolution is yet observed in the stationary phase. From the biomass and CO<sub>2</sub> evolution, one has to conclude that in all cultivation phases considerable amounts of constituents of the complex fractions of the medium are also consumed. For instance, the 1.5&#xA0;g&#xA0;L<sup>&#x2212;1</sup> biomass (2&#xA0;h after induction at 39&#xB0;C) cannot be generated alone by glucose consumption. Unfortunately, the complex constituents are not known. Therefore, a carbon balance is not possible.</p>
+        <p>The production of the hydrolase rTfH is shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b. Both induction profiles, shifting the temperature to 39&#xA0; or 42&#xB0;C, revealed similar rTfH production kinetics. Shortly after induction rTfH is only found in the periplasm. However, in the course of the cultivation, rTfH did not accumulate in the PF as expected due to the leader signal OmpA. Surprisingly rTFH was entirely found in the extracellular medium at the end of the cultivation. At an induction of 42&#xB0;C the promoter &#x3BB;p<sub>R</sub>p<sub>L</sub> in front of the <italic>bta</italic>1 gene is stronger than at 39&#xB0;C, but expression of rTfH is nearly finished about 6&#xA0;h after induction resulting in a lower volumetric activity (only 60%). About 4&#xA0;h after induction, a remarkable increase of extracellular rTfH activity was observed which obviously correlates with a high metabolic activity as indicated by the second strong increase in CO<sub>2</sub> evolution. The rise in rTfH activity cannot solely originate from translocation but suggest additional secretion from cytoplasm. Apparently expression of rTfH is faster than its transport through the cytoplasmic membrane in the early phase shortly after induction. In shake-flask cultivation, the rTfH production was monitored in the cytoplasm as soluble and insoluble cytoplasmic fractions (iCFs; data not shown). Maximum hydrolase activity was achieved after about 7.5&#xA0;h summing up all compartments. Subsequently, the total hydrolase activity was slightly decreased, and finally rTfH was only detected in the supernatant.</p>
+        <p>To study the influence of medium composition on recombinant TfH production and to follow the transport of the enzyme into the medium, batch cultivations with the defined medium containing 23&#xA0;g&#xA0;L<sup>&#x2212;1</sup> glucose were carried out (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). rTfH was again induced at low OD. The course of the cultivation with the defined medium is remarkably different from that using the complex medium. Raising the temperature to either 39&#xB0;C or 42&#xB0;C caused firstly a low growth rate. The consumption of glucose was coupled with acetate formation; 8&#xA0;h after induction at 39&#xB0;C, growth rate rised to about 0.5&#xA0;h<sup>&#x2212;1</sup> (0.6&#xA0;h<sup>&#x2212;1</sup> at an induction at 42&#xB0;C) and both glucose and acetate were consumed while a low amount of succinate was generated which was remetabolized after exhaustion of other C-substrates. As expected, growth was directly coupled with CO<sub>2</sub> evolution. The respiration coefficient RQ was around 1, the yield coefficient (biomass on glucose) was determined as 0.4&#xA0;g g<sup>&#x2212;1</sup> for the batch cultivation at 39&#xB0;C. Over the entire induction period (about 23&#xA0;h), carbon balances of the cultivation with the defined medium were close to  100&#xA0;&#xB1;&#xA0;3%.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Expression of rTfH in <italic>E. coli</italic> TG1 during batch cultivation with the defined medium. Cells grew at 30&#xB0;C up to an OD of 0.6 before starting induction by a temperature shift to 39&#xB0;C or 42&#xB0;C, <bold>a</bold> growth and CO<sub>2</sub> generation, <bold>b</bold> rTfH activity in different locations, EF (<italic>open square</italic>), PF (<italic>open circle</italic>), sum of all fractions (<italic>continuous line</italic>), <bold>c</bold> glucose and metabolites in broth</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig2_HTML" id="MO2"/></fig></p>
+        <p>In contrast to the cultivation in LB medium, succinate was detected in the extracellular medium under both the induction profiles. Succinate is a typical product of the anaerobic metabolism of <italic>E. coli.</italic> It is produced during the mixed acid fermentation and the fumarate reduction. Both pathways are strictly regulated by Fnr the global regulator of the anaerobic metabolism [<xref ref-type="bibr" rid="CR17">17</xref>]. With the applied experimental approach, anaerobiosis can be excluded. The formation of succinate was coupled with the CO<sub>2</sub> evolution and hence with a high metabolic activity. This may lead to an imbalance in the citric cycle or reduction equivalents. Unfortunately, other metabolites of the citric cycle were not determined in the supernatant supporting this assumption. Similar observations were made by Korz in batch cultivations using the same defined medium. He correlated the succinate formation with the amount of CO<sub>2</sub> raising in the exhaust gas [<xref ref-type="bibr" rid="CR18">18</xref>].</p>
+        <p>While secretion of rTfH in the periplasm started immediately after induction, the rate of rTfH release in the cultivation medium correlates with the growth rate, i.e., growth and product transport from the cytosol via the periplasm into the extracellular space are coupled. At the end of the cultivation, almost the entire product was located outside the cells. The final results of the batch cultivations at controlled pH with the complex and the defined medium are summarized in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. For induction in both media, by shifting the temperature to 39&#xB0;C gives better results than the increase to 42&#xB0;C. While the volumetric activities achieved for the complex and the defined media at the same induction temperature are comparable, the specific activities differ significantly due to the higher biomass obtained with the defined medium. As the induction time is considerably longer for the cultivation in the defined medium, the specific productivities differ even more. These results clearly indicate that production of the rTfH in batch cultivation becomes more attractive when the complex medium is employed.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Summary of results on rTfH production in batch cultivations</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left" colspan="2">Complex media</th><th align="left" colspan="2">Defined media</th></tr></thead><tbody><tr><td align="left">Induction temperature(&#xB0;C)</td><td char="." align="char">39</td><td char="." align="char">42</td><td char="." align="char">39</td><td char="." align="char">42</td></tr><tr><td align="left">Biomass (g<sub>DCW</sub> L<sup>&#x2212;1</sup>)</td><td char="." align="char">2.2</td><td char="." align="char">2.1</td><td char="." align="char">9.8</td><td char="." align="char">9.6</td></tr><tr><td align="left">Induction time (h)</td><td char="." align="char">9.9</td><td char="." align="char">6</td><td char="." align="char">23</td><td char="." align="char">23.7</td></tr><tr><td align="left">Volumetric activity (10<sup>3</sup> U&#xA0;L<sup>&#x2212;1</sup>)</td><td char="." align="char">8.08</td><td char="." align="char">4.43</td><td char="." align="char">7.5</td><td char="." align="char">2.84</td></tr><tr><td align="left">Specific activity (10<sup>3</sup> U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup>)</td><td char="." align="char">3.67</td><td char="." align="char">2.11</td><td char="." align="char">0.77</td><td char="." align="char">0.30</td></tr><tr><td align="left">Volumetric productivity [10<sup>3</sup> U (L&#xA0;h)<sup>&#x2212;1</sup>]</td><td char="." align="char">0.82</td><td char="." align="char">0.74</td><td char="." align="char">0.33</td><td char="." align="char">0.12</td></tr><tr><td align="left">Specific productivity [10<sup>3</sup> U (g<sub>DCW</sub>&#xA0;h)<sup>&#x2212;1</sup>]</td><td char="." align="char">0.373</td><td char="." align="char">0.352</td><td char="." align="char">0.034</td><td char="." align="char">0.013</td></tr></tbody></table></table-wrap></p>
+        <p>During the induction phase, the protein content in the culture supernatant was analysed by SDS-PAGE (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). About 4&#xA0;h after the temperature upshift, the first protein bands can be recognized, particularly, for the cultivation with LB medium, where rTfH and other protein bands appear simultaneously. In cultivations with the defined medium, the pattern looks differently. In the first phase, up to almost 4&#xA0;h after induction, a single protein of about 57.4&#xA0;kDa is found. By N-terminal sequencing, this band could be identified as the periplasmic located dipeptide binding protein (DBP), which is involved in the transport of dipeptides [<xref ref-type="bibr" rid="CR19">19</xref>]. In the cultivation with complex medium, leakage of the outer membrane increased significantly 6&#xA0;h after induction when C-starvation began, growth was slow but CO<sub>2</sub> generation was still high. With the defined medium protein release in the extracellular medium was drastically rising at about 12&#xA0;h after induction when all glucose was consumed. The findings shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> are in accordance with the results reported by Rinas and Hoffmann [<xref ref-type="bibr" rid="CR20">20</xref>], who studied in detail the leakage of host-cell proteins of recombinant and non-recombinant <italic>E. coli</italic>. These authors concluded that irrespective of the cell line, proteins of periplasmic origin are predominantly released in the medium, specifically, under stress conditions like temperature increase, nutrient starvation and high cell densities.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>SDS-PAGE under denaturating conditions: EFs of different cultivations are shown after increasing the temperature to 39&#xB0;C to induce rTfH production, <bold>a</bold> batch cultivation with complex medium, <bold>b</bold> batch cultivation with the defined medium, <italic>dashed line</italic> marks the beginning of glucose starvation</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig3_HTML" id="MO3"/></fig></p>
+        <p>The SDS-PAGE shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> indicates that the further protein bands observed for each media differ only in their intensity but not in their composition. This suggests that protein release in the medium cannot be attributed to cell lysis but is mainly due to an increasing leakage of proteins located and transported to the periplasm from the cytoplasm by the Sec-transport system.</p>
+        <p>This conclusion is also confirmed by analysis of the N-terminal sequence of rTfH, which clearly revealed that the OmpA leader sequence has been cleaved. However, cleavage was not uniform. Only 15% of the secreted rTfH found in the extracellular medium was cleaved at the expected cleavage site (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). The remaining rTfH still carried parts of the OmpA leader peptide. The incomplete processing of signal sequences has been reported before [<xref ref-type="bibr" rid="CR21">21</xref>]. The cleavage motif of a signal petidase is the A-X-A box [<xref ref-type="bibr" rid="CR21">21</xref>] and fission occurs after the <italic>X</italic>. The N-terminal analysis of the secreted rTfH revealed that the cleavage motif is kept. These observations may allow the conclusion that the Sec-transportation pathway is overloaded, which might explain the improper cleavage of the signal peptidase.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Amino acid sequence of the signal peptide OmpA (<italic>underlined</italic>) and the beginning of rTfH; <italic>arrows</italic> mark the cleavage site and their relative frequency</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig4_HTML" id="MO4"/></fig></p>
+      </sec>
+      <sec id="Sec14">
+        <title>Fed-batch cultivation</title>
+        <p>To enlarge volumetric rTfH activities, fed-batch cultivations were carried out. The basic assumption is that the volumetric productivity <italic>Q</italic><sub>p</sub> [U&#xA0;(L&#xA0;h)<sup>&#x2212;1</sup>] is given by equation <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ Q_{\rm p} = q_{\rm p} X $$\end{document}</tex-math></disp-formula> with the specific productivity <italic>q</italic><sub>p</sub> [U (g<sub>DCW&#xA0;</sub>h)<sup>&#x2212;1</sup>], which is anticipated to be approximately constant when increasing the biomass concentration. As observed in the controlled batch cultivation it was also thought that the target enzyme may be released into the cultivations medium from the periplasmic space under high cell density conditions, thus facilitating down-stream processing [<xref ref-type="bibr" rid="CR20">20</xref>]. High cell density cultivation (HCDC) for <italic>E. coli</italic> can be effectively performed by using an appropriate defined medium. After the batch phase with unlimited growth and consumption of glucose, the cultivation is continued by feeding glucose at a feed rate resulting in a reduced growth rate (&#x3BC;<sub>set</sub>&#xA0;&lt;&#xA0;&#x3BC;<sub>max</sub>; Eq. <xref rid="Equ1" ref-type="">1</xref>). Thus, oxygen starvation can be prevented and the culture grows under glucose limitation in the feed phase. The oxygen partial pressure was kept constant at 20% as described in the <xref rid="Sec5" ref-type="sec">Cultivation</xref> section. Two typical HCDC runs are shown in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Expression of rTfH in <italic>E. coli</italic> TG1 during HCDC. Cells grew at 30&#xB0;C before induction by shifting the temperature to 39&#xB0;C (<italic>dashed line</italic>). <bold>a</bold> After 12.8&#xA0;h, the batch phase ended and exponential feed was started and set to a growth rate 0.12&#xA0;h<sup>&#x2212;1</sup>. At the time point of 25.5&#xA0;h, feeding was set to a constant rate (12.8&#xA0;g<sub>glc</sub> h<sup>&#x2212;1</sup>). <bold>b</bold> Fed batch with an exponential feeding profile with &#x3BC;<sub>set</sub>=0.12&#xA0;h<sup>&#x2212;1</sup> over the entire feed phase including induction</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig5_HTML" id="MO5"/></fig></p>
+        <p>Starting with an initial glucose concentrations of 24&#xA0;g&#xA0;L<sup>&#x2212;1</sup>, the biomass concentration is about 12&#xA0;g<sub>DCW</sub>&#xA0;L<sup>&#x2212;1</sup> at the end of the batch phase (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a, b). Due to the metabolic overflow, acetate was generated in the unlimited growth phase (&#x3BC;<sub>max </sub>= 0.47&#xA0;h<sup>&#x2212;1</sup>), which was remetabolized at the end of the batch phase (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). Then the glucose feed was started. The feed rate was adjusted to give a growth rate of about 0.12&#xA0;h<sup>&#x2212;1</sup> according to Eq. <xref rid="Equ1" ref-type="">1</xref>, by assuming a yield coefficient <italic>Y</italic><sub>X/S</sub> of 0.4&#xA0;g&#xA0;g<sup>&#x2212;1</sup>. The actually measured growth rates were 0.09 (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a, b). In Run A, after a feed phase of 12.8&#xA0;h, a biomass concentration of 38.5&#xA0;g<sub>DCW</sub>&#xA0;L<sup>&#x2212;1</sup> was obtained and at this point, the expression of rTfH was induced by shifting the temperature from 30 to 39&#xB0;C within 15&#xA0;min. The glucose feed rate was not further increased (12.8&#xA0;g<sub>glc</sub>&#xA0;h<sup>&#x2212;1</sup>) but kept constant to the value when the induction was started. Therefore, the growth rate steadily decreased and after about 14&#xA0;h, the induction growth ceased. In the first phase after induction (14&#xA0;h), an average growth rate of roughly 0.03&#xA0;h<sup>&#x2212;1</sup> can be estimated from the data. However, over the entire period of 22.4&#xA0;h with the constant feed rate, CO<sub>2</sub>-generation rate was also constant. Therefore, the fed glucose is used only for maintenance in the second part of the induction phase when there was zero growth . In the fed-batch phase of Run B, the same exponentially increasing glucose-feed rate as for Run A was applied, i.e., <italic>F</italic><sub>glc</sub> was calculated from Eq. <xref rid="Equ1" ref-type="">1</xref> for &#x3BC;<sub>set</sub>&#xA0;=&#xA0;0.12&#xA0;h<sup>&#x2212;1</sup> and <italic>Y</italic><sub>X/S</sub>&#xA0;=&#xA0;0.4&#xA0;g&#xA0;g<sup>&#x2212;1</sup>. After starting the induction at 42&#xA0;g&#xA0;L<sup>&#x2212;1</sup>, DCW exponential glucose feeding was continued for the same &#x3BC;<sub>set</sub> (0.12&#xA0;h<sup>&#x2212;1</sup>). In spite of the exponential glucose feeding, growth decreased and ceased about 6&#xA0;h after induction. An average growth of 0.07&#xA0;h<sup>&#x2212;1</sup> can be estimated from the experimental biomass data at the first 6&#xA0;h of the induction phase. CO<sub>2</sub> generation increased exponentially even when the growth was negligible in the second half of the induction phase. After 11.4&#xA0;h induction, a final biomass concentration of 67.8&#xA0;g<sub>DCW</sub>&#xA0;L<sup>&#x2212;1</sup> was obtained.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Glucose and metabolites formed during HCDC (Run A). cf. Fig. <xref rid="Fig5" ref-type="fig">5</xref></p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig6_HTML" id="MO6"/></fig></p>
+        <p>In the course of both runs, the respiratory quotient was always about 1 (&#xB1;&#xA0;0.02). This indicates that consumed glucose was exclusively used for ATP production. Indeed, an intermediate formation of fermentative by-products such as acetate, succinate and formate was only observed at low level at the beginning and end of the induction period (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). Both during the fed-batch and the induction phase, the glucose concentration was always zero. Carbon balances were checked by the installed computer program with consideration of volume changes by feeding and sampling and found to be close to  100&#xA0;&#xB1;&#xA0;2%.</p>
+        <p>The kinetics of the appearance of the heterologous gene product (rTfH) in the periplasm and cultivation broth is shown in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> for Run A with a long induction phase (&gt;&#xA0;20&#xA0;h). The activity in the periplasm steadily increased up to a value above 70&#xA0;U&#xA0;mL<sup>&#x2212;1</sup> while in the first 10&#xA0;h, no rTfH was released in the supernatant. The final activity in the medium was rather low (12&#xA0;U&#xA0;mL<sup>&#x2212;1</sup>). A similar release kinetics as shown in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> was also observed for Run B, which differs largely from the behaviour found for batch cultures (Figs.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, <xref rid="Fig2" ref-type="fig">2</xref>). In contrast to the batch cultivations the periplasmic activity does not pass a maximum and, particularly, little product (say less than 15%) is found in the medium.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Production kinetic of rTfH in the fed-batch cultivation (Run A). At a biomass of 38.5&#xA0;g<sub>DCW</sub> L<sup>&#x2212;1</sup> rTfH expression was induced by raising the temperature to 39&#xB0;C</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig7_HTML" id="MO7"/></fig></p>
+        <p>However, despite the low leakage of rTfH into the medium a SDS-PAGE (Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>) made from the supernatant after the enzyme induction showed that the cells were already leaky at the beginning of the induction, which is proven by the appearance of the periplasmic DBP. During the induction phase, an increase both of DBP and rTFH is observed.
+<fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>SDS-PAGE: EFs of different cultivations are shown after increasing the temperature to 39&#xB0;C to induce rTfH production, HCDC (Run A)</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig8_HTML" id="MO8"/></fig></p>
+        <p>The hydrolase activity (<italic>p</italic>NPP test system) was also measured in the cytoplasm before the induction and at the end of the HCDC. While no activity was found prior to induction, a surprisingly high intracellular activity was detected at the end of the cultivation process. Indeed, about two-thirds of the entire rTfH activity was located in the cytoplasm, apparently in soluble and active form. Any significant inclusion-body formation was not observed. The operational parameters and the results received in the two HCDC runs shown in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> are summarized in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. In spite of the different feed rates and the total induction times, the rTfH activities found in the different compartments are in reasonable agreement. The constant feed rate after induction in Run A yields higher specific activities obviously due to lower biomass formation. However, as a result of the long induction time, the productivity is lower for Run A than for Run B. In comparison to the batch runs (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>) the accumulation of product in the periplasm and cytoplasm is most noticeable. Thus the total volumetric activity is about 30-fold larger than that achieved in the batch runs. These higher overall product concentrations are advantageously for rTfH recovery and purification.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Applied operation parameters and achieved rTfH activities in fed-batch runs (starting glucose concentration 24&#xA0;g&#xA0;L<sup>&#x2212;</sup><sup>1</sup>, pH 7, <italic>T</italic>&#xA0;=&#xA0;30&#xB0;C, <italic>T</italic><sub>ind</sub>&#xA0;=&#xA0;39&#xB0;C)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Cultivation </th><th align="left">Run A</th><th align="left">Run B</th></tr></thead><tbody><tr><td align="left">DCW at induction (g&#xA0;L<sup>&#x2212;1</sup>)</td><td char="." align="left">38.5</td><td char="." align="left">42</td></tr><tr><td align="left">Feed rate</td><td align="left">Constant (12.8&#xA0;g<sub>glc</sub>&#xA0;h<sup>&#x2212;1</sup>)</td><td align="left">Exponential (&#x3BC;&#xA0;=&#xA0;0.12&#xA0;h<sup>&#x2212;1</sup>)</td></tr><tr><td align="left">Estimated mean growth rate after induction (h<sup>&#x2212;1</sup>)</td><td char="." align="left">0.03</td><td char="." align="left">0.07</td></tr><tr><td align="left">Total induction time (h)</td><td char="." align="left">22.4</td><td char="." align="left">11.4</td></tr><tr><td align="left">Final DCW (g&#xA0;L<sup>&#x2212;1</sup>)</td><td char="." align="left">53.2</td><td char="." align="left">67.8</td></tr><tr><td align="left" colspan="3">Supernatant</td></tr><tr><td align="left">Volumetric activity (10<sup>3</sup>&#xA0;U&#xA0;L<sup>&#x2212;1</sup>)</td><td char="." align="left">12.04</td><td char="." align="left">5.16</td></tr><tr><td align="left">Specific activity (10<sup>3</sup>&#xA0;U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup>)</td><td char="." align="left">0.227</td><td char="." align="left">0.076</td></tr><tr><td align="left" colspan="3">Periplasm</td></tr><tr><td align="left">Volumetric activity (10<sup>3</sup>&#xA0;U&#xA0;L<sup>&#x2212;1</sup>)</td><td char="." align="left">74.22</td><td char="." align="left">51.69</td></tr><tr><td align="left">Specific activity (10<sup>3</sup>&#xA0;U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup>)</td><td char="." align="left">1.395</td><td char="." align="left">0.762</td></tr><tr><td align="left" colspan="3">Cytoplasm (soluble)</td></tr><tr><td align="left">Volumetric activity (10<sup>3</sup>&#xA0;U&#xA0;L<sup>&#x2212;1</sup>)</td><td char="." align="left">141.24</td><td char="." align="left">156.74</td></tr><tr><td align="left">Specific activity (10<sup>3</sup>&#xA0;U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup>)</td><td char="." align="left">2.655</td><td char="." align="left">2.312</td></tr><tr><td align="left" colspan="3">Total</td></tr><tr><td align="left">Volumetric activity (10<sup>3</sup>&#xA0;U&#xA0;L<sup>&#x2212;1</sup>)</td><td char="+" align="left">227.5</td><td char="+" align="left">213.59</td></tr><tr><td align="left">Specific activity (10<sup>3</sup>&#xA0;U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup>)</td><td char="+" align="left">4.28</td><td char="+" align="left">3.15</td></tr><tr><td align="left">Productivity [U (10<sup>3</sup>&#xA0;gDCW h)<sup>&#x2212;1</sup>]<sup>a</sup></td><td char="+" align="left">0.19</td><td char="+" align="left">0.28</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Total induction time</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec15">
+        <title>Purification</title>
+        <p>Two different strategies were applied to purify rTfH with regard to different uses. To gain rTfH with a high purification grade, the His<sub>6</sub>-affinity tag cloned at the C-terminal end of the <italic>bta</italic>1 gene allowed a simple and effective chromatographic procedure. rTfH was purified from the culture broth or the periplasm, which was obtained by an osmotic shock treatment (<xref rid="Sec9" ref-type="sec">Localization of rTfH</xref> section). In the following, the purification of rTfH is described, which originated from the periplasmic space. About 37&#xA0;g of wet biomass (corresponding to ca. 6.5&#xA0;g<sub>DCW</sub>) was subjected to osmotic shock treatment (1&#xA0;L scale). After separating the cells by centrifugation, 25&#xA0;mL Ni<sup>2+</sup> activated sepharose was directly added to the supernatant harbouring the periplasmic protein. After 1&#xA0;h incubation, only low amounts of rTfH activity (0.1%) could be detected in the supernatant. The suspension was then filled into a glass column. Particle settling could be improved by connecting a peristaltic pump to the column outlet. After connecting the column to a FPLC system, rTfH was washed with bindung buffer; rTfH was eluted by applying a linear gradient of imidazole (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>a). rTfH elution was observed at an imidazole concentration of about 200&#xA0;mM. In the pooled fractions, a rTfH activity of 6.53&#xA0;U&#xA0;mL<sup>&#x2212;1</sup> could be detected. The His<sub>6</sub>-affinity step resulted in a 29-fold purification and a loss of about 30% rTfH activity.
+<fig id="Fig9"><label>Fig.&#xA0;9</label><caption><p>Purification of rTfH from the PF. <italic>E. coli</italic> TG1 cells derived from a fed-batch cultivation (Run A); 37&#xA0;g biomass was used for osmotic shock treatment, <bold>a</bold> Ni<sup>2+</sup>-affinity chromatography with Chelating Sepharose Fast Flow, <bold>b</bold> gelfiltration with Superdex 75 prep grade; pooled fraction are marked by a <italic>line</italic></p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig9_HTML" id="MO9"/></fig></p>
+        <p>To further eliminate impurities and to remove high concentrations of NaCl and imidazole from the protein sample, gelfiltration was done using a Hi Load 26/60 Superdex 75 prep grade column with a 0.9% NaCl buffer (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>b). Before applying the sample to the column, pooled fractions with rTfH from the Ni<sup>2+</sup>-affinity chromatography were concentrated by ultrafiltration (concentration factor 7; cut-off 10&#xA0;kDa). Gelfiltration assured purification to homogeneity as shown by SDS-PAGE (Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>) although only a minor increase of the specific activity was observed (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). Gel filtration resulted in a further loss of rTfH activity of about 10%. Totally, rTfH could be purified 30-fold with a 57% recovery in activity by the applied purification route. Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> gives an overview of the procedure to obtain the highly purified rTfH, which will be used for mechanistic studies (adsorption, kinetic) and structural analysis.
+<fig id="Fig10"><label>Fig.&#xA0;10</label><caption><p>SDS-PAGE: rTfH at different purification steps (silver staining), 37&#xA0;g biomass was used for the osmotic shock treatment, cells derived from HCDC (Run A) standard: molecular mass protein standard, <italic>1</italic> supernatant from the periplasm, <italic>2</italic> Ni<sup>2+</sup>-affinity chromatography, <italic>3</italic> pooled fraction after Superdex 75 gel chromatography</p></caption><graphic position="anchor" xlink:href="449_2006_69_Fig10_HTML" id="MO10"/></fig><table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Summary of two routes used to recover and purify rTfH from HCDC; the highly purified product was obtained from the periplasmic fraction (Run A), the low grade product was recovered from the cytoplasm and periplasm by ultrasonification (Run B)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Purification step</th><th align="left">Total units (10<sup>3</sup>&#xA0;U&#xA0;L<sup>&#x2212;1</sup>)</th><th align="left">Total protein (mg&#xA0;L<sup>&#x2212;1</sup>)</th><th align="left">Specific activity (U mg<sup>&#x2212;1</sup>)</th><th align="left">Purification-factor</th><th align="left">Yield (%)</th></tr></thead><tbody><tr><td align="left" colspan="6">High grade rTfH</td></tr><tr><td align="left">&#xA0;Supernatant with periplasmic protein</td><td char="." align="char">8.57</td><td char="." align="char">587</td><td char="." align="char">15</td><td char="." align="char">1</td><td char="." align="char">100</td></tr><tr><td align="left">&#xA0;Ni<sup>2+</sup>-affinity chromatography</td><td char="." align="char">6.53</td><td char="." align="char">15</td><td char="." align="char">436</td><td char="." align="char">29</td><td char="." align="char">71</td></tr><tr><td align="left">&#xA0;Gel filtration</td><td char="." align="char">4.89</td><td char="." align="char">11</td><td char="." align="char">445</td><td char="." align="char">30</td><td char="." align="char">57</td></tr><tr><td align="left" colspan="6">Low grade rTfH</td></tr><tr><td align="left">&#xA0;Crude extract</td><td char="." align="char">26.52</td><td char="." align="char">2,570</td><td char="." align="char">10.32</td><td char="." align="char">1</td><td char="." align="char">100</td></tr><tr><td align="left">&#xA0;Heat treatment</td><td char="." align="char">22.51</td><td char="." align="char">1,470</td><td char="." align="char">15.3</td><td char="." align="char">1.5</td><td char="." align="char">85</td></tr><tr><td align="left">&#xA0;Ultrasonification + heat treatment</td><td char="." align="char">28.89</td><td char="." align="char">1,410</td><td char="." align="char">20.5</td><td char="." align="char">2</td><td char="." align="char">109<sup>a</sup></td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Crude extract (ultrasonification plus centrifugation)</p></table-wrap-foot></table-wrap></p>
+        <p>Contrary to the purification profile of the TfH from the culture broth of <italic>T. fusca</italic> cultivations, the overall yield could be increased from 14 to 57% [<xref ref-type="bibr" rid="CR7">7</xref>]. Prior to performing the first purification step, the supernatant containing TfH had to be concentrated by ammonium sulphate precipitation. By this method, a final recovery of only 37% could be achieved because of the limited amounts of the precipitated proteins that could be redissolved [<xref ref-type="bibr" rid="CR7">7</xref>]. By inserting the His<sub>6</sub>-affinity tag at the C-terminal end of rTfH, precipitation could be avoided and the recombinant enzyme could be easily obtained from <italic>E. coli</italic>-culture broths independently of its composition.</p>
+        <p>For industrial processes, purification with Ni<sup>2+</sup>-affinity chromatography is too costly of course. Therefore, an alternative purification route was developed, which aimed at a rTfH preparation of a low purification grade but sufficient activity and stability for larger-scale investigations on polyester degradation. Activity test of the soluble protein in the cytoplasm obtained during HCDC showed that most of the expressed rTfH was not secreted into the periplasm but remained in the cytoplasm. Hence, the cells were disrupted by ultrasonification to get rTfH both from the cytoplasm and the periplasm. In preliminary experiments, different ultrasonication conditions were tested. Three-fold pulses of 30&#xA0;s each with 2&#xA0;min break were found as the best treatment for the test conditions of 75&#xA0;mg biomass resuspended in 2&#xA0;mL PBS buffer. Here, biomass from the HCDC Run B was used. After the separation of cell debris by centrifugation, an activity of 26.52&#xA0;U&#xA0;mL<sup>&#x2212;1</sup> was detected corresponding to a specific activity of 4.1&#xA0;U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup>. Chemical disruption of the cells by a detergent formulation (BugBuster, see <xref rid="Sec9" ref-type="sec">Localization of rTfH</xref> section) resulted only in a specific activity of 3.07&#xA0;U&#xA0;g<sub arrange="stack">DCW</sub><sup arrange="stack">&#x2212;1</sup> implying that cell disruption is more effective than the chemical treatment. Protein concentration of the crude extract was 2.57&#xA0;mg&#xA0;mL<sup>&#x2212;1</sup>. Taking the specific activity of the high-grade rTfH into account (445&#xA0;U&#xA0;mg<sub arrange="stack">Protein</sub><sup arrange="stack">&#x2212;1</sup>), 1&#xA0;mg protein harboured 2.3% heterologous produced rTfH. Because rTfH is very stable against higher temperatures [<xref ref-type="bibr" rid="CR7">7</xref>], heat treatment was carried out at 55&#xB0;C for 10&#xA0;min. Two routes were tested, namely either heat treatment of the disrupted cells immediately after the ultrasonication or heat treatment after the separation of the cell debris. Activity tests revealed that a heat treatment directly after the cell disruption yielded the best results. Thus the purification factor could be increased from 1.5 to 2 and a higher yield was observed. Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> summarized the results in detail.</p>
+      </sec>
+    </sec>
+    <sec id="Sec16" sec-type="discussion">
+      <title>Discussion</title>
+      <p>The recombinant strain <italic>E. coli</italic> TG1 harbouring the plasmid pCYTEXP1-<italic>Omp</italic>A-<italic>bta</italic>1-His<sub>6</sub> proved to be an appropriate system for expression, secretion and purification of the hydrolase from <italic>T. fusca</italic>. In comparison to cultivations with <italic>T. fusca</italic> and induction of TfH by adding polyesters a 1.5&#x2013;2-fold higher volumetric activity could be obtained in batch cultivations of the recombinant <italic>E. coli</italic> strain. The volumetric activity could be further improved in fed-batch cultivations with glucose limitation. Considering only the extracellular and PFs, the increase is 20-fold. If one also accounts for the activity found in the cytoplasm, the total volumetric activity is over 50-fold higher than that obtained from <italic>T. fusca</italic>. The overall volumetric productivity [U&#xA0;(L&#xA0;h)<sup>&#x2212;1</sup>] increased by a factor more than 100. Hence, the production of rTfH in recombinant <italic>E. coli</italic> is an attractive and promising approach for providing hydrolytic activity for polyester cleavage in degradation and recycling processes. This view is supported by the simple recovery route to give a crude and stable rTfH preparation, which did not exhibit activity losses after storage at &#x2212;20&#xB0;C for several weeks.</p>
+      <p>A further improvement of rTfH production in <italic>E. coli</italic> is the insertion of the His<sub>6</sub> tag at the C-terminal end of the enzyme. Purification of the wild-type TfH proved to be quite ineffective. A three-step purification strategy (precipitation, ion-exchange chromatography and hydrophobic interaction chromatography) resulted in only 14% yield in activity [<xref ref-type="bibr" rid="CR7">7</xref>]. With the His<sub>6</sub> tag, 57% activity yield of rTfH could be obtained in a two-step purification route starting from the supernatant and PFs. A 30-fold purification was achieved yielding a specific activity of 445&#xA0;U&#xA0;mg<sup>&#x2212;1</sup>. From this value, the overall concentration of the produced rTfH can be estimated as about 0.5&#xA0;g&#xA0;L<sup>&#x2212;1</sup>.</p>
+      <p>In the batch runs with LB and the defined medium, better results were found by induction to only 39&#xB0;C. Therefore, fed-batch cultivations were carried out with this induction temperature. While both the media yielded comparable volumetric activities, the specific activities differ significantly (about fivefold in LB). LB medium obviously supplies <italic>E. coli</italic> with all nutrients to easily synthesize the recombinant protein at high specific productivity and to secrete it across the cell envelope. Increased growth rates and facilitated protein production in LB medium are frequently reported in the literature [<xref ref-type="bibr" rid="CR22">22</xref>, <xref ref-type="bibr" rid="CR23">23</xref>]. In batch cultivations with both media, rTfH expression as well as its transport across the cell membrane in the periplasm and the subsequent release into the cultivation media are seemingly coupled with growth and CO<sub>2</sub> generation (Figs.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, <xref rid="Fig2" ref-type="fig">2</xref>).</p>
+      <p>In the fed-batch cultivations with the defined medium, roughly tenfold higher activities could be achieved in the supernatant and periplasm than in batch operation. Surprisingly, the specific activities in the glucose limited fed-batch process are even twofold higher. If one accounts for the soluble cytosolic fraction the activity yields further improve remarkably. The total specific activity of the HCDCs is in the same range as those obtained for the batch process with LB medium. An influence of the His<sub>6</sub> tag and the full or truncated OmpA leader sequence on TfH activity can hardly be estimated from the results of this study. However, the high activities of rTfH obtained suggest that small sequences at the C- and N- terminals might have little effect on TfH activity. The fraction of soluble active protein located in the cytoplasm is remarkably high but its amount can be estimated to be less than 2% of the total protein content of the cells (assuming 50% protein of DCW). Therefore, it is understood that inclusion body formation could not be detected.</p>
+      <p>Among the different mechanisms to transport protein from the cytoplasm across the cell membrane to the periplasm, the Sec pathway is the most prominent for prokaryotic organisms [<xref ref-type="bibr" rid="CR24">24</xref>]. The Sec-translocation process is thought to be generally responsible for the transport of newly synthesized but unfolded proteins out of the cytosol to the periplasm. This process is accompanied by the cleavage of the leader sequence (OmpA) from the pre-protein and proper folding in the periplasm. If we assume that the Sec pathway is also active for the transport of the heterologous rTfH out of the cytoplasm, it is obvious that due to its accumulation in the cytoplasm during the fed-batch runs, the translocation rate is less than the expression rate. Hence, transport into the periplasm apparently presents a limiting step. It might be possible that the entire translocation process is subjected to an equilibrium phenomenon in as far as high protein concentrations in the periplasm reduces the transport rate. This is evident if the rTfH masses (or units) in periplasm and cytoplasm are not referred to cultivation volume as given in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> but to their respective actual volumes. If it is assumed that the volume of periplasm is about 5% of the cell volume then the rTfH concentration in the periplasm is more than tenfold higher than in the cytoplasm. This might explain that no cytoplasmic rTfH activity was found in the batch runs, where the periplasmic protein was entirely released in the extracellular space. In contrast, relatively little protein was transported across the outer cell wall into the medium in the fed-batch runs with high cell densities and higher rTfH activities were found in both the cytoplasm and periplasm.</p>
+      <p>As to the Sec pathway, the rTfH in the cytoplasm should be unfolded and hence is not expected to be in the active form. However, when gaining the cytoplasmic fraction (see <xref rid="Sec9" ref-type="sec">Localization of rTfH</xref> section) immediate activity was observed. This suggests that either folding takes place spontaneously in the PBS buffer or the cytosol already harbours the active folded rTfH and its translocation follows another mechanism. Unfortunately, our study does not allow to distinguish between the two possibilities.</p>
+      <p>Though it is often assumed that <italic>E. coli</italic> laboratory strains do not secrete proteins across the cell envelope in the extracellular medium at normal growth conditions [<xref ref-type="bibr" rid="CR25">25</xref>], leakage of the outer cell membrane is a common phenomenon observed for a variety of cultivation conditions as reported in recent papers [<xref ref-type="bibr" rid="CR20">20</xref>, <xref ref-type="bibr" rid="CR25">25</xref>, <xref ref-type="bibr" rid="CR26">26</xref>] and review articles [<xref ref-type="bibr" rid="CR21">21</xref>, <xref ref-type="bibr" rid="CR27">27</xref>]. Permeability of the outer cell wall may depend on medium composition, growth rates, cell concentration, changes in cultivation conditions, etc. For instance, Mg<sup>2+</sup> and Ca<sup>2+</sup> increase leakage of the outer membrane [<xref ref-type="bibr" rid="CR28">28</xref>]. Rise of temperature causes changes in membrane permeability and fluidity due to alterations in the lipid composition of the cell wall. This aspect was particularly studied in continuous cultures of <italic>E. coli</italic> [<xref ref-type="bibr" rid="CR26">26</xref>] and an increased permeability was found at higher growth rates. Rinas and Hoffmann [<xref ref-type="bibr" rid="CR20">20</xref>] studied in detail the leakage of host-cell proteins during HCDCs of recombinant and non-recombinant <italic>E. coli</italic>. These authors reported that the proteins found extracellularly are of periplasmic origin except the heat-shock protein DnaK. Various and interrelated stress factors in the temperature-induced HCDC are suggested to be responsible for the migration of periplasmic proteins in the extracellular medium.</p>
+      <p>In all cultivations performed in this study, rTfH could be detected in the medium without applying any additional measures to permeabilize the outer cell membrane. Cell lysis as a possible mechanism of rTfH release can be excluded as the cleavage of the OmpA sequence in the extracellularly found hydrolase indicates transport across the cytoplasmic membrane by the Sec-translocation mechanism. Any significant cell lysis would also release cytoplasmic rTfH still containing the complete signal sequence.</p>
+      <p>In batch cultivations (Figs.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, <xref rid="Fig2" ref-type="fig">2</xref>) with LB and the defined medium, induction of rTfH expression was started at low cell densities. Immediately after the temperature upshift, rTfH appeared in the periplasm but its periplasmic activity passes a maximal value just in the first part of the exponential growth phase. In accordance with the findings of Shokri et al. [<xref ref-type="bibr" rid="CR26">26</xref>], the migration of the periplasmic rTfH in the medium is obviously growth coupled. This effect may be attributed to changes in cell-wall composition which facilitate transport into the extracellular medium. On the other hand, during cell growth and cell-wall biosynthesis, transient openings of the outer membrane and the murein layer are unavoidable [<xref ref-type="bibr" rid="CR29">29</xref>], thus the protein of periplasmic origin can migrate into the extracellular medium. Furthermore, vesiculation and fragmentation of the outer membrane may occur as a natural phenomenon during the exponential growth phase [<xref ref-type="bibr" rid="CR30">30</xref>, <xref ref-type="bibr" rid="CR31">31</xref>] which is thought to be caused by an imbalance of the outer-membrane biogenesis and peptidoglucan synthesis. Therefore, several growth-coupled phenomena may contribute to the migration of periplasmic proteins in the medium.</p>
+      <p>At the end of the batch cultivations, the produced rTfH has entirely accumulated in the medium. As can be discerned from the SDS-PAGE shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> the transport of rTfH across the cell envelope is accompanied simultaneously by release of other periplasmic proteins [<xref ref-type="bibr" rid="CR20">20</xref>]. The kinetics of rTfH accumulation in the extracellular medium (Figs.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>, <xref rid="Fig2" ref-type="fig">2</xref>) agrees qualitatively with the results shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>, particularly, no significant migration is observed at low growth rates after the induction when the culture adapts to the higher temperature. Rinas and Hoffmann [<xref ref-type="bibr" rid="CR20">20</xref>] found DBP as the most prominent periplasmic protein transported to the medium. This observation and even the release kinetics reported by these authors for high cell-density conditions are in striking agreement with our findings for batch conditions (relatively low cell densities) as observed in the defined medium (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b).</p>
+      <p>In contrast to the batch runs, rTfH accumulates in the cytoplasm and periplasm during the glucose-limited fed-batch cultivations after induction at higher cell densities. The relative fractions of rTfH released extracellularly is low. For an induction period of 11&#xA0;h, only 5 and 10% of the PF are released for Run A and B, respectively. As in Run B, the growth rate was higher as a result of exponential glucose feeding; this finding underpins the view that the permeability of the outer membrane is related to growth rate. As shown in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> the outer membrane is already leaky before the temperature shift from 30 to 39&#xB0;C as among other periplasmic proteins the DBP is predominantly found in the extracellular medium as reported previously [<xref ref-type="bibr" rid="CR20">20</xref>]. Of course, in the induction phase a further increase of DBP is observed (Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>). Though the transport of rTfH in the periplasm as well as its migration into the extracellular medium continued (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>), the cultivation was terminated to prevent cell lysis after growth ceased. However, in the non-growth phase, glucose does not accumulate in the medium but is consumed as is also exhibited by the monotonous increase of CO<sub>2</sub> generation. This points to the increased maintenance and ATP demand for translocation of the heterologous gene product (rTfH) across the inner cell membrane.</p>
+      <p>These mechanisms, which govern the local distribution of rTfH are not yet understood. Though cell-specific productivities are in a comparable range, product distributions differ largely. Our results suggest that the outer membrane permeability is related with the growth rate and hence all rTfH can migrate into the extracellular medium at high growth rates (batch runs). Therefore, final product release across the cell envelope could play an important role in the overall translocation process as product accumulation in the periplasm seemingly reduces the translocation rate from the cytoplasm by the Sec pathway. This hypothesis requires further investigations, which are presently in preparation. Therefrom, new strategies for cultivation and downstream processing with improved product qualities are expected.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>Support of this work by Deutsche Forschungsgemeinschaft is gratefully acknowledged. Thanks are due to Rita Getzlaff for analysis of protein sequences.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tokiwa</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Suzuki</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Hydrolysis of polyesters by lipases</article-title>
+          <source>Nature</source>
+          <year>1977</year>
+          <volume>270</volume>
+          <fpage>76</fpage>
+          <lpage>78</lpage>
+          <pub-id pub-id-type="doi">10.1038/270076a0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tokiwa Y, Suzuki T (1977) Hydrolysis of polyesters by lipases. Nature 270:76&#x2013;78 <pub-id pub-id-type="pmid">927523</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="other">Witt U, M&#xFC;ller RJ, Deckwer WD (1996) Biodegradable polyester and material made therefrom. Germany WO9607687</citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Kleeberg</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Biodegradation of polyesters containing aromatic constituents</article-title>
+          <source>J Biotechnol</source>
+          <year>2001</year>
+          <volume>86</volume>
+          <fpage>87</fpage>
+          <lpage>95</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0168-1656(00)00407-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">M&#xFC;ller RJ, Kleeberg I, Deckwer WD (2001) Biodegradation of polyesters containing aromatic constituents. J Biotechnol 86:87&#x2013;95 <pub-id pub-id-type="pmid">11245897</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Witt</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Biodegradation behavior and material properties of aliphatic-aromatic polyesters of commercial importance</article-title>
+          <source>J Environ Polym Degrad</source>
+          <year>1997</year>
+          <volume>5</volume>
+          <fpage>81</fpage>
+          <lpage>89</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Witt U, M&#xFC;ller RJ, Deckwer WD (1997) Biodegradation behavior and material properties of aliphatic-aromatic polyesters of commercial importance. J Environ Polym Degrad 5:81&#x2013;89 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kleeberg</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Hetz</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Kroppenstedt</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Biodegradation of aliphatic-aromatic copolyesters by <italic>Thermomonospora fusca</italic> and other thermophilic compost isolates</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>1998</year>
+          <volume>64</volume>
+          <fpage>1731</fpage>
+          <lpage>1735</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Kleeberg I, Hetz C, Kroppenstedt RM, M&#xFC;ller RJ, Deckwer WD (1998) Biodegradation of aliphatic-aromatic copolyesters by Thermomonospora fusca and other thermophilic compost isolates. Appl Environ Microbiol 64:1731&#x2013;1735 <pub-id pub-id-type="pmid">9572944</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="other">Deckwer WD, M&#xFC;ller RJ, van den Heuvel J, Kleeberg I, WIDOW U (2001) DNA-Sequenzen, die Estergruppen spaltende Enzyme kodieren. Germany DE10030529A1</citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kleeberg</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Welzel</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Heuvel</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of a new extracellular hydrolase from <italic>Thermobifida fusca</italic> degrading aliphatic-aromatic copolyesters</article-title>
+          <source>Biomacromolecules</source>
+          <year>2005</year>
+          <volume>6</volume>
+          <fpage>262</fpage>
+          <lpage>270</lpage>
+          <pub-id pub-id-type="doi">10.1021/bm049582t</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kleeberg I, Welzel K, van den Heuvel J, M&#xFC;ller RJ, Deckwer WD (2005) Characterization of a new extracellular hydrolase from Thermobifida fusca degrading aliphatic-aromatic copolyesters. Biomacromolecules 6:262&#x2013;270 <pub-id pub-id-type="pmid">15638529</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gouda</surname>
+              <given-names>MK</given-names>
+            </name>
+            <name>
+              <surname>Kleeberg</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Heuvel</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Production of a polyester degrading extracellular hydrolase from <italic>Thermomonospora fusca</italic></article-title>
+          <source>Biotechnol Prog</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>927</fpage>
+          <lpage>934</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp020048b</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gouda MK, Kleeberg I, van den Heuvel J, M&#xFC;ller RJ, Deckwer WD (2002) Production of a polyester degrading extracellular hydrolase from Thermomonospora fusca. Biotechnol Prog 18:927&#x2013;934 <pub-id pub-id-type="pmid">12363342</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>M&#xFC;ller</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Schrader</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Profe</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Dresler</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Enzymatic degradation of poly(ethylene terephthalate): rapid hydrolyse using a hydrolase from <italic>T. fusca</italic></article-title>
+          <source>Macromol Rapid Commun</source>
+          <year>2005</year>
+          <volume>26</volume>
+          <fpage>1400</fpage>
+          <lpage>1405</lpage>
+          <pub-id pub-id-type="doi">10.1002/marc.200500410</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">M&#xFC;ller RJ, Schrader H, Profe J, Dresler K, Deckwer WD (2005) Enzymatic degradation of poly(ethylene terephthalate): rapid hydrolyse using a hydrolase from T. fusca. Macromol Rapid Commun 26:1400&#x2013;1405 </citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carter</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Bedouelle</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Winter</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Improved oligonucleotide site-directed mutagenesis using M13 vectors</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1985</year>
+          <volume>13</volume>
+          <fpage>4431</fpage>
+          <lpage>4443</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/13.12.4431</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Carter P, Bedouelle H, Winter G (1985) Improved oligonucleotide site-directed mutagenesis using M13 vectors. Nucleic Acids Res 13:4431&#x2013;4443 <pub-id pub-id-type="pmid">2989795</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sambrook</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Russell</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Molecular cloning, a laboratory manual</source>
+          <year>2001</year>
+          <edition>3</edition>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Cold Spring Harbor Laboratory Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Sambrook J, Russell D (2001) Molecular cloning, a laboratory manual, 3rd edn. Cold Spring Harbor Laboratory Press, New York </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Korz</surname>
+              <given-names>DJ</given-names>
+            </name>
+            <name>
+              <surname>Rinas</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Hellmuth</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Sanders</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Deckwer</surname>
+              <given-names>WD</given-names>
+            </name>
+          </person-group>
+          <article-title>Simple fed-batch technique for high cell density cultivation of <italic>Escherichia coli</italic></article-title>
+          <source>J Biotechnol</source>
+          <year>1995</year>
+          <volume>39</volume>
+          <fpage>59</fpage>
+          <lpage>65</lpage>
+          <pub-id pub-id-type="doi">10.1016/0168-1656(94)00143-Z</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Korz DJ, Rinas U, Hellmuth K, Sanders EA, Deckwer WD (1995) Simple fed-batch technique for high cell density cultivation of Escherichia coli. J Biotechnol 39:59&#x2013;65 <pub-id pub-id-type="pmid">7766011</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yamane</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Scheper</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Fed-batch techniques in microbiol processes</article-title>
+          <source>Advances in biochemical engineering and biotechnology</source>
+          <year>1984</year>
+          <publisher-loc>Berlin Heidelberg New York</publisher-loc>
+          <publisher-name>Springer</publisher-name>
+          <fpage>145</fpage>
+          <lpage>194</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Yamane T, Shimizu S (1984) Fed-batch techniques in microbiol processes. In: Scheper T (ed) Advances in biochemical engineering and biotechnology. Springer, Berlin Heidelberg New York, pp 145&#x2013;194 </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heukeshoven</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Dernick</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Improved silver staining procedure for fast staining in PhastSystem Development Unit. I. Staining of sodium dodecyl sulfate gels</article-title>
+          <source>Electrophoresis</source>
+          <year>1988</year>
+          <volume>9</volume>
+          <fpage>28</fpage>
+          <lpage>32</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.1150090106</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Heukeshoven J, Dernick R (1988) Improved silver staining procedure for fast staining in PhastSystem Development Unit. I. Staining of sodium dodecyl sulfate gels. Electrophoresis 9:28&#x2013;32 <pub-id pub-id-type="pmid">2466645</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schmidt-Dannert</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Sztajer</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Stocklein</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Menge</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Schmid</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>Screening, purification and properties of a thermophilic lipase from <italic>Bacillus thermocatenulatus</italic></article-title>
+          <source>Biochim Biophys Acta</source>
+          <year>1994</year>
+          <volume>1214</volume>
+          <fpage>43</fpage>
+          <lpage>53</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schmidt-Dannert C, Sztajer H, Stocklein W, Menge U, Schmid RD (1994) Screening, purification and properties of a thermophilic lipase from Bacillus thermocatenulatus. Biochim Biophys Acta 1214:43&#x2013;53 <pub-id pub-id-type="pmid">8068728</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Neu</surname>
+              <given-names>HC</given-names>
+            </name>
+            <name>
+              <surname>Heppel</surname>
+              <given-names>LA</given-names>
+            </name>
+          </person-group>
+          <article-title>The release of enzymes from <italic>Escherichia coli</italic> by osmotic shock and during the formation of spheroplasts</article-title>
+          <source>J Biol Chem</source>
+          <year>1965</year>
+          <volume>240</volume>
+          <fpage>3685</fpage>
+          <lpage>3692</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Neu HC, Heppel LA (1965) The release of enzymes from Escherichia coli by osmotic shock and during the formation of spheroplasts. J Biol Chem 240:3685&#x2013;3692 <pub-id pub-id-type="pmid">4284300</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gottschalk</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <source>Bacterial metabolism</source>
+          <year>1986</year>
+          <edition>2</edition>
+          <publisher-loc>Berlin Heidelberg New York</publisher-loc>
+          <publisher-name>Springer</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Gottschalk K (1986) Bacterial metabolism, 2nd edn. Springer, Berlin Heidelberg New York </citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Korz</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <source>Entwicklung von Proze&#xDF;strategien zur Kultivierung von <italic>Escherichia coli</italic> zu hohen Zelldichten</source>
+          <year>1993</year>
+          <publisher-loc>Munich</publisher-loc>
+          <publisher-name>Technical University of Munich</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Korz DJ (1993) Entwicklung von Proze&#xDF;strategien zur Kultivierung von Escherichia coli zu hohen Zelldichten. Technical University of Munich, Munich </citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abouhamad</surname>
+              <given-names>WN</given-names>
+            </name>
+            <name>
+              <surname>Manson</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Gibson</surname>
+              <given-names>MM</given-names>
+            </name>
+            <name>
+              <surname>Higgins</surname>
+              <given-names>CF</given-names>
+            </name>
+          </person-group>
+          <article-title>Peptide transport and chemotaxis in <italic>Escherichia coli</italic> and <italic>Salmonella typhimurium</italic>: characterization of the dipeptide permease (Dpp) and the dipeptide-binding protein</article-title>
+          <source>Mol Microbiol</source>
+          <year>1991</year>
+          <volume>5</volume>
+          <fpage>1035</fpage>
+          <lpage>1047</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1365-2958.1991.tb01876.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Abouhamad WN, Manson M, Gibson MM, Higgins CF (1991) Peptide transport and chemotaxis in Escherichia coli and Salmonella typhimurium: characterization of the dipeptide permease (Dpp) and the dipeptide-binding protein. Mol Microbiol 5:1035&#x2013;1047 <pub-id pub-id-type="pmid">1956284</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rinas</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Hoffmann</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title>Selective leakage of host-cell proteins during high-cell-density cultivation of recombinant and non-recombinant <italic>Escherichia coli</italic></article-title>
+          <source>Biotechnol Prog</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <fpage>679</fpage>
+          <lpage>687</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp034348k</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rinas U, Hoffmann F (2004) Selective leakage of host-cell proteins during high-cell-density cultivation of recombinant and non-recombinant Escherichia coli. Biotechnol Prog 20:679&#x2013;687 <pub-id pub-id-type="pmid">15176868</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Choi</surname>
+              <given-names>JH</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>SY</given-names>
+            </name>
+          </person-group>
+          <article-title>Secretory and extracellular production of recombinant proteins using <italic>Escherichia coli</italic></article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>2004</year>
+          <volume>64</volume>
+          <fpage>625</fpage>
+          <lpage>635</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00253-004-1559-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Choi JH, Lee SY (2004) Secretory and extracellular production of recombinant proteins using Escherichia coli. Appl Microbiol Biotechnol 64:625&#x2013;635 <pub-id pub-id-type="pmid">14966662</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="other">Broedel SH, Papciak SM, Jones WR (2001) The selection of optimum media formulations for improved expression of recombinant proteins in <italic>E. coli </italic>, vol 2. Athena Enzyme Systems Technical Bulletin</citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rothen</surname>
+              <given-names>SA</given-names>
+            </name>
+            <name>
+              <surname>Sauer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sonnleitner</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Witholt</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Growth characteristics of <italic>Escherichia coli</italic> HB101 [pGEc47] on defined medium</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1998</year>
+          <volume>58</volume>
+          <fpage>92</fpage>
+          <lpage>100</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0290(19980405)58:1&lt;92::AID-BIT10&gt;3.0.CO;2-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rothen SA, Sauer M, Sonnleitner B, Witholt B (1998) Growth characteristics of Escherichia coli HB101 [pGEc47] on defined medium. Biotechnol Bioeng 58:92&#x2013;100 <pub-id pub-id-type="pmid">10099265</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mori</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Ito</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>The Sec protein-translocation pathway</article-title>
+          <source>Trends Microbiol</source>
+          <year>2001</year>
+          <volume>9</volume>
+          <fpage>494</fpage>
+          <lpage>500</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0966-842X(01)02174-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mori H, Ito K (2001) The Sec protein-translocation pathway. Trends Microbiol 9:494&#x2013;500 <pub-id pub-id-type="pmid">11597451</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Brokx</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Weiner</surname>
+              <given-names>JH</given-names>
+            </name>
+          </person-group>
+          <article-title>Extracellular accumulation of recombinant proteins fused to the carrier protein YebF in <italic>Escherichia coli</italic></article-title>
+          <source>Nat Biotechnol</source>
+          <year>2006</year>
+          <volume>24</volume>
+          <fpage>100</fpage>
+          <lpage>104</lpage>
+          <pub-id pub-id-type="doi">10.1038/nbt1174</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang G, Brokx S, Weiner JH (2006) Extracellular accumulation of recombinant proteins fused to the carrier protein YebF in Escherichia coli. Nat Biotechnol 24:100&#x2013;104 <pub-id pub-id-type="pmid">16369539</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shokri</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Sanden</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Larsson</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Growth rate-dependent changes in <italic>Escherichia coli</italic> membrane structure and protein leakage</article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>2002</year>
+          <volume>58</volume>
+          <fpage>386</fpage>
+          <lpage>392</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00253-001-0889-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shokri A, Sanden AM, Larsson G (2002) Growth rate-dependent changes in Escherichia coli membrane structure and protein leakage. Appl Microbiol Biotechnol 58:386&#x2013;392 <pub-id pub-id-type="pmid">11935192</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shokri</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Sanden</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Larsson</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Cell and process design for targeting of recombinant protein into the culture medium of <italic>Escherichia coli</italic></article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>2003</year>
+          <volume>60</volume>
+          <fpage>654</fpage>
+          <lpage>664</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Shokri A, Sanden AM, Larsson G (2003) Cell and process design for targeting of recombinant protein into the culture medium of Escherichia coli. Appl Microbiol Biotechnol 60:654&#x2013;664 <pub-id pub-id-type="pmid">12664143</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vaara</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Agents that increase the permeability of the outer membrane</article-title>
+          <source>Microbiol Rev</source>
+          <year>1992</year>
+          <volume>56</volume>
+          <fpage>395</fpage>
+          <lpage>411</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Vaara M (1992) Agents that increase the permeability of the outer membrane. Microbiol Rev 56:395&#x2013;411 <pub-id pub-id-type="pmid">1406489</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Neidhardt</surname>
+              <given-names>FC</given-names>
+            </name>
+            <name>
+              <surname>Ingraham</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Schaechter</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Physiology of the bacterial cell: a molecular approach</source>
+          <year>1990</year>
+          <publisher-loc>Sunderland</publisher-loc>
+          <publisher-name>Sinauer Associates</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Neidhardt FC, Ingraham JL, Schaechter M (1990) Physiology of the bacterial cell: a molecular approach. Sinauer Associates, Sunderland </citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hoekstra</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Laan</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Leij</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Witholt</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Release of outer membrane fragments from normally growing<italic> Escherichia coli</italic></article-title>
+          <source>Biochim Biophys Acta</source>
+          <year>1976</year>
+          <volume>455</volume>
+          <fpage>889</fpage>
+          <lpage>899</lpage>
+          <pub-id pub-id-type="doi">10.1016/0005-2736(76)90058-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hoekstra D, Van Der Laan JW, De Leij L, Witholt B (1976) Release of outer membrane fragments from normally growing Escherichia coli. Biochim Biophys Acta 455:889&#x2013;899 <pub-id pub-id-type="pmid">793634</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wensink</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Witholt</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Outer-membrane vesicles released by normally growing <italic>Escherichia coli</italic> contain very little lipoprotein</article-title>
+          <source>Eur J Biochem</source>
+          <year>1981</year>
+          <volume>116</volume>
+          <fpage>331</fpage>
+          <lpage>335</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1432-1033.1981.tb05338.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wensink J, Witholt B (1981) Outer-membrane vesicles released by normally growing Escherichia coli contain very little lipoprotein. Eur J Biochem 116:331&#x2013;335 <pub-id pub-id-type="pmid">7018907</pub-id></citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <title>Abbreviations</title>
+      <def-list>
+        <def-item>
+          <term>CV</term>
+          <def>
+            <p>Column volume</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>DCW</term>
+          <def>
+            <p>Dry cell weight (g&#xA0;L<sup>&#x2212;1</sup>)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>DBP</term>
+          <def>
+            <p>Dipeptide binding protein</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>EF</term>
+          <def>
+            <p>Extracellular fraction</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>
+            <italic>F</italic>
+            <sub>glc</sub>
+          </term>
+          <def>
+            <p>Volumetric feed rate (L&#xA0;h<sup>&#x2212;1</sup>)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>HCDC</term>
+          <def>
+            <p>High cell density cultivation</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>iCF</term>
+          <def>
+            <p>Insoluble cytoplasmic fraction</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>OD</term>
+          <def>
+            <p>Optical density</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>OmpA</term>
+          <def>
+            <p>Outer membrane protein A</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>PF</term>
+          <def>
+            <p>Periplasmic fraction</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term><italic>p</italic>O<sub>2</sub></term>
+          <def>
+            <p>Dissolved oxygen</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>
+            <italic>q</italic>
+            <sub>p</sub>
+          </term>
+          <def>
+            <p>Specific productivity [U (g<sub>DCW&#xA0;</sub>h)<sup>&#x2212;1</sup>]</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>
+            <italic>Q</italic>
+            <sub>p</sub>
+          </term>
+          <def>
+            <p>Volumetric productivity [U (L&#xA0;h)<sup>&#x2212;1</sup>]</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>RQ</term>
+          <def>
+            <p>Respiration quotient</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>rTfH</term>
+          <def>
+            <p>	Recombinant <italic>Thermobifida fusca</italic> hydrolase</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>
+            <italic>S</italic>
+          </term>
+          <def>
+            <p>Glucose concentration in the feed (g L<sup>&#x2212;1</sup>)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>sCF</term>
+          <def>
+            <p>Soluble cytoplasmic fraction</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>
+            <italic>t</italic>
+            <sub>f</sub>
+          </term>
+          <def>
+            <p>Time after feed start (h)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>TfH</term>
+          <def>
+            <p><italic>Thermobifida fusca</italic> hydrolase</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>(XV)<sub>0</sub></term>
+          <def>
+            <p>Biomass (g)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>&#x3BC;<sub>set</sub></term>
+          <def>
+            <p>Specific growth rate (h<sup>&#x2212;1</sup>)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>
+            <italic>Y</italic>
+            <sub>X/S</sub>
+          </term>
+          <def>
+            <p>Biomass yield coefficient (g&#xA0;g<sup>&#x2212;1</sup>)</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+  </back>
+</article>
+</pmc-articleset>

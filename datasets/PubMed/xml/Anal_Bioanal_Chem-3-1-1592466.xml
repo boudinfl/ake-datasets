@@ -1,0 +1,910 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Anal Bioanal Chem</journal-id>
+      <journal-title>Analytical and Bioanalytical Chemistry</journal-title>
+      <issn pub-type="ppub">1618-2642</issn>
+      <issn pub-type="epub">1618-2650</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16642359</article-id>
+      <article-id pub-id-type="pmc">1592466</article-id>
+      <article-id pub-id-type="publisher-id">331</article-id>
+      <article-id pub-id-type="doi">10.1007/s00216-006-0331-7</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Capillary-assembled microchip as an on-line deproteinization device for capillary electrophoresis</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Hisamoto</surname>
+            <given-names>Hideaki</given-names>
+          </name>
+          <address>
+            <phone>+81-791-580171</phone>
+            <fax>+81-791-580493</fax>
+            <email>hisamoto@sci.u-hyogo.ac.jp</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Takeda</surname>
+            <given-names>Seigi</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Terabe</surname>
+            <given-names>Shigeru</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Graduate School of Material Science, University of Hyogo, 3-2-1 Kouto, Kamigori-cho, Ako-gun, Hyogo, 678-1297 Japan </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>2</day>
+        <month>9</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>386</volume>
+      <issue>3</issue>
+      <fpage>733</fpage>
+      <lpage>738</lpage>
+      <history>
+        <date date-type="received">
+          <day>23</day>
+          <month>11</month>
+          <year>2005</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>20</day>
+          <month>1</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>24</day>
+          <month>1</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>A capillary-assembled microchip (CAs-CHIP), prepared by simply embedding square capillaries in a lattice polydimethylsiloxane (PDMS) channel plate with the same channel dimensions as the outer dimensions of the square capillaries, has been used as a diffusion-based pretreatment attachment in capillary electrophoresis (CE). Because the CAs-CHIPs employ square-section channels, diffusion-based separation of small molecules from sample solutions containing proteins is possible by using the multilayer flow formed in the square section channel. When a solution containing high-molecular-weight and low-molecular-weight species makes contact with a buffer solution, the low-molecular-weight species, which have larger diffusion coefficients than the high-molecular-weight species, can be collected in a buffer-solution phase. The collected solution containing the low-molecular-weight species is introduced into the separation capillary to be analyzed by CE. This type of system can be used for CE analysis in which pretreatment is required to remove proteins. In this work a fluorescently labeled protein and rhodamine-based molecules were chosen as model species and a feasibility study was performed.</p>
+        <p>
+          <graphic position="anchor" xlink:href="216_2006_331_Figb_HTML" id="MO2"/>
+        </p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Capillary-assembled microchip</kwd>
+        <kwd>Capillary electrophoresis</kwd>
+        <kwd>Deproteinization</kwd>
+        <kwd>Polydimethylsiloxane</kwd>
+        <kwd>Square capillary</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>On-line combination of sample pretreatment and electrophoretic separations, for example capillary electrophoresis (CE) and microchip-based capillary electrophoresis (MCE), has been focused on by many researchers, because of the possibilities of integrating complicated pretreatment procedures. During the past decade a variety of approaches have been used to combine pretreatment with CE separations. The &#x201C;single capillary approach&#x201D;, involving position-selective immobilization of functional molecules or polymers inside a capillary, has been used to demonstrate preconcentration or enzymatic reaction before CE separation [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR2">2</xref>], and in-capillary preconcentration during the electrophoretic process [<xref ref-type="bibr" rid="CR3">3</xref>&#x2013;<xref ref-type="bibr" rid="CR8">8</xref>] has provided a simple system enabling direct application of the capillary in commercial equipment. The &#x201C;microchip-based approach&#x201D;, recently reviewed by many authors [<xref ref-type="bibr" rid="CR9">9</xref>&#x2013;<xref ref-type="bibr" rid="CR11">11</xref>], has enabled integration of a variety of complicated pretreatment processes with the separation channel on a single microchip. These approaches have different advantageous features for each purpose. From the standpoint of total system design, however, a &#x201C;combination approach&#x201D; involving the use of a flow-system or a functionalized capillary together with a separation capillary provides a more flexible system designed for particular analyte. Ye et al. reported connection of a trypsin-immobilized capillary with a separation capillary, by means of a home-built chip prepared by lamination of Lexan and Parafilm, and demonstrated on-line digestion and CE separation [<xref ref-type="bibr" rid="CR12">12</xref>]. Kuban et al. and Fang et al. reported &#x201C;flow-injection capillary electrophoresis (FI-CE)&#x201D; comprising a flow-injection system and a separation capillary [<xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR14">14</xref>]. This system enabled various pretreatment processes to be combined with CE separation and has since been expanded to the use of MCE to achieve rapid separations. These systems have been reviewed by Chen et al. [<xref ref-type="bibr" rid="CR15">15</xref>]. Vizioli et al. prepared a monolithic polymer capillary, for selection of histidine-containing peptides, connected it to a CE separation capillary [<xref ref-type="bibr" rid="CR16">16</xref>]. Fan et al. recently reported combination of an FI-CE system with in-capillary preconcentration using a dynamic pH junction [<xref ref-type="bibr" rid="CR17">17</xref>].</p>
+      <p>In all the examples mentioned above, combination of a flow-reaction system or chemically functionalized conduits with a separation capillary played an important role, and would provide an attractive integrated device enabling flexible design for combining pretreatment and CE separation. In contrast, we have recently reported a new concept for fabricating a chemically functionalized microchip, called a &#x201C;capillary-assembled microchip (CAs-CHIP)&#x201D; [<xref ref-type="bibr" rid="CR18">18</xref>]. The microchip is fabricated simply by embedding chemically functionalized square capillaries in a lattice PDMS channel chip which has the same channel dimensions as the outer dimensions of the square capillaries. By using this technique, we have constructed a multi-ion sensing system based on combination of several different ion-sensing capillaries and a valving and sensing system based on thermo-responsive polymer-immobilized capillaries and an enzyme-immobilized capillary [<xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR20">20</xref>]. Because the CAs-CHIP enabled easy connection of different functional capillaries, we focused on this device as an on-line sample-pretreatment attachment for CE separation capillaries in a manner similar to the previously reported FI-CE system. In this instance the CAs-CHIP, prepared from a PDMS chip, served both as the device for pretreatment of the sample solution, by use of a variety of chemical processes, and the injection device. Interfacing the flow system and the separation capillary using a PDMS chip has already been reported by Bergstrom et al. [<xref ref-type="bibr" rid="CR21">21</xref>, <xref ref-type="bibr" rid="CR22">22</xref>]. Because the CAs-CHIP employs a square-shaped channel structure, however, the characteristic multilayer flow formed in the square section channel can also be used as a useful pretreatment process which can be integrated. The CAs-CHIP is, therefore, expected to enable the integration of universal pretreatment processes by using different kinds of chemically-functionalized capillary and multilayer flow-based chemical processes; this is usually difficult to achieve using other reported techniques.</p>
+      <p>In this paper, we report preliminary results concerning the preparation of a CAs-CHIP as a deproteinization attachment for CE separation. Deproteinization was achieved by use of the multilayer flow obtained in the PDMS microchannel, and the small molecules separated from the mixed protein sample were injected into the separation capillary connected directly to the CAs-CHIP, to be analyzed by CE. In this work a fluorescently labeled protein and rhodamine-based molecules were chosen as model species, and feasibility study was performed.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Experimental</title>
+      <sec id="Sec3">
+        <title>Square capillaries and reagents</title>
+        <p>Square capillaries of 300&#xA0;&#x3BC;m outer width (flat-to-flat) and 50&#xA0;&#x3BC;m inner width were purchased from Polymicro (Phoenix, AZ, USA). Before use of these capillaries the polyimide coating was removed by heating. Sylgard 184 silicone elastomer was purchased from Dow Corning (Midland, MI, USA). Reagents of the highest grade commercially available were used to prepare the aqueous solutions. Rhodamine B (RB), sulforhodamine (SR), and bovine serum albumin fluorescein conjugate (F-BSA) were purchased from Sigma (St Louis, MO, USA). All reagents were used without further purification. Distilled and deionized water had resistivity greater than 1.7 &#xD7; 10<sup>7</sup> &#x3A9; cm<sup>&#x2212;1</sup> at 25&#xB0;C.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Fabrication of CAs-CHIP-CE system by embedding square capillaries on a PDMS plate and bonding of a PDMS cover</title>
+        <p>Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> shows the design of a CAs-CHIP-CE system. The PDMS plate for pretreatment was connected to the inlet of the separation capillary (left side of Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>) and another PDMS plate was used to fix the detection position (right side of Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Square capillaries were cut into appropriate lengths and embedded in the lattice microchannel network fabricated on the PDMS plate. The general procedure for fabrication of a lattice microchannel on a PDMS plate has been reported elsewhere [<xref ref-type="bibr" rid="CR18">18</xref>]. Briefly, a glass mold with a lattice structure was prepared by cutting a 300-&#x3BC;m depth with 1&#xA0;mm pitch, using a dicing saw with an edge 300&#xA0;&#x3BC;m wide. The conventional PDMS molding process using the glass mold was then performed to prepare a PDMS mold. The second molding process using this PDMS mold gave the lattice microchannel network on the second PDMS plate. Plugged capillaries were prepared by introduction of PDMS prepolymer into the square capillaries (inner width 50&#xA0;&#x3BC;m) and cured at 70&#xB0;C for more than 5&#xA0;h. These plugged capillaries were also cut and used to prepare the designed channel network. After embedding all the capillaries, a PDMS cover was bonded on top. For this, a spin-coated PDMS prepolymer on an acrylic plate (ca. 2&#xA0;mm thick) was used as the cover plate, to fill the voids formed between the cover plate and the capillary-embedded PDMS plate [<xref ref-type="bibr" rid="CR18">18</xref>]. PDMS prepolymer was spin-coated on the acrylic plate at 7000&#xA0;rpm, then attached to the capillary-embedded PDMS plate before curing. Bonding was carried out by curing at 60&#xB0;C for 12&#xA0;h. Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> shows the final CAs-CHIP-CE system with a 12-cm separation capillary. Depending on the resolution required, 12-cm (effective length 10&#xA0;cm) and 48-cm (effective length 33&#xA0;cm) separation capillaries were used. To apply the high voltage, two plastic vials, as solution reservoirs, were connected at the outlets of the PDMS channel and the separation capillary.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>General concept for fabricating a diffusion-based pretreatment&#x2013;CE separation system using a capillary-assembled microchip (CAs-CHIP). The plugged capillaries indicated as gray parts are actually square capillaries with 50&#xA0;&#x3BC;m square-shaped conduits blocked with PDMS. In this figure, for simplicity, these conduits are not shown</p></caption><graphic position="anchor" xlink:href="216_2006_331_Fig1_HTML" id="MO3"/></fig><fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Photograph of a fabricated CAs-CHIP-CE device</p></caption><graphic position="anchor" xlink:href="216_2006_331_Fig2_HTML" id="MO4"/></fig></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Operating procedures</title>
+        <p>Channels (or capillaries) on the CAs-CHIP-CE system were washed sequentially with methanol, 0.1&#xA0;mol&#xA0;L<sup>&#x2212;1</sup> NaOH, 0.1&#xA0;mol&#xA0;L<sup>&#x2212;1</sup> HCl, and water, then rinsed and preconditioned with 50&#xA0;mmol&#xA0;L<sup>&#x2212;1</sup> phosphate-buffer solution (PBS) at pH 8.1. Sample solution (RB, SR: 0.5&#xA0;mmol&#xA0;L<sup>&#x2212;1</sup>, F-BSA: 4&#xA0;mg&#xA0;mL<sup>&#x2212;1</sup>) and two buffer solutions for diffusion-based separation and sample injection were introduced by use of syringe pumps with appropriate flow rates (see figure captions). Sample injection was achieved by on&#x2013;off switching of the syringe pump delivering buffer 2, shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>. Immediately after injection, high voltage was applied manually by use of a standard high-voltage power supply (Matsusada Precision, Shiga, Japan).</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Capturing fluorescence images and laser-induced fluorescence measurement</title>
+        <p>Fluorescence images of the microchannel were obtained by using an optical/fluorescence inverted microscope (Eclipse TS100-F, Nikon, Tokyo, Japan). Photographs were captured using a 3CCD color camera (HV-D28S, Hitachi Kokusai Electric, Tokyo, Japan) installed at the front port of the microscope. Fluorescent images were collected using a mercury lamp as a light source and a filter block (G-2A and FITC, Nikon, Tokyo, Japan).</p>
+        <p>CE with laser-induced fluorescence (LIF) detection was performed on a home-built system based on an inverted fluorescence microscope (IX70, Olympus, Tokyo, Japan). Light at 488&#xA0;nm from an argon ion laser (Newport Spectra Physics Laser Division, Mountain View, CA, USA) was introduced into the microscope. The laser beam was filtered through a 460&#x2013;490&#xA0;nm band-pass filter, reflected by a 510&#xA0;nm dichroic mirror, then focused on the detection point by means of a 20&#xD7; objective lens. Fluorescence was collected by use of the same objective lens, filtered through a 515&#xA0;nm high-pass filter, and finally detected by use of a CCD camera (Model PMA-11, Hamamatsu Photonics, Shizuoka, Japan). To obtain electropherograms fluorescence at 600&#xA0;nm was used throughout.</p>
+      </sec>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Results and discussion</title>
+      <sec id="Sec8">
+        <title>Optimization of diffusion-based deproteinization</title>
+        <p>Diffusion-based separation of chemical species by use of multilayer flow was first reported by Brody et al. [<xref ref-type="bibr" rid="CR23">23</xref>]. They separated small molecules from a particle-containing sample, or proteins from a biological cell-containing sample [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR24">24</xref>]. Here we used this technique to separate small molecules from a mixed protein sample. When the sample solution containing small molecules and proteins made contact with the buffer-solution flow, the small molecules, which have larger diffusion coefficients than the proteins, diffused into the buffer solution. In this study, RB and SR were used as models for small molecules and F-BSA as that for a large molecule.</p>
+        <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows the fluorescence images at the confluence point of two flows and the injection point. Fluorescence images for F-BSA and rhodamine molecules were captured using different optical filters. In this case, buffer 2 was not flowing. As can be seen, when the total flow rate of sample and buffer was very high, neither F-BSA nor rhodamine molecules could reach the separation capillary (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a). In contrast, selection of an appropriate total flow rate resulted in selective diffusion of small rhodamine molecules and negligibly small protein diffusion (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b). Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b also shows the fluorescence intensity profiles obtained by analysis of the fluorescence images for the rhodamine derivatives. According to this, the fluorescence intensity of the rhodamine-based molecules at the injection point was approximately 40% of the initial fluorescence intensity at the confluence point (see fluorescence intensity at position <italic>y</italic> at the injection point shown in the fluorescence intensity profile). Because complete diffusion gives 50% signal intensity for rhodamine-based molecules, these results suggest that diffusion of the rhodamine-based molecules was almost complete. In our experiments, surface adsorption of the solutes by the channel surface occurred, because of the hydrophobicity of the PDMS surface. Because these samples were continuously flowing for deproteinization, however, surface adsorption did not seriously affect the deproteinization procedure when sample injection was performed after steady flow was achieved.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Fluorescence images obtained at the confluence and injection points at different flow rates. (<bold>a</bold>) Total flow rate 10&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup> (sample 5&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>, buffer 1 5&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>). (<bold>b</bold>) Total flow rate 1&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup> (sample 0.5&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>, buffer 1 0.5&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>). In (<bold>b</bold>), fluorescence intensity profiles obtained by analysis of the fluorescence images obtained for rhodamine derivatives (SR, RB) are also shown. F-BSA and rhodamine-based molecules were detected by use of different optical filters</p></caption><graphic position="anchor" xlink:href="216_2006_331_Fig3_HTML" id="MO5"/></fig></p>
+        <p>In this study the molecular weights of RB and SR are 443 and 581, respectively, and that for F-BSA is approximately 73,000 [<xref ref-type="bibr" rid="CR25">25</xref>]. According to the literature, the diffusion coefficient for a small molecule with a molecular weight of 342 (sucrose) is 5.2&#xD7;10<sup>&#x2212;6</sup> (cm<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup>) and that for a large molecule with a molecular weight of 69,000 (HSA) is 6.1&#xD7;10<sup>&#x2212;7</sup> (cm<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup>) [<xref ref-type="bibr" rid="CR26">26</xref>, <xref ref-type="bibr" rid="CR27">27</xref>]. Because these molecular weights are very close to those of the molecules used in this study, an approximately tenfold difference between the diffusion coefficients of the small and large molecules enabled successful separation of small molecules from mixed protein sample solution. Although the difference between diffusion coefficients is a primary principle of diffusion-based separation, it should be noted that the optimum conditions may change, depending on the concentration ratio of the protein and small molecules. Therefore, careful optimization experiments may be required when the concentrations of the small molecules are very low.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Sample injection and electrophoretic separation</title>
+        <p>Sample injection was performed manually by on&#x2013;off switching of the syringe pump delivering buffer 2. In the diffusion-based separation and the CE separation mode, three-layer flow composed of sample solution, collection buffer (buffer 1), and buffer 2 occurs in the 300&#xA0;&#x3BC;m square-PDMS channel along the buffer 2 flow channel, as illustrated in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>. Because buffer 2 prevents introduction of sample solution into the separation capillary, on-off switching of the syringe pump (buffer 2) enables sample injection similar to the &#x201C;gated injection&#x201D; reported by Jacobson et al. [<xref ref-type="bibr" rid="CR28">28</xref>]. Usually, stopping the syringe pump does not immediately stop flow of buffer 2. In this work, therefore, it took several seconds to start injection. This causes diffusion of molecules at the front and rear ends of the sample plug. When sequential sample injections with injection times of 15&#xA0;s were performed, however, fairly good reproducibility of 6.5% RSD (peak height; <italic>n</italic>=5) was obtained. Although this method of injection needs to be improved, good reproducibility led us to use this simple method for further investigation.</p>
+        <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> shows detection signals obtained at 10&#xA0;cm downstream of the injection point with and without voltage application. When the sample plug is introduced without voltage application, ca. 160&#xA0;s, corresponding to a linear flow rate of 0.63&#xA0;mm&#xA0;s<sup>&#x2212;1</sup>, was required for detection. The approximate linear flow rate of the pressure-driven flow inside the separation capillary can be estimated from the total flow rate of sample and buffer flow (in total 2&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>), and the ratio of the cross sectional areas of the PDMS channel (300&#xA0;&#x3BC;m square) and the separation capillary (50&#xA0;&#x3BC;m square). Under our experimental conditions the calculated linear flow rate was ca. 0.36&#xA0;mm&#xA0;s<sup>&#x2212;1</sup>. Although the order of the calculated value was the same as the experimental value, the difference may be because of the slight difference between the back pressures of the two waste reservoirs. When the high voltage of 5&#xA0;kV (417&#xA0;V&#xA0;cm<sup>&#x2212;1</sup>) was applied just after injection, the time required for detection was reduced to ca. 70&#xA0;s and slight separation was observed. Because the net charge of SR was &#x2212;1 and that of RB was 0, migration time of SR was slightly longer than that of RB. These results indicated that induction of electroosmotic flow and separation by electrophoresis, by voltage application, were confirmed.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Detection of rhodamine-based molecules (RB and SR) downstream of the separation capillary with and without application of high voltage. Flow rates: sample, 1&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>; buffer 2, 1&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>. Injection time: 20&#xA0;s</p></caption><graphic position="anchor" xlink:href="216_2006_331_Fig4_HTML" id="MO6"/></fig></p>
+      </sec>
+      <sec id="Sec10">
+        <title>Deproteinization and electrophoretic separation</title>
+        <p>On the basis of these experiments, deproteinization and electrophoretic separation were achieved. Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> shows the electropherograms obtained at the downstream of the separation capillary with and without diffusion-based deproteinization. When the sample solution containing RB, SR, and F-BSA was introduced into the separation capillary without deproteinization, a broad signal arising from F-BSA was observed after the appearance of the RB and SR peaks (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a). This broad signal may be because of the protein adsorption frequently observed in CE, or the multiple labeling of the F-BSA used in this work [<xref ref-type="bibr" rid="CR29">29</xref>]. Commercially available F-BSA contains 7&#x2013;12 labeling molecules (average) per BSA molecule. Therefore, the electrophoretic mobilities of BSA species with different numbers of labels may cause the broad signals shown in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a. In contrast, the electropherogram obtained after deproteinization by use of the multilayer flow had a completely flat baseline after the appearance of two peaks of the rhodamine molecules (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b). Thus our system enabled successful diffusion-based deproteinization and CE separation. Although interference from the protein was successfully removed, resolution of RB and SR is still not good in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b (resolution: <italic>R</italic>=1.4). When the longer, 48&#xA0;cm, separation capillary (effective length: 33&#xA0;cm) was connected to the CAs-CHIP instead of 12&#xA0;cm capillary, however, baseline separation of these species after deproteinization was successfully achieved (resolution: <italic>R</italic>=5.7). In addition, relative standard deviations of peak height and migration time for five sequential measurements were 11.4 and 11.5% for RB and SR, and 1.5 and 1.4% for RB and SR, respectively, indicating that reliable analysis with deproteinization pretreatment was successfully achieved by use of a longer separation capillary.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Electropherograms obtained downstream of the separation capillary with and without diffusion-based deproteinization. Flow rates: sample, 0.5&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>, buffer 1 0.5&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>, buffer 2 1&#xA0;&#x3BC;L&#xA0;min<sup>&#x2212;1</sup>. Injection time 15&#xA0;s. Applied voltage 5&#xA0;kV (ca. 417&#xA0;V&#xA0;cm<sup>&#x2212;1</sup>)</p></caption><graphic position="anchor" xlink:href="216_2006_331_Fig5_HTML" id="MO7"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec11" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>We have demonstrated deproteinization and CE separation on a single device using CAs-CHIP technology. Diffusion-based deproteinization in a CAs-CHIP was successfully achieved by choosing an appropriate flow rate, and subsequent CE separation of small molecules was achieved by use of a separation capillary connected directly to the CAs-CHIP.</p>
+      <p>Because diffusion-based separation is, in general, based on dilution of the sample solution, preconcentration before CE separation will be required in the next step. Because the CAs-CHIP is prepared by simply embedding square capillaries, however, further integration of the preconcentration process using chemically-functionalized capillaries, or the on-line preconcentration techniques reported to date, can be also used. These applications are currently under investigation.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgement</title>
+      <p>This work was partially supported by Grants for Scientific Research from the Ministry of Education, Culture, Sports, Science and Technology, Japan.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2005</year>
+          <volume>26</volume>
+          <fpage>2172</fpage>
+          <lpage>2178</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200410377</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang L, Zhang L, Zhang W, Zhang Y (2005) Electrophoresis 26:2172&#x2013;2178 <pub-id pub-id-type="pmid">15852352</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sakai-Kato</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Kato</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Toyo&#x2019;oka</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2002</year>
+          <volume>74</volume>
+          <fpage>2943</fpage>
+          <lpage>2949</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac0200421</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sakai-Kato K, Kato M, Toyo&#x2019;oka T (2002) Anal Chem 74:2943&#x2013;2949 <pub-id pub-id-type="pmid">12141651</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chien</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Burgi</surname>
+              <given-names>DS</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>1991</year>
+          <volume>559</volume>
+          <fpage>141</fpage>
+          <lpage>152</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9673(91)80066-P</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chien RL, Burgi DS (1991) J Chromatogr A 559:141&#x2013;152 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chien</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Burgi</surname>
+              <given-names>DS</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>1992</year>
+          <volume>64</volume>
+          <fpage>489A</fpage>
+          <lpage>496A</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac00033a015</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chien RL, Burgi DS (1992) Anal Chem 64:489A&#x2013;496A </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Quirino</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Terabe</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>1998</year>
+          <volume>282</volume>
+          <fpage>465</fpage>
+          <lpage>468</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.282.5388.465</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Quirino JP, Terabe S (1998) Science 282:465&#x2013;468 <pub-id pub-id-type="pmid">9774271</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Britz-McKibbin</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>DDY</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2000</year>
+          <volume>72</volume>
+          <fpage>1242</fpage>
+          <lpage>1252</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac990898e</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Britz-McKibbin P, Chen DDY (2000) Anal Chem 72:1242&#x2013;1252 <pub-id pub-id-type="pmid">10740866</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Isoo</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Terabe</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2003</year>
+          <volume>75</volume>
+          <fpage>6789</fpage>
+          <lpage>6798</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac034677r</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Isoo K, Terabe S (2003) Anal Chem 75:6789&#x2013;6798 <pub-id pub-id-type="pmid">14670037</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Monton</surname>
+              <given-names>MRN</given-names>
+            </name>
+            <name>
+              <surname>Terabe</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2004</year>
+          <volume>1032</volume>
+          <fpage>203</fpage>
+          <lpage>211</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.chroma.2003.10.038</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Monton MRN, Terabe S (2004) J Chromatogr A 1032:203&#x2013;211 <pub-id pub-id-type="pmid">15065797</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lichtenberg</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Rooij</surname>
+              <given-names>NF</given-names>
+            </name>
+            <name>
+              <surname>Verpoorte</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>Talanta</source>
+          <year>2002</year>
+          <volume>56</volume>
+          <fpage>233</fpage>
+          <lpage>266</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0039-9140(01)00593-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lichtenberg J, de Rooij NF, Verpoorte E (2002) Talanta 56:233&#x2013;266 and references cited therein <pub-id pub-id-type="pmid">18968499</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vilkner</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Janasek</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Manz</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2004</year>
+          <volume>76</volume>
+          <fpage>3373</fpage>
+          <lpage>3386</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac040063q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vilkner T, Janasek D, Manz A (2004) Anal Chem 76:3373&#x2013;3386 and references cited therein <pub-id pub-id-type="pmid">15193114</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roper</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Easley</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Landers</surname>
+              <given-names>JP</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2005</year>
+          <volume>77</volume>
+          <fpage>3887</fpage>
+          <lpage>3894</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac050756m</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Roper MG, Easley CJ, Landers JP (2005) Anal Chem 77:3887&#x2013;3894 and references cited therein <pub-id pub-id-type="pmid">15952761</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ye</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Schoenherr</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>Dovichi</surname>
+              <given-names>NJ</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>1319</fpage>
+          <lpage>1326</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200305841</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ye M, Hu S, Schoenherr RM, Dovichi NJ (2004) Electrophoresis 25:1319&#x2013;1326 <pub-id pub-id-type="pmid">15174054</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kuban</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Engstr&#xF6;m</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Olsson</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Thors&#xE9;n</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Tryzell</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Karlberg</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chim Acta</source>
+          <year>1997</year>
+          <volume>337</volume>
+          <fpage>117</fpage>
+          <lpage>124</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0003-2670(96)00339-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kuban P, Engstr&#xF6;m A, Olsson JC, Thors&#xE9;n G, Tryzell R, Karlberg B (1997) Anal Chim Acta 337: 117&#x2013;124 </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fang</surname>
+              <given-names>ZL</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>ZS</given-names>
+            </name>
+            <name>
+              <surname>Shen</surname>
+              <given-names>O</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chim Acta</source>
+          <year>1997</year>
+          <volume>346</volume>
+          <fpage>135</fpage>
+          <lpage>143</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0003-2670(97)00082-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fang ZL, Liu ZS, Shen O (1997) Anal Chim Acta 346:135&#x2013;143 </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Fan</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>3962</fpage>
+          <lpage>3969</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200406134</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chen X, Fan L, Hu Z (2004) Electrophoresis 25:3962&#x2013;3969 <pub-id pub-id-type="pmid">15597421</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vizioli</surname>
+              <given-names>NM</given-names>
+            </name>
+            <name>
+              <surname>Rusell</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Carbajal</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Carducci</surname>
+              <given-names>CN</given-names>
+            </name>
+            <name>
+              <surname>Grasselli</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2005</year>
+          <volume>26</volume>
+          <fpage>2942</fpage>
+          <lpage>2948</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200410416</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vizioli NM, Rusell ML, Carbajal ML, Carducci CN, Grasselli M (2005) Electrophoresis 26:2942&#x2013;2948 <pub-id pub-id-type="pmid">16007696</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fan</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2005</year>
+          <volume>1062</volume>
+          <fpage>133</fpage>
+          <lpage>137</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.chroma.2004.11.035</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fan L, Liu L, Chen H, Chen X, Hu Z (2005) J Chromatogr A 1062:133&#x2013;137 <pub-id pub-id-type="pmid">15679151</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hisamoto</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Nakashima</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Kitamura</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Yasuoka</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Morishima</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Kikutani</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Kitamori</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Terabe</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2004</year>
+          <volume>76</volume>
+          <fpage>3222</fpage>
+          <lpage>3228</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac035385t</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hisamoto H, Nakashima Y, Kitamura C, Funano Si, Yasuoka M, Morishima K, Kikutani Y, Kitamori T, Terabe S (2004) Anal Chem 76:3222&#x2013;3228 <pub-id pub-id-type="pmid">15167805</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hisamoto</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Yasuoka</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Terabe</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chim Acta</source>
+          <year>2006</year>
+          <volume>556</volume>
+          <fpage>164</fpage>
+          <lpage>170</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.aca.2005.05.028</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hisamoto H, Yasuoka M, Terabe S (2006) Anal Chim Acta 556:164&#x2013;170 <pub-id pub-id-type="pmid">17723344</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hisamoto</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Terabe</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2005</year>
+          <volume>77</volume>
+          <fpage>2266</fpage>
+          <lpage>2271</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac0484528</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hisamoto H, Funano Si, Terabe S (2005) Anal Chem 77:2266&#x2013;2271 <pub-id pub-id-type="pmid">15801763</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bergstrom</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Samskog</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Markides</surname>
+              <given-names>KE</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2003</year>
+          <volume>75</volume>
+          <fpage>5461</fpage>
+          <lpage>5467</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac030117g</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bergstrom SK, Samskog J, Markides KE (2003) Anal Chem 75:5461&#x2013;5467 <pub-id pub-id-type="pmid">14710825</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Samskog</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Bergstrom</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Jonsson</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Klett</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Wetterhall</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Markides</surname>
+              <given-names>KE</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2003</year>
+          <volume>24</volume>
+          <fpage>1723</fpage>
+          <lpage>1729</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200305362</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Samskog J, Bergstrom SK, Jonsson M, Klett O, Wetterhall M, Markides KE (2003) Electrophoresis 24:1723&#x2013;1729 <pub-id pub-id-type="pmid">12783448</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brody</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Yager</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Sens Actuators A</source>
+          <year>1997</year>
+          <volume>58</volume>
+          <fpage>13</fpage>
+          <lpage>18</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0924-4247(97)80219-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Brody JP, Yager P (1997) Sens Actuators A 58: 13&#x2013;18 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schilling</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Kamholz</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Yager</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2002</year>
+          <volume>74</volume>
+          <fpage>1798</fpage>
+          <lpage>1804</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac015640e</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schilling EA, Kamholz AE, Yager P (2002) Anal Chem 74:1798&#x2013;1804 <pub-id pub-id-type="pmid">11985310</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="other">The molecular weight of F-BSA was calculated for ten molecules of FITC (FW 389.4) and 1 molecule of BSA (FW ca.69,000) according to the catalog indicating 7&#x2013;12 molecules/molecule BSA</citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="other">Lide DR (ed) (2001&#x2013;2002) Handbook of Chemistry and Physics, 82nd ed. CRC Press, Cleveland</citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="other">Sober HA (ed) (1970) Handbook of Biochemistry 2nd ed. CRC Press, Cleveland</citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jacobson</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Koutny</surname>
+              <given-names>LB</given-names>
+            </name>
+            <name>
+              <surname>Hergenr&#xF6;der</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Moore</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Ramsey</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>1994</year>
+          <volume>66</volume>
+          <fpage>3472</fpage>
+          <lpage>3476</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac00092a027</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jacobson SC, Koutny LB, Hergenr&#xF6;der R, Moore AW, Ramsey JM (1994) Anal Chem 66:3472&#x2013;3476 </citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jing</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Kaneta</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Imasaka</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2002</year>
+          <volume>959</volume>
+          <fpage>281</fpage>
+          <lpage>287</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9673(02)00357-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jing P, Kaneta T, Imasaka T (2002) J Chromatogr A 959: 281&#x2013;287 <pub-id pub-id-type="pmid">12141554</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,1401 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17051428</article-id>
+      <article-id pub-id-type="pmc">1705526</article-id>
+      <article-id pub-id-type="publisher-id">9188</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-006-9188-3</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>The Effects of Time Varying Curvature on Species Transport in Coronary Arteries</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Kolandavel</surname>
+            <given-names>Maheshwaran K.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Fruend</surname>
+            <given-names>Ernst-Torben</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Ringgaard</surname>
+            <given-names>Steffen</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Walker</surname>
+            <given-names>Peter G.</given-names>
+          </name>
+          <address>
+            <email>P.G.Walker@leeds.ac.uk</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>School of Mechanical Engineering, University of Leeds, Leeds, LS2 9JT UK </aff>
+        <aff id="Aff2"><label>2</label>Institute of Clinical Medicine and MR-Research Centre, Skejby Hospital, Aarhus N, Denmark 8200 </aff>
+        <aff id="Aff3"><label>3</label>Department of Biomedical Engineering &#x2013; Diagnostic Imaging Division, Skejby Hospital, Aarhus N, Denmark 8200
+ </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>19</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>34</volume>
+      <issue>12</issue>
+      <fpage>1820</fpage>
+      <lpage>1832</lpage>
+      <history>
+        <date date-type="received">
+          <day>26</day>
+          <month>9</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>23</day>
+          <month>8</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Alterations in mass transport patterns of low-density lipoproteins (LDL) and oxygen are known to cause atherosclerosis in larger arteries. We hypothesise that the species transport processes in coronary arteries may be affected by their physiological motion, a factor which has not been considered widely in mass transfer studies. Hence, we numerically simulated the mass transport of LDL and oxygen in an idealized moving coronary artery model under both steady and pulsatile flow conditions. A physiological inlet velocity and a sinusoidal curvature waveform were specified as velocity and wall motion boundary conditions. The results predicted elevation of LDL flux, impaired oxygen flux and low wall shear stress (WSS) along the inner wall of curvature, a predilection site for atherosclerosis. The wall motion induced changes in the velocity and WSS patterns were only secondary to the pulsatile flow effects. The temporal variations in flow and WSS due to the flow pulsation and wall motion did not affect temporal changes in the species wall flux. However, the wall motion did alter the time-averaged oxygen and LDL flux in the order of 26% and 12% respectively. Taken together, these results suggest that the wall motion may play an important role in coronary arterial transport processes and emphasise the need for further investigation.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Wall motion</kwd>
+        <kwd>Coronary artery motion</kwd>
+        <kwd>Mass transport</kwd>
+        <kwd>CFD</kwd>
+        <kwd>Coronary atherosclerosis</kwd>
+        <kwd>Wall shear stress</kwd>
+        <kwd>LDL transport</kwd>
+        <kwd>Oxygen transport</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The formation of an atherosclerotic plaque is dependent upon a range of factors including local variations in haemodynamics, the transport of chemical species and cells from the blood to the arterial wall and their accumulation within the arterial wall.<xref ref-type="bibr" rid="CR3">3</xref>,<xref ref-type="bibr" rid="CR21">21</xref>,<xref ref-type="bibr" rid="CR38">38</xref>The local susceptibility of coronary arteries to atherosclerosis has been putatively linked to the physiological motion arising out of their anatomical attachment to the epicardial surface of the beating heart.<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR8">8</xref>Coronary arteries exhibit highly complex wall motion patterns such as bending, stretching, twisting, vessel torsion and vessel displacement due to the cardiac and respiratory motion of the heart.<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR22">22</xref> Despite their seemingly important role, to date, only a handful of studies have looked at the effects of wall motion on atherogenesis.</p>
+      <p>Early studies investigated the axial and lateral movement of a straight tube model of the coronary arteries and showed that the wall shear stress (WSS) patterns were significantly affected by the axial movement and not so by the lateral movement.<xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR23">23</xref>Other studies examined the effects of time dependent curvature on the flow field and demonstrated that the flow patterns were affected by the wall motion due to instantaneous changes in curvature and that the WSS patterns were strongly dependent on the frequency of curvature variation.<xref ref-type="bibr" rid="CR18">18</xref>,<xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR32">32</xref>,<xref ref-type="bibr" rid="CR33">33</xref>Another study considered the cyclic flexion of coronary arteries and reported that the plaque advancement was proportional to the flexion angle.<xref ref-type="bibr" rid="CR37">37</xref></p>
+      <p>More recently, studies have concluded that the dynamic curvature effects could play an important role in the flow and WSS patterns in curved and in bifurcating arteries.<xref ref-type="bibr" rid="CR28">28</xref>,<xref ref-type="bibr" rid="CR40">40</xref>,<xref ref-type="bibr" rid="CR41">41</xref>Nevertheless, these studies reported that the temporal WSS variations produced by the wall motion was only secondary to that caused by the pulsatility of blood flow.<xref ref-type="bibr" rid="CR28">28</xref>,<xref ref-type="bibr" rid="CR41">41</xref>So far studies have only paid attention to the haemodynamic effects of wall motion. However, it has now come to light that the transport of atherogenic macromolecules such as LDL and solutes such as oxygen from the blood to the arterial wall play an important role in atherogenesis.<xref ref-type="bibr" rid="CR38">38</xref> Interestingly, with the exception of a single study, no other past study has investigated the effects of species transport to the moving walls of coronary arteries.<xref ref-type="bibr" rid="CR17">17</xref> Even in that study only the effects of diameter variation (&lt;6% of mean diameter) on oxygen transport was considered.</p>
+      <p>Hence, the aim of our work was to determine the effects of wall motion on mass transport patterns in coronary arteries with physiological flow. For our investigation, we chose a geometric model of the left anterior descending coronary artery (LAD) because of its high predilection to atherosclerosis among the major coronary arteries.<xref ref-type="bibr" rid="CR12">12</xref> Computer aided design (CAD) models of the LAD were employed in this study as opposed to realistic geometries to simplify the complexity of the problem definition, solution and analysis of results so as to gain a fundamental understanding of the haemodynamic effects of wall motion in coronary arteries. The species of interest in this study were low-density lipoprotein (LDL) and oxygen.</p>
+    </sec>
+    <sec id="Sec2" sec-type="methods">
+      <title>Methods</title>
+      <sec id="Sec3">
+        <title>Computational Model</title>
+        <p>A 3-D computational model of the LAD (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>) was constructed based on the average LAD dimensions (diameter (<italic>d</italic>)&#xA0;=&#xA0;0.36&#xA0;cm and mean radius of curvature (<italic>R</italic><sub>mean</sub>)&#xA0;=&#xA0;4&#xA0;cm),<xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR15">15</xref>,<xref ref-type="bibr" rid="CR16">16</xref>using the CFD pre-processor Gambit (v2.0.4 &#x2013; Fluent Inc., Lebanon, NH). The total length (l) of the LAD considered in this study was 4.68&#xA0;cm which was equivalent to 13 tube diameters. In order to make the simulation as simple as possible, the model was assumed to be rigid with a circular cross section of constant radius and a constant uniplanar curvature over its entire length at any instant in time. An unstructured grid composed of hexahedral mesh elements with a thin boundary layer was generated using the Cooper meshing scheme<xref ref-type="bibr" rid="CR2">2</xref> with strict adherence to mesh quality metrics.
+<fig id="Fig1"><label>Figure&#xA0;1.</label><caption><p>A schematic model of the left anterior descending coronary artery (LAD).</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig1_HTML" id="MO1"/></fig></p>
+      </sec>
+      <sec id="Sec4">
+        <title>Blood Flow Boundary Conditions</title>
+        <p>The flow boundary conditions controlling the model included no slip at the tube wall, velocity inlet at the inlet, symmetry condition at the plane of symmetry and a traction free outflow condition. The LAD inlet velocity profile was assumed to be parabolic. A pulsatile physiological LAD inlet velocity waveform (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) derived from a previous publication by Marcus et al.<xref ref-type="bibr" rid="CR22">22</xref> was applied at the inlet boundary through a user defined function. The time-averaged mean velocity (&#x3BD;), mean flow rate (<italic>q</italic><sub>o</sub>) Reynolds number (<italic>Re</italic>) and Dean number (<italic>&#x3BA;</italic>) corresponding to this flow waveform were 9.715&#xA0;cm/s, 0.99&#xA0;ml/s, 105 and 22.3. The Dean number is defined as below
+<fig id="Fig2"><label>Figure&#xA0;2.</label><caption><p>The LAD inlet flow and curvature waveform.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig2_HTML" id="MO2"/></fig></p>
+        <p>
+          <disp-formula id="Equ1">
+            <label>1</label>
+            <tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \kappa = \left( {\frac{d} {{2R}}} \right)^{1/2} Re $$\end{document}</tex-math>
+          </disp-formula>
+        </p>
+        <p>The Womersley parameter (&#x3B1;) of the flow was 2.78 and the period of a cardiac cycle (<italic>T</italic>) was 0.8&#xA0;s. Blood was considered to be an incompressible, homogeneous, Newtonian fluid with a viscosity (<italic>&#x3BC;</italic>) of 0.0035&#xA0;Pa&#xA0;s and a density (<italic>&#x3C1;</italic>) of 1050&#xA0;kg/m<sup>3</sup>. Past arterial flow dynamic studies have shown that these assumptions are reasonable enough to use in haemodynamic studies.<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR29">29</xref></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Wall Motion Boundary Conditions</title>
+        <p>The wall motion boundary condition used in this study was based on the model presented by Santamarina et al.<xref ref-type="bibr" rid="CR32">32</xref> The main components of coronary artery motion are solid body motion and deformation. The deformation parameter (<italic>&#x3B5;</italic>) was calculated as below <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \varepsilon = \frac{{\left( {R_{\max } - R_{\min } } \right)}} {{2R_{{\text{mean}}} }} $$\end{document}</tex-math></disp-formula> where <italic>R</italic> is the radius of curvature of the LAD. The present study used a deformation parameter of 0.6 which falls within the physiological range of LAD deformations.<xref ref-type="bibr" rid="CR15">15</xref> A sinusoidal function as given below was used to specify the time dependent variation of curvature of the LAD (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) <disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ R\left( t \right) = R_{{\text{mean}}} \left[ {1 + \varepsilon \cdot \cos (\omega t)} \right] $$\end{document}</tex-math></disp-formula> where &#x3C9; is the angular frequency of deformation. A user-defined function was written to apply this curvature waveform as a grid motion boundary condition. The tube inlet was fixed constant in the simulations at all times. This allowed the centre of curvature to vary sinusoidally in a cardiac cycle.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Mass Transfer Boundary Conditions</title>
+        <p>The mass transport of species in the arterial lumen is mathematically described using the three dimensional convection-diffusion equation <disp-formula id="Equ4"><label>4</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \frac{{\partial C}} {{\partial t}} + {\text{u}} \cdot \nabla C = - D\nabla ^2 C $$\end{document}</tex-math></disp-formula> where <italic>C</italic> is the concentration of species, u is the velocity vector and <italic>D</italic> is the diffusivity of species in the blood.</p>
+        <p>In this study, the transport of LDL and oxygen from the blood to the endothelium (fluid phase), and across the endothelium (transendothelial) were modelled. The fluid phase transport of both LDL and oxygen takes place via convection and diffusion. However, the transendothelial transport of LDL and oxygen are governed by different mechanisms due to their relative size and the endothelial function. The semi permeable endothelial membrane, acts as a barrier for the entry of macromolecules such as LDL into the arterial wall, but allows blood plasma and small solutes such as oxygen to pass through it.<xref ref-type="bibr" rid="CR10">10</xref> This is reflected in the permeability of LDL (<italic>K</italic>&#xA0;=&#xA0;2&#xA0;&#xD7;&#xA0;10<sup>&#x2212;8</sup>cm/s) which is five orders of magnitude smaller than that of oxygen (<italic>K</italic>&#xA0;=&#xA0;2&#xA0;&#xD7;&#xA0;10<sup>&#x2212;03</sup>cm/s).<xref ref-type="bibr" rid="CR36">36</xref> This indicates the need for modelling LDL and oxygen transport differently through appropriate mass transport boundary conditions.</p>
+        <p>LDL transport was modelled as a concentration polarisation effect, a phenomenon which has been demonstrated to occur in large and medium sized arteries.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR39">39</xref>Concentration polarisation is the accumulation and elevation of endothelial surface concentration of LDL due to plasma filtration through the semi permeable endothelium. LDL mass transport boundary conditions applied in this study were uniform inlet concentration, <italic>C</italic><sub>o</sub> (=1.2&#xA0;mg/ml of blood),<xref ref-type="bibr" rid="CR36">36</xref> a zero gradient in concentration at the outlet and mass conservation of LDL at the luminal surface of the endothelium<xref ref-type="bibr" rid="CR39">39</xref> described as <disp-formula id="Equ5"><label>5</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ V_{\text{w}} C_{\text{w}} - D\left. {\frac{{\partial C}} {{\partial n}}} \right|_{{\text{wall}}} = KC_{\text{w}} \quad {\text{at}}\;{\text{the}}\;{\text{wall}} $$\end{document}</tex-math></disp-formula> where <italic>V</italic><sub>w</sub> is the plasma filtration velocity normal to the wall (=4&#xA0;&#xD7;&#xA0;10<sup>&#x2212;6</sup>cm/s),<xref ref-type="bibr" rid="CR36">36</xref><italic>C</italic><sub>w</sub> is the endothelial surface concentration of LDL, n is the unit vector normal to the vessel wall, <italic>D</italic> is the physiological LDL diffusivity (=5&#xA0;&#xD7;&#xA0;10<sup>&#x2212;8</sup>cm<sup>2</sup>/s)<xref ref-type="bibr" rid="CR39">39</xref> and <italic>K</italic> is the overall mass transfer coefficient of LDL which was considered equivalent to the physiological endothelial permeability of LDL. Equation (<xref rid="Equ5" ref-type="">5</xref>) was rearranged as below to implement a wall reaction boundary condition in the CFD solver. <disp-formula id="Equ6"><label>6</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ - D\left. {\frac{{\partial C}} {{\partial n}}} \right|_{{\text{wall}}} = (K - V_{\text{w}} )C_{\text{w}} $$\end{document}</tex-math></disp-formula></p>
+        <p>In this study, oxygen transport was modelled by applying a passive transport law for oxygen flux at the wall.<xref ref-type="bibr" rid="CR31">31</xref> It is known from previous estimates that the diffusion velocity of oxygen is orders of magnitude greater than the filtration velocity.<xref ref-type="bibr" rid="CR1">1</xref> Hence, the flux of oxygen to the wall is essentially the diffusive flux. To satisfy flux continuity at the wall the diffusive flux of oxygen to the wall should be equal to the wall flux of oxygen which can be modelled with a constant permeability wall boundary condition.<xref ref-type="bibr" rid="CR31">31</xref> Oxygen mass transport boundary conditions employed in this study were uniform inlet oxygen mass fraction (=0.005),<xref ref-type="bibr" rid="CR20">20</xref> a zero gradient in outlet concentration and a constant permeability wall boundary condition<xref ref-type="bibr" rid="CR31">31</xref> which is given as <disp-formula id="Equ7"><label>7</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ - D\left. {\frac{{\partial C}} {{\partial n}}} \right|_{{\text{wall}}} = KC_{\text{w}} $$\end{document}</tex-math></disp-formula> where the oxygen diffusivity was 1&#xA0;&#xD7;&#xA0;10<sup>&#x2212;5</sup>cm<sup>2</sup>/s<xref ref-type="bibr" rid="CR1">1</xref>.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Numerical Method</title>
+        <p>The commercial CFD solver Fluent (v6.1.22 &#x2013; Fluent Inc., Lebanon, NH) was used to simulate species transport in the moving LAD model. Fluent uses a finite volume technique to solve the three-dimensional (3-D) unsteady equations of momentum, mass and species conservation. QUICK scheme was employed to solve the flow and species transport equations. The time discretization and pressure&#x2013;velocity coupling were achieved through second order time implicit, and PISO schemes respectively. The dynamic mesh model feature of the Fluent was used to implement the deformation of the model according to Eq. (<xref rid="Equ3" ref-type="">3</xref>). The dynamic mesh model uses an arbitrary Lagrangian&#x2013;Eulerian approach to move the mesh nodes. At each time step, the volume mesh is updated automatically by the solver based on the new co-ordinates of the boundary zones that were calculated by the user-defined function. At the beginning of each simulation, the radius of curvature of the model was at its maximum (=6.4&#xA0;cm). At <italic>t</italic>&#xA0;=&#xA0;0.2 s and 0.6 s the radius of curvature of the model was equivalent to its mean value.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Modelling Approach</title>
+        <p>To separate the effects of blood flow pulsatility and wall motion on mass transport patterns in coronary arteries so as to determine their relative importance, we undertook the following four different numerical simulations:<list list-type="bullet"><list-item><p>Case 1: Steady flow inlet (<italic>q</italic><sub>o</sub>&#xA0;=&#xA0;0.99&#xA0;ml/s) in the static geometry with the mean radius of curvature (<italic>R</italic>&#xA0;=&#xA0;4&#xA0;cm).</p></list-item><list-item><p>Case 2: Pulsatile flow inlet in the static geometry with the mean radius of curvature (<italic>R</italic>&#xA0;=&#xA0;4&#xA0;cm), to isolate the haemodynamics effects of flow pulsatility.</p></list-item><list-item><p>Case 3: Steady flow inlet (<italic>q</italic><sub>o</sub>&#xA0;=&#xA0;0.99&#xA0;ml/s) with dynamic geometry, to isolate the haemodynamics effects of wall motion.</p></list-item><list-item><p>Case 4: Pulsatile flow inlet with dynamic geometry, to study the combined effects of pulsatility and wall motion.</p></list-item></list></p>
+      </sec>
+      <sec id="Sec9">
+        <title>Model Validation</title>
+        <p>The computational method was validated by simulating Santamarina et al.&#x2019;s<xref ref-type="bibr" rid="CR32">32</xref> coronary artery motion study in a curved model of exactly similar dimensions under identical flow and wall motion conditions. The flow and wall shear stress (WSS) patterns agreed well with that of Santamarina et al&#x2019;s study and the maximum difference in the wall shear rate was less than 2%. The mesh and time step independence of the solutions were investigated by successively refining the grid and the time step size by a factor of two. Computational solutions obtained with three different mesh densities (80,310, 156,861 and 310,464 nodes) and time step sizes (0.025&#xA0;s, 0.0125&#xA0;s and 0.00625&#xA0;s) were then compared against each other (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Mesh and time step independence were considered to have been achieved when the maximum difference between the time-averaged normalised outer and inner wall flux of LDL (<italic>C</italic><sub>w</sub>/<italic>C</italic><sub>o</sub>) between the successive simulations was less than 2% at any axial location. The outer and inner walls were defined as the wall regions farthest and shortest from the centre of curvature to represent epicardial and myocardial surface of the curved coronary arteries. This study was only carried out for LDL transport in the dynamic model with pulsatile flow because this was the computationally most challenging problem (Schmidt number, <italic>&#x3BC;</italic>/<italic>&#x3C1;D</italic>&#xA0;=&#xA0;6.7&#xA0;&#xD7;&#xA0;10<sup>5</sup> &amp; Peclet number, <italic>dv</italic>/<italic>D</italic>&#xA0;=&#xA0;7&#xA0;&#xD7;&#xA0;10<sup>7</sup>) encountered in this study. Based on these criteria, a mesh containing 156,861 nodes with a time step size of 0.0125&#xA0;s was chosen as the optimum case for simulation.
+<fig id="Fig3"><label>Figure&#xA0;3.</label><caption><p>Comparison of the time-averaged normalised LDL wall flux predicted with three different meshes and time step sizes to demonstrate mesh (top panel) and time step (bottom panel) independence of the computational solutions.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig3_HTML" id="MO3"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec10" sec-type="results">
+      <title>Results</title>
+      <p>Numerical simulations of oxygen and LDL transport in a 3-D curved tube model of the LAD were carried out under physiological flow and mass transport conditions. The computational solutions concerned the prediction of flow, WSS and mass transport patterns. The results will be presented only for the first 10 diameters length as this length is more relevant to realistic coronary flow situation as discussed elsewhere.<xref ref-type="bibr" rid="CR32">32</xref></p>
+      <sec id="Sec11">
+        <title>Velocity Patterns</title>
+        <p>The temporal velocity magnitude (coloured contour plots) and secondary flow patterns (vector plots) in the static and dynamic models of the LAD are shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. The fundamental flow patterns in a curved tube flow situation with a characteristic velocity skewing towards the outer wall of bend and the formation of Dean vortices were clearly seen in all the models (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). Although both the pulsatility (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b) and wall motion (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>c) produced time dependent velocity skewing, the flow pulsation had a greater effect on velocity skewing than did wall motion. The secondary flow was also affected by both the pulsatility and wall motion (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>e and f). However, the wall motion induced time dependent curvature (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>f) seemed to have a major influence on the secondary flow patterns. Adding the dynamic motion to the pulsatile flow reduced skewing over the entire cycle (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>d). Moreover, this combination led to a reduction in secondary flow when the time dependent vessel curvature was small and vice versa during the peak curvature phases (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>g). In general, both the velocity skewing and secondary flow increased with increase in curvature and the flow rate (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>).
+<fig id="Fig4"><label>Figure&#xA0;4.</label><caption><p>Temporal axial and secondary flow patterns in a plane located at 9&#xA0;diameters from the inlet in the (a) steady flow static model (<italic>R</italic>&#xA0;=&#xA0;4&#xA0;cm, <italic>q</italic><sub>o</sub>&#xA0;=&#xA0;0.99&#xA0;ml/s), (b and e) pulsatile flow static model (<italic>R</italic>&#xA0;=&#xA0;4&#xA0;cm), (c and f) steady flow dynamic model (<italic>q</italic><sub>o</sub>&#xA0;=&#xA0;0.99&#xA0;ml/s), and (d and g) pulsatile flow dynamic model. The outer and inner walls are located at the top right corner and top left corner of individual figures respectively.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig4_HTML" id="MO4"/></fig></p>
+      </sec>
+      <sec id="Sec12">
+        <title>WSS Patterns</title>
+        <p>The effects of pulsatility and wall motion on the instantaneous WSS distribution in a cardiac cycle at two axial locations (5D &amp; 9D) are plotted in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>. The effect of motion in steady flow at the outer wall was to increase the WSS when the curvature was maximum. Along the inner wall the opposite effects were seen with a drop in the WSS at the maximum curvature. The wall motion also produced asymmetric WSS distribution over time in the steady flow dynamic model despite the imposed symmetric wall motion curve.
+<fig id="Fig5"><label>Figure&#xA0;5.</label><caption><p>Temporal axial inner and outer WSS distribution at 5&#xA0;diameters (top panel) and 9&#xA0;diameters (bottom panel) from the LAD inlet.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig5_HTML" id="MO5"/></fig></p>
+        <p>The pulsatility of blood flow caused time varying WSS distribution along the outer and inner walls. The WSS increased with the pulsatile flow rate and overall this increase was greater along the outer wall. Hence peak WSS was noted along the outer wall at maximum flow rate. Together, wall motion and flow pulsatility produced instantaneous variations in the outer and inner WSS which were somewhat similar to the WSS distribution in the pulsatile flow static model. Although the gross distribution of WSS primarily followed the flow rate curve, the dynamic curvature effects were evident in the central section where the location and magnitude of peak WSS were different from that of the pulsatile flow static model.</p>
+        <p>The time-averaged axial WSS distribution at the outer and inner walls in all the models is shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>. In general, the spatial dependence of time averaged WSS was evident in all the models. In the steady flow static model the outer WSS increased to a peak and thereafter was found to decrease very gradually. In contrast, the inner WSS decreased to a minimum and was thereafter found to increase slowly. In comparison, the flow pulsatility caused a big increase in the outer WSS in the pulsatile flow static model. However, the wall motion only produced a little change in the outer WSS in the steady flow dynamic model.
+<fig id="Fig6"><label>Figure&#xA0;6.</label><caption><p>Time-averaged axial WSS distribution along the inner and outer walls of the LAD.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig6_HTML" id="MO6"/></fig></p>
+        <p>The combined effects of wall motion and pulsatility caused an increase in the outer WSS up to its peak value and a subsequent decrease in the WSS in comparison with that of the pulsatile flow static model, and an overall increase in the outer WSS when compared to the steady flow models. Along the inner wall the flow pulsatility and the wall motion produced contrasting effects whereby the former decreased the WSS and the later increased the WSS. Due to this opposing effect of wall motion and flow pulsatility their combination had only caused smaller variations in the WSS distribution.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Oxygen Transport</title>
+        <p>The time dependent non-dimensional oxygen wall flux (<italic>KC</italic><sub>w</sub>/<italic>KC</italic><sub>o</sub>) distribution at 5D and 9D is presented in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>. The oxygen wall flux did not vary appreciably over time in a cardiac cycle. At any instance the outer wall oxygen flux was higher than that at the inner wall. These patterns were similar in all the models studied. When compared to the oxygen wall flux in the steady flow static model, pulsatility caused a reduction and wall motion an increase in the oxygen wall flux along the inner wall. Along the outer wall the effects of pulsatility and wall motion were opposite to this. In total, the net effect of pulsatility and wall motion was an increase in oxygen flux at the inner wall and decrease at the outer wall when compared to the steady flow static model. This effect was more prominent in the distal region (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>c and d).
+<fig id="Fig7"><label>Figure&#xA0;7.</label><caption><p>Temporal normalised oxygen flux to the inner and outer walls at 5&#xA0;diameters (top panel) and 9&#xA0;diameters (bottom panel) from the LAD inlet.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig7_HTML" id="MO7"/></fig></p>
+        <p>The time-averaged non-dimensional oxygen wall flux to the outer and inner walls of all the four models are shown in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>. The overall effects of pulsatility and wall motion were similar to that predicted with the time dependent oxygen wall flux distribution. The effect of flow pulsation was to decrease the oxygen flux to the inner wall. In contrast, the wall motion contributed to an increase in oxygen flux in the distal region of the inner wall. Hence the combined effects of wall motion and flow pulsatility were to decrease oxygen flux in the proximal and medial regions of the inner wall and a very gradual increase distally.
+<fig id="Fig8"><label>Figure&#xA0;8.</label><caption><p>Time-averaged normalised oxygen wall flux distribution along the inner and outer walls of the LAD.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig8_HTML" id="MO8"/></fig></p>
+        <p>Along the outer wall after an initial sharp drop the flow pulsation caused a gradual increase and then a gradual decrease in the oxygen flux. The wall motion produced a net reduction in the oxygen flux to the outer wall from the inlet. When both the wall motion and flow pulsatility were included the oxygen flux decreased sharply closer to the inlet followed by a gradual increase in the medial region and a gradual decrease thereafter. Nevertheless, in all the models the time-averaged outer wall oxygen flux was more than that to the inner wall.</p>
+      </sec>
+      <sec id="Sec14">
+        <title>LDL Transport</title>
+        <p>The time dependent non-dimensional LDL wall flux (<italic>KC</italic><sub>w</sub>/<italic>KC</italic><sub>o</sub>) distribution at 5D and 9D is plotted in Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>. Like oxygen wall flux the LDL wall flux did not exhibit notable variations over time. The flow pulsatility caused an increase in LDL flux to the inner wall and a decrease in LDL flux to the outer wall when compared to the LDL flux distribution in the steady flow static model. In contrast, the wall motion induced LDL wall flux was lower along the inner wall. However, along the outer wall it produced a differential distribution whereby the LDL wall flux was lower than that in the steady flow static model at 5D and vice versa at 9D (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>c and d). At 9D the outer wall LDL flux was greater than that along the inner wall. Also the outer wall flux in the steady flow dynamic model was higher than that in the pulsatile flow static model. Hence the net effect of wall motion and pulsatility produced LDL wall flux distribution in the pulsatile flow dynamic model such that it was between the range of LDL wall fluxes caused by the pulsatility and wall motion separately.
+<fig id="Fig9"><label>Figure&#xA0;9.</label><caption><p>Temporal normalised LDL flux to the inner and outer walls at 5&#xA0;diameters (top panel) and 9&#xA0;diameters (bottom panel) from the LAD inlet.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig9_HTML" id="MO9"/></fig></p>
+        <p>The time-averaged non-dimensional LDL wall flux to the outer and inner walls of all the four models are shown in Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>. In all the models the time-averaged LDL wall flux distribution was seen to vary appreciably with respect to the axial distance from the inlet. The flow pulsatility caused an increase and decrease in the flux along the inner and outer walls respectively when compared to the steady flow static model. In contrary, the wall motion caused a reduction in the inner wall LDL flux when compared to that of the steady flow static model. Whereas the outer wall LDL flux was lower and higher than that in the steady flow static model in the medial and distal regions respectively. The combined effects of pulsatility and wall motion led to a substantial increase in the outer wall LDL flux in the distal regions. In the proximal and medial regions the outer wall LDL flux was lower than that to the inner wall. However, the inner wall LDL flux increased to a maximum and was then seen to drop off to a value lower than that along the outer wall in the distal part.
+<fig id="Fig10"><label>Figure&#xA0;10.</label><caption><p>Time-averaged normalised LDL flux distribution along the inner and outer walls of the LAD.</p></caption><graphic position="anchor" xlink:href="10439_2006_9188_Fig10_HTML" id="MO10"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec15" sec-type="discussion">
+      <title>Discussion</title>
+      <p>To determine the effects of wall motion, a factor which has received less attention in the previous mass transport studies in coronary arteries, mass transport patterns were computed in an idealised moving model of the LAD. In this study, LDL and oxygen transport were simulated because of their important role in atherogenesis. The flow patterns reported in the current study (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) qualitatively agree with the findings of past experimental and computational studies in that they all demonstrate a general trend of velocity skewing towards the outer wall of curvature and the appearance of in-plane secondary flow.<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR29">29</xref>,<xref ref-type="bibr" rid="CR32">32</xref>The centripetal acceleration of the fluid due to the arterial curvature was primarily responsible for these flow patterns (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a). This basic flow feature was further altered by the flow pulsatility (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b and e) and the dynamic curvature (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>c and f). Their relative role on secondary flow can be characterised using the non-dimensional Dean number (&#x3BA;).</p>
+      <p>From the definition of the Dean number (Eq. <xref rid="Equ1" ref-type="">1</xref>), it is clear that higher the flow rate or smaller the radius of curvature the stronger the Dean vortices will be. This was evident in the figures as the magnitude of skewing and the strength of Dean vortices increased with increasing flow rate and curvature and were maximum at maximum flow rate in the pulsatile flow static model and at maximum curvature in the steady flow dynamic model. Therefore, the combination of flow pulsatility and wall motion were responsible for the appearance of time dependent flow patterns in the pulsatile flow dynamic model (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>d and g). The flow patterns seen in this study are qualitatively similar to that of Santamarina et al&#x2019;s work which considered the effects of dynamic curvature.<xref ref-type="bibr" rid="CR32">32</xref></p>
+      <p>The flow patterns at <italic>t</italic>&#xA0;=&#xA0;0.2&#xA0;s and 0.6&#xA0;s in the steady flow dynamic model where the time dependent curvature was equal to the mean curvature appeared to be different from that in the steady flow static model (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>c and f). This suggests that a quasi-static model cannot predict the flow patterns accurately and that the dynamic wall motion could be as important as the instantaneous geometry. Similar findings were reported by Ethier et al. who compared the flow patterns in frozen geometries and in a moving model of the right coronary artery segment.<xref ref-type="bibr" rid="CR41">41</xref></p>
+      <p>The WSS patterns calculated in the pulsatile flow static models are similar to those reported by other studies on coronary artery flow.<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR29">29</xref>Since the WSS is directly proportional to the gradient of velocity the WSS patterns followed the trends of velocity distribution. The velocity skewing towards the outer wall subjected the outer and inner walls to higher and lower WSS respectively except up to a distance of 1D where the entrance effects were dominant (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). The instantaneous and mean WSS distribution in the pulsatile flow dynamic model closely followed that of the pulsatile flow static model except in the central section where the curvature was high. These results suggest that the effects of wall motion on temporal WSS patterns are only secondary to the pulsatile flow effects and agree well with the findings of other dynamic model studies.<xref ref-type="bibr" rid="CR28">28</xref>,<xref ref-type="bibr" rid="CR41">41</xref></p>
+      <p>Concentration polarisation of LDL has been demonstrated to occur in large arteries by several past experimental and numerical studies.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR39">39</xref>The build-up of LDL concentration at the apical surface of the endothelium due to concentration polarisation could increase the influx of LDL into the arterial wall.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR35">35</xref> This, in turn, could initiate a sequence of biological and biophysical events that are associated with atherogenesis.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR25">25</xref> Therefore, LDL transport was modelled as a concentration polarisation effect and the results were presented as normalised LDL wall flux (<italic>KC</italic><sub>w</sub>/<italic>KC</italic><sub>o</sub>).</p>
+      <p>The present study also considered oxygen transport because hypoxia or low oxygen tension in the arterial wall has long been considered to be a factor responsible for atherogenesis.<xref ref-type="bibr" rid="CR1">1</xref>,<xref ref-type="bibr" rid="CR17">17</xref>It induces endothelial cell apoptosis, causes breakdown of endothelial barrier and forms interendothelial gaps which may cause lipid infiltration into the arterial wall. Recent evidences suggest that hypoxia may also increase vascular permeability to macromolecules by up regulating vascular endothelial growth factor (VEGF) release by vascular cells.<xref ref-type="bibr" rid="CR38">38</xref> Hence oxygen transport was modelled with a passive transport law for oxygen flux at the wall.<xref ref-type="bibr" rid="CR31">31</xref> To describe oxygen transport patterns normalised oxygen wall flux (<italic>KC</italic><sub>w</sub>/<italic>KC</italic><sub>o</sub>) was calculated.</p>
+      <p>In general, the mass transport patterns were similar in all the models. The establishment of low velocity, low WSS regions along the inner wall due to reasons discussed earlier led to an overall elevation of LDL flux and a reduction in oxygen flux to the inner wall. In contrast, high axial flow and high WSS along the outer wall due to axial velocity skewing caused a reduction in LDL flux and an increase in oxygen flux to the outer wall. The higher the WSS the higher the convection and the convective transport of oxygen. Hence the oxygen flux to the outer wall was more than that to the inner wall. The opposite effects were noted for LDL transport because the degree of concentration polarisation is reduced where high flow and high WSS prevail.<xref ref-type="bibr" rid="CR39">39</xref> As a result, the LDL accumulation was generally lower along the outer wall and higher along the inner wall. The diffusive transport of LDL and oxygen however, had minor influence on their transport. This was especially true because of their constant low diffusion coefficients. These results qualitatively agree with mass transport studies in curved arterial transport models.<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR39">39</xref></p>
+      <p>Despite the large time dependent variations in the blood flow and WSS patterns, the flow pulsation only had a minimal effect on oxygen (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>) and LDL (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>) transport to the arterial wall. Consequently, the time-averaged oxygen and LDL wall fluxes (Figs.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> and <xref rid="Fig10" ref-type="fig">10</xref>) in the static pulsatile flow model were only slightly different from their instantaneous values. This less significant pulsatile effects on time-averaged mass transport patterns have also been reported by other studies.<xref ref-type="bibr" rid="CR11">11</xref>,<xref ref-type="bibr" rid="CR19">19</xref>,<xref ref-type="bibr" rid="CR34">34</xref></p>
+      <p>Schneiderman et al.<xref ref-type="bibr" rid="CR34">34</xref> simulated oxygen transfer in straight arterial segments and concluded that the pulsatile flow has negligible effect on oxygen transport to the wall. Ma et al.<xref ref-type="bibr" rid="CR19">19</xref> studied the effect of pulsatility on mass transfer in a sudden expansion region and reported that the time-averaged pulsatile mass transfer patterns were similar to the steady flow mass transfer patterns. Fatouraee et al.<xref ref-type="bibr" rid="CR11">11</xref> simulated LDL concentration polarisation in a straight tube model of a carotid artery under pulsatile flow conditions. The variation of LDL wall concentration in their study was less than 0.014%.</p>
+      <p>Time dependent variations in mass transport patterns were also not present in the dynamic models (Figs.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> and <xref rid="Fig9" ref-type="fig">9</xref>). As a result, the magnitude of time-averaged oxygen and LDL wall fluxes were only slightly different from their corresponding time dependent flux values (Figs.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> and <xref rid="Fig10" ref-type="fig">10</xref>). Although the wall motion did not significantly affect the temporal mass transfer patterns in the dynamic models, an overall change in the mass transfer patterns was evident (Figs.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref> and <xref rid="Fig9" ref-type="fig">9</xref>). This change was also reflected in the time-averaged mass transfer patterns in the dynamic models (Figs.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> and <xref rid="Fig10" ref-type="fig">10</xref>). The percentage change in time-averaged oxygen wall flux and LDL wall flux along the inner and outer walls between the static and dynamic models under both pulsatile and steady flow conditions was in the order of 26% and 12% respectively.</p>
+      <p>The fact that the pulsatility did not alter mass transfer patterns and that there were variations in mass transport patterns in the dynamic models suggest that the wall motion may indeed be important in determining the time-averaged mass transport patterns in the dynamic models. These variations were not significant in the proximal regions of the LAD model. However, considerable changes in the mass transport patterns were present in the medial and distal regions of the LAD (Figs.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> and <xref rid="Fig10" ref-type="fig">10</xref>). This regional difference occurred due to the specification of fixed inlet boundary condition. Although this is an effect of the fixed inlet boundary condition these results once again indicate that strong motion of the coronary arteries could have a significant impact on the luminal mass transport patterns.</p>
+      <p>The species transport however, does not entirely depend on the WSS distribution. Karino et al drew a scatter plot to establish a relationship between the WSS and LDL surface concentration.<xref ref-type="bibr" rid="CR39">39</xref> The scatter in their data suggests that the species transport is also influenced by global flow patterns, path line of fluid flow, spatial location and residence time of LDL at a site. This was also found in the present study which noticed different values of LDL and oxygen wall flux for the same WSS value along the outer and inner walls (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, <xref rid="Fig8" ref-type="fig">8</xref> and <xref rid="Fig10" ref-type="fig">10</xref>).</p>
+      <p>The inner walls of a curved artery where low WSS prevails is known to be a predilection site for atherosclerosis.<xref ref-type="bibr" rid="CR14">14</xref>,<xref ref-type="bibr" rid="CR21">21</xref> LDL and oxygen transport studies have reported impaired oxygen flux and enhanced LDL accumulation in the low shear regions.<xref ref-type="bibr" rid="CR5">5</xref>,<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR39">39</xref>Similar to these findings the present study also predicted co-localisation of low WSS regions, high LDL flux regions and hypoxic regions along the inner wall of curvature (Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> and <xref rid="Fig10" ref-type="fig">10</xref>) in both the static and dynamic models. Hence our results suggest that even when the wall motion is considered the susceptibility of inner wall regions of the curved arteries to atherosclerosis is maintained.</p>
+      <p>Back et al.<xref ref-type="bibr" rid="CR1">1</xref> investigated the relationship between oxygen transport and lipoprotein accumulation in various arterial configurations. They noticed a correspondence between oxygen deprivation (hypoxia) and enhanced lipoprotein accumulation in decelerated flow regions and separation locations and concluded that the oxygen transport behaves in an opposite way to lipoprotein accumulation. This contrasting behaviour of oxygen and LDL transport was also noticed in our present study. It would be interesting to study the indirect effects of hypoxia on LDL transport through pathways involving enhancement of endothelial permeability for macromolecules.<xref ref-type="bibr" rid="CR38">38</xref></p>
+      <p>The present study assumed a constant endothelial permeability of oxygen and LDL which, in reality, is spatially variable and is dependent on the concentration of species at the arterial wall surface and the WSS.<xref ref-type="bibr" rid="CR26">26</xref>,<xref ref-type="bibr" rid="CR36">36</xref>Pulsatile variations in the WSS has been shown to alter the morphology of endothelial cells, increase macromolecular permeability to LDL, promote transendothelial diffusion and intimal entrapment of atherogenic particles and enhance oxygen wall flux.<xref ref-type="bibr" rid="CR13">13</xref>,<xref ref-type="bibr" rid="CR21">21</xref>Therefore, it is possible that the temporal variations in WSS caused both by the pulsatility of blood flow and wall motion may have an effect on LDL and oxygen transport if shear dependent variations in physiological parameters including the endothelial permeability are considered in mass transport studies. So far their effects on species transport have only been considered in static models<xref ref-type="bibr" rid="CR30">30</xref>,<xref ref-type="bibr" rid="CR36">36</xref>and it remains to be investigated how these factors would influence mass transport in moving arteries. This will be the subject of our future study.</p>
+      <p>The limitations of this study centre on the assumptions that were made in the construction of computational models which include idealized geometry, wall motion, and biophysical factors governing LDL and oxygen transport. An idealised, uniformly curved model without complex geometric features such as tortuosity, twisting and non-uniform cross sections was used. Inclusion of these geometric features would be expected to create local regions of flow acceleration, deceleration, separation, recirculation and secondary motion<xref ref-type="bibr" rid="CR1">1</xref>,<xref ref-type="bibr" rid="CR27">27</xref> which may exacerbate or reduce the effects of wall motion on haemodynamics and species transport. While we accept that the neglect of complex geometry may introduce some simplifications in the results it should be recognised that the geometric simplification enabled us to isolate the effects of geometry and to concentrate on the role of wall motion on species transport.</p>
+      <p>The results predicted in this study are specific to the flow and wall motion used in our model and therefore would be expected to change if a different flow or wall motion were imposed. For instance, if the flow and wall motion were more out of phase it may be expected that this would reduce the instantaneous Dean number and therefore one might expect the impact of the dynamic wall motion to be decreased from what was predicted. Although the wall motion effects were secondary to the pulsatile flow effects this does not mean that the wall motion is unimportant. Given the considerable variability in coronary artery motion, geometry and flow patterns in vivo there may be instances where wall motion could play a more significant role and therefore its effects should be considered on a case by case basis.</p>
+      <p>Our study assumed that the non-Newtonian effects caused by the presence of red blood cells are negligible and therefore used constant diffusivities for LDL and oxygen. However, the effective diffusivity of a species changes due to the shear induced microscopic motion of red blood cells.<xref ref-type="bibr" rid="CR6">6</xref> In regions of high WSS, the effective diffusivities of LDL and oxygen would increase. This would in turn enhance oxygen wall flux but reduce LDL wall flux due to LDL concentration polarisation. Therefore, the magnitude of LDL and oxygen wall fluxes predicted in our study would be expected to change but the general patterns of flux will remain the same.</p>
+    </sec>
+    <sec id="Sec16" sec-type="conclusion">
+      <title>Conclusion</title>
+      <p>In this study, we have incorporated the effects of idealised motion into a simulation of oxygen and LDL transport in the LAD. The LDL and oxygen transport were modelled differently due to their differences in in-vivo transport mechanisms. We carried out simulations under both the steady and pulsatile flow conditions in the static and dynamic models to quantify the relative importance of pulsatility and wall motion on mass transport patterns. This study showed that the effects of wall motion on mass transport in the coronary arteries could be modelled in the commercial CFD code Fluent.</p>
+      <p>Our results predicted elevation of LDL flux, impaired oxygen flux and low wall shear stress (WSS) along the inner wall of curvature, a region known for its predilection to atherosclerosis. The temporal variations in velocity and WSS patterns in the dynamic model did not influence time dependent mass transport and were only secondary to the pulsatile flow effects. However, wall motion may influence mass transport if shear dependent variations in species permeability and other factors are considered in the calculations. Nevertheless, the wall motion did alter the time-averaged mass transfer in the medial and distal regions in the order of 26% and 12% for oxygen and LDL transport when compared to the corresponding static models. Taken together, these results suggest that wall motion may play an important role in coronary arterial transport processes. However, future studies on more physiologic models are warranted to gain a fundamental understanding of the role of wall motion on mass transport and atherosclerosis.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Back</surname>
+              <given-names>L. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Theoretical investigation of mass transport to arterial walls in various blood flow regions-II. Oxygen transport and its relationship to lipoprotein accumulation</article-title>
+          <source>Math. Biosci.</source>
+          <year>1975</year>
+          <volume>27</volume>
+          <fpage>263</fpage>
+          <lpage>285</lpage>
+          <pub-id pub-id-type="doi">10.1016/0025-5564(75)90106-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Back L. H. 1975. Theoretical investigation of mass transport to arterial walls in various blood flow regions-II. Oxygen transport and its relationship to lipoprotein accumulation Math. Biosci. 27:263&#x2013;285 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Blacker</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <source>The Cooper Tool. 5th International Meshing Roundtable</source>
+          <year>1996</year>
+          <publisher-loc>Pitsburgh</publisher-loc>
+          <publisher-name>Sandia National Laboratories</publisher-name>
+          <fpage>13</fpage>
+          <lpage>29</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Blacker T. 1996. The Cooper Tool. 5th International Meshing Roundtable. Sandia National Laboratories, Pitsburgh. 13&#x2013;29 </citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Caro</surname>
+              <given-names>C. G.</given-names>
+            </name>
+            <name>
+              <surname>Fitz-Gerald</surname>
+              <given-names>J. M.</given-names>
+            </name>
+            <name>
+              <surname>Schrote</surname>
+              <given-names>R. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Atheroma and arterial wall shear: Observation, correlation and proposal of a shear dependent mass transfer mechanism for atherogenesis</article-title>
+          <source>Proc. Roy. Soc. London B Biol. Sci.</source>
+          <year>1971</year>
+          <volume>177</volume>
+          <fpage>109</fpage>
+          <lpage>159</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Caro C. G., Fitz-Gerald J. M., Schrote R. C. 1971. Atheroma and arterial wall shear: Observation, correlation and proposal of a shear dependent mass transfer mechanism for atherogenesis Proc. Roy. Soc. London B Biol. Sci. 177:109&#x2013;159 <pub-id pub-id-type="pmid">4396262</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Delfino</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Moore</surname>
+              <given-names>J. E. J.</given-names>
+            </name>
+            <name>
+              <surname>Meister</surname>
+              <given-names>J. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Lateral deformation and movement effects on flow through distensible tube models of blood vessels</article-title>
+          <source>Biorheology</source>
+          <year>1994</year>
+          <volume>31</volume>
+          <fpage>533</fpage>
+          <lpage>547</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Delfino A., Moore J. E. J., Meister J. J. 1994. Lateral deformation and movement effects on flow through distensible tube models of blood vessels. Biorheology 31:533&#x2013;547 <pub-id pub-id-type="pmid">7833456</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Deng</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Marois</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>How</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Merhi</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>King</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Guidoin</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Karino</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Luminal surface concentration of lipoprotein (LDL) and its effect on the wall uptake of cholesterol by canine carotid arteries</article-title>
+          <source>J. Vascular Surgery</source>
+          <year>1995</year>
+          <volume>21</volume>
+          <fpage>135</fpage>
+          <lpage>145</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0741-5214(95)70252-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Deng X., Marois Y., How T., Merhi Y., King M., Guidoin R., Karino T. 1995. Luminal surface concentration of lipoprotein (LDL) and its effect on the wall uptake of cholesterol by canine carotid arteries J. Vascular Surgery 21:135&#x2013;145 </citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Diller</surname>
+              <given-names>T. E.</given-names>
+            </name>
+            <name>
+              <surname>Mikic</surname>
+              <given-names>B. B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Oxygen diffusion in blood: A translational model of shear-induced augmentation</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>1983</year>
+          <volume>105</volume>
+          <fpage>346</fpage>
+          <lpage>352</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Diller T. E., Mikic B. B. 1983. Oxygen diffusion in blood: A translational model of shear-induced augmentation ASME J. Biomech. Eng. 105:346&#x2013;352 </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ding</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Zhu</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>M. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Coronary artery dynamics in vivo</article-title>
+          <source>Annals Biomed. Eng.</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>419</fpage>
+          <lpage>429</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1467925</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ding J., Zhu H., Friedman M. H. 2002. Coronary artery dynamics in vivo Annals Biomed. Eng. 30:419&#x2013;429 </citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ding</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>M. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamics of human coronary arterial motion and its potential role in coronary atherogenesis</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>2000</year>
+          <volume>122</volume>
+          <fpage>488</fpage>
+          <lpage>492</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.1289989</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ding J., Friedman M. H. 2000. Dynamics of human coronary arterial motion and its potential role in coronary atherogenesis ASME J. Biomech. Eng. 122:488&#x2013;492 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dodge</surname>
+              <given-names>J. T.</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>B. G.</given-names>
+            </name>
+            <name>
+              <surname>Bolson</surname>
+              <given-names>E. L.</given-names>
+            </name>
+            <name>
+              <surname>Dodge</surname>
+              <given-names>H. T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Lumen diameter of normal human coronary arteries: Influence of age, sex, anatomic variation, and left ventricular hypertrophy or dilation</article-title>
+          <source>Circulation</source>
+          <year>1992</year>
+          <volume>86</volume>
+          <fpage>232</fpage>
+          <lpage>246</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dodge J. T. Jr, Brown B. G., Bolson E. L., Dodge H. T. 1992. Lumen diameter of normal human coronary arteries: Influence of age, sex, anatomic variation, and left ventricular hypertrophy or dilation Circulation 86:232&#x2013;246 <pub-id pub-id-type="pmid">1535570</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ethier</surname>
+              <given-names>C. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Computational modeling of mass transfer and links to atherosclerosis</article-title>
+          <source>Annals Biomed Eng.</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>461</fpage>
+          <lpage>471</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1468890</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ethier C. R. 2002. Computational modeling of mass transfer and links to atherosclerosis Annals Biomed Eng. 30:461&#x2013;471 </citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fatouraee</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Deng</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Champlain</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Guidoin</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Concentration polarization of low density lipoproteins (LDL) in the arterial system</article-title>
+          <source>Annals NY Acad. Sci.</source>
+          <year>1998</year>
+          <volume>858</volume>
+          <fpage>137</fpage>
+          <lpage>146</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1749-6632.1998.tb10148.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fatouraee A., Deng X., De Champlain A., Guidoin R. 1998. Concentration polarization of low density lipoproteins (LDL) in the arterial system Annals NY Acad. Sci. 858:137&#x2013;146 </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fox</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Seed</surname>
+              <given-names>W. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Location of early atheroma in the human coronary arteries</article-title>
+          <source>ASME J Biomech Eng.</source>
+          <year>1981</year>
+          <volume>103</volume>
+          <fpage>208</fpage>
+          <lpage>212</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Fox B., Seed W. A. 1981. Location of early atheroma in the human coronary arteries ASME J Biomech Eng. 103:208&#x2013;212 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gimberone</surname>
+              <given-names>M. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Vascular endothelium, hemodynamic forces, and atherogenesis</article-title>
+          <source>Am. J. Pathol.</source>
+          <year>1999</year>
+          <volume>155</volume>
+          <fpage>1</fpage>
+          <lpage>5</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Gimberone M. A. Jr, 1999 Vascular endothelium, hemodynamic forces, and atherogenesis Am. J. Pathol. 155:1&#x2013;5 <pub-id pub-id-type="pmid">10393828</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Glagov</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Zairns</surname>
+              <given-names>C. K.</given-names>
+            </name>
+            <name>
+              <surname>Giddens</surname>
+              <given-names>D. P.</given-names>
+            </name>
+            <name>
+              <surname>Ku</surname>
+              <given-names>D. N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Haemodynamics and atherosclerosis: Insights and perspectives gained from studies of human arteries</article-title>
+          <source>Arch. Pathol. Lab. Med.</source>
+          <year>1988</year>
+          <volume>112</volume>
+          <fpage>1018</fpage>
+          <lpage>1031</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Glagov S., Zairns C. K., Giddens D. P., Ku D. N. 1988. Haemodynamics and atherosclerosis: Insights and perspectives gained from studies of human arteries Arch. Pathol. Lab. Med. 112:1018&#x2013;1031 <pub-id pub-id-type="pmid">3052352</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gross</surname>
+              <given-names>M. F.</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>M. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamics of coronary artery curvature obtained from biplane cineangiograms</article-title>
+          <source>J. Biomech.</source>
+          <year>1998</year>
+          <volume>31</volume>
+          <fpage>479</fpage>
+          <lpage>484</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(98)00012-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gross M. F., Friedman M. H. 1998. Dynamics of coronary artery curvature obtained from biplane cineangiograms J. Biomech. 31:479&#x2013;484 <pub-id pub-id-type="pmid">9727346</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>He</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Ku</surname>
+              <given-names>D. N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Pulsatile flow in the human left coronary artery bifurcation: Average conditions</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>1996</year>
+          <volume>118</volume>
+          <fpage>74</fpage>
+          <lpage>82</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">He X., Ku D. N. 1996. Pulsatile flow in the human left coronary artery bifurcation: Average conditions ASME J. Biomech. Eng. 118:74&#x2013;82 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kaazempur-Mofrad</surname>
+              <given-names>M. R.</given-names>
+            </name>
+            <name>
+              <surname>Ethier</surname>
+              <given-names>C. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mass trasport in an anatomically realistic human right coronary artery</article-title>
+          <source>Annals Biomed. Eng.</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>121</fpage>
+          <lpage>127</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1349704</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kaazempur-Mofrad M. R., Ethier C. R. 2001. Mass trasport in an anatomically realistic human right coronary artery Annals Biomed. Eng. 29:121&#x2013;127 </citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lynch</surname>
+              <given-names>D. G.</given-names>
+            </name>
+            <name>
+              <surname>Waters</surname>
+              <given-names>S. L.</given-names>
+            </name>
+            <name>
+              <surname>Pedley</surname>
+              <given-names>T. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Flow in a tube with non-uniform, time -dependent curvature: Governing equations and simple examples</article-title>
+          <source>J Fluid Mech.</source>
+          <year>1996</year>
+          <volume>323</volume>
+          <fpage>237</fpage>
+          <lpage>265</lpage>
+          <pub-id pub-id-type="doi">10.1017/S0022112096000900</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lynch D. G., Waters S. L., Pedley T. J. 1996. Flow in a tube with non-uniform, time -dependent curvature: Governing equations and simple examples J Fluid Mech. 323:237&#x2013;265 </citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ma</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Ku</surname>
+              <given-names>D. N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Heat and mass transfer in a separated flow region for high prandtl and schmidt numbers under pulsatile flow conditions</article-title>
+          <source>Int. J. Heat Mass Transfer</source>
+          <year>1994</year>
+          <volume>37</volume>
+          <fpage>2723</fpage>
+          <lpage>2736</lpage>
+          <pub-id pub-id-type="doi">10.1016/0017-9310(94)90389-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ma P., Li X., Ku D. N. 1994. Heat and mass transfer in a separated flow region for high prandtl and schmidt numbers under pulsatile flow conditions Int. J. Heat Mass Transfer 37:2723&#x2013;2736 </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ma</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Ku</surname>
+              <given-names>D. N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Convective mass transfer at the carotid bifurcation</article-title>
+          <source>J. Biomech.</source>
+          <year>1997</year>
+          <volume>30</volume>
+          <fpage>565</fpage>
+          <lpage>571</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(97)84506-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ma P., Li X., Ku D. N. 1997. Convective mass transfer at the carotid bifurcation J. Biomech. 30:565&#x2013;571 <pub-id pub-id-type="pmid">9165389</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Malek</surname>
+              <given-names>A. M.</given-names>
+            </name>
+            <name>
+              <surname>Alper</surname>
+              <given-names>S. L.</given-names>
+            </name>
+            <name>
+              <surname>Izumo</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hemodynamic shear stress and its role in atherosclerosis</article-title>
+          <source>JAMA</source>
+          <year>1999</year>
+          <volume>282</volume>
+          <fpage>2035</fpage>
+          <lpage>2042</lpage>
+          <pub-id pub-id-type="doi">10.1001/jama.282.21.2035</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Malek A. M., Alper S. L., Izumo S. 1999. Hemodynamic shear stress and its role in atherosclerosis JAMA 282:2035&#x2013;2042 <pub-id pub-id-type="pmid">10591386</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marcus</surname>
+              <given-names>J. T.</given-names>
+            </name>
+            <name>
+              <surname>Smeenk</surname>
+              <given-names>H. G.</given-names>
+            </name>
+            <name>
+              <surname>Kuijer</surname>
+              <given-names>J. P. A.</given-names>
+            </name>
+            <name>
+              <surname>Geest</surname>
+              <given-names>R. J.</given-names>
+            </name>
+            <name>
+              <surname>Heethaar</surname>
+              <given-names>R. M.</given-names>
+            </name>
+            <name>
+              <surname>Rossum</surname>
+              <given-names>A. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Flow profiles in the left anterior descending and the right coronary artery assessed by MR velocity quantification: Effects of through-plane and in-plane motion of the heart</article-title>
+          <source>J. Computer Assisted Tomogr.</source>
+          <year>1999</year>
+          <volume>23</volume>
+          <fpage>567</fpage>
+          <lpage>576</lpage>
+          <pub-id pub-id-type="doi">10.1097/00004728-199907000-00017</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Marcus J. T., Smeenk H. G., Kuijer J. P. A., Van der Geest R. J., Heethaar R. M., Van Rossum A. C. 1999. Flow profiles in the left anterior descending and the right coronary artery assessed by MR velocity quantification: Effects of through-plane and in-plane motion of the heart J. Computer Assisted Tomogr. 23:567&#x2013;576 </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moore</surname>
+              <given-names>J. E</given-names>
+            </name>
+            <name>
+              <surname>Guggenheim</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Delfino</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Doriot</surname>
+              <given-names>P. A.</given-names>
+            </name>
+            <name>
+              <surname>Dorsaz</surname>
+              <given-names>P. A.</given-names>
+            </name>
+            <name>
+              <surname>Rutishauser</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Meister</surname>
+              <given-names>J. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Preliminary analysis of the effects of blood vessel movement on blood flow patterns in the coronary arteries</article-title>
+          <source>ASME J Biomech Eng.</source>
+          <year>1994</year>
+          <volume>116</volume>
+          <fpage>302</fpage>
+          <lpage>306</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Moore J. E Jr., Guggenheim N., Delfino A., Doriot P. A., Dorsaz P. A., Rutishauser W., Meister J. J. 1994. Preliminary analysis of the effects of blood vessel movement on blood flow patterns in the coronary arteries ASME J Biomech Eng. 116:302&#x2013;306 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moore</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>Weydahl</surname>
+              <given-names>E. S.</given-names>
+            </name>
+            <name>
+              <surname>Santamarina</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Frequency dependence of dynamic curvature effects on flow through coronary arteries</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>2001</year>
+          <volume>123</volume>
+          <fpage>129</fpage>
+          <lpage>133</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.1351806</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Moore J. E. Jr, Weydahl E. S., Santamarina A. 2001. Frequency dependence of dynamic curvature effects on flow through coronary arteries ASME J. Biomech. Eng. 123:129&#x2013;133 </citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nielsen</surname>
+              <given-names>L. B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Transfer of low density lipoprotein into the arterial wall and risk of atherosclerosis</article-title>
+          <source>Atherosclerosis</source>
+          <year>1996</year>
+          <volume>123</volume>
+          <fpage>1</fpage>
+          <lpage>15</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9150(96)05802-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nielsen L. B. 1996. Transfer of low density lipoprotein into the arterial wall and risk of atherosclerosis Atherosclerosis 123:1&#x2013;15 <pub-id pub-id-type="pmid">8782833</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ogunrinade</surname>
+              <given-names>O.</given-names>
+            </name>
+            <name>
+              <surname>Kameya</surname>
+              <given-names>G. T.</given-names>
+            </name>
+            <name>
+              <surname>Truskey</surname>
+              <given-names>G. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of fluid shear stress on the permeability of the arterial endothelium</article-title>
+          <source>Annals Biomed. Eng.</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>430</fpage>
+          <lpage>446</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1467924</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ogunrinade O., Kameya G. T., Truskey G. A. 2002 Effect of fluid shear stress on the permeability of the arterial endothelium Annals Biomed. Eng. 30:430&#x2013;446 </citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perktold</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Hofer</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Rappitsch</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Loew</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Kuban</surname>
+              <given-names>B. D.</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>M. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Validated computation of physiologic flow in a realistic coronary artery branch</article-title>
+          <source>J. Biomech.</source>
+          <year>1998</year>
+          <volume>31</volume>
+          <fpage>217</fpage>
+          <lpage>228</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(97)00118-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Perktold K., Hofer M., Rappitsch G., Loew M., Kuban B. D., Friedman M. H. 1998. Validated computation of physiologic flow in a realistic coronary artery branch. J. Biomech. 31:217&#x2013;228 <pub-id pub-id-type="pmid">9645536</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prosi</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Perktold</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Ding</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>M. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of curvature dynamics on pulsatile coronary artery flow in a realistic bifurcation model</article-title>
+          <source>J. Biomech.</source>
+          <year>2004</year>
+          <volume>37</volume>
+          <fpage>1767</fpage>
+          <lpage>1775</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jbiomech.2004.01.021</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Prosi M., Perktold K., Ding J., Friedman M. H. 2004. Influence of curvature dynamics on pulsatile coronary artery flow in a realistic bifurcation model J. Biomech. 37:1767&#x2013;1775 <pub-id pub-id-type="pmid">15388320</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Qiu</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Tarbell</surname>
+              <given-names>J. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Numerical simulation of pulsatile flow in a compliant curved tube model of a coronary artery</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>2000</year>
+          <volume>122</volume>
+          <fpage>77</fpage>
+          <lpage>85</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.429629</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Qiu Y., Tarbell J. M. 2000. Numerical simulation of pulsatile flow in a compliant curved tube model of a coronary artery ASME J. Biomech. Eng. 122:77&#x2013;85 </citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rappitsch</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Perktold</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Pernkopf</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Numerical modelling of shear-dependent mass transfer in large arteries</article-title>
+          <source>Int. J. Numerical Methods Fluids</source>
+          <year>1997</year>
+          <volume>25</volume>
+          <fpage>847</fpage>
+          <lpage>857</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0363(19971015)25:7&lt;847::AID-FLD590&gt;3.0.CO;2-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rappitsch G., Perktold K., Pernkopf E. 1997 Numerical modelling of shear-dependent mass transfer in large arteries Int. J. Numerical Methods Fluids 25:847&#x2013;857 </citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rappitsch</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Perktold</surname>
+              <given-names>K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Computer simulation of convective diffusion processes in large arteries</article-title>
+          <source>J. Biomech.</source>
+          <year>1996</year>
+          <volume>29</volume>
+          <fpage>207</fpage>
+          <lpage>215</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(95)00045-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rappitsch G., Perktold K. 1996. Computer simulation of convective diffusion processes in large arteries J. Biomech. 29:207&#x2013;215 <pub-id pub-id-type="pmid">8849814</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Santamarina</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Weydahl</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Siegel</surname>
+              <given-names>J. M.</given-names>
+            </name>
+            <name>
+              <surname>Moore</surname>
+              <given-names>J. E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Computational analysis of flow in a curved tube model of the coronary arteries: Effects of time-varying curvature</article-title>
+          <source>Annals Biomed. Eng.</source>
+          <year>1998</year>
+          <volume>26</volume>
+          <fpage>944</fpage>
+          <lpage>954</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.113</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Santamarina A., Weydahl E., Siegel J. M., Moore J. E. Jr. 1998. Computational analysis of flow in a curved tube model of the coronary arteries: Effects of time-varying curvature Annals Biomed. Eng. 26:944&#x2013;954 </citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schilt</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Moore</surname>
+              <given-names>J. E. J.</given-names>
+            </name>
+            <name>
+              <surname>Delfino</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Meister</surname>
+              <given-names>J. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The effects of time - varying curvature on velocity profiles in a model of the coronary arteries</article-title>
+          <source>J. Biomech.</source>
+          <year>1996</year>
+          <volume>29</volume>
+          <fpage>469</fpage>
+          <lpage>474</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(95)00082-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schilt S., Moore J. E. J., Delfino A., Meister J. J. 1996. The effects of time - varying curvature on velocity profiles in a model of the coronary arteries J. Biomech. 29:469&#x2013;474 <pub-id pub-id-type="pmid">8964776</pub-id></citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schneiderman</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Mockros</surname>
+              <given-names>L. F.</given-names>
+            </name>
+            <name>
+              <surname>Goldstick</surname>
+              <given-names>T. K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of pulsatility on oxygen transport to the human arterial wall</article-title>
+          <source>J. Biomech.</source>
+          <year>1982</year>
+          <volume>15</volume>
+          <fpage>849</fpage>
+          <lpage>858</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9290(82)90050-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schneiderman G., Mockros L. F., Goldstick T. K. 1982. Effect of pulsatility on oxygen transport to the human arterial wall J. Biomech. 15:849&#x2013;858 <pub-id pub-id-type="pmid">7161287</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schwenke</surname>
+              <given-names>D. C.</given-names>
+            </name>
+            <name>
+              <surname>Carew</surname>
+              <given-names>T. E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Initiation of atherosclerotic lesions in cholesterol-fed rabbits. I. Focal increases in arterial LDL concentration precede development of fatty streak lesions</article-title>
+          <source>Arteriosclerosis</source>
+          <year>1989</year>
+          <volume>9</volume>
+          <fpage>895</fpage>
+          <lpage>907</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schwenke, D. C., and Carew T. E. 1989. Initiation of atherosclerotic lesions in cholesterol-fed rabbits. I. Focal increases in arterial LDL concentration precede development of fatty streak lesions Arteriosclerosis 9:895&#x2013;907 <pub-id pub-id-type="pmid">2590067</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stangeby</surname>
+              <given-names>D. K.</given-names>
+            </name>
+            <name>
+              <surname>Ethier</surname>
+              <given-names>C. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Computational analysis of coupled blood-wall arterial LDL transport</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>2002</year>
+          <volume>124</volume>
+          <fpage>1</fpage>
+          <lpage>8</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.1427041</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stangeby D. K., Ethier C. R. 2002. Computational analysis of coupled blood-wall arterial LDL transport ASME J. Biomech. Eng. 124:1&#x2013;8 </citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stein</surname>
+              <given-names>P. D.</given-names>
+            </name>
+            <name>
+              <surname>Hamid</surname>
+              <given-names>M. S.</given-names>
+            </name>
+            <name>
+              <surname>Shivkumar</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Davis</surname>
+              <given-names>T. P.</given-names>
+            </name>
+            <name>
+              <surname>Khaja</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Henry</surname>
+              <given-names>J. W</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of cyclic flexion of coronary arteries on progression of atherosclerosis</article-title>
+          <source>The Am. J. Cardiol.</source>
+          <year>1994</year>
+          <volume>73</volume>
+          <fpage>431</fpage>
+          <lpage>437</lpage>
+          <pub-id pub-id-type="doi">10.1016/0002-9149(94)90671-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stein P. D., Hamid M. S., Shivkumar K., Davis T. P., Khaja F., Henry J. W. 1994. Effects of cyclic flexion of coronary arteries on progression of atherosclerosis The Am. J. Cardiol. 73:431&#x2013;437 </citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tarbell</surname>
+              <given-names>J. M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mass transport in arteries and the localization of atherosclerosis</article-title>
+          <source>Annual Rev. Biomed. Eng.</source>
+          <year>2003</year>
+          <volume>5</volume>
+          <fpage>79</fpage>
+          <lpage>118</lpage>
+          <pub-id pub-id-type="doi">10.1146/annurev.bioeng.5.040202.121529</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tarbell J. M. 2003. Mass transport in arteries and the localization of atherosclerosis Annual Rev. Biomed. Eng. 5:79&#x2013;118 <pub-id pub-id-type="pmid">12651738</pub-id></citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wada</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Karino</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Theoretical prediction of low-density lipoproteins concentration at the luminal surface of an artery with a multiple bend</article-title>
+          <source>Annals Biomed. Eng.</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>778</fpage>
+          <lpage>791</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1495868</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wada S., Karino T. 2002. Theoretical prediction of low-density lipoproteins concentration at the luminal surface of an artery with a multiple bend Annals Biomed. Eng. 30:778&#x2013;791 </citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weydahl</surname>
+              <given-names>E. S.</given-names>
+            </name>
+            <name>
+              <surname>Moore</surname>
+              <given-names>J. E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic curvature strongly affects wall shear rates in a coronary artery bifurcation model</article-title>
+          <source>J. Biomech.</source>
+          <year>2001</year>
+          <volume>34</volume>
+          <fpage>1189</fpage>
+          <lpage>1196</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9290(01)00051-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Weydahl E. S., Moore J. E. Jr. 2001. Dynamic curvature strongly affects wall shear rates in a coronary artery bifurcation model J. Biomech. 34:1189&#x2013;1196 <pub-id pub-id-type="pmid">11506789</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zeng</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Ding</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>M. H.</given-names>
+            </name>
+            <name>
+              <surname>Ethier</surname>
+              <given-names>C. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of cardiac motion on right coronary hemodynamics</article-title>
+          <source>Annals Biomed. Eng.</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>420</fpage>
+          <lpage>429</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.1560631</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zeng D., Ding Z., Friedman M. H., Ethier C. R. 2003. Effects of cardiac motion on right coronary hemodynamics Annals Biomed. Eng. 31:420&#x2013;429 </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

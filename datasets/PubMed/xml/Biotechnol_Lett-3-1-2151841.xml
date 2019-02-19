@@ -1,0 +1,2070 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="review-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Biotechnol Lett</journal-id>
+      <journal-title>Biotechnology Letters</journal-title>
+      <issn pub-type="ppub">0141-5492</issn>
+      <issn pub-type="epub">1573-6776</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17885737</article-id>
+      <article-id pub-id-type="pmc">2151841</article-id>
+      <article-id pub-id-type="publisher-id">9524</article-id>
+      <article-id pub-id-type="doi">10.1007/s10529-007-9524-1</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Review</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Engineering eukaryotic protein factories</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Schr&#xF6;der</surname>
+            <given-names>Martin</given-names>
+          </name>
+          <address>
+            <fax>+44-191-3341201</fax>
+            <email>martin.schroeder@durham.ac.uk</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">School of Biological and Biomedical Sciences, Durham University, South Road, Durham, DH1 3LE UK </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>21</day>
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>2</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>30</volume>
+      <issue>2</issue>
+      <fpage>187</fpage>
+      <lpage>196</lpage>
+      <history>
+        <date date-type="received">
+          <day>28</day>
+          <month>8</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>30</day>
+          <month>8</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media B.V. 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The biopharmaceuticals market is currently outperforming the pharmaceuticals market and is now valued at US$&#xA0;48&#xA0;billion with an average annual growth of 19%. Behind this success is a 100-fold increase in productivities of eukaryotic expression systems. However, the productivity per cell has remained unchanged for more than 10&#xA0;years. The engineering of the ER-resident protein folding machinery is discussed together with an overview of signal transduction pathways activated by heterologous protein overexpression to increase cell specific productivities.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Endoplasmic reticulum associated protein degradation</kwd>
+        <kwd>Heterologous protein production</kwd>
+        <kwd>Molecular chaperone</kwd>
+        <kwd>Protein folding</kwd>
+        <kwd>Unfolded protein response</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The demand for therapeutic proteins, i.e. monoclonal antibodies, has been forecast to exceed production capacities (Werner <xref ref-type="bibr" rid="CR56">2004</xref>). Moderate increases in product titers and yields are expected to result in significant savings in capital investment and consumer costs (Werner <xref ref-type="bibr" rid="CR56">2004</xref>). Over the last decade product titers have increased from &#x223C;20&#xA0;mg&#xA0;l<sup>&#x2212;1</sup> to 2&#xA0;g&#xA0;l<sup>&#x2212;1</sup> (Werner <xref ref-type="bibr" rid="CR56">2004</xref>; Wurm <xref ref-type="bibr" rid="CR59">2004</xref>). These improvements are largely attributable to increases in viable cell densities. However, cell specific productivities remained nearly constant during this time (Wurm <xref ref-type="bibr" rid="CR59">2004</xref>).</p>
+      <p>To improve cell specific productivities the bottleneck for heterologous protein secretion has to be identified and resolved. In expression systems exploiting multiple gene copies or strong promoters the amount of secreted heterologous protein does not increase proportionally with gene copy number (Schr&#xF6;der <xref ref-type="bibr" rid="CR40">2007</xref>), messenger ribonucleic acid (mRNA) (Schr&#xF6;der et&#xA0;al. <xref ref-type="bibr" rid="CR43">1999</xref>), or even the intracellular amount of the heterologous protein (Schr&#xF6;der and Friedl <xref ref-type="bibr" rid="CR41">1997</xref>). In these cells, the protein accumulates in intracellular aggregates (Schr&#xF6;der and Kaufman <xref ref-type="bibr" rid="CR42">2005</xref>), associates with the molecular chaperone heavy chain-binding protein (BiP)/glucose-regulated protein of 78&#xA0;kDa (GRP78)/karyogamy 2 protein (Kar2p) (Schr&#xF6;der and Kaufman <xref ref-type="bibr" rid="CR42">2005</xref>), and induces dilation of the endoplasmic reticulum (ER) (Dorner et&#xA0;al. <xref ref-type="bibr" rid="CR7">1989</xref>; Gennaro et&#xA0;al. <xref ref-type="bibr" rid="CR12">1991</xref>). Therefore, exit of the correctly folded polypeptide chain from the ER is the rate-limiting step for heterologous protein secretion. I will discuss strategies to improve cell specific productivities by engineering protein folding in the ER and signal transduction pathways activated by overexpression of heterologous proteins.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Protein folding in the ER</title>
+      <p>The ER-resident protein folding machinery has four components: (1) Molecular chaperones assisting other proteins to fold, (2) enzymes such as protein disulfide isomerases (PDIs) and <italic>cis-trans</italic> peptidyl prolyl isomerases (PPIs), (3) a degradation machinery, and (4) signal transduction pathways that co-ordinate protein folding demand with capacity. At least three hierarchically organized chaperone systems operate in the ER, the heat shock protein of 70&#xA0;kDa (HSP70) chaperones BiP and luminal HSP seventy 1 protein (Lhs1p)/chaperone in the ER 1 protein/Ssi1p/GRP170/oxygen-regulated protein of 150&#xA0;kDa (ORP150), the HSP90 chaperone GRP94/adenotin/endoplasmin/tumor rejection antigen glycoprotein of 96&#xA0;kDa (gp96)/ER protein of 99&#xA0;kDa/HSP108/Ca<sup>2+</sup>-binding protein 4/protein kinase of 80&#xA0;kDa, and the lectin chaperones calnexin/p88, calreticulin/Ca<sup>2+</sup>-binding protein of 63&#xA0;kDa (CAB-63)/calregulin/Ca<sup>2+</sup>-regulated protein of 55&#xA0;kDa (CRP55)/high affinity Ca<sup>2+</sup>-binding protein (HACBP), and calmegin/calnexin-t (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). BiP works on completely unfolded polypeptide chains and translocates nascent polypeptide chains into the ER, whereas GRP94 and the lectin chaperones work on partially folded substrates.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Hierarchy of chaperone systems in the ER. Abbreviations: Glc&#xA0;=<sc>&#xA0;d</sc>-glucose, P<sub>i</sub>&#xA0;=&#xA0;inorganic phosphate (<inline-formula id="IEq1"><!-- Alternate image not processed: 10529_2007_9524_Article_IEq1.gif --><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{HPO}}^{{{\text{2}} - }}_{{\text{4}}} $$\end{document}</tex-math></inline-formula>)</p></caption><graphic position="anchor" xlink:href="10529_2007_9524_Fig1_HTML" id="MO2"/></fig></p>
+      <p>BiP consists of an <italic>N</italic>-terminal ATPase domain and a <italic>C</italic>-terminal substrate binding domain. BiP cycles through rounds of adenosine triphosphate (ATP) hydrolysis and adenosine diphosphate (ADP) ATP exchange (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>), which makes BiP a chaperone foldase (Winter and Jakob <xref ref-type="bibr" rid="CR58">2004</xref>). At least six DnaJ or HSP40 co-chaperones stimulate the ATPase activity of BiP and two growth after phage induction E (GrpE) co-chaperones the ADP ATP exchange reaction. In the ADP-bound form BiP has high affinity for unfolded substrates. Substrates bound to BiP are conformationally locked. ADP ATP exchange decreases the affinity of BiP for unfolded substrates. Substrate binding stimulates the ATPase activity of BiP. Thus, protein folding requires ATP (Dorner and Kaufman <xref ref-type="bibr" rid="CR6">1990</xref>). BiP and Lhs1p coordinate their activities. Lhs1p is a nucleotide exchange factor for BiP, and BiP stimulates the ATPase activity of Lhs1p (Steel et&#xA0;al. <xref ref-type="bibr" rid="CR47">2004</xref>).</p>
+      <p>Cytosolic HSP90 chaperones are ATP-consuming chaperone foldases (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>) regulated by several co-chaperones that affect its ATPase activity, load substrates onto HSP90 chaperones, assist in protein folding, and target substrates to degradation pathways (Strudwick and Schr&#xF6;der <xref ref-type="bibr" rid="CR48">2007</xref>). GRP94 co-chaperones have not been identified, but other ER luminal chaperones found in complexes with GRP94 may be GRP94 co-chaperones. The <italic>K</italic><sub>M</sub> value of GRP94 for ATP is &#x223C;100&#xA0;&#x3BC;M and its intrinsic ATPase activity is barely detectable. These data indicate that GRP94 may be a chaperone holdase, a chaperone that binds to unfolded proteins, but does not cycle through ATP hydrolysis cycles. A drop of adenine nucleoside concentrations in stress situations may activate GRP94 (Rosser et&#xA0;al. <xref ref-type="bibr" rid="CR38">2004</xref>).</p>
+      <p>The lectin chaperones share an <italic>N</italic>-terminal globular oligosaccharide-binding domain and a <italic>C</italic>-terminal extended hairpin loop, the P domain, which provides the chaperone function (Strudwick and Schr&#xF6;der <xref ref-type="bibr" rid="CR48">2007</xref>). Calnexin and calmegin are transmembrane proteins. Calreticulin is a soluble protein. Most proteins entering the ER are glycosylated by addition of the oligosaccharide Glc<sub>3</sub>Man<sub>9</sub>GlcNAc<sub>2</sub> (Glc&#xA0;=&#xA0;<sc>d</sc>-glucose, Man&#xA0;=<sc>&#xA0;d</sc>-mannose, GlcNAc&#xA0;=&#xA0;<italic>N</italic>-Acetyl-2-<sc>d</sc>-glucosamine). &#x3B1;-Glucosidases I and II rapidly remove the two terminal <sc>d</sc>-glucose residues. Calnexin and calreticulin bind to this monoglucosylated oligosaccharide. Removal of the third <sc>d</sc>-glucose moiety by &#x3B1;-glucosidase II releases the protein from calnexin/calreticulin. Reglucosylation of unfolded proteins by uridine diphosphate (UDP)-glucose:glycoprotein glucosyl transferase (UGGT) triggers repeated interactions with calnexin/calreticulin (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). This reglucosylation reaction consumes UDP-glucose. Therefore, the calnexin chaperones are chaperone foldases. The <italic>Saccharomyces cerevisiae</italic> genome encodes a calnexin homolog, but no homolog for UGGT, suggesting that the lectin chaperones may also function as holdases. Demannosylation of <italic>N</italic>-linked oligosaccharides trigger export of proteins to the Golgi complex or their targeting for retrotranslocation into the cytosol and proteasomal degradation (Lederkremer and Glickman <xref ref-type="bibr" rid="CR27">2005</xref>; Ruddock and Molinari <xref ref-type="bibr" rid="CR39">2006</xref>).</p>
+      <p>An expanding family of PDIs catalyzes the formation and isomerization of disulfide bonds. Disulfide bond formation requires the regeneration of oxidized PDI catalyzed by the flavin adenine dinucleotide (FAD)-dependent oxidases ER oxidation 1 protein (Ero1p)/ERO1-L&#x3B1;, ERO1-L&#x3B2; and essential for respiration and viability 2 protein (Erv2p) (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The final electron acceptor is molecular oxygen. Oxidative protein folding accounts for &#x223C;25% of all reactive oxygen species (ROS) formed in a cell (Tu and Weissman <xref ref-type="bibr" rid="CR52">2004</xref>) and is increased by ER stress (Haynes et&#xA0;al. <xref ref-type="bibr" rid="CR15">2004</xref>). Disulfide bond isomerization is independent of the Ero1p oxidases. Reduced glutathione provides reducing equivalents to remove incorrectly formed disulfide bonds. PDI has chaperone holdase activity that is independent of its protein disulfide isomerase activity (Wilkinson and Gilbert <xref ref-type="bibr" rid="CR57">2004</xref>) and redox-regulated foldase activity (Tsai et&#xA0;al. <xref ref-type="bibr" rid="CR51">2001</xref>).
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Disulfide bond formation and isomerization reactions catalyzed by PDI</p></caption><graphic position="anchor" xlink:href="10529_2007_9524_Fig2_HTML" id="MO3"/></fig></p>
+      <p>Slowly folding proteins or folded incompetent proteins have to be removed from chaperone cycles to prevent them from poisoning the protein folding machinery. This is achieved by targeting these proteins for retrotranslocation into the cytosol and degradation by the proteasome in a process called ER associated protein degradation (ERAD) (Yoshida <xref ref-type="bibr" rid="CR60">2007</xref>) (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Proteins destined for ERAD are recognized by BiP, PDI, and lectin sensors such as ER-degradation enhancing &#x3B1;-mannosidase-like proteins 1&#x2013;3 (EDEM1&#x2013;3)/homologous to mannosidase I 1 protein (Htm1p)/mannosidase-like 1 protein (Mnl1p) and osteosarcoma-9 (OS-9)/yeast OS-9 homolog protein (Yos9p) (Gauss et&#xA0;al. <xref ref-type="bibr" rid="CR10">2006a</xref>). The lectin sensor EDEM extracts unfolded proteins from the calnexin cycle. ERAD substrates are then retrotranslocated into the cytosol via the secretory 61 (SEC61) channel or a channel formed by derlin proteins, ubiquitinated by action of ubiquitin-conjugating enzymes (E2 enzymes) and ubiquitin ligases (E3 enzymes), deglycosylated, and degraded by the proteasome. Redundancy exists in the ubiquitination machinery involved in ERAD. In yeast and mammalian cells at least three distinct E2&#xB7;E3 complexes are present in the ER membrane. The substrate specificities of these complexes, as well as their substrate selection rules are poorly understood. In yeast, the E3 ligase Hrd1p co-operates with Hrd3p and Yos9p to select its substrates (Gauss et&#xA0;al. <xref ref-type="bibr" rid="CR11">2006b</xref>). Another selection criterion is the time an unfolded protein spends in foldase cycles. In the calnexin cycle, demannosylation of <italic>N</italic>-linked oligosaccharides generates glycostructures recognized by lectins such as EDEM1&#x2013;3. Association of cytosolic HSP70s with the nucleotide exchange factor B cell leukemia/lymphoma 2 (Bcl-2) associated athanogene protein 1 (BAG-1) (Alberti et&#xA0;al. <xref ref-type="bibr" rid="CR1">2003</xref>) and of cytosolic HSP90s with the ubiquitin ligase carboxyl terminus of heat shock cognate protein of 70&#xA0;kDa (HSC70) interacting protein (CHIP) (H&#xF6;hfeld et&#xA0;al. <xref ref-type="bibr" rid="CR18">2001</xref>) targets proteins for proteasomal degradation. Association of the DnaJ co-chaperone 58&#xA0;kDa inhibitor of double-stranded RNA activated protein kinase (PKR, p58<sup>IPK</sup>) with HSP70 chaperones at the translocation pore targets proteins, whose translocation into the ER is stalled, for proteasomal degradation (Oyadomari et&#xA0;al. <xref ref-type="bibr" rid="CR34">2006</xref>). If similar targeting mechanisms for proteins folding slowly in the BiP foldase cycle exist, is currently unknown.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>ER associated protein degradation. The exact nature of the retrotranslocation channel is unknown. The list of E2 and E3 enzymes catalyzing ubiquitination of ERAD substrates is not exhaustive. Abbreviations: NEF&#xA0;=&#xA0;HSP70 co-chaperone, Ub&#xA0;=&#xA0;ubiquitin</p></caption><graphic position="anchor" xlink:href="10529_2007_9524_Fig3_HTML" id="MO4"/></fig></p>
+    </sec>
+    <sec id="Sec3">
+      <title>Engineering of chaperone machineries</title>
+      <p>Engineering of chaperone holdases should be straightforward. Holdases hold onto an unfolded protein and act in an equimolar ratio to the unfolded substrate, but are unable to support folding reactions. Holdases may provide a buffer capacity to prevent aggregation of unfolded proteins. Co-overexpression of chaperone foldases may be beneficial to overexpression of holdases (Smith et&#xA0;al. <xref ref-type="bibr" rid="CR46">2004</xref>; Zhang et&#xA0;al. <xref ref-type="bibr" rid="CR63">2006b</xref>). Overexpression data for calnexin/calreticulin and PDI are most easily explained by assuming that this buffer capacity is increased. Calnexin or calreticulin overexpression generally improved heterologous protein secretion (Chung et&#xA0;al. <xref ref-type="bibr" rid="CR3">2004</xref>; Conesa et&#xA0;al. <xref ref-type="bibr" rid="CR4">2002</xref>; Kato et&#xA0;al. <xref ref-type="bibr" rid="CR22">2005</xref>). Overexpression of one cycle constituent should not increase cycle capacity, if this constituent is not limiting, and if constituent levels are not co-regulated. The hypothesis that calnexin or calreticulin are limiting for the calnexin cycle seems unlikely, because of the high abundance of these proteins. Alternatively, overexpression of calnexin or calreticulin may inactivate lectins such as EDEM (Molinari et&#xA0;al. <xref ref-type="bibr" rid="CR30">2003</xref>; Oda et&#xA0;al. <xref ref-type="bibr" rid="CR32">2003</xref>), which target unfolded proteins for ERAD. Further, elevated calnexin or calreticulin levels not supported by concomitant increases in activities of other calnexin cycle components, may convert these surplus amounts of calnexin and calnexin into holdases or inactive chaperones.</p>
+      <p>PDI overexpression increased secretion of some, but not all, heterologous proteins (Butz et&#xA0;al. <xref ref-type="bibr" rid="CR2">2003</xref>; Damasceno et&#xA0;al. <xref ref-type="bibr" rid="CR5">2006</xref>; Inan et&#xA0;al. <xref ref-type="bibr" rid="CR20">2006</xref>; Kato et&#xA0;al. <xref ref-type="bibr" rid="CR22">2005</xref>; Mohan et&#xA0;al. <xref ref-type="bibr" rid="CR29">2007</xref>; Schr&#xF6;der <xref ref-type="bibr" rid="CR40">2007</xref>; Zhang et&#xA0;al. <xref ref-type="bibr" rid="CR63">2006b</xref>). PDI overexpression provides increased holdase activity in the ER. For example, overexpression of catalytically inactive PDI improved heterologous protein secretion (Hayano et&#xA0;al. <xref ref-type="bibr" rid="CR14">1995</xref>). PDI overexpression also improved secretion of heterologous proteins containing no disulfide bonds (Powers and Robinson <xref ref-type="bibr" rid="CR36">2007</xref>; Smith et&#xA0;al. <xref ref-type="bibr" rid="CR46">2004</xref>; Vad et&#xA0;al. <xref ref-type="bibr" rid="CR53">2005</xref>). Substrate selectivity of PDI may explain why PDI overexpression failed to increase heterologous protein secretion in some studies (Butz et&#xA0;al. <xref ref-type="bibr" rid="CR2">2003</xref>; Damasceno et&#xA0;al. <xref ref-type="bibr" rid="CR5">2006</xref>; Mohan et&#xA0;al. <xref ref-type="bibr" rid="CR29">2007</xref>; Schr&#xF6;der <xref ref-type="bibr" rid="CR40">2007</xref>). If this is the case, co-expression of an alternative holdase, i.e. GRP94, may yield more consistent results for different heterologous proteins. Alternatively, increased rates of disulfide bond formation or isomerization in PDI overexpressing cells may explain increased heterologous protein secretion. As an enzyme, PDI should function at substochiometric ratios to its substrates. In disulfide bond formation, regeneration of oxidized PDI may become rate-limiting in PDI overexpressing cells. PDI is an abundant ER protein, making it unlikely that its overexpression can significantly augment its catalytic activities.</p>
+      <p>Engineering of foldases seems more difficult, because of the complex regulation of these chaperones (see above). BiP overexpression increased heterologous protein secretion for about half of the heterologous proteins studied (Chung et&#xA0;al. <xref ref-type="bibr" rid="CR3">2004</xref>; Damasceno et&#xA0;al. <xref ref-type="bibr" rid="CR5">2006</xref>; Dorner et&#xA0;al. <xref ref-type="bibr" rid="CR8">1992</xref>; Hsu and Betenbaugh <xref ref-type="bibr" rid="CR19">1997</xref>; Kim et&#xA0;al. <xref ref-type="bibr" rid="CR23">2003</xref>; Schr&#xF6;der <xref ref-type="bibr" rid="CR40">2007</xref>; Smith and Robinson <xref ref-type="bibr" rid="CR45">2002</xref>; Zhang et&#xA0;al. <xref ref-type="bibr" rid="CR63">2006b</xref>), but can also have negative effects (Dorner et&#xA0;al. <xref ref-type="bibr" rid="CR8">1992</xref>; Schr&#xF6;der <xref ref-type="bibr" rid="CR40">2007</xref>). In cells overexpressing BiP one of its co-chaperones, Lhs1p, or ER luminal ATP may become limiting, converting BiP into a holdase or inactive chaperone. This may target proteins towards ERAD, stall translocation, convert Lhs1p into a holdase or inhibit Lhs1p. Increased BiP activity may stall the GRP94 and/or calnexin&#x2013;calreticulin chaperone machineries, because of the hierarchy of ER luminal chaperone systems. This again may target heterologous proteins for ERAD. BiP overexpression attenuates the unfolded protein response (UPR, see below). Thus, BiP levels in WT and BiP overexpressing cells expressing a heterologous protein may not be dramatically different. Further, BiP overexpressing cells may experience an imbalance in their chaperone machineries, because the UPR co-ordinates expression of several chaperones. Moreover, if overexpression of BiP shifts the folding bottleneck to the GRP94 and calnexin chaperone systems, upregulation of these chaperone systems by the UPR may be blunted, because of suppression of UPR activation by elevated BiP levels.</p>
+    </sec>
+    <sec id="Sec4">
+      <title>Unfolded protein response (UPR)</title>
+      <p>ER stress is the perturbation of the balance between the folding capacity and the folding demand imposed on the ER. To restore ER homeostasis, the UPR activates expression of chaperone, PDI, PPI, and ERAD genes, attenuates transcription of genes encoding secretory proteins and general translation, induces phospholipid synthesis, and induces an inflammatory response. Apoptosis is induced if these actions fail to restore ER homeostasis or in response to prolonged ER stress (Schr&#xF6;der and Kaufman <xref ref-type="bibr" rid="CR42">2005</xref>).</p>
+      <p>The ER membrane of higher eukaryotes harbors at least three classes of transmembrane proteins activated by ER stress, basic leucine zipper (bZIP) transcription factors synthesized as type II transmembrane proteins, of which the best characterized are activating transcription factor 6&#x3B1; (ATF6&#x3B1;) and ATF6&#x3B2;/cyclic adenosine monophosphate response element binding protein (CREB)-related protein (CREB-RP)/G13, the protein kinase eukaryotic translation initiation factor 2&#x3B1; (eIF2&#x3B1;) kinase 3 (EIF2AK3)/pancreatic eIF2&#x3B1; kinase (PEK)/PKR-like ER kinase (PERK), and the protein kinase-endoribonucleases ER to nucleus signaling 1&#x3B1; (ERN1&#x3B1;)/inositol-requiring 1&#x3B1; (IRE1&#x3B1;) and IRE1&#x3B2; (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). Several ATF6 paralogs, CREB3, CREB4, CREB-H, box B binding factor 2 (BBF2), and old astrocyte specifically induced substance (OASIS) have recently been described. In unstressed cells, these stress sensors are bound to BiP and kept in an inactive state. Upon ER stress, BiP is released coinciding with their activation. Whether BiP release is triggered by sequestration by unfolded proteins, conformational changes in the ER luminal domains, or reactivation of the BiP ATPase cycle is currently being debated (Kimata et&#xA0;al. <xref ref-type="bibr" rid="CR24">2004</xref>; Shen et&#xA0;al. <xref ref-type="bibr" rid="CR44">2005</xref>). ER stress also alters interactions of pro- and antiapoptotic Bcl-2 proteins at the ER membrane. These proteins regulate ER luminal Ca<sup>2+</sup> homeostasis, ER morphology, ER stress signaling, and apoptosis induced in response to ER stress (Hetz <xref ref-type="bibr" rid="CR17">2007</xref>).
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Signal transduction pathway in the UPR. In the human UPR caspase 4 substitutes for caspase 12. In yeast and filamentous fungi, the IRE1-XBP-1 (Hac1p/HACA) pathway is the only known UPR signal transduction pathway. [Reprinted in modified form with permission from Bentham Science Publishers from Schr&#xF6;der M, Kaufman, RJ (2006) Divergent roles of IRE1&#x3B1; and PERK in the unfolded protein response. Curr Mol Med 6:5&#x2013;36]</p></caption><graphic position="anchor" xlink:href="10529_2007_9524_Fig4_HTML" id="MO5"/></fig></p>
+      <p>BiP release from ATF6 induces translocation of ATF6 to the Golgi complex where its bZIP transcription factor domain is proteolytically released from the Golgi membrane by site 1 and 2 proteases (S1P and S2P) (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). This cytosolic fragment translocates to the nucleus and induces expression of chaperone genes (Strudwick and Schr&#xF6;der <xref ref-type="bibr" rid="CR48">2007</xref>). The functions of the ATF6 paralogs in the ER stress response is less well understood. OASIS contributes to activation of the BiP gene (Kondo et&#xA0;al. <xref ref-type="bibr" rid="CR25">2005</xref>), and ATF6&#xB7;CREB-H heterodimers activate inflammatory genes (Zhang et&#xA0;al. <xref ref-type="bibr" rid="CR62">2006a</xref>).</p>
+      <p>BiP release from PERK triggers oligomerization and activation of the protein kinase domain of PERK. PERK phosphorylates the bZIP transcription factor nuclear factor erythroid 2 (NF-E2) related factor 2 (NRF2) and eIF2&#x3B1; (Strudwick and Schr&#xF6;der <xref ref-type="bibr" rid="CR48">2007</xref>) (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). NRF2 phosphorylation induces its translocation to the nucleus, where a NRF2&#xB7;ATF4 heterodimer activates transcription of antioxidant response genes (Harding et&#xA0;al. <xref ref-type="bibr" rid="CR13">2003</xref>) to counteract ROS formation by repeated folding attempts of nascent polypeptide chains in ER stressed cells. eIF2&#x3B1; phosphorylation attenuates general translation and decreases the influx of nascent unfolded polypeptide chains into the ER. It also clears short-lived proteins from the cell, i.e. D-type cyclins, resulting in cell cycle arrest in G<sub>1</sub> phase, and of inhibitors of nuclear factor &#x3BA;B (NF-&#x3BA;B) (I&#x3BA;B), activating the pro-inflammatory transcription factor NF-&#x3BA;B. eIF2&#x3B1; phosphorylation also induces preferential translation of capped mRNAs containing several short upstream open reading frames (uORFs) and cap-independent translation of mRNA <italic>via</italic> internal ribosomal entry sites (IRES). Currently, the only known mRNA whose translation is stimulated by ER stress is the mRNA encoding the bZIP transcription factor ATF4. ATF4 induces expression of CCAAT enhancer binding protein (C/EBP) homologous protein (CHOP)/CHOP-10/growth arrest and DNA damage-inducible gene 153 (GADD153). CHOP represses transcription of anti-apoptotic <italic>BCL</italic>-2 (McCullough et&#xA0;al. <xref ref-type="bibr" rid="CR28">2001</xref>) and induces expression of pro-apoptotic <italic>tribbles-related protein</italic> 3 (<italic>TRB</italic>3) (Ohoka et&#xA0;al. <xref ref-type="bibr" rid="CR33">2005</xref>). Translational attenuation by PERK is transient and countered by several eIF2&#x3B1; phosphatases. The regulatory subunit of protein phosphatase 1 (PP1), GADD34, is induced late in ER stress by ATF4, and targets PP1 to eIF2&#x3B1;.</p>
+      <p>Upon BiP release, IRE1 autophosphorylates <italic>in trans</italic> and activates its endoribonuclease domain (Strudwick and Schr&#xF6;der <xref ref-type="bibr" rid="CR48">2007</xref>). Activated IRE1 cleaves exon-intron junctions in the mRNAs encoding the bZIP transcription factors homologous to ATF/CREB1 protein (Hac1p) in yeast, HACA in filamentous fungi, and X box-binding protein 1 (XBP-1)/hepatocarcinogenesis-related transcription factor (HTF)/tax-responsive element binding protein 5 (TREB5) in metazoans (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). In yeast, the <italic>HAC1</italic> exons are ligated by transfer RNA ligase. Both transcription factors activate expression of genes encoding ER-resident molecular chaperones, protein foldases, and genes encoding proteins involved in ERAD. Hac1p and XBP-1 also stimulate phospholipid biosynthesis. Spliced Hac1p represses genes under control of the transcriptional regulator unscheduled meiosis 6 protein (Ume6p), including the early meiotic genes and a large array of genes involved in carbon and nitrogen metabolism. This function of spliced Hac1p may explain the slow growth phenotype of yeast cells overexpressing Ire1p or spliced Hac1p (Mori et&#xA0;al. <xref ref-type="bibr" rid="CR31">2000</xref>). Attenuation of metabolism by Hac1p in yeast may substitute for attenuation of general translation by PERK. XBP-1 activation is delayed compared to ATF6 and PERK activation (Yoshida et&#xA0;al. <xref ref-type="bibr" rid="CR61">2003</xref>), allowing for an early folding only phase in the UPR followed by a folding and degradation phase. In mammals, phosphorylated IRE1 sequesters tumor necrosis factor receptor associated factor 2 (TRAF2) from pro-caspase 12, resulting in clustering and activation of this caspase and initiation of apoptosis (Strudwick and Schr&#xF6;der <xref ref-type="bibr" rid="CR48">2007</xref>) (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). TRAF2 recruits apoptosis signal-regulating kinase 1 (ASK1) and I&#x3BA;B kinase to IRE1. ASK1 activates the mitogen-activated protein (MAP) kinases p38 and ju-nana (jun) <italic>N</italic>-terminal kinases (JNKs). p38 and JNKs phosphorylate and potentiate pro-apoptotic transcription factors, i.e. CHOP and c-Jun, and phosphorylate and inhibit anti-apoptotic Bcl-2 and Bcl-x<sub>L</sub> to induce apoptosis (Szegezdi et&#xA0;al. <xref ref-type="bibr" rid="CR49">2006</xref>). Inhibition of JNK phosphatases by ROS formed in oxidative protein folding also contributes to JNK activation (Kamata et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). Association of the pro-apoptotic Bcl-2 family proteins Bax and Bak with the cytosolic portion of IRE1 is required for efferent IRE1 signaling, i.e. <italic>XBP-1</italic> mRNA splicing and JNK1 activation (Hetz et&#xA0;al. <xref ref-type="bibr" rid="CR16">2006</xref>).</p>
+    </sec>
+    <sec id="Sec5">
+      <title>Engineering of the UPR</title>
+      <p>Engineering of the UPR holds promise to increase concentrations of several chaperones in a functionally meaningful ratio, thus preventing inadvertent conversion of chaperone foldases into holdases, or even inactivating chaperones because of lack of concomitant increases in co-chaperones and co-factors. The UPR is as much a survival response as it is a response to boost protein secretion. Clearly, some aspects of the physiological UPR are not desirable in an expression system, for example inhibition of general translation by PERK, stimulation of ERAD and apoptosis. Overexpression of spliced Hac1p or its filamentous fungi homolog HACA increased heterologous protein secretion in <italic>Saccharomyces cerevisiae</italic> and <italic>Aspergillus niger</italic> (Valkonen et&#xA0;al. <xref ref-type="bibr" rid="CR54">2003a</xref>, <xref ref-type="bibr" rid="CR55">b</xref>). In Chinese hamster ovary (CHO)-K1 cells XBP-1 overexpression improved secretion of several heterologous proteins (Ku et&#xA0;al. <xref ref-type="bibr" rid="CR26">2007</xref>; Tigges and Fussenegger <xref ref-type="bibr" rid="CR50">2006</xref>). In yeast and filamentous fungi, secretion of several heterologous proteins was not improved or even decreased by overexpression of Hac1p (Gasser et&#xA0;al. <xref ref-type="bibr" rid="CR9">2006</xref>; Rakestraw and Wittrup <xref ref-type="bibr" rid="CR37">2005</xref>; Valkonen et&#xA0;al. <xref ref-type="bibr" rid="CR54">2003a</xref>). One drawback of some of these studies is that wild-type (WT) cells with a functional UPR are compared to WT cells overexpressing spliced Hac1p, which may explain why in some cases only marginal differences between the two cell types have been observed. The more consistent effect of spliced XBP-1 overexpression on protein secretion (Ku et&#xA0;al. <xref ref-type="bibr" rid="CR26">2007</xref>; Tigges and Fussenegger <xref ref-type="bibr" rid="CR50">2006</xref>) may be caused by a preferential activation of UPR signaling pathways that stimulate cellular functions beneficial for heterologous protein secretion, i.e. increased chaperone gene expression. This increased ER-resident chaperone machinery attenuates all UPR signaling, and most importantly, those UPR signaling pathways likely to decrease protein production, for example general translation inhibition by PERK, stimulation of ERAD and of apoptosis (&#xD6;zcan et&#xA0;al. <xref ref-type="bibr" rid="CR35">2004</xref>).</p>
+    </sec>
+    <sec id="Sec6" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>Engineering of chaperone systems by overexpressing a single component of the ER-resident protein folding machinery has overall yielded mixed results. Our basic understanding of protein folding in the ER is still incomplete. Addressing these open questions should underpin engineering approaches to improve the performance of chaperone systems. A more detailed understanding of chaperone function and regulation should inform future work to improve chaperone systems. Co-expression of different holdases or targeting of heterologous or cytosolic holdases to the ER may yield more consistent improvements for different heterologous proteins. The function of overexpressed chaperones may not be the same as at their normal physiological concentrations, because of the lack of a corresponding increase in co-chaperones and co-factors. To improve foldase function, concomitant elevation of BiP, its co-chaperones, and ATP levels should be attempted.</p>
+      <p>Engineering of the UPR suggests that mimicking an UPR by expression of its activated signaling molecules does not consistently improve productivities. Dissection of UPR signaling activities may be necessary to improve heterologous protein secretion. To place engineering of the UPR on an informed basis, we need to understand the UPR in more detail. It is still not clear what the most upstream events in activation of the UPR are, how UPR signaling integrates into cellular signaling, and how the UPR decides between a prosurvival and an apoptotic response to ER stress. Cell engineering also needs to address the potential problem that increased oxidative protein folding may be inherently toxic to cells, because of elevated cellular ROS levels.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>Work in my group is currently funded by the BBSRC (BB/C513418/1, BB/D01588X/1, and BB/E006035/1), the European Commission (MIRG-CT-2005-016411), the Wellcome Trust (079821), and travel grants from the BBSRC (ISIS 1754) and Royal Society (CG-2005/R4 and CG-2006/R4).</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Alberti</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Esser</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>H&#xF6;hfeld</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>BAG-1&#x2014;a nucleotide exchange factor of Hsc70 with multiple cellular functions</article-title>
+          <source>Cell Stress Chaperones</source>
+          <year>2003</year>
+          <volume>8</volume>
+          <fpage>225</fpage>
+          <lpage>231</lpage>
+          <pub-id pub-id-type="doi">10.1379/1466-1268(2003)008&lt;0225:BNEFOH&gt;2.0.CO;2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Alberti S, Esser C, H&#xF6;hfeld J (2003) BAG-1&#x2014;a nucleotide exchange factor of Hsc70 with multiple cellular functions. Cell Stress Chaperones 8:225&#x2013;231 <pub-id pub-id-type="pmid">14984055</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Butz</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Niebauer</surname>
+              <given-names>RT</given-names>
+            </name>
+            <name>
+              <surname>Robinson</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>Co-expression of molecular chaperones does not improve the heterologous expression of mammalian G-protein coupled receptor expression in yeast</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2003</year>
+          <volume>84</volume>
+          <fpage>292</fpage>
+          <lpage>304</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.10771</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Butz JA, Niebauer RT, Robinson AS (2003) Co-expression of molecular chaperones does not improve the heterologous expression of mammalian G-protein coupled receptor expression in yeast. Biotechnol Bioeng 84:292&#x2013;304 <pub-id pub-id-type="pmid">12968283</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chung</surname>
+              <given-names>JY</given-names>
+            </name>
+            <name>
+              <surname>Lim</surname>
+              <given-names>SW</given-names>
+            </name>
+            <name>
+              <surname>Hong</surname>
+              <given-names>YJ</given-names>
+            </name>
+            <name>
+              <surname>Hwang</surname>
+              <given-names>SO</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of doxycycline-regulated calnexin and calreticulin expression on specific thrombopoietin productivity of recombinant Chinese hamster ovary cells</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2004</year>
+          <volume>85</volume>
+          <fpage>539</fpage>
+          <lpage>546</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.10919</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chung JY, Lim SW, Hong YJ, Hwang SO, Lee GM (2004) Effect of doxycycline-regulated calnexin and calreticulin expression on specific thrombopoietin productivity of recombinant Chinese hamster ovary cells. Biotechnol Bioeng 85:539&#x2013;546 <pub-id pub-id-type="pmid">14760694</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Conesa</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Jeenes</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Archer</surname>
+              <given-names>DB</given-names>
+            </name>
+            <name>
+              <surname>Hondel</surname>
+              <given-names>CAMJJ</given-names>
+            </name>
+            <name>
+              <surname>Punt</surname>
+              <given-names>PJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Calnexin overexpression increases manganese peroxidase production in <italic>Aspergillus niger</italic></article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2002</year>
+          <volume>68</volume>
+          <fpage>846</fpage>
+          <lpage>851</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.68.2.846-851.2002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Conesa A, Jeenes D, Archer DB, van den Hondel CAMJJ, Punt PJ (2002) Calnexin overexpression increases manganese peroxidase production in Aspergillus niger. Appl Environ Microbiol 68:846&#x2013;851 <pub-id pub-id-type="pmid">11823227</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Damasceno</surname>
+              <given-names>LM</given-names>
+            </name>
+            <name>
+              <surname>Anderson</surname>
+              <given-names>KA</given-names>
+            </name>
+            <name>
+              <surname>Ritter</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Cregg</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Old</surname>
+              <given-names>LJ</given-names>
+            </name>
+            <name>
+              <surname>Batt</surname>
+              <given-names>CA</given-names>
+            </name>
+          </person-group>
+          <article-title>Cooverexpression of chaperones for enhanced secretion of a single-chain antibody fragment in <italic>Pichia pastoris</italic></article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>2006</year>
+          <volume>56</volume>
+          <fpage>157</fpage>
+          <lpage>164</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Damasceno LM, Anderson KA, Ritter G, Cregg JM, Old LJ, Batt CA (2006) Cooverexpression of chaperones for enhanced secretion of a single-chain antibody fragment in Pichia pastoris. Appl Microbiol Biotechnol 56:157&#x2013;164 </citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dorner</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of synthesis, processing, and secretion of proteins expressed in mammalian cells</article-title>
+          <source>Methods Enzymol</source>
+          <year>1990</year>
+          <volume>185</volume>
+          <fpage>577</fpage>
+          <lpage>596</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dorner AJ, Kaufman RJ (1990) Analysis of synthesis, processing, and secretion of proteins expressed in mammalian cells. Methods Enzymol 185:577&#x2013;596 <pub-id pub-id-type="pmid">2381330</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dorner</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Wasley</surname>
+              <given-names>LC</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Increased synthesis of secreted proteins induces expression of glucose-regulated proteins in butyrate-treated Chinese hamster ovary cells</article-title>
+          <source>J Biol Chem</source>
+          <year>1989</year>
+          <volume>264</volume>
+          <fpage>20602</fpage>
+          <lpage>20607</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dorner AJ, Wasley LC, Kaufman RJ (1989) Increased synthesis of secreted proteins induces expression of glucose-regulated proteins in butyrate-treated Chinese hamster ovary cells. J Biol Chem 264:20602&#x2013;20607 <pub-id pub-id-type="pmid">2511206</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dorner</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Wasley</surname>
+              <given-names>LC</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Overexpression of GRP78 mitigates stress induction of glucose regulated proteins and blocks secretion of selective proteins in Chinese hamster ovary cells</article-title>
+          <source>EMBO J</source>
+          <year>1992</year>
+          <volume>11</volume>
+          <fpage>1563</fpage>
+          <lpage>1571</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Dorner AJ, Wasley LC, Kaufman RJ (1992) Overexpression of GRP78 mitigates stress induction of glucose regulated proteins and blocks secretion of selective proteins in Chinese hamster ovary cells. EMBO J 11:1563&#x2013;1571 <pub-id pub-id-type="pmid">1373378</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gasser</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Maurer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Gach</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kunert</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Mattanovich</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Engineering of <italic>Pichia pastoris</italic> for improved production of antibody fragments</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2006</year>
+          <volume>94</volume>
+          <fpage>353</fpage>
+          <lpage>361</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.20851</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gasser B, Maurer M, Gach J, Kunert R, Mattanovich D (2006) Engineering of Pichia pastoris for improved production of antibody fragments. Biotechnol Bioeng 94:353&#x2013;361 <pub-id pub-id-type="pmid">16570317</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gauss</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Jarosch</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Sommer</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Hirsch</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>A complex of Yos9p and the HRD ligase integrates endoplasmic reticulum quality control into the degradation machinery</article-title>
+          <source>Nat Cell Biol</source>
+          <year>2006</year>
+          <volume>8</volume>
+          <fpage>849</fpage>
+          <lpage>854</lpage>
+          <pub-id pub-id-type="doi">10.1038/ncb1445</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gauss R, Jarosch E, Sommer T, Hirsch C (2006a) A complex of Yos9p and the HRD ligase integrates endoplasmic reticulum quality control into the degradation machinery. Nat Cell Biol 8:849&#x2013;854 <pub-id pub-id-type="pmid">16845381</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gauss</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Sommer</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Jarosch</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>The Hrd1p ligase complex forms a linchpin between ER-lumenal substrate selection and Cdc48p recruitment</article-title>
+          <source>EMBO J</source>
+          <year>2006</year>
+          <volume>25</volume>
+          <fpage>1827</fpage>
+          <lpage>1835</lpage>
+          <pub-id pub-id-type="doi">10.1038/sj.emboj.7601088</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gauss R, Sommer T, Jarosch E (2006b) The Hrd1p ligase complex forms a linchpin between ER-lumenal substrate selection and Cdc48p recruitment. EMBO J 25:1827&#x2013;1835 <pub-id pub-id-type="pmid">16619026</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gennaro</surname>
+              <given-names>DE</given-names>
+            </name>
+            <name>
+              <surname>Hoffstein</surname>
+              <given-names>ST</given-names>
+            </name>
+            <name>
+              <surname>Marks</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Ramos</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Oka</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Reff</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Hart</surname>
+              <given-names>TK</given-names>
+            </name>
+            <name>
+              <surname>Bugelski</surname>
+              <given-names>PJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Quantitative immunocytochemical staining for recombinant tissue-type plasminogen activator in transfected Chinese hamster ovary cells</article-title>
+          <source>Proc Soc Exp Biol Med</source>
+          <year>1991</year>
+          <volume>198</volume>
+          <fpage>591</fpage>
+          <lpage>598</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Gennaro DE, Hoffstein ST, Marks G, Ramos L, Oka MS, Reff ME, Hart TK, Bugelski PJ (1991) Quantitative immunocytochemical staining for recombinant tissue-type plasminogen activator in transfected Chinese hamster ovary cells. Proc Soc Exp Biol Med 198:591&#x2013;598 <pub-id pub-id-type="pmid">1909792</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Harding</surname>
+              <given-names>HP</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Zeng</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Novoa</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>PD</given-names>
+            </name>
+            <name>
+              <surname>Calfon</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sadri</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Yun</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Popko</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Paules</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Stojdl</surname>
+              <given-names>DF</given-names>
+            </name>
+            <name>
+              <surname>Bell</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Hettmann</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Leiden</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Ron</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>An integrated stress response regulates amino acid metabolism and resistance to oxidative stress</article-title>
+          <source>Mol Cell</source>
+          <year>2003</year>
+          <volume>11</volume>
+          <fpage>619</fpage>
+          <lpage>633</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1097-2765(03)00105-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Harding HP, Zhang Y, Zeng H, Novoa I, Lu PD, Calfon M, Sadri N, Yun C, Popko B, Paules R, Stojdl DF, Bell JC, Hettmann T, Leiden JM, Ron D (2003) An integrated stress response regulates amino acid metabolism and resistance to oxidative stress. Mol Cell 11:619&#x2013;633 <pub-id pub-id-type="pmid">12667446</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hayano</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Hirose</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kikuchi</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein disulfide isomerase mutant lacking its isomerase activity accelerates protein folding in the cell</article-title>
+          <source>FEBS Lett</source>
+          <year>1995</year>
+          <volume>377</volume>
+          <fpage>505</fpage>
+          <lpage>511</lpage>
+          <pub-id pub-id-type="doi">10.1016/0014-5793(95)01410-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hayano T, Hirose M, Kikuchi M (1995) Protein disulfide isomerase mutant lacking its isomerase activity accelerates protein folding in the cell. FEBS Lett 377:505&#x2013;511 <pub-id pub-id-type="pmid">8549786</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Haynes</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Titus</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Cooper</surname>
+              <given-names>AA</given-names>
+            </name>
+          </person-group>
+          <article-title>Degradation of misfolded proteins prevents ER-derived oxidative stress and cell death</article-title>
+          <source>Mol Cell</source>
+          <year>2004</year>
+          <volume>15</volume>
+          <fpage>767</fpage>
+          <lpage>776</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.molcel.2004.08.025</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Haynes CM, Titus EA, Cooper AA (2004) Degradation of misfolded proteins prevents ER-derived oxidative stress and cell death. Mol Cell 15:767&#x2013;776 <pub-id pub-id-type="pmid">15350220</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="other">Hetz CA (2007) ER stress signaling and the BCL-2 family of proteins: from adaptation to irreversible cellular damage. Antioxid Redox Signal (this issue)</citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hetz</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bernasconi</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Fisher</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>AH</given-names>
+            </name>
+            <name>
+              <surname>Bassik</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Antonsson</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Brandt</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Iwakoshi</surname>
+              <given-names>NN</given-names>
+            </name>
+            <name>
+              <surname>Schinzel</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Glimcher</surname>
+              <given-names>LH</given-names>
+            </name>
+            <name>
+              <surname>Korsmeyer</surname>
+              <given-names>SJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Proapoptotic BAX and BAK modulate the unfolded protein response by a direct interaction with IRE1&#x3B1;</article-title>
+          <source>Science</source>
+          <year>2006</year>
+          <volume>312</volume>
+          <fpage>572</fpage>
+          <lpage>576</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1123480</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hetz C, Bernasconi P, Fisher J, Lee AH, Bassik MC, Antonsson B, Brandt GS, Iwakoshi NN, Schinzel A, Glimcher LH, Korsmeyer SJ (2006) Proapoptotic BAX and BAK modulate the unfolded protein response by a direct interaction with IRE1&#x3B1;. Science 312:572&#x2013;576 <pub-id pub-id-type="pmid">16645094</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>H&#xF6;hfeld</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Cyr</surname>
+              <given-names>DM</given-names>
+            </name>
+            <name>
+              <surname>Patterson</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>From the cradle to the grave: molecular chaperones that may choose between folding and degradation</article-title>
+          <source>EMBO Rep</source>
+          <year>2001</year>
+          <volume>2</volume>
+          <fpage>885</fpage>
+          <lpage>890</lpage>
+          <pub-id pub-id-type="doi">10.1093/embo-reports/kve206</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">H&#xF6;hfeld J, Cyr DM, Patterson C (2001) From the cradle to the grave: molecular chaperones that may choose between folding and degradation. EMBO Rep 2:885&#x2013;890 <pub-id pub-id-type="pmid">11600451</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hsu</surname>
+              <given-names>T-A</given-names>
+            </name>
+            <name>
+              <surname>Betenbaugh</surname>
+              <given-names>MJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Coexpression of molecular chaperone BiP improves immunoglobulin solubility and IgG secretion from <italic>Trichoplusia ni</italic> insect cells</article-title>
+          <source>Biotechnol Prog</source>
+          <year>1997</year>
+          <volume>13</volume>
+          <fpage>96</fpage>
+          <lpage>104</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp960088d</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hsu T-A, Betenbaugh MJ (1997) Coexpression of molecular chaperone BiP improves immunoglobulin solubility and IgG secretion from Trichoplusia ni insect cells. Biotechnol Prog 13:96&#x2013;104 <pub-id pub-id-type="pmid">9041711</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Inan</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Aryasomayajula</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Sinha</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Meagher</surname>
+              <given-names>MM</given-names>
+            </name>
+          </person-group>
+          <article-title>Enhancement of protein secretion in <italic>Pichia pastoris</italic> by overexpression of protein disulfide isomerase</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2006</year>
+          <volume>93</volume>
+          <fpage>771</fpage>
+          <lpage>778</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.20762</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Inan M, Aryasomayajula D, Sinha J, Meagher MM (2006) Enhancement of protein secretion in Pichia pastoris by overexpression of protein disulfide isomerase. Biotechnol Bioeng 93:771&#x2013;778 <pub-id pub-id-type="pmid">16255058</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kamata</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Honda</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Maeda</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Chang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Hirata</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Karin</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Reactive oxygen species promote TNF&#x3B1;-induced death and sustained JNK activation by inhibiting MAP kinase phosphatases</article-title>
+          <source>Cell</source>
+          <year>2005</year>
+          <volume>120</volume>
+          <fpage>649</fpage>
+          <lpage>661</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cell.2004.12.041</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kamata H, Honda S, Maeda S, Chang L, Hirata H, Karin M (2005) Reactive oxygen species promote TNF&#x3B1;-induced death and sustained JNK activation by inhibiting MAP kinase phosphatases. Cell 120:649&#x2013;661 <pub-id pub-id-type="pmid">15766528</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kato</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Murata</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Usui</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>EY</given-names>
+            </name>
+          </person-group>
+          <article-title>Improvement of the production of GFPuv-beta1,3-<italic>N</italic>-acetylglucosaminyltransferase 2 fusion protein using a molecular chaperone-assisted insect-cell-based expression system</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2005</year>
+          <volume>89</volume>
+          <fpage>424</fpage>
+          <lpage>433</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.20362</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kato T, Murata T, Usui T, Park EY (2005) Improvement of the production of GFPuv-beta1,3-N-acetylglucosaminyltransferase 2 fusion protein using a molecular chaperone-assisted insect-cell-based expression system. Biotechnol Bioeng 89:424&#x2013;433 <pub-id pub-id-type="pmid">15609270</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kim</surname>
+              <given-names>M-D</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>K-C</given-names>
+            </name>
+            <name>
+              <surname>Kang</surname>
+              <given-names>H-A</given-names>
+            </name>
+            <name>
+              <surname>Rhee</surname>
+              <given-names>S-K</given-names>
+            </name>
+            <name>
+              <surname>Seo</surname>
+              <given-names>J-H</given-names>
+            </name>
+          </person-group>
+          <article-title>Coexpression of BiP increased antithrombotic hirudin production in recombinant <italic>Saccharomyces cerevisiae</italic></article-title>
+          <source>J Biotechnol</source>
+          <year>2003</year>
+          <volume>101</volume>
+          <fpage>81</fpage>
+          <lpage>87</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0168-1656(02)00288-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kim M-D, Han K-C, Kang H-A, Rhee S-K, Seo J-H (2003) Coexpression of BiP increased antithrombotic hirudin production in recombinant Saccharomyces cerevisiae. J Biotechnol 101:81&#x2013;87 <pub-id pub-id-type="pmid">12523972</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kimata</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Oikawa</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Ishiwata-Kimata</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Kohno</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>A role for BiP as an adjustor for the endoplasmic reticulum stress-sensing protein Ire1</article-title>
+          <source>J Cell Biol</source>
+          <year>2004</year>
+          <volume>167</volume>
+          <fpage>445</fpage>
+          <lpage>456</lpage>
+          <pub-id pub-id-type="doi">10.1083/jcb.200405153</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kimata Y, Oikawa D, Shimizu Y, Ishiwata-Kimata Y, Kohno K (2004) A role for BiP as an adjustor for the endoplasmic reticulum stress-sensing protein Ire1. J Cell Biol 167:445&#x2013;456 <pub-id pub-id-type="pmid">15520230</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kondo</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Murakami</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Tatsumi</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ogata</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kanemoto</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Otori</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Iseki</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Wanaka</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Imaizumi</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>OASIS, a CREB/ATF-family member, modulates UPR signalling in astrocytes</article-title>
+          <source>Nat Cell Biol</source>
+          <year>2005</year>
+          <volume>7</volume>
+          <fpage>186</fpage>
+          <lpage>194</lpage>
+          <pub-id pub-id-type="doi">10.1038/ncb1213</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kondo S, Murakami T, Tatsumi K, Ogata M, Kanemoto S, Otori K, Iseki K, Wanaka A, Imaizumi K (2005) OASIS, a CREB/ATF-family member, modulates UPR signalling in astrocytes. Nat Cell Biol 7:186&#x2013;194 <pub-id pub-id-type="pmid">15665855</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="other">Ku SC, Ng DT, Yap MG, Chao SH (2007) Effects of overexpression of X-box binding protein 1 on recombinant protein production in Chinese hamster ovary and NS0 myeloma cells. Biotechnol Bioeng. doi: 10.1002/bit.21562 (in press)</citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lederkremer</surname>
+              <given-names>GZ</given-names>
+            </name>
+            <name>
+              <surname>Glickman</surname>
+              <given-names>MH</given-names>
+            </name>
+          </person-group>
+          <article-title>A window of opportunity: timing protein degradation by trimming of sugars and ubiquitins</article-title>
+          <source>Trends Biochem Sci</source>
+          <year>2005</year>
+          <volume>30</volume>
+          <fpage>297</fpage>
+          <lpage>303</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.tibs.2005.04.010</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lederkremer GZ, Glickman MH (2005) A window of opportunity: timing protein degradation by trimming of sugars and ubiquitins. Trends Biochem Sci 30:297&#x2013;303 <pub-id pub-id-type="pmid">15950873</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McCullough</surname>
+              <given-names>KD</given-names>
+            </name>
+            <name>
+              <surname>Martindale</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Klotz</surname>
+              <given-names>LO</given-names>
+            </name>
+            <name>
+              <surname>Aw</surname>
+              <given-names>TY</given-names>
+            </name>
+            <name>
+              <surname>Holbrook</surname>
+              <given-names>NJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Gadd153 sensitizes cells to endoplasmic reticulum stress by down-regulating Bcl2 and perturbing the cellular redox state</article-title>
+          <source>Mol Cell Biol</source>
+          <year>2001</year>
+          <volume>21</volume>
+          <fpage>1249</fpage>
+          <lpage>1259</lpage>
+          <pub-id pub-id-type="doi">10.1128/MCB.21.4.1249-1259.2001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McCullough KD, Martindale JL, Klotz LO, Aw TY, Holbrook NJ (2001) Gadd153 sensitizes cells to endoplasmic reticulum stress by down-regulating Bcl2 and perturbing the cellular redox state. Mol Cell Biol 21:1249&#x2013;1259 <pub-id pub-id-type="pmid">11158311</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mohan</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Chung</surname>
+              <given-names>JY</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of doxycycline-regulated protein disulfide isomerase expression on the specific productivity of recombinant CHO cells: thrombopoietin and antibody</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2007</year>
+          <volume>98</volume>
+          <issue>3</issue>
+          <fpage>611</fpage>
+          <lpage>615</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.21453</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mohan C, Park SH, Chung JY, Lee GM (2007) Effect of doxycycline-regulated protein disulfide isomerase expression on the specific productivity of recombinant CHO cells: thrombopoietin and antibody. Biotechnol Bioeng 98(3):611&#x2013;615 <pub-id pub-id-type="pmid">17421043</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Molinari</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Calanca</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Galli</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Lucca</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Paganetti</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Role of EDEM in the release of misfolded glycoproteins from the calnexin cycle</article-title>
+          <source>Science</source>
+          <year>2003</year>
+          <volume>299</volume>
+          <fpage>1397</fpage>
+          <lpage>1400</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1079474</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Molinari M, Calanca V, Galli C, Lucca P, Paganetti P (2003) Role of EDEM in the release of misfolded glycoproteins from the calnexin cycle. Science 299:1397&#x2013;1400 <pub-id pub-id-type="pmid">12610306</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mori</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ogawa</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Kawahara</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Yanagi</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Yura</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>mRNA splicing-mediated <italic>C</italic>-terminal replacement of transcription factor Hac1p is required for efficient activation of the unfolded protein response</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2000</year>
+          <volume>97</volume>
+          <fpage>4660</fpage>
+          <lpage>4665</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.050010197</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mori K, Ogawa N, Kawahara T, Yanagi H, Yura T (2000) mRNA splicing-mediated C-terminal replacement of transcription factor Hac1p is required for efficient activation of the unfolded protein response. Proc Natl Acad Sci USA 97:4660&#x2013;4665 <pub-id pub-id-type="pmid">10781071</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oda</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Hosokawa</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Wada</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Nagata</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>EDEM as an acceptor of terminally misfolded glycoproteins released from calnexin</article-title>
+          <source>Science</source>
+          <year>2003</year>
+          <volume>299</volume>
+          <fpage>1394</fpage>
+          <lpage>1397</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1079181</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Oda Y, Hosokawa N, Wada I, Nagata K (2003) EDEM as an acceptor of terminally misfolded glycoproteins released from calnexin. Science 299:1394&#x2013;1397 <pub-id pub-id-type="pmid">12610305</pub-id></citation>
+      </ref>
+      <ref id="CR33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ohoka</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Yoshii</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hattori</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Onozaki</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Hayashi</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>TRB3</italic>, a novel ER stress-inducible gene, is induced via ATF4-CHOP pathway and is involved in cell death</article-title>
+          <source>EMBO J</source>
+          <year>2005</year>
+          <volume>24</volume>
+          <fpage>1243</fpage>
+          <lpage>1255</lpage>
+          <pub-id pub-id-type="doi">10.1038/sj.emboj.7600596</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ohoka N, Yoshii S, Hattori T, Onozaki K, Hayashi H (2005) TRB3, a novel ER stress-inducible gene, is induced via ATF4-CHOP pathway and is involved in cell death. EMBO J 24:1243&#x2013;1255 <pub-id pub-id-type="pmid">15775988</pub-id></citation>
+      </ref>
+      <ref id="CR34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oyadomari</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Yun</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Fisher</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Kreglinger</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Kreibich</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Oyadomari</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Harding</surname>
+              <given-names>HP</given-names>
+            </name>
+            <name>
+              <surname>Goodman</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Harant</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Garrison</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Taunton</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Katze</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Ron</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Cotranslocational degradation protects the stressed endoplasmic reticulum from protein overload</article-title>
+          <source>Cell</source>
+          <year>2006</year>
+          <volume>126</volume>
+          <fpage>727</fpage>
+          <lpage>739</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cell.2006.06.051</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Oyadomari S, Yun C, Fisher EA, Kreglinger N, Kreibich G, Oyadomari M, Harding HP, Goodman AG, Harant H, Garrison JL, Taunton J, Katze MG, Ron D (2006) Cotranslocational degradation protects the stressed endoplasmic reticulum from protein overload. Cell 126:727&#x2013;739 <pub-id pub-id-type="pmid">16923392</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>&#xD6;zcan</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Cao</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Yilmaz</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>A-H</given-names>
+            </name>
+            <name>
+              <surname>Iwakoshi</surname>
+              <given-names>NN</given-names>
+            </name>
+            <name>
+              <surname>Ozdelen</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Tuncman</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>G&#xF6;rg&#xFC;n</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Glimcher</surname>
+              <given-names>LH</given-names>
+            </name>
+            <name>
+              <surname>Hotamisligil</surname>
+              <given-names>GS</given-names>
+            </name>
+          </person-group>
+          <article-title>Endoplasmic reticulum stress links obesity, insulin action, and type 2 diabetes</article-title>
+          <source>Science</source>
+          <year>2004</year>
+          <volume>306</volume>
+          <fpage>457</fpage>
+          <lpage>461</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1103160</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">&#xD6;zcan U, Cao Q, Yilmaz E, Lee A-H, Iwakoshi NN, Ozdelen E, Tuncman G, G&#xF6;rg&#xFC;n C, Glimcher LH, Hotamisligil GS (2004) Endoplasmic reticulum stress links obesity, insulin action, and type 2 diabetes. Science 306:457&#x2013;461 <pub-id pub-id-type="pmid">15486293</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Powers</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Robinson</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>PDI improves secretion of redox-inactive &#x3B2;-glucosidase</article-title>
+          <source>Biotechnol Prog</source>
+          <year>2007</year>
+          <volume>23</volume>
+          <fpage>364</fpage>
+          <lpage>369</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp060287p</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Powers SL, Robinson AS (2007) PDI improves secretion of redox-inactive &#x3B2;-glucosidase. Biotechnol Prog 23:364&#x2013;369 <pub-id pub-id-type="pmid">17315887</pub-id></citation>
+      </ref>
+      <ref id="CR37">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rakestraw</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Wittrup</surname>
+              <given-names>KD</given-names>
+            </name>
+          </person-group>
+          <article-title>Contrasting secretory processing of simultaneously expressed heterologous proteins in <italic>Saccharomyces cerevisiae</italic></article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2005</year>
+          <volume>93</volume>
+          <fpage>896</fpage>
+          <lpage>905</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.20780</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rakestraw A, Wittrup KD (2005) Contrasting secretory processing of simultaneously expressed heterologous proteins in Saccharomyces cerevisiae. Biotechnol Bioeng 93:896&#x2013;905 <pub-id pub-id-type="pmid">16333864</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rosser</surname>
+              <given-names>MF</given-names>
+            </name>
+            <name>
+              <surname>Trotta</surname>
+              <given-names>BM</given-names>
+            </name>
+            <name>
+              <surname>Marshall</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Berwin</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Nicchitta</surname>
+              <given-names>CV</given-names>
+            </name>
+          </person-group>
+          <article-title>Adenosine nucleotides and the regulation of GRP94-client protein interactions</article-title>
+          <source>Biochemistry</source>
+          <year>2004</year>
+          <volume>43</volume>
+          <fpage>8835</fpage>
+          <lpage>8845</lpage>
+          <pub-id pub-id-type="doi">10.1021/bi049539q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rosser MF, Trotta BM, Marshall MR, Berwin B, Nicchitta CV (2004) Adenosine nucleotides and the regulation of GRP94-client protein interactions. Biochemistry 43:8835&#x2013;8845 <pub-id pub-id-type="pmid">15236592</pub-id></citation>
+      </ref>
+      <ref id="CR39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ruddock</surname>
+              <given-names>LW</given-names>
+            </name>
+            <name>
+              <surname>Molinari</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>N</italic>-glycan processing in ER quality control</article-title>
+          <source>J Cell Sci</source>
+          <year>2006</year>
+          <volume>119</volume>
+          <fpage>4373</fpage>
+          <lpage>4380</lpage>
+          <pub-id pub-id-type="doi">10.1242/jcs.03225</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ruddock LW, Molinari M (2006) N-glycan processing in ER quality control. J Cell Sci 119:4373&#x2013;4380 <pub-id pub-id-type="pmid">17074831</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schr&#xF6;der</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Robson</surname>
+              <given-names>GD</given-names>
+            </name>
+            <name>
+              <surname>West</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Gadd</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>The cellular response to protein unfolding stress</article-title>
+          <source>Exploitation of fungi. British mycological society symposium series</source>
+          <year>2007</year>
+          <publisher-loc>Cambridge</publisher-loc>
+          <publisher-name>Cambridge University Press</publisher-name>
+          <fpage>117</fpage>
+          <lpage>139</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schr&#xF6;der M (2007) The cellular response to protein unfolding stress. In: Robson GD, van West P, Gadd GM (eds) Exploitation of fungi. British mycological society symposium series, vol 26. Cambridge University Press, Cambridge, pp 117&#x2013;139 </citation>
+      </ref>
+      <ref id="CR41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schr&#xF6;der</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Friedl</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Overexpression of recombinant human antithrombin III in Chinese hamster ovary cells results in malformation and decreased secretion of the recombinant protein</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1997</year>
+          <volume>53</volume>
+          <fpage>547</fpage>
+          <lpage>559</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0290(19970320)53:6&lt;547::AID-BIT2&gt;3.0.CO;2-M</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schr&#xF6;der M, Friedl P (1997) Overexpression of recombinant human antithrombin III in Chinese hamster ovary cells results in malformation and decreased secretion of the recombinant protein. Biotechnol Bioeng 53:547&#x2013;559 <pub-id pub-id-type="pmid">18634055</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schr&#xF6;der</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>The mammalian unfolded protein response</article-title>
+          <source>Annu Rev Biochem</source>
+          <year>2005</year>
+          <volume>74</volume>
+          <fpage>739</fpage>
+          <lpage>789</lpage>
+          <pub-id pub-id-type="doi">10.1146/annurev.biochem.73.011303.074134</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schr&#xF6;der M, Kaufman RJ (2005) The mammalian unfolded protein response. Annu Rev Biochem 74:739&#x2013;789 <pub-id pub-id-type="pmid">15952902</pub-id></citation>
+      </ref>
+      <ref id="CR43">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schr&#xF6;der</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>K&#xF6;rner</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Friedl</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Quantitative analysis of transcription and translation in gene amplified Chinese hamster ovary cells on the basis of a kinetic model</article-title>
+          <source>Cytotechnology</source>
+          <year>1999</year>
+          <volume>29</volume>
+          <fpage>93</fpage>
+          <lpage>102</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1008077603328</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schr&#xF6;der M, K&#xF6;rner C, Friedl P (1999) Quantitative analysis of transcription and translation in gene amplified Chinese hamster ovary cells on the basis of a kinetic model. Cytotechnology 29:93&#x2013;102 </citation>
+      </ref>
+      <ref id="CR44">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shen</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Snapp</surname>
+              <given-names>EL</given-names>
+            </name>
+            <name>
+              <surname>Lippincott-Schwartz</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Prywes</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Stable binding of ATF6 to BiP in the endoplasmic reticulum stress response</article-title>
+          <source>Mol Cell Biol</source>
+          <year>2005</year>
+          <volume>25</volume>
+          <fpage>921</fpage>
+          <lpage>932</lpage>
+          <pub-id pub-id-type="doi">10.1128/MCB.25.3.921-932.2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Shen JS, Snapp EL, Lippincott-Schwartz J, Prywes R (2005) Stable binding of ATF6 to BiP in the endoplasmic reticulum stress response. Mol Cell Biol 25:921&#x2013;932 <pub-id pub-id-type="pmid">15657421</pub-id></citation>
+      </ref>
+      <ref id="CR45">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Robinson</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>Overexpression of an archaeal protein in yeast: secretion bottleneck at the ER</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2002</year>
+          <volume>79</volume>
+          <fpage>713</fpage>
+          <lpage>723</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.10367</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Smith JD, Robinson AS (2002) Overexpression of an archaeal protein in yeast: secretion bottleneck at the ER. Biotechnol Bioeng 79:713&#x2013;723 <pub-id pub-id-type="pmid">12209794</pub-id></citation>
+      </ref>
+      <ref id="CR46">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Tang</surname>
+              <given-names>BC</given-names>
+            </name>
+            <name>
+              <surname>Robinson</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein disulfide isomerase, but not binding protein, overexpression enhances secretion of a non-disulfide-bonded protein in yeast</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>2004</year>
+          <volume>85</volume>
+          <fpage>340</fpage>
+          <lpage>350</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.10853</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Smith JD, Tang BC, Robinson AS (2004) Protein disulfide isomerase, but not binding protein, overexpression enhances secretion of a non-disulfide-bonded protein in yeast. Biotechnol Bioeng 85:340&#x2013;350 <pub-id pub-id-type="pmid">14748090</pub-id></citation>
+      </ref>
+      <ref id="CR47">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Steel</surname>
+              <given-names>GJ</given-names>
+            </name>
+            <name>
+              <surname>Fullerton</surname>
+              <given-names>DM</given-names>
+            </name>
+            <name>
+              <surname>Tyson</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Stirling</surname>
+              <given-names>CJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Coordinated activation of Hsp70 chaperones</article-title>
+          <source>Science</source>
+          <year>2004</year>
+          <volume>303</volume>
+          <fpage>98</fpage>
+          <lpage>101</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1092287</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Steel GJ, Fullerton DM, Tyson JR, Stirling CJ (2004) Coordinated activation of Hsp70 chaperones. Science 303:98&#x2013;101 <pub-id pub-id-type="pmid">14704430</pub-id></citation>
+      </ref>
+      <ref id="CR48">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Strudwick</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Schr&#xF6;der</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Al-Rubeai</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Fussenegger</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>The unfolded protein response</article-title>
+          <source>Systems biology. Cell engineering</source>
+          <year>2007</year>
+          <publisher-loc>Dordrecht</publisher-loc>
+          <publisher-name>Springer Verlag</publisher-name>
+          <fpage>69</fpage>
+          <lpage>157</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Strudwick N, Schr&#xF6;der M (2007) The unfolded protein response. In: Al-Rubeai M, Fussenegger M (eds) Systems biology. Cell engineering, vol 5. Springer Verlag, Dordrecht, pp 69&#x2013;157 </citation>
+      </ref>
+      <ref id="CR49">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Szegezdi</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Logue</surname>
+              <given-names>SE</given-names>
+            </name>
+            <name>
+              <surname>Gorman</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Samali</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Mediators of endoplasmic reticulum stress-induced apoptosis</article-title>
+          <source>EMBO Rep</source>
+          <year>2006</year>
+          <volume>7</volume>
+          <fpage>880</fpage>
+          <lpage>885</lpage>
+          <pub-id pub-id-type="doi">10.1038/sj.embor.7400779</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Szegezdi E, Logue SE, Gorman AM, Samali A (2006) Mediators of endoplasmic reticulum stress-induced apoptosis. EMBO Rep 7:880&#x2013;885 <pub-id pub-id-type="pmid">16953201</pub-id></citation>
+      </ref>
+      <ref id="CR50">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tigges</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Fussenegger</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Xbp1-based engineering of secretory capacity enhances the productivity of Chinese hamster ovary cells</article-title>
+          <source>Metab Eng</source>
+          <year>2006</year>
+          <volume>8</volume>
+          <fpage>264</fpage>
+          <lpage>272</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.ymben.2006.01.006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tigges M, Fussenegger M (2006) Xbp1-based engineering of secretory capacity enhances the productivity of Chinese hamster ovary cells. Metab Eng 8:264&#x2013;272 </citation>
+      </ref>
+      <ref id="CR51">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tsai</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Rodighiero</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Lencer</surname>
+              <given-names>WI</given-names>
+            </name>
+            <name>
+              <surname>Rapoport</surname>
+              <given-names>TA</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein disulfide isomerase acts as a redox-dependent chaperone to unfold cholera toxin</article-title>
+          <source>Cell</source>
+          <year>2001</year>
+          <volume>104</volume>
+          <fpage>937</fpage>
+          <lpage>948</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0092-8674(01)00289-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tsai B, Rodighiero C, Lencer WI, Rapoport TA (2001) Protein disulfide isomerase acts as a redox-dependent chaperone to unfold cholera toxin. Cell 104:937&#x2013;948 <pub-id pub-id-type="pmid">11290330</pub-id></citation>
+      </ref>
+      <ref id="CR52">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tu</surname>
+              <given-names>BP</given-names>
+            </name>
+            <name>
+              <surname>Weissman</surname>
+              <given-names>JS</given-names>
+            </name>
+          </person-group>
+          <article-title>Oxidative protein folding in eukaryotes: mechanisms and consequences</article-title>
+          <source>J Cell Biol</source>
+          <year>2004</year>
+          <volume>164</volume>
+          <fpage>341</fpage>
+          <lpage>346</lpage>
+          <pub-id pub-id-type="doi">10.1083/jcb.200311055</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Tu BP, Weissman JS (2004) Oxidative protein folding in eukaryotes: mechanisms and consequences. J Cell Biol 164:341&#x2013;346 <pub-id pub-id-type="pmid">14757749</pub-id></citation>
+      </ref>
+      <ref id="CR53">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vad</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Nafstad</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Dahl</surname>
+              <given-names>LA</given-names>
+            </name>
+            <name>
+              <surname>Gabrielsen</surname>
+              <given-names>OS</given-names>
+            </name>
+          </person-group>
+          <article-title>Engineering of a <italic>Pichia pastoris</italic> expression system for secretion of high amounts of intact human parathyroid hormone</article-title>
+          <source>J Biotechnol</source>
+          <year>2005</year>
+          <volume>116</volume>
+          <fpage>251</fpage>
+          <lpage>260</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jbiotec.2004.12.004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vad R, Nafstad E, Dahl LA, Gabrielsen OS (2005) Engineering of a Pichia pastoris expression system for secretion of high amounts of intact human parathyroid hormone. J Biotechnol 116:251&#x2013;260 <pub-id pub-id-type="pmid">15707686</pub-id></citation>
+      </ref>
+      <ref id="CR54">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Valkonen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Penttil&#xE4;</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Saloheimo</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of inactivation and constitutive expression of the unfolded-protein response pathway on protein production in the yeast <italic>Saccharomyces cerevisiae</italic></article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2003</year>
+          <volume>69</volume>
+          <fpage>2065</fpage>
+          <lpage>2072</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.69.4.2065-2072.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Valkonen M, Penttil&#xE4; M, Saloheimo M (2003a) Effects of inactivation and constitutive expression of the unfolded-protein response pathway on protein production in the yeast Saccharomyces cerevisiae. Appl Environ Microbiol 69:2065&#x2013;2072 <pub-id pub-id-type="pmid">12676684</pub-id></citation>
+      </ref>
+      <ref id="CR55">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Valkonen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Ward</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Penttil&#xE4;</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Saloheimo</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Improvement of foreign-protein production in <italic>Aspergillus niger</italic> var. <italic>awamori</italic> by constitutive induction of the unfolded-protein response</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2003</year>
+          <volume>69</volume>
+          <fpage>6979</fpage>
+          <lpage>6986</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.69.12.6979-6986.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Valkonen M, Ward M, Wang H, Penttil&#xE4; M, Saloheimo M (2003b) Improvement of foreign-protein production in Aspergillus niger var. awamori by constitutive induction of the unfolded-protein response. Appl Environ Microbiol 69:6979&#x2013;6986 <pub-id pub-id-type="pmid">14660339</pub-id></citation>
+      </ref>
+      <ref id="CR56">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Werner</surname>
+              <given-names>RG</given-names>
+            </name>
+          </person-group>
+          <article-title>Economic aspects of commercial manufacture of biopharmaceuticals</article-title>
+          <source>J Biotechnol</source>
+          <year>2004</year>
+          <volume>113</volume>
+          <fpage>171</fpage>
+          <lpage>182</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jbiotec.2004.04.036</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Werner RG (2004) Economic aspects of commercial manufacture of biopharmaceuticals. J Biotechnol 113:171&#x2013;182 <pub-id pub-id-type="pmid">15380655</pub-id></citation>
+      </ref>
+      <ref id="CR57">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wilkinson</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Gilbert</surname>
+              <given-names>HF</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein disulfide isomerase</article-title>
+          <source>Biochim Biophys Acta</source>
+          <year>2004</year>
+          <volume>1699</volume>
+          <fpage>35</fpage>
+          <lpage>44</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Wilkinson B, Gilbert HF (2004) Protein disulfide isomerase. Biochim Biophys Acta 1699:35&#x2013;44 <pub-id pub-id-type="pmid">15158710</pub-id></citation>
+      </ref>
+      <ref id="CR58">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Winter</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Jakob</surname>
+              <given-names>U</given-names>
+            </name>
+          </person-group>
+          <article-title>Beyond transcription&#x2014;new mechanisms for the regulation of molecular chaperones</article-title>
+          <source>Crit Rev Biochem Mol Biol</source>
+          <year>2004</year>
+          <volume>39</volume>
+          <fpage>297</fpage>
+          <lpage>317</lpage>
+          <pub-id pub-id-type="doi">10.1080/10409230490900658</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Winter J, Jakob U (2004) Beyond transcription&#x2014;new mechanisms for the regulation of molecular chaperones. Crit Rev Biochem Mol Biol 39:297&#x2013;317 <pub-id pub-id-type="pmid">15763707</pub-id></citation>
+      </ref>
+      <ref id="CR59">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wurm</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <article-title>Production of recombinant protein therapeutics in cultivated mammalian cells</article-title>
+          <source>Nat Biotechnol</source>
+          <year>2004</year>
+          <volume>22</volume>
+          <fpage>1393</fpage>
+          <lpage>1398</lpage>
+          <pub-id pub-id-type="doi">10.1038/nbt1026</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wurm FM (2004) Production of recombinant protein therapeutics in cultivated mammalian cells. Nat Biotechnol 22:1393&#x2013;1398 <pub-id pub-id-type="pmid">15529164</pub-id></citation>
+      </ref>
+      <ref id="CR60">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yoshida</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>ER stress and diseases</article-title>
+          <source>FEBS J</source>
+          <year>2007</year>
+          <volume>274</volume>
+          <fpage>630</fpage>
+          <lpage>658</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1742-4658.2007.05639.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yoshida H (2007) ER stress and diseases. FEBS J 274:630&#x2013;658 <pub-id pub-id-type="pmid">17288551</pub-id></citation>
+      </ref>
+      <ref id="CR61">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yoshida</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Matsui</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Hosokawa</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Nagata</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Mori</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>A time-dependent phase shift in the mammalian unfolded protein response</article-title>
+          <source>Dev Cell</source>
+          <year>2003</year>
+          <volume>4</volume>
+          <fpage>265</fpage>
+          <lpage>271</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1534-5807(03)00022-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yoshida H, Matsui T, Hosokawa N, Kaufman RJ, Nagata K, Mori K (2003) A time-dependent phase shift in the mammalian unfolded protein response. Dev Cell 4:265&#x2013;271 <pub-id pub-id-type="pmid">12586069</pub-id></citation>
+      </ref>
+      <ref id="CR62">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Shen</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Sakaki</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Saunders</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Rutkowski</surname>
+              <given-names>DT</given-names>
+            </name>
+            <name>
+              <surname>Back</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Endoplasmic reticulum stress activates cleavage of CREBH to induce a systemic inflammatory response</article-title>
+          <source>Cell</source>
+          <year>2006</year>
+          <volume>124</volume>
+          <fpage>587</fpage>
+          <lpage>599</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cell.2005.11.040</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang K, Shen X, Wu J, Sakaki K, Saunders T, Rutkowski DT, Back SH, Kaufman RJ (2006a) Endoplasmic reticulum stress activates cleavage of CREBH to induce a systemic inflammatory response. Cell 124:587&#x2013;599 <pub-id pub-id-type="pmid">16469704</pub-id></citation>
+      </ref>
+      <ref id="CR63">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Zhao</surname>
+              <given-names>H-l</given-names>
+            </name>
+            <name>
+              <surname>Xue</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Xiong</surname>
+              <given-names>X-H</given-names>
+            </name>
+            <name>
+              <surname>Yao</surname>
+              <given-names>X-Q</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>X-Y</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>H-P</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>Z-M</given-names>
+            </name>
+          </person-group>
+          <article-title>Enhanced secretion of heterologous proteins in <italic>Pichia pastoris</italic> following overexpression of <italic>Saccharomyces cerevisiae</italic> chaperone proteins</article-title>
+          <source>Biotechnol Prog</source>
+          <year>2006</year>
+          <volume>22</volume>
+          <fpage>1090</fpage>
+          <lpage>1095</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp060019r</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang W, Zhao H-l, Xue C, Xiong X-H, Yao X-Q, Li X-Y, Chen H-P, Liu Z-M (2006b) Enhanced secretion of heterologous proteins in Pichia pastoris following overexpression of Saccharomyces cerevisiae chaperone proteins. Biotechnol Prog 22:1090&#x2013;1095 <pub-id pub-id-type="pmid">16889384</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

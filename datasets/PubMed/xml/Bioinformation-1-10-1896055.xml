@@ -1,0 +1,1029 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17597930</article-id>
+      <article-id pub-id-type="pmc">1896055</article-id>
+      <article-id pub-id-type="publisher-id">94-1-2007</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Prediction Model</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Integrative analysis of the mouse embryonic transcriptome</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Singh</surname>
+            <given-names>Amar V</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Knudsen</surname>
+            <given-names>Kenneth B</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Knudsen</surname>
+            <given-names>Thomas B</given-names>
+          </name>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+        <aff>Department of Molecular, Cellular and Craniofacial Biology, University of Louisville, School of Dentistry, Louisville, KY 40202</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Thomas B Knudsen
+        E-mail:
+          <email>thomas.knudsen@louisville.edu</email>; Phone: +502 852 4128; Fax: +502 852 4702; Corresponding author</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>4</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>1</volume>
+      <issue>10</issue>
+      <fpage>406</fpage>
+      <lpage>413</lpage>
+      <history>
+        <date date-type="received">
+          <day>5</day>
+          <month>12</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>20</day>
+          <month>1</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2006 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2006</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction 
+				in any medium, for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Monitoring global gene expression provides insight into how genes and regulatory signals work together to guide embryo
+development. The fields of developmental biology and teratology are now confronted with the need for automated access to a
+reference library of gene-expression signatures that benchmark programmed (genetic) and adaptive (environmental) regulation of the
+embryonic transcriptome. Such a library must be constructed from highly-distributed microarray data. Birth Defects Systems Manager
+(BDSM), an open access knowledge management system, provides custom software to mine public microarray data focused on
+developmental health and disease. The present study describes tools for seamless data integration in the BDSM library (<italic>MetaSample</italic>,
+<italic>MetaChip</italic>, <italic>CIAeasy</italic>) using the QueryBDSM module. A field test of the prototype was run using published microarray data series
+derived from a variety of laboratories, experiments, microarray platforms, organ systems, and developmental stages. The datasets
+focused on several developing systems in the mouse embryo, including preimplantation stages, heart and nerve development, testis
+and ovary development, and craniofacial development. Using BDSM data integration tools, a gene-expression signature for 346 genes
+was resolved that accurately classified samples by organ system and developmental sequence. The module builds a potential for the
+BDSM approach to decipher a large number developmental processes through comparative bioinformatics analysis of embryological
+systems at-risk for specific defects, using multiple scenarios to define the range of probabilities leading from molecular phenotype to
+clinical phenotype. We conclude that an integrative analysis of global gene-expression of the developing embryo can form the
+foundation for constructing a reference library of signaling pathways and networks for normal and abnormal regulation of the
+embryonic transcriptome. These tools are available free of charge from the web-site <ext-link ext-link-type="uri" xlink:href="http://systemsanalysis.louisville.edu">http://systemsanalysis.louisville.edu</ext-link> requiring
+only a short registration process.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>transcriptome</kwd>
+        <kwd>mouse</kwd>
+        <kwd>expression</kwd>
+        <kwd>embryo</kwd>
+        <kwd>integrative analysis</kwd>
+        <kwd>birth defects</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>Animal development is fashioned by conserved signaling pathways that orchestrate morphogenesis, pattern formation, and cell differentiation - complex processes operating jointly in
+different parts of an embryo and in stages associated with sequential gene activation. Monitoring local and temporal changes in gene expression can provide insight into how genes
+and regulatory signals work together to guide development. [<xref ref-type="bibr" rid="R01">1</xref>] This knowledge is important for understanding the pathogenesis
+of birth defects and to the central problems of defining precursor target cell susceptibility and the causal mechanisms of abnormal development triggered by diverse environmental and genetic
+perturbations to maternal-fetal unit. [<xref ref-type="bibr" rid="R02">2</xref>]</p>
+      <p>Profiling gene expression on a global scale has become an important source of information for biological knowledge discovery. Despite well-known challenges confronting
+technology development, the analysis of global gene expression data can reveal themes in the biologically robust response patterns in gene activity. [<xref ref-type="bibr" rid="R03">3</xref>] Gene Expression Omnibus (GEO)
+is one of the main national repositories for high-information content transcript data from microarray analysis and serial analysis of gene expression (SAGE). [<xref ref-type="bibr" rid="R04">4</xref>] GEO has grown from
+18,235 records in June 2004 to 115,415 records in December 2006, reflecting an average growth of over 100 new entries per day. A subset of this information describes the embryo proper
+and can be mined for major biological themes in developmental health and disease. Using keyword searches and trend analysis to mine PubMed and Medline literature databases, the public
+availability of embryo-based microarrays currently numbers 500-600 (564), mostly studies on mouse embryos and differentiating human cell lines.</p>
+      <p>The increasing volume of gene expression data on local and temporal states confronts the developmental biologist with the need for reference libraries and information management
+systems to handle optimal-scale gene-expression signatures and facilitate biological knowledge discovery. For example, Lamb et al., [<xref ref-type="bibr" rid="R05">5</xref>] created a prototype reference collection of geneexpression
+signatures from cultured human cells exposed to bioactive molecules, which serves as a platform for pattern-matching software to establish a &#x2018;connectivity map&#x2019; between
+drugs, genes, and diseases. Another example is the integrative analysis of multi-study tumor profiles. [<xref ref-type="bibr" rid="R06">6</xref>,<xref ref-type="bibr" rid="R07">7</xref>]
+The emerging database model for tumor classification based on molecular abundance profiles has implied a 67-gene core &#x2018;common transcriptional program&#x2019; in multiple cancers. [<xref ref-type="bibr" rid="R08">8</xref>] In developmentteratogenesis,
+a preliminary meta-analysis across microarray studies in the mouse embryo returned a gene-expression signature of 512 developmentally regulated genes of which 16%
+(~82-genes) changed during exposure to teratogenic agents. [<xref ref-type="bibr" rid="R02">2</xref>] Given the promises and pitfalls of computational methods for
+solving gene expression problems, automated access to a reference collection of gene-expression signatures to benchmark the programmed (genetic) and adaptive (environmental)
+regulation of the embryonic transcriptome is scientifically needed.</p>
+      <p>&#x2018;Birth Defects Systems Manager&#x2019; (BDSM) is a knowledge management system that provides custom software to mine public microarray data for interesting patterns across
+developmental stages, organ systems, and disease phenotypes. [<xref ref-type="bibr" rid="R02">2</xref>,<xref ref-type="bibr" rid="R09">9</xref>]
+This open resource enables: consolidation of communal data and metadata relevant to developmental health and disease; interactions with current builds of national databases and data
+repositories; efficient algorithms for cross-species annotation of symbolic gene annotations using the NCBI sequence homologybased annotations for corresponding homologues and
+orthologues; specific queries across experiments to facilitate secondary analysis; and data formats interoperable with analysis software for phenetic clustering, chromosomal mapping, gene
+ontology classification, pathway evaluation, and network identification.</p>
+      <p>Since a comprehensive reference collection of gene-expression signatures for developing structures must be constructed from highly-distributed data, the present study was designed to
+empower BDSM with tools for seamless data integration: <italic>MetaSample</italic>, <italic>MetaChip</italic>, and <italic>CIAeasy</italic>. These tools are accessible
+at <ext-link ext-link-type="uri" xlink:href="http://systemsanalysis.louisville.edu">http://systemsanalysis.louisville.edu</ext-link> requiring only a short
+registration process to BDSM. A field test of the prototype run with published microarray data illustrates proof of concept for integrative analysis of the mouse embryonic transcriptome.</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <sec id="s2a">
+        <title>Dataset collections</title>
+        <p>Search of PubMed using keywords &#x2018;embryo&#x2019; and &#x2018;microarray&#x2019; returned 495 records of which 193 actually used the technology to study developing animal systems. GEO data sets (GDS) narrowed the list to 47 nonredundant
+microarray datasets, and including the keyword &#x2018;teratogen&#x2019; added a few more datasets, for a total of 564 public microarrays on the embryo. Raw and/or processed microarray
+sample-data files and associated metadata were parsed onto the server using LoadBDSM. [<xref ref-type="bibr" rid="R09">9</xref>] BDSM currently holds 25
+developmental series containing 537 samples that are derived from the public domain and 3 series containing 43 samples which are private. These data represent 15 developing organ
+systems, 6 chemical exposures, and 5 drug interventions across 42 development stages.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Tracking provenance</title>
+        <p>For the present study, we restricted the analysis to 160 arrays in the BDSM library based on wellannotated experiments published on normal mouse
+embryogenesis using an Affymetrix technology platform. These conditions are identified by GEO Series Accession number (GSE) and/or literature citation as follows: preimplantation
+mouse embryo (GSE1749)  [<xref ref-type="bibr" rid="R10">10</xref>]; heart (GSE1479) GD10 - GD18 [<xref ref-type="bibr" rid="R11">11</xref>]; nerve (GSE972) GD9.5 - birth  [<xref ref-type="bibr" rid="R12">12</xref>]; 
+ovary (GSE1359) and testis (GSE1358) between GD11.5 - birth  [<xref ref-type="bibr" rid="R13">13</xref>]; orofacial region
+(GSE1624)  [<xref ref-type="bibr" rid="R14">14</xref>] and secondary palate  [<xref ref-type="bibr" rid="R15">15</xref>] between GD13-15.
+The platforms for these series included: MG-U74Av2 (12488 probes), MG-U74Bv2 (12478 probes), MG430Av2 (45104 probes), MOE430Av2 (22690 probes), and MOE430Bv2 (22576
+probes). Internal annotation of Affymetrix probe identifiers was performed to standardize gene labels across samples and improve cross-platform interoperability, as discussed previously. 
+[<xref ref-type="bibr" rid="R02">2</xref>]</p>
+      </sec>
+      <sec id="s2c">
+        <title>Data integration</title>
+        <p>Individual microarray sample-data files from the aforementioned developmental series were integrated using QueryBDSM, a module that for merging pre-processed,
+normalized samples from the BDSM library. Three metaanalysis tools written in PHP were designed to compare and analyze expression data across multiple chips and platforms:
+<italic>MetaSample</italic>, <italic>MetaChip</italic>, and <italic>CIAeasy</italic>. The workflow schema is diagrammed in <xref ref-type="fig" rid="F1">Figure 1</xref>. Individual sample-data files are
+selected from the BDSM library and added to a queue for integration. The formatted input files are tab-delimited expression ratios of probes (rows) x samples (columns).
+QueryBDSM determines the number of distinct microarray platforms in the sample queue and merges the data as follows: if all samples come from the same microarray platform (number
+=1), then QueryBDSM automatically runs <italic>MetaSample</italic> to create a merged-table having &#x2018;columns&#x2019; of normalized expression data (samples) in &#x2018;rows&#x2019; derived from the platform, with unique probe
+identifiers (ProbeID) expanded to include GenBank accession (GeneID), and symbolic gene name (Gene Symbol). If multiple platforms are represented by samples in the queue (number &gt;1),
+then QueryBDSM automatically runs <italic>MetaChip</italic>. <italic>MetaChip</italic> merges data when probe identifiers are different but represent the same annotation, such as across microarray platforms or
+phylogenetic species. The probe identifiers from each platform are converted to UniGene ID and then merged accordingly, with associated expression data, for those genes common across the
+datasets. The probes are annotated based on reverse-engineering the sequence homology-based annotations from GenBank. [<xref ref-type="bibr" rid="R02">2</xref>]
+For this purpose the system uses data flat files downloaded monthly from the HomoloGene and UniGene databases of NCBI. [<xref ref-type="bibr" rid="R16">16</xref>]</p>
+        <p>In contrast to <italic>MetaSample</italic> and <italic>MetaChip</italic>, automated tools for merging samples, <italic>CIAeasy</italic> must be specified explicitly to
+compare datasets for the same samples on different platforms. <italic>CIAeasy</italic> was created from the ADE-4 for <italic>R</italic> statistical
+computing software package [<xref ref-type="bibr" rid="R17">17</xref>] and is adapted from &#x2018;coinertia analysis&#x2019; (CIA) for microarrays. [<xref ref-type="bibr" rid="R18">18</xref>] With <italic>CIAeasy</italic>
+users can perform CIA from the BDSM web site without detailed knowledge of <italic>R</italic> language programming. Since samples are aligned on a common space, CIA extracts
+information about the joint trends in expression patterns of genes independent of probe or sequence annotation. [<xref ref-type="bibr" rid="R18">18</xref>]
+<italic>CIAeasy</italic> automatically computes successive orthogonal axes with correspondence analysis and returns the percentage of total variance explained by each eigenvector to find the
+strongest trends in the co-structured datasets.</p>
+      </sec>
+      <sec id="s2d">
+        <title>Data analysis</title>
+        <p>One of the problems confronting meta-analysis is the normalcy and spread of expression data. In order to derive expression ratios from the Affymetrix data, we computed a
+reference denominator, averaged for each gene at the earliest stage in a developmental series. These ratios were transformed to logarithm base 2 (log2) to produce a continuous spectrum of
+values without biasing between up- and down-regulated genes and making the spread more normal. Each microarray set was centered to median of 0.00 and standardized by scaling to an
+average standard deviation of 0.5. [<xref ref-type="bibr" rid="R02">2</xref>] The merged data were imported to GeneSpring v 7.2 using the UniGene cluster ID as
+the unique gene identifier. The data were clustered using Pearson correlation for the gene tree and two-sided Spearman Confidence for the developmental conditions. Functional
+annotation used the NIH/NIAID Database for Annotation, Visualization and Integrated Discovery (DAVID). [<xref ref-type="bibr" rid="R19">19</xref>] The
+highest-ranking biological themes were stratified by Gene Ontology (GO) terms.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Discussion</title>
+      <sec id="s3a">
+        <title>Implementation of QueryBDSM</title>
+        <p>For proof of concept we examined samples from GEO data source GSE1391, a series describing global gene-expression profiles of the mouse embryo
+during preimplantation stages.  [<xref ref-type="bibr" rid="R10">10</xref>] Samples included in this series represent development of the oocyte through fertilization
+(1-cell embryo), activation of the zygotic genome (2-cell embryo) and first differentiation (8-cell embryo) leading to divergent embryonal (inner cell mass) and trophectodermal
+(placental) lineages of the blastocyst. Biological replicates (3-4) arrayed at each stage used three different Affymetrix platforms: MOE430Av2 (22690 probes), MOE430Bv2 (22576 probes), and
+MG-U74Av2 (12488 probes). Gene-expression profiles were normalized to the &#x2018;oocyte&#x2019; in each platform as the earliest stage in the series. Derived data are log2-scale expression values
+computed from the ratio of signals to the oocyte reference.</p>
+        <p>Using QueryBDSM, we merged datasets from the different samples to create three distinct datasets for the MOE430Av2, MOE430Bv2, and MG-U74Av2 platforms. Statistical
+(ANOVA) analysis, run at high stringency with Benjamini-Hochberg correction applied, returned 4417 probes (alpha = 0.0001), 1614 probes (alpha = 0.0001), and 2400 probes (alpha
+= 0.001) that were differentially regulated. Aside from 34 probes that overlapped between the first two datasets, different genes were detected across these diverse platforms. Hierarchical
+clustering revealed two basic trajectories of gene-expression in all three platforms (<xref ref-type="fig" rid="F2">Figure 2</xref>). One expression cluster contained genes that increased at the 2-cell stage to the blastocyst stage,
+and the other cluster contained genes that decreased over these stages (not shown). These probes were mapped to the 307 reference pathways in the KEGG: Kyoto Encyclopedia of Genes
+and Genomes (<ext-link ext-link-type="uri" xlink:href="http://www.genome.ad.jp/kegg/">http://www.genome.ad.jp/kegg/</ext-link>) library to
+identify metabolic themes. The top significant KEGG pathways showed concordance between platforms MOE430Av2 and MGU74Av2 (<xref ref-type="table" rid="T1">Table 1</xref>), whereas MOE430Bv2 detected different
+pathways. Some pathways had marginal <italic>P</italic>-values with individual analysis that became significant in datasets joined by MetaChip (e.g., Adherens Junction, Tight Junction pathways).
+This illustrates the strength of the meta-analysis approach.</p>
+        <p>We next used QueryBDSM to merge samples from platforms MOE430Av2 and MG-U74Av2 to illustrate the <italic>MetaChip</italic> and <italic>CIAeasy</italic> tools. These chips contained 13022 and 9562 nonredundant
+UniGene cluster identifiers, respectively, of which 7278 were common between the two platforms when passed through <italic>MetaChip</italic>. Statistical (ANOVA) analysis with the same
+parameters as before returned 3324 genes that were differentially regulated in this data subset. The top significant KEGG pathways for the combined 430A-U74A MetaChip are
+concordant with the individual analysis (<xref ref-type="table" rid="T1">Table 1</xref>). <italic>CIAeasy</italic> was used to compare the joint trend between 4417, 1614, and 2400 probes from <italic>MetaSample</italic>, resulting in a high-level of similarity
+between these three platforms (<xref ref-type="fig" rid="F2">Figure 2</xref>). Of the 6812 nonredundant probes between MOE430Av2 and MG-U74Av2 (4417 + 2400), only five probes were common. Annotating the probes which were not in common gave 4551 unique DAVID
+identifiers. Again, meta-analysis picked up most of the significant KEGG pathways identified in either of the singular analyses performed earlier and a few additional metabolic pathways (<xref ref-type="table" rid="T1">Table 1</xref>).</p>
+      </sec>
+      <sec id="s3b">
+        <title>Comparative bioinformatics analysis across developing systems</title>
+        <p>An obvious limitation in combining data from several different platforms is that as more platforms are included, fewer representative genes are found to be common amongst all
+platforms. This problem increases when considering less comprehensive arrays, older arrays with outdated probe annotations, or arrays across animal species. Staging the entry of
+data from the most versatile arrays first can lessen the problem of losing information when data are combined across platforms; however, in some data mining efforts the discriminating power
+gained by increasing samples and conditions might outweigh the loss of information. For example, multi-platform datasets have been found to discriminate tumor classification by expression
+profile with as few as 25 genes. [<xref ref-type="bibr" rid="R06">6</xref>] For this reason it may be possible to benchmark developmental stages using a limited
+number of genes across many diverse platforms. To illustrate this point we used BDSM-derived data to compare expression profiles across six unrelated studies and developing systems. We
+constructed a virtual meta-chip for probes common to all five technology platforms represented in these studies, yielding 346 genes. Unsupervised clustering and Pearson correlation of the
+gene-expression profiles correctly ordered the samples first by organ system and then by developmental sequence within each system (<xref ref-type="fig" rid="F3">Figure 3</xref>). Within this hierarchy commonalities and
+differences across organ systems were evident for the patterns of expression in subsets of genes. Unfortunately, the number of genes returned from 346 by statistical (ANOVA) analysis of
+each individual system, or by K-means clustering of the entire matrix, was too small for insightful functional annotation. QueryBDSM is a simple and efficient solution that can be used
+to construct a self-evolving reference collection of geneexpression profiles from highly-distributed data on mouse development. Although robust mapping of biological themes and pathways that are expressed at particular developmental
+stages is straightforward when the same technology platform is considered  [<xref ref-type="bibr" rid="R02">2</xref>] fuzzy-clustering methods will be needed when multiple platforms are considered.</p>
+        <p>The <italic>MetaSample</italic> and <italic>MetaChip</italic> components of QueryBDSM are also available as standalone tools under the MetaBDSM module. In this way, the user can upload data outside the BDSM library.
+The user supplies details of the technology platform, organism, and information about the file format. Once all the required fields are entered and submitted, the files are checked for unique
+headers. Columns can be dropped by selecting the appropriate checkboxes. Clicking the <italic>Continue</italic> button combines the datasets with expression data and unique identifiers only for genes
+common between the datasets. These tools have been tested on Internet Explorer 6.0 or greater and Mozilla-based browsers, such as Netscape 6.0 and Firefox.</p>
+        <p>Other tools are available to assemble data when the platform is same, such as Microarray data assembler. [<xref ref-type="bibr" rid="R20">20</xref>] This Excel-based
+program inherits Excel's limitation from file sizes and number of samples (256 columns and 65,000 data points) whereas the <italic>MetaSample</italic> and <italic>MetaChip</italic> tools do not have this limitation.
+These tools create temporary tables in the Oracle database and join them using the functionality of Oracle before putting it into a text file, reducing restrictions on the number of samples and
+size of files. Although users can theoretically combine 100 files at a single time, it is not recommended to load more then 25 files at a time.</p>
+      </sec>
+    </sec>
+    <sec sec-type="conclusions" id="s4">
+      <title>Conclusion</title>
+      <p>The representation of experimental samples as developmentally contiguous groups is expected to yield a novel mosaic view of gene-expression signatures and genetic dependencies. Although
+sufficient data exists for data-mining efforts to begin, the ultimate goal of an unabridged reference collection must be viewed as a long-term effort. Regarding the embryo, a search of
+OVID MedLine using keywords &#x2018;embryo&#x2019; OR &#x2018;teratogen&#x2019; (136,146 records) AND &#x2018;microarray&#x2019; OR &#x2018;SAGE&#x2019; (16,906 records) returned 343 total records. At the current rate of 564
+microarrays per 343 publication records (factor = 1.64), the trajectory of embryo-based microarray publications projects GEO to hold in excess of 1,476 microarrays relevant for
+embryogenesis or teratogenesis by the year 2010.</p>
+      <p>As studies unravel gene-expression signatures, the key principles in teratology &#x2013; namely, chemical effects on biological mechanisms, dose-response relationships, factors underlying
+genetic susceptibility, stage-dependent responses, and maternal influences, can be framed in a systems biology context to address an &#x2018;experience database&#x2019; for ranking pathways and
+networks by strength of association with anatomical landmarks and developmental abnormalities.  [<xref ref-type="bibr" rid="R02">2</xref>] The BDSM resource
+would parallel efforts toward molecular diagnostics in cancer biology (<ext-link ext-link-type="uri" xlink:href="http://www.oncomine.org/">http://www.oncomine.org/</ext-link>), which includes data sets
+profiling human tumor samples. [<xref ref-type="bibr" rid="R21">21</xref>] Since interpreting geneexpression signatures in birth defects will be predicated on
+posterior (prior) knowledge about developmental health and disease, an important payoff from this bioinformatics effort is to recognize and characterize how these biological states emerge
+from adaptation or adverse regulation of the embryonic transcriptome.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work was supported by NIH grants RO1 AA13205 (National Institute on Alcohol Abuse and Alcoholism) and RO1 ES09120 (National Institute of Environmental Health Sciences).</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davidson</surname>
+              <given-names>EH</given-names>
+            </name>
+            <name>
+              <surname>Erwin</surname>
+              <given-names>DH</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>2006</year>
+          <volume>311</volume>
+          <fpage>796</fpage>
+          <pub-id pub-id-type="pmid">16469913</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Singh</surname>
+              <given-names>AV</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Reprod Toxicol</source>
+          <year>2005</year>
+          <volume>19</volume>
+          <fpage>421</fpage>
+          <pub-id pub-id-type="pmid">15686875</pub-id>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marshall</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>2004</year>
+          <volume>306</volume>
+          <fpage>630</fpage>
+          <pub-id pub-id-type="pmid">15499004</pub-id>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Barrett</surname>
+              <given-names>T</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>D562</fpage>
+          <pub-id pub-id-type="pmid">15608262</pub-id>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lamb</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Science</source>
+          <year>2006</year>
+          <volume>313</volume>
+          <fpage>1929</fpage>
+          <pub-id pub-id-type="pmid">17008526</pub-id>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bloom</surname>
+              <given-names>G</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Am J Pathol</source>
+          <year>2004</year>
+          <volume>164</volume>
+          <fpage>9</fpage>
+          <pub-id pub-id-type="pmid">14695313</pub-id>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rhodes</surname>
+              <given-names>DR</given-names>
+            </name>
+            <name>
+              <surname>Chinnaiyan</surname>
+              <given-names>AM</given-names>
+            </name>
+          </person-group>
+          <source>Nat Genet</source>
+          <year>2005</year>
+          <volume>37</volume>
+          <fpage>S31</fpage>
+          <pub-id pub-id-type="pmid">15920528</pub-id>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rhodes</surname>
+              <given-names>DR</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Proc Natl Acad Sci</source>
+          <year>2004</year>
+          <volume>101</volume>
+          <fpage>9309</fpage>
+          <pub-id pub-id-type="pmid">15184677</pub-id>
+        </citation>
+      </ref>
+      <ref id="R09">
+        <label>9</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Knudsen</surname>
+              <given-names>KB</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Reprod Toxicol</source>
+          <year>2005</year>
+          <volume>20</volume>
+          <fpage>369</fpage>
+          <pub-id pub-id-type="pmid">15923107</pub-id>
+        </citation>
+      </ref>
+      <ref id="R10">
+        <label>10</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zeng</surname>
+              <given-names>F</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Dev Biol</source>
+          <year>2004</year>
+          <volume>272</volume>
+          <fpage>483</fpage>
+          <pub-id pub-id-type="pmid">15282163</pub-id>
+        </citation>
+      </ref>
+      <ref id="R11">
+        <label>11</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tanaka</surname>
+              <given-names>M</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Cold Spring Harb Symp Quant Biol</source>
+          <year>2002</year>
+          <volume>67</volume>
+          <fpage>317</fpage>
+          <pub-id pub-id-type="pmid">12858555</pub-id>
+        </citation>
+      </ref>
+      <ref id="R12">
+        <label>12</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Buchstaller</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>J Neurosci</source>
+          <year>2004</year>
+          <volume>24</volume>
+          <fpage>2357</fpage>
+          <pub-id pub-id-type="pmid">15014110</pub-id>
+        </citation>
+      </ref>
+      <ref id="R13">
+        <label>13</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Small</surname>
+              <given-names>CL</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Biol Reprod</source>
+          <year>2005</year>
+          <volume>72</volume>
+          <fpage>492</fpage>
+          <pub-id pub-id-type="pmid">15496517</pub-id>
+        </citation>
+      </ref>
+      <ref id="R14">
+        <label>14</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mukhopadhyay</surname>
+              <given-names>P</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Birth Defects Res</source>
+          <year>2004</year>
+          <volume>70</volume>
+          <fpage>912</fpage>
+          <pub-id pub-id-type="pmid">15578713</pub-id>
+        </citation>
+      </ref>
+      <ref id="R15">
+        <label>15</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brown</surname>
+              <given-names>NL</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Dev Growth Differ</source>
+          <year>2003</year>
+          <volume>45</volume>
+          <fpage>153</fpage>
+          <pub-id pub-id-type="pmid">12752503</pub-id>
+        </citation>
+      </ref>
+      <ref id="R16">
+        <label>16</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wheeler</surname>
+              <given-names>DL</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2006</year>
+          <volume>34</volume>
+          <fpage>D173</fpage>
+          <pub-id pub-id-type="pmid">16381840</pub-id>
+        </citation>
+      </ref>
+      <ref id="R17">
+        <label>17</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thioulouse</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Stat Comput</source>
+          <year>1997</year>
+          <volume>7</volume>
+          <fpage>75</fpage>
+          <pub-id pub-id-type="pmid">8670621</pub-id>
+        </citation>
+      </ref>
+      <ref id="R18">
+        <label>18</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Culhane</surname>
+              <given-names>AC</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>BMC Bioinformatics</source>
+          <year>2003</year>
+          <volume>4</volume>
+          <fpage>59</fpage>
+          <pub-id pub-id-type="pmid">14633289</pub-id>
+        </citation>
+      </ref>
+      <ref id="R19">
+        <label>19</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dennis</surname>
+              <given-names>G</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Genome Biol</source>
+          <year>2001</year>
+          <volume>4</volume>
+          <fpage>P3</fpage>
+          <pub-id pub-id-type="pmid">12734009</pub-id>
+        </citation>
+      </ref>
+      <ref id="R20">
+        <label>20</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anbazhagan</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2003</year>
+          <volume>19</volume>
+          <fpage>157</fpage>
+          <pub-id pub-id-type="pmid">12499309</pub-id>
+        </citation>
+      </ref>
+      <ref id="R21">
+        <label>21</label>
+        <citation citation-type="web">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rhodes</surname>
+              <given-names>DR</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Neoplasia</source>
+          <year>2004</year>
+          <volume>6</volume>
+          <fpage>1</fpage>
+          <pub-id pub-id-type="pmid">15068665</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <table-wrap id="T1" position="float">
+        <label>Table 1</label>
+        <caption>
+          <title>Meta-analysis of top significant KEGG pathways altered during preimplantation mouse embryo development <sup>1</sup></title>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1"/>
+              <th rowspan="1" colspan="1"/>
+              <th colspan="2" align="center" valign="top" rowspan="1">MOE430Av2</th>
+              <th colspan="2" align="center" valign="top" rowspan="1">MG-U74Av2</th>
+              <th colspan="2" align="center" valign="top" rowspan="1">MetaChip</th>
+              <th colspan="2" align="center" valign="top" rowspan="1">CIAeasy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="1" colspan="1">KEGG Pathway</td>
+              <td rowspan="1" colspan="1">Term</td>
+              <td rowspan="1" colspan="1">No.4417</td>
+              <td rowspan="1" colspan="1">P-value</td>
+              <td rowspan="1" colspan="1">No.2400</td>
+              <td rowspan="1" colspan="1">P-value</td>
+              <td rowspan="1" colspan="1">No.3324</td>
+              <td rowspan="1" colspan="1">P-value</td>
+              <td rowspan="1" colspan="1">No.4551</td>
+              <td rowspan="1" colspan="1">P-value</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00010</td>
+              <td rowspan="1" colspan="1">Glycolysis / Gluconeogenesis</td>
+              <td rowspan="1" colspan="1">21</td>
+              <td rowspan="1" colspan="1">0.033</td>
+              <td rowspan="1" colspan="1">21</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">26 ***</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">28</td>
+              <td rowspan="1" colspan="1">0.002</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00020</td>
+              <td rowspan="1" colspan="1">Citrate cycle (TCA cycle)</td>
+              <td rowspan="1" colspan="1">14</td>
+              <td rowspan="1" colspan="1">0.016</td>
+              <td rowspan="1" colspan="1">11</td>
+              <td rowspan="1" colspan="1">0.020</td>
+              <td rowspan="1" colspan="1">18 *</td>
+              <td rowspan="1" colspan="1">0.004</td>
+              <td rowspan="1" colspan="1">17</td>
+              <td rowspan="1" colspan="1">0.005</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00052</td>
+              <td rowspan="1" colspan="1">Galactose metabolism</td>
+              <td rowspan="1" colspan="1">15</td>
+              <td rowspan="1" colspan="1">0.020</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">14 ***</td>
+              <td rowspan="1" colspan="1">0.030</td>
+              <td rowspan="1" colspan="1">17</td>
+              <td rowspan="1" colspan="1">0.020</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00071</td>
+              <td rowspan="1" colspan="1">Fatty acid metabolism</td>
+              <td rowspan="1" colspan="1">18</td>
+              <td rowspan="1" colspan="1">0.027</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">18 **</td>
+              <td rowspan="1" colspan="1">0.083</td>
+              <td rowspan="1" colspan="1">25</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00640</td>
+              <td rowspan="1" colspan="1">Propanoate metabolism</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">12</td>
+              <td rowspan="1" colspan="1">0.029</td>
+              <td rowspan="1" colspan="1">14 ***</td>
+              <td rowspan="1" colspan="1">0.048</td>
+              <td rowspan="1" colspan="1">18</td>
+              <td rowspan="1" colspan="1">0.016</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00100</td>
+              <td rowspan="1" colspan="1">Biosynthesis of steroids</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">7</td>
+              <td rowspan="1" colspan="1">0.038</td>
+              <td rowspan="1" colspan="1">8 ***</td>
+              <td rowspan="1" colspan="1">0.050</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00190</td>
+              <td rowspan="1" colspan="1">Oxidative phosphorylation</td>
+              <td rowspan="1" colspan="1">67</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">57</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">54 ***</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">79</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00193</td>
+              <td rowspan="1" colspan="1">ATP synthesis</td>
+              <td rowspan="1" colspan="1">17</td>
+              <td rowspan="1" colspan="1">0.030</td>
+              <td rowspan="1" colspan="1">13</td>
+              <td rowspan="1" colspan="1">0.038</td>
+              <td rowspan="1" colspan="1">17 **</td>
+              <td rowspan="1" colspan="1">0.085</td>
+              <td rowspan="1" colspan="1">20</td>
+              <td rowspan="1" colspan="1">0.019</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00230</td>
+              <td rowspan="1" colspan="1">Purine metabolism</td>
+              <td rowspan="1" colspan="1">52</td>
+              <td rowspan="1" colspan="1">0.002</td>
+              <td rowspan="1" colspan="1">40</td>
+              <td rowspan="1" colspan="1">0.002</td>
+              <td rowspan="1" colspan="1">48 ***</td>
+              <td rowspan="1" colspan="1">0.005</td>
+              <td rowspan="1" colspan="1">62</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00240</td>
+              <td rowspan="1" colspan="1">Pyrimidine metabolism</td>
+              <td rowspan="1" colspan="1">36</td>
+              <td rowspan="1" colspan="1">0.001</td>
+              <td rowspan="1" colspan="1">32</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">40 ***</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">45</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00280</td>
+              <td rowspan="1" colspan="1">Valine, Leucine and Isoleucine degradation</td>
+              <td rowspan="1" colspan="1">23</td>
+              <td rowspan="1" colspan="1">0.003</td>
+              <td rowspan="1" colspan="1">16</td>
+              <td rowspan="1" colspan="1">0.020</td>
+              <td rowspan="1" colspan="1">23 ***</td>
+              <td rowspan="1" colspan="1">0.001</td>
+              <td rowspan="1" colspan="1">31</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00290</td>
+              <td rowspan="1" colspan="1">Valine, Leucine and Isoleucine biosynthesis</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">6 ***</td>
+              <td rowspan="1" colspan="1">0.033</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00310</td>
+              <td rowspan="1" colspan="1">Lysine degradation</td>
+              <td rowspan="1" colspan="1">22</td>
+              <td rowspan="1" colspan="1">0.050</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">22 ***</td>
+              <td rowspan="1" colspan="1">0.030</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00520</td>
+              <td rowspan="1" colspan="1">Nucleotide sugars metabolism</td>
+              <td rowspan="1" colspan="1">10</td>
+              <td rowspan="1" colspan="1">0.015</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">7 ***</td>
+              <td rowspan="1" colspan="1">0.020</td>
+              <td rowspan="1" colspan="1">13</td>
+              <td rowspan="1" colspan="1">0.049</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00620</td>
+              <td rowspan="1" colspan="1">Pyruvate metabolism</td>
+              <td rowspan="1" colspan="1">17</td>
+              <td rowspan="1" colspan="1">0.023</td>
+              <td rowspan="1" colspan="1">15</td>
+              <td rowspan="1" colspan="1">0.005</td>
+              <td rowspan="1" colspan="1">19 ***</td>
+              <td rowspan="1" colspan="1">0.002</td>
+              <td rowspan="1" colspan="1">24</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00650</td>
+              <td rowspan="1" colspan="1">Butanoate metabolism</td>
+              <td rowspan="1" colspan="1">23</td>
+              <td rowspan="1" colspan="1">0.013</td>
+              <td rowspan="1" colspan="1">15</td>
+              <td rowspan="1" colspan="1">0.095</td>
+              <td rowspan="1" colspan="1">20 ***</td>
+              <td rowspan="1" colspan="1">0.051</td>
+              <td rowspan="1" colspan="1">28</td>
+              <td rowspan="1" colspan="1">0.004</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU00710</td>
+              <td rowspan="1" colspan="1">Carbon fixation</td>
+              <td rowspan="1" colspan="1">11</td>
+              <td rowspan="1" colspan="1">0.033</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU03010</td>
+              <td rowspan="1" colspan="1">Ribosome</td>
+              <td rowspan="1" colspan="1">80</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">39</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">22 ***</td>
+              <td rowspan="1" colspan="1">0.009</td>
+              <td rowspan="1" colspan="1">80</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU03020</td>
+              <td rowspan="1" colspan="1">RNA polymerase</td>
+              <td rowspan="1" colspan="1">13</td>
+              <td rowspan="1" colspan="1">0.008</td>
+              <td rowspan="1" colspan="1">13</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">12 ***</td>
+              <td rowspan="1" colspan="1">0.014</td>
+              <td rowspan="1" colspan="1">16</td>
+              <td rowspan="1" colspan="1">0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU03050</td>
+              <td rowspan="1" colspan="1">Proteasome</td>
+              <td rowspan="1" colspan="1">20</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">22</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">21 ***</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">24</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU03060</td>
+              <td rowspan="1" colspan="1">Protein export</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">7 ***</td>
+              <td rowspan="1" colspan="1">0.021</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU04110</td>
+              <td rowspan="1" colspan="1">Cell cycle</td>
+              <td rowspan="1" colspan="1">42</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">33</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">49 ***</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+              <td rowspan="1" colspan="1">51</td>
+              <td rowspan="1" colspan="1">&lt;0.001</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU04130</td>
+              <td rowspan="1" colspan="1">SNARE interactions in vesicular transport</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">13 ***</td>
+              <td rowspan="1" colspan="1">0.033</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU04520</td>
+              <td rowspan="1" colspan="1">Adherens junction</td>
+              <td rowspan="1" colspan="1">26</td>
+              <td rowspan="1" colspan="1">0.050</td>
+              <td rowspan="1" colspan="1">19</td>
+              <td rowspan="1" colspan="1">0.074</td>
+              <td rowspan="1" colspan="1">26 ***</td>
+              <td rowspan="1" colspan="1">0.027</td>
+              <td rowspan="1" colspan="1">30</td>
+              <td rowspan="1" colspan="1">0.057</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1">MMU04530</td>
+              <td rowspan="1" colspan="1">Tight junction</td>
+              <td rowspan="1" colspan="1">38</td>
+              <td rowspan="1" colspan="1">0.059</td>
+              <td rowspan="1" colspan="1">3</td>
+              <td rowspan="1" colspan="1">0.063</td>
+              <td rowspan="1" colspan="1">39 ***</td>
+              <td rowspan="1" colspan="1">0.016</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+              <td rowspan="1" colspan="1">&#x2013;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <fn>
+            <p><sup>1</sup> Differentially expressed across GEO data series GSE1391 based on 3 Affymetrix platforms. Statistical (ANOVA) analysis selected significant genes with Benjamini-Hochberg
+correction (alpha = 0.0001 for MOE430Av2, alpha = 0.001 for MG-U74Av2, alpha = 0.05*, 0.01**, and 0.001*** for MetaChip). The number of probes or genes passing at the
+alpha level is given (No.). Functional annotation of the Affymetrix probe identifiers (MOE430Av2, MG-U74Av2) mapped the significant KEGG pathways (P-value, threshold set
+to 6 genes). Functional annotation of the 432A-U74A MetaChip used UniGene identifiers and CIAeasy used unique DAVID identifiers.</p>
+          </fn>
+        </table-wrap-foot>
+      </table-wrap>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>Workflow schema for the QueryBDSM module of BDSM. Individual files of normalized microarray data are selected from
+the BDSM library. QueryBDSM determines the number of distinct microarray platforms in the sample queue and merges the data as
+follows: if all samples come from the same platform, then <italic>MetaSample</italic> is used; if multiple platforms are represented, then <italic>MetaChip</italic> is
+used. <italic>CIAeasy</italic> compares joint trends in expression data for the same samples run on different platform</p>
+        </caption>
+        <graphic xlink:href="97320630001406F1"/>
+      </fig>
+      <fig id="F2" position="float">
+        <label>Figure 2</label>
+        <caption>
+          <p><bold>Cross-platform comparison of expression profiles using CIAeasy.</bold> Class comparison of secondary analysis of GSE321
+data from [<xref ref-type="bibr" rid="R10">10</xref>], using <italic>CIAeasy</italic>. Expression values were from statistical (ANOVA) analysis returning 4417 (MOE430Av2, alpha =
+0.0001), 1614 (MOE430Bv2, alpha = 0.0001), and 2400 (MG-U74Av2, alpha = 0.001) probes. UPPER PANEL: Clustering of
+samples: Oocyte (Oo), 1-cell embryo (1C), 2-cell embryo (2C), 8-cell embryo (8C), and blastocyst (BL). For each platform a boxplot
+shows the log2 distribution of expression values for the probes at each stage (line = median, box = 75%, whiskers = 95%, and dots =
+outliers) and a histogram plots the cumulative distribution of probes in each expression bin. LOWER PANEL: The first two axes of
+ordination were projected by CIA. The horizontal axis reflects the first axis of the inertia and the vertical axis is the second axis of
+inertia. Circles (dots) and arrowheads (arrows) represent the projected coordinates of each platform being compared, with length of the
+line joining them being proportional to their divergence, e.g., shorter arrows indicate stronger joint trends between the platforms. The
+left compares joint trends in MOE430Av2 (dot) versus MOE430Bv2 (arrow), measure of global similarity, RV = 0.976; middle
+compares MOE430Av2 (dot) versus MG-U74Av2 (arrow), RV = 0.999; right compares MOE430Bv2 (dot) versus MG-U74Av2
+(arrow), RV = 0.970</p>
+        </caption>
+        <graphic xlink:href="97320630001406F2"/>
+      </fig>
+      <fig id="F3" position="float">
+        <label>Figure 3</label>
+        <caption>
+          <p>Hierarchy of molecular phenotypes in developing mouse embryos. In five GEO platforms (160 samples), 346 genes
+were found differentially expressed in BDSM profiles: preimplantation mouse embryo (GSE1749) [<xref ref-type="bibr" rid="R10">10</xref>], heart (GSE1479) GD10 -
+GD18 [<xref ref-type="bibr" rid="R11">11</xref>] nerve (GSE972) GD9.5 &#x2013; birth [<xref ref-type="bibr" rid="R12">12</xref>]; ovary (GSE1359) and 
+testis (GSE1358) GD11.5 &#x2013; birth [<xref ref-type="bibr" rid="R13">13</xref>]; orofacial
+(GSE1624) [<xref ref-type="bibr" rid="R14">14</xref>] and palate [<xref ref-type="bibr" rid="R15">15</xref>] between GD13-15. Each developing organ system was properly ordered by its natural
+chronology, based on the 346 gene-expression signature and an unsupervised clustering algorithm with Pearson correlation. Gene
+colors are mapped by K-means clustering (6 sets).</p>
+        </caption>
+        <graphic xlink:href="97320630001406F3"/>
+      </fig>
+    </sec>
+    <fn-group>
+      <fn id="FN1" fn-type="other">
+        <p>
+      <bold>Citation:</bold>Singh     
+      <italic>et al.</italic>, Bioinformation 1(10): 406-413 (2007)</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

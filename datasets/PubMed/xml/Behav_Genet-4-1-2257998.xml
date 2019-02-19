@@ -1,0 +1,1070 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Behav Genet</journal-id>
+      <journal-title>Behavior Genetics</journal-title>
+      <issn pub-type="ppub">0001-8244</issn>
+      <issn pub-type="epub">1573-3297</issn>
+      <publisher>
+        <publisher-name>Springer US</publisher-name>
+        <publisher-loc>Boston</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18080738</article-id>
+      <article-id pub-id-type="pmc">2257998</article-id>
+      <article-id pub-id-type="publisher-id">9184</article-id>
+      <article-id pub-id-type="doi">10.1007/s10519-007-9184-x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Research</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Power Calculations Using Exact Data Simulation: A Useful Tool for Genetic Study Designs</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>van der Sluis</surname>
+            <given-names>Sophie</given-names>
+          </name>
+          <address>
+            <email>s.van.der.sluis@psy.vu.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Dolan</surname>
+            <given-names>Conor V.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Neale</surname>
+            <given-names>Michael C.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Posthuma</surname>
+            <given-names>Danielle</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Department of Biological Psychology, VU University Amsterdam, Van der Boechorststraat 1, 1081 BT Amsterdam, The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Department of Psychology, FMG, University of Amsterdam, Roeterstraat 15, 1018 WB Amsterdam, The Netherlands </aff>
+        <aff id="Aff3"><label>3</label>Departments of Psychiatry and Human Genetics, Virginia Institute of Psychiatric and Behavioral Genetics, Virginia Commonwealth University, Richmond, Virginia USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>13</day>
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>38</volume>
+      <issue>2</issue>
+      <fpage>202</fpage>
+      <lpage>211</lpage>
+      <history>
+        <date date-type="received">
+          <day>18</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>9</day>
+          <month>11</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Statistical power calculations constitute an essential first step in the planning of scientific studies. If sufficient summary statistics are available, power calculations are in principle straightforward and computationally light. In designs, which comprise distinct groups (e.g., MZ &amp; DZ twins), sufficient statistics can be calculated within each group, and analyzed in a multi-group model. However, when the number of possible groups is prohibitively large (say, in the hundreds), power calculations on the basis of the summary statistics become impractical. In that case, researchers may resort to Monte Carlo based power studies, which involve the simulation of hundreds or thousands of replicate samples for each specified set of population parameters. Here we present exact data simulation as a third method of power calculation. Exact data simulation involves a transformation of raw data so that the data fit the hypothesized model exactly. As in power calculation with summary statistics, exact data simulation is computationally light, while the number of groups in the analysis has little bearing on the practicality of the method. The method is applied to three genetic designs for illustrative purposes.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Simulation</kwd>
+        <kwd>Power</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media, LLC 2008</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The importance of statistical power in (behavior) genetic analyses is evident in the number of articles devoted to power calculations. Power has been studied in virtually all research designs, ranging from the classical twin design (Martin et al. <xref ref-type="bibr" rid="CR16">1978</xref>; Neale et al. <xref ref-type="bibr" rid="CR20">1994</xref>), to extended family designs (e.g., Heath et al. <xref ref-type="bibr" rid="CR14">1985</xref>; Heath and Eaves <xref ref-type="bibr" rid="CR13">1985</xref>; Posthuma and Boomsma <xref ref-type="bibr" rid="CR21">2000</xref>), to sibpair and family linkage and association designs, either in- or excluding gene by environment interaction (Abecasis et al. <xref ref-type="bibr" rid="CR1">2000</xref>a, <xref ref-type="bibr" rid="CR2">b</xref>; Boomsma and Dolan <xref ref-type="bibr" rid="CR6">1998</xref>; Dolan et al. <xref ref-type="bibr" rid="CR8">1999</xref>; Fulker and Cherny <xref ref-type="bibr" rid="CR11">1996</xref>; Purcell <xref ref-type="bibr" rid="CR22">2002</xref>; Purcell and Sham <xref ref-type="bibr" rid="CR24">2002</xref>; Sham et al. <xref ref-type="bibr" rid="CR28">2000</xref>; Sham and Hewitt 1999; Sham et al. <xref ref-type="bibr" rid="CR29">2002</xref>; Van den Oord <xref ref-type="bibr" rid="CR30">1999</xref>). For a wide range of genetic designs, the Genetic Power Calculator<xref ref-type="fn" rid="Fn1">1</xref> (Purcell et al. <xref ref-type="bibr" rid="CR23">2003</xref>) can be used to calculate power. However, for customized designs and specific research questions, researchers may have to resort to their own procedure to carry out power calculations.</p>
+      <p>Power calculation based on the likelihood with the general Pearson&#x2013;Nyman statistical decision theory takes two forms. First, the non-centrality parameter &#x3BB; of the non-null &#x3C7;<sup>2</sup>-distribution can be calculated in the analysis of exact sufficient statistics (e.g., Dolan et al. <xref ref-type="bibr" rid="CR8">1999</xref>). If the distribution of the data is multivariate normal, the expected variance covariance matrix <bold>&#x3A3;</bold> and the means vector <bold>&#x3BC;</bold> are sufficient statistics, as they define the likelihood of the data up to an arbitrary constant (Azzelini <xref ref-type="bibr" rid="CR3">1996</xref>). Second, when <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold> are not sufficient statistics, the non-centrality parameter &#x3BB; of the non-null &#x3C7;<sup>2</sup>-distribution can be estimated on the basis of the analysis of simulated data using Monte Carlo simulation methods (e.g., Fulker and Cherny <xref ref-type="bibr" rid="CR11">1996</xref>; Abecasis et&#xA0;al. <xref ref-type="bibr" rid="CR1">2002</xref>a, <xref ref-type="bibr" rid="CR2">b</xref>; Purcell <xref ref-type="bibr" rid="CR22">2002</xref>; van den Oord <xref ref-type="bibr" rid="CR30">1999</xref>). The latter is computationally intensive, but does not require the presence of sufficient summary statistics, whereas the former is computationally light, but does require sufficient summary statistics.</p>
+      <p>The aim of the present note is to discuss a third method of power calculation, which we refer to as exact data simulation. This method is suitable when data are multivariate normal, and sufficient summary statistics are in principle available, but the number of possible groups is prohibitively large (say, in the hundreds). The large number of distinct groups renders power calculations on the basis of the summary statistics impractical. Usually, researchers resort to Monte Carlo based power studies under such circumstances. However, exact data simulation, in combination with the definition variable facilities in packages like Mplus (fourth edition, Muth&#xE9;n and Muth&#xE9;n <xref ref-type="bibr" rid="CR18">1998&#x2013;1997</xref>) or the freely available Mx program<xref ref-type="fn" rid="Fn2">2</xref> (Neale et al. <xref ref-type="bibr" rid="CR19">2003</xref>), is also applicable, and is more efficient than raw data simulation. Exact data simulation was used by Dolan et al. (<xref ref-type="bibr" rid="CR9">2005</xref>) to evaluate the effects of missing data on the power in structural equation modeling, and by Van der Sluis et al. (Under revision) to evaluate the power to detect gene by environment interaction in sib-pair association studies. Although the technique of exact simulation is in itself not new (Bollen and Stine provided the basics in 1993, and the technique of exact data simulation has recently been integrated as a distinct function in the freely available R-program<xref ref-type="fn" rid="Fn3">3</xref>), we wish to bring it to the attention of geneticists since this method of calculating power has general value in the field of genetic modeling. Below, we shortly recapitulate the basics of power analysis, and then outline the procedure of exact simulation, which may be implemented readily (we use the freely available R program). The method is illustrated in three genetic designs. Although we confine ourselves in this paper to illustrations in the context of genetic designs, we stress that this form of simulation can be used for power calculations in a wide range of other designs such as random effects models, growth curve and simplex models, and structural models.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Power calculation</title>
+      <p>The concept of power is closely related to the two types of statistical errors: the Type I error (i.e., the probability of rejecting a true hypothesis, &#x3B1;), and the Type II error (i.e., the probability of accepting a false hypothesis, &#x3B2;). Power is defined as 1&#xA0;&#x2212;&#xA0;&#x3B2;, i.e., the probability of rejecting a false hypothesis, or the probability of not making a Type II error. The basic aim of a power study is to determine the sample size N, which is required to achieve adequate power, given chosen &#x3B1; and a particular effect size.</p>
+      <p>For example, suppose that we want to fit a classical univariate ACE twin-model (see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>), and we expect that additive genetic effects (<italic>a</italic>) account for 40% of the phenotypic variance, besides effects of shared (<italic>c</italic>) and unique (<italic>e</italic>) environment. We denote this model 1, or hypothesis 1, H<sub>1</sub>. Under model 1, four parameters are estimated: the path coefficient for the additive genetic effects <italic>A</italic> (<italic>a</italic>), the path coefficient for the shared environment <italic>C</italic> (<italic>c</italic>), the path coefficient for the unique environment <italic>E</italic> (<italic>e</italic>, which includes measurement error), and the means of the twins (&#x3BC;), which are usually set to be equal within twin pairs and across MZ and DZ twins. The parameter vector &#x3B8; for this model with df<sub>1</sub>&#xA0;degrees of freedom, is &#x3B8;<sub>1</sub>&#xA0;=&#xA0;{<italic>a</italic>, <italic>c</italic>, <italic>e</italic>, <italic>&#x3BC;</italic>}, from which the covariance matrices &#x3A3;<sub>1mz</sub> and &#x3A3;<sub>1dz</sub> and mean vector &#x3BC;<sub>1</sub> can be derived. Now consider a second model, which we denote model 0, or H<sub>0</sub>, in which the additive genetic effects are assumed to account for only 5% of the phenotypic variance. This alternative model will be characterized by parameter vector &#x3B8;<sub>0&#xA0;</sub>=<sub>&#xA0;</sub>{<italic>c</italic>, <italic>e</italic>, <italic>&#x3BC;</italic>}. Note that in model 0, parameter <italic>a</italic> is not estimated (and thus not part of &#x3B8;) but fixed at a value that corresponds exactly to 5% of the phenotypic variation being explained by additive genetic effects. This model has df<sub>0</sub>&#xA0;degrees of freedom, covariance matrices &#x3A3;<sub>0mz</sub> &amp; &#x3A3;<sub>0dz</sub>, and mean vector &#x3BC;<sub>0</sub>. This alternative model H<sub>0</sub> is nested in the null-model H<sub>1</sub>, because the parameters in &#x3B8;<sub>0</sub> represent a subset of the parameters in &#x3B8;<sub>1</sub> (e.g., Bollen <xref ref-type="bibr" rid="CR4">1989</xref>; Satorra and Saris <xref ref-type="bibr" rid="CR26">1985</xref>). The study of power is subsequently concerned with the probability of rejecting the false model H<sub>0</sub> in favor of the true model H<sub>1</sub>, given &#x3B1;, the true value of parameter <italic>a</italic> (the effect size), and sample size <italic>N</italic>.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Classical univariate ACE-twin model</p></caption><graphic position="anchor" xlink:href="10519_2007_9184_Fig1_HTML" id="MO1"/></fig></p>
+      <p>To calculate power, we adopt the method of Satorra and Saris (<xref ref-type="bibr" rid="CR26">1985</xref>, see also Saris and Satorra <xref ref-type="bibr" rid="CR25">1993</xref>), which is based on the normal theory log-likelihood ratio test statistic <italic>T</italic>. In a single group, <italic>T</italic> is calculated as follows: <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ T = N*[\log |\Sigma | + \;\;{\text{trace}}(\Sigma ^{{ - 1}}
+{{\mathbf{S}}}) - \log |{\mathbf{S}}| - p + ({\mathbf{m}} -
+\mu)^{\prime}\Sigma ^{{ - 1}} ({\mathbf{m}} - \varvec\upmu )],
+$$\end{document}</tex-math></disp-formula>where <italic>N</italic> is the sample size, p denotes the number of variables in the analysis, and <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold>, and <bold>S</bold> and <bold>m</bold> represent the theoretical and observed variance covariance matrix and the means vector, respectively. Given that the assumptions of normal theory maximum likelihood are met (e.g., multivariate normality, and a large sample of independently and identically distributed cases), and under the assumption that <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold> represent the true model (<bold>&#x3A3;</bold><sub>1</sub> and <bold>&#x3BC;</bold><sub>1</sub>), the test statistic <italic>T</italic> follows a &#x3C7;<sup>2</sup> distribution with df<sub>1</sub>&#xA0;degrees of freedom, i.e., <italic>T</italic>&#xA0;&#x223C;&#xA0;&#x3C7;<sup>2</sup>(df<sub>1</sub>) (Azzeline <xref ref-type="bibr" rid="CR3">1996</xref>; Bollen <xref ref-type="bibr" rid="CR4">1989</xref>). If <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold> do not represent the true model but the alternative model (<bold>&#x3A3;</bold><sub>0</sub> and <bold>&#x3BC;</bold><sub>0</sub>), and given regularity conditions are satisfied (practically amounting to multivariate normality, limited misfit and large sample size <italic>N</italic>), the test statistic <italic>T</italic> follows a non-central &#x3C7;<sup>2</sup> distribution with df<sub>0</sub>&#xA0;degrees of freedom and non-centrality parameter &#x3BB;, i.e., T&#xA0;&#x223C;&#xA0;&#x3C7;<sup>2</sup>(df<sub>0</sub>, &#x3BB;), where &#x3BB;&#xA0;&gt;&#xA0;0.</p>
+      <p>Given the significance level of the test &#x3B1;, and the difference in degrees of freedom between the true model and the alternative model, df<sub>1&#xA0;</sub>&#x2212;<sub>&#xA0;</sub>df<sub>0</sub>, the criterion level c<sub>&#x3B1;</sub> can be obtained from a &#x3C7;<sup>2</sup> table. If the test statistic <italic>T</italic> exceeds this criterion level, i.e., <italic>T</italic>&#xA0;&gt;&#xA0;<italic>c</italic><sub>&#x3B1;</sub>, then the alternative model is rejected in favor of the true model (i.e., the fit of the alternative model to the data is significantly worse than the fit of the true model). The aim of power studies is to determine the probability of observing <italic>T</italic>&#xA0;&gt;&#xA0;<italic>c</italic><sub>&#x3B1;</sub>, i.e., <italic>P</italic>(&#x3C7;<sup>2</sup>(df<sub>0</sub>, &#x3BB;)&#xA0;&gt;&#xA0;<italic>c</italic><sub>&#x3B1;</sub>), given &#x3A3;<sub>0</sub>, &#x3BC;<sub>0</sub>, &#x3A3;<sub>1</sub>, &#x3BC;<sub>1</sub>, N, and &#x3B1;, i.e., the probability of rejecting the alternative model in favor of the true model.</p>
+      <p>The non-centrality parameter &#x3BB; can be obtained by fitting the alternative model to the true <bold>&#x3A3;</bold><sub>1</sub> and <bold>&#x3BC;</bold><sub>1</sub>, whereby &#x3BB; equals the difference in the &#x3C7;<sup>2</sup> fit statistic of the model H<sub>1</sub> and the &#x3C7;<sup>2</sup> fit statistic of the alternative model H<sub>0</sub>. That is (again in a single group), <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \lambda = N*[\log |\varvec\Sigma _{A} | +
+\;\;{\text{trace}}\,\,(\varvec\Sigma ^{{ - 1}}_{A}
+\varvec\Sigma _{0} ) - \log |\varvec\Sigma _{0} | - p +
+(\varvec\upmu _{0} - \varvec\upmu _{A} )^{\prime}\varvec\Sigma
+^{{ - 1}}_{A} (\varvec\upmu _{0} - \varvec\upmu _{A} ), $$\end{document}</tex-math></disp-formula>and the non-null distribution of this test statistic is &#x3C7;<sup>2</sup>(df<sub>1&#xA0;</sub>&#x2212;<sub>&#xA0;</sub>df<sub>0</sub>,&#x3BB;). A variety of programs can subsequently be used to integrate the non-null distribution to obtain the power (e.g., R, Mx; see also Hewitt and Heath <xref ref-type="bibr" rid="CR15">1988</xref>). Note that some packages, such as the Mx program, also compute the total sample size that would be required (given the reported proportion of subjects in each group) to reject the hypothesis at various power levels.</p>
+      <p>As stated in the introduction, power calculations usually take on one of two forms. First, one may be in the position that all information present in the raw data can be summarized in the covariance matrix <bold>&#x3A3;</bold> and the means vector <bold>&#x3BC;</bold>, in which case <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold> are sufficient statistics, because they define the likelihood of the data up to an arbitrary constant (Azzelini <xref ref-type="bibr" rid="CR3">1996</xref>). In that case, one can derive the expected population statistics <bold>&#x3A3;</bold> and <bold>&#x3BC; </bold>for every group in the study design under H<sub>1</sub> and H<sub>0</sub>, and base the power calculations on these summary statistics.</p>
+      <p>The second method of power calculation is applied when sufficient summary statistics are not available. For example, the population statistics <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold> do not summarize all information present in the raw data when the continuous data are a mixture (i.e., a convex combination of different distributions; McLachlan and Peel <xref ref-type="bibr" rid="CR17">2002</xref>), or when data are missing at random (MAR; Shafer and Graham <xref ref-type="bibr" rid="CR27">2002</xref>). In family studies, gene by environment interaction may render the summary statistics insufficient. For instance, Purcell (<xref ref-type="bibr" rid="CR22">2002</xref>) showed how environmental moderation on the means and variances can be modeled (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). For both MZ and DZ twins, the variance of twin <italic>i</italic> is calculated as: <disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{Var }}(ti) = (a + \upbeta_{a} *\;\bmod _{{ti}} )^{2} + (c + \upbeta_{c} *\bmod _{{ti}} )^{2} + (e + \upbeta_{e} *\bmod _{{ti}} )^{2} $$\end{document}</tex-math></disp-formula>while the for MZ twins, covariance between twin <italic>i</italic> and twin <italic>j</italic> is calculated as: <disp-formula id="Equ4"><label>4</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{Covar}}_{{MZ}} (ti,\;\;tj) = (a + \upbeta_{a} *\bmod _{{ti}} )(a + \upbeta_{a} *\bmod _{{tj}} ) + (c + \upbeta_{c} *\bmod _{{ti}} )(c + \upbeta_{c} *\bmod _{{tj}} ) $$\end{document}</tex-math></disp-formula>and for DZ twins as: <disp-formula id="Equ5"><label>5</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{Covar}}_{{DZ}} (t_{i} ,\;t_{j} ) = \raise0.5ex\hbox{$\scriptstyle 1$} \kern-0.1em/\kern-0.15em \lower0.25ex\hbox{$\scriptstyle 2$}(a + \upbeta_{a} *\bmod _{{ti}} )(a + \upbeta_{a} *\bmod _{{tj}} ) + (c + \upbeta_{c} *\bmod _{{ti}} )(c + \upbeta_{a} *\bmod _{tj} ) $$\end{document}</tex-math></disp-formula>The expected values of means for all twins are calculated as: <disp-formula id="Equ6"><label>6</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\varvec{\mu}} = {\left[ {\begin{array}{*{20}c} {{m +
+\upbeta_{m} *\bmod _{{ti}} }} &amp; {{m + \upbeta_{m} *\bmod
+_{{tj}} }} \\
+\end{array} } \right]}. $$\end{document}</tex-math></disp-formula><fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Univariate ACE-twin model including moderation on the variances and the means</p></caption><graphic position="anchor" xlink:href="10519_2007_9184_Fig2_HTML" id="MO10"/></fig></p>
+      <p>If the environmental moderator is categorical or ordinal (e.g., gender or affection status), the sufficient statistics (<bold>&#x3A3;</bold> and <bold>&#x3BC;</bold>) are available, assuming that the data are normally distributed conditional on the levels of the moderator. In that instance, the twins in a pair may be concordant with respect to the moderator (i.e., both twins score 0, or both twins score 1), or the twins may be discordant with respect to the moderator (i.e., scoring 0 and 1, respectively). For both MZ and DZ twins, <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold> can be formulated for all possible combinations, such that all information present in the raw data is summarized with 6 different variance covariance matrixes <bold>&#x3A3;</bold> (3 for the MZ twins, and 3 for the DZ twins) and 3 different means vectors <bold>&#x3BC; </bold>(assuming no relation between zygosity and mean), as such distinguishing 6 different groups. By comparing the fit of the model including moderator effects on both the means and the variances, to a model in which the moderator only affects the means (say), one can obtain an estimate of non-centrality parameter &#x3BB;, from which the power to detect the effect of the moderator can be derived.</p>
+      <p>However, if the moderator is continuously distributed, sufficient statistics cannot be calculated. In the absence of sufficient statistics, power calculation may be conducted by means of Monte Carlo simulation. This design implies determination of the values of the parameters of interest (e.g., based on previous studies or corresponding to realistic effect sizes), and subsequent (quasi-) random data generation according to the true model H<sub>1</sub>, with realistic sample size <italic>N</italic>. By fitting the false model H<sub>0</sub> to the data simulated according to the true model H<sub>1</sub>, an indication of the power is obtained. However, in contrast to the situation in which sufficient summary statistics are available, parameter values are not recovered exactly when the H<sub>1</sub> model is fitted, as the random data are the outcome of a stochastic sample process. Therefore, the difference in the &#x3C7;<sup>2</sup> statistic of the model H<sub>0</sub> and the model H<sub>1</sub> cannot be taken as an exact estimate of the non-centrality parameter &#x3BB;. To solve this, a large number of datasets are usually generated, and &#x3BB; is estimated as the mean of the difference in &#x3C7;<sup>2</sup> obtained in these data sets minus the number of degrees of freedom (df<sub>1</sub>&#xA0;&#x2212;&#xA0;df<sub>0</sub>). Since power studies often concern multiple parameters with multiple values, such Monte Carlo simulation studies can be prohibitively intensive. As an alternative, simulated sample sizes may be chosen very large to induce asymptotic behavior of the &#x3C7;<sup>2</sup> statistic. However, how large a sample size should be chosen depends on the study design in question, and very large sample sizes also render the analyses computationally intensive.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>Exact data simulation</title>
+      <p>Power calculations based on sufficient summary statistics are computationally relatively efficient to carry out. However, the actual feasibility of this type of power calculation depends on the number of distinct groups. If the number of groups is large (i.e.,&#xA0;&gt;100), it may be more convenient to carry out Monte Carlo based power calculations. We now introduce the concept of exact data simulation, which shares the virtues of the power studies based on summary statistics, but is more practicable given a large number of distinct groups.</p>
+      <p>The idea of exact data simulation is that data, which are randomly generated to begin with, can subsequently be transformed to fit the null-model H<sub>0</sub> exactly. That is, first a data file is generated using a normal distribution quasi-random number generator. These data are then transformed, using a transformation proposed by Bollen and Stine (<xref ref-type="bibr" rid="CR5">1993</xref>), so that the variance covariance matrix and means are exactly as specified under the model H<sub>0</sub>.</p>
+      <p>Assume a total sample size of <italic>N</italic>, and <italic>k</italic> distinct groups with known probability <italic>p</italic><sub><italic>k</italic></sub>. Let <bold>Y</bold> denote the <italic>N</italic><sub><italic>k</italic></sub>&#xA0;&#xD7;&#xA0;<italic>q</italic> data matrix for group <italic>k</italic>, where <italic>N</italic><sub><italic>k</italic></sub> is <italic>N</italic>*<italic>p</italic><sub><italic>k</italic></sub> (possibly rounded to the nearest integer) and <italic>q</italic> is the number of variables. Let <bold>m</bold> denote the <italic>q</italic>&#xA0;&#xD7;&#xA0;1 vector of observed means and<bold> S&#xA0;</bold>=&#xA0;<bold>Y</bold><sup>t</sup><bold>Y</bold>/(<italic>N</italic>&#xA0;&#x2212;&#xA0;1)&#x2212;<bold>mm</bold><sup>t</sup> be the observed covariance matrix, <bold>&#x3A3;</bold> the expected covariance matrix implied by model H<sub>1</sub>, and <bold>&#x3BC;</bold> the expected means vector implied by the model H<sub>1</sub>. Let <bold>S</bold><sup>1/2</sup> and <bold>&#x3A3;</bold><sup>1/2</sup> then denote the square root factorization of the positive definite matrices <bold>S</bold> and <bold>&#x3A3;</bold> such as given by a Cholesky factorization. It can then be shown that the covariance matrix and mean vector of data matrix <bold><italic>Z</italic></bold>, which is obtained through the following transformation of <bold>Y</bold><disp-formula id="Equ7"><label>7</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \mathbf{Z} = (\mathbf{Y} - \mathbf{J}\; \otimes
+\;\mathbf{m}^{t} )\mathbf{S}^{{ - 1/2}} \varvec\Sigma ^{{1/2}}
++ \mathbf {J} \otimes \varvec\upmu ^{t} $$\end{document}</tex-math></disp-formula>equals <bold>&#x3A3;</bold> and <bold>&#x3BC;</bold>, exactly (Bollen and Stine <xref ref-type="bibr" rid="CR5">1993</xref>). In Eq. <xref rid="Equ7" ref-type="">7</xref>, <bold>J</bold> is a unit vector of length <italic>q</italic>, and &#x2297; denotes the Kronecker product. This transformation allows one to create raw data for numerous groups that fit the null-model exactly. Consequently, when the null-model used for the generation of the data is fitted to these transformed data, all parameter values used for the simulation are recovered exactly. Let Log L<sub>0</sub> and Log L<sub>A</sub> denote the maximum values of log-likelihood functions. The difference 2Log L<sub>A&#xA0;</sub>&#x2212;&#xA0;2Log L<sub>0</sub> equals the non-centrality parameter &#x3BB;.</p>
+      <p>Compared to multi-group power calculation with summary statistics, which becomes unpractical when the number of groups is large, the practicality of exact data simulation is unaffected by the number of groups in the analysis. However, one issue does require attention. When the number of groups is large (e.g., 256, see Illustration 1 below), the probability <italic>p</italic><sub>k</sub> that a subject belongs to a group <italic>k</italic> may be relatively small. In order to calculate the Cholesky decomposition of the observed variance covariance matrix <bold>S</bold>, the number of observations in a group <italic>N</italic><sub><italic>k</italic></sub> should equal at least <italic>q</italic>&#xA0;+&#xA0;1 (i.e., to ensure that <bold>S</bold> is positive definite and the Cholesky decomposition is possible). There are two ways to handle this problem. First, one can choose <italic>N</italic> to be sufficiently large that all groups, even those with small probabilities, by choosing a very large overall sample size <italic>N</italic> for the simulation. Power analyses based on this very large sample size produce non-centrality parameters which can subsequently be used to calculate power for other, more realistic sample sizes. Second, one can choose a smaller overall sample size, and accept that not all possible groups will be represented in the power calculations. This choice is usually justified since very small groups (e.g., including 2 subjects out of a possible 10,000) do not contribute much to the power. However, power calculations are more precise when all groups are represented in the simulation, i.e., overall <italic>N</italic> is large. Furthermore, it is in principle possible that the presence of all groups is required for model identification.</p>
+      <p>Note that packages like Mx and R will estimate the number of data vectors required for a power of e.g. 80%, <italic>given the proportion of subjects in each group</italic>. So while <italic>N</italic><sub><italic>k</italic></sub>&#xA0;&#x2265;&#xA0;<italic>q</italic>&#xA0;+&#xA0;1 is required for exact simulation, Mx will return an overall sample size <italic>N</italic>, in which many groups may represented by fewer than <italic>q</italic>&#xA0;+&#xA0;1 observations, which is in line with what one would expect to observe in research practice. Using the exact data simulation script subsequently to simulate data with the sample size advertised by Mx would <italic>not</italic> result in a power of 80% since the groups with <italic>N</italic><sub><italic>k</italic></sub>&#xA0;&lt;&#xA0;q observations are not represented in the simulated data and thus do not contribute to the power.</p>
+      <p>Having discussed the concept of power, and the exact data simulation procedure, we will now illustrate the virtues of exact data simulation with three behavior genetics examples. We chose Mx to analyze the simulated data because of the program&#x2019;s inbuilt option to calculate the sample size required for different power levels given the non-centrality parameter. However, the non-centrality parameter can also be obtained through other software (e.g., LISREL, Mplus). The calculation of sample sizes required for different power levels can then be done using other programs like R. The R-scripts used to simulate the data, and the Mx scripts used to analyze the data are available in the Mx <italic>scripts library.</italic><xref ref-type="fn" rid="Fn4">4</xref> A small R-script for power computations based on non-centrality parameters can be downloaded from the library as well.</p>
+    </sec>
+    <sec id="Sec4">
+      <title>Illustration 1: multivariate ACE-model with data MCAR</title>
+      <p>Let us consider a four-variate ACE-model with data obtained from MZ and DZ twins (no additional family members). We assume a model with one common genetic factor, one common shared environmental factor, and specifics for A, C and E for all four traits. The model is illustrated in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. Parameter values are chosen such that additive genetic influences, shared environmental influences, and non-shared environmental influences explain 50%, 30% and 20% of the total variance, respectively. Of the additive genetic variance, 60% is attributable to the common genetic factor (i.e., 30% of the total variance), and 40% to the specifics of A (i.e., 20% of the total variance). Of the shared environmental variance, 50% is attributable to the common shared environmental factor (i.e., 15% of the total variance), and 50% to the specifics of C (i.e., 15% of the total variance). Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> contains the correlation matrices for the MZ and DZ twins in the case that data are not missing. Means for all traits are equal to zero. We consider the power to reject the alternative hypothesis that the genetic specifics for all four traits explain not 20% but only 5% of the total variance,<xref ref-type="fn" rid="Fn5">5</xref> i.e., one common genetic factor is (almost) sufficient to explain all genetic variance and covariance in the four traits. If there are no missing data (situation S<sub>1</sub>), then one could simply use summary statistics to obtain power information, as this is a 2-group analysis. However, suppose we want to study the influence of data missing completely at random (MCAR) on the power to reject the hypothesis that all genetic specifics are zero. Here we consider two scenarios. First, we study the case that the probability of data being MCAR is 20% for all variables (situation S<sub>2</sub>). Given that we have <italic>q</italic>&#xA0;=&#xA0;2&#xA0;&#xD7;&#xA0;4 observations per family, this kind of missingness could yield 2<sup>8&#xA0;</sup>&#x2212;&#xA0;1&#xA0;=&#xA0;255 possible data patterns, i.e., 255 different groups (we discard the group in which all data are missing). In that case, power calculations using summary statistics are impractical, whereas exact data simulation is feasible. Note that some data patterns are rather unlikely, e.g., the probability of observing a valid observation for the first trait of the first twin only, while all other observations in the family are missing, is .8*(.2<sup>7</sup>)&#xA0;=&#xA0;1.024<sup>&#x2212;05</sup>. Remember that the Cholesky decomposition cannot be calculated if the number of observations in a group N<sub>k</sub> does not equal at least <italic>q</italic>&#xA0;+&#xA0;1, so the simulated <italic>N</italic> needs to be very large if one wants all data patterns to be present in the simulated data set (about (<italic>q</italic>&#xA0;+&#xA0;1)/1.024<sup>&#x2212;05&#xA0;</sup>&#x2248;&#xA0;900,000). Yet, as very rare observations will hardly contribute to the power (5 of the 900,000 cases in the present example), one can just as well adopt a smaller sample size, and accept the fact that some groups (i.e., patterns of observations) will not be represented, and calculate power given the most likely patterns of observations. 
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Four-variate ACE-model with common factors for additive genetic and shared environmental effects, and specifics for A, C and E</p></caption><graphic position="anchor" xlink:href="10519_2007_9184_Fig3_HTML" id="MO2"/></fig><table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Illustration 1: Four-variate cross-trait-cross-twin MZ correlations (below diagonal) and DZ correlation (above diagonal) for data without missingness</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2" colspan="2"/><th align="left" colspan="4">Twin 1</th><th align="left" colspan="4">Twin 2</th></tr><tr><th align="left">Trait1</th><th align="left">Trait2</th><th align="left">Trait3</th><th align="left">Trait4</th><th align="left">Trait1</th><th align="left">Trait2</th><th align="left">Trait3</th><th align="left">Trait4</th></tr></thead><tbody><tr><td align="left" rowspan="4">Twin 1</td><td align="left">Trait1</td><td char="." align="char">1.00</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.55</td><td char="." align="char">.30</td><td char="." align="char">.30</td><td char="." align="char">.30</td></tr><tr><td align="left">Trait2</td><td char="." align="char">.45</td><td char="." align="char">1.00</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.30</td><td char="." align="char">.55</td><td char="." align="char">.30</td><td char="." align="char">.30</td></tr><tr><td align="left">Trait3</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">1.00</td><td char="." align="char">.45</td><td char="." align="char">.30</td><td char="." align="char">.30</td><td char="." align="char">.55</td><td char="." align="char">.30</td></tr><tr><td align="left">Trait4</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">1.00</td><td char="." align="char">.30</td><td char="." align="char">.30</td><td char="." align="char">.30</td><td char="." align="char">.55</td></tr><tr><td align="left" rowspan="4">Twin 2</td><td align="left">Trait1</td><td char="." align="char">.80</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">1.00</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td></tr><tr><td align="left">Trait2</td><td char="." align="char">.45</td><td char="." align="char">.80</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">1.00</td><td char="." align="char">.45</td><td char="." align="char">.45</td></tr><tr><td align="left">Trait3</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.80</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">1.00</td><td char="." align="char">.45</td></tr><tr><td align="left">Trait4</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.80</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">.45</td><td char="." align="char">1.00</td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>: Sample size <italic>N</italic> is not reported; as the simulations are exact, this correlation matrix should result independent of the sample size chosen for the simulations when data are not missing</p></table-wrap-foot></table-wrap></p>
+      <p>Second, we study the case where the probability of data being MCAR is 40% for the first two variables, and zero for the second two (situation S<sub>3</sub>). This could be a realistic scenario in practice, for example, when a questionnaire study that measures two traits is extended during the data collection to include two additional traits, or when data from different studies are combined (one study in which all four traits were measured, while another study only included measurements of two traits for, e.g., economical reasons). Given that we have <italic>q</italic>&#xA0;=&#xA0;2&#xA0;&#xD7;&#xA0;4 observations per family of which only four variables show missingness, this would yield 2<sup>4</sup>&#xA0;=&#xA0;16 possible data patterns, i.e., 16 different groups. With only 16 groups, power calculations using summary statistics would be feasible. However, one efficiently setup exact data simulation script can handle both this simple pattern of missingness, and more complex.</p>
+      <p>For the simulations we chose an overall sample size of 50,000 families (1/3 MZ, 2/3 DZ), which means that for situations S<sub>1</sub> and S<sub>3</sub>, all groups (data patterns) are represented (50,000 and 49,999 cases simulated, respectively), while for situation S<sub>2</sub>, only the 163 most likely groups of the possible 255 are represented (49,999 cases simulated).</p>
+      <p>The three simulated data sets were subsequently analyzed in Mx. In the Mx-script, we specify different groups for the MZ and DZ twins. Because we use full information maximum likelihood to accommodate the missingness, we do not need to specify different groups for all possible missing data patterns. The Mx command &#x2018;option power&#x2019; (&#x3B1;&#xA0;=&#xA0;.05, df&#xA0;=&#xA0;4) was used to obtain an estimation of the total sample size that would be required for a power of 80%, given the current proportions of subjects in each group.</p>
+      <p>We find that for situation S<sub>1</sub> (no missingness), 302 families are required for 80% power to reject the alternative hypothesis that the genetic specifics for all four traits explain 5% rather than 20% of the variance each, while for situations S<sub>2</sub> (20% missingness for all variables) and S<sub>3</sub> (40% missingness for only variable 1 and 2) the number of families required to obtain 80% power is estimated at 494 and 474, respectively. We hasten to note that these results are not informative for the case that data are missing at random (MAR), rather than MCAR (see Schafer and Graham <xref ref-type="bibr" rid="CR27">2002</xref>, for a comprehensive review on missingness and statistical procedures for handling missing data).</p>
+      <p>These power calculations took about 2&#xA0;min for each situation <italic>S</italic>. Within the Monte Carlo framework, acquisition of similar power results would take at least <italic>T</italic> times as long for each situation <italic>S</italic> (where <italic>T</italic> is the number of replications one chooses to do). Given that the time required to write the data simulation script is equal for Monte Carlo simulation and exact simulation, it is clear that exact simulation saves a lot of time.</p>
+    </sec>
+    <sec id="Sec5">
+      <title>Illustration 2: gene by environment interaction with latent G and measured, categorical E</title>
+      <p>Gene by Environment (G &#xD7; E) interaction is an important issue. From the perspective of the power study, a problem with the presence of G &#xD7; E when the E is continuously distributed is that it renders single summary statistics insufficient; in the presence of G &#xD7; E, (co)variances and means depend on the level of the environmental moderator, as we have seen in Eqs. <xref rid="Equ3" ref-type="">3</xref>&#x2013;<xref rid="Equ6" ref-type="">6</xref>. Purcell (<xref ref-type="bibr" rid="CR22">2002</xref>) showed how G &#xD7; E on the means and variances can be modeled if G is latent, and E is measured.</p>
+      <p>In power calculations in the G &#xD7; E context, one can adopt a multi-group design, if the environmental moderator is categorical. For example, consider a classical ACE-twin design. If the environmental moderator is dichotomous (e.g., males versus females, young versus old, smoking versus non-smoking), the sample consisting of MZ and DZ twin pairs can be split up into twin pairs who are concordant with respect to the moderator (e.g., both twins do, or do not, smoke), and twin pairs who are discordant with respect to the moderator (only one of the twins in a pair smokes). With a dichotomous moderator and only two subjects per family, power calculations using summary statistics are feasible as there are only three distinguishable groups (not accounting for the distinction between MZ and DZ twins). However, suppose that you have measured an environmental moderator with 4 levels (coded 0, 1, 2, 3) in twin-pairs and their parents. With four persons per family and four possible moderator levels, there are 4<sup>4&#xA0;</sup>=<sup>&#xA0;</sup>256 possible family configurations. In that case, multi-group analysis with summary statistics is impractical, and exact data simulation may be used instead.</p>
+      <p>For this illustration, parameters <italic>a</italic>, <italic>c</italic>, and <italic>e</italic> were all set to 1, such that the total variance equaled 3 (excluding moderating and main effects). The moderator, which was assumed independent of genotype in this illustration, was coded 0 to 3, such that the group with 0 on the moderator can be considered the baseline condition. The probability for all moderation levels was set to .25, and moderation levels were modeled as independent across family members (i.e., the probability for each family member&#x2019;s moderation level was independent of the moderation levels of the other family members). Moderation in <italic>C</italic>, <italic>E</italic> and the means was fixed to 0, but the regression weight of the moderator was set to .2 for the additive genetic effects, such that the moderator explained 20% of the variance in the total population (i.e., 0%, 13%, 24%, and 34% of the variance, respectively, depending on the level of the moderator). The model is illustrated in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. For the simulation, we chose an overall sample size <italic>N</italic> of 10,000 (1/3 MZ and 2/3 DZ twins). <fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Univariate ACE-model for parents and twin-offspring, including moderation on the variances and the means</p></caption><graphic position="anchor" xlink:href="10519_2007_9184_Fig4_HTML" id="MO3"/></fig></p>
+      <p>Given these simulated data, we want to estimate the power to reject the alternative hypothesis that all moderator effects on the variances are zero (i.e., no G &#xD7; E, or C &#xD7; E, or E &#xD7; E). In practice, one would fix all regression weights concerning the moderating effects on the variances (&#x3B2;<sub>a</sub>, &#x3B2;<sub>c</sub>, and &#x3B2;<sub>e</sub>) to zero at once, resulting in a test with 3&#xA0;degrees of freedom.</p>
+      <p>The data were analyzed in Mx: different groups were specified for the MZ and DZ twins, and the moderator featured as a so-called definition variable. The &#x2018;option power&#x2019; command (&#x3B1;&#xA0;=&#xA0;.05, df&#xA0;=&#xA0;3) was again used to obtain an estimation of the total sample size that would be required for a power of 80%, given the current proportions of subjects in each group.</p>
+      <p>With the probability for all moderation levels fixed to .25, all 256 groups were represented in both the MZ and the DZ twins in the simulated data file (9,984 cases simulated), and for the chosen values, the analysis shows that we would need 165 families for a power of 80%. If we were to change the moderator level probabilities from .25 for every level to .4, .3, .2, and .1 for levels 0, 1, 2 and 3 respectively, then 179 and 225 groups would be represented in MZ and DZ twins, respectively (9,705 cases simulated). In that case, 206 families would be required for a power of 80% even though the moderator effect (&#x3B2;<sub>a</sub>) is unchanged.</p>
+      <p>These power calculations took at most 1&#xA0;minute in total. Again, acquisition of similar power results would take at least <italic>T</italic> times as long within the Monte Carlo framework (where <italic>T</italic> is the number of replications). Assembling the data simulation script takes equally long for both types of simulation, so overall, exact simulation saves time.</p>
+    </sec>
+    <sec id="Sec6">
+      <title>Illustration 3: association for a tri-allelic locus with different allele frequencies </title>
+      <p>The aim of association studies is to determine whether genetic variation is associated with the risk for disease or the expression of a continuously distributed trait. Association studies may produce false positives, i.e., significant association in the absence of any true genetic effects. Population stratification is one source of false positives, i.e., the mixture of two populations with different allele frequencies and different phenotypic means. Fulker et al. 
+(<xref ref-type="bibr" rid="CR12">1999</xref>) showed that this type of spurious association can be avoided in a family-based study design. In this illustration, we focus on the situation in which data are available for pairs of siblings. Although this design allows for the simultaneous modeling of linkage and association, we limit the analysis to the association, but note that linkage information (i.e., IBD sharing estimation) could be included in exact data simulation scripts. For the present illustration, however, we assume that the locus under study is the QTL itself and not a marker in linkage disequilibrium with the QTL.</p>
+      <p>If a locus is diallelic, 2<sup>2&#xA0;</sup>=<sup>&#xA0;</sup>4 genotypes can be distinguished: AA, AB, BA and BB (of course, in practice, there are only 2&#xA0;+&#xA0;1&#xA0;=&#xA0;3 distinguishable groups as AB and BA are the same, but when simulating the data exactly, it is convenient simply to treat them as different groups). These 2<sup>2</sup> genotypes give rise to (2<sup>2</sup>)<sup>2&#xA0;</sup>=<sup>&#xA0;</sup>16 possible combinations of siblings (not accounting order), i.e., a 16 group analysis. Note that this is the simplest case: with 3 alleles, the number of possible sib-pairs is already (3<sup>2</sup>)<sup>2&#xA0;</sup>=<sup>&#xA0;</sup>81, and when the locus under study is a polymorphic marker, with, say, 15 possible alleles, the number of distinguishable sib-pairs is (15<sup>2</sup>)<sup>2&#xA0;</sup>=<sup>&#xA0;</sup>50,625. Clearly, multi-group analyses with sufficient summary statistics quickly become impractical as the number of alleles&#x2013;&#x2013;or loci&#x2013;&#x2013;increases.</p>
+      <p>We illustrate the use of exact data simulation in the context of the sib-pair association design, for a tri-allelic locus with alleles A, B, and C, with frequencies <italic>p</italic>, <italic>q</italic>, and <italic>r</italic>, respectively. The aim of this particular power calculation is to determine the influence of the allele frequencies on the power to detect a QTL. The biometrical model for a tri-allelic locus is summarized in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. As with the more familiar diallelic case, the expected genotypic value <inline-formula id="IEq1"><!-- Alternate image not processed: 10519_2007_9184_Article_IEq1.gif --><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ E(\ifmmode\expandafter\bar\else\expandafter\=\fi{g}_{{ij}} ) $$\end{document}</tex-math></inline-formula> is assumed zero, so that everything is scaled in terms of deviations. In the case of three alleles, 2 genotypic values are distinguished, which were both fixed to .206, so that AA was associated with an increase of .206, BB with an increase of .206, and CC with a decrease of&#x2212;.206 to .206&#xA0;=&#xA0;&#x2212;.412. Dominance was assumed to be absent, so the genotypic effect for the heterozygous genotypes AB, AC and BC was calculated as the mean of the effects of the homozygous groups. In the case of equal allele frequencies (<italic>p</italic>&#xA0;=&#xA0;<italic>q</italic>&#xA0;=&#xA0;<italic>r</italic>&#xA0;=&#xA0;1/3), this QTL explains 2.5% of the variance (as determined using regular regression with the phenotype as dependent variable and genotype as predictor). Note that the variance explained by the QTL depends on the allele frequencies, so even though the genotypic values remain the same across all simulations, varying the allele frequencies affects the effect size of the QTL effect. For all simulations, background variance was decomposed such that additive genetic effects explained 30%, and unique environmental influences (<italic>E</italic>) explained 70% of the variance that remained after the QTL-effects was taken into account. Overall sample size <italic>N</italic> was fixed to 10,000 (note that because of rounding, the actual <italic>N</italic> modeled will not be equal to the overall sample size <italic>N</italic> of 10,000; see Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>).<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Expectations for a tri-allelic locus following the standard biometric model when dominance is assumed absent</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Genotype</th><th align="left">AA</th><th align="left">AB</th><th align="left">BB</th><th align="left">AC</th><th align="left">BC</th><th align="left">CC</th></tr></thead><tbody><tr><td align="left">Genotype frequency <italic>f</italic><sub><italic>ij</italic></sub></td><td align="left">p<sup>2</sup></td><td align="left">2pq</td><td align="left">q<sup>2</sup></td><td align="left">2pr</td><td align="left">2qr</td><td align="left">r<sup>2</sup></td></tr><tr><td align="left">Genotypic value <italic>g</italic><sub><italic>ij</italic></sub></td><td align="left">x</td><td align="left">(x&#xA0;+&#xA0;y)/2</td><td align="left">y</td><td align="left">x&#xA0;+&#xA0;z/2&#xA0;=&#xA0;&#x2212;y/2</td><td align="left">y&#xA0;+&#xA0;z/2&#xA0;=&#xA0;&#x2212;x/2</td><td align="left">z</td></tr><tr><td align="left" colspan="7"><inline-formula id="IEq2"><!-- Alternate image not processed: 10519_2007_9184_Article_IEq2.gif --><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \upmu_{{qtl}} = f_{{ij}} \times g_{{ij}} = p^{2} x + 2pq[(x + y)/2] + q^{2} y + 2pr( - y/2) + 2qr( - x/2) + zr^{2} $$\end{document}</tex-math></inline-formula></td></tr><tr><td align="left" colspan="7"><inline-formula id="IEq3"><!-- Alternate image not processed: 10519_2007_9184_Article_IEq3.gif --><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \sigma ^{2} _{{qtl}} {\text{ }} = {\text{ }}f_{{ij}} {\text{ }}(g_{{ij}} - \mu _{{qtl}} )^{2}  = p^{2} (x - \mu _{{qtl}} )^{2} + {\text{ }}2pq([(x + y)/2] - {\text{ }}\mu _{{qtl}} )^{2} + q^{2} (y - {\text{ }}\mu _{{qtl}} )^{2} + {\text{ }}2pr([ - y/2] - \mu_{{qtl}} )^{2} + {\text{ }}2qr([ - x/2] - \mu _{{{\text{qtl}}}} {\text{)}}^{{\text{2}}} + {\text{ r}}^{{\text{2}}} {\text{(z}} - \mu _{{qtl}} {\text{)}}^{{\text{2}}} $$\end{document}</tex-math></inline-formula></td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>: <italic>p</italic>, <italic>q</italic>, and <italic>r</italic> denote the frequencies of alleles A, B and C, respectively; <italic>x</italic> is the genotypic value associated with genotype AA, y the genotypic value associated with genotype BB. As <inline-formula id="IEq4"><!-- Alternate image not processed: 10519_2007_9184_Article_IEq4.gif --><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ E(\ifmmode\expandafter\bar\else\expandafter\=\fi{g}_{{ij}} ) = 0, $$\end{document}</tex-math></inline-formula> the genotypic value for genotype CC is z&#xA0;=&#xA0;&#x2212;x &#x2212; y (i.e., x&#xA0;+&#xA0;y&#xA0;+&#xA0;z&#xA0;=&#xA0;0). <italic>&#x3BC;</italic><sub><italic>qtl</italic></sub> denotes the expected contribution of the QTL to the population mean, and &#x3C3;<sup><italic>2</italic></sup><sub><italic>qtl</italic></sub> denotes the expected contribution of the QTL to the population variance (adapted from Falconer and Mackay <xref ref-type="bibr" rid="CR31">1996</xref>)</p></table-wrap-foot></table-wrap><table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Results for illustration 3: Power calculations for sib-pair association with a tri-allelic locus with fixed genotypic values</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Frequencies alleles A, B, C</th><th align="left">Effect size (%)</th><th align="left">Actual N</th><th align="left">Nr of groups represented </th><th align="left">&#x3C7;<sup>2</sup>(6)</th><th align="left">Observed power </th><th align="left">N required for power of 80%</th></tr></thead><tbody><tr><td align="left">.33/.33/.33</td><td char="." align="char">2.5</td><td char="." align="char">9,639</td><td char="." align="char">81</td><td char="." align="char">837.824</td><td char="." align="char">1</td><td char="." align="char">157</td></tr><tr><td align="left">.25/.5/.25</td><td char="." align="char">1.7</td><td char="." align="char">9,985</td><td char="." align="char">81</td><td char="." align="char">734.357</td><td char="." align="char">1</td><td char="." align="char">185</td></tr><tr><td align="left">.45/.45/.1</td><td char="." align="char">.6</td><td char="." align="char">9,993</td><td char="." align="char">81</td><td char="." align="char">352.963</td><td char="." align="char">1</td><td char="." align="char">386</td></tr><tr><td align="left">.1/.45/.45</td><td char="." align="char">2.8</td><td char="." align="char">9,992</td><td char="." align="char">80</td><td char="." align="char">966.698</td><td char="." align="char">1</td><td char="." align="char">141</td></tr></tbody></table><table-wrap-foot><p><italic>Note</italic>: <italic>Effect size</italic> is defined as % of variance explained by QTL; <italic>Actual N</italic> refers to actual number of sib-pairs in the analysis; <italic>Nr of groups represented</italic> refers to the number of groups, of the possible 81, that were represented in the analysis; <italic>&#x3C7;</italic><sup><italic>2</italic></sup><italic>(6)</italic>: the &#x3C7;<sup>2</sup>-value of the test for association when the genotypic effects for all 6 distinguishable genotypes are fixed to zero; <italic>Observed power</italic> refers to the power observed for the modeled sample size<italic> N</italic></p></table-wrap-foot></table-wrap></p>
+      <p>Note that between and within effects were exactly equal (i.e., <italic>B</italic>&#xA0;=&#xA0;<italic>W</italic>) as we did not model population stratification; all between and within parameters can thus be fixed to be equal without loss of fit. The overall test for genetic association then involves fixing the genotypic effects for all 6 distinguishable genotypes (AA, AB, AC, BB, BC, and CC) to zero, i.e., 6&#xA0;degrees of freedom.</p>
+      <p>The simulated sib-pair data were analyzed in Mx, using the &#x2018;option power&#x2019; command (&#x3B1;&#xA0;=&#xA0;.05,df&#xA0;=&#xA0;6) to obtain the sample size required for a power of 80%, given the current proportions of subjects in each group. The results presented in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> show that the power to detect a QTL with certain genotypic values depends on the allele frequencies. As expected, the power is greatest when the frequency for the allele with the largest genotypic value (allele C) is highest.</p>
+      <p>With exact data simulation, these power calculations took about 2&#xA0;min for each choice of allele frequencies. Again, it would take at least <italic>T</italic> times as long to obtain similar power results within the Monte Carlo framework (where <italic>T</italic> is the number of replications), while the time required to write the data simulation script takes equally long for both types of simulation.</p>
+    </sec>
+    <sec id="Sec7" sec-type="conclusion">
+      <title>Conclusion</title>
+      <p>In this paper we discussed a third method of power calculation, which can be useful when sufficient summary statistics are available in principle, but the number of possible groups is so large to render a multi-group analysis impractical. The illustrations presented in this paper represent only a few of the possible (behavior genetics) designs in which exact data simulation may prove useful. Other models for which exact data simulation can be used include random-effects models, latent growth curve models, simplex models, and (hierarchical) structural models, either or not in the context of genetics, just to name a few. Exact data simulation does not require more programming skills, or programming time, than Monte Carlo simulation, but one may save a lot of time analyzing the simulated data and calculating power, especially when one wishes to construct graphs of power vs. effect size.</p>
+      <p>In this paper, we used the Mx program to analyze the simulated data because of its inbuilt power calculation function. Another useful option of Mx in this context is the possibility to output individual likelihood statistics for each raw data group. This information can be used to identify the groups that contribute most to the power to detect the effects of interest. Of course, various other statistical software packages (e.g., QTDT, LISREL, MPlus, R) can also be used in combination with exact data simulation to obtain the non-centrality parameters required for power calculations.</p>
+      <p>We emphasize that the power results obtained through exact data simulation are <italic>exactly</italic> similar to power results obtained through the analysis of summary statistics, and, just like power calculation using summary statistics, asymptotically similar to results obtained through Monte Carlo simulation (depending on the number of runs used in Monte Carlo). Differences between those two customary method of power calculation and exact data simulation only occur when subgroups have very low probabilities and the simulated overall sample size is not large enough to include all possible groups to sufficient extent; these small groups may then not be represented in the exact power simulation, while they may be (more or less) represented in other methods. However, as stated previously, the ensuing differences with respect to the power results, are very small as such small groups hardly contribute to the power anyway. Even so, to avoid the exclusion of small groups, one should choose a sufficiently large overall sample size in exact simulation, such that all groups are represented. This is perfectly doable, and does not alter the practicability of the method as it still involves analyzing a single (yet larger) dataset. The non-centrality parameter obtained in the analysis of the large simulated data set can subsequently be used to calculate the power for smaller, more realistic sample sizes. Alternatively, one may decide to accept the absence of certain groups, and the implied slight underestimation of power. Happily, the discrepancy between the intended N and the realized N is simple to calculate (as demonstrated in the R script available in the <italic>Mx scripts library</italic>), so that one can readily obtain an impression of the implications of this decision.</p>
+      <p>Throughout the paper, we have assumed that the data, conditional on group, are normally distributed, so that sufficient statistics are in principle available. With respect to situations that preclude sufficient statistics, the present method may still have some use. For instance, a continuous moderator in a G &#xD7; E model, as discussed by Purcell (<xref ref-type="bibr" rid="CR22">2002</xref>), might be approximated by a 5 point or 7 point Likert scale, which would render exact simulation possible in principle (see illustration 2).</p>
+      <p>Finally we note that the extension of this method to discrete data would obviously be very useful, and does seem feasible.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>Preparation of this manuscript was financially supported by NWO/MaGW VIDI-016-065-318, MH-65322, and DA-18673</p>
+      <p><bold>Open Access</bold> This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abecasis</surname>
+              <given-names>GR</given-names>
+            </name>
+            <name>
+              <surname>Cardon</surname>
+              <given-names>LR</given-names>
+            </name>
+            <name>
+              <surname>Cookson</surname>
+              <given-names>WOC</given-names>
+            </name>
+          </person-group>
+          <article-title>A general test of association for quantitative traits in nuclear families</article-title>
+          <source>Am J Hum Genet</source>
+          <year>2000</year>
+          <volume>66</volume>
+          <fpage>279</fpage>
+          <lpage>292</lpage>
+          <pub-id pub-id-type="doi">10.1086/302698</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Abecasis GR, Cardon LR, Cookson WOC (2000a) A general test of association for quantitative traits in nuclear families. Am J Hum Genet 66:279&#x2013;292 <pub-id pub-id-type="pmid">10631157</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abecasis</surname>
+              <given-names>GR</given-names>
+            </name>
+            <name>
+              <surname>Cookson</surname>
+              <given-names>WOC</given-names>
+            </name>
+            <name>
+              <surname>Cardon</surname>
+              <given-names>LR</given-names>
+            </name>
+          </person-group>
+          <article-title>Pedigree tests of transmission disequilibrium</article-title>
+          <source>Eur J Hum Genet</source>
+          <year>2000</year>
+          <volume>8</volume>
+          <fpage>545</fpage>
+          <lpage>551</lpage>
+          <pub-id pub-id-type="doi">10.1038/sj.ejhg.5200494</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Abecasis GR, Cookson WOC, Cardon LR (2000b) Pedigree tests of transmission disequilibrium. Eur J Hum Genet 8:545&#x2013;551 <pub-id pub-id-type="pmid">10909856</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Azzelini</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Statistical inference based on the likelihood</source>
+          <year>1996</year>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Chapman and Hall</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Azzelini A (1996) Statistical inference based on the likelihood. Chapman and Hall, London </citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bollen</surname>
+              <given-names>KA</given-names>
+            </name>
+          </person-group>
+          <source>Structural equations with latent variables</source>
+          <year>1989</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Wiley</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Bollen KA (1989) Structural equations with latent variables. Wiley, New York </citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bollen</surname>
+              <given-names>KA</given-names>
+            </name>
+            <name>
+              <surname>Stine</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Bollen</surname>
+              <given-names>KA</given-names>
+            </name>
+            <name>
+              <surname>Long</surname>
+              <given-names>JS</given-names>
+            </name>
+          </person-group>
+          <article-title>Bootstrapping goodness-of-fit measures in structural equation models</article-title>
+          <source>Testing structural equation models</source>
+          <year>1993</year>
+          <publisher-loc>Newbury Park, CA</publisher-loc>
+          <publisher-name>Sage</publisher-name>
+          <fpage>111</fpage>
+          <lpage>135</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Bollen KA, Stine RA (1993) Bootstrapping goodness-of-fit measures in structural equation models. In: Bollen KA, Long JS (eds) Testing structural equation models. Sage, Newbury Park, CA, pp. 111&#x2013;135 </citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+            <name>
+              <surname>Dolan</surname>
+              <given-names>CV</given-names>
+            </name>
+          </person-group>
+          <article-title>A comparison of power to detect a QTL in sib-pair data using multivariate phenotypes, mean phenotypes, and factor scores</article-title>
+          <source>Behav Genet</source>
+          <year>1998</year>
+          <volume>28</volume>
+          <issue>5</issue>
+          <fpage>329</fpage>
+          <lpage>340</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1021665501312</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Boomsma DI, Dolan CV (1998) A comparison of power to detect a QTL in sib-pair data using multivariate phenotypes, mean phenotypes, and factor scores. Behav Genet 28(5):329&#x2013;340 <pub-id pub-id-type="pmid">9926615</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carey</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Cholesky problems</article-title>
+          <source>Behav Genet</source>
+          <year>2005</year>
+          <volume>35</volume>
+          <issue>5</issue>
+          <fpage>653</fpage>
+          <lpage>665</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10519-005-5355-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Carey G (2005) Cholesky problems. Behav Genet 35(5):653&#x2013;665 <pub-id pub-id-type="pmid">16184491</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dolan</surname>
+              <given-names>CV</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+            <name>
+              <surname>Neale</surname>
+              <given-names>MC</given-names>
+            </name>
+          </person-group>
+          <article-title>A note on the power provided by sibships of sizes 2, 3, and 4 in genetic covariance modeling of a codominant QTL</article-title>
+          <source>Behav Genetics</source>
+          <year>1999</year>
+          <volume>29</volume>
+          <issue>3</issue>
+          <fpage>163</fpage>
+          <lpage>170</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1021687817609</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dolan CV, Boomsma DI, Neale MC (1999) A note on the power provided by sibships of sizes 2, 3, and 4 in genetic covariance modeling of a codominant QTL. Behav Genetics 29(3):163&#x2013;170 </citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dolan</surname>
+              <given-names>CV</given-names>
+            </name>
+            <name>
+              <surname>Sluis</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Grasman</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>A note on normal theory power calculation in SEM with data missing completely at random</article-title>
+          <source>Struct Eq Model</source>
+          <year>2005</year>
+          <volume>12</volume>
+          <issue>2</issue>
+          <fpage>245</fpage>
+          <lpage>262</lpage>
+          <pub-id pub-id-type="doi">10.1207/s15328007sem1202_4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dolan CV, van der Sluis S, Grasman R (2005) A note on normal theory power calculation in SEM with data missing completely at random. Struct Eq Model 12(2):245&#x2013;262 </citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dominicus</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Skrondal</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Gjessing</surname>
+              <given-names>HK</given-names>
+            </name>
+            <name>
+              <surname>Pedersen</surname>
+              <given-names>NL</given-names>
+            </name>
+            <name>
+              <surname>Palmgren</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Likelihood ratio tests in behavior genetics: problems and solutions</article-title>
+          <source>Behav Genet</source>
+          <year>2006</year>
+          <volume>36</volume>
+          <issue>2</issue>
+          <fpage>331</fpage>
+          <lpage>340</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10519-005-9034-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dominicus A, Skrondal A, Gjessing HK, Pedersen NL, Palmgren J (2006) Likelihood ratio tests in behavior genetics: problems and solutions. Behav Genet 36(2):331&#x2013;340 <pub-id pub-id-type="pmid">16474914</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="other">Falconer DS, Mackay TFC (1996) Introduction to quantitative genetics, 4th edn. Pearson Education Ltd., Essex, England</citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fulker</surname>
+              <given-names>DW</given-names>
+            </name>
+            <name>
+              <surname>Cherny</surname>
+              <given-names>SS</given-names>
+            </name>
+          </person-group>
+          <article-title>An improved multipoint sib-pair analysis of quantitative traits</article-title>
+          <source>Behav Genet</source>
+          <year>1996</year>
+          <volume>26</volume>
+          <fpage>527</fpage>
+          <lpage>532</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02359758</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fulker DW, Cherny SS (1996) An improved multipoint sib-pair analysis of quantitative traits. Behav Genet 26:527&#x2013;532 <pub-id pub-id-type="pmid">8917952</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fulker</surname>
+              <given-names>DW</given-names>
+            </name>
+            <name>
+              <surname>Cherny</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Sham</surname>
+              <given-names>PC</given-names>
+            </name>
+            <name>
+              <surname>Hewitt</surname>
+              <given-names>JK</given-names>
+            </name>
+          </person-group>
+          <article-title>Combined linkage and association sib-pair analysis for quantitative traits</article-title>
+          <source>Am J Hum Genet</source>
+          <year>1999</year>
+          <volume>64</volume>
+          <fpage>259</fpage>
+          <lpage>267</lpage>
+          <pub-id pub-id-type="doi">10.1086/302193</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fulker DW, Cherny SS, Sham PC, Hewitt JK (1999) Combined linkage and association sib-pair analysis for quantitative traits. Am J Hum Genet 64:259&#x2013;267 <pub-id pub-id-type="pmid">9915965</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heath</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Eaves</surname>
+              <given-names>LC</given-names>
+            </name>
+          </person-group>
+          <article-title>Resolving the effects of phenotype and social background on mate selection</article-title>
+          <source>Behav Genet</source>
+          <year>1985</year>
+          <volume>15</volume>
+          <issue>1</issue>
+          <fpage>15</fpage>
+          <lpage>30</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01071929</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Heath AC, Eaves LC (1985) Resolving the effects of phenotype and social background on mate selection. Behav Genet 15(1):15&#x2013;30 <pub-id pub-id-type="pmid">4039132</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heath</surname>
+              <given-names>AC</given-names>
+            </name>
+            <name>
+              <surname>Kendler</surname>
+              <given-names>KS</given-names>
+            </name>
+            <name>
+              <surname>Eaves</surname>
+              <given-names>LC</given-names>
+            </name>
+            <name>
+              <surname>Markell</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>The resolution of cultural and biological inheritance: informativeness of different relationships</article-title>
+          <source>Behav Genet</source>
+          <year>1985</year>
+          <volume>15</volume>
+          <issue>5</issue>
+          <fpage>439</fpage>
+          <lpage>465</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01066238</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Heath AC, Kendler KS, Eaves LC, Markell D (1985) The resolution of cultural and biological inheritance: informativeness of different relationships. Behav Genet 15(5):439&#x2013;465 <pub-id pub-id-type="pmid">4074271</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hewitt</surname>
+              <given-names>JK</given-names>
+            </name>
+            <name>
+              <surname>Heath</surname>
+              <given-names>AC</given-names>
+            </name>
+          </person-group>
+          <article-title>A note on computing the chi-square noncentrality parameter for power analysis</article-title>
+          <source>Behav Genet</source>
+          <year>1988</year>
+          <volume>18</volume>
+          <fpage>105</fpage>
+          <lpage>108</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01067079</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hewitt JK, Heath AC (1988) A note on computing the chi-square noncentrality parameter for power analysis. Behav Genet 18:105&#x2013;108 <pub-id pub-id-type="pmid">3365192</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Martin</surname>
+              <given-names>NG</given-names>
+            </name>
+            <name>
+              <surname>Eaves</surname>
+              <given-names>LC</given-names>
+            </name>
+            <name>
+              <surname>Kersey</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Davies</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>The power of the classical twin design</article-title>
+          <source>Heredity</source>
+          <year>1978</year>
+          <volume>40</volume>
+          <fpage>97</fpage>
+          <lpage>116</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Martin NG, Eaves LC, Kersey MJ, Davies P (1978) The power of the classical twin design. Heredity 40:97&#x2013;116 <pub-id pub-id-type="pmid">272366</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McLachlan</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Peel</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Finite mixture models</source>
+          <year>2002</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Wiley</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">McLachlan G, Peel D (2002) Finite mixture models. Wiley, New York </citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="other">Muth&#xE9;n, LK, Muth&#xE9;n, BO (1998&#x2013;2007) Mplus User&#x2019;s guide, 4th edn. Muth&#xE9;n &amp; Muth&#xE9;n, Los Angeles, CA</citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Neale</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Eaves</surname>
+              <given-names>LJ</given-names>
+            </name>
+            <name>
+              <surname>Kendler</surname>
+              <given-names>KS</given-names>
+            </name>
+          </person-group>
+          <article-title>The power of the classical twin study to resolve variation in threshold traits</article-title>
+          <source>Behav Genet</source>
+          <year>1994</year>
+          <volume>24</volume>
+          <fpage>239</fpage>
+          <lpage>258</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF01067191</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Neale MC, Eaves LJ, Kendler KS (1994) The power of the classical twin study to resolve variation in threshold traits. Behav Genet 24:239&#x2013;258 <pub-id pub-id-type="pmid">7945154</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Neale</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Boker</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Xie</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Maes</surname>
+              <given-names>HH</given-names>
+            </name>
+          </person-group>
+          <source>Mx: statistical modeling,</source>
+          <year>2003</year>
+          <edition>6</edition>
+          <publisher-loc>Richmond, VA</publisher-loc>
+          <publisher-name>Department of Psychiatry</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Neale MC, Boker SM, Xie G, Maes HH (2003) Mx: statistical modeling, 6th edn. Department of Psychiatry, Richmond, VA </citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Posthuma</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Boomsma</surname>
+              <given-names>DI</given-names>
+            </name>
+          </person-group>
+          <article-title>A note on the statistical power in extended twin designs</article-title>
+          <source>Behav Genet</source>
+          <year>2000</year>
+          <volume>30</volume>
+          <issue>2</issue>
+          <fpage>147</fpage>
+          <lpage>158</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1001959306025</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Posthuma D, Boomsma DI (2000) A note on the statistical power in extended twin designs. Behav Genet 30(2):147&#x2013;158 <pub-id pub-id-type="pmid">10979605</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Purcell</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Variance components models for gene-environment interaction in twin analysis</article-title>
+          <source>Twin Res</source>
+          <year>2002</year>
+          <volume>5</volume>
+          <fpage>554</fpage>
+          <lpage>571</lpage>
+          <pub-id pub-id-type="doi">10.1375/136905202762342026</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Purcell S (2002). Variance components models for gene-environment interaction in twin analysis. Twin Res 5:554&#x2013;571 <pub-id pub-id-type="pmid">12573187</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Purcell</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Sham</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Variance components models for gene-environment interaction in quantitative trait locus linkage analysis</article-title>
+          <source>Twin Research</source>
+          <year>2002</year>
+          <volume>5</volume>
+          <issue>6</issue>
+          <fpage>572</fpage>
+          <lpage>576</lpage>
+          <pub-id pub-id-type="doi">10.1375/136905202762342035</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Purcell S, Sham P (2002) Variance components models for gene-environment interaction in quantitative trait locus linkage analysis. Twin Research 5(6):572&#x2013;576 <pub-id pub-id-type="pmid">12573188</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Purcell</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Cherny</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Sham</surname>
+              <given-names>PC</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetic Power Calculator: design of linkage and association genetic mapping studies of complex traits</article-title>
+          <source>Bioinformatics</source>
+          <year>2003</year>
+          <volume>19</volume>
+          <issue>1</issue>
+          <fpage>149</fpage>
+          <lpage>150</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/19.1.149</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Purcell S, Cherny SS, Sham PC (2003) Genetic Power Calculator: design of linkage and association genetic mapping studies of complex traits. Bioinformatics 19(1):149&#x2013;150 <pub-id pub-id-type="pmid">12499305</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Saris</surname>
+              <given-names>WE</given-names>
+            </name>
+            <name>
+              <surname>Satora</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Bollen</surname>
+              <given-names>KA</given-names>
+            </name>
+            <name>
+              <surname>Long</surname>
+              <given-names>JS</given-names>
+            </name>
+          </person-group>
+          <article-title>Power evaluations in structural equation models</article-title>
+          <source>Testing structural equation models</source>
+          <year>1993</year>
+          <publisher-loc>Newbury Park, CA</publisher-loc>
+          <publisher-name>Sage</publisher-name>
+          <fpage>181</fpage>
+          <lpage>204</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Saris WE, Satora A (1993) Power evaluations in structural equation models. In: Bollen KA, Long JS (eds) Testing structural equation models. Sage, Newbury Park, CA, pp 181&#x2013;204 </citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Satorra</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Saris</surname>
+              <given-names>WE</given-names>
+            </name>
+          </person-group>
+          <article-title>The power of the likelihood ratio test in covariance structure analysis</article-title>
+          <source>Psychometrika</source>
+          <year>1985</year>
+          <volume>50</volume>
+          <fpage>83</fpage>
+          <lpage>90</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF02294150</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Satorra A, Saris WE (1985) The power of the likelihood ratio test in covariance structure analysis. Psychometrika 50:83&#x2013;90 </citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schafer</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Graham</surname>
+              <given-names>JW</given-names>
+            </name>
+          </person-group>
+          <article-title>Missing data: our view of the state of the art</article-title>
+          <source>Psychological Methods</source>
+          <year>2002</year>
+          <volume>7</volume>
+          <fpage>147</fpage>
+          <lpage>177</lpage>
+          <pub-id pub-id-type="doi">10.1037/1082-989X.7.2.147</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schafer JL, Graham JW (2002) Missing data: our view of the state of the art. Psychological Methods 7:147&#x2013;177 <pub-id pub-id-type="pmid">12090408</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sham</surname>
+              <given-names>PC</given-names>
+            </name>
+            <name>
+              <surname>Cherny</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Purcell</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hewitt</surname>
+              <given-names>JK</given-names>
+            </name>
+          </person-group>
+          <article-title>Power of Linkage versus Association Analysis of Quantitative Traits, by Use of Variance-Components Models, for Sibship Data</article-title>
+          <source>Am J Hum Genet</source>
+          <year>2000</year>
+          <volume>66</volume>
+          <fpage>1616</fpage>
+          <lpage>1630</lpage>
+          <pub-id pub-id-type="doi">10.1086/302891</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sham PC, Cherny SS, Purcell S, Hewitt JK (2000) Power of Linkage versus Association Analysis of Quantitative Traits, by Use of Variance-Components Models, for Sibship Data. Am J Hum Genet 66:1616&#x2013;1630 <pub-id pub-id-type="pmid">10762547</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sham</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Purcell</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Cherny</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Abecasis</surname>
+              <given-names>GR</given-names>
+            </name>
+          </person-group>
+          <article-title>Powerful regression-based quantitative-trait linkage analysis of general pedigrees</article-title>
+          <source>Am J Hum Genet</source>
+          <year>2002</year>
+          <volume>71</volume>
+          <fpage>238</fpage>
+          <lpage>253</lpage>
+          <pub-id pub-id-type="doi">10.1086/341560</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sham P, Purcell S, Cherny SS, Abecasis GR (2002) Powerful regression-based quantitative-trait linkage analysis of general pedigrees. Am J Hum Genet 71:238&#x2013;253 <pub-id pub-id-type="pmid">12111667</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oord</surname>
+              <given-names>EJCG</given-names>
+            </name>
+          </person-group>
+          <article-title>Method to detect genotype-environment interactions for quantitative trait loci in association studies</article-title>
+          <source>Am J Epidemiol</source>
+          <year>1999</year>
+          <volume>150</volume>
+          <issue>11</issue>
+          <fpage>1179</fpage>
+          <lpage>1187</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Van den Oord EJCG (1999) Method to detect genotype-environment interactions for quantitative trait loci in association studies. Am J Epidemiol 150(11):1179&#x2013;1187 <pub-id pub-id-type="pmid">10588078</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="other">Van der Sluis S, Dolan CV, Neale MC, Posthuma D (2007) A general test for gene-environment interaction in family-based association analysis of quantitative traits. Manuscript under revision
+</citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn id="Fn1">
+        <label>1</label>
+        <p>
+          <ext-link ext-link-type="uri" xlink:href="http://pngu.mgh.harvard.edu/&#x223C;purcell/gpc/">http://pngu.mgh.harvard.edu/&#x223C;purcell/gpc/</ext-link>
+        </p>
+      </fn>
+      <fn id="Fn2">
+        <label>2</label>
+        <p>
+          <ext-link ext-link-type="uri" xlink:href="http://www.vcu.edu/mx/">http://www.vcu.edu/mx/</ext-link>
+        </p>
+      </fn>
+      <fn id="Fn3">
+        <label>3</label>
+        <p>
+          <ext-link ext-link-type="uri" xlink:href="http://www.r-project.org/">http://www.r-project.org/</ext-link>
+        </p>
+      </fn>
+      <fn id="Fn4">
+        <label>4</label>
+        <p>
+          <ext-link ext-link-type="uri" xlink:href="http://www.psy.vu.nl/mxbib/">http://www.psy.vu.nl/mxbib/</ext-link>
+        </p>
+      </fn>
+      <fn id="Fn5">
+        <label>5</label>
+        <p>Note that typically, one will want to know whether the specifics can be discarded from the model altogether, i.e., whether the values of the specifics deviate significantly from zero. However, fixing variance parameters to zero, i.e., on the boundary of the parameter space, causes the null distribution of the test statistic T to follow a mixture of central &#x3C7;2 distributions, rather than the usual central &#x3C7;2(df) distribution (see e.g., Carey <xref ref-type="bibr" rid="CR7">2005</xref>; Dominicus et al. <xref ref-type="bibr" rid="CR10">2006</xref>). In determining the critical value given the choice of &#x3B1;, one would then have to refer to this mixture distribution, rather than to the central &#x3C7;2(df). To keep things simple, we therefore chose to fix the variance parameter not to zero, but to a value much smaller than the actual value. If this value is not too close to the boundary, the null distribution of the test statistic T is the standard central &#x3C7;2(df).</p>
+      </fn>
+      <fn>
+        <p>Edited by Stacey Cherny.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

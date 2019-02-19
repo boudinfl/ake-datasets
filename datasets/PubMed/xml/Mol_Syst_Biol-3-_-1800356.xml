@@ -1,0 +1,1021 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Mol Syst Biol</journal-id>
+      <journal-title>Molecular Systems Biology</journal-title>
+      <issn pub-type="epub">1744-4292</issn>
+      <publisher>
+        <publisher-name>Nature Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17224917</article-id>
+      <article-id pub-id-type="pmc">1800356</article-id>
+      <article-id pub-id-type="pii">msb4100114</article-id>
+      <article-id pub-id-type="doi">10.1038/msb4100114</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Report</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Tissue-specific regulatory elements in mammalian promoters</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Smith</surname>
+            <given-names>Andrew D</given-names>
+          </name>
+          <xref ref-type="aff" rid="O1">1</xref>
+          <xref ref-type="author-notes" rid="n1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Sumazin</surname>
+            <given-names>Pavel</given-names>
+          </name>
+          <xref ref-type="aff" rid="O2">2</xref>
+          <xref ref-type="author-notes" rid="n1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Zhang</surname>
+            <given-names>Michael Q</given-names>
+          </name>
+          <xref ref-type="aff" rid="O1">1</xref>
+          <xref ref-type="corresp" rid="c1">a</xref>
+        </contrib>
+        <aff id="O1"><label>1</label>Cold Spring Harbor Laboratory, Cold Spring Harbor, NY, USA</aff>
+        <aff id="O2"><label>2</label>Computer Science Department, Portland State University, Portland, OR, USA</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="c1"><label>a</label>Cold Spring Harbor Laboratory, 1 Bungtown Road, Hershey Building, Cold Spring Harbor, NY 11724, USA. Tel. +1 516 367 8393; Fax: +1 516 367 8461; <email>mzhang@cshl.edu</email></corresp>
+        <fn id="n1">
+          <label>*</label>
+          <p>These authors contributed equally to this work</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>16</day>
+        <month>01</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>3</volume>
+      <fpage>73</fpage>
+      <lpage>73</lpage>
+      <history>
+        <date date-type="received">
+          <day>14</day>
+          <month>06</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>10</day>
+          <month>11</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <copyright-statement>Copyright &#xA9; 2007, EMBO and Nature Publishing Group</copyright-statement>
+      <copyright-year>2007</copyright-year>
+      <abstract>
+        <p>Transcription factor-binding sites and the <italic>cis</italic>-regulatory modules they compose are central determinants of gene expression. We previously showed that binding site motifs and modules in proximal promoters can be used to predict a significant portion of mammalian tissue-specific transcription. Here, we report on a systematic analysis of promoters controlling tissue-specific expression in heart, kidney, liver, pancreas, skeletal muscle, testis and CD4 T cells, for both human and mouse. We integrated multiple sources of expression data to compile sets of transcripts with strong evidence for tissue-specific regulation. The analysis of the promoters corresponding to these sets produced a catalog of predicted tissue-specific motifs and modules, and <italic>cis</italic>-regulatory elements. Predicted regulatory interactions are supported by statistical evidence, and provide a foundation for targeted experiments that will improve our understanding of tissue-specific regulatory networks. In a broader context, methods used to construct the catalog provide a model for the analysis of genomic regions that regulate differentially expressed genes.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>cis-regulatory modules</kwd>
+        <kwd>tissue-specific regulation</kwd>
+      </kwd-group>
+      <counts>
+        <page-count count="1"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec disp-level="1">
+      <title>Introduction</title>
+      <p>Reverse engineering mammalian transcriptional regulatory circuits can be achieved using systematic methodology that includes both computational and experimental techniques, working in tandem to generate, refine and verify hypotheses. Understanding tissue-specific transcription is a necessary step for extending regulatory circuit reverse-engineering efforts from single-cell eukaryotes to metazoans. We recently demonstrated that the information in proximal promoters can predict a significant portion of tissue-specific elevated or inhibited expression (<xref ref-type="bibr" rid="b25">Smith <italic>et al</italic>, 2006</xref>). Here, focusing on tissue-specific regulatory pattern identification and prediction accuracy instead of proof of existence, we use refined analysis and data curation methods to discover and catalog high-confidence regulatory interactions and sites. This catalog will assist experimental efforts to reverse engineer tissue-specific transcriptional regulatory networks from the bottom up.</p>
+      <p>Numerous techniques for analysis of regulatory sequences have been proposed, and the problem of module identification is now receiving due attention (<xref ref-type="bibr" rid="b35">Zhou and Wong, 2004</xref>; <xref ref-type="bibr" rid="b12">Gupta and Liu, 2005</xref>; <xref ref-type="bibr" rid="b36">Zhu <italic>et al</italic>, 2005</xref>). Previously characterized binding site motifs have been used to infer transcription factor function in certain tissues (<xref ref-type="bibr" rid="b17">Nelander <italic>et al</italic>, 2005</xref>). <xref ref-type="bibr" rid="b32">Xie <italic>et al</italic> (2005)</xref> identified conserved motifs across ortholog promoters of four mammalian genomes. <xref ref-type="bibr" rid="b20">Robertson <italic>et al</italic> (2006)</xref> describe cisRed, a database that integrates genome annotation data, homology data and genome alignments to identify motifs with conserved sites across mammals. We analyzed proximal promoters with evidence for tissue-specific regulation in order to identify tissue-specific motifs, modules and their sites in proximal promoters. We developed a new technique for characterizing tissue-specific modules that ensures that each module component significantly improves tissue-specific module enrichment.</p>
+      <p>We integrated multiple sources of expression data to identify reliable sets of transcripts that are under tissue-specific regulation in human and mouse. Using transcription start site (TSS) annotation in Cold Spring Harbor Mammalian Promoter Database (CSHLmpd) (<xref ref-type="bibr" rid="b33">Xuan <italic>et al</italic>, 2005</xref>), we compiled sets of proximal promoters corresponding to transcripts with evidence for specific regulation in the selected tissues. Our analysis was based on motifs discovered <italic>de novo</italic> (called novel motifs) using DME (<xref ref-type="bibr" rid="b27">Smith <italic>et al</italic>, 2005a</xref>) and DME-B (<xref ref-type="bibr" rid="b25">Smith <italic>et al</italic>, 2006</xref>), as well as previously characterized vertebrate binding-site motifs (called known motifs) from TRANSFAC (<xref ref-type="bibr" rid="b16">Matys <italic>et al</italic>, 2003</xref>) and JASPAR (<xref ref-type="bibr" rid="b21">Sandelin <italic>et al</italic>, 2004</xref>). We evaluated motifs according to enrichment in tissue-specific promoters relative to other promoters from the same species. We showed that motifs associated with factors with known tissue-specific roles rank high for enrichment, that motif ranks are significantly correlated between human and mouse and that this same set of motifs and their corresponding <italic>cis</italic>-elements are unlikely to be identified using traditional, order-preserving alignments of ortholog promoter sequences. We constructed modules of interacting motifs (both novel and known motifs), ensuring that each component contributed significantly to the enrichment of the whole module. We annotated tissue-specific promoters with predicted tissue-specific regulatory elements and demonstrated that these sites are in excellent agreement with experimentally annotated liver-specific sites in the human albumin promoter and skeletal-muscle-specific sites in the human &#x3B1;-actin promoter. Both promoters are particularly well annotated with experimentally verified tissue-specific regulatory elements and permit an informative comparison. In other tissues, we gave predicted sites for tissue-specific motifs in representative promoters. The complete data and analysis are available in TCat: The Catalog of Tissue-Specific Regulatory Motifs (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://rulai.cshl.edu/tcat">http://rulai.cshl.edu/tcat</ext-link>).</p>
+    </sec>
+    <sec disp-level="1">
+      <title>Results</title>
+      <p>We describe first steps toward cataloging high-confidence tissue-specific motifs, modules and their sites. We first collected and integrated expression and function data from various sources, and identified transcripts that are likely to be under tissue specific regulation. We demonstrated that transcripts with evidence for tissue-specific regulation from multiple expression sources in one species (human or mouse) are significantly more likely to have evidence for tissue-specificity in the other species. We analyzed and annotated proximal-promoter sets in seven representative tissues from both human and mouse, demonstrating that motifs and predicted binding sites are in agreement with experimentally verified data and that analyses in human and mouse are significantly correlated. We also showed that the top-scoring sites in orthologous tissue-specific promoters from human and mouse rarely have significant conservation of site order, suggesting that comparative genomics alone may not be sufficient to decode the regulatory signals in these proximal promoters.</p>
+      <sec disp-level="2">
+        <title>Transcripts under tissue-specific regulation</title>
+        <p>Few transcripts have expression restricted to a single tissue, but many transcripts appear to be regulated in a tissue-specific manner (<xref ref-type="bibr" rid="b30">Su <italic>et al</italic>, 2004</xref>), and the corresponding promoters are likely to contain tissue-specific regulatory elements. To circumvent problems associated with individual sources of information, we used a voting system that combined information about expression, function and tissue specificity from different sources. <xref ref-type="table" rid="t1">Table I</xref> gives the number of transcripts with single and multiple sources of evidence (votes) for tissue-specific regulation in each tissue. Orthologs of transcripts with multiple votes for tissue-specific regulation were more likely to have evidence for specific regulation in that tissue, suggesting that the false-positive rate for calling a transcript tissue specific is lower when based on multiple votes. The number of ortholog transcript pairs with multiple votes for tissue-specific regulation in both species ranged from 1 in CD4 T cells to 69 in liver. <xref ref-type="table" rid="t2">Table II</xref> lists genes and orthologous transcripts with votes for skeletal-muscle-specific regulation in both human and mouse. Gene and transcript lists for other tissues are given in <xref ref-type="supplementary-material" rid="S1">Supplementary Section 1.5</xref>.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Enrichment of known tissue-specific motifs</title>
+        <p>Knowledge of factors and corresponding binding sites that regulate tissue-specific transcription can be used to evaluate motif ranking. We measured motif enrichment in tissue-specific promoter sets using balanced error rates, evaluating motifs for their ability to distinguish tissue-specific sets (foreground sets) from background sets that are composed of non-tissue-specific promoter samples from CSHLmpd. Balanced error rates measure proportions of misclassified promoters after normalization of foreground and background sizes. We ranked motifs according to enrichment and determined whether the ranks assigned to binding-site motifs for factors with known tissue-specific roles are significantly elevated in the corresponding tissues. The results presented in <xref ref-type="table" rid="t3">Table III</xref> demonstrate that binding-site motifs for these factors ranked significantly high (<italic>P</italic>&lt;0.01) according to a Wilcoxon signed-ranks test in almost all tissues tested. Excluding DBP in human liver and HNF-3 in mouse liver, these factors had evidence for expression in their respective tissues, and their binding-site motifs were highly enriched in our foreground sets. Results are summarized in <xref ref-type="table" rid="t4">Table IV</xref>, and the motifs with greatest enrichment in each tissue are given in TCat. <xref ref-type="table" rid="t4">Table IV</xref> also includes information for HNF-6 in liver. HNF-6 is a known liver regulator, but there is no evidence for its expression in liver based on our data, and its binding-site motif was not enriched in our liver foreground sets. In addition, C/G- or A/T-rich motifs are likely to be enriched in foreground sets that are C/G or A/T rich relative to promoter base composition. To eliminate this potential bias, we adjusted the GC content in background sets to match foreground sets. Some known tissue-specific motifs were identified as enriched only after GC content correction.</p>
+        <p>Nuclear receptor binding-site motifs and E-box motifs are among the top enriched motifs in 11 and 10 of the 14 human and mouse tissues, respectively. A Wilcoxon signed-ranks test showed that nuclear receptor and E-box motifs (represented by 54 and 39 TRANSFAC motifs, respectively) are enriched in the union of our foreground sets with <italic>P</italic>-values below 6.07E&#x2212;14 and 2.02E&#x2212;13 (nuclear-receptor motifs) and 2.22E&#x2212;10 and 4.57E&#x2212;03 (E-box) in human and mouse, respectively. These results suggest a diversity of tissue-specific roles for nuclear receptors and E-box binders, likely mediated by tissue-specific cofactors.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Tissue-specific <italic>cis</italic>-regulatory elements</title>
+        <p>Highly enriched motifs, and the associated score thresholds identified by our methods, provide a starting point for targeted experimental annotation of tissue-specific promoters. <xref ref-type="fig" rid="f1">Figure 1</xref> shows known and predicted sites mapped on the &#x2212;500 to +100 region of the human albumin promoter and the &#x2212;250 to +50 region of the human skeletal muscle &#x3B1;-actin promoter. Human albumin has known functional binding sites for HNF-1, C/EBP, AFP and NF-Y (<xref ref-type="bibr" rid="b18">Paonessa <italic>et al</italic>, 1988</xref>; <xref ref-type="bibr" rid="b22">Sawadaishi <italic>et al</italic>, 1988</xref>; <xref ref-type="bibr" rid="b10">Frain <italic>et al</italic>, 1990</xref>; <xref ref-type="bibr" rid="b14">Li <italic>et al</italic>, 1990</xref>), all of which were identified among the top predicted motifs or included in top modules for liver. Locations of known sites for C/EBP (at &#x2212;437) and NF-Y (at &#x2212;125) do not perfectly align with the corresponding predicted sites (at &#x2212;462 and &#x2212;143, respectively), but current knowledge about binding sites for those factors raises the possibility that the predicted locations are more accurate. The only predicted binding site for these factors in the human albumin promoter that is not depicted in the figure is a C/EBP site at &#x2212;956. Human skeletal muscle &#x3B1;-actin has known sites for SRF, TEF and a known TATA box (<xref ref-type="bibr" rid="b3">Boxer <italic>et al</italic>, 1989</xref>; <xref ref-type="bibr" rid="b15">MacLellan <italic>et al</italic>, 1994</xref>), all among top predicted motifs for human skeletal muscle (TATA box motifs have high similarity with MEF-2 motifs). <xref ref-type="fig" rid="f2">Figure 2</xref> gives predictions in a representative human promoter in each of the remaining tissues.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Comparison to previous results</title>
+        <p>Previous analysis of tissue-specific patterns in regulatory regions includes analysis based on cross-species conservation (<xref ref-type="bibr" rid="b32">Xie <italic>et al</italic>, 2005</xref>) and coexpression (<xref ref-type="bibr" rid="b25">Smith <italic>et al</italic>, 2006</xref>).</p>
+        <p><xref ref-type="bibr" rid="b32">Xie <italic>et al</italic> (2005)</xref> identified conserved elements in orthologous promoters of four mammalian genomes. They found 59 experimentally validated motifs that are significantly conserved and enriched in at least one human tissue. These include E-box, ETS, MEF2, MEIS1 and NF-1 in skeletal muscle; Chx10 in kidney; NRF-1, ELK-1, GABP and E12 in CD4 T cells; AP-4 and MEF-2 in heart; and NRF-1 in testis. Our results agree with <xref ref-type="bibr" rid="b32">Xie <italic>et al</italic> (2005)</xref> on the enrichment of E-Box and MEF-2 in skeletal muscle, ETS in CD4 T-cells and E-box in pancreas.</p>
+        <p>In previous work (<xref ref-type="bibr" rid="b25">Smith <italic>et al</italic>, 2006</xref>), we tested the hypothesis that proximal promoters contain information that can be used to predict tissue-specific expression. We were not concerned with identifying the most significant tissue-specific motifs, modules and sites. Considering the difference between the goals of the two projects, it is not surprising that the predictive models described by <xref ref-type="bibr" rid="b25">Smith <italic>et al</italic> (2006)</xref> have little similarity to our top motifs and modules. The most significant similarities between our top tissue-specific patterns and the predictive models of <xref ref-type="bibr" rid="b25">Smith <italic>et al</italic> (2006)</xref> include the enrichment of ETS in CD4 T-cell-specific promoters and the enrichment of <xref ref-type="bibr" rid="b25">Smith <italic>et al</italic> (2006)</xref> motifs Novel3 and Novel6 in mouse testis and Novel1 in human testis. The three novel testis motifs are very similar to motifs that rank in the top 100 in our analysis, but the enrichment of these motifs was not sufficiently high for inclusion in TCat.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Correlation between human and mouse regulatory regions</title>
+        <p>We compared motif enrichment ranks in each human foreground set to ranks in the corresponding mouse foreground set using Spearman's rank correlation test, and found that enrichment ranks across species are highly correlated (<italic>P</italic>&lt;0.001) for all but CD4 T cells (<xref ref-type="supplementary-material" rid="S1">Supplementary Table 15</xref>). In CD4 T cells, motif enrichment ranks are similar only for few highly enriched motifs. Despite the motif-enrichment ranks correlation, the order of the top predicted binding sites is not usually conserved between orthologous promoters. Fewer than 10% of orthologous pairs showed significant (<italic>P</italic>&lt;0.01) conservation of site order. Weak site-order conservation suggests that the top tissue-specific sites would be difficult to identify using traditional cross-species alignment alone, and methods that rely on co-linear promoter alignment may have high false-negative detection rates. This evidence is in agreement with <xref ref-type="bibr" rid="b11">Frith <italic>et al</italic> (2006)</xref>, who found that homologous transcription start sites can be separated by more than 100 nucleotides. A list of the nine genes (out of 102 candidates) with significant conservation of site order is given in <xref ref-type="supplementary-material" rid="S1">Supplementary Section 2.3</xref>.</p>
+      </sec>
+    </sec>
+    <sec disp-level="1" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <p>The steps used in creating the catalog include (1) identifying tissue-specific transcripts, (2) identifying factors that are expressed in each tissue, (3) obtaining promoter sequences for tissue-specific transcript, and (4) identifying individual motifs and modules (i.e. sets of interacting motifs) that characterize tissue-specific promoter sets.</p>
+      <sec disp-level="2">
+        <title>Identifying tissue-specific transcripts</title>
+        <p>To identify motifs and modules that regulate tissue-specific transcription, we analyzed promoters of transcripts that appear to be regulated in a tissue-specific manner. If an information source indicated that a transcript has restricted expression, unusually high expression, or a specific function in the tissue, that source voted for tissue specificity of the transcript. For each tissue, we sorted the transcripts according to the number of votes received, retaining the top 100 with distinct TSS as tissue specific. Ties in the ranking were broken according to intensity values from the GNF SymAtlas expression data (discussed below), which we have found to be the most complete and the most reliable source of tissue-based expression information. We used the same number of transcripts for each tissue to facilitate comparison across tissues, and 100 sequences provided sufficient information for our analysis while allowing identification of well-known tissue-specific motifs.</p>
+      </sec>
+      <sec disp-level="3">
+        <title>Microarray data</title>
+        <p>The GNF SymAtlas microarray data were generated using Affymetrix HG-U133A array and the custom GNF1H and GNF1M Affymetrix arrays, and include expression profiles for 79 human and 61 mouse tissues (<xref ref-type="bibr" rid="b30">Su <italic>et al</italic>, 2004</xref>). Among these are the seven tissues we selected to include in the catalog. Tissues were selected with consideration to data availability in GNF and other sources and interest from Zhang lab members and collaborators. A transcript received a vote for tissue specificity from this information source if it was called present and its intensity exceeded its mean across all tissues by 3 standard deviations.</p>
+        <p>The Hughes Toronto microarray data (<xref ref-type="bibr" rid="b34">Zhang <italic>et al</italic>, 2004</xref>), which was generated using custom-built oligonucleotide arrays, provide mouse expression profiles for 55 tissues, including all of our tissues but CD4 T cells. A transcript received a vote for tissue specificity if it was called present in the tissue, and had intensity at least 10 standard deviations above its mean across all 55 tissues. This large number of standard deviations was required to limit the number of transcripts receiving positive votes.</p>
+        <p>The GeneNote expression profiles (<xref ref-type="bibr" rid="b24">Shmueli <italic>et al</italic>, 2003</xref>), which were generated using the Affymetrix GeneChip HG-U95, provide human expression data for 12 tissues, including all of our tissues but CD4 T cells and testis. The GeneNote data were used in the same way as the GNF SymAtlas data, with a transcript being called tissue specific if it is present in that tissue and has intensity at least 3 standard deviations above its mean across all 12 tissues.</p>
+      </sec>
+      <sec disp-level="3">
+        <title>EST data</title>
+        <p>dbEST is a database of expressed sequence tags (<xref ref-type="bibr" rid="b2">Boguski <italic>et al</italic>, 1993</xref>), and contains source information, such as the tissue of origin, for each EST. This information is used to annotate UniGene clusters with the source data, and a UniGene is said to have restricted expression in a tissue if more than half of the ESTs contributing to that UniGene have the same source tissue. A transcript received one vote for specificity in a particular tissue if the corresponding UniGene cluster is annotated as having expression restricted to that tissue.</p>
+      </sec>
+      <sec disp-level="3">
+        <title>GO terms</title>
+        <p>We associated a set of GO Terms with each tissue. This was performed by compiling a set of keywords for each tissue (e.g. &#x2018;renal' was associated with kidney; &#x2018;sperm' was associated with testis), and searching GO Term names and definitions for those keywords. This produced, for each tissue, a set of GO Terms that were subsequently reviewed to ensure that the context of the keywords was appropriate. A transcript of a gene annotated with a GO Term that is associated with a tissue received a vote for specificity in that tissue.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Selecting promoter sequences</title>
+        <p>Although regulatory elements can exist almost anywhere in the genome, they are concentrated near the TSS (<xref ref-type="bibr" rid="b8">Cooper <italic>et al</italic>, 2006</xref>). We used the CSHLmpd to map transcripts to promoters, using experimentally confirmed promoters from EPD (<xref ref-type="bibr" rid="b19">Perier <italic>et al</italic>, 1998</xref>), DBTSS (<xref ref-type="bibr" rid="b31">Suzuki <italic>et al</italic>, 2002</xref>) and GenBank, as well as computationally predicted promoters. For each promoter, we used the proximal sequence region of &#x2212;1000 to +100 relative to the TSS.</p>
+        <p>Each part of our analysis is based on comparing the tissue-specific promoter sets to a background of random promoters from the same species. For each tissue, a background set was constructed by selecting 1000 transcripts uniformly at random from the set of RefSeqs for the corresponding species with TSS annotation in CSHLmpd. For each tissue, transcripts with at least one vote for specificity in that tissue were removed from consideration before selecting the background.</p>
+        <p>Because our analysis focused on proximal promoters, &#x2212;1000 to +100 relative to the TSS, if the TSS annotation is off by several hundred base pairs, important promoter regions might be excluded. AKR1D1, identified as liver specific by our voting system, has two known TSSs within 500 bp of the first exon for the corresponding RefSeq (NM_005989) (<xref ref-type="bibr" rid="b5">Charbonneau and Luu-The, 1999</xref>). We used the TSS located upstream of the first exon, but could have chosen to use the other promoter, which was annotated by a generally more reliable source (DBTSS versus GenBank). Currently, in such situations, there is little information that identifies the promoter responsible for observed tissue-specific regulation, but comparative genomics and rapidly improving arrays promise better 5&#x2032; end identification, thus improving proximal promoter annotation and association between transcripts and promoters (<xref ref-type="bibr" rid="b13">Kim <italic>et al</italic>, 2005</xref>; <xref ref-type="bibr" rid="b4">Carninci <italic>et al</italic>, 2006</xref>). Negative promoter sets can be used to cancel out patterns that are not related to tissue-specific transcription regulation. We use random negative promoter sets with and without GC-content correction; this correction cancels the inuence of genomic GC-content isochore variability.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Identifying and evaluating motifs</title>
+        <p>Given a motif <italic>M</italic> (represented as a position&#x2013;frequency matrix) and a sequence <italic>S</italic>, the <italic>max</italic>-<italic>score</italic> of <italic>M</italic> in <italic>S</italic>, max-score (<italic>M</italic>, <italic>S</italic>) is the score of the top scoring subsequence of <italic>S</italic> when aligned against the scoring matrix for <italic>M</italic>. Details on constructing and using scoring matrices can be found in <xref ref-type="bibr" rid="b29">Stormo (2000)</xref>. For a fixed threshold &#x3BB;, the max-score classification method classifies <italic>S</italic> as belonging to the foreground if max-score (<italic>M,S</italic>)&#x2A7E;&#x3BB;, and the background otherwise. Given a set of foreground sequences FG (i.e. the tissue-specific promoters) and a set of background sequences BG, the sensitivity of <italic>M</italic> and &#x3BB; under max-score classification is</p>
+        <p>
+          <disp-formula id="illus1">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i1.jpg"/>
+          </disp-formula>
+        </p>
+        <p>and the specificity is</p>
+        <p>
+          <disp-formula id="illus2">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i2.jpg"/>
+          </disp-formula>
+        </p>
+        <p>The balanced error rate for <italic>M</italic> and &#x3BB; under max-score classification is then</p>
+        <p>
+          <disp-formula id="illus3">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i3.jpg"/>
+          </disp-formula>
+        </p>
+        <p>The quantity of interest in our analysis corresponds to the optimal value of &#x3BB; for <italic>M</italic> in distinguishing FG from BG:</p>
+        <p>
+          <disp-formula id="illus4">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i4.jpg"/>
+          </disp-formula>
+        </p>
+        <p>Many known motifs are similar to each other, usually owing to similar binding specificities for distinct factors or distinct origins for mofits associated with a single factor. We used MATCOMPARE (<xref ref-type="bibr" rid="b23">Schones <italic>et al</italic>, 2005</xref>) to eliminate redundancies in the sets of known and novel motifs.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Identifying and evaluating modules</title>
+        <p>Modules are used to classify sequences based on the max-score values of the motifs they contain. Let &#x2133;={<italic>M</italic><sub><italic>1</italic></sub>, &#x2026;, <italic>M</italic><sub><italic>k</italic></sub>} be a module and &#x39B;={&#x3BB;<sub>1</sub>, &#x2026;, &#x3BB;<sub><italic>k</italic></sub>} be an associated set of thresholds. The max-score classification for modules assigns sequence <italic>S</italic> to the foreground if and only if max-score (<italic>M</italic><sub><italic>i</italic></sub>, <italic>S</italic>)&#x2A7E;&#x3BB;<sub><italic>i</italic></sub> holds for all <italic>i</italic> (1&#x2A7D;<italic>i</italic>&#x2A7D;k). Given sets of sequences FG and BG, the sensitivity of &#x2133; and &#x39B; under max-score classification is</p>
+        <p>
+          <disp-formula id="illus5">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i5.jpg"/>
+          </disp-formula>
+        </p>
+        <p>and the specificity is</p>
+        <p>
+          <disp-formula id="illus6">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i6.jpg"/>
+          </disp-formula>
+        </p>
+        <p>The balanced-error rate for &#x2133; and &#x39B; under the max-score classification is</p>
+        <p>
+          <disp-formula id="illus7">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i7.jpg"/>
+          </disp-formula>
+        </p>
+        <p>As with mofits, we are interested in the optimal value of &#x39B; and define</p>
+        <p>
+          <disp-formula id="illus8">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i8.jpg"/>
+          </disp-formula>
+        </p>
+        <p>Because modules are intended to describe synergistic function of a set of motifs, we are interested in modules whose performance is better than expected given the performance of the individual motifs composing the module. For a module &#x2133; composed of <italic>k</italic> motifs, let &#x2133;&#x2032;&#x2282;&#x2133; minimize <italic>B</italic>(&#x2133;&#x2032;, FG, BG) over all size <italic>k</italic>&#x2212;1 modules built from motifs in &#x2133;, and let &#x2133;&#x2032;=&#x2133;\&#x2133;&#x2032;. To assess whether &#x2133;, with balanced-error rate <italic>u</italic>, significantly improves over &#x2133;&#x2032; and &#x2133;&#x2032;, we use the probability</p>
+        <p>
+          <disp-formula id="illus9">
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-i9.jpg"/>
+          </disp-formula>
+        </p>
+        <p>We estimated this probability empirically, by sampling from the distribution of balanced-error rates resulting from intersections of sets with balanced-error rates <italic>B</italic>(&#x2133;&#x2032;, FG, BG) and <italic>B</italic>(&#x2133;&#x2032;, FG, BG).</p>
+        <p>We used MODULATOR, which is available in CREAD (<xref ref-type="bibr" rid="b26">Smith <italic>et al</italic>, 2005b</xref>), to construct modules. Given a set of motifs, a set of foreground sequences and a set of background sequences, MODULATOR identifies those modules composed of the given motifs that have the best balanced-error rates. A branch-and-bound algorithm is used to simultaneously optimize the score thresholds for the motifs in a module. Modules are constructed by adding motifs to existing modules until a user-specified module size is reached or until motif addition does not significantly improve enrichment. Each time a motif is added to a module, the resulting larger module is retained only if the balanced-error rate of the larger module is improved significantly above expectation. The initial modules of size two are obtained by combining pairs of motifs.</p>
+        <p>For modules that are entirely composed of known motifs, the top 100 motifs (before eliminating redundancies) were used. Modules were allowed to contain up to four motifs for reasons of computational feasibility, but many top modules are smaller. Novel modules, which must contain at least one novel motif, were constructed using the top 100 novel motifs and the top 100 known motifs. Redundancies were removed from the lists of top modules using a procedure described in <xref ref-type="supplementary-material" rid="S1">Supplementary Section 2</xref>.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Measuring the significance of motifs and modules</title>
+        <p>To measure significance of enrichment for top known motifs we used known motifs to classify randomly assembled promoter sets. We constructed 1000 foreground/background pairs for each species by selecting 100 sequences for each foreground and 1000 for each background uniformly at random from CSHLmpd. For each foreground/background pair we calculated the balanced-error rate of each known motif. The best balanced-error rates overall obtained on random samples for human and mouse were 0.364 and 0.368, respectively. We used the distribution of these error rates to identify the <italic>q</italic>-value (<xref ref-type="bibr" rid="b28">Storey and Tibshirani, 2003</xref>) significance of the error rate of each motif. Tissues whose highest ranking motifs fail the <italic>q</italic>&lt;0.05 test include CD4 T cells and heart in human, and CD4 T cells in mouse. TCat includes <italic>q</italic>-value annotation for each ranked known motif. The full set of motifs for which <italic>q</italic>&lt;0.05 is estimated to include five false leads per 100 predictions. We did not obtain statistical significance measures for novel motifs, because this will require running DME and DME-B more times than is computationally feasible.</p>
+        <p>Modules were identified by combining motifs whose cooccurrence was enriched in the foreground sets. We measured enrichment of modules using the balanced-error rate (analogous to that of motifs), and we required that each motif in a module contributes significantly to the enrichment of the module as a whole. To test significance, we randomly selected 100 of the 1000 foreground/background pairs used to evaluate individual known motifs, and performed the module identification procedure on each of the 100 selected pairs. The best balanced-error rates for modules that are entirely composed of known motifs (called known modules) in random human and mouse sets were 0.3145 and 0.304, respectively. We used these balanced-error rates as an estimate of the critical value for <italic>P</italic>&lt;0.01. We opted for using <italic>P</italic>-value cutoffs instead of computing <italic>q</italic>-values because accurate <italic>q</italic>-value estimation for modules is computationally prohibitive. Top known modules in human kidney (0.2955), liver (0.3105), pancreas (0.3125) and testis (0.3) scored better than the cutoff, as did top known modules in mouse kidney (0.3005), liver (0.3025) and testis (0.2945).</p>
+      </sec>
+    </sec>
+    <sec sec-type="supplementary-material" id="S1">
+      <title>Supplementary Material</title>
+      <supplementary-material id="N0x467ccb0N0x3e7d570" content-type="local-data">
+        <caption>
+          <p>Supplementary information</p>
+        </caption>
+        <media xmlns:xlink="http://www.w3.org/1999/xlink" mimetype="application" mime-subtype="pdf" xlink:href="msb4100114-s1.pdf"/>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank our anonymous reviewers for suggestions that have greatly improved the quality of this paper, and BIOBASE for providing access to TRANSFAC. This work is supported by NIH grant HG001696 and NSF grants DBI-0306152 and EIA-0324292.</p>
+    </ack>
+    <ref-list>
+      <ref id="b2">
+        <citation citation-type="journal"><name><surname>Boguski</surname><given-names>MS</given-names></name>, <name><surname>Lowe</surname><given-names>TM</given-names></name>, <name><surname>Tolstoshev</surname><given-names>CM</given-names></name> (<year>1993</year>) <article-title>dbEST&#x2014;database for expressed sequence tags</article-title>. <source>Nat Genet</source> <volume>4</volume>: <fpage>332</fpage>&#x2013;<lpage>333</lpage><pub-id pub-id-type="pmid">8401577</pub-id></citation>
+      </ref>
+      <ref id="b3">
+        <citation citation-type="journal"><name><surname>Boxer</surname><given-names>L</given-names></name>, <name><surname>Miwa</surname><given-names>T</given-names></name>, <name><surname>Gustafson</surname><given-names>T</given-names></name>, <name><surname>Kedes</surname><given-names>L</given-names></name> (<year>1989</year>) <article-title>Identification and characterization of a factor that binds to two human sarcomeric actin promoters</article-title>. <source>J Biol Chem</source> <volume>264</volume>: <fpage>1284</fpage>&#x2013;<lpage>1292</lpage><pub-id pub-id-type="pmid">2910853</pub-id></citation>
+      </ref>
+      <ref id="b4">
+        <citation citation-type="journal"><name><surname>Carninci</surname><given-names>P</given-names></name>, <name><surname>Sandelin</surname><given-names>A</given-names></name>, <name><surname>Lenhard</surname><given-names>B</given-names></name>, <name><surname>Katayama</surname><given-names>S</given-names></name>, <name><surname>Shimokawa</surname><given-names>K</given-names></name>, <name><surname>Ponjavic</surname><given-names>J</given-names></name>, <name><surname>Semple</surname><given-names>CAM</given-names></name>, <name><surname>Taylor</surname><given-names>MS</given-names></name>, <name><surname>Engstrom</surname><given-names>PG</given-names></name>, <name><surname>Frith</surname><given-names>MC</given-names></name>, <name><surname>Forrest</surname><given-names>ARR</given-names></name>, <name><surname>Alkema</surname><given-names>WB</given-names></name>, <name><surname>Tan</surname><given-names>SL</given-names></name>, <name><surname>Plessy</surname><given-names>C</given-names></name>, <name><surname>Kodzius</surname><given-names>R</given-names></name>, <name><surname>Ravasi</surname><given-names>T</given-names></name>, <name><surname>Kasukawa</surname><given-names>T</given-names></name>, <name><surname>Fukuda</surname><given-names>S</given-names></name>, <name><surname>Kanamori-Katayama</surname><given-names>M</given-names></name>, <name><surname>Kitazume</surname><given-names>Y</given-names></name>, <name><surname>Kawaji</surname><given-names>H</given-names></name>, <name><surname>Kai</surname><given-names>C</given-names></name>, <name><surname>Nakamura</surname><given-names>M</given-names></name>, <name><surname>Konno</surname><given-names>H</given-names></name>, <name><surname>Nakano</surname><given-names>K</given-names></name>, <name><surname>Mottagul-Tabar</surname><given-names>S</given-names></name>, <name><surname>Arner</surname><given-names>P</given-names></name>, <name><surname>Chesi</surname><given-names>A</given-names></name>, <name><surname>Gustincich</surname><given-names>S</given-names></name>, <name><surname>Persichetti</surname><given-names>F</given-names></name>, <name><surname>Suzuki</surname><given-names>H</given-names></name>, <name><surname>Grimmond</surname><given-names>SM</given-names></name>, <name><surname>Wells</surname><given-names>CA</given-names></name>, <name><surname>Orlando</surname><given-names>V</given-names></name>, <name><surname>Wahlestedt</surname><given-names>C</given-names></name>, <name><surname>Liu</surname><given-names>ET</given-names></name>, <name><surname>Harbers</surname><given-names>M</given-names></name>, <name><surname>Kawai</surname><given-names>J</given-names></name>, <name><surname>Bajic</surname><given-names>VB</given-names></name>, <name><surname>Hume</surname><given-names>DA</given-names></name>, <name><surname>Hayashizaki</surname><given-names>Y</given-names></name> (<year>2006</year>) <article-title>Genome-wide analysis of mammalian promoter architecture and evolution</article-title>. <source>Nat Genet</source> <volume>38</volume>: <fpage>626</fpage>&#x2013;<lpage>635</lpage><pub-id pub-id-type="pmid">16645617</pub-id></citation>
+      </ref>
+      <ref id="b5">
+        <citation citation-type="journal"><name><surname>Charbonneau</surname><given-names>A</given-names></name>, <name><surname>Luu-The</surname><given-names>V</given-names></name> (<year>1999</year>) <article-title>Assignment of steroid 5beta-reductase (SRD5B1) and its pseudogene (SRD5BP1) to human chromosome bands 7q32 &#x2192; q33 and 1q23 &#x2192; q25, respectively, by <italic>in situ</italic> hybridization</article-title>. <source>Cytogenet Cell Genet</source> <volume>84</volume>: <fpage>105</fpage>&#x2013;<lpage>106</lpage><pub-id pub-id-type="pmid">10343119</pub-id></citation>
+      </ref>
+      <ref id="b8">
+        <citation citation-type="journal"><name><surname>Cooper</surname><given-names>SJ</given-names></name>, <name><surname>Trinklein</surname><given-names>ND</given-names></name>, <name><surname>Anton</surname><given-names>ED</given-names></name>, <name><surname>Nguyen</surname><given-names>L</given-names></name>, <name><surname>Myers</surname><given-names>RM</given-names></name> (<year>2006</year>) <article-title>Comprehensive analysis of transcriptional promoter structure and function in 1% of the human genome</article-title>. <source>Genome Res</source> <volume>16</volume>: <fpage>1</fpage>&#x2013;<lpage>10</lpage><pub-id pub-id-type="pmid">16344566</pub-id></citation>
+      </ref>
+      <ref id="b10">
+        <citation citation-type="journal"><name><surname>Frain</surname><given-names>M</given-names></name>, <name><surname>Hardon</surname><given-names>E</given-names></name>, <name><surname>Ciliberto</surname><given-names>G</given-names></name>, <name><surname>Sala-Trepat</surname><given-names>JM</given-names></name> (<year>1990</year>) <article-title>Binding of a liver-specific factor to the human albumin gene promoter and enhancer</article-title>. <source>Mol Cell Biol</source> <volume>10</volume>: <fpage>991</fpage>&#x2013;<lpage>999</lpage><pub-id pub-id-type="pmid">2304474</pub-id></citation>
+      </ref>
+      <ref id="b11">
+        <citation citation-type="journal"><name><surname>Frith</surname><given-names>MC</given-names></name>, <name><surname>Ponjavic</surname><given-names>J</given-names></name>, <name><surname>Fredman</surname><given-names>D</given-names></name>, <name><surname>Kai</surname><given-names>C</given-names></name>, <name><surname>Kawai</surname><given-names>J</given-names></name>, <name><surname>Carninci</surname><given-names>P</given-names></name>, <name><surname>Hayashizaki</surname><given-names>Y</given-names></name>, <name><surname>Sandelin</surname><given-names>A</given-names></name> (<year>2006</year>) <article-title>Evolutionary turnover of mammalian transcription start sites</article-title>. <source>Genome Res</source> <volume>16</volume>: <fpage>713</fpage>&#x2013;<lpage>722</lpage><pub-id pub-id-type="pmid">16687732</pub-id></citation>
+      </ref>
+      <ref id="b12">
+        <citation citation-type="journal"><name><surname>Gupta</surname><given-names>M</given-names></name>, <name><surname>Liu</surname><given-names>JS</given-names></name> (<year>2005</year>) <article-title><italic>De novo</italic> <italic>cis</italic>-regulatory module elicitation for eukaryotic genomes</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>102</volume>: <fpage>7079</fpage>&#x2013;<lpage>7084</lpage><pub-id pub-id-type="pmid">15883375</pub-id></citation>
+      </ref>
+      <ref id="b13">
+        <citation citation-type="journal"><name><surname>Kim</surname><given-names>TH</given-names></name>, <name><surname>Barrera</surname><given-names>LO</given-names></name>, <name><surname>Zheng</surname><given-names>M</given-names></name>, <name><surname>Qu</surname><given-names>C</given-names></name>, <name><surname>Singer</surname><given-names>MA</given-names></name>, <name><surname>Richmond</surname><given-names>TA</given-names></name>, <name><surname>Wu</surname><given-names>Y</given-names></name>, <name><surname>Green</surname><given-names>RD</given-names></name>, <name><surname>Ren</surname><given-names>B</given-names></name> (<year>2005</year>) <article-title>A high-resolution map of active promoters in the human genome</article-title>. <source>Nature</source> <volume>436</volume>: <fpage>876</fpage>&#x2013;<lpage>880</lpage><pub-id pub-id-type="pmid">15988478</pub-id></citation>
+      </ref>
+      <ref id="b14">
+        <citation citation-type="journal"><name><surname>Li</surname><given-names>X</given-names></name>, <name><surname>Huang</surname><given-names>JH</given-names></name>, <name><surname>Rienhoff</surname><given-names>HY</given-names><suffix>Jr</suffix></name>, <name><surname>Liao</surname><given-names>WS-L</given-names></name> (<year>1990</year>) <article-title>Two adjacent c/ebp-binding sequences that participate in the cell-specific expression of the mouse serum amyloid a3 gene</article-title>. <source>Mol Cell Biol</source> <volume>10</volume>: <fpage>6624</fpage>&#x2013;<lpage>6631</lpage><pub-id pub-id-type="pmid">2247076</pub-id></citation>
+      </ref>
+      <ref id="b15">
+        <citation citation-type="journal"><name><surname>MacLellan</surname><given-names>W</given-names></name>, <name><surname>Lee</surname><given-names>T</given-names></name>, <name><surname>Schwartz</surname><given-names>R</given-names></name>, <name><surname>Schneider</surname><given-names>M</given-names></name> (<year>1994</year>) <article-title>Transforming growth factor-beta response elements of the skeletal alpha-actin gene. Combinatorial action of serum response factor, YY1, and the SV40 enhancer-binding protein, TEF-1</article-title>. <source>J Biol Chem</source> <volume>269</volume>: <fpage>16754</fpage>&#x2013;<lpage>16760</lpage><pub-id pub-id-type="pmid">8206998</pub-id></citation>
+      </ref>
+      <ref id="b16">
+        <citation citation-type="journal"><name><surname>Matys</surname><given-names>V</given-names></name>, <name><surname>Fricke</surname><given-names>E</given-names></name>, <name><surname>Geffers</surname><given-names>R</given-names></name>, <name><surname>Gossling</surname><given-names>E</given-names></name>, <name><surname>Haubrock</surname><given-names>M</given-names></name>, <name><surname>Hehl</surname><given-names>R</given-names></name>, <name><surname>Hornischer</surname><given-names>K</given-names></name>, <name><surname>Karas</surname><given-names>D</given-names></name>, <name><surname>Kel</surname><given-names>AE</given-names></name>, <name><surname>Kel-Margoulls</surname><given-names>OV</given-names></name>, <name><surname>Kloos</surname><given-names>DU</given-names></name>, <name><surname>Land</surname><given-names>S</given-names></name>, <name><surname>Lewicki-Potapov</surname><given-names>B</given-names></name>, <name><surname>Michael</surname><given-names>H</given-names></name>, <name><surname>Munch</surname><given-names>R</given-names></name>, <name><surname>Reuter</surname><given-names>I</given-names></name>, <name><surname>Rotert</surname><given-names>S</given-names></name>, <name><surname>Saxel</surname><given-names>H</given-names></name>, <name><surname>Scheer</surname><given-names>M</given-names></name>, <name><surname>Thiele</surname><given-names>S</given-names></name>, <name><surname>Wingender</surname><given-names>E</given-names></name> (<year>2003</year>) <article-title>TRANSFAC(R): transcriptional regulation, from patterns to profiles</article-title>. <source>Nucleic Acids Res</source> <volume>31</volume>: <fpage>374</fpage>&#x2013;<lpage>378</lpage><pub-id pub-id-type="pmid">12520026</pub-id></citation>
+      </ref>
+      <ref id="b17">
+        <citation citation-type="journal"><name><surname>Nelander</surname><given-names>S</given-names></name>, <name><surname>Larsson</surname><given-names>E</given-names></name>, <name><surname>Kristiansson</surname><given-names>E</given-names></name>, <name><surname>Mansson</surname><given-names>R</given-names></name>, <name><surname>Nerman</surname><given-names>O</given-names></name>, <name><surname>Sigvardsson</surname><given-names>M</given-names></name>, <name><surname>Mostad</surname><given-names>P</given-names></name>, <name><surname>Lin-dahl</surname><given-names>P</given-names></name> (<year>2005</year>) <article-title>Predictive screening for regulators of conserved functional gene modules (gene batteries) in mammals</article-title>. <source>BMC Genomics</source> <volume>68</volume>, doi:10.1168/1471-2164-6-68</citation>
+      </ref>
+      <ref id="b18">
+        <citation citation-type="journal"><name><surname>Paonessa</surname><given-names>G</given-names></name>, <name><surname>Gounari</surname><given-names>F</given-names></name>, <name><surname>Frank</surname><given-names>R</given-names></name>, <name><surname>Cortese</surname><given-names>R</given-names></name> (<year>1988</year>) <article-title>Purification of a NF1-like DNA-binding protein from rat liver and cloning of the corresponding cDNA</article-title>. <source>EMBO J</source> <volume>7</volume>: <fpage>3115</fpage>&#x2013;<lpage>3123</lpage><pub-id pub-id-type="pmid">3053160</pub-id></citation>
+      </ref>
+      <ref id="b19">
+        <citation citation-type="journal"><name><surname>Perier</surname><given-names>RC</given-names></name>, <name><surname>Junier</surname><given-names>T</given-names></name>, <name><surname>Bucher</surname><given-names>P</given-names></name> (<year>1998</year>) <article-title>The eukaryotic promoter database EPD</article-title>. <source>Nucleic Acids Res</source> <volume>26</volume>: <fpage>353</fpage>&#x2013;<lpage>357</lpage><pub-id pub-id-type="pmid">9399872</pub-id></citation>
+      </ref>
+      <ref id="b20">
+        <citation citation-type="journal"><name><surname>Robertson</surname><given-names>G</given-names></name>, <name><surname>Bilenky</surname><given-names>M</given-names></name>, <name><surname>Lin</surname><given-names>K</given-names></name>, <name><surname>He</surname><given-names>A</given-names></name>, <name><surname>Yuen</surname><given-names>W</given-names></name>, <name><surname>Dagpinar</surname><given-names>M</given-names></name>, <name><surname>Varhol</surname><given-names>R</given-names></name>, <name><surname>Teague</surname><given-names>K</given-names></name>, <name><surname>Griffith</surname><given-names>OL</given-names></name>, <name><surname>Zhang</surname><given-names>X</given-names></name>, <name><surname>Pan</surname><given-names>Y</given-names></name>, <name><surname>Hassel</surname><given-names>M</given-names></name>, <name><surname>Sleumer</surname><given-names>MC</given-names></name>, <name><surname>Pan</surname><given-names>W</given-names></name>, <name><surname>Pleasance</surname><given-names>ED</given-names></name>, <name><surname>Chuang</surname><given-names>M</given-names></name>, <name><surname>Hao</surname><given-names>H</given-names></name>, <name><surname>Li</surname><given-names>YY</given-names></name>, <name><surname>Robertson</surname><given-names>N</given-names></name>, <name><surname>Fjell</surname><given-names>C</given-names></name>, <name><surname>Li</surname><given-names>B</given-names></name>, <name><surname>Montgomery</surname><given-names>SB</given-names></name>, <name><surname>Astakhova</surname><given-names>T</given-names></name>, <name><surname>Zhou</surname><given-names>J</given-names></name>, <name><surname>Sander</surname><given-names>J</given-names></name>, <name><surname>Siddiqui</surname><given-names>AS</given-names></name>, <name><surname>Jones</surname><given-names>SJM</given-names></name> (<year>2006</year>) <article-title>cisRED: a database system for genome-scale computational discovery of regulatory elements</article-title>. <source>Nucleic Acids Res</source> <volume>34</volume> <issue>(Suppl 1)</issue>: <fpage>D68</fpage>&#x2013;<lpage>D73</lpage><pub-id pub-id-type="pmid">16381958</pub-id></citation>
+      </ref>
+      <ref id="b21">
+        <citation citation-type="journal"><name><surname>Sandelin</surname><given-names>A</given-names></name>, <name><surname>Alkema</surname><given-names>W</given-names></name>, <name><surname>Engstr&#xF6;m</surname><given-names>P</given-names></name>, <name><surname>Wasserman</surname><given-names>WW</given-names></name>, <name><surname>Lenhard</surname><given-names>B</given-names></name> (<year>2004</year>) <article-title>JASPAR: an open access database for eukaryotic transcription factor binding profiles</article-title>. <source>Nucleic Acids Res</source> <volume>32</volume>: <fpage>D91</fpage>&#x2013;<lpage>D94</lpage><pub-id pub-id-type="pmid">14681366</pub-id></citation>
+      </ref>
+      <ref id="b22">
+        <citation citation-type="journal"><name><surname>Sawadaishi</surname><given-names>K</given-names></name>, <name><surname>Morinaga</surname><given-names>T</given-names></name>, <name><surname>Tamaoki</surname><given-names>T</given-names></name> (<year>1988</year>) <article-title>Interaction of a hepatoma-specific nuclear factor with transcription-regulatory sequences of the human alpha-fetoprotein and albumin genes</article-title>. <source>Mol Cell Biol</source> <volume>8</volume>: <fpage>5179</fpage>&#x2013;<lpage>5187</lpage><pub-id pub-id-type="pmid">2468995</pub-id></citation>
+      </ref>
+      <ref id="b23">
+        <citation citation-type="journal"><name><surname>Schones</surname><given-names>D</given-names></name>, <name><surname>Sumazin</surname><given-names>P</given-names></name>, <name><surname>Zhang</surname><given-names>MQ</given-names></name> (<year>2005</year>) <article-title>Similarity of position frequency matrices for transcription factor binding sites</article-title>. <source>Bioinformatics</source> <volume>21</volume>: <fpage>307</fpage>&#x2013;<lpage>313</lpage><pub-id pub-id-type="pmid">15319260</pub-id></citation>
+      </ref>
+      <ref id="b24">
+        <citation citation-type="journal"><name><surname>Shmueli</surname><given-names>O</given-names></name>, <name><surname>Horn-Saban</surname><given-names>S</given-names></name>, <name><surname>Chalifa-Caspi</surname><given-names>V</given-names></name>, <name><surname>Shmoish</surname><given-names>M</given-names></name>, <name><surname>Ophir</surname><given-names>R</given-names></name>, <name><surname>Benjamin-Rodrig</surname><given-names>H</given-names></name>, <name><surname>Safran</surname><given-names>M</given-names></name>, <name><surname>Domany</surname><given-names>E</given-names></name>, <name><surname>Lancet</surname><given-names>D</given-names></name> (<year>2003</year>) <article-title>GeneNote: whole genome expression profiles in normal human tissues</article-title>. <source>C R Biol</source> <volume>10&#x2013;11</volume>: <fpage>1067</fpage>&#x2013;<lpage>1072</lpage></citation>
+      </ref>
+      <ref id="b25">
+        <citation citation-type="journal"><name><surname>Smith</surname><given-names>AD</given-names></name>, <name><surname>Sumazin</surname><given-names>P</given-names></name>, <name><surname>Xuan</surname><given-names>Z</given-names></name>, <name><surname>Zhang</surname><given-names>MQ</given-names></name> (<year>2006</year>) <article-title>DNA motifs in human and mouse proximal promoters predict tissue-specific expression</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>104</volume>: <fpage>6275</fpage>&#x2013;<lpage>6280</lpage><pub-id pub-id-type="pmid">16606849</pub-id></citation>
+      </ref>
+      <ref id="b27">
+        <citation citation-type="journal"><name><surname>Smith</surname><given-names>AD</given-names></name>, <name><surname>Sumazin</surname><given-names>P</given-names></name>, <name><surname>Zhang</surname><given-names>MQ</given-names></name> (<year>2005a</year>) <article-title>Identifying tissue-selective transcription factor binding sites in vertebrate promoters</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>102</volume>: <fpage>1560</fpage>&#x2013;<lpage>1565</lpage><pub-id pub-id-type="pmid">15668401</pub-id></citation>
+      </ref>
+      <ref id="b26">
+        <citation citation-type="other"><name><surname>Smith</surname><given-names>AD</given-names></name>, <name><surname>Sumazin</surname><given-names>P</given-names></name>, <name><surname>Zhang</surname><given-names>MQ</given-names></name> (<year>2005b</year>) <article-title>CREAD: Comprehensive regulatory element analysis and discovery</article-title>. World Wide Web (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://cread.sf.net/">http://cread.sf.net/</ext-link>)</citation>
+      </ref>
+      <ref id="b28">
+        <citation citation-type="journal"><name><surname>Storey</surname><given-names>JD</given-names></name>, <name><surname>Tibshirani</surname><given-names>R</given-names></name> (<year>2003</year>) <article-title>Statistical significance for genomewide studies</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>100</volume>: <fpage>9440</fpage>&#x2013;<lpage>9445</lpage><pub-id pub-id-type="pmid">12883005</pub-id></citation>
+      </ref>
+      <ref id="b29">
+        <citation citation-type="journal"><name><surname>Stormo</surname><given-names>GD</given-names></name> (<year>2000</year>) <article-title>DNA binding sites: representation and discovery</article-title>. <source>Bioinformatics</source> <volume>16</volume>: <fpage>16</fpage>&#x2013;<lpage>23</lpage><pub-id pub-id-type="pmid">10812473</pub-id></citation>
+      </ref>
+      <ref id="b30">
+        <citation citation-type="journal"><name><surname>Su</surname><given-names>AI</given-names></name>, <name><surname>Wiltshire</surname><given-names>T</given-names></name>, <name><surname>Batalov</surname><given-names>S</given-names></name>, <name><surname>Lapp</surname><given-names>H</given-names></name>, <name><surname>Ching</surname><given-names>KA</given-names></name>, <name><surname>Block</surname><given-names>D</given-names></name>, <name><surname>Zhang</surname><given-names>J</given-names></name>, <name><surname>Soden</surname><given-names>R</given-names></name>, <name><surname>Hayakawa</surname><given-names>M</given-names></name>, <name><surname>Kreiman</surname><given-names>G</given-names></name>, <name><surname>Cooke</surname><given-names>MP</given-names></name>, <name><surname>Walker</surname><given-names>JR</given-names></name>, <name><surname>Hogenesch</surname><given-names>JB</given-names></name> (<year>2004</year>) <article-title>A gene atlas of the mouse and human protein-encoding transcriptomes</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>101</volume>: <fpage>6062</fpage>&#x2013;<lpage>6067</lpage><pub-id pub-id-type="pmid">15075390</pub-id></citation>
+      </ref>
+      <ref id="b31">
+        <citation citation-type="journal"><name><surname>Suzuki</surname><given-names>Y</given-names></name>, <name><surname>Yamashita</surname><given-names>R</given-names></name>, <name><surname>Nakai</surname><given-names>K</given-names></name>, <name><surname>Sugano</surname><given-names>S</given-names></name> (<year>2002</year>) <article-title>DBTSS: DataBase of human transcriptional start sites and full-length cDNAs</article-title>. <source>Nucleic Acids Res</source> <volume>30</volume>: <fpage>328</fpage>&#x2013;<lpage>331</lpage><pub-id pub-id-type="pmid">11752328</pub-id></citation>
+      </ref>
+      <ref id="b32">
+        <citation citation-type="journal"><name><surname>Xie</surname><given-names>X</given-names></name>, <name><surname>Lu</surname><given-names>J</given-names></name>, <name><surname>Kulbokas</surname><given-names>EJ</given-names></name>, <name><surname>Golub</surname><given-names>TR</given-names></name>, <name><surname>Mootha</surname><given-names>V</given-names></name>, <name><surname>Lindblad-Toh</surname><given-names>K</given-names></name>, <name><surname>Lander</surname><given-names>ES</given-names></name>, <name><surname>Kellis</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>Systematic discovery of regulatory motifs in human promoters and 3&#x2032; UTRs by comparison of several mammals</article-title>. <source>Nature</source> <volume>434</volume>: <fpage>338</fpage>&#x2013;<lpage>345</lpage><pub-id pub-id-type="pmid">15735639</pub-id></citation>
+      </ref>
+      <ref id="b33">
+        <citation citation-type="journal"><name><surname>Xuan</surname><given-names>Z</given-names></name>, <name><surname>Zhao</surname><given-names>F</given-names></name>, <name><surname>Wang</surname><given-names>JH</given-names></name>, <name><surname>Chen</surname><given-names>GX</given-names></name>, <name><surname>Zhang</surname><given-names>MQ</given-names></name> (<year>2005</year>) <article-title>Genome-wide promoter extraction and analysis in human, mouse, and rat</article-title>. <source>Genome Biol</source> <volume>6</volume>: <fpage>R72</fpage><pub-id pub-id-type="pmid">16086854</pub-id></citation>
+      </ref>
+      <ref id="b34">
+        <citation citation-type="journal"><name><surname>Zhang</surname><given-names>W</given-names></name>, <name><surname>Morris</surname><given-names>QD</given-names></name>, <name><surname>Chang</surname><given-names>R</given-names></name>, <name><surname>Shai</surname><given-names>O</given-names></name>, <name><surname>Bakowski</surname><given-names>MA</given-names></name>, <name><surname>Mitsakakis</surname><given-names>N</given-names></name>, <name><surname>Mohammad</surname><given-names>N</given-names></name>, <name><surname>Robinson</surname><given-names>MD</given-names></name>, <name><surname>Zirngibl</surname><given-names>R</given-names></name>, <name><surname>Somogyi</surname><given-names>E</given-names></name>, <name><surname>Laurin</surname><given-names>N</given-names></name>, <name><surname>Eftekharpour</surname><given-names>E</given-names></name>, <name><surname>Sat</surname><given-names>E</given-names></name>, <name><surname>Grigull</surname><given-names>J</given-names></name>, <name><surname>Pan</surname><given-names>Q</given-names></name>, <name><surname>Peng</surname><given-names>WT</given-names></name>, <name><surname>Krogan</surname><given-names>N</given-names></name>, <name><surname>Greenblatt</surname><given-names>J</given-names></name>, <name><surname>Fehlings</surname><given-names>M</given-names></name>, <name><surname>van der Kooy</surname><given-names>D</given-names></name>, <name><surname>Aubin</surname><given-names>J</given-names></name>, <name><surname>Bruneau</surname><given-names>BG</given-names></name>, <name><surname>Rossant</surname><given-names>J</given-names></name>, <name><surname>Blencowe</surname><given-names>BJ</given-names></name>, <name><surname>Frey</surname><given-names>BJ</given-names></name>, <name><surname>Hughes</surname><given-names>TR</given-names></name> (<year>2004</year>) <article-title>The functional landscape of mouse gene expression</article-title>. <source>J Biol</source> <volume>3</volume>: <fpage>21</fpage><pub-id pub-id-type="pmid">15588312</pub-id></citation>
+      </ref>
+      <ref id="b35">
+        <citation citation-type="journal"><name><surname>Zhou</surname><given-names>Q</given-names></name>, <name><surname>Wong</surname><given-names>WH</given-names></name> (<year>2004</year>) <article-title>CisModule: <italic>De novo</italic> discovery of cis-regulatory modules by hierarchical mixture modeling</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>101</volume>: <fpage>12114</fpage>&#x2013;<lpage>12119</lpage><pub-id pub-id-type="pmid">15297614</pub-id></citation>
+      </ref>
+      <ref id="b36">
+        <citation citation-type="journal"><name><surname>Zhu</surname><given-names>Z</given-names></name>, <name><surname>Shendure</surname><given-names>J</given-names></name>, <name><surname>Church</surname><given-names>GM</given-names></name> (<year>2005</year>) <article-title>Discovering functional transcription-factor combinations in the human cell cycle</article-title>. <source>Genome Res</source> <volume>15</volume>: <fpage>848</fpage>&#x2013;<lpage>855</lpage><pub-id pub-id-type="pmid">15930495</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+  <floats-wrap>
+    <fig id="f1">
+      <label>Figure 1</label>
+      <caption>
+        <p>Verified and predicted binding sites in human albumin and skeletal muscle &#x3B1;-actin promoters. Predicted sites are represented by horizontal bars and verified sites by vertical bars. Verified sites for albumin (<xref ref-type="bibr" rid="b18">Paonessa <italic>et al</italic>, 1988</xref>; <xref ref-type="bibr" rid="b22">Sawadaishi <italic>et al</italic>, 1988</xref>; <xref ref-type="bibr" rid="b10">Frain <italic>et al</italic>, 1990</xref>; <xref ref-type="bibr" rid="b14">Li <italic>et al</italic>, 1990</xref>) and for &#x3B1;-actin (<xref ref-type="bibr" rid="b3">Boxer <italic>et al</italic>, 1989</xref>; <xref ref-type="bibr" rid="b15">MacLellan <italic>et al</italic>, 1994</xref>) were mapped to the promoter from CSHLmpd to obtain their correct locations relative to the TSS.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-f1"/>
+    </fig>
+    <fig id="f2">
+      <label>Figure 2</label>
+      <caption>
+        <p>Predicted binding sites for selected factors in promoters from the human tissue-specific sets. The selected factors are among the top ranked in the corresponding tissues.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="msb4100114-f2"/>
+    </fig>
+    <table-wrap position="float" id="t1">
+      <label>Table 1</label>
+      <caption>
+        <p>Ability of single versus multiple votes to predict tissue-specificity of a transcript's ortholog</p>
+      </caption>
+      <table frame="hsides" rules="groups" border="1" width="85%">
+        <colgroup>
+          <col align="left"/>
+          <col align="char" char="."/>
+          <col align="char" char="."/>
+          <col align="char" char="."/>
+          <col align="char" char="."/>
+          <col align="center"/>
+          <col align="char" char="."/>
+          <col align="center"/>
+          <col align="char" char="."/>
+          <col align="char" char="."/>
+        </colgroup>
+        <thead valign="bottom">
+          <tr>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+            <th colspan="2" align="center" valign="top" char="." charoff="50">Human<hr/></th>
+            <th colspan="2" align="center" valign="top" char="." charoff="50">Mouse<hr/></th>
+            <th colspan="5" align="center" valign="top" charoff="50">Common evidence<hr/></th>
+          </tr>
+          <tr>
+            <th align="left" valign="top" charoff="50">Tissue</th>
+            <th align="char" valign="top" char="." charoff="50">Multiple</th>
+            <th align="char" valign="top" char="." charoff="50">Single</th>
+            <th align="char" valign="top" char="." charoff="50">Multiple</th>
+            <th align="char" valign="top" char="." charoff="50">Single</th>
+            <th colspan="2" align="center" valign="top" charoff="50">Multiple</th>
+            <th colspan="2" align="center" valign="top" charoff="50">Single</th>
+            <th align="char" valign="top" char="." charoff="50"><italic>P</italic>-value</th>
+          </tr>
+        </thead>
+        <tbody valign="top">
+          <tr>
+            <td align="left" valign="top" charoff="50">CD4 T-cells</td>
+            <td align="char" valign="top" char="." charoff="50">2</td>
+            <td align="char" valign="top" char="." charoff="50">247</td>
+            <td align="char" valign="top" char="." charoff="50">6</td>
+            <td align="char" valign="top" char="." charoff="50">212</td>
+            <td align="center" valign="top" charoff="50">3/7</td>
+            <td align="char" valign="top" char="." charoff="50">42.9%</td>
+            <td align="center" valign="top" charoff="50">36/435</td>
+            <td align="char" valign="top" char="." charoff="50">8.3%</td>
+            <td align="char" valign="top" char="." charoff="50">1.79E&#x2212;02</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Heart</td>
+            <td align="char" valign="top" char="." charoff="50">28</td>
+            <td align="char" valign="top" char="." charoff="50">260</td>
+            <td align="char" valign="top" char="." charoff="50">105</td>
+            <td align="char" valign="top" char="." charoff="50">560</td>
+            <td align="center" valign="top" charoff="50">35/122</td>
+            <td align="char" valign="top" char="." charoff="50">28.7%</td>
+            <td align="center" valign="top" charoff="50">102/766</td>
+            <td align="char" valign="top" char="." charoff="50">13.3%</td>
+            <td align="char" valign="top" char="." charoff="50">3.78E&#x2212;05</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Kidney</td>
+            <td align="char" valign="top" char="." charoff="50">43</td>
+            <td align="char" valign="top" char="." charoff="50">188</td>
+            <td align="char" valign="top" char="." charoff="50">172</td>
+            <td align="char" valign="top" char="." charoff="50">540</td>
+            <td align="center" valign="top" charoff="50">42/200</td>
+            <td align="char" valign="top" char="." charoff="50">21.0%</td>
+            <td align="center" valign="top" charoff="50">66/706</td>
+            <td align="char" valign="top" char="." charoff="50">9.3%</td>
+            <td align="char" valign="top" char="." charoff="50">1.74E&#x2212;05</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Liver</td>
+            <td align="char" valign="top" char="." charoff="50">152</td>
+            <td align="char" valign="top" char="." charoff="50">411</td>
+            <td align="char" valign="top" char="." charoff="50">271</td>
+            <td align="char" valign="top" char="." charoff="50">651</td>
+            <td align="center" valign="top" charoff="50">148/354</td>
+            <td align="char" valign="top" char="." charoff="50">41.8%</td>
+            <td align="center" valign="top" charoff="50">184/982</td>
+            <td align="char" valign="top" char="." charoff="50">18.7%</td>
+            <td align="char" valign="top" char="." charoff="50">6.46E&#x2212;17</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Pancreas</td>
+            <td align="char" valign="top" char="." charoff="50">31</td>
+            <td align="char" valign="top" char="." charoff="50">186</td>
+            <td align="char" valign="top" char="." charoff="50">47</td>
+            <td align="char" valign="top" char="." charoff="50">313</td>
+            <td align="center" valign="top" charoff="50">26/61</td>
+            <td align="char" valign="top" char="." charoff="50">42.6%</td>
+            <td align="center" valign="top" charoff="50">75/450</td>
+            <td align="char" valign="top" char="." charoff="50">16.7%</td>
+            <td align="char" valign="top" char="." charoff="50">9.93E&#x2212;06</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Skeletal muscle</td>
+            <td align="char" valign="top" char="." charoff="50">49</td>
+            <td align="char" valign="top" char="." charoff="50">394</td>
+            <td align="char" valign="top" char="." charoff="50">141</td>
+            <td align="char" valign="top" char="." charoff="50">681</td>
+            <td align="center" valign="top" charoff="50">52/174</td>
+            <td align="char" valign="top" char="." charoff="50">29.9%</td>
+            <td align="center" valign="top" charoff="50">137/1000</td>
+            <td align="char" valign="top" char="." charoff="50">13.7%</td>
+            <td align="char" valign="top" char="." charoff="50">4.47E&#x2212;07</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Testis</td>
+            <td align="char" valign="top" char="." charoff="50">38</td>
+            <td align="char" valign="top" char="." charoff="50">287</td>
+            <td align="char" valign="top" char="." charoff="50">446</td>
+            <td align="char" valign="top" char="." charoff="50">668</td>
+            <td align="center" valign="top" charoff="50">67/471</td>
+            <td align="char" valign="top" char="." charoff="50">14.2%</td>
+            <td align="center" valign="top" charoff="50">86/923</td>
+            <td align="char" valign="top" char="." charoff="50">9.3%</td>
+            <td align="char" valign="top" char="." charoff="50">4.09E&#x2212;03</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Columns labeled &#x2018;Multiple' and &#x2018;Single' give the number of transcripts with multiple and single votes for specificity, respectively. Columns under &#x2018;Common evidence' show the proportion of transcripts with single and multiple votes for tissue-specificity that have an ortholog with at least one vote for specificity in the same tissue. Excluding CD4 T-cells (which represents a small sample), human and mouse transcripts with multiple votes for tissue-specificity are significantly more likely to have an ortholog with at least one vote for specificity in the same tissue (<italic>P</italic>&lt;0.01; Fisher's exact test).</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+          </tr>
+        </tbody>
+      </table>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" alternate-form-of="t1" xlink:href="msb4100114-t1"/>
+    </table-wrap>
+    <table-wrap position="float" id="t2">
+      <label>Table 2</label>
+      <caption>
+        <p>Transcripts with multiple votes for tissue-specificity in both human and mouse skeletal muscle</p>
+      </caption>
+      <table frame="hsides" rules="groups" border="1" width="85%">
+        <colgroup>
+          <col align="left"/>
+          <col align="left"/>
+          <col align="center"/>
+          <col align="center"/>
+          <col align="char" char="."/>
+        </colgroup>
+        <thead valign="bottom">
+          <tr>
+            <th align="left" valign="top" charoff="50">Symbol</th>
+            <th align="left" valign="top" charoff="50">Name</th>
+            <th align="center" valign="top" charoff="50">Human RefSeq</th>
+            <th align="center" valign="top" charoff="50">Mouse RefSeq</th>
+            <th align="char" valign="top" char="." charoff="50">Votes</th>
+          </tr>
+        </thead>
+        <tbody valign="top">
+          <tr>
+            <td align="left" valign="top" charoff="50">MYH2</td>
+            <td align="left" valign="top" charoff="50">Myosin, heavy polypeptide 2</td>
+            <td align="center" valign="top" charoff="50">NM_017534</td>
+            <td align="center" valign="top" charoff="50">NM_144961</td>
+            <td align="char" valign="top" char="." charoff="50">7</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">TTID</td>
+            <td align="left" valign="top" charoff="50">Myotilin</td>
+            <td align="center" valign="top" charoff="50">NM_006790</td>
+            <td align="center" valign="top" charoff="50">NM_021484</td>
+            <td align="char" valign="top" char="." charoff="50">6</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">TNNT3</td>
+            <td align="left" valign="top" charoff="50">Troponin T type 3</td>
+            <td align="center" valign="top" charoff="50">NM_006757</td>
+            <td align="center" valign="top" charoff="50">NM_011620</td>
+            <td align="char" valign="top" char="." charoff="50">6</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">TNNC2</td>
+            <td align="left" valign="top" charoff="50">Troponin C type 2</td>
+            <td align="center" valign="top" charoff="50">NM_003279</td>
+            <td align="center" valign="top" charoff="50">NM_009394</td>
+            <td align="char" valign="top" char="." charoff="50">6</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">MYBPC2</td>
+            <td align="left" valign="top" charoff="50">Myosin binding protein C</td>
+            <td align="center" valign="top" charoff="50">NM_004533</td>
+            <td align="center" valign="top" charoff="50">NM_146189</td>
+            <td align="char" valign="top" char="." charoff="50">6</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">HUMMLC2B</td>
+            <td align="left" valign="top" charoff="50">Fast skeletal myosin light chain 2</td>
+            <td align="center" valign="top" charoff="50">NM_013292</td>
+            <td align="center" valign="top" charoff="50">NM_016754</td>
+            <td align="char" valign="top" char="." charoff="50">6</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">ACTN2</td>
+            <td align="left" valign="top" charoff="50">Actinin &#x3B1;2</td>
+            <td align="center" valign="top" charoff="50">NM_001103</td>
+            <td align="center" valign="top" charoff="50">NM_033268</td>
+            <td align="char" valign="top" char="." charoff="50">5</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">VAMP5</td>
+            <td align="left" valign="top" charoff="50">Vesicle-associated membrane protein 5</td>
+            <td align="center" valign="top" charoff="50">NM_006634</td>
+            <td align="center" valign="top" charoff="50">NM_016872</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">TRIP10</td>
+            <td align="left" valign="top" charoff="50">Thyroid hormone receptor interactor 10</td>
+            <td align="center" valign="top" charoff="50">NM_004240</td>
+            <td align="center" valign="top" charoff="50">NM_134125</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">TPM3</td>
+            <td align="left" valign="top" charoff="50">Tropomyosin 3</td>
+            <td align="center" valign="top" charoff="50">NM_153649</td>
+            <td align="center" valign="top" charoff="50">NM_022314</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">SGCG</td>
+            <td align="left" valign="top" charoff="50">Sarcoglycan &#x3B3;</td>
+            <td align="center" valign="top" charoff="50">NM_000231</td>
+            <td align="center" valign="top" charoff="50">NM_011892</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">MYOD1</td>
+            <td align="left" valign="top" charoff="50">Myogenic differentiation 1</td>
+            <td align="center" valign="top" charoff="50">NM_002478</td>
+            <td align="center" valign="top" charoff="50">NM_010866</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">MYF6</td>
+            <td align="left" valign="top" charoff="50">Myogenic factor 6 (herculin)</td>
+            <td align="center" valign="top" charoff="50">NM_002469</td>
+            <td align="center" valign="top" charoff="50">NM_008657</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">CKM</td>
+            <td align="left" valign="top" charoff="50">Creatine kinase, muscle</td>
+            <td align="center" valign="top" charoff="50">NM_001824</td>
+            <td align="center" valign="top" charoff="50">NM_007710</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">CACNG1</td>
+            <td align="left" valign="top" charoff="50">Calcium channel, voltage-dependent &#x3B3;1</td>
+            <td align="center" valign="top" charoff="50">NM_000727</td>
+            <td align="center" valign="top" charoff="50">NM_007582</td>
+            <td align="char" valign="top" char="." charoff="50">4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">The &#x2018;Votes' column gives the total number of votes for skeletal muscle-specificity in both human and mouse. Our analysis used promoter sets of size 100 for both tissues, including promoters that correspond to transcripts with a single vote for tissue-specific regulation. Tables for the remaining 6 tissues are given in <xref ref-type="supplementary-material" rid="S1">supplementary material</xref>.</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+          </tr>
+        </tbody>
+      </table>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" alternate-form-of="t2" xlink:href="msb4100114-t2"/>
+    </table-wrap>
+    <table-wrap position="float" id="t3">
+      <label>Table 3</label>
+      <caption>
+        <p>Significance of elevated ranks for motifs associated with important factors in liver, skeletal muscle and testis</p>
+      </caption>
+      <table frame="hsides" rules="groups" border="1" width="85%">
+        <colgroup>
+          <col align="left"/>
+          <col align="left"/>
+          <col align="char" char="."/>
+          <col align="char" char="."/>
+          <col align="char" char="."/>
+        </colgroup>
+        <thead valign="bottom">
+          <tr>
+            <th align="left" valign="top" charoff="50">Tissue</th>
+            <th align="left" valign="top" charoff="50">Factors</th>
+            <th align="char" valign="top" char="." charoff="50">Motifs</th>
+            <th align="char" valign="top" char="." charoff="50">Human <italic>P</italic>-value</th>
+            <th align="char" valign="top" char="." charoff="50">Mouse <italic>P</italic>-value</th>
+          </tr>
+        </thead>
+        <tbody valign="top">
+          <tr>
+            <td align="left" valign="top" charoff="50">Liver</td>
+            <td align="left" valign="top" charoff="50">HNF-1, HNF-3, HNF-4, C/EBP, DBP</td>
+            <td align="char" valign="top" char="." charoff="50">68</td>
+            <td align="char" valign="top" char="." charoff="50">2.72E&#x2212;18</td>
+            <td align="char" valign="top" char="." charoff="50">4.19E&#x2212;12</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Skeletal muscle</td>
+            <td align="left" valign="top" charoff="50">MEF-2, SRF, Myogenin, Sp1</td>
+            <td align="char" valign="top" char="." charoff="50">45</td>
+            <td align="char" valign="top" char="." charoff="50">1.33E&#x2212;14</td>
+            <td align="char" valign="top" char="." charoff="50">2.29E&#x2212;5</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Testis</td>
+            <td align="left" valign="top" charoff="50">SRY, CREM, RFX</td>
+            <td align="char" valign="top" char="." charoff="50">30</td>
+            <td align="char" valign="top" char="." charoff="50">0.087</td>
+            <td align="char" valign="top" char="." charoff="50">1.89E&#x2212;4</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Motifs give the total number of motifs associated with the listed factors.</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+          </tr>
+        </tbody>
+      </table>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" alternate-form-of="t3" xlink:href="msb4100114-t3"/>
+    </table-wrap>
+    <table-wrap position="float" id="t4">
+      <label>Table 4</label>
+      <caption>
+        <p>Evidence for expression and classification quality of binding-site motifs for factors with known tissue-specific regulatory roles</p>
+      </caption>
+      <table frame="hsides" rules="groups" border="1" width="85%">
+        <colgroup>
+          <col align="left"/>
+          <col align="left"/>
+          <col align="left"/>
+          <col align="left"/>
+          <col align="center"/>
+          <col align="center"/>
+          <col align="center"/>
+          <col align="center"/>
+          <col align="left"/>
+        </colgroup>
+        <thead valign="bottom">
+          <tr>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+            <th colspan="2" align="center" valign="top" charoff="50">Expressed<hr/></th>
+            <th colspan="2" align="center" valign="top" charoff="50">Classifies<hr/></th>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+          </tr>
+          <tr>
+            <th align="left" valign="top" charoff="50">Tissue</th>
+            <th align="left" valign="top" charoff="50">Factor</th>
+            <th align="left" valign="top" charoff="50">&#xA0;</th>
+            <th align="left" valign="top" charoff="50">Similarmotifs</th>
+            <th align="center" valign="top" charoff="50">Hs</th>
+            <th align="center" valign="top" charoff="50">Mm</th>
+            <th align="center" valign="top" charoff="50">Hs</th>
+            <th align="center" valign="top" charoff="50">Mm</th>
+            <th align="left" valign="top" charoff="50">Comment</th>
+          </tr>
+        </thead>
+        <tbody valign="top">
+          <tr>
+            <td align="left" valign="top" charoff="50">Liver</td>
+            <td align="left" valign="top" charoff="50">HNF-1</td>
+            <td align="left" valign="top" charoff="50">Hepatocyte nuclear factor 1; Member of the homeodomain factor family.</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">Ranks in the top 3 in both species.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">HNF-3</td>
+            <td align="left" valign="top" charoff="50">Hepatocyte nuclear factor 3; Member of the fork-head factor family.</td>
+            <td align="left" valign="top" charoff="50">HFH, XFD and certain other fork-head family members.</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">Unranked in mouse or mouse orthologs of human liver-specific promoters.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">HNF-4</td>
+            <td align="left" valign="top" charoff="50">Hepatocyte nuclear factor 4; Member of thyroid hormone receptor-like family.</td>
+            <td align="left" valign="top" charoff="50">PPAR, COUP; Steroid/thyroid hormone receptor-like super-family.</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">Ranks 1st in both species.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">HNF-6</td>
+            <td align="left" valign="top" charoff="50">Hepatocyte nuclear factor 6; A homeodomain factor from the CUT subfamily.</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="left" valign="top" charoff="50">The known motif in TRANSFAC (v9.4) may be poorly characterized.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">C/EBP</td>
+            <td align="left" valign="top" charoff="50">CCAAT/enhancer binding protein; Variants form a subfamily of basic region leucine zipper family.</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">Ranks in the top 10 in both species and is known to interact with other high-ranking motifs.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">DBP</td>
+            <td align="left" valign="top" charoff="50">Albumin D-site binding protein; A member of PAR family of b-ZIP factors.</td>
+            <td align="left" valign="top" charoff="50">PAR family: HLF, TEF and VBP.</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">All three sources call DBP present in mouse, none of the three call DBP present in human.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Skeletal Muscle</td>
+            <td align="left" valign="top" charoff="50">MEF-2</td>
+            <td align="left" valign="top" charoff="50">Myocyte-specific enhancer factor 2; A member of the MADS domain family.</td>
+            <td align="left" valign="top" charoff="50">Splice variant RSRFC4.</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">Mouse skeletal muscle promoters are enriched with C/G-rich motifs. The A/T-rich MEF-2 ranks 2nd after GC-content correction.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">SRF</td>
+            <td align="left" valign="top" charoff="50">Serum response factor; a member of the MADS domain family.</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="left" valign="top" charoff="50">The A/T-rich SRF is not identified in mouse even after GC-content correction.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">MyoD</td>
+            <td align="left" valign="top" charoff="50">Myogenic factor 3; Member of the myogenin family.</td>
+            <td align="left" valign="top" charoff="50">Myogenin family, E-box binding factors.</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">Ranks in the top 5 in both species and predicted to interact with SRF and MEF-2.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">Sp1</td>
+            <td align="left" valign="top" charoff="50">Stimulating protein 1; A ubiquitous factor with a Cys2His2 zinc finger domain.</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">The C/G-rich motif is higly ranked with and without GC-content correction.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">Testis</td>
+            <td align="left" valign="top" charoff="50">SRY</td>
+            <td align="left" valign="top" charoff="50">Sex-determining region on Y chromosome; Member of the high-mobility group (HMG) class of factors.</td>
+            <td align="left" valign="top" charoff="50">SOX factors.</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="left" valign="top" charoff="50">The A/T-rich motif is ranked 2nd in human after GC-content correction.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">CREM</td>
+            <td align="left" valign="top" charoff="50">Cyclic AMP-responsive element modulator; Member of the CREB/ATF subfamily of the bZIP factors.</td>
+            <td align="left" valign="top" charoff="50">CREB/ATF family.</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">C/G-balanced and synergistic, ranks 1st in mouse with and without GC-content correction.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="left" valign="top" charoff="50">RFX</td>
+            <td align="left" valign="top" charoff="50">Regulatory factor X; subfamily of the forkhead factors with winged-helix binding domains.</td>
+            <td align="left" valign="top" charoff="50">&#xA0;</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="center" valign="top" charoff="50">No</td>
+            <td align="center" valign="top" charoff="50">Yes</td>
+            <td align="left" valign="top" charoff="50">The core of the RFX motif (GTTGCCA) is highly similar to the reverse of the core MYB motif (CCGTTG), ranking top in human.</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" charoff="50">A motif classifies foreground from background if it is ranked in the top 20 distinct motif classifiers.</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+            <td>&#xA0;</td>
+          </tr>
+        </tbody>
+      </table>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" alternate-form-of="t4" xlink:href="msb4100114-t4"/>
+    </table-wrap>
+  </floats-wrap>
+</article>
+</pmc-articleset>

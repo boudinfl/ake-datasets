@@ -1,0 +1,1066 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Urban Health</journal-id>
+      <journal-title>Journal of Urban Health : Bulletin of the New York Academy of Medicine</journal-title>
+      <issn pub-type="ppub">1099-3460</issn>
+      <issn pub-type="epub">1468-2869</issn>
+      <publisher>
+        <publisher-name>Springer US</publisher-name>
+        <publisher-loc>Boston</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16937083</article-id>
+      <article-id pub-id-type="pmc">1705515</article-id>
+      <article-id pub-id-type="publisher-id">9106</article-id>
+      <article-id pub-id-type="doi">10.1007/s11524-006-9106-x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Variance Estimation, Design Effects, and Sample Size Calculations for Respondent-Driven Sampling</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Salganik</surname>
+            <given-names>Matthew J.</given-names>
+          </name>
+          <address>
+            <email>mjs2105@columbia.edu</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Department of Sociology, 1180 Amsterdam Avenue, New York, NY 10027 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>26</day>
+        <month>8</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>11</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>83</volume>
+      <issue>Suppl 1</issue>
+      <fpage>98</fpage>
+      <lpage>112</lpage>
+      <permissions>
+        <copyright-statement>&#xA9; The New York Academy of Medicine 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Hidden populations, such as injection drug users and sex workers, are central to a number of public health problems. However, because of the nature of these groups, it is difficult to collect accurate information about them, and this difficulty complicates disease prevention efforts. A recently developed statistical approach called respondent-driven sampling improves our ability to study hidden populations by allowing researchers to make unbiased estimates of the prevalence of certain traits in these populations. Yet, not enough is known about the sample-to-sample variability of these prevalence estimates. In this paper, we present a bootstrap method for constructing confidence intervals around respondent-driven sampling estimates and demonstrate in simulations that it outperforms the naive method currently in use. We also use simulations and real data to estimate the design effects for respondent-driven sampling in a number of situations. We conclude with practical advice about the power calculations that are needed to determine the appropriate sample size for a study using respondent-driven sampling. In general, we recommend a sample size twice as large as would be needed under simple random sampling.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Design effects</kwd>
+        <kwd>Hidden populations</kwd>
+        <kwd>Power analysis</kwd>
+        <kwd>Respondent-driven sampling</kwd>
+        <kwd>Sample size</kwd>
+        <kwd>Snowball sampling</kwd>
+        <kwd>Variance estimation</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; The New York Academy of Medicine 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>To understand and control the spread of HIV, it is important to have accurate information about hidden populations such as injection drug users and sex workers.<xref ref-type="bibr" rid="CR1">1</xref> However, these populations are difficult to study with standard sampling methods because sampling frames do not exist. The need to gather information about such hidden populations is not limited to public health. Social scientists and policy-makers are interested in many other hidden populations such as undocumented immigrants, artists, and members of some social movements.</p>
+      <p>In response to the problem of studying hidden populations, a new statistical approach called respondent-driven sampling has been developed.<xref ref-type="bibr" rid="CR2">2</xref>&#x2013;<xref ref-type="bibr" rid="CR4">4</xref> Respondent-driven sampling data are collected via a link-tracing (snowball) design, where current sample members recruit future sample members. For many years, researchers thought it was impossible to make unbiased estimates from this type of sample. However, it was recently shown that if certain conditions are met and if the appropriate procedures are used, then the prevalence estimates from respondent-driven sampling are asymptotically unbiased.<xref ref-type="bibr" rid="CR4">4</xref> For example, respondent-driven sampling can be used to estimate the prevalence of HIV among drug injectors in New York City.</p>
+      <p>Despite the progress that has been made in making prevalence estimates, less is known about the sample-to-sample variability of these estimates. This gap in knowledge can lead researchers to construct inaccurate confidence intervals around estimates and to undertake studies with sample sizes that are too small to meet study goals. Filling this important gap in the respondent-driven sampling literature, this paper explores issues related to the sample-to-sample variability of estimates. The paper consists of four main parts. First, we briefly review the existing respondent-driven sampling methodology. Next, we develop and evaluate a bootstrap procedure for constructing confidence intervals around respondent-driven sampling estimates. Then, we estimate the design effect of the prevalence estimates in a number of simulated and real populations. The paper concludes with advice about the sample sizes needed for studies using respondent-driven sampling. In general, we recommend a sample size twice as large as would be needed under simple random sampling.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Review of Respondent-driven Sampling</title>
+      <p>A respondent-driven sample is collected with a link-tracing design, similar to a snowball sample.<xref ref-type="bibr" rid="CR5">5</xref>&#x2013;<xref ref-type="bibr" rid="CR7">7</xref> The sampling process begins with the selection of a set people in the target population who serve as seeds. After participating in the study, these seeds are each provided with a fixed number of unique recruitment coupons, which they use to recruit other people they know in the target population. After participating in the study, these new sample members are also provided with recruitment coupons, which they then use to recruit others. The sampling continues in this way, with subjects recruiting more subjects, until the desired sample size is reached.<xref ref-type="bibr" rid="CR2">2</xref>&#x2013;<xref ref-type="bibr" rid="CR4">4</xref> Experience has shown that this sample selection method is practical and it has already been used to study a number of different hidden populations, including jazz musicians,<xref ref-type="bibr" rid="CR8">8</xref> drug injectors,<xref ref-type="bibr" rid="CR2">2</xref> Latino gay men,<xref ref-type="bibr" rid="CR9">9</xref> and MDMA/Ecstasy users.<xref ref-type="bibr" rid="CR10">10</xref></p>
+      <p>In addition to collecting information that addresses the substantive focus of the study, a researcher using respondent-driven sampling must also collect two other pieces of information: the recruiter of each sample member and the number of relationships that each sample member has in the population of interest (sometime called degree of each person). This additional information is necessary because the estimation procedure is a variation of the traditional sampling and estimation process. Ordinarily, researchers take a sample and then use that sample to make inferences about a population (Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a). However, when the data are collected with respondent-driven sampling, it is very difficult (and maybe even impossible) to make inferences from the sample directly to the population. Fortunately, such data can be used to make inferences about the social network connecting the hidden population, and this information about the social network can be used to estimate the prevalence a specific trait (Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b).<xref ref-type="bibr" rid="CR3">3</xref> Within this new framework, unbiased estimation becomes possible.<xref ref-type="fn" rid="Fn1">1</xref> A more detail description of the estimation procedure and the conditions under which it is unbiased is available in the literature.<xref ref-type="bibr" rid="CR4">4</xref><fig id="Fig1"><label>Figure&#xA0;1</label><caption><p>Schematic of both traditional sampling and estimation and respondent-driven sampling. By not attempting to estimate directly from the sample to the population, respondent-driven sampling avoids many of the well-known problems with estimation from snowball samples.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig1_HTML" id="MO1"/></fig></p>
+      <p>While the ability to make unbiased prevalence estimates represented a step forward for the study of hidden populations, it was an incomplete one. In order for respondent-driven sampling to be practical as a methodology, a procedure is needed in order to put confidence intervals around these prevalence estimates.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>Confidence Intervals</title>
+      <p>Before introducing the confidence interval procedure, we first need to introduce some language with which to describe the hidden population. In this paper we will consider the situation of a hidden population that is made up of two mutually exclusive and collectively exhaustive groups that, for the sake of generality, we will call group A and group B. The groups could be, for example, people with and without HIV. The proportion of the population in group A will be called <italic>P</italic><sub><italic>A</italic></sub>. A point estimate of this prevalence is useful, but it is difficult to interpret without some measure of the precision of the estimate. One common way of describing this precision is with a confidence interval that provides a range within which the researcher expects to find the true population value with some level of certainty. Procedures to generate confidence intervals are well developed in the case of simple random sampling,<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR13">13</xref> but researchers using a complex sample design, where not all units have the same probability of selection, are often left without guidance. Despite numerous warnings,<xref ref-type="bibr" rid="CR7">7</xref>,<xref ref-type="bibr" rid="CR14">14</xref> researchers often ignore the fact that their data were collected with a complex sample design and construct confidence intervals as if they had a random sample. This approach of ignoring the sampling design, which we will call the <italic>naive method</italic>, will generally cause researchers using respondent-driven sampling to produce confidence intervals that are too small. These incorrect confidence intervals are not just a technical concern; incorrect confidence intervals can lead to incorrect substantive conclusions.</p>
+      <p>In order to produce better confidence intervals, we will develop and evaluate a bootstrap method specifically designed for respondent-driven sampling.<xref ref-type="fn" rid="Fn2">2</xref> Although an analytic approach would be preferable,<xref ref-type="fn" rid="Fn3">3</xref> bootstrap methods are commonly used for variance estimation from complex sample designs because analytic solutions are often not possible.<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR17">17</xref> In the next sections, we will describe our proposed bootstrap procedure and then evaluate its performance using computer simulations.</p>
+    </sec>
+    <sec id="Sec4">
+      <title>Proposed Bootstrap Procedure</title>
+      <p>The general idea of the bootstrap procedure is to use the observed sample to generate a set of replicate samples. Then this set of replicate samples is used to produce a set of replicate estimates. By examining the variation in these replicate estimates, one can construct a confidence interval around the original point estimate. This three-step process can be seen in Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>.<xref ref-type="bibr" rid="CR17">17</xref><fig id="Fig2"><label>Figure&#xA0;2</label><caption><p>Schematic of the procedure for producing confidence intervals.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig2_HTML" id="MO2"/></fig></p>
+      <p>The first step in our procedure is the resampling step. In traditional bootstrapping, this resampling is done by randomly sampling with replacement from the original sample until the replicate sample is the same size as the original sample. This resampling procedure is well grounded theoretically for the case where the original sample is collected via simple random sampling.<xref ref-type="bibr" rid="CR17">17</xref> However, as described previously, in respondent-driven sampling there are dependencies in the sample selection process, and so we must use a modified resampling procedure which mimics these features. The modification of the resampling step is the main way that this approach deviates from traditional bootstrapping techniques.</p>
+      <p>Under our proposed procedure we divide the sample members into two sets based on how they were recruited: people recruited by someone in group <italic>A</italic> (which we will call <italic>A</italic><sub>rec</sub>) and people recruited by someone in group <italic>B</italic> (which we will call <italic>B</italic><sub>rec</sub>). For example, <italic>A</italic><sub>rec</sub> could be the set of all sample members who were recruited by someone with HIV. Note that this set could include both people with and without HIV. In order to mimic the actual sampling process, the resampling begins when a seed is chosen with uniform probability from the entire sample. Then, based on the group membership of the seed, we draw with replacement from either <italic>A</italic><sub>rec</sub> or <italic>B</italic><sub>rec</sub>. For example, if the seed chosen for the replicate sample was a sample member with HIV, we draw from the set of sample members who were recruited by someone with HIV. Next, we examine the group membership of this newly chosen person and then draw again with replacement from either <italic>A</italic><sub>rec</sub> or <italic>B</italic><sub>rec</sub>.<xref ref-type="fn" rid="Fn4">4</xref> This process continues until the bootstrap sample is the same size as the original sample. Overall, this resampling scheme preserves some, but not all, of the dependencies that exist in the respondent-driven sampling data collection.<xref ref-type="fn" rid="Fn5">5</xref></p>
+      <p>Once the bootstrap samples are selected, we move to step 2 in Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>: the estimation step. Here we use the normal respondent-driven sampling estimation procedure on each of the <italic>R</italic> replicate samples to produce a set of <italic>R</italic> replicate estimates. Finally, in step 3 of the bootstrap procedure, the <italic>R</italic> replicate estimates are converted into a confidence interval. One way to do this would be to construct a 90% confidence interval based on the normal approximation,
+<disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\left\lfloor {\widehat{P}_{A}  - 1.65 \cdot \widehat{{se}}{\left( {\widehat{P}_{A} } \right)},\widehat{P}_{A}  + 1.65 \cdot \widehat{{se}}{\left( {\widehat{P}_{A} } \right)}} \right\rfloor }$$\end{document}</tex-math></disp-formula>where the estimated standard error, <inline-formula id="IEq1"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq1.gif --><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\widehat{{se}}{\left( {\widehat{P}_{A} } \right)}$$\end{document}</tex-math></inline-formula>, is the standard deviation of the replicate estimates. While this approach is reasonable, it has two main disadvantages. First, it forces the confidence intervals to be symmetric, which can reduce accuracy, and second, it can produce intervals with endpoints outside of the range [0, 1].</p>
+      <p>Fortunately, there are several improvements over this standard error method, and in this paper we will use the percentile method.<xref ref-type="fn" rid="Fn6">6</xref> When using the percentile method, we define the endpoints of the 90% confidence interval to be the two replicate estimates, such that 5% of the replicate estimates fall below the interval, and 5% of the replicate estimates fall above the interval. For example, if a researcher generated 2,000 bootstrap replicates, a 90% confidence interval would be defined by the 100 and 1,900 ordered replicate estimates. As we shall see in the next section, the proposed resampling scheme combined with the percentile method produces confidence intervals that are generally good in an absolute sense and better than the naive method.<xref ref-type="fn" rid="Fn7">7</xref></p>
+    </sec>
+    <sec id="Sec5" sec-type="materialsandmethods">
+      <title>Comparing the Naive and Bootstrap Methods</title>
+      <p>The quality of a confidence interval procedure can be measured by calculating <italic>&#x3C6;</italic>, the percentage of proposed intervals that contain the true population value. For example, if we took 1,000 samples from the population and produced a 90% confidence interval from each of these samples, then 900 out of 1,000 of these confidence intervals should include the true population prevalence.<xref ref-type="fn" rid="Fn8">8</xref> Unfortunately, due to resource constraints, we cannot repeatedly sample from real hidden populations. However, using computer simulations, we can construct hypothetical hidden populations and then repeatedly sample from them to evaluate the coverage properties of the different confidence interval procedures. Further, in these computer simulations we can systematically vary the characteristics of the hidden population in order to understand the effects of population and network characteristics on the quality of the proposed confidence intervals.</p>
+      <p>For example, to explore how network structure affects the quality of the confidence intervals, we constructed a series of hypothetical populations that were identical except for the amount of interconnectedness between the two groups. More specifically, we varied the ratio of the actual number of cross-group relationships to the number of possible cross-group relationship, and thus, our measure of interconnectedness, <italic>I</italic>, can vary from 0 (no connections between the groups) to 1 (maximal interconnection). All populations were constructed with 10,000 people, 30% of which were assigned a specific trait, for example HIV. Next, we began to construct the social network in the population by giving each person a number of relationships with other people in the population. The number of relationships that an individual has is called her degree. When assigning an individual&#x2019;s degree we wanted to roughly match data collected in studies of drug injectors in Connecticut,<xref ref-type="bibr" rid="CR2">2</xref> so each person with HIV was assigned a degree drawn randomly from an exponential distribution with mean 20, and those without HIV were assigned a degree drawn from an exponential distribution with mean 10; later in this paper we will explore other degree distributions. Once the degrees were assigned, we insured that the population had the appropriate amount of interconnection between the groups.<xref ref-type="fn" rid="Fn9">9</xref></p>
+      <p>After each population was constructed, we took 1,000 samples of size 500, and for each of these 1,000 samples we constructed a confidence interval using both the naive method (i.e., ignoring the complex sample design and pretending to have a simple random sample) and the proposed bootstrap method. By seeing if each of these confidence intervals included the true population prevalence, we calculated <inline-formula id="IEq5"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq5.gif --><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\phi _{{{\text{naive}}}} $$\end{document}</tex-math></inline-formula> and <inline-formula id="IEq6"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq6.gif --><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\phi _{{{\text{boot}}}} $$\end{document}</tex-math></inline-formula>. The results of these simulations are presented in Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> and reveal two important features. First, the figure shows that, for the populations used in these simulations, the proposed bootstrap procedure outperforms the naive procedure. Second, it shows that the bootstrap procedure also performs well in an absolute sense, meaning <inline-formula id="IEq7"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq7.gif --><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\phi _{{{\text{boot}}}}  \approx 0.9$$\end{document}</tex-math></inline-formula>.
+<fig id="Fig3"><label>Figure&#xA0;3</label><caption><p>Coverage probabilities of the naive and bootstrap procedure. Results indicate that the proposed bootstrap procedure outperforms the naive procedure and performs well in an absolute sense.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig3_HTML" id="MO3"/></fig></p>
+      <p>To test the robustness of these findings, we explored the coverage properties in a larger portion of the possible parameter space by varying the sample size, the proportion of the population in the groups, and the average degree of the groups (results not shown). To summarize these findings, in a few unusual portions of the parameter space, the proposed bootstrap procedure did not perform well in an absolute sense, but in most portions of the parameter space, the proposed procedure performed well.<xref ref-type="fn" rid="Fn10">10</xref> Additionally, in all cases the proposed bootstrap procedure outperformed the naive procedure. To conclude, in the situations that we have examined, the proposed bootstrap procedure works well in an absolute sense and better than the naive procedure. Further, these results seem robust. Therefore, until some superior procedure is developed, we recommend this bootstrap procedure for future researchers who wish to construct confidence intervals around prevalence estimates from respondent-driven sampling.</p>
+    </sec>
+    <sec id="Sec6">
+      <title>Design Effects</title>
+      <p>Even though respondent-driven sampling produces unbiased prevalence estimates and allows researchers to produce approximate confidence intervals, respondent-driven sampling may not be appropriate for all situations. The unbiasedness of the estimates does not ensure that any particular estimate will be equal to the true population value. Rather, just like all other unbiased estimators, sometimes the estimate will be too low or too high; only on average will the estimate equal the true population value. If the respondent-driven sampling estimates are too variable, then, even if they are unbiased, they might not be useful in practice. For example, we constructed a population with 30% prevalence of a specific trait, for example HIV, and repeatedly sampled from that population using respondent-driven sampling. To provide a benchmark for interpreting the sample-to-sample variability, we also repeatedly sampled from the population using simple random sampling (even though this would not be possible in a real hidden population). Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> shows the distribution of prevalence estimates from these two methods. Both distributions center around 0.30, the true value, so both sampling methods produced unbiased estimates. But, the distribution of respondent-driven sampling estimates was more variable than the distribution of estimates under simple random sampling. A common way to quantify this difference is the design effect,<xref ref-type="bibr" rid="CR12">12</xref> which measures the increased variation of the estimates under respondent-driven sampling.<xref ref-type="fn" rid="Fn11">11</xref> That is,
+<disp-formula id="Equ2"><label>2</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{deff}}{\left( {\widehat{P}_{A} } \right)} = \frac{{V{\left( {{\text{RDS}},\widehat{P}_{A} } \right)}}} {{V{\left( {{\text{SDS}},\widehat{P}_{A} } \right)}}} $$\end{document}</tex-math></disp-formula>where <inline-formula id="IEq10"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq10.gif --><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ V{\left( {{\text{RDS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula> is the variance of under respondent-driven sampling and <inline-formula id="IEq11"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq11.gif --><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ V{\left( {{\text{SRS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula> is the variance of under simple random sampling. Because respondent-driven sampling generally provides less information, we expect that the design effect will generally, but not always, be greater than 1. For example, the results in Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> show a design effect of 2.8. In the next section we will explore the design effects for a range of different network structures to better understand the situations in which respondent-driven sampling is likely to be precise enough to be useful.
+<fig id="Fig4"><label>Figure&#xA0;4</label><caption><p>Distribution of estimates from respondent-driven sampling and simple random sampling. The respondent-driven sampling estimates center around the true population value, 0.30, but they are more variable than the estimates from simple random sampling. This extra variation corresponds to a design effect of 2.8.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig4_HTML" id="MO4"/></fig></p>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Simulation Results on Design Effects</title>
+      <p>Estimating the design effect requires comparing the variance of the prevalence estimate under different sampling methods. While the variability of the prevalence estimate under simple random sampling can be derived from basic probability theory,<xref ref-type="bibr" rid="CR12">12</xref> we must use simulations to discover the variability under respondent-driven sampling. Thus, as when we evaluated the confidence interval procedure, we constructed a range of populations and simulated repeated sampling from them. We observed several general patterns that seem to occur in all portions of the parameter space. First, generally, but not always, the design effects from respondent-driven sampling were greater than 1, which indicates that respondent-driven sampling estimates were less precise than estimates from simple random sampling. This finding is consistent with the literature on complex sampling designs, which generally finds that departures from simple random sampling lead to increased variability of estimates. Second, as the interconnectedness, <italic>I</italic>, increased, that is, as the two groups became more closely connected, the design effect decreased (see Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). Third, the minimum design effect for a given interconnectedness occurred not when the two groups had the same average degree (<italic>D</italic><sub><italic>A</italic></sub> = <italic>D</italic><sub><italic>B</italic></sub>), but when the two groups had the same total degree, (<italic>P</italic><sub><italic>A</italic></sub><italic>D</italic><sub><italic>A</italic></sub> = <italic>P</italic><sub><italic>B</italic></sub><italic>D</italic><sub><italic>B</italic></sub>) (see Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). Fourth, the design effects were sensitive to the degree distribution assumed in the simulations. Previously in this paper we assumed an exponential degree distribution, but for specific subpopulations, such as drug injectors, the true functional form of the degree distribution is unknown. When we assigned a Poisson degree distribution for both groups, we observed much lower design effects, including some design effects below 1 (Figure&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>); the reason for this change is currently unknown.<xref ref-type="fn" rid="Fn12">12</xref> Overall, these observations should be viewed with some caution because they have not been verified analytically due to the previously mentioned inability to develop closed-form expressions for the variance of the prevalence estimate under respondent-driven sampling.
+<fig id="Fig5"><label>Figure&#xA0;5</label><caption><p>Design effect as a function of interconnectedness <italic>I</italic>. In general, as the interconnectedness increases the design effect decreases. Results are based on 10,000 replicate samples.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig5_HTML" id="MO5"/></fig><fig id="Fig6"><label>Figure&#xA0;6</label><caption><p>Design effect as a function of <italic>D</italic><sub><italic>A</italic></sub> for different <italic>D</italic><sub><italic>B</italic></sub>. In general, the minimum design effect, for a given interconnectedness, occurs when the two groups have the same total degree (<italic>P</italic><sub><italic>A</italic></sub><italic>D</italic><sub><italic>A</italic></sub> = <italic>P</italic><sub><italic>B</italic></sub><italic>D</italic><sub><italic>B</italic></sub>). So if <italic>P</italic><sub><italic>A</italic></sub> = 0.3 and <italic>P</italic><sub><italic>B</italic></sub> = 0.7, then when <italic>D</italic><sub><italic>B</italic></sub> = 10 the minimum design effect occurs when <italic>D</italic><sub><italic>A</italic></sub> &#x2248; 23 and when <italic>D</italic><sub><italic>B</italic></sub> = 20 the minimum occurs when <italic>D</italic><sub><italic>A</italic></sub> &#x2248; 46. Results are based on 10,000 replicate samples.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig6_HTML" id="MO6"/></fig><fig id="Fig7"><label>Figure&#xA0;7</label><caption><p>Design effect as a function of interconnectedness for different degree distributions. In general, the design effects are smaller when the degree distribution of the groups is Poisson rather than exponential. Results are based on 10,000 replicate samples.</p></caption><graphic position="anchor" xlink:href="11524_2006_9106_Fig7_HTML" id="MO7"/></fig></p>
+      <p>Taken together, these simulation results suggest that the design effect is a complex function of the network structure in the population.<xref ref-type="fn" rid="Fn13">13</xref> The simulation results also suggest that in some cases respondent-driven sampling can be quite blunt, with design effects as large as 10, but that in other cases it can be extremely precise, sometimes even more precise than simple random sampling.</p>
+    </sec>
+    <sec id="Sec8">
+      <title>Estimated Design Effects in Real Studies</title>
+      <p>The simulation results indicate that a range of design effects are possible. Therefore, an important question becomes: What are the design effects in populations that people actually study? Our best attempt to answer that question is presented in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>, where we report the estimated design effects from all studies that are currently available.<xref ref-type="fn" rid="Fn14">14</xref> To produce the estimated design effects we took the published estimates of <italic>P</italic><sub><italic>A</italic></sub> and used them to estimate the variability of the prevalence estimates (<inline-formula id="IEq12"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq12.gif --><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \widehat{V}{\left( {{\text{SRS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula>). This variability is then compared to the published estimates of the variability under respondent-driven sampling (<inline-formula id="IEq13"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq13.gif --><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \widehat{V}{\left( {{\text{RDS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula>).<xref ref-type="fn" rid="Fn15">15</xref> We report only one design effect because, due to the symmetry of the two-group system, <inline-formula id="IEq15"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq15.gif --><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{deff}}{\left( {\widehat{P}_{A} } \right)} = {\text{deff}}{\left( {\widehat{P}_{B} } \right)} $$\end{document}</tex-math></inline-formula>.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Estimated design effects from real respondent-driven sampling data.<xref ref-type="bibr" rid="CR8">8</xref>&#x2013;<xref ref-type="bibr" rid="CR10">10</xref> Sample sizes vary within the same study due to missing data</p></caption><table frame="hsides" rules="groups"><thead><tr><th colspan="4">Study description</th><th colspan="4">Study results</th></tr><tr><th>Population</th><th>Location</th><th><italic>n</italic></th><th>Trait</th><th><inline-formula id="IEq16"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq16.gif --><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \widehat{P}_{A} $$\end{document}</tex-math></inline-formula></th><th><inline-formula id="IEq17"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq17.gif --><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \widehat{V}{\left( {{\text{RDS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula></th><th><inline-formula id="IEq18"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq18.gif --><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \widehat{V}{\left( {{\text{SRS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula></th><th><inline-formula id="IEq19"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq19.gif --><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{def}}\widehat{{\text{f}}}{\left( {\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula></th></tr></thead><tbody><tr><td>Latino gay men</td><td>Chicago</td><td char="." align="char">69</td><td>HIV+</td><td>0.17</td><td>0.0024</td><td>0.0021</td><td>1.1</td></tr><tr><td>Latino gay men</td><td>San Francisco</td><td char="." align="char">72</td><td>HIV+</td><td>0.49</td><td>0.0041</td><td>0.0035</td><td>1.2</td></tr><tr><td>MDMA/Ecstasy users</td><td>Ohio</td><td char="." align="char">374</td><td>Male</td><td>0.58</td><td>0.0012</td><td>0.0007</td><td>1.7</td></tr><tr><td>Jazz musicians</td><td>New York City</td><td char="." align="char">263</td><td>Male</td><td>0.76</td><td>0.0016</td><td>0.0007</td><td>2.3</td></tr><tr><td>Jazz musicians</td><td>New York City</td><td char="." align="char">261</td><td>Union member</td><td>0.25</td><td>0.0010</td><td>0.0007</td><td>1.4</td></tr><tr><td>Jazz musicians</td><td>New York City</td><td char="." align="char">253</td><td>Received airplay</td><td>0.75</td><td>0.0017</td><td>0.0007</td><td>2.4</td></tr></tbody></table></table-wrap></p>
+      <p>Overall, Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> shows that the prevalence estimates from existing studies had design effects around 2, suggesting that respondent-driven sampling is reasonably precise in the situations in which it has been used so far.<xref ref-type="fn" rid="Fn16">16</xref> Based on this crude analysis of existing respondent-driven sampling data, we recommend that when planning a study using respondent-driven sampling researchers should assume a design effect of 2. This guideline should only be considered a preliminary rule-of-thumb and should be adjusted, if necessary, depending on pre-existing knowledge of the study population.</p>
+    </sec>
+    <sec id="Sec9">
+      <title>Sample Size Calculation</title>
+      <p>Information on design effects should be used when planning the sample size of a study using respondent-driven sampling, or else the sample size will not meet the goals of the study. Fortunately, once the researcher has an estimated design effect, it is rather straightforward to adjust the required sample size; the researcher need only to multiply the sample size needed under simple random sampling by the assumed design effect. Thus, for studies using respondent-driven sampling we recommend a sample size twice as large as would be needed under simple random sampling. However, calculating the appropriate sample size under simple random sampling is often difficult due to the overly general nature of the power analysis literature.<xref ref-type="bibr" rid="CR20">20</xref>,<xref ref-type="bibr" rid="CR21">21</xref> Therefore, we will review the sample size calculations for two specific cases of most interest to researchers using respondent-driven sampling: estimating the prevalence of a trait with a given precision and detecting a change in prevalence over time.<xref ref-type="fn" rid="Fn17">17</xref></p>
+      <p>One common goal of studies is to estimate the prevalence of a characteristic with some pre-specified precision, for example, to estimate the proportion of sex workers in New York City that are HIV-positive with a standard error of no greater than 0.03. Since it is the case that,
+<disp-formula id="Equ3"><label>3</label><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ V{\left( {\widehat{P}_{A} } \right)} = {\text{deff}}\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}\frac{{P_{A} {\left( {1 - P_{A} } \right)}}} {n} $$\end{document}</tex-math></disp-formula>we can solve for the required sample size, <italic>n</italic>, in terms of the desired standard error, which yields,
+<disp-formula id="Equ4"><label>4</label><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ n = {\text{deff}}\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}\frac{{P_{A} {\left( {1 - P_{A} } \right)}}} {{{\left( {se{\left( {\widehat{P}_{A} } \right)}} \right)}^{2} }} $$\end{document}</tex-math></disp-formula></p>
+      <p>Therefore, if based on pre-existing knowledge we suspect that 20% of the sex workers have HIV and that the design effect is 2, we would need a sample size of at least 356 sex workers to estimate the HIV prevalence with a standard error no greater than 0.03. Notice that this calculation depends on our initial guess of the prevalence. If researchers do not have enough information to make such a guess, they should assume a value of 0.5 which is maximally conservative.</p>
+      <p>A second problem of interest to many researchers is comparing the prevalence of some behavior at two time points. For example, a researcher might want to test whether an outreach program was successful at getting drug injectors to stop sharing injection equipment. Assume that the researcher suspects that before the intervention 40% of drug injectors share injection equipment and that the researcher would like to choose the appropriate sample size to be able to detect a drop to 25% such that there is an 80% probability that a 95% confidence interval for the estimated difference will not include 0. Further, assume that the researcher suspects that each prevalence estimate will have a design effect of 2. Based on a derivation available in the literature,<xref ref-type="bibr" rid="CR23">23</xref> we can calculate that the required sample size is,
+<disp-formula id="Equ5"><label>5</label><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$n = 2\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}\frac{{{\left[ {2.8\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}{\sqrt {0.6\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}0.4 + 0.25\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}0.75} }} \right]}^{2} }}{{{\left( {0.4 - 0.25} \right)}^{2} }} = 298\,{\left( {{\text{in}}\,{\text{each}}\,{\text{sample}}} \right)}$$\end{document}</tex-math></disp-formula></p>
+      <p>More generally, the required sample size for comparing prevalence in two populations is,
+<disp-formula id="Equ6"><label>6</label><tex-math id="M19">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$n = deff\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}\frac{{{\left[ {{\left( {Z_{{1 - \frac{\alpha }{2}}}  + Z_{{1 - \beta }} } \right)}\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}{\sqrt {P_{{A,1}} {\left( {1 - P_{{A,1}} } \right)} + P_{{A,2}} {\left( {1 - P_{{A,2}} } \right)}} }} \right]}^{2} }}{{{\left( {P_{{A,2}}  - P_{{A,1}} } \right)}^{2} }}\,{\left( {{\text{in}}\,{\text{each}}\,{\text{sample}}} \right)}$$\end{document}</tex-math></disp-formula>where <italic>Z</italic><sub>1</sub>-<inline-formula id="IEq20"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq20.gif --><tex-math id="M20">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\frac{\alpha }{2}$$\end{document}</tex-math></inline-formula> and <italic>Z</italic><sub>1&#x2212;&#x3B2;</sub> are the appropriate values from the standard normal distribution and <italic>deff</italic> is the design effect.<xref ref-type="fn" rid="Fn18">18</xref></p>
+      <p>These sample size calculations are based on assumptions about the prevalence of the characteristics and the design effect. Therefore, the sample sizes produced by Eqs. <xref rid="Equ4" ref-type="">4</xref> and <xref rid="Equ6" ref-type="">6</xref> should be considered approximate.</p>
+    </sec>
+    <sec id="Sec10" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>This paper makes two main contributions to the literature on respondent-driven sampling. First, we introduce a bootstrap confidence interval procedure that in simulations outperforms the naive method currently in practice. Therefore, we recommend this bootstrap procedure be used in future analysis of respondent-driven sampling data. The procedure requires some custom computer programming to implement, but, fortunately, it is already included in RDSAT, a software package for organizing and analyzing respondent-driven sampling data.<xref ref-type="fn" rid="Fn19">19</xref></p>
+      <p>The second major contribution of this paper is the information on design effects. The simulation results suggest that the design effects can range from as high as 10 to less than 1. These findings imply that, because of the possibility of high design effects, respondent-driven sampling is not appropriate in all cases. In some extreme network structures, the prevalence estimates could be so variable that, even though they are unbiased, they might not be very useful. Fortunately, data from existing studies suggest that, so far, respondent-driven sampling has been used in situations where it is reasonably precise, yielding estimated design effects around 2 (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Based on these data, we suggest that when using respondent-driven sampling, researchers collect a sample twice as large as would be needed under simple random sampling.</p>
+      <p>The sensitivity of the design effect to the functional form of the degree distribution further emphasizes the need for more research on methods to accurately measure the degree of each respondent. Currently, the estimated average degree depends on subjects' self-reported degree, and these reports may be inaccurate.<xref ref-type="bibr" rid="CR26">26</xref>,<xref ref-type="bibr" rid="CR27">27</xref> In almost all cases, inaccuracy in the self-reported degree will introduce bias into the prevalence estimates.<xref ref-type="bibr" rid="CR4">4</xref> As far as we know, the best methods for estimating an individual&#x2019;s degree are scale-up method and summation method.<xref ref-type="bibr" rid="CR28">28</xref> However, it is not clear that either of these approaches, which were designed for the general population, is appropriate for studying hidden populations.</p>
+      <p>Taken together, the results about the sample-to-sample variability presented in this paper add to the growing literature on respondent-driven sampling. By allowing researchers to obtain better information about key hidden populations, this research should allow public health professionals to monitor population dynamics more accurately, target resources more carefully, and intervene to slow the spread of disease more effectively.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This material is based on work supported under a National Science Foundation Graduate Research Fellowship and a Fulbright Fellowship, with support from the Netherlands&#x2013;American Foundation, which allowed me to spend the year at the ICS/Sociology department at the University of Groningen. I would like to thank David Bell, Andrew Gelman, Doug Heckathorn, Mattias Sm&#xE5;ngs, Erik Volz, and an anonymous reviewer for helpful suggestions.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Magnani</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Sabin</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Saidel</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Heckathorn</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Review of sampling hard-to-reach and hidden populations for HIV surveillance</article-title>
+          <source>AIDS</source>
+          <year>2005</year>
+          <volume>19</volume>
+          <issue>supp 2</issue>
+          <fpage>S67</fpage>
+          <lpage>S72</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Magnani R, Sabin K, Saidel T, Heckathorn D. Review of sampling hard-to-reach and hidden populations for HIV surveillance. AIDS. 2005;19(Supp 2):S67&#x2013;S72. <pub-id pub-id-type="pmid">15930843</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heckathorn</surname>
+              <given-names>DD</given-names>
+            </name>
+          </person-group>
+          <article-title>Respondent-driven sampling: A new approach to the study of hidden populations</article-title>
+          <source>Soc Probl</source>
+          <year>1997</year>
+          <volume>44</volume>
+          <issue>2</issue>
+          <fpage>174</fpage>
+          <lpage>199</lpage>
+          <pub-id pub-id-type="doi">10.1525/sp.1997.44.2.03x0221m</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Heckathorn DD. Respondent-driven sampling: a new approach to the study of hidden populations. Soc Probl. 1997;44(2):174&#x2013;199. </citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heckathorn</surname>
+              <given-names>DD</given-names>
+            </name>
+          </person-group>
+          <article-title>Respondent-driven sampling II: Deriving valid population estimates from chain-referral samples of hidden populations</article-title>
+          <source>Soc Probl</source>
+          <year>2002</year>
+          <volume>49</volume>
+          <issue>1</issue>
+          <fpage>11</fpage>
+          <lpage>34</lpage>
+          <pub-id pub-id-type="doi">10.1525/sp.2002.49.1.11</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Heckathorn DD. Respondent-driven sampling II: deriving valid population estimates from chain-referral samples of hidden populations. Soc Probl. 2002;49(1):11&#x2013;34. </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Salganik</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Heckathorn</surname>
+              <given-names>DD</given-names>
+            </name>
+          </person-group>
+          <article-title>Sampling and estimation in hidden populations using respondent-driven sampling</article-title>
+          <source>Sociol Method</source>
+          <year>2004</year>
+          <volume>34</volume>
+          <fpage>193</fpage>
+          <lpage>239</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.0081-1750.2004.00152.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Salganik MJ, Heckathorn DD. Sampling and estimation in hidden populations using respondent-driven sampling. Sociol Method. 2004;34:193&#x2013;239. </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Coleman</surname>
+              <given-names>JS</given-names>
+            </name>
+          </person-group>
+          <article-title>Relational analysis: The study of social organization with survey methods</article-title>
+          <source>Human Organ</source>
+          <year>1958</year>
+          <volume>17</volume>
+          <fpage>28</fpage>
+          <lpage>36</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Coleman JS. Relational analysis: the study of social organization with survey methods. Human Organ. 1958;17:28&#x2013;36. </citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goodman</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Snowball sampling</article-title>
+          <source>Ann Math Stat</source>
+          <year>1961</year>
+          <volume>32</volume>
+          <issue>1</issue>
+          <fpage>148</fpage>
+          <lpage>170</lpage>
+          <pub-id pub-id-type="doi">10.1214/aoms/1177705148</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Goodman L. Snowball sampling. Ann Math Stat. 1961;32(1):148&#x2013;170. </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thompson</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Frank</surname>
+              <given-names>O</given-names>
+            </name>
+          </person-group>
+          <article-title>Model-based estimation with link-tracing sampling designs</article-title>
+          <source>Sur Methodol</source>
+          <year>2000</year>
+          <volume>26</volume>
+          <issue>1</issue>
+          <fpage>87</fpage>
+          <lpage>98</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Thompson SK, Frank O. Model-based estimation with link-tracing sampling designs. Sur Methodol. 2000;26(1):87&#x2013;98. </citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heckathorn</surname>
+              <given-names>DD</given-names>
+            </name>
+            <name>
+              <surname>Jeffri</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Finding the beat: using respondent-driven sampling to study jazz musicians</article-title>
+          <source>Poetics</source>
+          <year>2001</year>
+          <volume>28</volume>
+          <fpage>307</fpage>
+          <lpage>329</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0304-422X(01)80006-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Heckathorn DD, Jeffri J. Finding the beat: using respondent-driven sampling to study jazz musicians. Poetics. 2001;28:307&#x2013;329. </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ramirez-Valles</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Heckathorn</surname>
+              <given-names>DD</given-names>
+            </name>
+            <name>
+              <surname>V&#xE1;zquez</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Diaz</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>Campbell</surname>
+              <given-names>RT</given-names>
+            </name>
+          </person-group>
+          <article-title>From networks to populations: The development and application of respondent-driven sampling among IDUs and Latino Gay Men</article-title>
+          <source>AIDS Behav</source>
+          <year>2005</year>
+          <volume>9</volume>
+          <issue>4</issue>
+          <fpage>387</fpage>
+          <lpage>402</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10461-005-9012-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ramirez-Valles J, Heckathorn DD, V&#xE1;zquez R, Diaz RM, Campbell RT. From networks to populations: the development and application of respondent-driven sampling among IDUs and Latino Gay Men. AIDS Behav. 2005;9(4):387&#x2013;402. <pub-id pub-id-type="pmid">16235135</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Carlson</surname>
+              <given-names>RG</given-names>
+            </name>
+            <name>
+              <surname>Falck</surname>
+              <given-names>RS</given-names>
+            </name>
+            <name>
+              <surname>Siegal</surname>
+              <given-names>HA</given-names>
+            </name>
+            <name>
+              <surname>Rahman</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Respondent-driven sampling to recruit MDMA users: A methodological assessment</article-title>
+          <source>Drug Alcohol Depend</source>
+          <year>2005</year>
+          <volume>78</volume>
+          <fpage>147</fpage>
+          <lpage>157</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.drugalcdep.2004.10.011</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wang J, Carlson RG, Falck RS, Siegal HA, Rahman A, Li L. Respondent-driven sampling to recruit MDMA users: a methodological assessment. Drug Alcohol Depend. 2005;78:147&#x2013;157. <pub-id pub-id-type="pmid">15845318</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Snijders</surname>
+              <given-names>TAB</given-names>
+            </name>
+          </person-group>
+          <article-title>Estimation on the basis of snowball samples: How to weight?</article-title>
+          <source>BMS Bull M&#xE9;thodol Sociol</source>
+          <year>1992</year>
+          <volume>36</volume>
+          <fpage>59</fpage>
+          <lpage>70</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Snijders TAB. Estimation on the basis of snowball samples: how to weight? BMS Bull M&#xE9;thodol Sociol. 1992;36:59&#x2013;70. </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lohr</surname>
+              <given-names>SL</given-names>
+            </name>
+          </person-group>
+          <source>Sampling: Design and Analysis</source>
+          <year>1999</year>
+          <publisher-loc>Pacific Grove</publisher-loc>
+          <publisher-name>Duxbury</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Lohr SL. Sampling: Design and Analysis. Pacific Grove: Duxbury; 1999. </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thompson</surname>
+              <given-names>SK</given-names>
+            </name>
+          </person-group>
+          <source>Sampling</source>
+          <year>2002</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Wiley</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Thompson SK. Sampling. New York: Wiley; 2002. </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thompson</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Collins</surname>
+              <given-names>LM</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive sampling in research on risk-related behaviors</article-title>
+          <source>Drug Alcohol Depend</source>
+          <year>2002</year>
+          <volume>68</volume>
+          <fpage>S57</fpage>
+          <lpage>S67</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0376-8716(02)00215-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Thompson SK, Collins LM. Adaptive sampling in research on risk-related behaviors. Drug Alcohol Depend. 2002;68:S57&#x2013;S67. <pub-id pub-id-type="pmid">12324175</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="other">Volz E, Heckathorn DD. Probability-based estimation theory for respondent-driven sampling. <italic>Working Paper</italic>. 2006.</citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wolter</surname>
+              <given-names>KM</given-names>
+            </name>
+          </person-group>
+          <source>Introduction to Variance Estimation</source>
+          <year>1985</year>
+          <publisher-loc>Berlin Heidelberg New York</publisher-loc>
+          <publisher-name>Springer</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Wolter KM. Introduction to Variance Estimation. Berlin Heidelberg New York: Springer; 1985. </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Efron</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Tibshirani</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <source>An Introduction to the Bootstrap</source>
+          <year>1993</year>
+          <publisher-loc>New York, NY</publisher-loc>
+          <publisher-name>Chapman &amp; Hall</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Efron B, Tibshirani RJ. An Introduction to the Bootstrap. New York, NY: Chapman &amp; Hall; 1993. </citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lu</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Gelman</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>A method for estimating design-based sampling variances for surveys with weighting, poststratification, and raking</article-title>
+          <source>J Off Stat</source>
+          <year>2003</year>
+          <volume>19</volume>
+          <issue>2</issue>
+          <fpage>133</fpage>
+          <lpage>151</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Lu H, Gelman A. A method for estimating design-based sampling variances for surveys with weighting, poststratification, and raking. J Off Stat. 2003;19(2):133&#x2013;151. </citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelman</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Carlin</surname>
+              <given-names>JB</given-names>
+            </name>
+            <name>
+              <surname>Stern</surname>
+              <given-names>HS</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>DB</given-names>
+            </name>
+          </person-group>
+          <source>Bayesian Data Analysis</source>
+          <year>2004</year>
+          <publisher-loc>Boca Raton</publisher-loc>
+          <publisher-name>Chapman &amp; Hall</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Gelman A, Carlin JB, Stern HS, Rubin DB. Bayesian Data Analysis. Boca Raton: Chapman &amp; Hall; 2004. </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cohen</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Statistical Power Analysis for the Behavioral Sciences</source>
+          <year>1987</year>
+          <publisher-loc>Hillsdale, NJ</publisher-loc>
+          <publisher-name>Lawrence Erlbaum Associates</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Cohen J. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Lawrence Erlbaum Associates; 1987. </citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Murphy</surname>
+              <given-names>KR</given-names>
+            </name>
+            <name>
+              <surname>Myors</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <source>Statistical Power Analysis: A Simple and General Model for Traditional and Modern Hypothesis Tests</source>
+          <year>1998</year>
+          <publisher-loc>Mahwah, NJ</publisher-loc>
+          <publisher-name>Lawrence Erlbaum Associates</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Murphy KR, Myors B. Statistical Power Analysis: A Simple and General Model for Traditional and Modern Hypothesis Tests. Mahwah, NJ: Lawrence Erlbaum Associates; 1998. </citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="other">Heckathorn DD. Extensions of respondent-driven sampling: dual-components sampling weights. Paper presented at: RAND Statistical Seminar Series, 2005; Santa Monica, CA.</citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelman</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Hill</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Data Analysis Using Regression and Multilevel / Hierarchial Models</source>
+          <year>2006</year>
+          <publisher-loc>Cambridge</publisher-loc>
+          <publisher-name>Cambridge University Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Gelman A, Hill J. Data Analysis Using Regression and Multilevel / Hierarchial Models. Cambridge: Cambridge University Press; 2006. </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fleiss</surname>
+              <given-names>JL</given-names>
+            </name>
+          </person-group>
+          <source>Statistical Methods for Rates and Proportions</source>
+          <year>1973</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Wiley</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Fleiss JL. Statistical Methods for Rates and Proportions. New York: Wiley; 1973. </citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="book">
+          <source>Behavioral Surveillance Surveys: Guidelines for Repeated Behavioral Surveys in Populations at Risk of HIV</source>
+          <year>2000</year>
+          <publisher-loc>Arlington, VA</publisher-loc>
+          <publisher-name>Family Health International</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">FHI. Behavioral Surveillance Surveys: Guidelines for Repeated Behavioral Surveys in Populations at Risk of HIV. Arlington, VA: Family Health International; 2000. </citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brewer</surname>
+              <given-names>DD</given-names>
+            </name>
+          </person-group>
+          <article-title>Forgetting in the recall-based elicitation of personal and social networks</article-title>
+          <source>Soc Netw</source>
+          <year>2000</year>
+          <volume>22</volume>
+          <fpage>29</fpage>
+          <lpage>43</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0378-8733(99)00017-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Brewer DD. Forgetting in the recall-based elicitation of personal and social networks. Soc Netw. 2000;22:29&#x2013;43. </citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="other">Bell DC, Belli-McQueen B, Haider A. Partner naming and forgetting: Recall of network members. <italic>Working Paper</italic>. 2006.</citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McCarty</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Killworth</surname>
+              <given-names>PD</given-names>
+            </name>
+            <name>
+              <surname>Bernard</surname>
+              <given-names>HR</given-names>
+            </name>
+            <name>
+              <surname>Johnsen</surname>
+              <given-names>EC</given-names>
+            </name>
+            <name>
+              <surname>Shelley</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparing two methods for estimating network size</article-title>
+          <source>Human Organ</source>
+          <year>2001</year>
+          <volume>60</volume>
+          <issue>1</issue>
+          <fpage>28</fpage>
+          <lpage>39</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">McCarty C, Killworth PD, Bernard HR, Johnsen EC, Shelley GA. Comparing two methods for estimating network size. Human Organ. 2001;60(1):28&#x2013;39. </citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn id="Fn1">
+        <label>1</label>
+        <p>This new framework (Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b) makes great sense when one considers the history of snowball sampling. These methods were introduced<xref ref-type="bibr" rid="CR5">5</xref> and elaborated<xref ref-type="bibr" rid="CR6">6</xref> to study characteristics of social networks, not the characteristics of the people in the network.<xref ref-type="bibr" rid="CR11">11</xref></p>
+      </fn>
+      <fn id="Fn2">
+        <label>2</label>
+        <p>Some preliminary work on bootstrap procedures for respondent-driven sampling has been reported in the literature.<xref ref-type="bibr" rid="CR3">3</xref> Here we build on those first steps by offering an improved procedure and a more developed analysis.</p>
+      </fn>
+      <fn id="Fn3">
+        <label>3</label>
+        <p>We tried and failed to produce analytic results. However, some progress has been made on analytic variance estimation when an alternative estimation procedure is used.<xref ref-type="bibr" rid="CR15">15</xref></p>
+      </fn>
+      <fn id="Fn4">
+        <label>4</label>
+        <p>In some extremely rare cases, usually where one of the groups is very small, either <italic>A</italic><sub>rec</sub> or <italic>B</italic><sub>rec</sub> are empty. When this occurs we draw randomly from the entire sample.</p>
+      </fn>
+      <fn id="Fn5">
+        <label>5</label>
+        <p>Simulation results indicate that this proposed procedure works better than the simpler procedure of choosing a sample member and then, based on the estimated cross-group connection probabilities, choosing a sample member from the appropriate group. The method presented here preserves those probabilities, but in addition allows for the possibility that those recruited by people in group <italic>A</italic> might be different than those recruited by people in group <italic>B</italic>.</p>
+      </fn>
+      <fn id="Fn6">
+        <label>6</label>
+        <p>We also attempted to use the BC<sub>a</sub> method which, in some cases, has better asymptotic properties than the percentile method. However, in our simulations, the BC<sub>a</sub> method performed worse. We suspect that the poor performance of the BC<sub>a</sub> method was because of difficulties estimating the acceleration term<inline-formula id="IEq2"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq2.gif --><tex-math id="M21">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\left( {\widehat{a}} \right)} $$\end{document}</tex-math></inline-formula>when the data were collected via respondent-driven sampling.</p>
+      </fn>
+      <fn id="Fn7">
+        <label>7</label>
+        <p>Simulations reveal that, in general, the standard error method produces intervals only slightly worse than the percentile method and so, in practice, either method can be used.</p>
+      </fn>
+      <fn id="Fn8">
+        <label>8</label>
+        <p>Strictly speaking, since we are sampling from a finite population we could enumerate all possible samples and then run the confidence interval procedure on every possible sample giving us the exact coverage properties of our procedure. However, the number of possible samples is astronomical, and so, following common practice, we take a sample from the set of all possible samples and use the coverage rate from these samples to estimate the true coverage rate. Thus, our presented coverage rates are only estimates of the true coverage rate with standard error, <inline-formula id="IEq3"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq3.gif --><tex-math id="M22">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ se{\left( \phi \right)} \approx {\sqrt {\frac{{\phi {\left( {1 - \phi } \right)}}} {r}} } \approx {\sqrt {\frac{{0.9\raise0.145em\hbox{${\scriptscriptstyle \bullet}$}0.1}} {{1000}}} } \approx 0.01 $$\end{document}</tex-math></inline-formula>. In this paper we will ignore this complication and use <inline-formula id="IEq4"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq4.gif --><tex-math id="M23">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\widehat{\phi }$$\end{document}</tex-math></inline-formula> and &#x3D5; interchangeably.</p>
+      </fn>
+      <fn id="Fn9">
+        <label>9</label>
+        <p>Further details about computer simulations and default parameter values can be found elsewhere.<xref ref-type="bibr" rid="CR4">4</xref> Unless otherwise stated, the default parameter values were always used.</p>
+      </fn>
+      <fn id="Fn10">
+        <label>10</label>
+        <p>The proposed bootstrap procedure performed poorly (<inline-formula id="IEq8"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq8.gif --><tex-math id="M24">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\phi _{{{\text{boot}}}}  \approx 0.6$$\end{document}</tex-math></inline-formula>) when the two groups had very different total degrees (<italic>P</italic><sub><italic>A</italic></sub><italic>D</italic><sub><italic>A</italic></sub> &gt;&gt; <italic>P</italic><sub><italic>B</italic></sub><italic>D</italic><sub><italic>B</italic></sub>)and <italic>I</italic> was very small (<italic>I</italic>&#x2248;0.1). As we will see in the next section, in these types of networks the design effects are very large (&gt;10), and so respondent-driven sampling probably should not be used. However, even in this extreme part of the space of all networks, the proposed bootstrap method still outperformed the naive method.</p>
+      </fn>
+      <fn id="Fn11">
+        <label>11</label>
+        <p>Unfortunately, the term &#x201C;design effect&#x201D; has taken on two meanings in the sampling literature.<xref ref-type="bibr" rid="CR12">12</xref>,<xref ref-type="bibr" rid="CR18">18</xref> The first meaning is the ratio of the variance of the estimate under a specified sampling plan to the variance under simple random sampling (deff). An alternative definition is based on the ratio of the standard errors (<italic>deft</italic>). Since<inline-formula id="IEq9"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq9.gif --><tex-math id="M25">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\sqrt {deff} }$$\end{document}</tex-math></inline-formula>=<italic>deft</italic>, readers who prefer <italic>deft</italic> can make the appropriate conversion.</p>
+      </fn>
+      <fn id="Fn12">
+        <label>12</label>
+        <p>One possible explanation for this finding is that the Poisson distribution has lower variance than the exponential distribution; an exponential distribution has mean <italic>&#x3BC;</italic> variance <italic>&#x3BC;</italic><sup>2</sup> and, but a Poisson distribution of mean <italic>&#x3BC;</italic> has variance <italic>&#x3BC;</italic>.<xref ref-type="bibr" rid="CR19">19</xref> However, there are also many other differences between these two distributions. To assess the role of the variance in the degree distribution on the design effects, we ran simulations where we assigned both groups a normal degree distributions. In this case, direct manipulation of the variability of the degree distribution did not change the estimated design effect.</p>
+      </fn>
+      <fn id="Fn13">
+        <label>13</label>
+        <p>The complicated relationship between network structure and design effects implies that the relationship between homophily<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR3">3</xref> and design effect is many-to-many. That is, many homophily values yield the same design effect, and a given design effect is consistent with many different homophily values. Therefore, homophily is not the best way to understand design effects.</p>
+      </fn>
+      <fn id="Fn14">
+        <label>14</label>
+        <p>The results presented here for Latino gay men differ from the results originally published<xref ref-type="bibr" rid="CR9">9</xref> because the standard errors published in the original paper were too large (D. Heckathorn, [ddh22@cornell.edu], email, February 5, 2006).</p>
+      </fn>
+      <fn id="Fn15">
+        <label>15</label>
+        <p>Since these authors all used the bootstrap procedure proposed in this paper, their confidence intervals allow reasonable estimation of <inline-formula id="IEq14"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq14.gif --><tex-math id="M26">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \widehat{V}{\left( {{\text{RDS}},\widehat{P}_{A} } \right)} $$\end{document}</tex-math></inline-formula>.</p>
+      </fn>
+      <fn id="Fn16">
+        <label>16</label>
+        <p>Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> also illustrates that the design effect is a property of a specific estimate and not a population; estimates from the same dataset may have different design effects.<xref ref-type="bibr" rid="CR12">12</xref></p>
+      </fn>
+      <fn id="Fn17">
+        <label>17</label>
+        <p>In addition to making prevalence estimates, some researchers are interested in using statistical techniques like multivariate regression to look for statistical patterns within the data. The feasibility of this approach is discussed elsewhere.<xref ref-type="bibr" rid="CR22">22</xref></p>
+      </fn>
+      <fn id="Fn18">
+        <label>18</label>
+        <p>This formula is an approximation of the more complicated formula derived elsewhere,<xref ref-type="bibr" rid="CR24">24</xref><inline-formula id="IEq21"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq21.gif --><tex-math id="M27">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ n = deff \bullet \frac{{{\left[ {Z_{{1 - \frac{\alpha } {2}}} \bullet {\sqrt {2\overline{P} {\left( {1 - \overline{P} } \right)}} } + Z_{{1 - \beta }} \bullet {\sqrt {P_{{A,1}} {\left( {1 - P_{{A,1}} } \right)} + P_{{A,2}} {\left( {1 - P_{{A,2}} } \right)}} }} \right]}^{2} }} {{{\left( {P_{{A,2}} - P_{{A,1}} } \right)}^{2} }} $$\end{document}</tex-math></inline-formula> where <inline-formula id="IEq22"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq22.gif --><tex-math id="M28">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \overline{P} = \frac{{P_{{A,1}} + P_{{A,2}} }} {2} $$\end{document}</tex-math></inline-formula>, which has appeared in the public health literature.<xref ref-type="bibr" rid="CR25">25</xref> When <italic>P</italic><sub><italic>A,1</italic></sub>&#x2248;<italic>P</italic><sub><italic>A,2</italic></sub> then <inline-formula id="IEq23"><!-- Alternate image not processed: 11524_2006_9106_Article_IEq23.gif --><tex-math id="M29">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ 2\overline{P} {\left( {1 - \overline{P} } \right)} \approx P_{{A,1}} {\left( {1 - P_{{A,1}} } \right)} + P_{{A,2}} {\left( {1 - P_{{A,2}} } \right)} $$\end{document}</tex-math></inline-formula>so both formula yield similar values.</p>
+      </fn>
+      <fn id="Fn19">
+        <label>19</label>
+        <p>The RDSAT software was written by Erik Volz and Doug Heckathorn and is currently available from http://www.respondentdrivensampling.org.</p>
+      </fn>
+      <fn>
+        <p>Salganik is with the Department of Sociology and Institute for Social and Economic Research and Policy, Columbia University, New York, NY, USA.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,1468 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Anal Bioanal Chem</journal-id>
+      <journal-title>Analytical and Bioanalytical Chemistry</journal-title>
+      <issn pub-type="ppub">1618-2642</issn>
+      <issn pub-type="epub">1618-2650</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17899035</article-id>
+      <article-id pub-id-type="pmc">2117336</article-id>
+      <article-id pub-id-type="publisher-id">1584</article-id>
+      <article-id pub-id-type="doi">10.1007/s00216-007-1584-5</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Development of an open-tubular trypsin reactor for on-line digestion of proteins</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Stigter</surname>
+            <given-names>E. C. A.</given-names>
+          </name>
+          <address>
+            <phone>+31-30-2536922</phone>
+            <fax>+31-30-2535180</fax>
+            <email>e.c.a.stigter@uu.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>de Jong</surname>
+            <given-names>G. J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van Bennekom</surname>
+            <given-names>W. P.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Division of Biomedical Analysis, Department of Pharmaceutical Sciences, Faculty of Sciences, Utrecht University, Sorbonnelaan 16, 3584 CA Utrecht, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>22</day>
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>11</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>389</volume>
+      <issue>6</issue>
+      <fpage>1967</fpage>
+      <lpage>1977</lpage>
+      <history>
+        <date date-type="received">
+          <day>20</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>6</day>
+          <month>8</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>24</day>
+          <month>8</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>A study was initiated to construct a micro-reactor for protein digestion based on trypsin-coated fused-silica capillaries. Initially, surface plasmon resonance was used both for optimization of the surface chemistry applied in the preparation and for monitoring the amount of enzyme that was immobilized. The highest amount of trypsin was immobilized on dextran-coated SPR surfaces which allowed the covalent coupling of 11&#xA0;ng mm<sup>&#x2212;2</sup> trypsin. Fused-silica capillaries were modified in a similar manner and the resulting open-tubular trypsin-reactors having a pH optimum of pH 8.5, display a high activity when operated at 37&#xA0;&#xB0;C and are stable for at least two weeks when used continuously. Trypsin auto-digestion fragments, sample carry-over, and loss of signal due to adsorption of the protein were not observed. On-line digestion without prior protein denaturation, followed by micro-LC separation and photodiode array detection, was tested with horse-heart cytochrome C and horse skeletal-muscle myoglobin. The complete digestion of 20&#xA0;pmol &#x3BC;L<sup>&#x2212;1</sup> horse cytochrome C was observed when the average residence time of the protein sample in a 140&#xA0;cm &#xD7;50&#xA0;&#x3BC;m capillary immobilized enzyme reactor (IMER) was 165&#xA0;s. Mass spectrometric identification of the injected protein on the basis of the tryptic peptides proved possible. Protein digestion was favorable with respect to reaction time and fragments formed when compared with other on-line and off-line procedures. These results and the easy preparation of this micro-reactor provide possibilities for miniaturized enzyme-reactors for on-line peptide mapping and inhibitor screening.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Trypsin reactor</kwd>
+        <kwd>Dextran hydrogel</kwd>
+        <kwd>Surface plasmon resonance</kwd>
+        <kwd>Liquid chromatography</kwd>
+        <kwd>On-line digestion</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>A demand for smaller enzyme reactors has emerged in recent years, as a consequence of ongoing miniaturization in the biochemical and analytical sciences. These micro-reactors have been used in biocatalysis and biosensing. In the field of proteomics the reactors are a tool in peptide mapping, in which proteins are identified via peptide fragment identification after proteolysis. Currently, in spite of its limitations, most of these analyses are conducted by means of 2D gel electrophoresis followed by digestion of the proteins, liquid chromatographic (LC) separation, and mass spectrometric (MS) identification of the peptides [<xref ref-type="bibr" rid="CR1">1</xref>&#x2013;<xref ref-type="bibr" rid="CR3">3</xref>]. The most time-consuming step in this procedure is digestion of the protein using a protease. In general, every protein to be investigated is individually incubated with the protease at a concentration of approximately 1&#x2013;2% protein weight for 2 to 18&#xA0;h at an elevated temperature (typically 37&#xA0;&#xB0;C). In addition to the long incubation time needed, a certain level of auto-digestion of the protease can be expected. To reduce sample handling, digestion time, and the risk of sample contamination, methods for the on-line digestion of proteins have been developed that use proteases immobilized on a solid support.</p>
+      <p>Immobilized enzyme reactors have been developed and used over the years for several industrial and analytical purposes [<xref ref-type="bibr" rid="CR4">4</xref>&#x2013;<xref ref-type="bibr" rid="CR6">6</xref>]. An obvious benefit for immobilizing biocatalysts is the fact that the enzyme can be used in several catalytic cycles and that both catalyst and reaction mixture can easily be separated. Moreover, immobilized enzymes generally show an improved stability even at more extreme reaction conditions. Several procedures have been developed for immobilization of enzymes, e.g. adsorption or encapsulation in a matrix or membrane. Alternatively, and more often used, is the covalent attachment of biocatalysts to carrier materials, which allows the immobilization of a large amount of enzyme for a high activity per surface area. Generally, particulate large-pore carrier materials are used, such as controlled-pore glass [<xref ref-type="bibr" rid="CR7">7</xref>, <xref ref-type="bibr" rid="CR8">8</xref>], silica [<xref ref-type="bibr" rid="CR9">9</xref>], or polymers like the commercially available poroszyme [<xref ref-type="bibr" rid="CR10">10</xref>&#x2013;<xref ref-type="bibr" rid="CR12">12</xref>]. Current research in the production of immobilized enzymes is focused on the use of monolithic materials, as they enable efficient fragmentation of proteins [<xref ref-type="bibr" rid="CR13">13</xref>&#x2013;<xref ref-type="bibr" rid="CR17">17</xref>]. Although both commercially available and self-prepared reversed-phase capillary monolithic columns have successfully passed reproducibility assessment [<xref ref-type="bibr" rid="CR18">18</xref>, <xref ref-type="bibr" rid="CR19">19</xref>], synthesis of monoliths suitable for small-scale enzyme reactors can still be troublesome. Materials suitable for the fabrication of larger-scale enzyme reactors are commercially available from BIA Separations (Ljubljana, Slovenia).</p>
+      <p>Although it is possible to apply an immobilized enzyme reactor (IMER) positioned after the separation column [<xref ref-type="bibr" rid="CR20">20</xref>], most papers dealing with on-line digestion of protein samples position the IMER upstream of the separation column. In these cases the sample is first digested and the resulting peptide fragments are separated and identified by LC&#x2013;MS. This approach is often employed in multi-dimensional LC methods [<xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR21">21</xref>, <xref ref-type="bibr" rid="CR22">22</xref>], and has also found application in peptide mapping using capillary electrophoresis [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR24">24</xref>]. Alternatively, as recently shown by Zhao et al. [<xref ref-type="bibr" rid="CR25">25</xref>] and Krenkova et al. [<xref ref-type="bibr" rid="CR26">26</xref>], who covalently coupled trypsin to the wall of fused-silica nanoelectrospray emitters, a protein sample can be analyzed by direct infusion into a mass spectrometer.</p>
+      <p>This paper describes the development of trypsin-modified open-tubular micro-reactors. The chemistry was controlled and optimized using surface plasmon resonance (SPR), a technique allowing sensitive and real-time monitoring of surface reactions such as protein binding [<xref ref-type="bibr" rid="CR27">27</xref>]. The surface modification resulting in the highest enzyme immobilization yield, was used to covalently immobilize the trypsin on the inside wall of a fused-silica capillary. The constructed trypsin micro-reactor, which is compatible with micro- and nano-LC, was further characterized. The influence of reaction time, pH, temperature, and reactor stability were investigated with the model substrate insulin B-chain. The reactor was also applied to digestion of the proteins cytochrome C and myoglobin. The produced peptides were analyzed by liquid chromatography&#x2013;mass spectrometry.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Experimental</title>
+      <sec id="Sec3">
+        <title>Materials</title>
+        <p>The SPR equipment used was from IBIS Technologies (currently available from Eco Chemie, Utrecht, The Netherlands) equipped with a 200-&#x3BC;L polycarbonate cuvet. The gold-sensor disks, purchased from SSENS (Hengelo, The Netherlands), were positioned on the IBIS-prism using index-matching oil from R.P. Cargille Laboratories (Cedar Grove, USA). PEEK nuts, unions, tubing, and loops were from Upchurch (Santa Monica, USA). Manual injections during the preparation of the reactors were performed using a Rheodyne 7010 injector (Inacom, Veenendaal, The Netherlands) equipped with a 1-mL PEEK loop. Model 10ADvp HPLC pumps from Shimadzu (Kyoto, Japan) were used for reactor preparation and activity determinations. The water used for washing and to prepare buffers was produced by a Sartorius Arium 611 ultrapure water system (Nieuwegein, The Netherlands; conductivity &gt;18.2&#xA0;M&#x3A9; cm). The model ABS759A UV absorbance detector was equipped with a capillary flow-cell (75-&#x3BC;m i.d.) and was obtained from Applied Biosystems (Nieuwerkerk a/d IJssel, The Netherlands).</p>
+        <p>On-line digestion experiments with micro-HPLC separations were conducted using LC-Packings instruments and columns (Amsterdam, The Netherlands). The equipment consisted of an injector (Famos), nanovalve column switcher (Switchos), nanopump (Ultimate), and a photodiode-array detector (PDA) equipped with a micro flow cell (45&#xA0;nL). The reversed-phase pre-columns were 5&#x2009;&#xD7;&#x2009;0.3&#xA0;mm with 5-&#x3BC;m 100 &#xC5; C<sub>18</sub> particles. The 150&#x2009;&#xD7;&#x2009;0.3&#xA0;mm reversed-phase micro-column contained 3-&#x3BC;m 100 &#xC5; C<sub>18</sub> PepMap particles. The mass spectrometer was an Agilent LC/MSD XCT ion trap (Amstelveen, Netherlands).</p>
+        <p>Acetic acid, boric acid, calcium chloride (CaCl<sub>2</sub>), ethanol, ethanolamine (EA), hydrochloric acid (HCl), hydrogen peroxide, sodium dihydrogen phosphate, sodium chloride, sodium hydroxide (NaOH), and sulfuric acid were purchased from Merck (Darmstadt, Germany). HPLC grade acetonitrile and ethanol were from Biosolve (Valkenswaard, The Netherlands). 4-(2-Hydroxyethyl)-1-piperazineethanesulfonic acid (HEPES), tris-hydroxymethylaminoethane (TRIS), urea, and acetone were purchased from Acros Organics (Geel, Belgium). Benzamidin, <italic>N</italic>-(3-dimethylaminopropyl)-<italic>N</italic>-ethylcarbodiimide hydrochloride (EDC), benzoyl-arginine ethyl ester (BAEE), iodoacetamide, <italic>N</italic>-hydroxysuccinimide (NHS), and carboxyl-modified dextran (CMD) were purchased from Fluka (Buchs, Switzerland). Horse-heart cytochrome C, insulin B (oxidized), polyoxyethylenesorbitan monolaurate (Tween 20), and porcine pancreas trypsin were purchased from Sigma (St Louis, USA). The specific activity of trypsin was determined according to the method of Schwert and Takenaka [<xref ref-type="bibr" rid="CR28">28</xref>] using BAEE as substrate and turned out to be 14700&#xA0;U mg<sup>&#x2212;1</sup>. Aminopropyltriethoxysilane (APTES), carbonyl diimidazole (CDI), glycidoxypropyltrimethoxysilane (GOPS), and mercaptoethanol (ME) were from Aldrich Chemical Company (Milwaukee, USA). Amino-modified dextran (AMD) was from Unavera ChemLab (Mittenwald, Germany). Fused-silica capillaries were purchased from Bester (Mijdrecht, The Netherlands).</p>
+        <p>Piranha solution was prepared by mixing 1 part 30% hydrogen peroxide and 6 parts concentrated sulfuric acid (caution, aggressive solution). TRIS digestion buffer consisted of 50&#xA0;mmol L<sup>&#x2212;1</sup> TRIS and 1&#xA0;mmol L<sup>&#x2212;1</sup> CaCl<sub>2</sub> adjusted to pH 8.2 by use of 1&#xA0;mol L<sup>&#x2212;1</sup> HCl solution.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Methods</title>
+        <sec id="Sec5">
+          <title>Preparation of dextran-coated SPR sensor disks (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>)</title>
+          <p>
+            <fig id="Fig1">
+              <label>Fig.&#xA0;1</label>
+              <caption>
+                <p>Surface modifications used to immobilize the enzyme in fused-silica capillaries. <bold>a</bold>, GOPS-modified; <bold>b</bold>, GOPS/AMD-modified; <bold>c</bold>, APTES/CMD/AMD-modified surface. In the last case the CDI activation and enzyme (H<sub>2</sub>N&#x2013;enzyme) coupling are as in <bold>b</bold></p>
+              </caption>
+              <graphic position="anchor" xlink:href="216_2007_1584_Fig1_HTML" id="MO1"/>
+            </fig>
+          </p>
+          <p>The SPR sensor disks were extensively cleaned in freshly prepared piranha solution. After 1&#xA0;h the disks were thoroughly rinsed with water, dried in a stream of nitrogen gas, and immediately incubated for 6&#xA0;h in a 10&#xA0;mmol L<sup>&#x2212;1</sup> solution of ME in ethanol in order to produce a self-assembled monolayer (SAM) containing hydroxyl functionalities. After SAM formation, the disks were washed with ethanol and water, and dried with nitrogen gas. The resulting ME disks were incubated for 1&#xA0;h with a 10% GOPS solution in 98% ethanol after which the disks were washed with ethanol, dried with nitrogen gas and stored overnight at 50&#xA0;&#xB0;C.</p>
+          <p>Dextran-modified sensors were prepared by incubating GOPS-modified sensor disks for 20&#xA0;h at room temperature with a 10% AMD solution in a 50&#xA0;mmol L<sup>&#x2212;1</sup> borate buffer, pH 9.5. After removing the solution the disks were washed with water, ethanol, and water, dried in a gentle flow of nitrogen gas, and stored at room temperature in a closed box until use.</p>
+          <p>Alternatively, ME disks were incubated for 1&#xA0;h with a 10% APTES solution in acetone. After washing, drying, and storing overnight in the oven, similar to the GOPS disks, the surfaces were incubated for 1&#xA0;h with a solution containing 5% CMD in water containing 200&#xA0;mmol L<sup>&#x2212;1</sup> EDC and 50&#xA0;mmol L<sup>&#x2212;1</sup> NHS. After removing the solution, the disks were washed with water and ethanol, and incubated for 15&#xA0;min in a solution containing 100&#xA0;mmol L<sup>&#x2212;1</sup> CDI in acetone. These activated surfaces were washed with ethanol, blown to dryness with nitrogen, and incubated overnight with a solution of 10% AMD in water. After removing the solution the disks were washed with water, ethanol, and water, dried in a gentle flow of nitrogen gas, and stored at room temperature in a closed box until use.</p>
+        </sec>
+        <sec id="Sec6">
+          <title>SPR experiments</title>
+          <p>The GOPS-modified SPR sensor disks were incubated overnight with 200&#xA0;&#x3BC;L of a solution containing 2.5&#xA0;mg mL<sup>&#x2212;1</sup> trypsin and 50&#xA0;&#x3BC;g mL<sup>&#x2212;1</sup> benzamidin in 50&#xA0;mmol L<sup>&#x2212;1</sup> borate buffer, pH 9.5 (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a). Both types of dextran-modified sensor disk were activated for 60&#xA0;min with 200&#xA0;&#x3BC;L 100&#xA0;mmol L<sup>&#x2212;1</sup> CDI in dry acetone. After washing the surface with water to remove the last traces of acetone, the sensors were incubated overnight with 200&#xA0;&#x3BC;L 2.5&#xA0;mg mL<sup>&#x2212;1</sup> trypsin and 50&#xA0;&#x3BC;g mL<sup>&#x2212;1</sup> benzamidin in 50&#xA0;mmol L<sup>&#x2212;1</sup> borate buffer, pH 8.5 (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>b and c, respectively). The remaining esters were inactivated by incubating the disks for 10&#xA0;min with 1&#xA0;mol L<sup>&#x2212;1</sup> EA in 50&#xA0;mmol L<sup>&#x2212;1</sup> borate buffer, pH 8.5. The successive steps in the immobilization were monitored with SPR and the amount of covalently coupled enzyme was calculated from the recorded angle shift. During the experiments the SPR system was thermostatted at 25.0&#xA0;&#xB0;C.</p>
+        </sec>
+        <sec id="Sec7">
+          <title>Preparation of dextran-coated fused-silica capillaries</title>
+          <p>In order to generate a proper surface for silanization, fused-silica capillaries were cleaned for 30&#xA0;min with 2&#xA0;mol L<sup>&#x2212;1</sup> NaOH solution at a flow-rate of 5&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>. The capillary was then washed for 30&#xA0;min with 0.1&#xA0;mol L<sup>&#x2212;1</sup> HCl, for 5&#xA0;min with water, and finally for 5&#xA0;min with ethanol. In order to prepare dextran-coated capillaries, the capillaries were flushed for 60&#xA0;min with a 10% GOPS solution in ethanol. After this step, the capillaries were closed with silicon plugs and dried overnight at 50&#xA0;&#xB0;C. After silanization, the capillaries were flushed with methanol at a flow-rate of 10&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> after which the capillaries were chemically modified in flow, using injections with a Rheodyne 7010 manual injector equipped with a 1-mL PEEK loop, in a way similar to that described above in the SPR section. Washing steps were conducted at flow rates of 10&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>, overnight incubations at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>. All chemistries are outlined in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>.</p>
+        </sec>
+        <sec id="Sec8">
+          <title>Enzyme activity determination</title>
+          <p>Insulin B chain was used as a substrate to determine the activity of trypsin. Injections of 1&#xA0;&#x3BC;L of a concentration of 20&#xA0;&#x3BC;mol L<sup>&#x2212;1</sup> in digestion buffer were introduced into the reactor that was kept at the indicated temperature using a water bath. To determine the enzyme activity in solution, trypsin was incubated in these solutions also (final trypsin concentration 0.4&#xA0;&#x3BC;g mL<sup>&#x2212;1</sup>). At time intervals from 0.5 to 30&#xA0;min, 100-&#x3BC;L samples were taken and the activity was stopped by the addition of 5&#xA0;&#x3BC;L 20% TFA in water. Buffers that were used to determine the effect of pH on activity were MES (pH 5.5 to 6.5), MOPS (pH 6.5 to 7.8), TRIS (pH 7.5 to 9), and CHES (pH 8.6 to 10.1). The buffers were adjusted to pH by use of 1&#xA0;mol L<sup>&#x2212;1</sup> NaOH and were prepared at a 50&#xA0;mmol L<sup>&#x2212;1</sup> concentration, also containing 5&#xA0;mmol L<sup>&#x2212;1</sup> CaCl<sub>2</sub>. To determine the effect of temperature, the temperature during incubation was varied between 10&#xA0;&#xB0;C and 60&#xA0;&#xB0;C. Both the on-line and off-line samples were analyzed using micro-HPLC with PDA detection, as outlined below. The insulin B conversion of both immobilized trypsin and the enzyme in solution was calculated from the peak areas of substrate and products.</p>
+        </sec>
+        <sec id="Sec9">
+          <title>On-line protein digestion in micro-HPLC</title>
+          <p>For the on-line peptide and protein digestion experiments the trypsin-modified capillaries were positioned between the LC injector and a 10-port valve, as shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>, and were immersed in a thermostatted water bath set at 37&#xA0;&#xB0;C unless mentioned otherwise. Protein samples were prepared in digestion buffer and were transported through the capillary towards a 10-port valve using a 5% acetonitrile solution containing 0.05% TFA. The peptide fragments formed during digestion were concentrated on an RP trapping column (TC) and salts and other buffer components present in the sample were removed. By switching the valve the trapping column is in series with the RP micro column and an acetonitrile gradient started. The gradient was composed of two solutions: (A) 5% acetonitrile in water containing 0.05% TFA and (B) 80% acetonitrile in water containing 0.04% TFA. In 30&#xA0;min the gradient changed linearly from 0 to 50% B, followed by 10&#xA0;min at 90% B and 20&#xA0;min at 0% B. The eluent was monitored with the PDA detector in the range from 200 to 595&#xA0;nm.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Set-up used for on-line protein digestion using a trypsin-modified fused-silica capillary. For detection a PDA or an ion-trap MS was used</p></caption><graphic position="anchor" xlink:href="216_2007_1584_Fig2_HTML" id="MO2"/></fig></p>
+          <p>ESI-MS was conducted in the positive-ion mode with the capillary voltage set at 3500&#xA0;V. The flow rate and temperature of the nitrogen drying gas were 5&#xA0;L min<sup>&#x2212;1</sup> and 325&#xA0;&#xB0;C, respectively. The sequence of the peptide fragments was determined by using the mass spectrometer in auto-MS&#x2013;MS mode fragmenting the two peptides that were most abundantly present when the signal reached threshold. The MS&#x2013;MS result was analyzed by a Mascot database search (<ext-link ext-link-type="uri" xlink:href="http://www.matrixscience.com">http://www.matrixscience.com</ext-link>).</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="Sec10">
+      <title>Results and discussion</title>
+      <sec id="Sec11">
+        <title>Surface chemistry and enzyme immobilization</title>
+        <p>As shown before [<xref ref-type="bibr" rid="CR29">29</xref>], modification of an SPR sensor surface with a dextran hydrogel leads to less non-specific adsorption of proteins compared with unmodified surfaces. The presence of such a layer also enhances the immobilization capacity of biomolecules compared with monolayer-based coatings. Due to the flexible nature of the dextran chains, the accessibility also is often improved compared with molecules immobilized on a flat surface. As the amount of protein present in a capillary after immobilization cannot be determined easily, SPR sensors were used as a model to investigate the effect of the different surface modifications on the amount of trypsin that could be attached covalently. Hydroxyl functionalities necessary to enable silanization are introduced using mercaptoethanol (ME), but all other surface modifications are carried out in exactly the same way, both on the SPR sensor surfaces and in the fused-silica capillaries.</p>
+        <p>Trypsin immobilization after silanization with GOPS by reaction of the trypsin primary amines and the glycidyl function of GOPS results in an SPR angle shift of 350&#x2009;&#xB1;&#x2009;20&#xA0;m&#xB0; (<italic>n</italic>&#x2009;=&#x2009;3), which equals an amount of trypsin of 2.9&#x2009;&#xB1;&#x2009;0.2&#xA0;ng mm<sup>&#x2013;2</sup> covalently attached to the surface, which is close to monolayer coverage of trypsin. When the GOPS-silanized surface is modified with AMD, resulting in a dextran hydrogel, the amount of trypsin that can be immobilized after CDI activation increases to 9.5&#x2009;&#xB1;&#x2009;0.3&#xA0;ng mm<sup>&#x2212;2</sup> (<italic>n</italic>&#x2009;=&#x2009;3). To further increase the amount of trypsin, an intermediate dextran layer was added. Therefore, fused-silica capillaries were APTES silanized and modified with CMD and AMD, subsequently. The amount of trypsin that could covalently be attached to these layers was determined with SPR and proved to be 11.1&#x2009;&#xB1;&#x2009;0.5&#xA0;ng mm<sup>&#x2212;2</sup> (<italic>n</italic>&#x2009;=&#x2009;2). As this amount is significantly more than obtained with the GOPS/AMD surface, all further experiments have been conducted with fused-silica capillaries the surface of which is modified with dextran in this way.</p>
+        <p>Assuming that the investigated surface modification allows a similar amount of trypsin to be immobilized per surface area in fused-silica capillaries, the quantity of enzyme immobilized on the dextran-modified capillaries is more than five times larger per surface area compared with other open-tubular, trypsin micro-reactors described in the literature [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR30">30</xref>&#x2013;<xref ref-type="bibr" rid="CR32">32</xref>]. These reactors, first described by Amankwa and Kuhr [<xref ref-type="bibr" rid="CR30">30</xref>], are based on immobilized avidin and, at saturation, 6.5&#xA0;pmol biotinylated trypsin was immobilized in a 50-cm long capillary of 50-&#x3BC;m i.d.. This amount equals 2&#xA0;ng trypsin mm<sup>&#x2212;2</sup> capillary surface, which is less than monolayer coverage.</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Characterization of the enzyme reactor</title>
+        <p>Fused-silica capillaries were modified with dextran as described above and the activity and characteristics of the trypsin micro-reactor were assessed with the oligopeptide insulin B chain, a 30 amino acids long insulin fragment. When insulin B is exposed to the enzyme present in the reactor, hydrolysis at the arginine present at position 22 and, to a lesser extent, the lysine at position 29 is observed. Using the aforementioned substrate insulin B, the pH optimum was determined for the enzyme in solution and the immobilized enzyme. As can be observed in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a, the optimum pH value for both free and immobilized trypsin is pH 8.5. Therefore, all further experiments are conducted at this pH value.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Effect of (<bold>a</bold>) pH and (<bold>b</bold>) temperature on the relative activities of trypsin in solution (<italic>circles</italic>) and trypsin immobilized on an APTES/CMD/AMD-modified fused-silica surface (<italic>triangles</italic>). In <bold>b</bold> the maximum insulin B conversion rate determined under experimental conditions is 4.41&#x2009;&#xB1;&#x2009;0.02&#xA0;pmol min<sup>&#x2212;1</sup>&#xA0;&#x3BC;g<sup>&#x2212;1</sup> for the enzyme in solution and 12.32&#x2009;&#xB1;&#x2009;0.35&#xA0;pmol min<sup>&#x2212;1</sup>&#xA0;&#x3BC;g<sup>&#x2212;1</sup> for a 3-&#x3BC;L, 50-&#x3BC;m i.d. microreactor operated at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup></p></caption><graphic position="anchor" xlink:href="216_2007_1584_Fig3_HTML" id="MO3"/></fig></p>
+        <p>Also the effect of temperature on the activity of both the immobilized trypsin and the enzyme in solution was determined in the range 10&#xA0;&#xB0;C to 60&#xA0;&#xB0;C. As can be observed in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b, the activity of trypsin increases with temperature to reach a maximum around 40&#xA0;&#xB0;C and decreases at higher temperatures. The immobilized enzyme shows a higher activity compared with the enzyme in solution, which may be due to an often observed higher stability of immobilized enzymes, also under more extreme conditions. From the data the activation energy can be determined. For the immobilized enzyme a value of 12.2&#x2009;&#xB1;&#x2009;0.3&#xA0;kJ mol<sup>&#x2212;1</sup> can be calculated and for the enzyme in solution a value of 17.2&#x2009;&#xB1;&#x2009;0.5&#xA0;kJ mol<sup>&#x2212;1</sup>. This means that for the immobilized enzyme the temperature has less effect on the activity than for the enzyme in solution. As the highest activity is observed at 37&#xA0;&#xB0;C, all further experiments are conducted at that temperature.</p>
+        <p>For the enzyme in solution a specific activity of 4.41&#x2009;&#xB1;&#x2009;0.02&#xA0;pmol min<sup>&#x2212;1</sup> &#x3BC;g<sup>&#x2212;1</sup> is determined at a concentration of 20&#xA0;pmol &#x3BC;L<sup>&#x2212;1</sup> insulin B and pH 8.5 and 37&#xA0;&#xB0;C. Under similar conditions, in a microreactor of 3&#xA0;&#x3BC;L with a 50&#xA0;&#x3BC;m i.d. and operated at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>, an amount of 12.32&#x2009;&#xB1;&#x2009;0.35&#xA0;pmol insulin B is converted. In such a reactor a total of 2.67&#xA0;&#x3BC;g trypsin might be present taking the earlier SPR observations into account, which means that the immobilized enzyme is both accessible and still active after immobilization. The specific activity after immobilization is higher than observed in recent papers for the protease pepsin immobilized on beaded chitosan [<xref ref-type="bibr" rid="CR33">33</xref>, <xref ref-type="bibr" rid="CR34">34</xref>] and trypsin photoimmobilized in a fused-silica capillary [<xref ref-type="bibr" rid="CR34">34</xref>].</p>
+        <p>The stability during operation of the open-tubular reactor was tested at 37&#xA0;&#xB0;C and pH 8.5. Activity tests using the model substrate show that the activity of a reactor that is continuously in operation, is constant for at least two weeks. The enzyme trypsin dissolved in digestion buffer and incubated for 24&#xA0;h at 37&#xA0;&#xB0;C loses 60% of its activity, and after three days no activity is measured.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>On-line digestion of proteins</title>
+        <p>The on-line digestion of horse cytochrome C is accomplished as described in the Methods section. Samples are submitted to on-line digestion in a 22-cm long trypsin-modified APTES/CMD/AMD-coated capillary with an i.d. of 75&#xA0;&#x3BC;m (total volume 1&#xA0;&#x3BC;L) or with an i.d. of 50&#xA0;&#x3BC;m and a length of 51&#xA0;cm (1&#xA0;&#x3BC;L) or 140&#xA0;cm (2.75&#xA0;&#x3BC;L). When the protein is not reduced, the heme-moiety will remain covalently attached to the peptides containing the protein sulfhydryls. By monitoring the heme-containing peptides at 395&#xA0;nm, the progress of the digestion and the amount of undigested protein can be determined. The results are summarized in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Summary of the on-line digestion experiments for cytochrome C. The experiments were conducted at pH 8.5 and 37&#xB0;C (<italic>n&#x2009;</italic>=&#x2009;3)</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2">capillary ID (&#x3BC;m)</th><th rowspan="2">reactor volume (&#x3BC;L)</th><th colspan="2">amount injected</th><th rowspan="2">digestion time (s)</th><th rowspan="2">% undigested protein (SD)</th></tr><tr><th>(&#x3BC;g&#xA0;mL<sup>&#x2212;1</sup>)</th><th>(pmol)</th></tr></thead><tbody><tr><td>75</td><td>1</td><td>248</td><td>20</td><td>60</td><td>65.9 (4.8)</td></tr><tr><td>75</td><td>1</td><td>124</td><td>10</td><td>60</td><td>35.8 (3.4</td></tr><tr><td>75</td><td>1</td><td>12.4</td><td>10</td><td>60</td><td>23.6 (1.3)</td></tr><tr><td>50</td><td>1</td><td>248</td><td>20</td><td>60</td><td>14.0 (1.9)</td></tr><tr><td>50</td><td>1</td><td>124</td><td>10</td><td>60</td><td>2.3 (2.0)</td></tr><tr><td>50</td><td>2.75</td><td>248</td><td>20</td><td>165</td><td>0</td></tr><tr><td>50</td><td>2.75</td><td>124</td><td>10</td><td>165</td><td>0</td></tr><tr><td>50</td><td>2.75</td><td>12.4</td><td>10</td><td>165</td><td>0</td></tr></tbody></table><table-wrap-foot><p>The experiments were conducted at pH 8.5 and 37&#xA0;&#xB0;C (<italic>n</italic>&#x2009;=&#x2009;3)</p></table-wrap-foot></table-wrap></p>
+        <p>As expected when a limited amount of enzyme activity is present in a reactor (22&#xA0;cm &#x2009;&#xD7; &#x2009;75&#xA0;&#x3BC;m), for increasing concentrations cytochrome C a larger amount of protein is undigested. Nevertheless, many tryptic peptides are still generated. As can be expected, an increase in exposure time of the substrate with the immobilized enzyme will result in an improved digestion yield. A longer contact time is achieved by increasing the reactor volume by using a longer enzyme-modified capillary. Additionally, the enzyme-to-substrate ratio is increased, which is accomplished by changing the surface-to-volume ratio by using a capillary with a smaller internal diameter. As can be observed in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>, decreasing the i.d. of the capillary leads to improved digestion for a reactor of equal volume due to a higher surface-to-volume ratio and hence a higher amount of enzyme. The use of a 140&#xA0;cm &#xD7;50&#xA0;&#x3BC;m capillary allows the complete digestion of up to 20&#xA0;pmol (248&#xA0;&#x3BC;g mL<sup>&#x2212;1</sup>) of cytochrome C in less than 5&#xA0;min including the sample concentration and removal of salts by the trapping column.</p>
+        <p>Chromatograms for the on-line digestions obtained with capillaries with an i.d. of 50&#xA0;&#x3BC;m are shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>. Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a shows a blank run in a capillary containing no enzyme and Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b and c present on-line digestions for a micro-reactor of 2.75&#xA0;&#x3BC;L operated at 5&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> and 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>, respectively. As discussed above, incomplete digestion of the injected cytochrome C will lead to the presence of multiple peptide fragments containing the heme group, as is visible in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b. The digestion is complete when the sample exposure time is 165&#xA0;s (flow rate 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>) as both intermediate products and the undigested protein (retention time 44&#xA0;min in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a), which are visible at a wavelength of 395&#xA0;nm as outlined above, are no longer observed. An injection of off-line-digested cytochrome C showed a similar chromatogram as is shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>c.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Chromatograms obtained from injection of 10&#xA0;pmol horse cytochrome C in capillary digestion systems monitored at 214&#xA0;nm and 395&#xA0;nm. The experiments were conducted with an APTES-CMD-AMD derivatised fused-silica capillary of (<bold>a</bold>) 510&#x2009;&#xD7;&#x2009;0.050&#xA0;mm, not containing trypsin, operated at 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> (blank); (<bold>b</bold>) 1400&#x2009;&#xD7;&#x2009;0.050&#xA0;mm, trypsin-modified, operated at 5&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> (average sample residence time 33&#xA0;s); (<bold>c</bold>) as (<bold>b</bold>) but operated at 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> (average sample residence time 165&#xA0;s). For clarity the beginning of the chromatogram displaying the 214&#xA0;nm signal is offset as indicated</p></caption><graphic position="anchor" xlink:href="216_2007_1584_Fig4_HTML" id="MO4"/></fig></p>
+        <p>The on-line digestion of horse cytochrome C is also monitored with mass spectrometry. The effect of flow rate and hence incubation time on the digestion of the protein and the number of peptides identified with a Mascot database search is determined and summarized in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. In this table the undigested amounts of protein which have been determined using the PDA detector are also shown. At a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> protein digestion is complete and many peptides are matched, resulting in high sequence coverage and Mascot score. With higher flow, and hence decreasing incubation time, the amount of protein that remains undigested increases and consequently fewer peptides are produced and observed. However, even at relatively high flow rates an adequate amount of peptides is still formed and the protein can be identified on the basis of the fragments present. Nevertheless, the ion intensity is low and some peptides are not retrieved as they are below the threshold for auto-MS&#x2013;MS. Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> summarizes the peptides observed and matched using the MS&#x2013;MS data and a Mascot.database search of proteins digested at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>. A base-peak chromatogram (BPC) of the digestion of cytochrome C under these conditions is shown in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a. The MS&#x2013;MS fragmentation of one of the peptides is presented in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>General overview of the on-line digestion experiments for cytochrome C (<italic>n</italic>&#x2009;=&#x2009;3)</p></caption><table frame="hsides" rules="groups"><thead><tr><th>flow rate (&#x3BC;L min<sup>-1</sup>)</th><th>digestion time (s)</th><th>sequence coverage (%)</th><th>total no peptides matched</th><th>Mascot score</th><th>undigested protein (%)</th></tr></thead><tbody><tr><td>10</td><td>17</td><td>66</td><td>11</td><td>347</td><td>60.3</td></tr><tr><td>5</td><td>33</td><td>66</td><td>21</td><td>501</td><td>31.8</td></tr><tr><td>2</td><td>83</td><td>66</td><td>23</td><td>649</td><td>18.5</td></tr><tr><td>1</td><td>165</td><td>87</td><td>27</td><td>833</td><td>0</td></tr></tbody></table></table-wrap><table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Peptide fragments observed by MS in the on-line digestion of cytochrome C and myoglobin The experiments were conducted at pH 8.5 and 37&#xA0;&#xB0;C at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> using a 2.75-&#x3BC;L trypsin reactor</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Peptide sequence</th><th>Theoretical <italic>m</italic>/<italic>z</italic></th><th>Experimental <italic>m</italic>/<italic>z</italic></th><th>Position</th><th>Missed cleavage</th></tr></thead><tbody><tr><td colspan="5">Cytochrome C (sequence coverage 87%)</td></tr><tr><td>1....IFVQKCAQCHTVEK</td><td>1632.8</td><td>816.9 (2+)</td><td>9&#x2013;22</td><td align="left">1</td></tr><tr><td>2....HKTGPNLHGLFGR</td><td>1432.8</td><td>717.1 (2+)</td><td>26&#x2013;38</td><td align="left">1</td></tr><tr><td>3....TGPNLHGLFGR</td><td>1167.6</td><td>584.6 (2+)</td><td>28&#x2013;38</td><td align="left">0</td></tr><tr><td>4....TGPNLHGLFGRK</td><td>1295.7</td><td>648.6 (2+)</td><td>28&#x2013;39</td><td align="left">1</td></tr><tr><td>5....KTGQAPGFTYTDANK</td><td>1597.8</td><td>533.4 (3+)</td><td>39&#x2013;53</td><td align="left">1</td></tr><tr><td>6....TGQAPGFTYTDANK</td><td>1469.7</td><td>735.6 (2+)</td><td>40&#x2013;53</td><td align="left">0</td></tr><tr><td>7....TGQAPGFTYTDANKNK</td><td>1711.8</td><td>571.4 (3+)</td><td>40&#x2013;55</td><td align="left">1</td></tr><tr><td>8....GITWKEETLMEYLENPKK</td><td>2208.1</td><td>736.8 (3+)</td><td>56&#x2013;73</td><td align="left">2</td></tr><tr><td>9....EETLMEYLENPK</td><td>1494.7</td><td>748.0 (2+)</td><td>61&#x2013;72</td><td align="left">0</td></tr><tr><td>10  EETLMEYLENPKK</td><td>1622.8</td><td>812.1 (2+)</td><td>61&#x2013;73</td><td align="left">1</td></tr><tr><td>11...YIPGTK</td><td>678.4</td><td>678.1 (1+)</td><td>74&#x2013;79</td><td align="left">0</td></tr><tr><td>12...MIFAGIKK</td><td>906.5</td><td>454.0 (2+)</td><td>80&#x2013;87</td><td align="left">1</td></tr><tr><td>13...KTEREDLIAYLKK</td><td>1477.8</td><td>739.6 (2+)</td><td>88&#x2013;99</td><td align="left">2</td></tr><tr><td>14...TEREDLIAYLKK</td><td>1349.7</td><td>675.5 (2+)</td><td>89&#x2013;99</td><td align="left">1</td></tr><tr><td>15...EDLIAYLK</td><td>963.5</td><td>482.6 (2+)</td><td>92&#x2013;99</td><td align="left">0</td></tr><tr><td>16...EDLIAYLKK</td><td>1091.6</td><td>546.6 (2+)</td><td>92&#x2013;100</td><td align="left">1</td></tr><tr><td colspan="5">Myoglobin (sequence coverage 88%)</td></tr><tr><td>1....GLSDGEWQQVLNVWGK</td><td>1814.9</td><td>908.7 (2+)</td><td>1&#x2013;16</td><td align="left">0</td></tr><tr><td>2....VEADIAGHGQEVLIR</td><td>1605.8</td><td>803.6 (2+)</td><td>17&#x2013;31</td><td align="left">0</td></tr><tr><td>3....VEADIAGHGQEVLIR</td><td>1605.8</td><td>536.1 (3+)</td><td>17&#x2013;31</td><td align="left">0</td></tr><tr><td>4....LFTGHPETLEK</td><td>1270.7</td><td>636.0 (2+)</td><td>32&#x2013;42</td><td align="left">0</td></tr><tr><td>5....HLKTEAEMK</td><td>1085.6</td><td>543.5 (2+)</td><td>48&#x2013;56</td><td align="left">1</td></tr><tr><td>6....HGTVVLTALGGILK</td><td>1377.8</td><td>689.7 (2+)</td><td>64&#x2013;77</td><td align="left">0</td></tr><tr><td>7....HGTVVLTALGGILKK</td><td>1505.9</td><td>502.7 (3+)</td><td>64&#x2013;78</td><td align="left">1</td></tr><tr><td>8....KKGHHEAELKPLAQSHATK</td><td>2109.1</td><td>703.7 (3+)</td><td>78&#x2013;96</td><td align="left">2</td></tr><tr><td>9....KGHHEAELKPLAQSHATK</td><td>1981.0</td><td>661.1 (3+)</td><td>79&#x2013;96</td><td align="left">1</td></tr><tr><td>10  GHHEAELKPLAQSHATK</td><td>1853.0</td><td>618.8 (3+)</td><td>80&#x2013;96</td><td align="left">0</td></tr><tr><td>11...YLEFISDAIIHVLHSK</td><td>1884.0</td><td>628.8 (3+)</td><td>103&#x2013;118</td><td align="left">0</td></tr><tr><td>12...HPGNFGADAQGAMTK</td><td>1500.7</td><td>751.5 (2+)</td><td>119&#x2013;133</td><td align="left">0</td></tr><tr><td>13...ALELFRNDIAAK</td><td>1359.8</td><td>680.6 (2+)</td><td>134&#x2013;145</td><td align="left">1</td></tr><tr><td>14...YKELGFQG</td><td>940.5</td><td>471.0 (2+)</td><td>146&#x2013;153</td><td align="left">1</td></tr></tbody></table></table-wrap><fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>On-line digestion of 10&#xA0;pmol cytochrome C at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>: (<bold>a</bold>) base peak chromatogram, the numbers correspond to the matched peptides in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>, and (<bold>b</bold>) MS&#x2013;MS fragmentation of the peptide TGPNLHGLFGR with <italic>m</italic>/<italic>z</italic> 584.9 showing several of the matched fragment ions</p></caption><graphic position="anchor" xlink:href="216_2007_1584_Fig5_HTML" id="MO5"/></fig></p>
+        <p>In further experiments horse myoglobin was digested on-line. This protein is generally regarded as difficult to digest [<xref ref-type="bibr" rid="CR15">15</xref>, <xref ref-type="bibr" rid="CR35">35</xref>]. When 1&#xA0;&#x3BC;L of a 10&#xA0;&#x3BC;mol L<sup>&#x2212;1</sup> solution in buffer is injected at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup> (165&#xA0;s exposure time), the injected protein is completely digested, as was observed with UV detection (data not shown). Using mass spectrometric analysis, 13 different peptides are observed and matched using the MS&#x2013;MS data and a Mascot database search, resulting in a sequence coverage of 88%. The matched peptides are summarized in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> and a BPC of the on-line digestion of myoglobin is shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a, with an MS&#x2013;MS spectrum of one of the tryptic peptides. Both the degree of digestion and the sequence coverage are adequate compared with other systems that often use a high percentage of modifier to enhance digestion, as the absence of denaturing agents during digestion leads to little or no digestion of myoglobin [<xref ref-type="bibr" rid="CR35">35</xref>]. Therefore these reactors are generally used for direct infusion into MS or off-line protein digestion as the presence of high concentrations of methanol or acetonitrile in the digestion buffer will seriously impede on-line protein digestion in combination with RP-LC.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Results from on-line digestion of 10&#xA0;pmol myoglobin at a flow rate of 1&#xA0;&#x3BC;L min<sup>&#x2212;1</sup>: (<bold>a</bold>) base peak chromatogram, the numbers correspond with the matched peptides in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>, and (<bold>b</bold>) the MS&#x2013;MS spectrum of the peptide HGTVVLTALGGILK with <italic>m</italic>/<italic>z</italic> 689.7</p></caption><graphic position="anchor" xlink:href="216_2007_1584_Fig6_HTML" id="MO6"/></fig></p>
+        <p>Amankwa and Kuhr [<xref ref-type="bibr" rid="CR30">30</xref>] reported that proteins and peptides adsorb to the capillary surface of their trypsin reactor. Reactor fouling, and as a result sample carry-over, is also observed when trypsin-modified particulate polymers or monoliths are used [<xref ref-type="bibr" rid="CR36">36</xref>]. Adsorption of proteins and peptides to these relatively hydrophobic columns is prevented by the addition of up to 20% methanol to the digestion buffer. For dextran-coated surfaces, it is known that the non-specific adsorption of protein is minimal and depends on the character of the oligosaccharide layer [<xref ref-type="bibr" rid="CR29">29</xref>, <xref ref-type="bibr" rid="CR37">37</xref>, <xref ref-type="bibr" rid="CR38">38</xref>]. During protein-digestion experiments on SPR sensor surfaces modified identically with the capillary reactors no adsorption during incubation is observed (data not shown). Similarly, during on-line digestion using the dextran coated capillaries, sample adsorption and carry-over are not observed, as repeated sample injections result in identical chromatograms and blank buffer injections do not show peptide fragments. On basis of the latter result and the long lifetime of the reactor, trypsin auto-digestion is probably absent.</p>
+        <p>The developed IMER has been applied for the digestion of horse cytochrome C and myoglobin in buffer without prior pretreatment followed by separation and MS&#x2013;MS sequencing. The time needed to obtain complete protein digestion and sample trapping is 5&#xA0;min with an average sample residence time of 165&#xA0;s. The total analysis time, digestion and LC separation, is 65&#xA0;min. The developed micro-reactor is competitive when compared with other systems used for on-line protein digestion described in literature [<xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR39">39</xref>&#x2013;<xref ref-type="bibr" rid="CR41">41</xref>]. In the capillary IMERs described by Amankwa and Kuhr [<xref ref-type="bibr" rid="CR30">30</xref>] and Bossi et al. [<xref ref-type="bibr" rid="CR34">34</xref>] the complete digestion of native proteins was only obtained when the protein resided in the trypsin-coated capillary for 15&#x2013;25&#xA0;min. The peptide separation was carried out with CE in these latter cases.</p>
+        <p>Many reactors use a protein denaturation step to make the protein more susceptible to proteolytic action. The digestion efficiency can be enhanced by partial denaturation by addition of 35&#x2013;45% acetonitrile to the buffer [<xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR15">15</xref>, <xref ref-type="bibr" rid="CR35">35</xref>, <xref ref-type="bibr" rid="CR36">36</xref>] or by sonication [<xref ref-type="bibr" rid="CR42">42</xref>, <xref ref-type="bibr" rid="CR43">43</xref>]. However, the latter has not yet been used in an automated set-up and the presence of high amounts of modifier will make reversed-phase chromatography in a subsequent step for the separation of the fragments produced during protein digestion very difficult. The described reactors were efficient in terms of time needed for digestion and the digestion result, but were, as a rule, used for direct infusion into the MS or used for off-line digestion.</p>
+        <p>Alternatively, protein denaturation is accomplished using chemicals such as SDS, guanidine HCl or urea. A recent example is the miniaturized on-line proteolysis&#x2013;capillary LC system as described by Samskog et al. [<xref ref-type="bibr" rid="CR12">12</xref>], who employed a 10-&#x3BC;L column packed with poroszyme. The sample contained guanidine.HCl for protein denaturation, and was diluted with buffer, also containing methanol, prior to injection. The total time needed for digestion, trapping, and removal of the high concentration of salt was 15&#xA0;min. The system needed periodic regeneration to counteract the effects of residual salts in the analyte.</p>
+      </sec>
+    </sec>
+    <sec id="Sec14" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>To study the immobilization of the protein trypsin in a fused-silica capillary, a number of surface modifications was tested. In order to investigate the amount of protein that can be covalently attached to these surfaces, SPR sensor disks are modified with these coatings to mimic the capillary surface. The SPR measurements show that the best results were obtained using a dextran coating with an intermediate layer. The resulting open-tubular trypsin reactors having a pH optimum of pH 8.5 display a high activity when operated at 37&#xA0;&#xB0;C and are stable for at least two weeks when used continuously.</p>
+      <p>The capillary reactors show flow-dependent catalysis. For a capillary IMER, the conversion of the insulin B chain increases with decreasing flow and hence a longer residence time. The same is observed for the digestion of horse cytochrome C. The complete digestion of 20&#xA0;pmol &#x3BC;L<sup>&#x2212;1</sup> horse cytochrome C is observed without the need of protein denaturation, reduction, or alkylation when the average residence time of the protein sample in a 140&#xA0;cm &#x2009;&#xD7;&#x2009; 50&#xA0;&#x3BC;m capillary IMER is 165&#xA0;s. For the proteins used in this study trypsin-reactors were described that were capable of faster digestion using denaturing agents like acetonitrile to enhance the digestion process. However, the presence of such agents would seriously hamper direct analysis of the peptides formed using RPLC and MS. Identification of the proteins cytochrome C and myoglobin is possible by the tryptic peptides that are produced on-line, separated by micro-RPLC, and analyzed using mass spectrometry with auto MS&#x2013;MS.</p>
+      <p>The open-tubular reactor can be produced easily, reproducibly, and inexpensively, and can be used for other applications such as enzyme-inhibitor studies. Future research will focus on the development of miniaturized multi-dimensional analysis systems employing on-line digestion using these IMERs. The capillary enzyme reactors show no backpressure and seem promising for coupling to other analytical techniques such as capillary electrophoresis and surface plasmon resonance.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Courchesne</surname>
+              <given-names>PL</given-names>
+            </name>
+            <name>
+              <surname>Patterson</surname>
+              <given-names>SD</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Link</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification of proteins by matrix-assisted laser desorption/ionization mass spectrometry using peptide and fragment ion masses</article-title>
+          <source>Methods in molecular biology: 2-D proteome analysis protocols</source>
+          <year>1999</year>
+          <publisher-loc>Totowa</publisher-loc>
+          <publisher-name>Humana Press</publisher-name>
+          <fpage>487</fpage>
+          <lpage>511</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Courchesne PL, Patterson SD (1999) Identification of proteins by matrix-assisted laser desorption/ionization mass spectrometry using peptide and fragment ion masses. In: Link AJ (ed) Methods in molecular biology: 2-D proteome analysis protocols. Humana Press, Totowa, pp 487&#x2013;511 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Henzel</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Billeci</surname>
+              <given-names>TM</given-names>
+            </name>
+            <name>
+              <surname>Stults</surname>
+              <given-names>JT</given-names>
+            </name>
+            <name>
+              <surname>Wong</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Grimley</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Watanabe</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1993</year>
+          <volume>90</volume>
+          <fpage>5011</fpage>
+          <lpage>5015</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.90.11.5011</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Henzel WJ, Billeci TM, Stults JT, Wong SC, Grimley C, Watanabe C (1993) Proc Natl Acad Sci USA 90:5011&#x2013;5015 <pub-id pub-id-type="pmid">8506346</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Garbis</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lubec</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Fountoulakis</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2005</year>
+          <volume>1077</volume>
+          <fpage>1</fpage>
+          <lpage>18</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.chroma.2005.04.059</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Garbis S, Lubec G, Fountoulakis M (2005) J Chromatogr A 1077:1&#x2013;18 <pub-id pub-id-type="pmid">15988981</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Girelli</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Mattei</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr B</source>
+          <year>2005</year>
+          <volume>819</volume>
+          <fpage>3</fpage>
+          <lpage>16</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.jchromb.2005.01.031</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Girelli AM, Mattei E (2005) J Chromatogr B 819:3&#x2013;16 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Urban</surname>
+              <given-names>PL</given-names>
+            </name>
+            <name>
+              <surname>Goodall</surname>
+              <given-names>DM</given-names>
+            </name>
+            <name>
+              <surname>Bruce</surname>
+              <given-names>NC</given-names>
+            </name>
+          </person-group>
+          <source>Biotechnol Adv</source>
+          <year>2006</year>
+          <volume>24</volume>
+          <fpage>42</fpage>
+          <lpage>57</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.biotechadv.2005.06.001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Urban PL, Goodall DM, Bruce NC (2006) Biotechnol Adv 24:42&#x2013;57 <pub-id pub-id-type="pmid">16055295</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hermanson</surname>
+              <given-names>GT</given-names>
+            </name>
+            <name>
+              <surname>Mallia</surname>
+              <given-names>AK</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>PA</given-names>
+            </name>
+          </person-group>
+          <source>Immobilized affinity ligand techniques</source>
+          <year>1992</year>
+          <publisher-loc>San Diego</publisher-loc>
+          <publisher-name>Academic Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Hermanson GT, Mallia AK, Smith PA (1992) Immobilized affinity ligand techniques. Academic Press, San Diego </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bonneil</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Waldron</surname>
+              <given-names>KC</given-names>
+            </name>
+          </person-group>
+          <source>Talanta</source>
+          <year>2000</year>
+          <volume>53</volume>
+          <fpage>687</fpage>
+          <lpage>699</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0039-9140(00)00554-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bonneil E, Waldron KC (2000) Talanta 53:687&#x2013;699 <pub-id pub-id-type="pmid">18968157</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bonneil</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Mercier</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Waldron</surname>
+              <given-names>KC</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chim Acta</source>
+          <year>2000</year>
+          <volume>404</volume>
+          <fpage>29</fpage>
+          <lpage>45</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0003-2670(99)00677-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bonneil E, Mercier M, Waldron KC (2000) Anal Chim Acta 404:29&#x2013;45 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davis</surname>
+              <given-names>MT</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>TD</given-names>
+            </name>
+            <name>
+              <surname>Ronk</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hefta</surname>
+              <given-names>SA</given-names>
+            </name>
+          </person-group>
+          <source>Anal Biochem</source>
+          <year>1995</year>
+          <volume>224</volume>
+          <fpage>235</fpage>
+          <lpage>244</lpage>
+          <pub-id pub-id-type="doi">10.1006/abio.1995.1035</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Davis MT, Lee TD, Ronk M, Hefta SA (1995) Anal Biochem 224:235&#x2013;244 <pub-id pub-id-type="pmid">7710077</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hara</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Katta</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>HS</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2000</year>
+          <volume>867</volume>
+          <fpage>151</fpage>
+          <lpage>160</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9673(99)01110-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hara S, Katta V, Lu HS (2000) J Chromatogr A 867:151&#x2013;160 <pub-id pub-id-type="pmid">10670717</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Slysz</surname>
+              <given-names>GW</given-names>
+            </name>
+            <name>
+              <surname>Schriemer</surname>
+              <given-names>DC</given-names>
+            </name>
+          </person-group>
+          <source>Rapid Commun Mass Spectrom</source>
+          <year>2003</year>
+          <volume>17</volume>
+          <fpage>1044</fpage>
+          <lpage>1050</lpage>
+          <pub-id pub-id-type="doi">10.1002/rcm.1022</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Slysz GW, Schriemer DC (2003) Rapid Commun Mass Spectrom 17:1044&#x2013;1050 <pub-id pub-id-type="pmid">12720284</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Samskog</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Bylund</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Jacobsson</surname>
+              <given-names>SP</given-names>
+            </name>
+            <name>
+              <surname>Markides</surname>
+              <given-names>KE</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2003</year>
+          <volume>998</volume>
+          <fpage>83</fpage>
+          <lpage>91</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9673(03)00647-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Samskog J, Bylund D, Jacobsson SP, Markides KE (2003) J Chromatogr A 998:83&#x2013;91 <pub-id pub-id-type="pmid">12862374</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Calleri</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Temporini</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Perani</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Stella</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Rudaz</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lubda</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Mellerio</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Veuthey</surname>
+              <given-names>J-L</given-names>
+            </name>
+            <name>
+              <surname>Caccialanza</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Massolini</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2004</year>
+          <volume>1045</volume>
+          <fpage>99</fpage>
+          <lpage>109</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.chroma.2004.06.034</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Calleri E, Temporini C, Perani E, Stella C, Rudaz S, Lubda D, Mellerio G, Veuthey J-L, Caccialanza G, Massolini G (2004) J Chromatogr A 1045:99&#x2013;109 <pub-id pub-id-type="pmid">15378884</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Calleri</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Temporini</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Perani</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Palma</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Lubda</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Mellerio</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Sala</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Galliano</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Caccialanza</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Massolini</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>J Proteome Res</source>
+          <year>2005</year>
+          <volume>4</volume>
+          <fpage>481</fpage>
+          <lpage>490</lpage>
+          <pub-id pub-id-type="doi">10.1021/pr049796h</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Calleri E, Temporini C, Perani E, De Palma A, Lubda D, Mellerio G, Sala A, Galliano M, Caccialanza G, Massolini G (2005) J Proteome Res 4:481&#x2013;490 <pub-id pub-id-type="pmid">15822925</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Palm</surname>
+              <given-names>AK</given-names>
+            </name>
+            <name>
+              <surname>Novotny</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Rapid Commun Mass Spectrom</source>
+          <year>2004</year>
+          <volume>18</volume>
+          <fpage>1374</fpage>
+          <lpage>1382</lpage>
+          <pub-id pub-id-type="doi">10.1002/rcm.1500</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Palm AK, Novotny M (2004) Rapid Commun Mass Spectrom 18:1374&#x2013;1382 <pub-id pub-id-type="pmid">15174194</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kato</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Inuzuka</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Sakai-Kato</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Toyo&#x2019;oka</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2005</year>
+          <volume>77</volume>
+          <fpage>1813</fpage>
+          <lpage>1818</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac048388u</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kato M, Inuzuka K, Sakai-Kato K, Toyo&#x2019;oka T (2005) Anal Chem 77:1813&#x2013;1818 <pub-id pub-id-type="pmid">15762590</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peterson</surname>
+              <given-names>DS</given-names>
+            </name>
+            <name>
+              <surname>Rohr</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Svec</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Frechet</surname>
+              <given-names>JMJ</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2002</year>
+          <volume>74</volume>
+          <fpage>4081</fpage>
+          <lpage>4088</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac020180q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peterson DS, Rohr T, Svec F, Frechet JMJ (2002) Anal Chem 74:4081&#x2013;4088 <pub-id pub-id-type="pmid">12199578</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Geiser</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Eeltink</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Svec</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Frechet</surname>
+              <given-names>JMJ</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2007</year>
+          <volume>1140</volume>
+          <fpage>140</fpage>
+          <lpage>146</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.chroma.2006.11.079</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Geiser L, Eeltink S, Svec F, Frechet JMJ (2007) J Chromatogr A 1140:140&#x2013;146 <pub-id pub-id-type="pmid">17182044</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kele</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Guiochon</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2002</year>
+          <volume>960</volume>
+          <fpage>19</fpage>
+          <lpage>49</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9673(01)01227-4</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kele M, Guiochon G (2002) J Chromatogr A 960:19&#x2013;49 <pub-id pub-id-type="pmid">12150557</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Slysz</surname>
+              <given-names>GW</given-names>
+            </name>
+            <name>
+              <surname>Schriemer</surname>
+              <given-names>DC</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2005</year>
+          <volume>77</volume>
+          <fpage>1572</fpage>
+          <lpage>1579</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac048698c</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Slysz GW, Schriemer DC (2005) Anal Chem 77:1572&#x2013;1579 <pub-id pub-id-type="pmid">15762559</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nadler</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Blackburn</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Mark</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Gordon</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Regnier</surname>
+              <given-names>FE</given-names>
+            </name>
+            <name>
+              <surname>Vella</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>1996</year>
+          <volume>743</volume>
+          <fpage>91</fpage>
+          <lpage>98</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9673(96)00359-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nadler T, Blackburn C, Mark J, Gordon N, Regnier FE, Vella G (1996) J Chromatogr A 743:91&#x2013;98 </citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riggs</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Sioma</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Regnier</surname>
+              <given-names>FE</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2001</year>
+          <volume>924</volume>
+          <fpage>359</fpage>
+          <lpage>368</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9673(01)00900-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Riggs L, Sioma C, Regnier FE (2001) J Chromatogr A 924:359&#x2013;368 <pub-id pub-id-type="pmid">11521885</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Licklider</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Kuhr</surname>
+              <given-names>WG</given-names>
+            </name>
+            <name>
+              <surname>Lacey</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Keough</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Purdon</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Takigiku</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>1995</year>
+          <volume>67</volume>
+          <fpage>4170</fpage>
+          <lpage>4177</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac00118a021</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Licklider L, Kuhr WG, Lacey MP, Keough T, Purdon MP, Takigiku R (1995) Anal Chem 67:4170&#x2013;4177 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ye</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hu</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Schoenherr</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>Dovichi</surname>
+              <given-names>NJ</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>1319</fpage>
+          <lpage>1326</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200305841</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ye M, Hu S, Schoenherr RM, Dovichi NJ (2004) Electrophoresis 25:1319&#x2013;1326 <pub-id pub-id-type="pmid">15174054</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhao</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Jiang</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>DR</given-names>
+            </name>
+            <name>
+              <surname>Bruckenstein</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Wood</surname>
+              <given-names>TD</given-names>
+            </name>
+          </person-group>
+          <source>Anal Biochem</source>
+          <year>2006</year>
+          <volume>359</volume>
+          <fpage>167</fpage>
+          <lpage>175</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.ab.2006.09.005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhao C, Jiang H, Smith DR, Bruckenstein S, Wood TD (2006) Anal Biochem 359:167&#x2013;175 <pub-id pub-id-type="pmid">17078919</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krenkova</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kleparnik</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Foret</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2007</year>
+          <volume>1159</volume>
+          <fpage>110</fpage>
+          <lpage>118</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.chroma.2007.02.095</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Krenkova J, Kleparnik K, Foret F (2007) J Chromatogr A 1159:110&#x2013;118 <pub-id pub-id-type="pmid">17376460</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stenberg</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Persson</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Roos</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Urbanicky</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <source>J Colloid Interface Sci</source>
+          <year>1991</year>
+          <volume>143</volume>
+          <fpage>513</fpage>
+          <lpage>526</lpage>
+          <pub-id pub-id-type="doi">10.1016/0021-9797(91)90284-F</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stenberg E, Persson B, Roos B, Urbanicky C (1991) J Colloid Interface Sci 143:513&#x2013;526 </citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schwert</surname>
+              <given-names>GW</given-names>
+            </name>
+            <name>
+              <surname>Takenaka</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>Biochim Biophys Acta</source>
+          <year>1955</year>
+          <volume>16</volume>
+          <fpage>570</fpage>
+          <pub-id pub-id-type="doi">10.1016/0006-3002(55)90280-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schwert GW, Takenaka Y (1955) Biochim Biophys Acta 16:570 <pub-id pub-id-type="pmid">14389277</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stigter</surname>
+              <given-names>ECA</given-names>
+            </name>
+            <name>
+              <surname>Jong</surname>
+              <given-names>GJ</given-names>
+            </name>
+            <name>
+              <surname>Bennekom</surname>
+              <given-names>WP</given-names>
+            </name>
+          </person-group>
+          <source>Biosens Bioelectron</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>474</fpage>
+          <lpage>482</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.bios.2004.11.008</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stigter ECA, De Jong GJ, Van Bennekom WP (2005) Biosens Bioelectron 21:474&#x2013;482 <pub-id pub-id-type="pmid">16076437</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amankwa</surname>
+              <given-names>LN</given-names>
+            </name>
+            <name>
+              <surname>Kuhr</surname>
+              <given-names>WG</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>1992</year>
+          <volume>64</volume>
+          <fpage>1610</fpage>
+          <lpage>1613</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac00038a019</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Amankwa LN, Kuhr WG (1992) Anal Chem 64:1610&#x2013;1613 </citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amankwa</surname>
+              <given-names>LN</given-names>
+            </name>
+            <name>
+              <surname>Kuhr</surname>
+              <given-names>WG</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>1993</year>
+          <volume>65</volume>
+          <fpage>2693</fpage>
+          <lpage>2697</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac00067a025</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Amankwa LN, Kuhr WG (1993) Anal Chem 65:2693&#x2013;2697 </citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Xu</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lei</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Zou</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <source>Electrophoresis</source>
+          <year>2003</year>
+          <volume>24</volume>
+          <fpage>3633</fpage>
+          <lpage>3639</lpage>
+          <pub-id pub-id-type="doi">10.1002/elps.200305621</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Guo Z, Xu S, Lei Z, Zou H, Guo B (2003) Electrophoresis 24:3633&#x2013;3639 <pub-id pub-id-type="pmid">14613187</pub-id></citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Durgun</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Senay</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Cetinus</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Food Chem</source>
+          <year>2007</year>
+          <volume>100</volume>
+          <fpage>964</fpage>
+          <lpage>971</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.foodchem.2005.11.005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Durgun G, Senay A, Cetinus A (2007) Food Chem 100:964&#x2013;971 </citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bossi</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Guizzardi</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>D&#x2019;Acunto</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Righetti</surname>
+              <given-names>PG</given-names>
+            </name>
+          </person-group>
+          <source>Anal Bioanal Chem</source>
+          <year>2004</year>
+          <volume>378</volume>
+          <fpage>1722</fpage>
+          <lpage>1728</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00216-003-2352-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bossi A, Guizzardi L, D&#x2019;Acunto MR, Righetti PG (2004) Anal Bioanal Chem 378:1722&#x2013;1728 <pub-id pub-id-type="pmid">14658028</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Freije</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Mulder</surname>
+              <given-names>PPMFA</given-names>
+            </name>
+            <name>
+              <surname>Werkman</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Rieux</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Niederlander</surname>
+              <given-names>HAG</given-names>
+            </name>
+            <name>
+              <surname>Verpoorte</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Bisschoff</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>J Proteome Res</source>
+          <year>2005</year>
+          <volume>4</volume>
+          <fpage>1805</fpage>
+          <lpage>1813</lpage>
+          <pub-id pub-id-type="doi">10.1021/pr050142y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Freije JR, Mulder PPMFA, Werkman W, Rieux L, Niederlander HAG, Verpoorte E, Bisschoff R (2005) J Proteome Res 4:1805&#x2013;1813 <pub-id pub-id-type="pmid">16212436</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krenkov&#xE1;</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Bilkova</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Foret</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <source>J Sep Sci</source>
+          <year>2005</year>
+          <volume>28</volume>
+          <fpage>1675</fpage>
+          <lpage>1684</lpage>
+          <pub-id pub-id-type="doi">10.1002/jssc.200500171</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Krenkov&#xE1; J, Bilkova Z, Foret F (2005) J Sep Sci 28:1675&#x2013;1684 <pub-id pub-id-type="pmid">16224961</pub-id></citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frazier</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Matthijs</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Davies</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Roberts</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Schacht</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Tendler</surname>
+              <given-names>SJB</given-names>
+            </name>
+          </person-group>
+          <source>Biomaterials</source>
+          <year>2000</year>
+          <volume>21</volume>
+          <fpage>957</fpage>
+          <lpage>966</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0142-9612(99)00270-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Frazier RA, Matthijs G, Davies MC, Roberts CJ, Schacht E, Tendler SJB (2000) Biomaterials 21:957&#x2013;966 <pub-id pub-id-type="pmid">10735473</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McArthur</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Mclean</surname>
+              <given-names>KM</given-names>
+            </name>
+            <name>
+              <surname>Kingshott</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>St John</surname>
+              <given-names>HAW</given-names>
+            </name>
+            <name>
+              <surname>Chatelier</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Griesser</surname>
+              <given-names>HJ</given-names>
+            </name>
+          </person-group>
+          <source>Colloids Surf B</source>
+          <year>2000</year>
+          <volume>17</volume>
+          <fpage>37</fpage>
+          <lpage>48</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0927-7765(99)00086-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McArthur SL, Mclean KM, Kingshott P, St John HAW, Chatelier RC, Griesser HJ (2000) Colloids Surf B 17:37&#x2013;48 </citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jiang</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>CS</given-names>
+            </name>
+          </person-group>
+          <source>J Chromatogr A</source>
+          <year>2001</year>
+          <volume>924</volume>
+          <fpage>315</fpage>
+          <lpage>322</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0021-9673(01)00718-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jiang Y, Lee CS (2001) J Chromatogr A 924:315&#x2013;322 <pub-id pub-id-type="pmid">11521880</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Craft</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>2005</year>
+          <volume>77</volume>
+          <fpage>2649</fpage>
+          <lpage>2655</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac048152q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Craft D, Li L (2005) Anal Chem 77:2649&#x2013;2655 <pub-id pub-id-type="pmid">15828806</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Feng</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ye</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Jiang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Jin</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Zou</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <source>J Proteome Res</source>
+          <year>2006</year>
+          <volume>5</volume>
+          <fpage>422</fpage>
+          <lpage>428</lpage>
+          <pub-id pub-id-type="doi">10.1021/pr0502727</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Feng S, Ye M, Jiang X, Jin W, Zou H (2006) J Proteome Res 5:422&#x2013;428 <pub-id pub-id-type="pmid">16457609</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Licklider</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Kuhr</surname>
+              <given-names>WG</given-names>
+            </name>
+          </person-group>
+          <source>Anal Chem</source>
+          <year>1998</year>
+          <volume>70</volume>
+          <fpage>1902</fpage>
+          <lpage>1908</lpage>
+          <pub-id pub-id-type="doi">10.1021/ac970852q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Licklider L, Kuhr WG (1998) Anal Chem 70:1902&#x2013;1908 </citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>L&#xF3;pez-Ferrer</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Capelo</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>V&#xE1;zquez</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Proteome Res</source>
+          <year>2005</year>
+          <volume>4</volume>
+          <fpage>1569</fpage>
+          <lpage>1574</lpage>
+          <pub-id pub-id-type="doi">10.1021/pr050112v</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">L&#xF3;pez-Ferrer D, Capelo JL, V&#xE1;zquez J (2005) J Proteome Res 4:1569&#x2013;1574 <pub-id pub-id-type="pmid">16212408</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

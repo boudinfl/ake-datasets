@@ -1,0 +1,1646 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Mol Model</journal-id>
+      <journal-title>Journal of Molecular Modeling</journal-title>
+      <issn pub-type="ppub">1610-2940</issn>
+      <issn pub-type="epub">0948-5023</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17874150</article-id>
+      <article-id pub-id-type="pmc">2039870</article-id>
+      <article-id pub-id-type="publisher-id">239</article-id>
+      <article-id pub-id-type="doi">10.1007/s00894-007-0239-y</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>&#x3C0;-&#x3C0; stacking tackled with density functional theory</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Swart</surname>
+            <given-names>Marcel</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van der Wijst</surname>
+            <given-names>Tushar</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Fonseca Guerra</surname>
+            <given-names>C&#xE9;lia</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Bickelhaupt</surname>
+            <given-names>F. Matthias</given-names>
+          </name>
+          <address>
+            <email>FM.Bickelhaupt@few.vu.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Theoretische Chemie, Vrije Universiteit, De Boelelaan 1083, 1081 HV Amsterdam, The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Instituci&#xF3; Catalana de Recerca i Estudis Avan&#xE7;ats (ICREA), 08010 Barcelona, Spain </aff>
+        <aff id="Aff3"><label>3</label>Institut de Qu&#xED;mica Computacional, Universitat de Girona, Campus Montilivi, 17071 Girona, Spain </aff>
+        <aff id="Aff4"><label>4</label>Fachbereich Chemie, Universit&#xE4;t Dortmund, Otto-Hahn-Stra&#xDF;e 6, 44227 Dortmund, Germany </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>15</day>
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>13</volume>
+      <issue>12</issue>
+      <fpage>1245</fpage>
+      <lpage>1257</lpage>
+      <history>
+        <date date-type="received">
+          <day>20</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>2</day>
+          <month>8</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Through comparison with ab initio reference data, we have evaluated the performance of various density functionals for describing &#x3C0;-&#x3C0; interactions as a function of the geometry between two stacked benzenes or benzene analogs, between two stacked DNA bases, and between two stacked Watson&#x2013;Crick pairs. Our main purpose is to find a robust and computationally efficient density functional to be used specifically and only for describing &#x3C0;-&#x3C0; stacking interactions in DNA and other biological molecules in the framework of our recently developed QM/QM approach "QUILD". In line with previous studies, most standard density functionals recover, at best, only part of the favorable stacking interactions. An exception is the new KT1 functional, which correctly yields bound &#x3C0;-stacked structures. Surprisingly, a similarly good performance is achieved with the computationally very robust and efficient local density approximation (LDA). Furthermore, we show that classical electrostatic interactions determine the shape and depth of the &#x3C0;-&#x3C0; stacking potential energy surface.</p>
+        <p>
+          <fig position="anchor" id="Figa">
+            <label>Figure</label>
+            <caption>
+              <p>Additivity approximation for the &#x3C0;-&#x3C0; interaction between two stacked Watson&#x2013;Crick base pairs in terms of pairwise interactions between individual bases</p>
+            </caption>
+            <graphic position="anchor" xlink:href="894_2007_239_Figa_HTML" id="MO1"/>
+          </fig>
+        </p>
+        <sec>
+          <title>Electronic supplementary material</title>
+          <p>The online version of this article (doi:10.1007/s00894-007-0239-y) contains supplementary material, which is available to authorized users.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Density functional theory</kwd>
+        <kwd>DNA stability</kwd>
+        <kwd>DNA structure</kwd>
+        <kwd>Hydrogen bonding</kwd>
+        <kwd>&#x3C0;-&#x3C0; stacking interactions</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Two major factors for the structure and stability of DNA are the hydrogen bonds between two adjacent bases from <italic>opposite</italic> strands (forming a Watson-Crick pair), and the &#x3C0;-&#x3C0; stacking interactions between two bases <italic>within</italic> each of the two DNA strands. The hydrogen bonding interactions in DNA are well understood by high-level Density Functional Theory (DFT) calculations [<xref ref-type="bibr" rid="CR1">1</xref>&#x2013;<xref ref-type="bibr" rid="CR3">3</xref>]. They were shown to be provided by nearly equally important contributions from electrostatic attraction and donor-acceptor orbital interactions (e.g., from an N lone pair to an N-H <italic>&#x3C3;</italic>* orbital), and to be sensitive to effects from the molecular environment (counter-ions, solvent) [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR2">2</xref>]. A similar understanding of the &#x3C0;-stacking interactions is currently lacking due to several reasons: (1) &#x3C0;-&#x3C0; stacking interactions have proven to be sensitive to the methodology used (see below); (2) &#x3C0;-&#x3C0; stacking interactions have proven to be very dependent on the size of the basis set used in (ab initio) calculations, resulting in a large basis-set superposition error (BSSE); (3) high-level ab initio benchmark studies (CCSD(T) with at least triple-zeta basis sets) have only recently become available; and (4) the notorious problems of DFT to correctly describe dispersion interactions, [<xref ref-type="bibr" rid="CR4">4</xref>&#x2013;<xref ref-type="bibr" rid="CR16">16</xref>] which constitute one of the components involved in &#x3C0;-stacking interactions (see below). The latter problems of DFT resulted in potential energy surfaces (PES) that, erroneously, lack any equilibrium configuration, i.e., the stacked systems were incorrectly described as being purely repulsive.</p>
+      <p>Because of the technical difficulties involved in obtaining accurate benchmarks (CCSD(T) using large basis sets), Sponer, Hobza and co-workers have studied in a ground-breaking series of papers [<xref ref-type="bibr" rid="CR17">17</xref>&#x2013;<xref ref-type="bibr" rid="CR22">22</xref>] the stacking energies of DNA bases and DNA base analogs using a variety of ab initio methods and basis sets. Earlier studies showed that reasonable interaction energies could be obtained when employing the MP2/6-31G*(0.25) method, which was confirmed by later and more accurate studies [<xref ref-type="bibr" rid="CR17">17</xref>&#x2013;<xref ref-type="bibr" rid="CR22">22</xref>]; in the aforementioned 6-31G*(0.25) basis set, the standard d-polarization functions (with exponent of 0.80) were replaced by more diffuse ones (exponent of 0.25) with the aim to improve description of the dispersion attraction [<xref ref-type="bibr" rid="CR22">22</xref>]. Thus, for the anti-parallel displaced pyrimidine dimer, the MP2/6-31G*(0.25) energy is only 1.1&#xA0;kcal mol<sup>&#x2212;1</sup> lower than the CCSD(T)/6-31++G*(0.25,0.15) energy, for the anti-parallel cytosine dimer it is 0.6&#xA0;kcal mol<sup>&#x2212;1</sup> higher than the CCSD(T)/6-31++G**(0.25,0.15) energy, and for the twisted uracil dimer the MP2/6-31G*(0.25) is equal to the CCSD(T)/6-31++G**(0.25,0.15) energy. Although there seems to be no systematic shift in energy when comparing MP2/6-31G*(0.25) with the more elaborate CCSD(T) stacking energies, the MP2 stacking energies are always larger in magnitude than the corresponding CCSD(T) ones when using the same basis set for both methods. Interestingly, in connection with the quest for reliable ab initio benchmarks, preliminary results [<xref ref-type="bibr" rid="CR23">23</xref>&#x2013;<xref ref-type="bibr" rid="CR27">27</xref>] indicate that the recently developed spin-component scaled MP2 (SCS-MP2) yields systematically lower stacking energies than MP2. This suggests that SCS-MP2 is in good agreement with the CCSD(T) results at only a fraction of the computational cost.</p>
+      <p>Several approaches have been proposed to remedy the &#x201C;dispersion problem&#x201D; of DFT, ranging from Time-Dependent DFT frameworks [<xref ref-type="bibr" rid="CR28">28</xref>] to more ad-hoc procedures such as including (C6) van der Waals terms in the interaction energy (DFT-D) [<xref ref-type="bibr" rid="CR29">29</xref>] or fitting (reparameterizing) the form of the density functional to some reference energies and/or distances. A more elegant solution was recently proposed by Tozer and co-workers [<xref ref-type="bibr" rid="CR30">30</xref>], who analyzed the DFT exchange-correlation (xc) <italic>potential</italic> in comparison with the near-exact multiplicative Zhang-Morrison-Parr (ZMP) potential from coupled cluster Brueckner doubles (BD) densities. Their resulting KT1, and the related KT2, functional [<xref ref-type="bibr" rid="CR30">30</xref>] produces xc potentials that closely resemble those from ZMP. As a result, KT1 and KT2 produce NMR chemical shifts [<xref ref-type="bibr" rid="CR4">4</xref>, <xref ref-type="bibr" rid="CR31">31</xref>] that in general show smaller deviations from experimental values than those from standard density functionals. Furthermore, the ZMP potential from Brueckner (BD(T)) coupled cluster densities gives dispersion forces in good agreement with near-exact dispersion forces [<xref ref-type="bibr" rid="CR32">32</xref>]. It is therefore to be expected that the KT1 and KT2 functionals behave properly for dispersion forces as well. However, the application of these new functionals to &#x3C0;-stacking interactions has so far not appeared in the literature.</p>
+      <p>Here, we report the results of a systematic investigation of &#x3C0;-stacking interaction energies, potential energy surfaces (PES) and stacking distances for dimers of, among others, the five DNA/RNA bases. A long list of standard as well as recent density functionals (including the KT1 and KT2 functionals) has been considered in this study, ranging from the Local Density Approximation (LDA), via the Generalized Gradient Approximation (GGA), and meta-GGA, to hybrid functionals. We have also examined BHandH, which was recently [<xref ref-type="bibr" rid="CR12">12</xref>] shown to give reasonable agreement with ab initio data. The DFT results are compared to benchmark data that were taken from the literature, which in some cases contained energy profiles as a function of the torsion associated with the rotation of one base with respect to the other.</p>
+      <p>The present investigation is part of a larger undertaking. We aim at developing an extended QM/QM scheme, designated QUILD [<xref ref-type="bibr" rid="CR33">33</xref>], which allows a (complex) molecular system to be decomposed into arbitrary, interpenetrating domains such that each type of interaction can be described with a different method, i.e., the density functional that performs best for that type of interaction or process, for example, electron-pair as well as hydrogen bonding (BP86: see [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR3">3</xref>]), &#x3C0;-&#x3C0; stacking (LDA, KT1, KT2: this work) or reaction barriers (OLYP, OPBE: see [<xref ref-type="bibr" rid="CR34">34</xref>, <xref ref-type="bibr" rid="CR35">35</xref>]). This is a pragmatic (of course not a fundamental) approach to cope with the present-day shortcomings of DFT, which features density functionals that perform satisfactorily for a number but not all types of interactions and phenomena. The present study focuses on identifying which DFT approaches serve best to describe the &#x3C0;-&#x3C0; stacking interactions in the above-mentioned QM/QM scheme.</p>
+      <p>Furthermore, we have analyzed the &#x3C0;-stacking interactions in more detail by decomposing the interaction energy into three physically meaningful components, namely, electrostatic energy, Pauli repulsion (i.e., the destabilizing interactions between occupied orbitals), and bonding orbital interactions [<xref ref-type="bibr" rid="CR36">36</xref>]. Our analyses reveal, among others, that the electrostatic attraction between the stacked molecules is the most important component of the &#x3C0;-&#x3C0; stacking interaction (see also [<xref ref-type="bibr" rid="CR37">37</xref>]) which determines the shape and depth of the PES. We have also analyzed the &#x3C0;-&#x3C0; interactions between two stacked Watson&#x2013;Crick base pairs with the purpose to differentiate between inter- and intra-strand stacking interactions.</p>
+    </sec>
+    <sec id="Sec2" sec-type="methods">
+      <title>Methods</title>
+      <sec id="Sec3">
+        <title>Computational details</title>
+        <p>All calculations were performed with the Amsterdam Density Functional (ADF) program. [<xref ref-type="bibr" rid="CR38">38</xref>&#x2013;<xref ref-type="bibr" rid="CR49">49</xref>] Molecular orbitals (MOs) were expanded using a large, uncontracted set of Slater-type orbitals: TZ2P [<xref ref-type="bibr" rid="CR40">40</xref>]. The TZ2P basis is an all-electron basis of triple-&#x3B6; quality, augmented by two sets of polarization functions (2<italic>p</italic> and 3<italic>d</italic> on H; <italic>d</italic> and <italic>f</italic> on heavy atoms). An auxiliary set of <italic>s</italic>, <italic>p</italic>, <italic>d</italic>, <italic>f</italic>, and <italic>g</italic> STOs was used to fit the molecular density and to represent the Coulomb and exchange potentials accurately in each SCF cycle.</p>
+        <p>The equilibrium structure of individual benzene analogs, DNA bases and Watson-Crick base pairs were optimized at the BP86 level of DFT, i.e., using the local density approximation (LDA; Slater exchange and VWN [<xref ref-type="bibr" rid="CR42">42</xref>] correlation) with non-local corrections due to Becke [<xref ref-type="bibr" rid="CR43">43</xref>] (exchange) and Perdew [<xref ref-type="bibr" rid="CR44">44</xref>] (correlation) added self-consistently, which was previously shown to be one of the best DFT methods for the accuracy of geometries [<xref ref-type="bibr" rid="CR41">41</xref>, <xref ref-type="bibr" rid="CR45">45</xref>] and hydrogen-bonding interactions [<xref ref-type="bibr" rid="CR1">1</xref>&#x2013;<xref ref-type="bibr" rid="CR3">3</xref>]. The &#x3C0;-&#x3C0; stacking interaction energies for all density functionals were evaluated <italic>post-SCF</italic> using LDA as SCF functional. This procedure was recently shown to introduce an error of only a few tenths of a kcal mol<sup>&#x2212;1</sup> [<xref ref-type="bibr" rid="CR46">46</xref>].</p>
+        <p>Stacking distances (vertical separation) and orientations (twist angle) were explored with the various density functionals through scans of the potential energy surface (PES) in which the BP86 geometries of the monomers (e.g., DNA bases or Watson&#x2013;Crick base pairs) were kept frozen. PES scans as a function of the twist angle (see below) were done using steps of 30&#xB0; in case of homo-base stacks, 60&#xB0; in the case of hetero-base stacks and 36&#xB0; for stacks of Watson&#x2013;Crick base pairs. PES scans as a function of the vertical separation (see below) were done in steps of 0.1&#xA0;&#xC5;.</p>
+        <p>The interaction energy (see below) was studied as a function of the vertical separation between the two monomers in the &#x3C0;-stacked dimer, and as a function of the twist angle between these monomers. The latter is defined as the right-handed rotation of the upper base around the axis that runs through the center of mass of both the upper and lower base, and perpendicular to the plane of the base (see Scheme&#xA0;<xref rid="Sch1" ref-type="fig">1</xref>).
+<fig id="Sch1"><label>Scheme&#xA0;1</label><caption><p>Definition of the twist angle (<italic>TW</italic>). The black dot is the center of mass</p></caption><graphic position="anchor" xlink:href="894_2007_239_Sch1_HTML" id="MO2"/></fig></p>
+        <p>In the stacked DNA systems, the twist angle of 0&#xB0; is defined as that twist angle at which the respective &#x201C;glycosidic&#x201D; N-H bonds (more precisely, the N-H bonds that replace the glycosidic N-C bonds to the sugar in the backbone) are oriented in parallel.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Bond-energy decomposition</title>
+        <p>The overall &#x3C0;-stacking energy &#x394;<italic>E</italic> is made up of two major components [<xref ref-type="bibr" rid="CR36">36</xref>] (Equation&#xA0;<xref rid="Equ1" ref-type="">1</xref>):
+<disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Delta E = \Delta E_{{{\text{prep}}}}  + \Delta E_{{\operatorname{int} }} $$\end{document}</tex-math></disp-formula></p>
+        <p>In this formula, the preparation energy &#x394;<italic>E</italic><sub>prep</sub> is the energy needed to deform the separate molecular fragments from their equilibrium structure to the geometry that they attain in the overall molecular system. The interaction energy &#x394;<italic>E</italic><sub>int</sub> is the energy released when the prepared fragments are brought together into the position they have in the overall molecule. It is analyzed for our model systems in the framework of the KS-MO model using a Morokuma-type decomposition [<xref ref-type="bibr" rid="CR47">47</xref>] into electrostatic interaction, Pauli repulsion (or exchange repulsion), and (attractive) orbital interactions (Equation&#xA0;<xref rid="Equ2" ref-type="">2</xref>).
+<disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Delta E_{{\operatorname{int} }}  = \Delta V_{{{\text{elstat}}}}  + \Delta E_{{{\text{Pauli}}}}  + \Delta E_{{{\text{oi}}}} $$\end{document}</tex-math></disp-formula></p>
+        <p>The term &#x394;<italic>V</italic><sub>elstat</sub> corresponds to the classical electrostatic interaction between the unperturbed charge distributions of the prepared (i.e. deformed) fragments and is usually attractive. The Pauli-repulsion, &#x394;<italic>E</italic><sub>Pauli</sub>, comprises the destabilizing interactions between occupied orbitals and is responsible for the steric repulsion. The orbital interaction &#x394;<italic>E</italic><sub>oi</sub> in any MO model, and therefore also in Kohn-Sham theory, accounts for electron-pair bonding, charge transfer (<italic>i.e.</italic>, donor-acceptor interactions between occupied orbitals on one fragment with unoccupied orbitals of the other, including the HOMO-LUMO interactions), and polarization (empty-occupied orbital mixing on one fragment due to the presence of another fragment). The orbital interaction energy can be further decomposed into the contributions from each irreducible representation &#x2118; of the interacting system (Equation&#xA0;<xref rid="Equ3" ref-type="">3</xref>) using the extended transition state (ETS) scheme developed by Ziegler and Rauk [<xref ref-type="bibr" rid="CR48">48</xref>, <xref ref-type="bibr" rid="CR49">49</xref>].
+<disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Delta E_{{{\text{oi}}}}  = \sum _{\Gamma } {\text{ }}\Delta E_{\Gamma } $$\end{document}</tex-math></disp-formula></p>
+      </sec>
+    </sec>
+    <sec id="Sec5">
+      <title>Results and discussion</title>
+      <p>We have analyzed &#x3C0;-&#x3C0; stacking interactions using different systems that were taken mainly from reference data present in the literature. We start with the prototypical system for studying &#x3C0;-&#x3C0; stacking, namely, the benzene dimer. The second set of reference data was taken from the supporting information of a paper by Mignon and co-workers [<xref ref-type="bibr" rid="CR50">50</xref>], who studied hydrogen bonding and stacking in complexes of substituted benzene C<sub>6</sub>H<sub>5</sub>X with pyridine at MP2/6-31G*(0.25) with substituents X = H, F, NH<sub>2</sub>, Cl, CH<sub>3</sub>, OH, CN, COOH, CHO and NO<sub>2</sub>. All substitutions of H by another X in benzene were done at the para-position with respect to the nitrogen of pyridine (see Scheme&#xA0;<xref rid="Sch2" ref-type="fig">2</xref>). The third set of reference data was taken from a paper by Jurecka and co-workers [<xref ref-type="bibr" rid="CR21">21</xref>], who investigated hydrogen bonding and stacking interactions in the cytosine dimer with MP2 and CCSD(T) methods, using several orientations (see Scheme&#xA0;<xref rid="Sch3" ref-type="fig">3</xref>) to investigate the potential energy surfaces. The fourth set of reference data was taken from a paper by Wu and Yang [<xref ref-type="bibr" rid="CR14">14</xref>] (based on previous work by Hobza, Sponer and co-workers [<xref ref-type="bibr" rid="CR17">17</xref>, <xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR22">22</xref>]) who studied the dependence of the stacking energy of DNA bases on the twist angle (see Scheme&#xA0;<xref rid="Sch4" ref-type="fig">4</xref>) and vertical separation using MP2/6-31G*(0.25) calculations.
+<fig id="Sch2"><label>Scheme&#xA0;2</label><caption><p>Stack of substituted benzene and pyridine</p></caption><graphic position="anchor" xlink:href="894_2007_239_Sch2_HTML" id="MO3"/></fig><fig id="Sch3"><label>Scheme&#xA0;3</label><caption><p>Orientations of the stacked cytosine dimer from Jurecka and co-workers ([<xref ref-type="bibr" rid="CR21">21</xref>]). The upper base is drawn in <italic>bold</italic>, the center of mass is indicated by a <italic>black dot</italic>, and the carbonylic oxygen and the hydrogen replacing the glycosidic bond are indicated for clarity</p></caption><graphic position="anchor" xlink:href="894_2007_239_Sch3_HTML" id="MO4"/></fig><fig id="Sch4"><label>Scheme&#xA0;4</label><caption><p>Geometries of stacked base dimers with a twist angle of 0 and 120 degrees. The upper base is drawn in <italic>bold</italic>, the center of mass is indicated by a <italic>black dot</italic>, and the hydrogens replacing the glycosidic bond are indicated for clarity. Note that for the homo dimers at zero twist angle the lower base is hidden behind the upper base</p></caption><graphic position="anchor" xlink:href="894_2007_239_Sch4_HTML" id="MO5"/></fig></p>
+      <p>As mentioned already, the prototypical system for studying &#x3C0;-&#x3C0; stacking interactions is posed by the (parallel sandwich) benzene dimer. Because of its high symmetry (D<sub>6h</sub>), CCSD(T) energies using large basis sets (aug-cc-pVQZ) are available [<xref ref-type="bibr" rid="CR51">51</xref>] to compare with (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). The minimum is found at 3.9&#xA0;&#xC5; for this system with a stacking energy of &#x2212;1.7&#xA0;kcal mol<sup>&#x2212;1</sup>. The standard density functionals are unable to give a proper description of this system, i.e., they either predict a purely repulsive energy surface (e.g., BP86; see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>), or give a shallow well (e.g., OLYP). Interestingly, the KT1 functional predicts a minimum that is very close (3.8&#x2013;3.9&#xA0;&#xC5;) to that of the CCSD(T) method, and has a well depth that is equally close (&#x2212;1.6&#xA0;kcal mol<sup>&#x2212;1</sup>; see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). The related KT2 and, surprisingly, the LDA functionals have a minimum at the same distance as CCSD(T) and KT1, but with a somewhat smaller well depth (&#x2212;1.3&#xA0;kcal mol<sup>&#x2212;1</sup>). Also, the BHandH functional performs reasonably well with a similar equilibrium distance, but a reduced well depth (&#x2212;0.9&#xA0;kcal mol<sup>&#x2212;1</sup>; see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>).
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Stacking energy (in kcal mol<sup>&#x2212;1</sup>) of the benzene-benzene complex as a function of the vertical separation R<sub>vert</sub> (in &#xC5;), computed with various density functionals<sup>a</sup> and CCSD(T)/aug-cc-pVQZ<sup>*b</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">R<sub>vert</sub></th><th align="left">CCSD(T)<sup>b</sup></th><th align="left">LDA</th><th align="left">KT1</th><th align="left">KT2</th><th align="left">BHandH</th><th align="left">PW91</th><th align="left">BLYP</th><th align="left">BP86</th><th align="left">OLYP</th><th align="left">B3LYP</th><th align="left">X3LYP</th></tr></thead><tbody><tr><td>2.9</td><td/><td>13.53</td><td>14.59</td><td>14.08</td><td>17.08</td><td>24.41</td><td>31.63</td><td>27.46</td><td>38.67</td><td>30.13</td><td>28.92</td></tr><tr><td>3.0</td><td/><td>8.60</td><td>9.29</td><td>9.04</td><td>11.27</td><td>17.98</td><td>24.20</td><td>20.84</td><td>30.93</td><td>22.78</td><td>21.65</td></tr><tr><td>3.1</td><td/><td>5.11</td><td>5.52</td><td>5.47</td><td>7.13</td><td>13.18</td><td>18.53</td><td>15.87</td><td>24.85</td><td>17.23</td><td>16.17</td></tr><tr><td>3.2</td><td>3.71</td><td>2.70</td><td>2.90</td><td>2.98</td><td>4.23</td><td>9.60</td><td>14.22</td><td>12.14</td><td>20.05</td><td>13.04</td><td>12.06</td></tr><tr><td>3.3</td><td>1.68</td><td>1.06</td><td>1.10</td><td>1.29</td><td>2.24</td><td>6.93</td><td>10.94</td><td>9.34</td><td>16.22</td><td>9.89</td><td>8.98</td></tr><tr><td>3.4</td><td>0.30</td><td>&#x2212;0.01</td><td>&#x2212;0.09</td><td>0.17</td><td>0.92</td><td>4.95</td><td>8.45</td><td>7.25</td><td>13.14</td><td>7.52</td><td>6.68</td></tr><tr><td>3.5</td><td>&#x2212;0.62</td><td>&#x2212;0.68</td><td>&#x2212;0.83</td><td>&#x2212;0.54</td><td>0.06</td><td>3.48</td><td>6.55</td><td>5.68</td><td>10.65</td><td>5.73</td><td>4.96</td></tr><tr><td>3.6</td><td>&#x2212;1.19</td><td>&#x2212;1.07</td><td>&#x2212;1.27</td><td>&#x2212;0.96</td><td>&#x2212;0.45</td><td>2.40</td><td>5.10</td><td>4.50</td><td>8.63</td><td>4.40</td><td>3.69</td></tr><tr><td>3.7</td><td>&#x2212;1.51</td><td>&#x2212;1.27</td><td>&#x2212;1.50</td><td>&#x2212;1.17</td><td>&#x2212;0.74</td><td>1.59</td><td>3.99</td><td>3.62</td><td>6.98</td><td>3.39</td><td>2.74</td></tr><tr><td>3.8</td><td>&#x2212;1.66</td><td>&#x2212;1.33</td><td>&#x2212;1.58</td><td>&#x2212;1.25</td><td>&#x2212;0.86</td><td>1.00</td><td>3.15</td><td>2.94</td><td>5.62</td><td>2.63</td><td>2.04</td></tr><tr><td>3.9</td><td>&#x2212;1.70</td><td>&#x2212;1.31</td><td>&#x2212;1.56</td><td>&#x2212;1.25</td><td>&#x2212;0.89</td><td>0.57</td><td>2.50</td><td>2.43</td><td>4.51</td><td>2.06</td><td>1.52</td></tr><tr><td>4.0</td><td>&#x2212;1.67</td><td>&#x2212;1.24</td><td>&#x2212;1.48</td><td>&#x2212;1.18</td><td>&#x2212;0.85</td><td>0.25</td><td>2.00</td><td>2.03</td><td>3.60</td><td>1.63</td><td>1.14</td></tr><tr><td>4.1</td><td>&#x2212;1.58</td><td>&#x2212;1.13</td><td>&#x2212;1.37</td><td>&#x2212;1.09</td><td>&#x2212;0.78</td><td>0.02</td><td>1.61</td><td>1.72</td><td>2.85</td><td>1.30</td><td>0.85</td></tr><tr><td>4.2</td><td>&#x2212;1.46</td><td>&#x2212;1.02</td><td>&#x2212;1.24</td><td>&#x2212;0.98</td><td>&#x2212;0.68</td><td>&#x2212;0.15</td><td>1.31</td><td>1.47</td><td>2.24</td><td>1.05</td><td>0.64</td></tr><tr><td>4.3</td><td/><td>&#x2212;0.90</td><td>&#x2212;1.11</td><td>&#x2212;0.86</td><td>&#x2212;0.58</td><td>&#x2212;0.27</td><td>1.07</td><td>1.27</td><td>1.75</td><td>0.86</td><td>0.49</td></tr><tr><td>4.4</td><td/><td>&#x2212;0.78</td><td>&#x2212;0.97</td><td>&#x2212;0.75</td><td>&#x2212;0.48</td><td>&#x2212;0.36</td><td>0.88</td><td>1.11</td><td>1.35</td><td>0.71</td><td>0.37</td></tr><tr><td>4.5</td><td>&#x2212;1.08</td><td>&#x2212;0.67</td><td>&#x2212;0.85</td><td>&#x2212;0.64</td><td>&#x2212;0.39</td><td>&#x2212;0.42</td><td>0.73</td><td>0.97</td><td>1.03</td><td>0.59</td><td>0.28</td></tr><tr><td>5.0</td><td>&#x2212;0.58</td><td>&#x2212;0.28</td><td>&#x2212;0.39</td><td>&#x2212;0.26</td><td>&#x2212;0.06</td><td>&#x2212;0.45</td><td>0.30</td><td>0.52</td><td>0.20</td><td>0.26</td><td>0.09</td></tr><tr><td>5.5</td><td>&#x2212;0.27</td><td>&#x2212;0.09</td><td>&#x2212;0.15</td><td>&#x2212;0.07</td><td>0.08</td><td>&#x2212;0.31</td><td>0.13</td><td>0.28</td><td>0.00</td><td>0.14</td><td>0.04</td></tr><tr><td>6.0</td><td>&#x2212;0.11</td><td>&#x2212;0.01</td><td>&#x2212;0.05</td><td>0.00</td><td>0.12</td><td>&#x2212;0.16</td><td>0.05</td><td>0.15</td><td>&#x2212;0.03</td><td>0.08</td><td>0.03</td></tr><tr><td>6.5</td><td>&#x2212;0.04</td><td>0.02</td><td>0.00</td><td>0.03</td><td>0.12</td><td>&#x2212;0.06</td><td>0.02</td><td>0.08</td><td>&#x2212;0.03</td><td>0.05</td><td>0.03</td></tr><tr><td>7.0</td><td/><td>0.03</td><td>0.02</td><td>0.04</td><td>0.11</td><td>&#x2212;0.01</td><td>0.00</td><td>0.05</td><td>&#x2212;0.01</td><td>0.04</td><td>0.03</td></tr><tr><td>7.5</td><td/><td>0.03</td><td>0.02</td><td>0.04</td><td>0.09</td><td>0.02</td><td>0.00</td><td>0.03</td><td>&#x2212;0.01</td><td>0.03</td><td>0.03</td></tr><tr><td>8.0</td><td/><td>0.03</td><td>0.02</td><td>0.09</td><td>0.08</td><td>0.01</td><td>&#x2212;0.01</td><td>0.02</td><td>0.00</td><td>0.02</td><td>0.02</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Post-SCF using LDA/TZ2P orbitals and densities, see <xref rid="Sec3" ref-type="sec">Computational details</xref></p><p><sup>b</sup>From supporting information of <xref ref-type="bibr" rid="CR51">[51</xref>]</p></table-wrap-foot></table-wrap></p>
+      <sec id="Sec6">
+        <title>Reference data from Mignon and co-workers</title>
+        <p>Scheme&#xA0;<xref rid="Sch2" ref-type="fig">2</xref> shows the structure of the &#x3C0;-stacked complexes of pyridine with (substituted) benzene, i.e. with benzene, fluorobenzene, aminobenzene, chlorobenzene, toluene, phenol, cyanobenzene, benzoic acid, benzaldehyde and nitrobenzene. For all of these complexes the coordinates were taken from the supporting information of the original paper by Mignon and co-workers [<xref ref-type="bibr" rid="CR50">50</xref>]. The geometry of each dimer had been fully optimized and therefore the vertical separation is different for each complex; it is found in the range of 3.2&#x2013;3.4&#xA0;&#xC5;.</p>
+        <p>The interaction energies for several typical density functionals are compared to the original MP2 data in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. Consistent with previous reports, the mean absolute deviations (MAD) with respect to the reference MP2 data are much larger for density functionals containing the Becke88 [<xref ref-type="bibr" rid="CR43">43</xref>] exchange functional (e.g., BP86, MAD value 7.68&#xA0;kcal mol<sup>&#x2212;1</sup>) than for functionals based on PW91 [<xref ref-type="bibr" rid="CR52">52</xref>] or PBE [<xref ref-type="bibr" rid="CR53">53</xref>] exchange (e.g., PW91, MAD value 5.33&#xA0;kcal mol<sup>&#x2212;1</sup>). However, these standard density functionals all show repulsive interactions, in contrast to the MP2 results that indicate bound systems (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). Much better agreement with the MP2 data is observed for the KT1, KT2 and, surprisingly, LDA functionals, with MAD values of 0.25&#xA0;kcal mol<sup>&#x2212;1</sup> (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). The BHandH functional, recently [<xref ref-type="bibr" rid="CR12">12</xref>] shown to give good agreement with MP2/CCSD(T) energies, shows a larger MAD value of 0.4&#xA0;kcal mol<sup>&#x2212;1</sup> (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). Because of the uncertainty of ca. &#xB1; 0.5&#xA0;kcal mol<sup>&#x2212;1</sup> in the reference MP2 data with respect to the high-level CCSD(T) data (see above), it is uncertain which of the four density functionals (LDA, KT1 , KT2 or BHandH) performs best. However, the improvement over standard density functionals is obvious and promising.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Stacking energy (in kcal mol<sup>&#x2212;1</sup>) of substituted benzene-pyridine complexes (see Scheme&#xA0;<xref rid="Sch2" ref-type="fig">2</xref>), computed with various density functionals<sup>a</sup> and MP2/6-31G*(0.25)<sup>b</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">X=</th><th align="left">MP2<sup>b</sup></th><th align="left">LDA</th><th align="left">KT1</th><th align="left">KT2</th><th align="left">BHandH</th><th align="left">PW91</th><th align="left">BLYP</th><th align="left">BP86</th><th align="left">OLYP</th><th align="left">B3LYP</th><th align="left">X3LYP</th></tr></thead><tbody><tr><td align="left">H</td><td>&#x2212;2.8</td><td>&#x2212;3.4</td><td>&#x2212;3.4</td><td>&#x2212;3.2</td><td>&#x2212;2.7</td><td>2.3</td><td>6.1</td><td>4.6</td><td>11.1</td><td>5.0</td><td>4.1</td></tr><tr><td align="left">F</td><td>&#x2212;2.9</td><td>&#x2212;3.4</td><td>&#x2212;3.3</td><td>&#x2212;3.2</td><td>&#x2212;2.8</td><td>2.5</td><td>6.4</td><td>4.9</td><td>11.5</td><td>5.1</td><td>4.2</td></tr><tr><td align="left">NH<sub>2</sub></td><td>&#x2212;3.2</td><td>&#x2212;3.6</td><td>&#x2212;3.6</td><td>&#x2212;3.3</td><td>&#x2212;3.0</td><td>2.2</td><td>6.1</td><td>4.7</td><td>11.2</td><td>4.9</td><td>3.9</td></tr><tr><td align="left">Cl</td><td>&#x2212;3.4</td><td>&#x2212;3.4</td><td>&#x2212;3.4</td><td>&#x2212;3.2</td><td>&#x2212;2.8</td><td>2.6</td><td>6.7</td><td>5.1</td><td>11.9</td><td>5.4</td><td>4.4</td></tr><tr><td align="left">CH<sub>3</sub></td><td>&#x2212;3.3</td><td>&#x2212;3.3</td><td>&#x2212;3.4</td><td>&#x2212;3.2</td><td>&#x2212;2.8</td><td>1.2</td><td>4.5</td><td>3.5</td><td>8.7</td><td>3.5</td><td>2.7</td></tr><tr><td align="left">OH</td><td>&#x2212;2.7</td><td>&#x2212;3.2</td><td>&#x2212;3.1</td><td>&#x2212;3.0</td><td>&#x2212;2.5</td><td>2.8</td><td>6.8</td><td>5.2</td><td>11.9</td><td>5.5</td><td>4.6</td></tr><tr><td align="left">CN</td><td>&#x2212;4.1</td><td>&#x2212;3.9</td><td>&#x2212;3.9</td><td>&#x2212;3.7</td><td>&#x2212;3.5</td><td>0.9</td><td>4.2</td><td>3.1</td><td>8.4</td><td>3.1</td><td>2.3</td></tr><tr><td align="left">COOH</td><td>&#x2212;3.5</td><td>&#x2212;3.6</td><td>&#x2212;3.6</td><td>&#x2212;3.4</td><td>&#x2212;3.0</td><td>2.4</td><td>6.4</td><td>4.8</td><td>11.5</td><td>5.1</td><td>4.2</td></tr><tr><td align="left">CHO</td><td>&#x2212;3.9</td><td>&#x2212;3.8</td><td>&#x2212;3.8</td><td>&#x2212;3.6</td><td>&#x2212;3.3</td><td>0.9</td><td>4.2</td><td>3.2</td><td>8.4</td><td>3.2</td><td>2.4</td></tr><tr><td align="left">NO<sub>2</sub></td><td>&#x2212;3.8</td><td>&#x2212;3.8</td><td>&#x2212;3.7</td><td>&#x2212;3.6</td><td>&#x2212;3.3</td><td>2.0</td><td>5.8</td><td>4.3</td><td>10.8</td><td>4.6</td><td>3.7</td></tr><tr><td align="left"><italic>MAD</italic><sup>c</sup></td><td/><td><italic>0.26</italic></td><td><italic>0.25</italic></td><td><italic>0.24</italic></td><td><italic>0.39</italic></td><td><italic>5.33</italic></td><td><italic>9.07</italic></td><td><italic>7.68</italic></td><td><italic>13.90</italic></td><td><italic>7.89</italic></td><td><italic>6.99</italic></td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Post-SCF on LDA/TZ2P orbitals and densities, see <xref rid="Sec3" ref-type="sec">Computational details</xref></p><p><sup>b</sup>From [<xref ref-type="bibr" rid="CR50">50</xref>]</p><p><sup>c</sup>Mean Absolute Deviation (in kcal mol<sup>&#x2212;1</sup>) of DFT energies from reference MP2 data</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec7">
+        <title>Reference data from Jurecka and co-workers</title>
+        <p>Scheme&#xA0;<xref rid="Sch3" ref-type="fig">3</xref> shows the fourteen orientations of the stacked cytosine dimer that have been considered in the paper by Jurecka and co-workers [<xref ref-type="bibr" rid="CR21">21</xref>] (with a vertical separation of 3.3&#xA0;&#xC5; for the first orientation, and 3.4&#xA0;&#xC5; for all others). The corresponding reference energies and our DFT interaction energies are collected in Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>. The latter also contains the MAD values with respect to two sets of reference energies, i.e. the usual MP2/6-31G*(0.25) results (MAD1) as well as the MP2 energies obtained after complete-basis-set (CBS) extrapolation corrected for the difference between MP2 and CCSD(T) with the 6-31G*(0.25) basis set (MAD2). Similar to what was found for the benzene-pyridine systems (see above), the MAD values for standard density functionals are found between 5 and 14&#xA0;kcal mol<sup>&#x2212;1</sup>, resulting in many cases in erroneous repulsive stacking interactions between the cytosine fragments (see Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). Improved results are again obtained with LDA, KT1, KT2, and to a lesser extent BHandH, which have MAD1 values (i.e. deviations with respect to MP2/6-31G*(0.25)) of 0.9, 0.8, 0.6 and 1.5&#xA0;kcal mol<sup>&#x2212;1</sup> respectively, and MAD2 values of 0.4, 0.5, 0.7 and 0.5&#xA0;kcal mol<sup>&#x2212;1</sup> respectively with the CCSD(T) data (see Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>).
+<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Stacking energies (in kcal mol<sup>&#x2212;1</sup>) for several orientations of the cytosine dimer (see Scheme&#xA0;<xref rid="Sch3" ref-type="fig">3</xref>), computed with various density functionals and MP2<sup>a,b</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">orientation</th><th align="left">MP2<sup>b,c</sup></th><th align="left">MP2cc<sup>b,d</sup></th><th align="left">LDA</th><th align="left">KT1</th><th align="left">KT2</th><th align="left">BHandH</th><th align="left">PW91</th><th align="left">BLYP</th><th align="left">BP86</th><th align="left">OLYP</th><th align="left">B3LYP</th><th align="left">X3LYP</th></tr></thead><tbody><tr><td align="left"><bold>1</bold></td><td align="left">2.2</td><td>2.5</td><td>2.7</td><td>2.3</td><td>2.7</td><td>3.9</td><td>8.0</td><td>11.7</td><td>10.9</td><td>16.5</td><td>10.9</td><td>9.9</td></tr><tr><td align="left"><bold>2</bold></td><td align="left">&#x2212;3.1</td><td>&#x2212;3.8</td><td>&#x2212;3.7</td><td>&#x2212;3.9</td><td>&#x2212;3.5</td><td>&#x2212;3.3</td><td>2.6</td><td>6.5</td><td>5.4</td><td>12.3</td><td>5.2</td><td>4.1</td></tr><tr><td align="left"><bold>3</bold></td><td align="left">&#x2212;7.2</td><td>&#x2212;8.9</td><td>&#x2212;8.8</td><td>&#x2212;8.7</td><td>&#x2212;8.3</td><td>&#x2212;9.0</td><td>&#x2212;2.1</td><td>1.7</td><td>0.7</td><td>8.0</td><td>0.2</td><td>&#x2212;1.0</td></tr><tr><td align="left"><bold>4</bold></td><td align="left">&#x2212;8.3</td><td>&#x2212;9.9</td><td>&#x2212;9.4</td><td>&#x2212;9.2</td><td>&#x2212;8.9</td><td>&#x2212;10.1</td><td>&#x2212;2.9</td><td>0.8</td><td>&#x2212;0.1</td><td>6.9</td><td>&#x2212;0.9</td><td>&#x2212;2.1</td></tr><tr><td align="left"><bold>5</bold></td><td align="left">0.2</td><td>0.3</td><td>0.6</td><td>0.1</td><td>0.6</td><td>1.5</td><td>6.4</td><td>10.3</td><td>9.3</td><td>15.7</td><td>9.3</td><td>8.3</td></tr><tr><td align="left"><bold>6</bold></td><td align="left">0.5</td><td>0.6</td><td>0.8</td><td>0.4</td><td>0.8</td><td>1.8</td><td>6.8</td><td>10.8</td><td>9.7</td><td>16.3</td><td>9.8</td><td>8.8</td></tr><tr><td align="left"><bold>7</bold></td><td align="left">&#x2212;0.5</td><td>&#x2212;1.0</td><td>&#x2212;0.7</td><td>&#x2212;0.9</td><td>&#x2212;0.6</td><td>0.2</td><td>2.8</td><td>5.5</td><td>5.2</td><td>8.7</td><td>5.0</td><td>4.2</td></tr><tr><td align="left"><bold>8</bold></td><td align="left">&#x2212;7.3</td><td>&#x2212;9.1</td><td>&#x2212;8.4</td><td>&#x2212;8.3</td><td>&#x2212;7.9</td><td>&#x2212;8.8</td><td>&#x2212;3.0</td><td>0.2</td><td>&#x2212;0.2</td><td>5.6</td><td>&#x2212;1.2</td><td>&#x2212;2.2</td></tr><tr><td align="left"><bold>9</bold></td><td align="left">&#x2212;7.6</td><td>&#x2212;9.1</td><td>&#x2212;8.7</td><td>&#x2212;8.5</td><td>&#x2212;8.2</td><td>&#x2212;9.4</td><td>&#x2212;2.3</td><td>1.5</td><td>0.5</td><td>7.3</td><td>&#x2212;0.2</td><td>&#x2212;1.4</td></tr><tr><td align="left"><bold>10</bold></td><td align="left">&#x2212;6.6</td><td>&#x2212;8.3</td><td>&#x2212;7.9</td><td>&#x2212;7.7</td><td>&#x2212;7.5</td><td>&#x2212;8.3</td><td>&#x2212;1.8</td><td>1.8</td><td>0.9</td><td>7.6</td><td>0.3</td><td>&#x2212;0.8</td></tr><tr><td align="left"><bold>11</bold></td><td align="left">&#x2212;7.6</td><td>&#x2212;9.4</td><td>&#x2212;8.8</td><td>&#x2212;8.5</td><td>&#x2212;8.3</td><td>&#x2212;9.5</td><td>&#x2212;2.8</td><td>0.6</td><td>&#x2212;0.1</td><td>6.2</td><td>&#x2212;1.0</td><td>&#x2212;2.1</td></tr><tr><td align="left"><bold>12</bold></td><td align="left">&#x2212;5.5</td><td>&#x2212;7.4</td><td>&#x2212;6.7</td><td>&#x2212;6.6</td><td>&#x2212;6.2</td><td>&#x2212;7.0</td><td>&#x2212;3.6</td><td>&#x2212;1.6</td><td>&#x2212;1.4</td><td>1.5</td><td>&#x2212;2.4</td><td>&#x2212;3.1</td></tr><tr><td align="left"><bold>13</bold></td><td align="left">&#x2212;7.4</td><td>&#x2212;8.8</td><td>&#x2212;8.3</td><td>&#x2212;8.1</td><td>&#x2212;7.9</td><td>&#x2212;8.6</td><td>&#x2212;3.0</td><td>0.4</td><td>&#x2212;0.4</td><td>5.2</td><td>&#x2212;1.0</td><td>&#x2212;2.0</td></tr><tr><td align="left"><bold>14</bold></td><td align="left">&#x2212;7.0</td><td>&#x2212;9.1</td><td>&#x2212;8.8</td><td>&#x2212;8.7</td><td>&#x2212;8.4</td><td>&#x2212;9.4</td><td>&#x2212;2.1</td><td>1.6</td><td>0.7</td><td>8.0</td><td>&#x2212;0.1</td><td>&#x2212;1.3</td></tr><tr><td/><td><italic>MAD1</italic><sup>e</sup></td><td/><td><italic>0.94</italic></td><td><italic>0.81</italic></td><td><italic>0.60</italic></td><td><italic>1.49</italic></td><td><italic>4.87</italic></td><td><italic>8.35</italic></td><td><italic>7.58</italic></td><td><italic>13.63</italic></td><td><italic>7.06</italic></td><td><italic>6.03</italic></td></tr><tr><td/><td><italic>MAD2</italic><sup>f</sup></td><td/><td><italic>0.38</italic></td><td><italic>0.47</italic></td><td><italic>0.72</italic></td><td><italic>0.52</italic></td><td><italic>6.04</italic></td><td><italic>9.52</italic></td><td><italic>8.75</italic></td><td><italic>14.80</italic></td><td><italic>8.24</italic></td><td><italic>7.21</italic></td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Post-SCF on LDA/TZ2P orbitals and densities, see <xref rid="Sec3" ref-type="sec">Computational details</xref></p><p><sup>b</sup>From [<xref ref-type="bibr" rid="CR21">21</xref>]</p><p><sup>c</sup>MP2/6-31G*(0.25) results</p><p><sup>d</sup>MP2 with complete-basis-set (CBS) extrapolation, i.e. MP2/CBS, corrected for &#x394;[CCSD(T)/6-31G*(0.25) - MP2/6-31G*(0.25)]</p><p><sup>e</sup>Mean Absolute Deviation (in kcal mol<sup>&#x2212;1</sup>) of DFT energies from MP2/6-31G*(0.25) data</p><p><sup>f</sup>Mean Absolute Deviation (in kcal mol<sup>&#x2212;1</sup>) of DFT energies from MP2/CBS corrected for &#x394;[CCSD(T)/6-31G*(0.25) - MP2/6-31G*(0.25)]</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec8">
+        <title>Reference data from Wu and Yang</title>
+        <p>In the paper by Wu and Yang, [<xref ref-type="bibr" rid="CR14">14</xref>] the potential energy surface (PES) was calculated as a function of the twist angle between two stacked bases (see Scheme&#xA0;<xref rid="Sch1" ref-type="fig">1</xref> and methodological section for the definition of the twist angle) using MP2/6-31G*(0.25), which was chosen as a reliable reference method based on the paper by Hobza and co-workers [<xref ref-type="bibr" rid="CR22">22</xref>]. Although thymine was not included by Wu and Yang, we report here the energy profiles for all combinations of the five RNA/DNA bases, i.e., thymine, adenine, guanine, cytosine, uracil (see Scheme&#xA0;<xref rid="Sch4" ref-type="fig">4</xref> for the geometries). The vertical separation is 3.4&#xA0;&#xC5; for the C-C, G-C and G-G stacked base dimers, and 3.3&#xA0;&#xC5; for all other systems. This difference in vertical separations was chosen based on earlier papers by Sponer and co-workers [<xref ref-type="bibr" rid="CR19">19</xref>].</p>
+        <p>From the tests with the benzene dimer (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>), the Mignon (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>) and Jurecka reference data (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>), it is already evident that standard density functionals do not give reliable interaction energies, which is now shown to be true also for the energy profiles as function of the twist angle. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> shows the PES for two stacked bases, namely C-C and G-U, which are representative for all possible base pair combinations (the complete figure for all combinations of stacked bases can be found in the <xref ref-type="" rid="MOESM1">Supporting Information</xref>). Interestingly, although the standard density functionals typically underestimate the interaction energy, the shape of the PES is in all cases highly similar to that based on the more accurate MP2 data. This suggests that, at least <italic>trends and qualitative features</italic> in the rotational energy profile can be correctly reproduced with DFT which otherwise shows a (functional and basis-set dependent) constant shift with respect to the more accurate MP2 rotational profile.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Stacking interaction (in kcal mol<sup>&#x2212;1</sup>) as function of the twist angle (in degree) for &#x3C0;-&#x3C0; stacks of two bases, C-C and G-U, computed with various density functionals. The <italic>thick lines</italic><italic>with</italic><italic>filled circles, triangles, squares</italic><italic>and diamonds</italic> show the results obtained with LDA, PW91, BLYP, and BP86, respectively. The <italic>dashed lines</italic> with <italic>open squares, triangles</italic><italic>and diamonds</italic> show the results obtained with OLYP, B3LYP and X3LYP, respectively. The <italic>bold line</italic><italic>with</italic><italic>crosses</italic> represents the MP2/6-31G*(0.25) reference data</p></caption><graphic position="anchor" xlink:href="894_2007_239_Fig1_HTML" id="MO6"/></fig></p>
+        <p>It is, however, more instructive to look at functionals that by themselves already give accurate interaction energies, such as LDA, KT1, KT2 and BHandH. Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> shows the corresponding rotational-energy profiles, again for the stacked bases C-C and G-U. From Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> it is evident that the LDA, KT1, KT2, and to a lesser extent BHandH are visually (and virtually) indistinguishable from the reference MP2 data.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Stacking interaction (in kcal mol<sup>&#x2212;1</sup>) as function of the twist angle (in degree) for &#x3C0;-&#x3C0; stacks of two bases, C-C and G-U, computed with various density functionals. The <italic>red, blue</italic> and<italic> green lines</italic> show the results obtained with BHandH, KT1 and KT2, respectively. The <italic>bold line with crosses</italic> represents the MP2/6-31G*(0.25) reference data</p></caption><graphic position="anchor" xlink:href="894_2007_239_Fig2_HTML" id="MO7"/></fig></p>
+        <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows the interaction energy as a function of the vertical separation for both the standard (upper diagrams) and promising (lower diagrams) density functionals, together with MP2 reference curve in each of the four diagrams. Not surprisingly, the density functionals that gave larger errors for the rotational energy profile, also give larger errors for the vertical separation profiles: almost all standard density functionals show potential energy surfaces that are repulsive, or at best weakly attractive with a very shallow minimum at elongated distances. In contrast, the promising functionals (i.e., KT1, KT2, LDA and BHandH) do provide well-defined minima with equilibrium distances (3.2&#x2013;3.3&#xA0;&#xC5;) close to the reference MP2 data. Similar to the uncertainty in the reference energy data of some 0.5&#x2013;1.0&#xA0;kcal mol<sup>&#x2212;1</sup> (see above), we may expect a similar uncertainty for the vertical separation, which we very roughly estimate at 0.1&#x2013;0.2&#xA0;&#xC5;. The differences between the equilibrium distance of the promising density functionals and that of the reference MP2 falls well within this estimated uncertainty. Thus, KT1, KT2, LDA and BHandH perform well not only for rotational energy profiles but also for the PES as a function of the vertical separation.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Stacking interaction (in kcal mol<sup>&#x2212;1</sup>) as function of the vertical separation (in &#xC5;) for &#x3C0;-&#x3C0; stacks of two bases, A-A and G-G, computed with various density functionals. The <italic>thick lines with filled triangles, squares and diamonds</italic> in the upper diagrams show the results obtained with PW91, BLYP, and BP86, respectively. The <italic>dashed lines with open squares, triangles and diamonds</italic> in the upper diagrams show the results obtained with OLYP, B3LYP and X3LYP, respectively. The <italic>red, blue, green and orange lines</italic> in the lower diagrams that truly show well-defined minima are obtained with BHandH, KT1, KT2 and LDA respectively. The bold <italic>black line with crosses</italic> represents the MP2/6-31G*(0.25) reference data</p></caption><graphic position="anchor" xlink:href="894_2007_239_Fig3_HTML" id="MO8"/></fig></p>
+      </sec>
+      <sec id="Sec9">
+        <title>Decomposition of interaction energy</title>
+        <p>Now that we have established the reliability of the KT1, KT2, LDA and BHandH functionals for the interaction energy of stacked DNA bases, it is interesting to study the actual interaction into greater detail. This is done through a quantitative decomposition of the interaction energy &#x394;<italic>E</italic><sub>int</sub> into electrostatic attraction &#x394;<italic>V</italic><sub>elstat</sub>, Pauli repulsion &#x394;<italic>E</italic><sub>Pauli</sub> and orbital interactions &#x394;<italic>E</italic><sub>oi</sub> (see <xref rid="Sec2" ref-type="sec">Methods</xref>). Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref> provides the results of the energy decomposition at KT1/TZ2P for the five &#x3C0;-stacked homo dimers, for each one at a twist angle of 0&#xB0; and 180&#xB0; (which is the lowest-energy conformation) and at two different vertical separations. Note that the lowest-energy conformation is always achieved at a twist angle of 180&#xB0; but that the optimal stacking distance (vertical separation) varies by 0.1 &#x2013; 0.2&#xA0;&#xC5; between the different &#x3C0;-stacked homo dimers. The energy changes by &#x2212;6.8 (A-A), &#x2212;11.8 (C-C), &#x2212;10.2 (G&#x2013;G), &#x2212;11.2 (T-T) and &#x2212;7.9 (U-U) kcal mol<sup>&#x2212;1</sup>, respectively, when going from a twist angle of 0&#xB0; to 180&#xB0; (the lowest-energy conformation). This change in energy is almost completely resulting from a change in electrostatics that change by &#x2212;5.4 (A-A), &#x2212;13.1 (C-C), &#x2212;10.3 (G-G), &#x2212;6.6 (T-T) and &#x2212;8.3 (U-U) kcal mol<sup>&#x2212;1</sup> respectively. The sum of Pauli repulsion and orbital interactions changes much less, by ca. 1.4&#xA0;kcal mol<sup>&#x2212;1</sup> or less, except for T-T where the sum of Pauli repulsion and orbital interactions changes by 4.6&#xA0;kcal mol<sup>&#x2212;1</sup> due to the influence of the peripheral methyl groups. But also the changes in each term individually, i.e., either &#x394;<italic>E</italic><sub>Pauli</sub> or &#x394;<italic>E</italic><sub>oi</sub>, are much smaller (typically 2 to 5 times, but in some cases even more) than the changes in &#x394;<italic>V</italic><sub>elstat</sub> (again, only in the case of T-T, the change in &#x394;<italic>E</italic><sub>Pauli</sub> is nearly as large as that in &#x394;<italic>V</italic><sub>elstat</sub>). Here we note that the same energy decomposition analyses for the five &#x3C0;-stacked homo dimers at LDA/TZ2P instead of KT1/TZ2P yield values that differ by only 1 kcal mol<sup>&#x2212;1</sup> or less (not shown in Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>).
+<table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p>Decomposition of interaction energies<sup>a</sup> (in kcal mol<sup>&#x2212;1</sup>) between stacked DNA bases in different geometries, computed at KT1/TZ2P</p></caption><table frame="hsides" rules="groups"><thead><tr><th>&#xA0;</th><th align="left">A-A</th><th align="left">C-C</th><th align="left">G-G</th><th align="left">T-T</th><th align="left">U-U</th></tr></thead><tbody><tr><td align="left" colspan="6"><italic>Twist angle 0</italic>&#xB0;</td></tr><tr><td align="left"><italic>(TW, R</italic><sub><italic>vert</italic></sub><italic>)</italic></td><td><italic>(0</italic>&#xB0;<italic>, 3.3 &#xC5;)</italic></td><td><italic>(0</italic>&#xB0;<italic>, 3.4 &#xC5;)</italic></td><td><italic>(0</italic>&#xB0;<italic>, 3.4 &#xC5;)</italic></td><td><italic>(0</italic>&#xB0;<italic>, 3.3 &#xC5;)</italic></td><td><italic>(0</italic>&#xB0;<italic>, 3.3 &#xC5;)</italic></td></tr><tr><td align="left">&#x394;<italic>E</italic><sub>Pauli</sub></td><td>5.35</td><td>2.43</td><td>2.13</td><td>11.00</td><td>3.72</td></tr><tr><td align="left">&#x394;<italic>V</italic><sub>elstat</sub></td><td>&#x2212;3.31</td><td>1.80</td><td>1.97</td><td>&#x2212;2.48</td><td>&#x2212;0.07</td></tr><tr><td align="left">&#x394;<italic>E</italic><sub>oi</sub></td><td>&#x2212;2.30</td><td>&#x2212;1.88</td><td>&#x2212;2.49</td><td>&#x2212;5.66</td><td>&#x2212;2.11</td></tr><tr><td align="left">&#x394;<italic>E</italic><sub>int</sub></td><td>&#x2212;0.26</td><td>2.35</td><td>1.61</td><td>2.86</td><td>1.54</td></tr><tr><td align="left" colspan="6"><italic>Lowest energy conformation</italic></td></tr><tr><td align="left"><italic>(TW, R</italic><sub><italic>vert</italic></sub><italic>)</italic></td><td><italic>(180</italic>&#xB0;<italic>, 3.2 &#xC5;)</italic></td><td><italic>(180</italic>&#xB0;<italic>, 3.1 &#xC5;)</italic></td><td><italic>(180</italic>&#xB0;<italic>, 3.2 &#xC5;)</italic></td><td><italic>(180</italic>&#xB0;<italic>, 3.3 &#xC5;)</italic></td><td><italic>(180</italic>&#xB0;<italic>, 3.1 &#xC5;)</italic></td></tr><tr><td align="left">&#x394;<italic>E</italic><sub>Pauli</sub></td><td>5.86</td><td>7.01</td><td>4.52</td><td>4.28</td><td>6.13</td></tr><tr><td align="left">&#x394;<italic>V</italic><sub>elstat</sub></td><td>&#x2212;8.72</td><td>&#x2212;11.32</td><td>&#x2212;8.33</td><td>&#x2212;9.04</td><td>&#x2212;8.38</td></tr><tr><td align="left">&#x394;<italic>E</italic><sub>oi</sub></td><td>&#x2212;4.17</td><td>&#x2212;5.12</td><td>&#x2212;4.80</td><td>&#x2212;3.58</td><td>&#x2212;4.12</td></tr><tr><td align="left">&#x394;<italic>E</italic><sub>int</sub></td><td>&#x2212;7.02</td><td>&#x2212;9.44</td><td>&#x2212;8.61</td><td>&#x2212;8.34</td><td>&#x2212;6.36</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>See <xref rid="Sec3" ref-type="sec">Computational details</xref></p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec10">
+        <title>Additivity of interaction energies of stacked base pair dimers</title>
+        <p>With the good performance of KT1 for stacking interactions kept in mind, we went one step further, and looked also at the interactions within <italic>stacked dimers</italic><italic>of hydrogen-bonded base pairs</italic> (see Scheme&#xA0;<xref rid="Sch5" ref-type="fig">5</xref>) [<xref ref-type="bibr" rid="CR54">54</xref>]. The geometry was obtained by taking the geometry of one hydrogen-bonded base pair and putting another one at 3.4&#xA0;&#xC5; on top of the former. The base pair dimer is stabilized by hydrogen bonding between the bases within one layer, and stacking interactions between the bases in different layers of the stack. In this case, because there are two bases per layer, there are also interactions present between bases that are, in a sense diagonally, on opposite sides and in different layers [<xref ref-type="bibr" rid="CR55">55</xref>], the so-called cross terms. For example for the AT-AT system as shown in Scheme&#xA0;<xref rid="Sch5" ref-type="fig">5</xref>, this refers to the interaction between the thymine of the top layer with the adenine of the bottom layer.
+<fig id="Sch5"><label>Scheme&#xA0;5</label><caption><p>Structure of stacked DNA base pair dimer AT-AT with twist angle of 36&#xB0;. The <italic>dot</italic> represents the B-DNA helical axis of rotation.[<xref ref-type="bibr" rid="CR54">54</xref>]</p></caption><graphic position="anchor" xlink:href="894_2007_239_Sch5_HTML" id="MO9"/></fig></p>
+        <p>In order to investigate in more detail the importance of the various energy terms, in particular, the cross-terms, we approximate the total stacking interaction between the base pairs in the stacked base pair dimer by the sum of four pairwise interactions between two bases, i.e., we approximate the total (stacking) interaction energy &#x394;<italic>E</italic><sub>int</sub> between the layers AB and CD in Scheme&#xA0;<xref rid="Sch6" ref-type="fig">6</xref> by the sum &#x394;<italic>E</italic><sub>add</sub> of interactions A-C, B-D, A-D and B-C as shown in Equations&#xA0;<xref rid="Equ4" ref-type="">4a</xref>,<xref rid="Equ5" ref-type="">b</xref>:
+<disp-formula id="Equ4"><label>4a</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Delta E_{{{\text{add}}}}  = \Delta E_{{{\text{AC}}}}  + \Delta E_{{{\text{BD}}}}  + \Delta E_{{{\text{AD}}}}  + \Delta E_{{{\text{BD}}}} $$\end{document}</tex-math></disp-formula><disp-formula id="Equ5"><label>4b</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Delta E_{{\operatorname{int} }}  = \Delta E_{{{\text{add}}}}  + \Delta E_{{{\text{coop}}}} $$\end{document}</tex-math></disp-formula><fig id="Sch6"><label>Scheme&#xA0;6</label><caption><p>Additivity approximation for the &#x3C0;-&#x3C0; interaction between two stacked Watson-Crick base pairs in terms of pairwise interactions between individual bases</p></caption><graphic position="anchor" xlink:href="894_2007_239_Sch6_HTML" id="MO10"/></fig></p>
+        <p>The remaining term &#x394;<italic>E</italic><sub>coop</sub> that, added to the approximate &#x394;<italic>E</italic><sub>add</sub> yields again the real stacking interaction &#x394;<italic>E</italic><sub>int</sub>, consists of cooperativity effects between the different interactions.</p>
+        <p>In Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>, we report the energy values resulting from the additivity scheme for the stacked AT-AT, GC-GC and AU-AU base pair dimers at three different values of the twist angle (0, 36 and 180&#xB0;). Importantly, the additive approximation &#x394;<italic>E</italic><sub>add</sub> of the real stacking interaction &#x394;<italic>E</italic><sub>int</sub> largely accounts for the latter. &#x394;<italic>E</italic><sub>coop</sub> has in most cases a positive sign and is small compared to either &#x394;<italic>E</italic><sub>add</sub> or &#x394;<italic>E</italic><sub>int</sub>. Furthermore, the dependence of the &#x394;<italic>E</italic><sub>coop</sub> term on the twist angle is much smaller than that of the interaction energy &#x394;<italic>E</italic><sub>int</sub>. For example, &#x394;<italic>E</italic><sub>coop</sub> varies from 1.0 to 1.6&#xA0;kcal mol<sup>&#x2212;1</sup> whereas &#x394;<italic>E</italic><sub>int</sub> varies from &#x2212;1.4 to &#x2212;10.7&#xA0;kcal mol<sup>&#x2212;1</sup> for the stacked AT-AT base pair dimer (see Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). Larger cooperativity effects are found in the case of the stacked GC-GC base pair dimer, where &#x394;<italic>E</italic><sub>coop</sub> values are found between 2.0 and 4.4&#xA0;kcal mol<sup>&#x2212;1</sup>. Note however that the <italic>changes</italic> in &#x394;<italic>E</italic><sub>coop</sub> are again small compared to the changes in &#x394;<italic>E</italic><sub>int</sub>.
+<table-wrap id="Tab5"><label>Table&#xA0;5</label><caption><p>Interaction energy (kcal mol<sup>&#x2212;1</sup>) between stacked DNA base pairs in terms of the additivity scheme, computed at KT1/TZ2P<sup>a,b</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">System</th><th align="left">TW</th><th align="left">&#x394;<italic>E</italic><sub>AC</sub></th><th align="left">&#x394;<italic>E</italic><sub>BD</sub></th><th align="left">&#x394;<italic>E</italic><sub>AD</sub></th><th align="left">&#x394;<italic>E</italic><sub>BC</sub></th><th align="left">&#x394;<italic>E</italic><sub>add</sub></th><th align="left">&#x394;<italic>E</italic><sub>coop</sub></th><th align="left">&#x394;<italic>E</italic><sub>int</sub></th></tr></thead><tbody><tr><td align="left">AT-AT</td><td>0</td><td>&#x2212;1.23</td><td>+1.26</td><td>&#x2212;1.24</td><td>&#x2212;1.24</td><td>&#x2212;2.45</td><td>+1.04</td><td>&#x2212;1.41</td></tr><tr><td align="left">AT-AT</td><td>36</td><td>&#x2212;5.27</td><td>&#x2212;3.93</td><td>&#x2212;1.11</td><td>&#x2212;0.93</td><td>&#x2212;11.24</td><td>+1.11</td><td>&#x2212;10.13</td></tr><tr><td align="left">AT-AT</td><td>180</td><td>&#x2212;1.84</td><td>+0.39</td><td>&#x2212;5.44</td><td>&#x2212;5.44</td><td>&#x2212;12.33</td><td>+1.62</td><td>&#x2212;10.71</td></tr><tr><td>AU-AU</td><td>0</td><td>&#x2212;1.23</td><td>+0.94</td><td>&#x2212;1.37</td><td>&#x2212;1.37</td><td>&#x2212;3.03</td><td>+1.17</td><td>&#x2212;1.86</td></tr><tr><td>AU-AU</td><td>36</td><td>&#x2212;5.27</td><td>&#x2212;3.00</td><td>&#x2212;1.20</td><td>&#x2212;1.08</td><td>&#x2212;10.55</td><td>+1.20</td><td>&#x2212;9.35</td></tr><tr><td>AU-AU</td><td>180</td><td>&#x2212;1.84</td><td>+0.28</td><td>&#x2212;4.67</td><td>&#x2212;4.67</td><td>&#x2212;10.90</td><td>+1.73</td><td>&#x2212;9.17</td></tr><tr><td>GC-GC</td><td>0</td><td>+2.15</td><td>+2.83</td><td>&#x2212;4.90</td><td>&#x2212;4.90</td><td>&#x2212;4.82</td><td>+4.42</td><td>&#x2212;0.40</td></tr><tr><td>GC-GC</td><td>36</td><td>&#x2212;2.08</td><td>&#x2212;1.32</td><td>&#x2212;3.44</td><td>&#x2212;4.71</td><td>&#x2212;11.55</td><td>+3.92</td><td>&#x2212;7.63</td></tr><tr><td>GC-GC</td><td>180</td><td>&#x2212;7.59</td><td>&#x2212;2.60</td><td>&#x2212;1.52</td><td>&#x2212;1.52</td><td>&#x2212;13.23</td><td>+1.98</td><td>&#x2212;11.25</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>See Scheme&#xA0;<xref rid="Sch6" ref-type="fig">6</xref>: <inline-formula id="IEq1"><!-- Alternate image not processed: 894_2007_239_Article_IEq1.gif --><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\Delta E_{{{\text{add}}}}  = \Delta E_{{{\text{A:C}}}}  + \Delta E_{{{\text{B:D}}}}  + \Delta E_{{{\text{A:D}}}}  + \Delta E_{{{\text{B:C}}}} ,\,\Delta E_{{{\text{coop}}}}  = {\text{ }}\Delta E_{{\operatorname{int} }}  - \Delta E_{{{\text{add}}}} .$$\end{document}</tex-math></inline-formula></p><p><sup>b</sup>Post-SCF on LDA/TZ2P orbitals / densities.</p></table-wrap-foot></table-wrap></p>
+        <p>The cross-terms in the additivity scheme are as important as the non-cross terms, especially when rotating the base pair dimer from a twist angle of 0 degrees to finally a twist angle of 180 degrees. At the end point of 180&#xB0;, the A and B base have switched, and the cross terms are no longer AD and BC, but AC and BD; this switch occurs after a twist angle of 90&#xB0;. For instance for the AT-AT base pair dimer at 0&#xB0;, the cross terms are stabilizing (&#x2212;2.5&#xA0;kcal mol<sup>&#x2212;1</sup>) and dominate the &#x394;E<sub>add</sub> of &#x2212;2.2&#xA0;kcal mol<sup>&#x2212;1</sup>. At 180&#xB0;, the non-cross terms dominate (&#x2212;10.9&#xA0;kcal mol<sup>&#x2212;1</sup>) with still a substantial contribution from the cross terms (&#x2212;1.4&#xA0;kcal mol<sup>&#x2212;1</sup>). Note also the dominance of the cross terms (&#x2212;10.2&#xA0;kcal mol<sup>&#x2212;1</sup>) over the non-cross terms (&#x2212;3.0&#xA0;kcal mol<sup>&#x2212;1</sup>) for the GC-GC base pair dimer at 180&#xB0;. This is mainly due to favorable hydrogen-bonding interactions between the cross G-G pair.</p>
+        <p>When rotating base pair dimers from a twist angle of 0&#xB0; to 36&#xB0;, the cross terms in the additivity scheme reduce slightly. However, this is dominated by the increase of favorable interactions between the stacked bases. For instance for AT-AT, the cross terms drop from &#x2212;2.5 to &#x2212;2.0&#xA0;kcal mol<sup>&#x2212;1</sup>, but the non-cross terms increase from +0.0 to &#x2212;9.2&#xA0;kcal mol<sup>&#x2212;1</sup>. The same trend is observed for the AU-AU and GC-GC base pair dimers.</p>
+        <p>Again we note that the same energy decomposition analyses for stacked DNA base pairs at LDA/TZ2P instead of KT1/TZ2P yield values that differ by only 1&#xA0;kcal mol<sup>&#x2212;1</sup> or less (not shown in Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>).</p>
+      </sec>
+      <sec id="Sec11">
+        <title>Significance of the observed trends for the structure of DNA</title>
+        <p>The stabilizing interactions for the structure of DNA mainly originate from hydrogen-bonding interactions between bases in one plane and the &#x3C0;-&#x3C0; stacking interactions between stacked bases. However, we have shown here that in addition to these terms there is also an important contribution of the cross terms that arise between bases that are neither hydrogen-bonded within one layer, nor stacked above each other. All these interaction energies can now be understood and quantified with density functional theory using appropriate functionals. For the hydrogen-bonding interactions, the BP86 and PW91 functionals seem to perform best, [<xref ref-type="bibr" rid="CR3">3</xref>] while for &#x3C0;-stacking interactions KT1, KT2 and (surprisingly) LDA work well.</p>
+        <p>The experimentally observed value for the twist angle (36&#xB0;) is retrieved in our study on base pair dimers as the orientation with optimal stacking interactions. We have shown that this is predominantly determined by the <italic>classical electrostatic component</italic> of the stacking energy. The rotation to a twist angle of 36&#xB0; destroys part of the favorable cross terms (see above), which is however completely overcome by the increase in favorable stacking interactions between the stacked bases. The twist angle and vertical separation that are experimentally observed are of course influenced by both the sugar-phosphate backbone and the presence of solvent and/or counter ions. These factors will be tackled in forthcoming work.</p>
+      </sec>
+    </sec>
+    <sec id="Sec12" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>We have analyzed &#x3C0;-&#x3C0; stacking interactions between two benzenes or benzene analogs, between two DNA bases, and between two Watson-Crick base pairs using Density Functional Theory (DFT) in combination with large basis sets. The interaction energies for a large number of density functionals have been compared with ab initio reference data. In line with previous studies, most standard density functionals recover, at best, only part of the favorable stacking interactions.</p>
+      <p>An exception is the new KT1 functional, which has been constructed to closely resemble the near-exact Zhao&#x2013;Morrison&#x2013;Parr (ZMP) exchange-correlation potential. Thus, not unexpectedly, KT1 gives a good description for &#x3C0;-&#x3C0; stacking energies and potential energy surfaces (PES) resulting in bound systems. Surprisingly, however, a similarly good performance is achieved with the Local Density Approximation (LDA). In view of the accurate prediction of PESes and the low computational cost, we recommend the use of either KT1 or LDA for treating the &#x3C0;-&#x3C0; stacking interactions in larger systems, using a QM/QM approach (e.g., our QUILD approach which is under development [<xref ref-type="bibr" rid="CR33">33</xref>]) that allows this type of interaction to be separated from other types of interaction, such as hydrogen bonding but also regular covalent bonds.</p>
+      <p>To gain insight into the origin of &#x3C0;-&#x3C0; stacking interactions, we have decomposed the interaction energies into the classical electrostatic attraction, Pauli repulsion and orbital interactions. Interestingly, the electrostatic interactions appear to be the most important factor that determines the shape and depth of the PES. In the case of two stacked Watson-Crick base pairs, this classical electrostatic attraction causes a minimum to occur along the energy profile at a twist angle of 36&#xB0;. Furthermore, the stabilizing contributions to the stacking interaction between two Watson-Crick base pairs is shown to originate from the inter-strand stacking terms, that is, from the interaction between two bases that are in different Watson-Crick pairs and also not directly stacked on top of each other.</p>
+      <p>The above-mentioned insight that electrostatic attraction plays an essential role in &#x3C0;-&#x3C0; stacking interactions nicely consolidates and extends the recent finding by Krapp, Bickelhaupt and Frenking [<xref ref-type="bibr" rid="CR56">56</xref>] that classical electrostatic attraction is essential for understanding trends in bond strength of diatomic molecules. It is interesting to note that qualitative models of both &#x201C;regular&#x201D; chemical bonds and those of &#x3C0;-&#x3C0; stacking interactions often completely ignore classical electrostatic attraction. These qualitative models attempt to rationalize trends in bonding entirely in terms of orbital interactions (in the case of regular bonds) and dispersion interactions (in the case of &#x3C0;-&#x3C0; stacking).</p>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Electronic supplementary material</title>
+      <supplementary-material id="N0x1cd9340N0x2d67468" content-type="local-data">
+        <p>Below is the link to the electronic supplementary material.
+</p>
+        <media xlink:href="894_2007_239_MOESM1_ESM.pdf" id="MOESM1" mimetype="application" mime-subtype="pdf">
+          <label>Supporting Information</label>
+          <caption>
+            <p>Energy profiles for various &#x3C0;-&#x3C0; stacked systems as a function of the twist angle and the vertical separation computed with MP2 and various density functionals (PDF 1.90 mb)</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank the National Research School Combination - Catalysis (NRSC-C) for a postdoctoral fellowship for C.F.G., and the Netherlands organization for Scientific Research (NWO-CW and NWO-NCF) for financial support. We thank Professor W. Yang for providing us with unpublished structural data.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fonseca Guerra</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>JG</given-names>
+            </name>
+            <name>
+              <surname>Baerends</surname>
+              <given-names>EJ</given-names>
+            </name>
+          </person-group>
+          <source>Chem Eur J</source>
+          <year>1999</year>
+          <volume>5</volume>
+          <fpage>3581</fpage>
+          <lpage>3594</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1521-3765(19991203)5:12&lt;3581::AID-CHEM3581&gt;3.0.CO;2-Y</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fonseca Guerra C, Bickelhaupt FM, Snijders JG, Baerends EJ (1999) Chem Eur J 5:3581&#x2013;3594 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fonseca Guerra</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>JG</given-names>
+            </name>
+            <name>
+              <surname>Baerends</surname>
+              <given-names>EJ</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>2000</year>
+          <volume>122</volume>
+          <fpage>4117</fpage>
+          <lpage>4128</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja993262d</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fonseca Guerra C, Bickelhaupt FM, Snijders JG, Baerends EJ (2000) J Am Chem Soc 122:4117&#x2013;4128 </citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wijst</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Fonseca Guerra</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Swart</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2006</year>
+          <volume>426</volume>
+          <fpage>415</fpage>
+          <lpage>421</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2006.06.057</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">van der Wijst T, Fonseca Guerra C, Swart M, Bickelhaupt FM (2006) Chem Phys Lett 426:415&#x2013;421 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Allen</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Keal</surname>
+              <given-names>TW</given-names>
+            </name>
+            <name>
+              <surname>Tozer</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2003</year>
+          <volume>380</volume>
+          <fpage>70</fpage>
+          <lpage>77</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2003.08.101</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Allen MJ, Keal TW, Tozer DJ (2003) Chem Phys Lett 380:70&#x2013;77 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johnson</surname>
+              <given-names>ER</given-names>
+            </name>
+            <name>
+              <surname>DiLabio</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2006</year>
+          <volume>419</volume>
+          <fpage>333</fpage>
+          <lpage>339</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2005.11.099</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Johnson ER, DiLabio GA (2006) Chem Phys Lett 419:333&#x2013;339 </citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johnson</surname>
+              <given-names>ER</given-names>
+            </name>
+            <name>
+              <surname>Wolkow</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>DiLabio</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2004</year>
+          <volume>394</volume>
+          <fpage>334</fpage>
+          <lpage>338</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2004.07.029</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Johnson ER, Wolkow RA, DiLabio GA (2004) Chem Phys Lett 394:334&#x2013;338 </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kristyan</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Pulay</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>1994</year>
+          <volume>229</volume>
+          <fpage>175</fpage>
+          <lpage>180</lpage>
+          <pub-id pub-id-type="doi">10.1016/0009-2614(94)01027-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kristyan S, Pulay P (1994) Chem Phys Lett 229:175&#x2013;180 </citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lotrich</surname>
+              <given-names>VF</given-names>
+            </name>
+            <name>
+              <surname>Bartlett</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Grabowski</surname>
+              <given-names>I</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2005</year>
+          <volume>405</volume>
+          <fpage>43</fpage>
+          <lpage>48</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2005.01.066</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lotrich VF, Bartlett RJ, Grabowski I (2005) Chem Phys Lett 405:43&#x2013;48 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Meijer</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Sprik</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>1996</year>
+          <volume>105</volume>
+          <fpage>8684</fpage>
+          <lpage>8689</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.472649</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Meijer EJ, Sprik M (1996) J Chem Phys 105:8684&#x2013;8689 </citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schweizer</surname>
+              <given-names>WB</given-names>
+            </name>
+            <name>
+              <surname>Dunitz</surname>
+              <given-names>JD</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Theor Comp</source>
+          <year>2006</year>
+          <volume>2</volume>
+          <fpage>288</fpage>
+          <lpage>291</lpage>
+          <pub-id pub-id-type="doi">10.1021/ct0502357</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schweizer WB, Dunitz JD (2006) J Chem Theor Comp 2:288&#x2013;291 </citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mourik</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Gdanitz</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2002</year>
+          <volume>116</volume>
+          <fpage>9620</fpage>
+          <lpage>9623</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1476010</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">van Mourik T, Gdanitz RJ (2002) J Chem Phys 116:9620&#x2013;9623 </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Waller</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Robertazzi</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Platts</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Hibbs</surname>
+              <given-names>DE</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>PA</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2006</year>
+          <volume>27</volume>
+          <fpage>491</fpage>
+          <lpage>504</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20363</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Waller MP, Robertazzi A, Platts JA, Hibbs DE, Williams PA (2006) J Comput Chem 27:491&#x2013;504 <pub-id pub-id-type="pmid">16444702</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wesolowski</surname>
+              <given-names>TA</given-names>
+            </name>
+            <name>
+              <surname>Parisel</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Ellinger</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Weber</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem A</source>
+          <year>1997</year>
+          <volume>101</volume>
+          <fpage>7818</fpage>
+          <lpage>7825</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp970586k</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wesolowski TA, Parisel O, Ellinger Y, Weber J (1997) J Phys Chem A 101:7818&#x2013;7825 </citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wu</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2002</year>
+          <volume>116</volume>
+          <fpage>515</fpage>
+          <lpage>524</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1424928</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wu Q, Yang W (2002) J Chem Phys 116:515&#x2013;524 </citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>YK</given-names>
+            </name>
+            <name>
+              <surname>Pan</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>1997</year>
+          <volume>107</volume>
+          <fpage>7921</fpage>
+          <lpage>7925</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.475105</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang YK, Pan W, Yang W (1997) J Chem Phys 107:7921&#x2013;7925 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhao</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Truhlar</surname>
+              <given-names>DG</given-names>
+            </name>
+          </person-group>
+          <source>Phys Chem Chem Phys</source>
+          <year>2005</year>
+          <volume>7</volume>
+          <fpage>2701</fpage>
+          <lpage>2705</lpage>
+          <pub-id pub-id-type="doi">10.1039/b507036h</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhao Y, Truhlar DG (2005) Phys Chem Chem Phys 7:2701&#x2013;2705 <pub-id pub-id-type="pmid">16189582</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sponer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hobza</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem</source>
+          <year>1994</year>
+          <volume>98</volume>
+          <fpage>3161</fpage>
+          <lpage>3164</lpage>
+          <pub-id pub-id-type="doi">10.1021/j100063a019</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sponer J, Hobza P (1994) J Phys Chem 98:3161&#x2013;3164 </citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sponer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Jurecka</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Marchan</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Luque</surname>
+              <given-names>FJ</given-names>
+            </name>
+            <name>
+              <surname>Orozco</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hobza</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Chem-Eur J</source>
+          <year>2006</year>
+          <volume>12</volume>
+          <fpage>2854</fpage>
+          <lpage>2865</lpage>
+          <pub-id pub-id-type="doi">10.1002/chem.200501239</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sponer J, Jurecka P, Marchan I, Luque FJ, Orozco M, Hobza P (2006) Chem-Eur J 12:2854&#x2013;2865 </citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sponer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Leszczynski</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hobza</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem</source>
+          <year>1996</year>
+          <volume>100</volume>
+          <fpage>5590</fpage>
+          <lpage>5596</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp953306e</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sponer J, Leszczynski J, Hobza P (1996) J Phys Chem 100:5590&#x2013;5596 </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hobza</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Sponer</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>2002</year>
+          <volume>124</volume>
+          <fpage>11802</fpage>
+          <lpage>11808</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja026759n</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hobza P, Sponer J (2002) J Am Chem Soc 124:11802&#x2013;11808 <pub-id pub-id-type="pmid">12296748</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jurecka</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Sponer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hobza</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem B</source>
+          <year>2004</year>
+          <volume>108</volume>
+          <fpage>5466</fpage>
+          <lpage>5471</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp049956c</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jurecka P, Sponer J, Hobza P (2004) J Phys Chem B 108:5466&#x2013;5471 </citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hobza</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Sponer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Polasek</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>1995</year>
+          <volume>117</volume>
+          <fpage>792</fpage>
+          <lpage>798</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja00107a023</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hobza P, Sponer J, Polasek M (1995) J Am Chem Soc 117:792&#x2013;798 </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gerenkamp</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Grimme</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2004</year>
+          <volume>392</volume>
+          <fpage>229</fpage>
+          <lpage>235</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2004.05.063</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gerenkamp M, Grimme S (2004) Chem Phys Lett 392:229&#x2013;235 </citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grimme</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Chem-Eur J</source>
+          <year>2004</year>
+          <volume>10</volume>
+          <fpage>3423</fpage>
+          <lpage>3429</lpage>
+          <pub-id pub-id-type="doi">10.1002/chem.200400091</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Grimme S (2004) Chem-Eur J 10:3423&#x2013;3429 </citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Piacenza</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Grimme</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>ChemPhysChem</source>
+          <year>2005</year>
+          <volume>6</volume>
+          <fpage>1554</fpage>
+          <lpage>1558</lpage>
+          <pub-id pub-id-type="doi">10.1002/cphc.200500100</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Piacenza M, Grimme S (2005) ChemPhysChem 6:1554&#x2013;1558 <pub-id pub-id-type="pmid">16013080</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Piacenza</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Grimme</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>J Am Chem Soc</source>
+          <year>2005</year>
+          <volume>127</volume>
+          <fpage>14841</fpage>
+          <lpage>14848</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja053613q</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Piacenza M, Grimme S (2005) J Am Chem Soc 127:14841&#x2013;14848 <pub-id pub-id-type="pmid">16231938</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grimme</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Diedrich</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Korth</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Angew Chem Int Ed</source>
+          <year>2006</year>
+          <volume>45</volume>
+          <fpage>625</fpage>
+          <lpage>629</lpage>
+          <pub-id pub-id-type="doi">10.1002/anie.200502440</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Grimme S, Diedrich C, Korth M (2006) Angew Chem Int Ed 45:625&#x2013;629 </citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hesselmann</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Jansen</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2003</year>
+          <volume>367</volume>
+          <fpage>778</fpage>
+          <lpage>784</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0009-2614(02)01796-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hesselmann A, Jansen G (2003) Chem Phys Lett 367:778&#x2013;784 </citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grimme</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>1463</fpage>
+          <lpage>1473</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20078</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Grimme S (2004) J Comput Chem 25:1463&#x2013;1473 <pub-id pub-id-type="pmid">15224390</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Keal</surname>
+              <given-names>TW</given-names>
+            </name>
+            <name>
+              <surname>Tozer</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2004</year>
+          <volume>121</volume>
+          <fpage>5654</fpage>
+          <lpage>5660</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1784777</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Keal TW, Tozer DJ (2004) J Chem Phys 121:5654&#x2013;5660 <pub-id pub-id-type="pmid">15366989</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Keal</surname>
+              <given-names>TW</given-names>
+            </name>
+            <name>
+              <surname>Tozer</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2003</year>
+          <volume>119</volume>
+          <fpage>3015</fpage>
+          <lpage>3024</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1590634</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Keal TW, Tozer DJ (2003) J Chem Phys 119:3015&#x2013;3024 </citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Allen</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Tozer</surname>
+              <given-names>DJ</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Phys</source>
+          <year>2002</year>
+          <volume>117</volume>
+          <fpage>11113</fpage>
+          <lpage>11120</lpage>
+          <pub-id pub-id-type="doi">10.1063/1.1522715</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Allen MJ, Tozer DJ (2002) J Chem Phys 117:11113&#x2013;11120 </citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="other">Swart M, Bickelhaupt FM (2007) J Comput Chem 28, in press, DOI 10.1002/jcc.20834</citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Swart</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sol&#xE0;</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2007</year>
+          <volume>28</volume>
+          <fpage>1551</fpage>
+          <lpage>1560</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20653</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Swart M, Sol&#xE0; M, Bickelhaupt FM (2007) J Comput Chem 28:1551&#x2013;1560 <pub-id pub-id-type="pmid">17342711</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bento</surname>
+              <given-names>AP</given-names>
+            </name>
+            <name>
+              <surname>Sol&#xE0;</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2005</year>
+          <volume>26</volume>
+          <fpage>1497</fpage>
+          <lpage>1504</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.20261</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bento AP, Sol&#xE0; M, Bickelhaupt FM (2005) J Comput Chem 26:1497&#x2013;1504 <pub-id pub-id-type="pmid">16092145</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+            <name>
+              <surname>Baerends</surname>
+              <given-names>EJ</given-names>
+            </name>
+          </person-group>
+          <source>Reviews in Computational Chemistry, Vol 15</source>
+          <year>2000</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Wiley-VCH</publisher-name>
+          <fpage>1</fpage>
+          <lpage>86</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Bickelhaupt FM, Baerends EJ (2000) Reviews in Computational Chemistry, Vol 15. Wiley-VCH, New York </citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hill</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Forde</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Hill</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Lester</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Sokalski</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Leszczynski</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Chem Phys Lett</source>
+          <year>2003</year>
+          <volume>381</volume>
+          <fpage>729</fpage>
+          <lpage>732</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cplett.2003.09.076</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hill G, Forde G, Hill N, Lester WA, Sokalski WA, Leszczynski J (2003) Chem Phys Lett 381:729&#x2013;732 </citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="other">Baerends EJ, Autschbach J, B&#xE9;rces A, Bo C, de Boeij PL, Boerrigter PM, Cavallo L, Chong DP, Deng L, Dickson RM, Ellis DE, Fan L, Fischer TH, Fonseca Guerra C, van Gisbergen SJA, Groeneveld JA, Gritsenko OV, Gr&#xFC;ning M, Harris FE, van den Hoek P, Jacobsen H, van Kessel G, Kootstra F, van Lenthe E, McCormack DA, Michalak A, Osinga VP, Patchkovskii S, Philipsen PHT, Post D, Pye CC, Ravenek W, Ros P, Schipper PRT, Schreckenbach G, Snijders JG, Sol&#xE0; M, Swart M, Swerhone D, te Velde G, Vernooijs P, Versluis L, Visser O, Wang F, van Wezenbeek E, Wiesenekker G, Wolff SK, Woo TK, Yakovlev AL, Ziegler T (2005) ADF 2005.01. SCM, Amsterdam</citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Velde</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+            <name>
+              <surname>Baerends</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Fonseca Guerra</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Gisbergen</surname>
+              <given-names>SJA</given-names>
+            </name>
+            <name>
+              <surname>Snijders</surname>
+              <given-names>JG</given-names>
+            </name>
+            <name>
+              <surname>Ziegler</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2001</year>
+          <volume>22</volume>
+          <fpage>931</fpage>
+          <lpage>967</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.1056</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">te Velde G, Bickelhaupt FM, Baerends EJ, Fonseca Guerra C, van Gisbergen SJA, Snijders JG, Ziegler T (2001) J Comput Chem 22:931&#x2013;967 </citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lenthe</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Baerends</surname>
+              <given-names>EJ</given-names>
+            </name>
+          </person-group>
+          <source>J Comput Chem</source>
+          <year>2003</year>
+          <volume>24</volume>
+          <fpage>1142</fpage>
+          <lpage>1156</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.10255</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">van Lenthe E, Baerends EJ (2003) J Comput Chem 24:1142&#x2013;1156 <pub-id pub-id-type="pmid">12759913</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="other">Swart M, Snijders JG (2003) Theor Chem Acc 110:34&#x2013;41 Erratum: 111:156</citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vosko</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Wilk</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Nusair</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Can J Phys</source>
+          <year>1980</year>
+          <volume>58</volume>
+          <fpage>1200</fpage>
+          <lpage>1211</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Vosko SH, Wilk L, Nusair M (1980) Can J Phys 58:1200&#x2013;1211 </citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Becke</surname>
+              <given-names>AD</given-names>
+            </name>
+          </person-group>
+          <source>Phys Rev A</source>
+          <year>1988</year>
+          <volume>38</volume>
+          <fpage>3098</fpage>
+          <pub-id pub-id-type="doi">10.1103/PhysRevA.38.3098</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Becke AD (1988) Phys Rev A 38:3098 <pub-id pub-id-type="pmid">9900728</pub-id></citation>
+      </ref>
+      <ref id="CR44">
+        <label>44.</label>
+        <citation citation-type="other">Perdew JP (1986) Phys Rev B 33:8822&#x2013;8824 Erratum: 34:7406</citation>
+      </ref>
+      <ref id="CR45">
+        <label>45.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Swart</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Ehlers</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Lammertsma</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <source>Molec Phys</source>
+          <year>2004</year>
+          <volume>102</volume>
+          <fpage>2467</fpage>
+          <lpage>2474</lpage>
+          <pub-id pub-id-type="doi">10.1080/0026897042000275017</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Swart M, Ehlers AW, Lammertsma K (2004) Molec Phys 102:2467&#x2013;2474 </citation>
+      </ref>
+      <ref id="CR46">
+        <label>46.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jong</surname>
+              <given-names>GT</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>J Chem Theor Comp</source>
+          <year>2006</year>
+          <volume>2</volume>
+          <fpage>322</fpage>
+          <lpage>335</lpage>
+          <pub-id pub-id-type="doi">10.1021/ct050254g</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">de Jong GT, Bickelhaupt FM (2006) J Chem Theor Comp 2:322&#x2013;335 </citation>
+      </ref>
+      <ref id="CR47">
+        <label>47.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Morokuma</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <source>Acc Chem Res</source>
+          <year>1977</year>
+          <volume>10</volume>
+          <fpage>294</fpage>
+          <lpage>300</lpage>
+          <pub-id pub-id-type="doi">10.1021/ar50116a004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Morokuma K (1977) Acc Chem Res 10:294&#x2013;300 </citation>
+      </ref>
+      <ref id="CR48">
+        <label>48.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ziegler</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Rauk</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Inorg Chem</source>
+          <year>1979</year>
+          <volume>18</volume>
+          <fpage>1558</fpage>
+          <lpage>1565</lpage>
+          <pub-id pub-id-type="doi">10.1021/ic50196a034</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ziegler T, Rauk A (1979) Inorg Chem 18:1558&#x2013;1565 </citation>
+      </ref>
+      <ref id="CR49">
+        <label>49.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ziegler</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Rauk</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Inorg Chem</source>
+          <year>1979</year>
+          <volume>18</volume>
+          <fpage>1755</fpage>
+          <lpage>1759</lpage>
+          <pub-id pub-id-type="doi">10.1021/ic50197a006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ziegler T, Rauk A (1979) Inorg Chem 18:1755&#x2013;1759 </citation>
+      </ref>
+      <ref id="CR50">
+        <label>50.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mignon</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Loverix</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Proft</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Geerlings</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem A</source>
+          <year>2004</year>
+          <volume>108</volume>
+          <fpage>6038</fpage>
+          <lpage>6044</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp049240h</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mignon P, Loverix S, De Proft F, Geerlings P (2004) J Phys Chem A 108:6038&#x2013;6044 </citation>
+      </ref>
+      <ref id="CR51">
+        <label>51.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Omar Sinnokrot</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sherrill</surname>
+              <given-names>CD</given-names>
+            </name>
+          </person-group>
+          <source>J Phys Chem A</source>
+          <year>2004</year>
+          <volume>108</volume>
+          <fpage>10200</fpage>
+          <lpage>10207</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp0469517</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Omar Sinnokrot M, Sherrill CD (2004) J Phys Chem A 108:10200&#x2013;10207 </citation>
+      </ref>
+      <ref id="CR52">
+        <label>52.</label>
+        <citation citation-type="other">Perdew JP, Chevary JA, Vosko SH, Jackson KA, Pederson MR, Singh DJ, Fiolhais C (1992) Phys Rev B 46:6671; E 6648 (1993) 4978</citation>
+      </ref>
+      <ref id="CR53">
+        <label>53.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perdew</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Burke</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ernzerhof</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Phys Rev Lett</source>
+          <year>1996</year>
+          <volume>77</volume>
+          <fpage>3865</fpage>
+          <lpage>3868</lpage>
+          <pub-id pub-id-type="doi">10.1103/PhysRevLett.77.3865</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Perdew JP, Burke K, Ernzerhof M (1996) Phys Rev Lett 77:3865&#x2013;3868 <pub-id pub-id-type="pmid">10062328</pub-id></citation>
+      </ref>
+      <ref id="CR54">
+        <label>54.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olson</surname>
+              <given-names>WK</given-names>
+            </name>
+            <name>
+              <surname>Bansal</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Burley</surname>
+              <given-names>SK</given-names>
+            </name>
+            <name>
+              <surname>Dickerson</surname>
+              <given-names>RE</given-names>
+            </name>
+            <name>
+              <surname>Gerstein</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Harvey</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Heinemann</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>X-J</given-names>
+            </name>
+            <name>
+              <surname>Neidle</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Shakked</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Sklenar</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Suzuki</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Tung</surname>
+              <given-names>C-S</given-names>
+            </name>
+            <name>
+              <surname>Westhof</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Wolberger</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Berman</surname>
+              <given-names>HM</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Biol</source>
+          <year>2001</year>
+          <volume>313</volume>
+          <fpage>229</fpage>
+          <lpage>237</lpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.2001.4987</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Olson WK, Bansal M, Burley SK, Dickerson RE, Gerstein M, Harvey SC, Heinemann U, Lu X-J, Neidle S, Shakked Z, Sklenar H, Suzuki M, Tung C-S, Westhof E, Wolberger C, Berman HM (2001) J Mol Biol 313:229&#x2013;237 <pub-id pub-id-type="pmid">11601858</pub-id></citation>
+      </ref>
+      <ref id="CR55">
+        <label>55.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Guo</surname>
+              <given-names>DW</given-names>
+            </name>
+            <name>
+              <surname>Sijbesma</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Zuilhof</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <source>Org Lett</source>
+          <year>2004</year>
+          <volume>6</volume>
+          <fpage>3667</fpage>
+          <lpage>3670</lpage>
+          <pub-id pub-id-type="doi">10.1021/ol048821m</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Guo DW, Sijbesma RP, Zuilhof H (2004) Org Lett 6:3667&#x2013;3670 <pub-id pub-id-type="pmid">15469319</pub-id></citation>
+      </ref>
+      <ref id="CR56">
+        <label>56.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krapp</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Frenking</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Bickelhaupt</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>Chem-Eur J</source>
+          <year>2006</year>
+          <volume>12</volume>
+          <fpage>9196</fpage>
+          <lpage>9216</lpage>
+          <pub-id pub-id-type="doi">10.1002/chem.200600564</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Krapp A, Frenking G, Bickelhaupt FM (2006) Chem-Eur J 12:9196&#x2013;9216 </citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p>
+          <bold>Electronic supplementary material</bold>
+        </p>
+        <p>The online version of this article (doi:10.1007/s00894-007-0239-y) contains supplementary material, which is available to authorized users.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

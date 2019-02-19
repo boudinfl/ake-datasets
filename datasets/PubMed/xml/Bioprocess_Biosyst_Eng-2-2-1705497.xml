@@ -1,0 +1,403 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioprocess Biosyst Eng</journal-id>
+      <journal-title>Bioprocess and Biosystems Engineering</journal-title>
+      <issn pub-type="ppub">1615-7591</issn>
+      <issn pub-type="epub">1615-7605</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17048033</article-id>
+      <article-id pub-id-type="pmc">1705497</article-id>
+      <article-id pub-id-type="publisher-id">87</article-id>
+      <article-id pub-id-type="doi">10.1007/s00449-006-0087-7</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Genetic algorithm for multi-objective experimental optimization</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Link</surname>
+            <given-names>Hannes</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Weuster-Botz</surname>
+            <given-names>Dirk</given-names>
+          </name>
+          <address>
+            <phone>+49-89-28915712</phone>
+            <fax>+49-89-28915714
+</fax>
+            <email>D.Weuster-Botz@lrz.tu-muenchen.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Lehrstuhl f&#xFC;r Bioverfahrenstechnik, Technische Universit&#xE4;t M&#xFC;nchen, Boltzmannstr. 15,  Garching, 85748 Germany </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>18</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>29</volume>
+      <issue>5-6</issue>
+      <fpage>385</fpage>
+      <lpage>390</lpage>
+      <history>
+        <date date-type="received">
+          <day>11</day>
+          <month>9</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>20</day>
+          <month>9</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>A new software tool making use of a genetic algorithm for multi-objective experimental optimization (GAME.opt) was developed based on a strength Pareto evolutionary algorithm. The software deals with high dimensional variable spaces and unknown interactions of design variables. This approach was evaluated by means of multi-objective test problems replacing the experimental results. A default parameter setting is proposed enabling users without expert knowledge to minimize the experimental effort (small population sizes and few generations).</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Experimental design</kwd>
+        <kwd>Genetic algorithm</kwd>
+        <kwd>Multi-objective optimization</kwd>
+        <kwd>Software tool</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>In many technical problems scientists face the problem of identifying optimal process conditions like pH, temperature, concentrations or other variables. A typical example is fermentation medium development. The composition of a fermentation medium consisting of carbon sources, nitrogen sources, mineral salts, trace elements, amino acids and/or peptides, vitamins and other growth factors determines the chemical and nutritional environment of cells in a bioreactor and is thus vital for the effective manufacturing of bioproducts.</p>
+      <p>Due to the large number of process variables and the metabolic complexity of microorganisms or cells methods of experimental design need to be applied in order to identify values of the relevant variables resulting in an improved performance. Considering several objectives to be optimal there is per definition not one optimal solution but a set of efficient solutions. Mathematically such a multi-objective optimization problem (MOP) can be described in terms of Eq. <xref rid="Equ1" ref-type="">1</xref>. <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \begin{aligned}{} {\text{min/max }}{\mathbf{y}} = &amp; \phi ({\mathbf{x}}) = (\phi _{1} ({\mathbf{x}}),\phi _{2} ({\mathbf{x}}), \ldots, \phi _{n} ({\mathbf{x}})) \\ {\text{subject to }}{\mathbf{x}}{\text{ = }} &amp; {\text{(}}x_{1} ,x_{2} , \ldots, x_{m} ) \in X \\ {\mathbf{y}}{\text{ = }} &amp; (y_{1} ,y_{2} , \ldots, y_{n} ) \in Y \\ \end{aligned} $$\end{document}</tex-math></disp-formula></p>
+      <p>The functional relation between the <italic>m</italic> design variables and the objective functions <italic>&#x3C6;</italic> does not necessarily need to be known, as <bold>y</bold> will be obtained from <italic>n</italic> experimental observations.</p>
+      <p>An important criteria for MOPs is that of Pareto optimality, shortly saying that a member of the efficient set is not dominated by any other. In Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> the principle of dominance is exemplified in the objective space, where for the case of maximizing two objectives the efficient solutions are indicated.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Efficient points (<italic>black</italic>) are not dominated by any other point. For a dominated point (<italic>white</italic>) there exist at least one other point that has greater values in both objectives <italic>y</italic><sub>1</sub> and <italic>y</italic><sub>2</sub></p></caption><graphic position="anchor" xlink:href="449_2006_87_Fig1_HTML" id="MO1"/></fig></p>
+      <p>Classical statistical experimental design methods (Plackett&#x2013;Burman Design, Response Surface Method) have drawbacks like screening for principal components and assuming an unimodal objective function, reviewed in [<xref ref-type="bibr" rid="CR1">1</xref>].</p>
+      <p>More sophisticated stochastic search strategies like genetic algorithms (GAs) have grown in popularity since Rechenberg [<xref ref-type="bibr" rid="CR2">2</xref>] and Holland [<xref ref-type="bibr" rid="CR3">3</xref>] first published their work on this subject. GAs are based on evolutionary principles, encoding several sets of design variables on binary strings (individuals in a population) which are processed by GA operators (crossover and mutation) throughout several generations. The principle &#x201C;survival of the fittest&#x201D; assures a convergence towards optimal values in the design variables with proceeding generations.</p>
+      <p>The first GA dealing with multiple objectives was the Vector Evaluated Genetic Algorithm (VEGA) proposed by Schaffer [<xref ref-type="bibr" rid="CR4">4</xref>]. This multi-objective optimization strategy has already been applied successfully for experimental medium optimization in many cases [<xref ref-type="bibr" rid="CR1">1</xref>]. The most recent published multi-objective GAs are the Non-Dominated Sorting Genetic Algorithm-II [<xref ref-type="bibr" rid="CR5">5</xref>] and the Strength Pareto Evolutionary Algorithm (SPEA) [<xref ref-type="bibr" rid="CR6">6</xref>]. The SPEAs main feature is processing two populations: besides a normal population an external population serves as a kind of archive, keeping track of the efficient set. Especially in the case of experimental design with a limited number of experiments the SPEA is supposed to have advantages compared to VEGA with respect to the experimental effort.</p>
+      <p>The new software tool with a genetic algorithm for multi-objective experimental optimization making use of SPEA will be outlined. The performance of GAME.opt will be evaluated with the help of special test-functions to achieve appropriate parameter settings for experimental design.</p>
+    </sec>
+    <sec id="Sec2" sec-type="methods">
+      <title>Methods</title>
+      <p>GAME.opt was developed with LabVIEW 7 (National Instruments). The Application Builder was used to create a stand alone application running under Windows platforms. Data handling is based on spreadsheet files, which can be accessed via a text editor or Microsoft Excel. GAME.opt will be made available on request by the Technical University of Munich.</p>
+      <p>As the core algorithm is based on the SPEA, fitness assignment, selection and clustering is described in detail by Zitzler and Thiele [<xref ref-type="bibr" rid="CR6">6</xref>]. To abstract the algorithm: fitness assignment is either based on the strength of an individuals dominance or on the degree an individual is dominated by others. A mating pool equal to the population size is filled by selecting individuals using binary tournament without replacement [<xref ref-type="bibr" rid="CR7">7</xref>]. Crossover is performed between two parental binary strings from the mating pool at the specified number of crossover points in order to create two off-springs. Each bit of these new strings is inverted with a probability which is defined by the mutation rate. Clustering is used in order to bound the external population to a maximal value <italic>N</italic><sub>extern</sub>. Each time the external population exceeds this value it is pruned to a size of <italic>N</italic><sub>cluster</sub> by means of average clustering.</p>
+      <p>The first step when using GAME.opt is to create a new project where all information on the experimental design is defined. For this purpose the user is led through the steps explained together with some recommendations in the following.</p>
+      <sec id="Sec3">
+        <title>Design variables</title>
+        <p>The design variables considered in the problem (<bold>x</bold> in Eq. <xref rid="Equ1" ref-type="">1</xref>) need to be defined initially. Alternatively to choosing the amount of bits encoding a variable GAME.opt gives the opportunity to choose the amount of levels, resulting from the variable&#x2019;s bounds and its increment. The choice of levels can be necessary for practical purposes but causes problems in the coding of a decision variable as follows. A general decoding function linearly transforms an <italic>n</italic>-bit-long binary string (<italic>a</italic><sub>1</sub><italic>...a</italic><sub><italic>n</italic></sub>) into a bounded real number <italic>x&#xA0;</italic>&#x2208;&#xA0;[<italic>x</italic><sup>L</sup>,<italic> x</italic><sup>U</sup>]: <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ x = {\left( {\frac{{x^{{\text{U}}} - x^{{\text{L}}} }} {{2^{n} - 1}}} \right)}{\sum\limits_{i = 0}^{n - 1} {a_{{(n - i)}} 2^{i} + x^{{\text{L}}} } } $$\end{document}</tex-math></disp-formula>where <italic>a</italic><sub>1</sub> is the most significant bit and <italic>a</italic><sub><italic>n</italic></sub> is the least significant bit [<xref ref-type="bibr" rid="CR8">8</xref>]. This kind of transformation is just unique if the amount of levels equals (2<sup><italic>n&#xA0;</italic></sup>&#x2212;&#xA0;1). In other words, like its natural paradigm, the binary code is degenerated if there are more bit combinations than levels (the opposite case will not occur as the program computes the minimal amount of required bits).</p>
+        <p>Considering the above mentioned the following points are important when defining the design variables:<list list-type="order"><list-item><p>If the experimental setup prevents an adequate choice of levels the coding can be made visible in GAME.opt. In order to assure equal processing of all variables the amount of levels among the variables should not vary too much.</p></list-item><list-item><p>From the amount of levels results the length of the binary string that is needed to encode the design variables, which is shown in GAME.opt in terms of bits for each variable. From a set of <italic>M</italic> binary strings with the length <italic>l</italic> each point in the search space (<italic>X</italic> in Eq. <xref rid="Equ1" ref-type="">1</xref>) can be reached with a probability <italic>p</italic>. The relation is given in Eq. <xref rid="Equ3" ref-type="">3</xref> and GAME.opt will display <italic>p</italic> when selecting the number of individuals (<italic>M</italic>) [<xref ref-type="bibr" rid="CR9">9</xref>].<disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ p = {\left( {1 - 0.5^{{M - 1}} } \right)}^{l} $$\end{document}</tex-math></disp-formula>The value of <italic>p</italic> should be higher than 0.99.</p></list-item><list-item><p>As each individual corresponds to one experiment, the experimental effort will be correlated to the chosen amount of levels.</p></list-item><list-item><p>The increment should be higher than the possible precision in the experiment.</p></list-item></list></p>
+      </sec>
+      <sec id="Sec4">
+        <title>Experimental results</title>
+        <p>The experimental observations <bold>y</bold> have to be specified in GAME.opt just in terms of their names and units. The following items should be considered when planning the experiments:<list list-type="order"><list-item><p>All parameters different from the design variables have to remain fixed in all experiments throughout the optimization procedure.</p></list-item><list-item><p>The experimental error should be lower than the differences that are expected to result from different levels in the design variables.</p></list-item></list></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Objective functions</title>
+        <p>The objective functions in GAME.opt can be any linear combination of the experimental results and the decision variables. GAME.opt will maximize all objective values. If for example one objective is minimizing a certain experimental result, the objective function is &#x2013;1 times the according result. When defining the objective functions it is important to make sure that they are independent from each other. For example it is no use maximizing simultaneously the amount of a reaction&#x2019;s product and minimizing the amount of non-converted reactants at the end of a batch process, because a high product concentration is correlated to low resting concentrations of reactants. A reasonable combination is for example maximization of an experimental result while minimizing the sum of decision variables, possibly reducing the costs of a process.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Optimization procedure</title>
+        <p>Once the MOP is defined by the above mentioned steps a random generated initial population is available. This set of design variables can be exported from GAME.opt and the according experiments are performed. After the experimental results are entered in GAME.opt the next population is generated and checked for individuals that have already appeared in order to prevent repeated experiments. This iterative process is performed until satisfying results are obtained. The external population contains the efficient set recovered so far and thus constitutes the result of the optimization process. The experimental results in the external population are already assigned because their members originate from former populations.</p>
+      </sec>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Results</title>
+      <p>A previous version of GAME.opt was used for experimental design for media optimization (13 medium components, 20 individuals/generation, 91&#xA0;bits/binary string, eight generations) and gave comparable results to another GA making use of VEGA with half the number of experiments [<xref ref-type="bibr" rid="CR10">10</xref>]. Further process optimizations considering media composition together with process parameters are currently performed in our laboratory. In order to evaluate the software for a proper processing and its general ability to solve MOPs it was tested by means of several multi-objective test problems in such a way that the experimental results are replaced by evaluation of mathematical functions. An exemplary MOP with three objectives and six design variables is given in Eq. <xref rid="Equ4" ref-type="">4</xref>. This MOP is based on Deb et al. [<xref ref-type="bibr" rid="CR11">11</xref>], where the development of test problems is described. <disp-formula id="Equ4"><label>4</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ \begin{aligned}{} {\text{Minimize }}f_{1} = &amp; (1 + g({\mathbf{x}})) \cdot \cos (x_{5} \pi /2) \cdot \cos (x_{6} \pi /2) \\ {\text{Minimize }}f_{2} = &amp; (1 + g({\mathbf{x}})) \cdot \cos (x_{5} \pi /2) \cdot \sin (x_{6} \pi /2) \\ {\text{Minimize }}f_{3} = &amp; (1 + g({\mathbf{x}})) \cdot \sin (x_{5} \pi /2) \\ {\text{where }}g({\mathbf{x}}) = &amp; {\sum\limits_{i = 1}^4 {(x_{i} - 0.5)^{2} } } \\ {\text{subject to: 0}} \le &amp; x_{i} \le 1\quad {\text{for }}i = 1,2, \ldots ,6 \\ \end{aligned} $$\end{document}</tex-math></disp-formula>The MOP in Eq. <xref rid="Equ4" ref-type="">4</xref> was solved with GAME.opt, therefore the six design variables have been defined in the program together with the bounds, being 0 and 1 for each variable. As mentioned above the choice of the increment and thus the amount of levels is crucial for a proper processing of the variables. An increment of 0.1 will give 11 Levels, namely [0, 0.1, 0.2, ..., 1] encoded with 4&#xA0;bits giving 16 levels. According to Eq. <xref rid="Equ2" ref-type="">2</xref> an adequate increment for a given number of bits <italic>n</italic> results from: <disp-formula id="Equ5"><label>5</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{incr}} = {\left( {\frac{{x^{{\text{U}}} - x^{{\text{L}}} }} {{2^{n} - 1}}} \right)} $$\end{document}</tex-math></disp-formula></p>
+      <p>Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> confronts a proper coding with 4&#xA0;bits with a degenerated coding for a variable range from 0 to 1.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Four bit binary coding of the design variables in Eq. <xref rid="Equ4" ref-type="">4</xref> for different increments (incr)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Binary code</th><th align="left">Degenerated coding<break/>Decoded value (incr&#xA0;=&#xA0;0.1)</th><th align="left">Proper coding<break/>Decoded value (incr&#xA0;=&#xA0;1/15)</th></tr></thead><tbody><tr><td align="left">0 0 0 0</td><td char="." align="char">0</td><td char="." align="char">0</td></tr><tr><td align="left">0 0 0 1</td><td char="." align="char">0.1</td><td char="." align="char">1/15</td></tr><tr><td align="left">0 0 1 0</td><td char="." align="char">0.1</td><td char="." align="char">2/15</td></tr><tr><td align="left">0 0 1 1</td><td char="." align="char">0.2</td><td char="." align="char">3/15</td></tr><tr><td align="left">0 1 0 0</td><td char="." align="char">0.3</td><td char="." align="char">4/15</td></tr><tr><td align="left">0 1 0 1</td><td char="." align="char">0.3</td><td char="." align="char">5/15</td></tr><tr><td align="left">0 1 1 0</td><td char="." align="char">0.4</td><td char="." align="char">6/15</td></tr><tr><td align="left">0 1 1 1</td><td char="." align="char">0.5</td><td char="." align="char">7/15</td></tr><tr><td align="left">1 0 0 0</td><td char="." align="char">0.5</td><td char="." align="char">8/15</td></tr><tr><td align="left">1 0 0 1</td><td char="." align="char">0.6</td><td char="." align="char">9/15</td></tr><tr><td align="left">1 0 1 0</td><td char="." align="char">0.7</td><td char="." align="char">10/15</td></tr><tr><td align="left">1 0 1 1</td><td char="." align="char">0.7</td><td char="." align="char">11/15</td></tr><tr><td align="left">1 1 0 0</td><td char="." align="char">0.8</td><td char="." align="char">12/15</td></tr><tr><td align="left">1 1 0 1</td><td char="." align="char">0.9</td><td char="." align="char">13/15</td></tr><tr><td align="left">1 1 1 0</td><td char="." align="char">0.9</td><td char="." align="char">14/15</td></tr><tr><td align="left">1 1 1 1</td><td char="." align="char">1</td><td char="." align="char">1</td></tr></tbody></table></table-wrap></p>
+      <p>Using the proper coding shown in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> the GA was run eight generations with 20 individuals in the normal population and 10 individuals in the external population. Two crossover points and a mutation probability of 1% was chosen what has been identified as a reasonable default setting in other problems. As a rule of thumb the size of the external population should be half of the normal population, for which a minimal number can be estimated by Eq. <xref rid="Equ3" ref-type="">3</xref>. Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> summarizes the default parameter setting.
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Default parameter setting for the genetic algorithm</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Parameter</th><th align="left">Value</th></tr></thead><tbody><tr><td align="left">Crossover points</td><td align="left">2</td></tr><tr><td align="left">Mutation rate</td><td align="left">1%</td></tr><tr><td align="left">Individuals in normal population (<italic>N</italic>)</td><td align="left">Eq. <xref rid="Equ3" ref-type="">3</xref></td></tr><tr><td align="left">Individuals in external population (<italic>N</italic><sub>extern</sub>)</td><td align="left"><italic>N</italic>/2</td></tr><tr><td align="left">Individuals in external population after cluster analysis (<italic>N</italic><sub>cluster</sub>)</td><td align="left"><italic>N</italic>/2</td></tr></tbody></table></table-wrap></p>
+      <p>The results are shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>, by means of the objective values <italic>f</italic><sub>1</sub>, <italic>f</italic><sub>2</sub>, <italic>f</italic><sub>3</sub> of the ten individuals in the external population after eight generations.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>The objective space of the test problem lies between the surfaces. Optimal solutions are located on the unit sphere in the first quadrant. The <italic>black dots</italic> indicate the efficient set after eight generations of GAME.opt (external population). The two views of the plot point out the closeness of the efficient set to the Pareto front (<bold>a</bold>) and its equal distribution (<bold>b</bold>)</p></caption><graphic position="anchor" xlink:href="449_2006_87_Fig2_HTML" id="MO2"/></fig></p>
+      <p>The two spherical surfaces in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> constitute the objective space of Eq. <xref rid="Equ4" ref-type="">4</xref>.</p>
+      <p>For the minimization problem the first quadrant of the unit sphere constitutes the Pareto optimal frontier where <italic>g</italic>(<bold>x</bold>)&#xA0;=&#xA0;0 and it is already approximated well by the ten members of an external population after eight generations (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a). Beside the closeness to the Pareto frontier the distribution of the solutions is an important performance criteria. Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b reveals the equal distribution of the ten solutions resulting amongst other things from the cluster analysis. Optimal solutions are characterized by <italic>x</italic><sub><italic>i</italic></sub>&#xA0;=&#xA0;0.5 for <italic>i&#xA0;</italic>=&#xA0;1, 2, 3, 4, whereas <italic>x</italic><sub>5</sub> and <italic>x</italic><sub>6</sub> can take any value in the given range. Splitting the design variables in such a way allows to test the algorithm for a crucial feature of GAs, the populations diversity. On the one hand the algorithm is expected to converge fast to the optimal solutions but on the other the populations diversity must be high enough to ensure exploration of the whole Pareto optimal frontier. This fact is reflected in the box plots of the initial and the eighth generation together with their corresponding external populations in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Box plot of the initial population (<bold>a</bold>), the first external generation (<bold>b</bold>), the eighth generation (<bold>c</bold>) and the eighth external generation (<bold>d</bold>). The <italic>boxes</italic> contain the middle of 50% of the data. The <italic>line in the box</italic> indicates the median. The <italic>bold dashed line</italic> separates variables with an optimal solution (<italic>x</italic><sub>1</sub>, <italic>x</italic><sub>2</sub>, <italic>x</italic><sub>3</sub>, <italic>x</italic><sub>4</sub>&#xA0;=&#xA0;0.5) from variables without optimal value (<italic>x</italic><sub>5</sub>, <italic>x</italic><sub>6</sub>)</p></caption><graphic position="anchor" xlink:href="449_2006_87_Fig3_HTML" id="MO3"/></fig></p>
+      <p>Initially the individuals are randomly distributed, what is reflected by the box plots of the six design variables in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a. A trend towards 0.5 is already visible in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b where box plots are shown for the first external population. In Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>c, d, depicting the box plots of the corresponding populations after eight generations, a clear distinction between the variables with optimal value and those without can be made. After eight generations the diversity of <italic>x</italic><sub>5</sub> and <italic>x</italic><sub>6</sub> is still high in both populations. The remaining variables show the expected divergence towards 0.5 in the external population but remain in parts distributed over a wider range in the normal population. From this result it gets obvious that GAME.opt performs well with a small amount of individuals and a short evolution on a MOP considered a benchmark of evolutionary computing.</p>
+    </sec>
+    <sec id="Sec8" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>In order to keep the experimental effort low, GAME.opt will use small population sizes and fewer generations compared to other GA applications, where the amount of objective function evaluations is mostly limited by the computational costs. For this reason the external population is expected to be only a rough approximation of the true Pareto optimal frontier. Nevertheless in all test problems a satisfying performance of GAME.opt was achieved in spite of the relatively low number of experiments (160 compared to 16<sup>6</sup> possible design variable combinations with the test problem presented).</p>
+      <p>In the near future, efficient parallel search strategies for experimental design are becoming more and more important in bioprocess optimization due to the availability of new parallel stirred-tank bioreactor technologies [<xref ref-type="bibr" rid="CR12">12</xref>].</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgment</title>
+      <p>The many helpful discussions with Ezequiel Franco-Lara, Technical University of Braunschweig, Germany are gratefully acknowledged.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weuster-Botz</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Experimental design for fermentation media development: statistical design or global random search?</article-title>
+          <source>J Biosci Bioeng</source>
+          <year>2000</year>
+          <volume>90</volume>
+          <fpage>473</fpage>
+          <lpage>483</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Weuster-Botz D (2000) Experimental design for fermentation media development: statistical design or global random search? J Biosci Bioeng 90:473&#x2013;483 <pub-id pub-id-type="pmid">16232896</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rechenberg</surname>
+              <given-names>I</given-names>
+            </name>
+          </person-group>
+          <source>Optimierung technischer Systeme nach Prinzipien der biologischen Evolution</source>
+          <year>1973</year>
+          <publisher-loc>Stuttgart</publisher-loc>
+          <publisher-name>Friedrich Frommann Verlag</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Rechenberg I (1973) Optimierung technischer Systeme nach Prinzipien der biologischen Evolution. Friedrich Frommann Verlag, Stuttgart </citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Holland</surname>
+              <given-names>HJ</given-names>
+            </name>
+          </person-group>
+          <source>Adaption in natural and artificial systems, an introductory analysis with application to biology, control and artificial intelligence</source>
+          <year>1975</year>
+          <publisher-loc>Ann Arbor</publisher-loc>
+          <publisher-name>The University of Michigan Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Holland HJ (1975) Adaption in natural and artificial systems, an introductory analysis with application to biology, control and artificial intelligence. The University of Michigan Press, Ann Arbor </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="other">Schaffer JD (1985) Multi-objective optimization with vector evaluated genetic algorithms. In: Proceedings of an international conference on genetic algorithms and their applications, pp 93&#x2013;100</citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="other">Deb K, Agrawal S, Pratap A, Meyarivan T (2000) A fast elitist non-dominated sorting genetic algorithm for multi-objective optimization: NSGA-II. In: Proceedings of the Parallel Problem Solving from Nature, vol VI, pp 849&#x2013;858</citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zitzler</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Thiele</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach</article-title>
+          <source>IEEE Trans Evol Comput</source>
+          <year>1999</year>
+          <volume>3</volume>
+          <fpage>257</fpage>
+          <lpage>271</lpage>
+          <pub-id pub-id-type="doi">10.1109/4235.797969</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zitzler E, Thiele L (1999) Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach. IEEE Trans Evol Comput 3:257&#x2013;271 </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chakraborty</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Chakraborty</surname>
+              <given-names>UK</given-names>
+            </name>
+          </person-group>
+          <article-title>An analysis of linear ranking and binary tournament selection in genetic algorithms</article-title>
+          <source>Proc Int Conf Inf Commun Signal Process</source>
+          <year>1997</year>
+          <volume>1</volume>
+          <fpage>407</fpage>
+          <lpage>411</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Chakraborty M, Chakraborty UK (1997) An analysis of linear ranking and binary tournament selection in genetic algorithms. Proc Int Conf Inf Commun Signal Process 1:407&#x2013;411 </citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="other">Kim JW, Kim SW, Park P, Park TJ (2002) On the similarities between binary-coded GA and real-coded GA in wide search space. In: Proceedings of the 2002 Congress on evolutionary computation, vol 1, pp 681&#x2013;686</citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="other">Reeves CR (1993) Using genetic algorithms with small populations. In: Forrest S (ed) Proceedings of the 5th international conference on genetic algorithms. Morgan Kaufmann Publisher, San Mateo, pp 92&#x2013;99</citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Havel</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Link</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Hofinger</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Franco-Lara</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Weuster-Botz</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of genetic algorithms for experimental multi-objective optimization on the example of medium design for cyanobacteria</article-title>
+          <source>Biotechnol J</source>
+          <year>2006</year>
+          <volume>1</volume>
+          <fpage>549</fpage>
+          <lpage>555</lpage>
+          <pub-id pub-id-type="doi">10.1002/biot.200500052</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Havel J, Link H, Hofinger M, Franco-Lara E, Weuster-Botz D (2006) Comparison of genetic algorithms for experimental multi-objective optimization on the example of medium design for cyanobacteria. Biotechnol J 1:549&#x2013;555 <pub-id pub-id-type="pmid">16892290</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="other">Deb K, Thiele L, Laumanns M, Zitzler E (2002) Scalable multi objective optimization test problems. In: Proceedings of the 2002 Congress on evolutionary computation, vol 1, pp 825&#x2013;830</citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weuster-Botz</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Puskeiler</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Kusterer</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Kaufmann</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>John</surname>
+              <given-names>GT</given-names>
+            </name>
+            <name>
+              <surname>Arnold</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Methods and milliliter scale devices for high-throughput bioprocess design</article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2005</year>
+          <volume>28</volume>
+          <fpage>109</fpage>
+          <lpage>119</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00449-005-0011-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Weuster-Botz D, Puskeiler R, Kusterer A, Kaufmann K, John GT, Arnold M (2005) Methods and milliliter scale devices for high-throughput bioprocess design. Bioprocess Biosyst Eng 28:109&#x2013;119 <pub-id pub-id-type="pmid">16049713</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

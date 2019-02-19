@@ -1,0 +1,657 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Med Biol Eng Comput</journal-id>
+      <journal-title>Medical &amp; Biological Engineering &amp; Computing</journal-title>
+      <issn pub-type="ppub">0140-0118</issn>
+      <issn pub-type="epub">1741-0444</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17629761</article-id>
+      <article-id pub-id-type="pmc">2039845</article-id>
+      <article-id pub-id-type="publisher-id">217</article-id>
+      <article-id pub-id-type="doi">10.1007/s11517-007-0217-7</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A newly developed tool for intra-tracheal temperature and humidity assessment in laryngectomized individuals: the Airway Climate Explorer (ACE)</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Zuur</surname>
+            <given-names>J. K.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Muller</surname>
+            <given-names>S. H.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>de Jongh</surname>
+            <given-names>F. H. C.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van der Horst</surname>
+            <given-names>M. J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Shehata</surname>
+            <given-names>M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>van Leeuwen</surname>
+            <given-names>J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Sinaasappel</surname>
+            <given-names>M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Hilgers</surname>
+            <given-names>F. J. M.</given-names>
+          </name>
+          <address>
+            <email>f.hilgers@nki.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff5">5</xref>
+          <xref ref-type="aff" rid="Aff6">6</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Department of Head and Neck Oncology and Surgery, The Netherlands Cancer Institute-Antoni van Leeuwenhoek Hospital, Plesmanlaan 121, 1066CX Amsterdam, The Netherlands </aff>
+        <aff id="Aff2"><label>2</label>Department of Nuclear Medicine-Radiology, The Netherlands Cancer Institute-Antoni van Leeuwenhoek Hospital, Amsterdam, The Netherlands </aff>
+        <aff id="Aff3"><label>3</label>Department of Neonatology, Academic Medical Centre, University of Amsterdam, Amsterdam, The Netherlands </aff>
+        <aff id="Aff4"><label>4</label>Department of Medical Technological Development, Academic Medical Centre, University of Amsterdam, Amsterdam, The Netherlands </aff>
+        <aff id="Aff5"><label>5</label>Institute of Phonetic Sciences (ACLC), University of Amsterdam, Amsterdam, The Netherlands </aff>
+        <aff id="Aff6"><label>6</label>Department of Otorhinolaryngology, Academic Medical Center, University of Amsterdam, Amsterdam, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>13</day>
+        <month>7</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>8</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>45</volume>
+      <issue>8</issue>
+      <fpage>737</fpage>
+      <lpage>745</lpage>
+      <history>
+        <date date-type="received">
+          <day>22</day>
+          <month>11</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>13</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; International Federation for Medical and Biological Engineering 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The aim of this study is to develop a postlaryngectomy airway climate explorer (ACE) for assessment of intratracheal temperature and humidity and of influence of heat and moisture exchangers (HMEs). Engineering goals were within-device condensation prevention and fast response time characteristics. The ACE consists of a small diameter, heated air-sampling catheter connected to a heated sensor house, containing a humidity sensor. Air is sucked through the catheter by a controlled-flow pump. Validation was performed in a climate chamber using a calibrated reference sensor and in a two-flow system. Additionally, the analyser was tested in vivo. Over the clinically relevant range of humidity values (5&#x2013;42&#xA0;mg&#xA0;H<sub>2</sub>O/l air) the sensor output highly correlates with the reference sensor readings (<italic>R</italic><sup>2</sup>&#xA0;&gt;&#xA0;0.99). The 1&#x2013;1/e response times are all &lt;0.5&#xA0;s. A first in vivo pilot measurement was successful. The newly developed, verified, fast-responding ACE is suitable for postlaryngectomy airway climate assessment.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Gas sampling probe</kwd>
+        <kwd>Heat and moisture exchanger</kwd>
+        <kwd>Airway climate</kwd>
+        <kwd>Temperature</kwd>
+        <kwd>Humidity</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; International Federation for Medical and Biological Engineering 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Total laryngectomy results in a permanent disconnection of the upper and lower airways, and leads to an increase in chronic pulmonary complaints like frequent involuntary coughing, sputum production, and repeated daily forced expectoration in order to clear the airways [<xref ref-type="bibr" rid="CR5">5</xref>]. Heat and moisture exchangers (HMEs) were developed in an attempt to compensate for the lost functions of the upper airway and have been found to reduce these symptoms and improve the quality of life [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR4">4</xref>, <xref ref-type="bibr" rid="CR7">7</xref>].</p>
+      <p>In vitro, the moisture exchanging capacity of the HME can be specified with the ISO 9360 standard. However, this standard does not incorporate a standardized method for determining the heat exchange of the HME, and it is not possible to translate the results obtained with the lung model of the ISO 9360 standard to the true in vivo situation. Therefore several questions remain unanswered. Fundamentally: what is the in vivo heat and moisture exchanging capacity of the HME? And clinically, how does the in vivo heat and moisture exchanging capacity relate to that of the upper airway, i.e. where does the HME stand in the range from open stoma to nose breathing? Is a further improvement of the HMEs heat and moisture exchanging capacity possible and desirable, and does this result in a further decrease of the pulmonary complaints due to the use of this rehabilitation device?</p>
+      <p>Measuring intra airway temperature and humidity is a technically complex issue [<xref ref-type="bibr" rid="CR15">15</xref>]. Assessing the temperature and humidity variations during normal breathing requires fast sensor response characteristics. No appropriate commercial systems for this purpose are available, and only a few self-constructed validated systems have been published [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR8">8</xref>, <xref ref-type="bibr" rid="CR10">10</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR14">14</xref>]. Two groups evaluated the influence of an HME on intra airway temperature and humidity in laryngectomees. In one study [<xref ref-type="bibr" rid="CR10">10</xref>] the sensor response time was up to 9&#xA0;s and in the other study [<xref ref-type="bibr" rid="CR8">8</xref>, <xref ref-type="bibr" rid="CR9">9</xref>] a response time of 2&#xA0;s is reported which has been shown to be sufficiently fast for normal breathing volunteers, but which might be insufficient for patients.</p>
+      <p>Our goal was to develop a verified intra-tracheal airway climate analyser with response characteristics fast enough for assessment of end tidal intra-airway temperature and humidity variations during normal breathing in laryngectomized individuals, and for evaluation of the influence of HMEs on these parameters.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Design considerations</title>
+      <p>Placement of a humidity sensor in the airway itself was rejected. Humidity sensors must be kept clean, and a construction to protect a sensor would be so large that the aerodynamics within the airway would be disturbed. A high airflow around the sensor is required to minimize the response time of the sensor. A constant airflow is necessary for a reliable interpretation of the time dependent signal, and in addition facilitates the use of deconvolution to optimize system response characteristics. Therefore, a sensor environment had to be created in which airflow remains constant and high during the whole breathing cycle, i.e. in a &#x201C;chamber&#x201D;. In order to disturb airway aerodynamics as little as possible, a small diameter sample catheter for transportation of breathing air outside the airway to a humidity sensor is required. We decided that the lumen surface of the sample catheter should not exceed 10% of the lumen surface of the trachea. A decrease in lumen area of maximal 10% will result, by the law of mass conservation, in an increase in local flow velocity of 10%. This on its turn will lead to a transbronchial pressure drop of maximal 20% which is supposed to be small enough to avoid substantial deformation of the trachea wall. This means that based on a diameter of 2&#xA0;cm, which is representative for the trachea of an adult person, the maximal diameter of the sample catheter should not be more than 6&#xA0;mm.</p>
+      <p>In order to prevent condensation of water, the temperature of the measurement system must not be below the temperature of the breathing air. In addition, high humidity levels should be avoided to prevent hysteresis of the humidity sensor. Based on the maximal, i.e. end expiratory, temperature of about 36&#xB0;C, with a relative humidity (RH) of about 97% [<xref ref-type="bibr" rid="CR16">16</xref>], the breathing air must be heated to at least 38&#xB0;C in order not to exceed 90% RH (<ext-link ext-link-type="uri" xlink:href="http://www.thunderscientific.com/web_humicalc/index.php">http://www.thunderscientific.com/web_humicalc/index.php</ext-link>). On the other hand, a heated sample catheter should be thermally isolated in order to prevent patient discomfort and artificial heating of inspired air.</p>
+      <p>We decided to limit the sample rate to less than 10% of the respiratory minute volume. Based on a breathing frequency of at least 12&#xA0;cycles/minute and a tidal volume of 0.5&#xA0;l for an adult human at rest, the sample rate should be 0.6&#xA0;l/min at most.</p>
+      <p>Finally the catheter should be easy to manipulate and it should be possible to insert it into the trachea even if an HME filter is in situ. The primary measuring site for the sensor should be about 1&#xA0;cm behind the HME, but preferentially, measurements deeper in the trachea should be possible as well.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>Components</title>
+      <sec id="Sec4">
+        <title>Airway Climate Explorer</title>
+        <p>Breathing air is sampled through a 0.8&#xA0;mm diameter central canal of a multilumen tube (see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>a, b.). Four of the six surrounding canals are threaded with two resistance wire loops in order to facilitate catheter heating. Resistance wire was chosen to minimize current load in case of unexpected patient contact. Two surrounding canals were threaded with a copper wire loop in order to measure temperature for the system heating control unit. A thermocouple (MLT1402 T-type Ultra Fast Thermocouple Probe (IT-23), ADInstruments Ltd, Oxfordshire, UK) was placed just inside the tip of the central canal, in order to establish a constant airflow around this sensor. The thermal response of the thermocouple is specified as 5&#xA0;ms, accuracy &#xB1;0.1&#xB0;C. The distal 2&#xA0;cm of the sample catheter is not actively heated in order to prevent retrograde heating of the thermocouple. The multilumen tube is surrounded by a silicone isolation tube with an outer diameter of 5&#xA0;mm. In between both tubes, a small layer of air increases thermal isolation. The length of the sample catheter is 30&#xA0;cm.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Drawings of the sample catheter; <bold>a</bold> 3D overview with enlargement of the tip. <bold>b</bold> cross section (total diameter 5&#xA0;mm)</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig1_HTML" id="MO1"/></fig></p>
+        <p>The proximal end of the catheter is connected to an aluminium sensor house, incorporating the humidity sensor (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The humidity sensor most suitable for our purposes appeared to be the capacitive humidity sensor of a radiosonde (RS92K, Vaisala Oyj, Helsinki, Finland). The technical specifications report a response time of &lt;0.5&#xA0;s at 20&#xB0;C and &lt;20&#xA0;s at &#x2212;40&#xB0;C, both at an airflow of 6&#xA0;m/s. The humidity sensor is placed in an aluminium sensor house that is wrapped with copper wire for heating. The humidity sensor is mounted on a sensor beam and consists of a small chip with the sensor polymer and an aluminium wire that in the original radiosonde served as a heating wire, but which we use to measure the temperature of the humidity sensor in situ (see Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Apart from the humidity sensor chip, the sensor beam also contains a temperature sensor, but this was not used, as it is located relatively far from the humidity sensor chip.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Cross section of the sensor house; <italic>I</italic> connection to catheter, <italic>II</italic> humidity sensor, <italic>III</italic> copper wire for heating of the sensor house, <italic>IV</italic> droplet interceptor with electrode for fluid detection, <italic>V</italic> valve for disconnection of pressure gradient in case of fluid detection in the droplet interceptor, <italic>VI</italic> thermocouple wire</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig2_HTML" id="MO2"/></fig><fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Details of the humidity sensor (dimensions 4&#xA0;&#xD7;&#xA0;1.5&#xA0;mm<sup>2</sup>)</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig3_HTML" id="MO3"/></fig></p>
+        <p>The sensor house is heated to avoid prolonged saturation of the sensor [<xref ref-type="bibr" rid="CR12">12</xref>, <xref ref-type="bibr" rid="CR15">15</xref>]. The temperature is kept stable within 0.2&#xB0;C. Therefore the output of the capacitive sensor which is sensitive for the relative humidity can be directly converted to absolute humidity. Because a radiosonde is not designed for long-term use, the sensor house was constructed such that it could be easily opened to replace the sensor beam. The diameter of the air canal that leads to the humidity sensor is 1.4&#xA0;mm. The air inflow passes through a droplet interceptor in the sensor house in order to prevent sucked up sputum from being projected onto the sensor chip. In the bottom of the droplet interceptor an electrode is placed in order to detect fluid accumulation, in which case a mechanic valve instantly disconnects the pressure gradient through catheter and sensor house, which is established by a vacuum pump (DIVAC 0.6, Leybold Vacuum BV, Utrecht, the Netherlands). The flow rate is controlled and kept constant at 0.6&#xA0;l/min, by a mass flow meter/controller (Smart Mass Flow Meter, type 5850S and Smart Control V1.4 Software, Brooks Instruments, Veenendaal, the Netherlands), which is placed between the sensor house and the pump.</p>
+        <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> summarizes the airway climate explorer in a block diagram. In this figure also the custom-made electronic module is shown. The main functions of the module are: processing of the humidity sensor signal and its associated temperature signal, i.e. heating of both the sample catheter via the resistance wire, and the sensor house via the copper wire, each to their own adjustable set points. The electronic principles of the design of the module are described in the appendix.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Block diagram of the airway climate explorer</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig4_HTML" id="MO4"/></fig></p>
+        <p>For patient safety, the total assembly is connected to a safety-isolating transformer.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Data acquisition and signal processing</title>
+        <p>All signals of the total assembly, i.e. voltage output of the sensor polymer and the aluminium wire on the humidity sensor of the ACE, temperature signal of the thermocouple, sample rate of the mass flow controller, and all ancillary equipment (see below), are read out simultaneously via a multichannel data acquisition system with additional software (Powerlab and Chart 5.4.1 software, ADInstruments Ltd, Oxfordshire, UK) on a PC. For deconvolution of the raw humidity output of the ACE, the software application LabVIEW (National Instruments Netherlands BV, Woerden, The Netherlands) is used.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Cleaning and disinfection protocol</title>
+        <p>Prior to every in vivo measurement, the sample catheter is cleaned and disinfected with the following procedure. First the catheter is rinsed with tap water. Subsequently the catheter is cleaned with disinfection hand soap (Baktolin Basic, Bode Chemie, Hamburg, Germany) and rinsed again with tap water. Then the catheter is placed in a solution of Biotex (Sara Lee, Utrecht, The Netherlands) and tap water for 10&#xA0;min, after which it is placed in a 70% alcohol&#x2013;water solution for 5&#xA0;min. During the disinfection procedure, chemicals are prevented from entering the central canal of the sample catheter by establishing retrograde airflow, in order to protect the humidity sensor polymer. The central canal is not sterilized because during use there is continuous suction of air towards the vacuum pump. Finally the catheter is dried in room air.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Ancillary equipment for frequent in hospital calibration</title>
+        <p>For frequent, in-house, temperature calibrations a can of water is used in which the thermocouple is placed, simultaneously with a calibrated thermometer (Thermalite, Electronic Temperature Instruments Ltd, Worthing, UK), accuracy: &#xB1;0.4&#xB0;C, acting as a secondary reference. By using water with melting ice or warm tap water, the full temperature range can be quickly calibrated.</p>
+        <p>For frequent humidity calibrations, a small climate room was constructed. This climate room consists of a plexiglas box of 26&#xA0;&#xD7;&#xA0;42&#xA0;&#xD7;&#xA0;16&#xA0;cm<sup>3</sup>, in which moisturized air can be brought via the distal end of the tube of a neonatal respiratory humidifier (MR730 Respiratory humidifier, Fisher &amp; Paykel Healthcare, Papendrecht, the Netherlands). Air is mixed via an electromotor-driven propeller (25&#xA0;cm diameter). The box has entries for the tip of the sample catheter and for a calibrated heated humidity and temperature sensor accuracy &#xB1;0.6&#xB0;C and &#xB1;2.5% relative humidity (RH), (Testo B.V., Almere, the Netherlands), which is used as a secondary humidity reference. The system can be operated in ambient air (30&#x2013;60% RH), can be connected to the hospital oxygen supply, and can be set to deliver dry or 100% humidified gas at room temperature.</p>
+        <p>Assessment of step-response characteristics was performed in a two-stream system, which consisted of two tubes that were mounted side by side, connected to&#x2014;in absence of compressed room air facilities&#x2014;the hospital&#x2019;s oxygen supply. Through one tube, dry oxygen flowed, and through the other the oxygen was heated and 100% humidified with the respiratory humidifier. Subsequently, the sample catheter tip was manually switched between both tube lumina.</p>
+        <p>Leakage testing is performed by checking the time required to completely empty a flexible sack that is filled with a well-defined volume of air (1&#xA0;l). This volume is pushed into the sack with a calibration syringe (Jaeger GmbH/VIASYS Healthcare GmbH, Hoechberg, Germany).</p>
+        <p>Environmental temperature and humidity are monitored with the heated humidity and the temperature sensor.</p>
+      </sec>
+    </sec>
+    <sec id="Sec8">
+      <title>Calibration and verification </title>
+      <p>Full calibration of the system was performed with one single sensor beam. However, due to the disposable design of a radiosonde and the possibility of damaging the sensor during the measurements, most likely several sensor beams will be used over time. Therefore, response time behaviour was checked also for a second sensor beam, and the calibration procedure was designed such that these characteristics can be easily determined for a consecutive beam.</p>
+      <sec id="Sec9">
+        <title>Operating temperature</title>
+        <p>Raising the temperatures of the system, and therefore of the humidity sensor, above room temperature, we observed an initial decrease in the response time, but above 40&#xB0;C the response time increased. Therefore 40&#xB0;C was chosen as the operating temperature. At this temperature, the sampled air in the catheter reaches 40&#xB0;C well before arrival in the sensor house, and therefore the influence of breathing temperature variations on sensor temperature is negligible. For measurements at 1&#xA0;cm deep in the trachea the heated part of the tube does not enter the trachea so that artificial heating of the inspired air will not occur.</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Static calibration</title>
+        <p>The temperature of the sensor is kept stable within 0.2&#xB0;C. Therefore the output of the capacitive sensor, which is sensitive for the relative humidity, can be directly converted to absolute humidity. In a climate cabinet (Heraeus Votsch HC7020), the humidity output of the ACE was plotted against a clinically relevant range of absolute humidity values, as measured with the secondary reference sensor, see Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>. Since this relation appeared to be linear, a 2-point calibration is considered appropriate for further frequent humidity calibrations in the hospital. Given the accuracy of the reference sensor and the somewhat limited range between the calibration points to avoid excessive condensation or temperature disequilibrium in the calibration device, the inaccuracy of the system for measuring absolute humidity values after the 2-point calibration is less than 5%.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Output of the humidity sensor plotted against the secondary reference</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig5_HTML" id="MO5"/></fig></p>
+        <p>The thermocouple measuring the temperature at the tip of the sample catheter was 2-point calibrated against the values of the reference thermometer in ice water and water at body temperature. This procedure can be performed in the hospital, prior to every in vivo measurement. Given the accuracy of the reference thermometer, the accuracy of the system for measuring temperature values after a 2-point calibration is 0.3&#xB0;C.</p>
+      </sec>
+      <sec id="Sec11">
+        <title>Assessing the role of condensation in the measuring system</title>
+        <p>In order to assess the necessity of heating the system in order to prevent condense formation within the device, step response measurements were performed with an unheated system and subsequently with the system heated to 40&#xB0;C. With an unheated system, a delay of up to several seconds was observed in the humidity trace relative to the thermocouple trace after a downward step. The longer the sensor is kept in a high humidity environment, this delay increases; and it is indicative of the formation and subsequent evaporation of the condensate within the system. Even when simulating clinically relevant breathing frequencies, a noticeable delay of 0.15&#xA0;s was observed.</p>
+        <p>When measuring high humidity at operating temperature for a long time, after the downward step, a very fast response with a delay of less than 0.05&#xA0;s was observed. This delay is caused by the transport of sampled air from the tip of the catheter towards the humidity sensor and is not relevant for the measurement of end tidal values. In the downward trace this fast response was followed by a shoulder at about 50% of the step, of which the length again increased with the duration at high humidity. This shoulder probably represents the evaporation of the condensate in the unheated tip of the sensor.</p>
+        <p>During in vivo measurements, however, the system will never be exposed to high humidities for an extended period of time. Therefore we simulated a range of breathing frequencies with the two-stream system resulting in a series of block functions of approximately 9, 18, and 35&#xA0;cpm (cycles per minute). At 9&#xA0;cpm a short shoulder is still visible, but the condensate evaporates sufficiently fast that the &#x201C;end-inspiratory&#x201D; value is reached. At 18 and 35&#xA0;cpm no shoulder was observed.</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Raw response time characteristics</title>
+        <p>Using the two-stream system the step response of the ACE was determined. Both for the temperature and the humidity signal we determined the 1&#x2013;1/e response time. For the downward humidity step we could not use a plain step function because condensation in the tip would occur. Therefore we used a block function with a frequency of 18&#xA0;cpm (see Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a). At this frequency the response time is still relatively short compared with the period of the block function and easy to determine from the humidity trace.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Response to a block function; <italic>solid black line</italic> raw humidity trace, <italic>solid grey line</italic> deconvolved humidity trace, <italic>dashed line</italic> thermocouple trace. Vertical axis: &#xB0;C/mg&#xA0;H<sub>2</sub>O/l. Horizontal axis: seconds. <bold>a</bold> Response to a block function of approximately 18 cycles per minute. <bold>b</bold> Overview of the response to a block function with varying frequency (9 to 35&#xA0;cpm)</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig6_HTML" id="MO6"/></fig></p>
+        <p>For the thermocouple, the response to increasing and decreasing temperature steps was &lt;0.2&#xA0;s. For the first humidity sensor, the response to increasing humidity and decreasing humidity was &lt;0.5 and &lt;0.8&#xA0;s, respectively, at a frequency of 18&#xA0;cpm. We verified that the response characteristics at other frequencies were comparable. Both rise and fall times of the second humidity sensor were approximately 60% shorter.</p>
+        <p>The observed raw response times are slightly longer than we had expected based on the specifications of the Vaisala Humidity Sensor, probably because the airflow over the sensor is slower than specified. Although every attempt was made to minimize the volume of the sensor chamber we estimate that the airspeed over the sensor is between 2 and 3&#xA0;m/s instead of 6&#xA0;m/s.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Deconvolution of the humidity signal</title>
+        <p>Since the raw step response times of tested humidity sensors were considered too slow for patients with high breathing frequencies, it was decided to further process the raw humidity signal. Depending on the tested sensor, the raw step response can be closely approximated by a single or a double exponential function. Therefore it is possible to reconstruct the original signal by deconvolution. Although we observed a different response time for increasing and decreasing humidity steps, we nevertheless chose a single function because of its better numerical stability: <disp-formula id="Equa"><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ f(t) = e^{{ - t/\tau _{{}} }} $$\end{document}</tex-math></disp-formula></p>
+        <p>For the removal of excessive noise a low pass filter of &lt;300&#xA0;cpm was applied. Because the raw response characteristics varied in between the humidity sensors and over time, &#x3C4; was adjusted for each individual measurement. The principle of adjustment of these parameters was to acquire a maximal value for &#x3C4;, such that no overshoot of the deconvolved humidity trace was visible. We used the thermocouple signal as reference for the true step function. For the first sensor, the deconvolved signal was stable and optimal for increasing humidity with &#x3C4;&#xA0;=&#xA0;0.4&#xA0;s. For the second humidity sensor a &#x3C4; of 0.1&#xA0;s appeared to be appropriate. We verified that the raw step response characteristics were reproducible, and that the deconvolution results were not influenced by the step size.</p>
+        <p>After deconvolution of the humidity signal, the response characteristics improved, see Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a. The 1&#x2013;1/e step response time to a block function for the first humidity sensor was &lt;0.2&#xA0;s for increasing humidity and &lt;0.4&#xA0;s for decreasing humidity at a frequency of 18&#xA0;cpm. For the second sensor the deconvolved step response characteristics were similar after deconvolution.</p>
+        <p>Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>b shows the raw and deconvolved humidity response to a block function over a range of breathing frequencies. It is shown that the frequency dependence of the peak-to-peak values is reduced after deconvolution. At higher frequencies, we nevertheless see that the deconvolved signal increasingly deviates from the true peak-to-peak values. This deviation is more marked in the lower peak, due to the relatively long humidity fall time of the raw trace, compared to the rise time. The magnitude of the deviation in the lower peak ranges from about 1.5&#xA0;mg&#xA0;H<sub>2</sub>O/l at a breathing frequency of 9&#xA0;cpm to 5&#xA0;mg&#xA0;H<sub>2</sub>O/l at 35&#xA0;cpm. Since the step response characteristics of the deconvolved signal were comparable for both tested sensors, the deviations are of comparable magnitude too.</p>
+        <p>At 35&#xA0;cpm even the amplitude of the fast thermocouple signal does not reach the true peak-to-peak values. The deviation is less than 0.5&#xB0;C so that we do not consider a correction necessary for the thermocouple signal.</p>
+      </sec>
+      <sec id="Sec14">
+        <title>The in vivo measurement</title>
+        <p>The total assembly and the influence of a heat and moisture exchanger were tested in one laryngectomized volunteer. The tip of the sample catheter was pushed 1&#xA0;cm through a small hole that was punched in an HME plaster (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>). The diameter of the puncture was slightly smaller than the diameter of the sample catheter in order to avoid air leakage. Figure&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> shows a segment of the raw and deconvolved humidity trace and the thermocouple signal. In this particular volunteer &#x3C4; required adjustment to 0.35 in order to eliminate overshoot. During breathing in rest, intra airway temperature and humidity ranged from 28/34&#xB0;C and 15/37&#xA0;mg&#xA0;H<sub>2</sub>O/l (typical end inspiratory/end expiratory values), respectively<italic>.</italic> During the total measurement session, breathing frequency ranged from 12 to 44&#xA0;cpm (mean 17.8&#xA0;cpm, SD 4.4&#xA0;cpm). In addition, inspiration time may be relatively short compared to expiration time. See the beginning of the trace in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Sample catheter in situ, pushed through a punched hole in the HME plaster, without HME filter in situ</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig7_HTML" id="MO7"/></fig><fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>In vivo humidity trace before and after deconvolution; <italic>black trace</italic> raw humidity signal, <italic>grey trace</italic> deconvolved humidity signal. Vertical axis: mg&#xA0;H<sub>2</sub>O/l. Horizontal axis: seconds</p></caption><graphic position="anchor" xlink:href="11517_2007_217_Fig8_HTML" id="MO8"/></fig></p>
+      </sec>
+    </sec>
+    <sec id="Sec15" sec-type="discussion">
+      <title>Discussion</title>
+      <p>Our results show that we have succeeded in developing an intra-tracheal airway climate analyser with response characteristics fast enough for assessment of end tidal intra airway temperature and humidity variations during normal breathing in laryngectomized individuals. In the literature, only a few systems have been described that simultaneously measure temperature and humidity in the human airway [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR8">8</xref>, <xref ref-type="bibr" rid="CR10">10</xref>, <xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR14">14</xref>].</p>
+      <p>Ingelstedt [<xref ref-type="bibr" rid="CR6">6</xref>] reported on intra airway climate in healthy individuals using a well- validated system based on psychrometry, with signal stability 0.3&#x2013;0.4&#xA0;s after sudden exposure to increased humidity. However, this method had a few disadvantages. The wet thermo element remained sufficiently moistened for only 5&#x2013;8 respiratory cycles, after which it had to be retracted in order to be watered by a moistened wick again. Furthermore, even the slightest contact with tracheal secretion increased the thermal inertia of the psychrometer, after which it has to be cleaned in a 4-h lasting procedure.</p>
+      <p>Although contact of the humidity sensor of the ACE by tracheal secretion is less likely, the central canal of the sample catheter is susceptible to obstruction by tracheal secretion. When this would occur, the sample catheter can be disconnected from the sensor house and subsequently the obstructive plug can be removed by establishing reversed airflow. The electrodes in the bottom of the droplet interceptor appeared to work effectively. If the humidity sensor would be damaged, it can easily be replaced. Due to the &#x201C;in hospital&#x201D; calibration procedures, the measurements can be continued within a relatively short time span.</p>
+      <p>The system of Primiano et al. [<xref ref-type="bibr" rid="CR13">13</xref>] consisted of a sample catheter that was connected to a mass spectrometer. In order to prevent condensation, the tip of their sample catheter was constricted, establishing a decrease in air pressure. Extensive validation of the total assembly revealed impressive 10&#x2013;90% response time characteristics of less that 0.25&#xA0;s for humidity readings and less than 0.12&#xA0;s for temperature readings, respectively. Since mass flow meters are expensive and require solid maintenance, the use of such a device was not considered feasible for our project. Although their measurement system has been used for assessment of anaesthesiology heat and moisture exchanger effectiveness, we are not aware that this system has been used for airway climate assessment in laryngectomees.</p>
+      <p>McRae et al. [<xref ref-type="bibr" rid="CR10">10</xref>, <xref ref-type="bibr" rid="CR11">11</xref>] and Keck et al. [<xref ref-type="bibr" rid="CR8">8</xref>, <xref ref-type="bibr" rid="CR9">9</xref>] have assessed tracheal climate and the influence of HMEs in laryngectomees. The set up of Keck et al. consisted of a sample catheter, connected to a sensor house that incorporated a capacitive humidity sensor.</p>
+      <p>As described in [<xref ref-type="bibr" rid="CR9">9</xref>] the sensor house was heated with a heat mat to 34&#x2013;35&#xB0;C, which is slightly lower than the maximum end expiratory temperature observed (35.2&#xB0;C) so that condensation still might be a possibility. However, the sample catheter was not heated and the verification of the total assembly has not been included in the report. In the present device, evidence of condensation&#x2014;probably precipitated in the unheated distal 2&#xA0;cm of the catheter tip (which is in vivo somewhat heated by the body) is observed when offering block functions at a frequency of 9&#xA0;cpm. Despite this, at 9&#xA0;cpm the end values were not affected. It is therefore unlikely that also during in vivo measurements condensation will affect the amplitude of the peak-to-peak values. Moreover, the temperature and humidity steps will occur more gradually in the in vivo situation, theoretically decreasing the amount of condense formation in the sensor tip, compared to the offered block function.</p>
+      <p>In the studies by McRae et al. [<xref ref-type="bibr" rid="CR10">10</xref>, <xref ref-type="bibr" rid="CR11">11</xref>], the response time of the humidity sensor used in the setup of McRae was up to 9&#xA0;s. The frequency of human rest breathing is far too high compared to these response characteristics to obtain representative values for intra-tracheal humidity.</p>
+      <p>However, as the two-stream block function experiment has shown, also in the present measuring device, the amplitude of the deconvolved humidity trace depends on the breathing frequency. The clinical implication of this finding is that, at higher breathing frequencies, the true peak-to-peak values are slightly, but progressively underestimated by the ACE, although probably less than in vitro due to more gradual humidity and temperature variation in the latter situation. The variation in end-inspiratory humidity values and temperature signals, as indicated by the deconvolved humidity signal and the thermocouple in the in-vivo experiment may therefore be partially due to a frequency dependency and not due to a real variation in humidity and temperature values.</p>
+      <sec id="Sec16">
+        <title>Quality control</title>
+        <p>The first sensor functioned correctly for 1&#xA0;year and the second for half a year. Both sensors had to be replaced because of accidental damage during cleaning. The two humidity sensors appeared to have different response characteristics. Sensor age, variation in the production process of the humidity sensor etc. may result in variation between the characteristics of different humidity sensors, but also between the characteristics of one sensor measured over time. Linearity between reference humidity values and sensor output in all consecutive sensors is felt to be a prerequisite for serial production of radiosondes. The small climate room and the 2-point calibration is therefore considered appropriate for daily quality control. A potential source of error is leakage of air, causing dilution of sampled tracheal air with room air. Therefore the simple leakage test should be part of the regular quality control.</p>
+        <p>Although both tested humidity sensors revealed the different step response times of the raw humidity signal, the peak-to-peak amplitude of deconvolved signal was comparable between both sensors. The two-stream step response set up facilitates regular control of the sensor response characteristics and, if necessary, adjustment of the deconvolution function can be easily performed.</p>
+      </sec>
+      <sec id="Sec17">
+        <title>Limitations and further improvements</title>
+        <p>During measurements deeper in the trachea (e.g. 4&#xA0;cm), contact of the catheter tip with the airway wall may lead to irresistible cough. Preferably the distal end of the sample catheter should be better pliable in the shape of the trachea, in order to facilitate better control of its tip and reducing airway wall contact. Also visual control of the catheter tip may contribute to prevention of wall contact.</p>
+        <p>The response of the sensor when decreasing the humidity is slower than the response to increasing humidity. However, the same simple deconvolution function is used for increasing and decreasing humidity. A more advanced signal processing might further improve response characteristics and decrease the remaining frequency dependence of the peak tot peak amplitude. In particular for the end-inspiratory values this is important because of the relatively short time span of the inspiration time compared to the expiration time, combined with the relatively slow response characteristics to decreased humidity compared to increased humidity.</p>
+        <p>In conclusion, the Airway Climate Explorer is an easy to use, relatively inexpensive tool for intra airway temperature and humidity measurements. When looking at the end-inspiratory and end-expiratory humidity values as measured by our system, the accuracy is adequate for assessment of intratracheal climate.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We are greatly indebted to the Michel Keijzer Foundation, under auspices of the Dutch Laryngectomee Society (NSVG), for their financial support of the pulmonary rehabilitation project. Part of the research has been conducted under the unrestricted research grant of Atos Medical, Sweden. We gratefully acknowledge Ruud Voorn, Frits de Vries and Iwan Dobbe of the Medical Technological Development department of the Academic Medical Center, University of Amsterdam, for helpful technical discussions. The Laboratory of Electronic Instrumentation, Delft University of Technology, is acknowledged for allowing us to make use of their climate cabinet.</p>
+    </ack>
+    <app-group>
+      <app id="App1">
+        <title>Appendix: Principles of the electronic design (see also Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>):</title>
+        <sec id="Sec19">
+          <title>Humidity measurement</title>
+          <p>The electrical capacitance of the radiosonde sensor dielectricum changes with humidity. In order to detect these changes it was chosen to use the capacitance as the frequency determining component in a relaxation oscillator [<xref ref-type="bibr" rid="CR2">2</xref>, <xref ref-type="bibr" rid="CR3">3</xref>]. A change in humidity results in a change of the oscillator output frequency. The oscillation frequency is converted to a DC-signal for further processing by a personal computer.</p>
+        </sec>
+        <sec id="Sec20">
+          <title>Temperature and heat control</title>
+          <p>A copper wire in the sensor tube and a PT1000 element in the sensor house serve as thermistor elements. The thermistor elements continuously measure the temperature. A completely analogue temperature controller from the proportional-integrating-differentiating (PID) type is used to power the heater until the set temperature has been reached. By using a PID-type controller interference from the heater to the humidity sensor is prevented because no switching action takes place.</p>
+        </sec>
+      </app>
+    </app-group>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ackerstaff</surname>
+              <given-names>AH</given-names>
+            </name>
+            <name>
+              <surname>Fuller</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Irvin</surname>
+              <given-names>M</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Multicenter study assessing effects of heat and moisture exchanger use on respiratory symptoms and voice quality in laryngectomized individuals</article-title>
+          <source>Otolaryngol Head Neck Surg</source>
+          <year>2003</year>
+          <volume>129</volume>
+          <fpage>705</fpage>
+          <lpage>712</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0194-5998(03)01595-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ackerstaff AH, Fuller D, Irvin M et al (2003) Multicenter study assessing effects of heat and moisture exchanger use on respiratory symptoms and voice quality in laryngectomized individuals. Otolaryngol Head Neck Surg 129:705&#x2013;712 <pub-id pub-id-type="pmid">14663439</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="other">Franco S (2002) Design with operational amplifiers and analog integrated circuits. Third, McGraw-Hill, pp 471&#x2013;472</citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="other">Graeme JG (1973) Applications of operational amplifiers, third generation techniques. First, McGraw-Hill, pp 158&#x2013;161</citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hilgers</surname>
+              <given-names>FJ</given-names>
+            </name>
+            <name>
+              <surname>Aaronson</surname>
+              <given-names>NK</given-names>
+            </name>
+            <name>
+              <surname>Ackerstaff</surname>
+              <given-names>AH</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The influence of a heat and moisture exchanger (HME) on the respiratory symptoms after total laryngectomy</article-title>
+          <source>Clin Otolaryngol</source>
+          <year>1991</year>
+          <volume>16</volume>
+          <fpage>152</fpage>
+          <lpage>156</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hilgers FJ, Aaronson NK, Ackerstaff AH et al (1991) The influence of a heat and moisture exchanger (HME) on the respiratory symptoms after total laryngectomy. Clin Otolaryngol 16:152&#x2013;156 <pub-id pub-id-type="pmid">2070531</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hilgers</surname>
+              <given-names>FJ</given-names>
+            </name>
+            <name>
+              <surname>Ackerstaff</surname>
+              <given-names>AH</given-names>
+            </name>
+            <name>
+              <surname>Aaronson</surname>
+              <given-names>NK</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Physical and psychosocial consequences of total laryngectomy</article-title>
+          <source>Clin Otolaryngol</source>
+          <year>1990</year>
+          <volume>15</volume>
+          <fpage>421</fpage>
+          <lpage>425</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hilgers FJ, Ackerstaff AH, Aaronson NK et al (1990) Physical and psychosocial consequences of total laryngectomy. Clin Otolaryngol 15:421&#x2013;425 <pub-id pub-id-type="pmid">2282704</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ingelstedt</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Studies on the conditioning of air in the respiratory tract</article-title>
+          <source>Acta Otolaryngol</source>
+          <year>1956</year>
+          <volume>56</volume>
+          <fpage>1</fpage>
+          <lpage>80</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ingelstedt S (1956) Studies on the conditioning of air in the respiratory tract. Acta Otolaryngol 56:1&#x2013;80 </citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jones</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Young</surname>
+              <given-names>PE</given-names>
+            </name>
+            <name>
+              <surname>Hanafi</surname>
+              <given-names>ZB</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A study of the effect of a resistive heat moisture exchanger (trachinaze) on pulmonary function and blood gas tensions in patients who have undergone a laryngectomy: a randomized control trial of 50 patients studied over a 6-month period</article-title>
+          <source>Head Neck</source>
+          <year>2003</year>
+          <volume>25</volume>
+          <fpage>361</fpage>
+          <lpage>367</lpage>
+          <pub-id pub-id-type="doi">10.1002/hed.10264</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jones AS, Young PE, Hanafi ZB et al (2003) A study of the effect of a resistive heat moisture exchanger (trachinaze) on pulmonary function and blood gas tensions in patients who have undergone a laryngectomy: a randomized control trial of 50 patients studied over a 6-month period. Head Neck 25:361&#x2013;367 <pub-id pub-id-type="pmid">12692872</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Keck</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Durr</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Leiacker</surname>
+              <given-names>R</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Tracheal climate in laryngectomees after use of a heat and moisture exchanger</article-title>
+          <source>Laryngoscope</source>
+          <year>2005</year>
+          <volume>115</volume>
+          <fpage>534</fpage>
+          <lpage>537</lpage>
+          <pub-id pub-id-type="doi">10.1097/01.MLG.0000150417.51835.4F</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Keck T, Durr J, Leiacker R et al (2005) Tracheal climate in laryngectomees after use of a heat and moisture exchanger. Laryngoscope 115:534&#x2013;537 <pub-id pub-id-type="pmid">15744172</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Liener</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Durr</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Leiacker</surname>
+              <given-names>R</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Measurement of tracheal humidity and temperature</article-title>
+          <source>Respiration</source>
+          <year>2006</year>
+          <volume>73</volume>
+          <fpage>324</fpage>
+          <lpage>328</lpage>
+          <pub-id pub-id-type="doi">10.1159/000088659</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Liener K, Durr J, Leiacker R et al (2006) Measurement of tracheal humidity and temperature. Respiration 73:324&#x2013;328 <pub-id pub-id-type="pmid">16195655</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McRae</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Young</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Hamilton</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Raising airway resistance in laryngectomees increases tissue oxygen saturation</article-title>
+          <source>Clin Otolaryngol</source>
+          <year>1996</year>
+          <volume>21</volume>
+          <fpage>366</fpage>
+          <lpage>368</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">McRae D, Young P, Hamilton J et al (1996) Raising airway resistance in laryngectomees increases tissue oxygen saturation. Clin Otolaryngol 21:366&#x2013;368 <pub-id pub-id-type="pmid">8889308</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McRae</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Young</surname>
+              <given-names>P</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Resistance, humidity and temperature of the tracheal airway</article-title>
+          <source>Clin Otolaryngol</source>
+          <year>1995</year>
+          <volume>20</volume>
+          <fpage>355</fpage>
+          <lpage>356</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">McRae RD, Jones AS, Young P et al (1995) Resistance, humidity and temperature of the tracheal airway. Clin Otolaryngol 20:355&#x2013;356 <pub-id pub-id-type="pmid">8548971</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Muller</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Beekman</surname>
+              <given-names>PJ</given-names>
+            </name>
+          </person-group>
+          <article-title>A test of commercial humidity sensors for use at automatic weather stations</article-title>
+          <source>J Appl Meteorol</source>
+          <year>1987</year>
+          <volume>4</volume>
+          <fpage>731</fpage>
+          <lpage>735</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Muller SH, Beekman PJ (1987) A test of commercial humidity sensors for use at automatic weather stations. J Appl Meteorol 4:731&#x2013;735 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Primiano</surname>
+              <given-names>FP</given-names>
+            </name>
+            <name>
+              <surname>Montague</surname>
+              <given-names>FW</given-names>
+            </name>
+            <name>
+              <surname>Saidel</surname>
+              <given-names>GM</given-names>
+            </name>
+          </person-group>
+          <article-title>Measurement system for respiratory water vapor and temperature dynamics</article-title>
+          <source>J Appl Physiol</source>
+          <year>1984</year>
+          <volume>56</volume>
+          <fpage>1679</fpage>
+          <lpage>1685</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Primiano FP Jr, Montague FW Jr, Saidel GM (1984) Measurement system for respiratory water vapor and temperature dynamics. J Appl Physiol 56:1679&#x2013;1685 <pub-id pub-id-type="pmid">6735828</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rouadi</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Baroody</surname>
+              <given-names>FM</given-names>
+            </name>
+            <name>
+              <surname>Abbott</surname>
+              <given-names>D</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A technique to measure the ability of the human nose to warm and humidify air</article-title>
+          <source>J Appl Physiol</source>
+          <year>1999</year>
+          <volume>87</volume>
+          <fpage>400</fpage>
+          <lpage>406</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Rouadi P, Baroody FM, Abbott D et al (1999) A technique to measure the ability of the human nose to warm and humidify air. J Appl Physiol 87:400&#x2013;406 <pub-id pub-id-type="pmid">10409601</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Seakins</surname>
+              <given-names>PJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Measuring temperature and humidity in the breathing circuit</article-title>
+          <source>Respir Care Clin N Am</source>
+          <year>1998</year>
+          <volume>4</volume>
+          <fpage>229</fpage>
+          <lpage>242</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Seakins PJ (1998) Measuring temperature and humidity in the breathing circuit. Respir Care Clin N Am 4:229&#x2013;242 <pub-id pub-id-type="pmid">9648184</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zuur</surname>
+              <given-names>JK</given-names>
+            </name>
+            <name>
+              <surname>Muller</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Jongh</surname>
+              <given-names>FH</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The physiological rationale of heat and moisture exchangers in post-laryngectomy pulmonary rehabilitation: a review</article-title>
+          <source>Eur Arch Otorhinolaryngol</source>
+          <year>2006</year>
+          <volume>263</volume>
+          <fpage>1</fpage>
+          <lpage>8</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00405-005-0969-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zuur JK, Muller SH, de Jongh FH et al (2006) The physiological rationale of heat and moisture exchangers in post-laryngectomy pulmonary rehabilitation: a review. Eur Arch Otorhinolaryngol 263:1&#x2013;8 <pub-id pub-id-type="pmid">16001247</pub-id></citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p>Financial support: (Unrestricted) research grants of the Michel Keijzer Foundation of the Dutch Laryngectomee Society, and of ATOS Medical AB, Sweden.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

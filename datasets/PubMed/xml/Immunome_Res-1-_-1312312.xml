@@ -1,0 +1,1874 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Immunome Res</journal-id>
+      <journal-title>Immunome Research</journal-title>
+      <issn pub-type="epub">1745-7580</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">16305737</article-id>
+      <article-id pub-id-type="pmc">1312312</article-id>
+      <article-id pub-id-type="publisher-id">1745-7580-1-3</article-id>
+      <article-id pub-id-type="doi">10.1186/1745-7580-1-3</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>IMGT, the international ImMunoGeneTics information system<sup>&#xAE;</sup>: a standardized approach for immunogenetics and immunoinformatics</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Lefranc</surname>
+            <given-names>Marie-Paule</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>lefranc@ligm.igh.cnrs.fr</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>IMGT, the international ImMunoGeneTics information system<sup>&#xAE;</sup>, Universit&#xE9; Montpellier II, Institut Universitaire de France, Laboratoire d'ImmunoG&#xE9;n&#xE9;tique Mol&#xE9;culaire LIGM, UPR CNRS 1142, Institut de G&#xE9;n&#xE9;tique Humaine IGH, 141 rue de la Cardonille, 34396 Montpellier Cedex 5, France</aff>
+      <pub-date pub-type="collection">
+        <year>2005</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>20</day>
+        <month>9</month>
+        <year>2005</year>
+      </pub-date>
+      <volume>1</volume>
+      <fpage>3</fpage>
+      <lpage>3</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.immunome-research.com/content/1/1/3"/>
+      <history>
+        <date date-type="received">
+          <day>21</day>
+          <month>6</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>20</day>
+          <month>9</month>
+          <year>2005</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2005 Lefranc; licensee BioMed Central Ltd.</copyright-statement>
+        <copyright-year>2005</copyright-year>
+        <copyright-holder>Lefranc; licensee BioMed Central Ltd.</copyright-holder>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/2.0">
+          <p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/2.0"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</p>
+          <!--<rdf xmlns="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1" xmlns:dcterms="http://purl.org/dc/terms"><Work xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" rdf:about=""><license rdf:resource="http://creativecommons.org/licenses/by/2.0"/><dc:type rdf:resource="http://purl.org/dc/dcmitype/Text"/><dc:author>
+               Lefranc
+               Marie-Paule
+               
+               lefranc@ligm.igh.cnrs.fr
+            </dc:author><dc:title>
+            IMGT, the international ImMunoGeneTics information system&#x000ae;: a standardized approach for immunogenetics and immunoinformatics
+         </dc:title><dc:date>2005</dc:date><dcterms:bibliographicCitation>Immunome Research 1(1): 3-. (2005)</dcterms:bibliographicCitation><dc:identifier type="sici">1745-7580(2005)1:1&#x0003c;3&#x0003e;</dc:identifier><dcterms:isPartOf>urn:ISSN:1745-7580</dcterms:isPartOf><License rdf:about="http://creativecommons.org/licenses/by/2.0"><permits rdf:resource="http://web.resource.org/cc/Reproduction" xmlns=""/><permits rdf:resource="http://web.resource.org/cc/Distribution" xmlns=""/><requires rdf:resource="http://web.resource.org/cc/Notice" xmlns=""/><requires rdf:resource="http://web.resource.org/cc/Attribution" xmlns=""/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" xmlns=""/></License></Work></rdf>-->
+        </license>
+      </permissions>
+      <abstract>
+        <p><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr">IMGT, the international ImMunoGeneTics information system<sup>&#xAE;</sup></ext-link><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/>, was created in 1989 by the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTinformation/LIGM.html">Laboratoire d'ImmunoG&#xE9;n&#xE9;tique Mol&#xE9;culaire (LIGM)</ext-link> (Universit&#xE9; Montpellier II and CNRS) at Montpellier, France. IMGT is a high quality integrated knowledge resource specialized in immunoglobulins (IG), T cell receptors (TR), major histocompatibility complex (MHC) of human and other vertebrates, and related proteins of the immune system (RPI) of any species which belong to the immunoglobulin superfamily (IgSF) and to the MHC superfamily (MhcSF). IMGT consists of five databases, ten on-line tools and more than 8,000 HTML pages of Web resources. IMGT provides a common access to standardized data from genome, genetics, proteome and three-dimensional structures. The accuracy and the consistency of IMGT data are based on IMGT-ONTOLOGY, a semantic specification of terms to be used in immunogenetics and immunoinformatics. IMGT-ONTOLOGY comprises six main concepts: <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Identification.html">IDENTIFICATION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Classification.html">CLASSIFICATION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Description.html">DESCRIPTION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Numerotation.html">NUMEROTATION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Orientation.html">ORIENTATION</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Obtention.html">OBTENTION</ext-link>. Based on these concepts, the controlled vocabulary and the annotation rules necessary for the immunogenetics data identification, classification, description and numbering and for the management of IMGT knowledge are defined in the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTScientificChart/">IMGT Scientific chart</ext-link>. IMGT is the international reference in immunogenetics and immunoinformatics for medical research (repertoire analysis of the IG antibody sites and of the TR recognition sites in autoimmune and infectious diseases, AIDS, leukemias, lymphomas, myelomas), veterinary research (IG and TR repertoires in farm and wild life species), genome diversity and genome evolution studies of the adaptive immune responses, biotechnology related to antibody engineering (single chain Fragment variable (scFv), phage displays, combinatorial libraries, chimeric, humanized and human antibodies), diagnostics (detection and follow up of residual diseases) and therapeutical approaches (grafts, immunotherapy, vaccinology). IMGT is freely available at <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/>.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>IMGT</kwd>
+        <kwd>antibody</kwd>
+        <kwd>immunoglobulin</kwd>
+        <kwd>T cell receptor</kwd>
+        <kwd>superfamily</kwd>
+        <kwd>MHC</kwd>
+        <kwd>HLA</kwd>
+        <kwd>ontology</kwd>
+        <kwd>database</kwd>
+        <kwd>information system</kwd>
+        <kwd>knowledge resource</kwd>
+        <kwd>immunoinformatics</kwd>
+        <kwd>immunogenetics</kwd>
+        <kwd>Collier de Perles</kwd>
+        <kwd>three-dimensional</kwd>
+        <kwd>3D structure</kwd>
+        <kwd>polymorphism</kwd>
+        <kwd>annotation</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Introduction</title>
+      <p><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr">IMGT, the international ImMunoGeneTics information system<sup>&#xAE;</sup></ext-link><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/>[<xref ref-type="bibr" rid="B1">1</xref>,<xref ref-type="bibr" rid="B2">2</xref>], was created in 1989, by <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTinformation/CVMPL.html">Marie-Paule Lefranc</ext-link>, at the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTinformation/LIGM.html">Laboratoire d'ImmunoG&#xE9;n&#xE9;tique Mol&#xE9;culaire (LIGM)</ext-link> (Universit&#xE9; Montpellier II and CNRS) at Montpellier, France, in order to standardize and manage the complexity of the immunogenetics data. Fifteen years later, IMGT is the international reference in immunogenetics and immunoinformatics, and provides a high quality integrated knowledge resource, specialized in the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/antibodies.html">immunoglobulins (IG)</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/TR.html">T cell receptors (TR)</ext-link>, major histocompatibility complex (<ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/MHC.html">MHC</ext-link>) of human and other vertebrates, and related proteins of the immune systems (<ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/RPI.html">RPI</ext-link>) of any species which belong to the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/superfamily.html">immunoglobulin superfamily (IgSF)</ext-link> and to the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/superfamily.html">MHC superfamily (MhcSF)</ext-link>[<xref ref-type="bibr" rid="B3">3</xref>-<xref ref-type="bibr" rid="B13">13</xref>]. The number of potential protein forms of the antigen receptors, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/antibodies.html">IG</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/TR.html">TR</ext-link>, is almost unlimited. The potential repertoire of each individual is estimated to comprise about 10<sup>12 </sup>different IG (or antibodies) and TR, and the limiting factor is only the number of B and T cells that an organism is genetically programmed to produce. This huge diversity is inherent to the particularly complex and unique <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/synthese.html">molecular synthesis</ext-link> and genetics of the antigen receptor chains. This includes biological mechanisms such as DNA molecular rearrangements in multiple loci (three for IG and four for TR in humans) located on different chromosomes (four in humans), nucleotide deletions and insertions at the rearrangement junctions (or N-diversity), and somatic hypermutations in the IG loci (see <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/factsbook.html">FactsBooks</ext-link>[<xref ref-type="bibr" rid="B3">3</xref>,<xref ref-type="bibr" rid="B4">4</xref>] for review). Although IMGT was initially implemented for the IG, TR and MHC of human and other vertebrates [<xref ref-type="bibr" rid="B6">6</xref>], data and knowledge management standardization, based on the IMGT unique numbering [<xref ref-type="bibr" rid="B14">14</xref>-<xref ref-type="bibr" rid="B19">19</xref>], has now been extended to the IgSF [<xref ref-type="bibr" rid="B15">15</xref>-<xref ref-type="bibr" rid="B17">17</xref>,<xref ref-type="bibr" rid="B20">20</xref>-<xref ref-type="bibr" rid="B22">22</xref>] and MhcSF [<xref ref-type="bibr" rid="B18">18</xref>,<xref ref-type="bibr" rid="B23">23</xref>,<xref ref-type="bibr" rid="B24">24</xref>] of any species. Thus, standardization in IMGT contributed to data enhancement of the system and new expertised data concepts were readily incorporated.</p>
+      <p><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr">IMGT, the international ImMunoGeneTics information system<sup>&#xAE;</sup></ext-link> consists of five databases, ten on-line tools and Web resources [<xref ref-type="bibr" rid="B1">1</xref>,<xref ref-type="bibr" rid="B2">2</xref>]. Databases include sequence databases (IMGT/LIGM-DB, IMGT/PRIMER-DB and IMGT/MHC-DB), one genome database (IMGT/GENE-DB) and one three-dimensional (3D) structure database (IMGT/3Dstructure-DB) [<xref ref-type="bibr" rid="B1">1</xref>,<xref ref-type="bibr" rid="B2">2</xref>] (Figure <xref ref-type="fig" rid="F1">1</xref>). Interactive tools are provided for sequence analysis (IMGT/V-QUEST, IMGT/JunctionAnalysis, IMGT/Allele-Align, IMGT/PhyloGene), genome analysis (IMGT/LocusView, IMGT/GeneView, IMGT/GeneSearch, IMGT/CloneSearch and IMGT/GeneInfo) and 3D structure analysis (IMGT/StructuralQuery) [<xref ref-type="bibr" rid="B1">1</xref>,<xref ref-type="bibr" rid="B2">2</xref>] (Figure <xref ref-type="fig" rid="F1">1</xref>). Web resources ("IMGT Marie-Paule page") comprise more than 8,000 HTML pages of synthesis [IMGT Repertoire (for IG and TR, MHC, RPI)], knowledge [IMGT Scientific chart, IMGT Education (IMGT Lexique, Aide-m&#xE9;moire, Tutorials, Questions and answers), IMGT Medical page, IMGT Veterinary page, IMGT Biotechnology page, IMGT Index], and external links [IMGT Immunoinformatics page, IMGT Bloc-notes (Interesting links, etc.) and IMGT other accesses (SRS, BLAST, etc.)] [<xref ref-type="bibr" rid="B2">2</xref>]. Despite the heterogeneity of these different components, all data in the IMGT information system are expertly annotated. The accuracy, the consistency and the integration of the IMGT data, as well as the coherence between the different IMGT components (databases, tools and Web resources) are based on <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/ontology.html">IMGT-ONTOLOGY</ext-link>[<xref ref-type="bibr" rid="B5">5</xref>], which provides a semantic specification of the terms to be used in immunogenetics and immunoinformatics. IMGT-ONTOLOGY, the first ontology in the domain, has allowed the management of knowledge in immunogenetics [<xref ref-type="bibr" rid="B2">2</xref>,<xref ref-type="bibr" rid="B25">25</xref>] and provided standardization for immunogenetics data from genome, genetics, proteome and 3D structures [<xref ref-type="bibr" rid="B3">3</xref>-<xref ref-type="bibr" rid="B13">13</xref>]. IMGT-ONTOLOGY concepts are available, for the biologists and IMGT users, in the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTScientificChart/">IMGT Scientific chart</ext-link>[<xref ref-type="bibr" rid="B2">2</xref>], and for the computing scientists, in <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGT-ML.html">IMGT-ML</ext-link> which uses XML (eXtensible Markup Language) Schema [<xref ref-type="bibr" rid="B26">26</xref>].</p>
+      <fig position="float" id="F1">
+        <label>Figure 1</label>
+        <caption>
+          <p>IMGT, the international ImMunoGeneTics information system<sup>&#xAE; </sup><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/>. Databases and tools for sequences, genes and structures are in green, yellow and blue, respectively. The IMGT Repertoire and other Web resources are not shown. Interactions in the genetics, genomics and structural approaches are represented with dotted, continuous and broken lines, respectively.</p>
+        </caption>
+        <graphic xlink:href="1745-7580-1-3-1"/>
+      </fig>
+      <sec>
+        <title>IMGT-ONTOLOGY concepts and IMGT Scientific chart rules</title>
+        <p>The <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTScientificChart/">IMGT Scientific chart</ext-link>[<xref ref-type="bibr" rid="B2">2</xref>] comprises the controlled vocabulary and the annotation rules necessary for the immunogenetics data identification, description, classification and numbering and for knowledge management in the IMGT information system. Standardized keywords, labels and annotation rules, standardized IG and TR gene nomenclature, the IMGT unique numbering, and standardized origin/methodology were defined, respectively, based on the six main concepts of IMGT-ONTOLOGY: <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Identification.html">IDENTIFICATION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Classification.html">CLASSIFICATION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Description.html">DESCRIPTION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Numerotation.html">NUMEROTATION</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Orientation.html">ORIENTATION</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Obtention.html">OBTENTION</ext-link>[<xref ref-type="bibr" rid="B2">2</xref>,<xref ref-type="bibr" rid="B5">5</xref>] (Table <xref ref-type="table" rid="T1">1</xref>). The IMGT Scientific chart is available as a section of the IMGT Web resources (<ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/">IMGT Marie-Paule page</ext-link>). Examples of IMGT expertised data concepts derived from the IMGT Scientific chart rules are shown in Table <xref ref-type="table" rid="T1">1</xref>.</p>
+        <table-wrap position="float" id="T1">
+          <label>Table 1</label>
+          <caption>
+            <p>IMGT-ONTOLOGY concepts, IMGT Scientific chart rules and examples of IMGT expertised data concepts.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/ontology.html">IMGT-ONTOLOGY</ext-link> main concepts 5</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTchart.html">IMGT Scientific chart</ext-link> rules [2]</td>
+                <td align="left">Examples of IMGT expertised data concepts [2]</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Identification.html">IDENTIFICATION</ext-link>
+                </td>
+                <td align="left">Standardized <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/keywords.html">keywords</ext-link> [5]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/species.html">Species</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Molecule.html">molecule type</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/receptor.html">receptor type</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/chain.html">chain type</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Genetype.html">gene type</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/structuretype.html">structure</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/functionality.html">functionality</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/specificity.html">specificity</ext-link></td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Classification.html">CLASSIFICATION</ext-link>
+                </td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/reference.html">Reference sequences</ext-link><break/>Standardized IG and TR gene <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/nomenclature.html">nomenclature</ext-link> (<ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/group.html">group</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/subgroup.html">subgroup</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/gene.html">gene</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/allele.html">allele</ext-link>) [5]</td>
+                <td align="left">Nomenclature of the human IG and TR genes (entry in 1999 in GDB, HGNC [27] and LocusLink at NCBI) [3, 4]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/AlleleAlignments.html">Alignment of alleles</ext-link> [3, 4]<break/>Nomenclature of the IG and TR genes of all vertebrate species</td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Description.html">DESCRIPTION</ext-link>
+                </td>
+                <td align="left">Standardized <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/labels.html">labels</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/annotations.html">annotations</ext-link> [5]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Core.html">Core</ext-link> (V-, D-, J-, C-REGION) <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/prototypes.html">Prototypes</ext-link> [5]<break/>Labels for sequences<break/>Labels for <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/structure.html">2D and 3D structures</ext-link></td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Numerotation.html">NUMEROTATION</ext-link>
+                </td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/numbering.html">IMGT unique numbering</ext-link> [14-18] for: <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTScientificChart/Numbering/IMGTIGVLsuperfamily.html">V- and V-LIKE-DOMAINs</ext-link> [16]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTScientificChart/Numbering/IMGTIGVCsuperfamily.html">C- and C-LIKE-DOMAINs</ext-link> [17]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTScientificChart/Numbering/IMGTGsuperfamily.html">G- and G-LIKE-DOMAINs</ext-link> [18]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/ProteinDisplays.html">Protein displays</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Colliers.html">IMGT Colliers de Perles</ext-link> [19]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/FR.html">FR-IMGT</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/CDR.html">CDR-IMGT</ext-link> delimitations [16]<break/>Structural loops and beta strands delimitations [16, 17]</td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Orientation.html">ORIENTATION</ext-link>
+                </td>
+                <td align="left">Orientation of genomic instances relative to each other</td>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/genomicOrientation.html">Chromosome orientation</ext-link>
+                  <break/>
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/genomicOrientation.html">Locus orientation</ext-link>
+                  <break/>
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/genomicOrientation.html">Gene orientation</ext-link>
+                  <break/>
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/dnaStrand.html">DNA strand orientation</ext-link>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/Obtention.html">OBTENTION</ext-link>
+                </td>
+                <td align="left">Standardized origin<break/>Standardized methodology [2]</td>
+                <td/>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>The IMGT Scientific chart rules, based on the IMGT-ONTOLOGY concepts [<xref ref-type="bibr" rid="B5">5</xref>], are used in the three major IMGT biological approaches, genomics, genetics and structural approaches [<xref ref-type="bibr" rid="B2">2</xref>], and corresponding data (Genes, Sequences, 3D structures) are available in the IMGT components (databases, tools and Web resources) [<xref ref-type="bibr" rid="B1">1</xref>,<xref ref-type="bibr" rid="B7">7</xref>-<xref ref-type="bibr" rid="B13">13</xref>].</p>
+      </sec>
+      <sec>
+        <title>IMGT sequence databases, tools and Web resources</title>
+        <p>IMGT sequence databases, tools and Web resources correspond to the IMGT genetics approach that refers to the study of genes in relation with their polymorphisms, mutations, expression, specificity and evolution (Table <xref ref-type="table" rid="T2">2</xref>). The IMGT sequence knowledge management and the IMGT genetics approach heavily rely on the DESCRIPTION concept (and particularly on the V-REGION, D-REGION, J-REGION and C-REGION core concepts for the IG and TR), on the CLASSIFICATION concept (gene and allele concepts) and on the NUMEROTATION concept (IMGT unique numbering [<xref ref-type="bibr" rid="B14">14</xref>-<xref ref-type="bibr" rid="B18">18</xref>]).</p>
+        <table-wrap position="float" id="T2">
+          <label>Table 2</label>
+          <caption>
+            <p>The IMGT sequence databases, sequence analysis tools and Web resources</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/databases.html">IMGT sequence databases</ext-link> [1]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/tools.html">IMGT sequence analysis tools</ext-link> [1]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTrep.html">IMGT Repertoire</ext-link><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/Proteins/">"Proteins and alleles"</ext-link> section [2](2)</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/LIGM.html">IMGT/LIGM-DB</ext-link> [7]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTprimer-db.html">IMGT/PRIMER-DB</ext-link> [1]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/MHC-DB.html">IMGT/MHC-DB</ext-link> [28]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/dnaplot.html">IMGT/V-QUEST</ext-link> [10]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTJunctionAnalysis.html">IMGT/JunctionAnalysis</ext-link> [11]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTAllele-Align.html">IMGT/Allele-Align</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTPhylogene.html">IMGT/PhyloGene</ext-link> [12]<break/>IMGT/Automat [29, 30] (1)</td>
+                <td align="left">Alignments of alleles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/Proteins/#2">IG and TR</ext-link> [3, 4]<break/>Alignments of alleles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoireRPI/Proteins/#2">RPI</ext-link> [22]<break/>Protein displays <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/Proteins/#1">IG and TR</ext-link> [3, 4, 16, 17]<break/>Protein displays <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoireMHC/Proteins/">MHC</ext-link> [18]<break/>Protein displays <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoireRPI/Proteins/#1">RPI</ext-link> [16-18, 21]<break/>Tables of alleles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/Proteins/#3">IG and TR</ext-link><break/>Tables of alleles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoireRPI/Proteins/#3">RPI</ext-link> [22, 24]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/Proteins/#4">Allotypes Isotypes</ext-link>, etc.</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <p>(1) IMGT/Automat [29, 30] is an integrated internal IMGT Java tool which automatically performs the annotation of rearranged cDNA sequences that represent the half of the IMGT/LIGM-DB content. So far 7,418 human and mouse IG and TR cDNA sequences have been automatically annotated by the IMGT/Automat tool, with annotations being as reliable and accurate as those provided by a human annotator.</p>
+            <p>(2) IMGT publications from the IMGT Repertoire "Proteins and alleles" section are available as pdf in IMGT Locus in Focus <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/imgtfocus.html"/>, in IMGT Index (see also [2]).</p>
+          </table-wrap-foot>
+        </table-wrap>
+        <sec>
+          <title>IMGT sequence databases</title>
+          <sec>
+            <title>IMGT/LIGM-DB</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/IMGTlect.jv?livret=0">IMGT/LIGM-DB</ext-link> is the comprehensive IMGT database of IG and TR nucleotide sequences from human and other vertebrate species, with translation for fully annotated sequences [<xref ref-type="bibr" rid="B7">7</xref>]. It was created in 1989 by LIGM (Montpellier, France), and is on the Web since July 1995 [<xref ref-type="bibr" rid="B6">6</xref>]. In August 2005, IMGT/LIGM-DB contained more than 96,500 sequences of 150 vertebrate species [<xref ref-type="bibr" rid="B7">7</xref>]. The unique source of data for IMGT/LIGM-DB is EMBL, which shares data with the other two generalist databases GenBank and DNA DataBank of Japan (DDBJ). Based on expert analysis, specific detailed annotations are added to IMGT flat files. The annotation procedure includes the IDENTIFICATION of the sequences, the CLASSIFICATION of the IG and TR genes and alleles, and the DESCRIPTION of all IG and TR specific and constitutive motifs within the nucleotide sequences. The Web interface allows searches according to immunogenetic specific criteria and is easy to use without any knowledge in a computing language. Selection is displayed at the top of the resulting sequences pages, so the users can check their own queries. Users have the possibility to modify their request or consult the results with a choice of nine possibilities. The IMGT/LIGM-DB annotations (gene and allele name assignment, labels) allow data retrieval not only from IMGT/LIGM-DB, but also from other IMGT databases. Thus, the IMGT/LIGM-DB accession numbers of the cDNA expressed sequences for each human and mouse IG and TR gene are available, with direct links to IMGT/LIGM-DB, in the IMGT/GENE-DB entries. IMGT/LIGM-DB data are also distributed by anonymous FTP servers at CINES <ext-link ext-link-type="ftp" xlink:href="ftp://ftp.cines.fr/IMGT/"/> and EBI <ext-link ext-link-type="ftp" xlink:href="ftp://ftp.ebi.ac.uk/pub/databases/imgt/"/> and from many Sequence Retrieval System (SRS) sites <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTotheraccesses.html"/>. IMGT/LIGM-DB can be searched by BLAST or FASTA on different servers (EBI, IGH, INFOBIOGEN, Institut Pasteur, etc.).</p>
+          </sec>
+          <sec>
+            <title>IMGT/PRIMER-DB</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/PrimerDB/Query_PrDB.pl?origin=view&amp;Default=ok">IMGT/PRIMER-DB</ext-link>[<xref ref-type="bibr" rid="B1">1</xref>] is the IMGT oligonucleotide primer database for IG and TR, created by LIGM, Montpellier in collaboration with EUROGENTEC S.A., Belgium, on the Web since February 2002. In August 2005, IMGT/PRIMER-DB contained 1,827 entries. IMGT/PRIMER-DB provides standardized information on oligonucleotides (or Primers) and combinations of primers (Sets, Couples) for IG and TR. These primers are useful for combinatorial library constructions, scFv, phage display or microarray technologies. The IMGT Primer cards are linked to the IMGT/LIGM-DB flat files, IMGT Colliers de Perles and IMGT Alignments of alleles (IMGT Repertoire) of the IMGT/LIGM-DB reference sequence used for the primer description.</p>
+          </sec>
+          <sec>
+            <title>IMGT/MHC-DB</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/imgt/">IMGT/MHC-DB</ext-link>[<xref ref-type="bibr" rid="B28">28</xref>] comprises databases hosted at EBI and includes a database of human MHC allele sequences or IMGT/MHC-HLA, developed by Cancer Research UK and maintained by ANRI, London, UK, on the Web since December 1998, and a database of MHC sequences from non human primates IMGT/MHC-NHP, curated by BPRC, The Netherlands, on the Web since April 2002.</p>
+          </sec>
+        </sec>
+        <sec>
+          <title>IMGT sequence analysis tools</title>
+          <p>The IMGT sequence analysis tools comprise <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/vquest/">IMGT/V-QUEST</ext-link>[<xref ref-type="bibr" rid="B10">10</xref>], for the identification of the V, D and J genes and of their mutations, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/IMGTjcta.jv?livret=0">IMGT/JunctionAnalysis</ext-link>[<xref ref-type="bibr" rid="B11">11</xref>] for the analysis of the V-J and V-D-J junctions which confer the antigen receptor specificity, <ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/Allele-Align/align.pl">IMGT/Allele-Align</ext-link> for the detection of polymorphisms, and <ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/phylogene/select.pl">IMGT/PhyloGene</ext-link>[<xref ref-type="bibr" rid="B12">12</xref>] for gene evolution analyses.</p>
+          <sec>
+            <title>IMGT/V-QUEST</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/vquest/">IMGT/V-QUEST</ext-link> (V-QUEry and STandardization) is an integrated software for IG and TR [<xref ref-type="bibr" rid="B10">10</xref>]. This tool, easy to use, analyses an input IG or TR germline or rearranged variable nucleotide sequence. The IMGT/V-QUEST results comprise the identification of the V, D and J genes and alleles and the nucleotide alignments by comparison with sequences from the <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/directory.html">IMGT reference directory</ext-link>, the FR-IMGT and CDR-IMGT delimitations based on the IMGT unique numbering, the translation of the input sequence, the display of nucleotide and amino acid mutations compared to the closest IMGT reference sequence, the identification of the JUNCTION and results from IMGT/JunctionAnalysis (default option), and the two-dimensional (2D) IMGT Collier de Perles representation of the V-REGION [<xref ref-type="bibr" rid="B10">10</xref>] ("IMGT/V-QUEST output" in <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/vquest/imgtdnaplot.html">IMGT/V-QUEST Documentation</ext-link>).</p>
+          </sec>
+          <sec>
+            <title>IMGT/JunctionAnalysis</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/IMGTjcta.jv?livret=0">IMGT/JunctionAnalysis</ext-link>[<xref ref-type="bibr" rid="B11">11</xref>] is a tool, complementary to IMGT/V-QUEST, which provides a thorough analysis of the V-J and V-D-J junction of IG and TR rearranged genes. IMGT/JunctionAnalysis identifies the D-GENEs and alleles involved in the IGH, TRB and TRD V-D-J rearrangements by comparison with the IMGT reference directory, and delimits precisely the P, N and D regions [<xref ref-type="bibr" rid="B11">11</xref>] ("IMGT/JunctionAnalysis output results" in <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/v4/JCTA/Documentation.html">IMGT/JunctionAnalysis Documentation</ext-link>). Several hundreds of junction sequences can be analysed simultaneously.</p>
+          </sec>
+          <sec>
+            <title>IMGT/Allele-Align</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/Allele-Align/align.pl">IMGT/Allele-Align</ext-link> is used for the detection of polymorphisms. It allows the comparison of two alleles highlighting the nucleotide and amino acid differences.</p>
+          </sec>
+          <sec>
+            <title>IMGT/PhyloGene</title>
+            <p><ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/phylogene/select.pl">IMGT/PhyloGene</ext-link>[<xref ref-type="bibr" rid="B12">12</xref>] is an easy to use tool for phylogenetic analysis of variable region (V-REGION) and constant domain (C-DOMAIN) sequences. This tool is particularly useful in developmental and comparative immunology. The users can analyse their own sequences by comparing with the IMGT standardized reference sequences for human and mouse IG and TR [<xref ref-type="bibr" rid="B12">12</xref>] (<ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/phylogene/IMGTPhylogenyDoc.html">IMGT/PhyloGene Documentation</ext-link>).</p>
+          </sec>
+        </sec>
+        <sec>
+          <title>IMGT sequence Web resources</title>
+          <p>The IMGT sequence Web resources are compiled in the IMGT Repertoire "Proteins and alleles" section that include Alignments of alleles, Proteins displays, Tables of alleles, Allotypes, Isotypes, etc. (Table <xref ref-type="table" rid="T2">2</xref>). Standardized IMGT criteria for amino acid sequence analysis are described in [<xref ref-type="bibr" rid="B31">31</xref>].</p>
+        </sec>
+      </sec>
+      <sec>
+        <title>IMGT gene databases, tools and Web resources</title>
+        <p>IMGT gene databases, tools and Web resources correspond to the IMGT genomics approach that refers to the studies of the genes within their loci and on their chromosome [<xref ref-type="bibr" rid="B2">2</xref>] (Table <xref ref-type="table" rid="T3">3</xref>).</p>
+        <table-wrap position="float" id="T3">
+          <label>Table 3</label>
+          <caption>
+            <p>The IMGT gene database, genome analysis tools and Web resources</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">IMGT genome database [1]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/tools.html">IMGT genome analysis tools</ext-link> [1]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTrep.html">IMGT Repertoire</ext-link><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/">"Locus and genes"</ext-link> section [2] (1)</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTgene-db.html">IMGT/GENE-DB</ext-link> [8]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/locusview.html">IMGT/LocusView</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/geneview.html">IMGT/GeneView</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/genesearch.html">IMGT/GeneSearch</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/clonesearch.html">IMGT/CloneSearch</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTGeneInfo.html">IMGT/GeneInfo</ext-link> [13]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#6">Chromosomal localizations</ext-link> [3, 4]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#1">Locus representations</ext-link> [3, 4]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#7">Locus description</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#9">Gene exon/intron organization</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#10">Gene exon/intron splicing sites</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#2">Gene tables</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#3">Potential germline repertoires</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#5">Lists of genes</ext-link><break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/LocusGenes/#4">Correspondence between nomenclatures</ext-link> [3, 4]</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <p>(1) IMGT Web resources (IMGT Marie-Paule page) also include <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTindex.html">IMGT Index</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTeducation.html">IMGT Education</ext-link> (<ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/IMGTlexique/">IMGT Lexique</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/#Aide-m&#xE9;moire">Aide-m&#xE9;moire</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/#Tutorials">Tutorials</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/#Questions">Questions and answers</ext-link>), <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/IMGTmedical/">The IMGT Medical page</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/IMGTveterinary/">The IMGT Veterinary page</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/IMGTbiotechnology/">The IMGT Biotechnology page</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTbloc-notes/Immunoinformatics.html">The IMGT Immunoinformatics page</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/blocnotes.html">IMGT Bloc-notes</ext-link> (<ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTbloc-notes/">Interesting links</ext-link>, etc.) [2] which are not detailed in this paper.</p>
+            <p>(2) IMGT publications from the IMGT Repertoire "Locus and genes" section are available as pdf in IMGT Locus in Focus <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/imgtfocus.html"/>, in IMGT Index (see also [2]).</p>
+          </table-wrap-foot>
+        </table-wrap>
+        <sec>
+          <title>IMGT/GENE-DB, the IMGT gene database</title>
+          <p>Genomic data are managed in <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/GENElect.jv?livret=0">IMGT/GENE-DB</ext-link>, which is the comprehensive IMGT genome database [<xref ref-type="bibr" rid="B8">8</xref>]. IMGT/GENE-DB, created by LIGM (Montpellier, France) is on the Web since January 2003. In August 2005, IMGT/GENE-DB contained 1,377 genes and 2,207 alleles (673 IG and TR genes and 1,209 alleles from <italic>Homo sapiens</italic>, and 704 IG and TR genes and 998 alleles from <italic>Mus musculus</italic>, <italic>Mus cookii</italic>, <italic>Mus pahari</italic>, <italic>Mus spretus</italic>, <italic>Mus saxicola</italic>, <italic>Mus minuto&#xEF;des</italic>). All the human and mouse IG and TR genes are available in IMGT/GENE-DB. Based on the IMGT CLASSIFICATION concept, all the human IMGT gene names [<xref ref-type="bibr" rid="B3">3</xref>,<xref ref-type="bibr" rid="B4">4</xref>] were approved by the Human Genome Organisation (HUGO) Nomenclature Committee HGNC in 1999 [<xref ref-type="bibr" rid="B27">27</xref>], and entered in IMGT/GENE-DB [<xref ref-type="bibr" rid="B8">8</xref>], Genome DataBase GDB (Canada) [<xref ref-type="bibr" rid="B32">32</xref>], LocusLink and Entrez Gene at NCBI (USA) [<xref ref-type="bibr" rid="B33">33</xref>], and GeneCards [<xref ref-type="bibr" rid="B34">34</xref>]. Reciprocal links exist between IMGT/GENE-DB, and the generalist nomenclature (HGNC Genew) and genome databases (GDB, LocusLink and Entrez at NCBI, and GeneCards). All the mouse IG and TR gene names with IMGT reference sequences were provided by IMGT to HGNC and to the Mouse Genome Database (MGD) [<xref ref-type="bibr" rid="B35">35</xref>] in July 2002. Queries in IMGT/GENE-DB can be performed according to IG and TR gene classification criteria and IMGT reference sequences have been defined for each allele of each gene based on one or, whenever possible, several of the following criteria: germline sequence, first sequence published, longest sequence, mapped sequence [<xref ref-type="bibr" rid="B2">2</xref>]. IMGT/GENE-DB interacts dynamically with IMGT/LIGM-DB [<xref ref-type="bibr" rid="B7">7</xref>] to download and display gene-related sequence data. As an example ans as mentioned earlier, the IMGT/GENE-DB entries provide the IMGT/LIGM-DB accession numbers of the IG and TR cDNA sequences which contain a given V, D, J or C gene. This is the first example of an interaction between IMGT databases using the CLASSIFICATION concept.</p>
+        </sec>
+        <sec>
+          <title>IMGT gene analysis tools</title>
+          <p>The IMGT gene analysis tools comprise <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/LocusView</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/GeneView</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/GeneSearch</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/CloneSearch</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/GeneInfo/">IMGT/GeneInfo</ext-link>. IMGT/LocusView and IMGT/GeneView manage the locus organization and the gene location and provide the display of physical maps for the human IG, TR and MHC loci and for the mouse TRA/TRD locus. <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/LocusView</ext-link> allows to view genes in a locus and to zoom on a given area. <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/GeneView</ext-link> allows to view a given gene in a locus. <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/GeneSearch</ext-link> allows to search for genes in a locus based on IMGT gene names, functionality or localization on the chromosome. <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/cgi-bin/locus/index.html">IMGT/CloneSearch</ext-link> provides information on the clones that were used to build the locus contigs displayed in IMGT/LocusView (accession numbers are from IMGT/LIGM-DB, gene names from IMGT/GENE-DB, and clone position and orientation, and overlapping clones from IMGT/LocusView). <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/GeneInfo/">IMGT/GeneInfo</ext-link>[<xref ref-type="bibr" rid="B13">13</xref>] provides and displays information on the potential TR rearrangements in human and mouse.</p>
+        </sec>
+        <sec>
+          <title>IMGT gene Web resources</title>
+          <p>The IMGT gene Web resources are compiled in the IMGT Repertoire "Locus and genes" section that includes Chromosomal localizations, Locus representations, Locus description, Gene exon/intron organization, Gene exon/intron splicing sites, Gene tables, Potential germline repertoires, the complete lists of human and mouse IG and TR genes, and the correspondences between nomenclatures [<xref ref-type="bibr" rid="B3">3</xref>,<xref ref-type="bibr" rid="B4">4</xref>] (Table <xref ref-type="table" rid="T3">3</xref>). The IMGT Repertoire "Probes and RFLP" section provides additional data on gene insertion/deletion.</p>
+        </sec>
+      </sec>
+      <sec>
+        <title>IMGT structure database, tool and Web resources</title>
+        <p>The IMGT structural approach refers to the study of the 2D and 3D structures of the IG, TR, MHC and RPI, and to the antigen or ligand binding characteristics in relation with the protein functions, polymorphisms and evolution (Table <xref ref-type="table" rid="T4">4</xref>). The structural approach relies on the CLASSIFICATION concept (IMGT gene and allele names), DESCRIPTION concept (receptor and chain description, domain delimitations), and NUMEROTATION concept (amino acid positions according to the IMGT unique numbering [<xref ref-type="bibr" rid="B14">14</xref>-<xref ref-type="bibr" rid="B18">18</xref>]).</p>
+        <table-wrap position="float" id="T4">
+          <label>Table 4</label>
+          <caption>
+            <p>IMGT structure database, analysis tool and Web resources</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">IMGT structural database [1]</td>
+                <td align="left">IMGT structural analysis tool [1]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTrep.html">IMGT Repertoire</ext-link><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/2D-3Dstruct/">"2D and 3D structures"</ext-link> section [2]</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGT3Dstructure-db.html">IMGT/3D structure-DB</ext-link> [15]</td>
+                <td align="left"><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/IMGTStructuralQuery.html">IMGT/StructuralQuery</ext-link> [15]</td>
+                <td align="left">2D Colliers de Perles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/2D-3Dstruct/#1">IG and TR</ext-link> [3, 4, 16, 17, 19] (1)<break/>2D Colliers de Perles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoireMHC/2D-3Dstruct/">MHC</ext-link> [18, 36]<break/>2D Colliers de Perles <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoireRPI/2D-3Dstruct/">RPI</ext-link> [16-18, 21, 22, 24, 37]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/Aide-memoire/_UK/aminoacids/IMGTclasses.html">IMGT classes for amino acid characteristics</ext-link> [31]<break/>IMGT Colliers de Perles reference profiles [31]<break/><ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTrepertoire/2D-3Dstruct/#3">3D representations</ext-link> (1)</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <p>(1) Cover of the Nucleic Acids Research 1999 database issue <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTinformation/Couv_NAR99.jpg"/></p>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>Structural and functional domains of the IG and TR chains comprise the variable domain or V-DOMAIN (9-strand beta-sandwich) which corresponds to the V-J-REGION or V-D-J-REGION and is encoded by two or three genes [<xref ref-type="bibr" rid="B3">3</xref>,<xref ref-type="bibr" rid="B4">4</xref>], the constant domain or C-DOMAIN (7-strand beta-sandwich), and, for the MHC chains, the groove domain or G-DOMAIN (4 beta-strand and one alpha-helix). A uniform numbering system for IG and TR V-DOMAINs of all vertebrate species has been established to facilitate sequence comparison and cross-referencing between experiments from different laboratories whatever the antigen receptor (IG or TR), the chain type, or the species [<xref ref-type="bibr" rid="B14">14</xref>-<xref ref-type="bibr" rid="B16">16</xref>]. In the IMGT unique numbering, conserved amino acids from frameworks always have the same number whatever the IG or TR variable sequence, and whatever the species they come from. As examples: Cysteine 23 (in FR1-IMGT), Tryptophan 41 (in FR2-IMGT), hydrophobic amino acid 89 and Cysteine 104 (in FR3-IMGT) (Figure <xref ref-type="fig" rid="F2">2</xref>). This numbering has been applied with success to all the sequences belonging to the V-set of the IgSF [<xref ref-type="bibr" rid="B20">20</xref>], including non-rearranging sequences in vertebrates (human CD4, Xenopus CTXg1, etc.) and in invertebrates (drosophila amalgam, drosophila fasciclin II, etc.) [<xref ref-type="bibr" rid="B15">15</xref>,<xref ref-type="bibr" rid="B16">16</xref>,<xref ref-type="bibr" rid="B21">21</xref>]. The IMGT unique numbering, initially defined for the V-DOMAINs of the IG and TR and for the V-LIKE-DOMAINs of IgSF proteins other than IG and TR, has been extended to the C-DOMAINs of the IG and TR (Figure <xref ref-type="fig" rid="F2">2B</xref>), and to the C-LIKE-DOMAINs of IgSF proteins other than IG and TR [<xref ref-type="bibr" rid="B17">17</xref>]. An IMGT unique numbering has also been implemented for the groove domain (G-DOMAIN) of the MHC class I and II chains (Figure <xref ref-type="fig" rid="F3">3</xref>), and for the G-LIKE-DOMAINs of MhcSF proteins other than MHC [<xref ref-type="bibr" rid="B18">18</xref>].</p>
+        <fig position="float" id="F2">
+          <label>Figure 2</label>
+          <caption>
+            <p>IMGT Colliers de Perles of a V-DOMAIN (A) and of a C-DOMAIN (B) (code PDB 1mcd in IMGT/3Dstructure-DB [9]). IMGT Colliers de Perles are shown on one layer (on the left hand side) and on two layers with hydrogen bonds (on the right hand side). (A) The IMGT Collier de Perles of a V-DOMAIN is based on the IMGT unique numbering for V-DOMAIN and V-LIKE-DOMAIN [16]. The CDR-IMGT are limited by amino acids shown in squares, which belong to the neighbouring FR-IMGT. The CDR3-IMGT extends from position 105 to position 117. CDR-IMGT regions are colored as follows on the IMGT site: CDR1-IMGT (blue), CDR2-IMGT (bright green), CDR3-IMGT (dark green) and hydrogen bonds are shown as green lines. (B) The IMGT Collier de Perles of a C-DOMAIN is based on the IMGT unique numbering for C-DOMAIN and C-LIKE-DOMAIN [17]. Amino acids are shown in the one-letter abbreviation. Arrows indicate the direction of the beta strands that form the two beta sheets of the immunoglobulin fold [3, 4]. Hatched circles correspond to missing positions according to the IMGT unique numbering [16, 17]. In the IMGT Collier de Perles on the IMGT Web site <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/> hydrophobic amino acids (hydropathy index with positive value) and Tryptophan (W) found at a given position in more than 50 % of analysed IG and TR sequences are shown in blue, and all Proline (P) are shown in yellow.</p>
+          </caption>
+          <graphic xlink:href="1745-7580-1-3-2"/>
+        </fig>
+        <fig position="float" id="F3">
+          <label>Figure 3</label>
+          <caption>
+            <p>IMGT Colliers de Perles of the two G-DOMAINs of MHC class I (A) and of MHC class II (B) proteins (codes PDB 1bd2 and 1aqd, respectively, in IMGT/3Dstructure-DB [9]). The IMGT Collier de Perles of a G-DOMAIN is based on the IMGT unique numbering for G-DOMAIN and G-LIKE-DOMAIN [18]. (A) The two MHC-I G-DOMAINs, G-ALPHA1 (top) and G-ALPHA2 (bottom), form the groove of the MHC class I chain (I-ALPHA). (B) The two MHC-II G-DOMAINs, G-ALPHA (top) of the MHC class II alpha chain (II-ALPHA) and G-BETA (bottom) of the MHC class II beta chain (II-BETA), form the groove of the MHC class II protein [36]. Amino acids are shown in the one-letter abbreviation. Hatched circles correspond to missing positions according to the IMGT unique numbering [18]. Positions in colour correspond to the IMGT contact sites provided, for each peptide/MHC 3D structure, in IMGT/3Dstructure-DB [36].</p>
+          </caption>
+          <graphic xlink:href="1745-7580-1-3-3"/>
+        </fig>
+        <sec>
+          <title>IMGT/3Dstructure-DB, the IMGT 3D structure database</title>
+          <p><ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/">IMGT/3Dstructure-DB</ext-link> is the IMGT 3D structure database, created by LIGM, and on the Web since November 2001 [<xref ref-type="bibr" rid="B9">9</xref>]. In August 2005, IMGT/3Dstructure-DB contained 946 atomic coordinate files. IMGT/3Dstructure-DB comprises IG, TR, MHC and RPI with known 3D structures [<xref ref-type="bibr" rid="B9">9</xref>,<xref ref-type="bibr" rid="B36">36</xref>,<xref ref-type="bibr" rid="B37">37</xref>]. Coordinate files extracted from the Protein Data Bank (PDB) [<xref ref-type="bibr" rid="B38">38</xref>] are renumbered according to the standardized IMGT unique numbering [<xref ref-type="bibr" rid="B16">16</xref>-<xref ref-type="bibr" rid="B18">18</xref>]. The IMGT/3Dstructure-DB card provides, on-line, the complete information for each IMGT/3Dstructure-DB entry. The IMGT/3Dstructure-DB card shows a summary table and a menu that gives access to five sections: "Chain details", "Contact analysis", "Visualization with Jmol", "Renumbered file" and "References and links". The "Chain details" section provides chain description, IMGT gene and allele names, IMGT chain and domain labels, domain delimitations, amino acid positions according to the IMGT unique numbering, IMGT Colliers de Perles [<xref ref-type="bibr" rid="B16">16</xref>-<xref ref-type="bibr" rid="B19">19</xref>]. The "Contact analysis" section provides contact types and categories between domains (in <italic>IMGT/3Dstructure-DB Domain contacts</italic>) and atom contacts at the residue and position level (in <italic>IMGT/3Dstructure-DB Residue@Position contacts</italic>) [<xref ref-type="bibr" rid="B37">37</xref>]. (<ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/DOC/IMGT3DstructureDBHelp.shtml">IMGT/3Dstructure-DB Documentation</ext-link>). The "Renumbered file" section downloadable provides renumbered IMGT/3Dstructure-DB flat files.</p>
+        </sec>
+        <sec>
+          <title>IMGT/StructuralQuery tool</title>
+          <p>The <ext-link ext-link-type="uri" xlink:href="http://imgt3d.igh.cnrs.fr/StructuralQuery.shtml">IMGT/StructuralQuery</ext-link> tool [<xref ref-type="bibr" rid="B9">9</xref>] analyses the interactions of the residues of the antigen receptors IG and TR, MHC, RPI, antigens and ligands. The contacts are described per domain (intra- and inter-domain contacts) and annotated in term of IMGT labels (chains, domain), positions (IMGT unique numbering), backbone or side-chain implication [<xref ref-type="bibr" rid="B37">37</xref>]. IMGT/StructuralQuery allows to retrieve the IMGT/3Dstructure-DB entries, based on specific structural characteristics: phi and psi angles, accessible surface area (ASA), amino acid type, distance in angstrom between amino acids, CDR-IMGT lengths.</p>
+        </sec>
+        <sec>
+          <title>IMGT structure Web resources</title>
+          <p>The IMGT stucture Web resources are compiled in the IMGT Repertoire "2D and 3D structures" section which includes 2D representations or IMGT Colliers de Perles [<xref ref-type="bibr" rid="B16">16</xref>-<xref ref-type="bibr" rid="B19">19</xref>], 3D representations, FR-IMGT and CDR-IMGT lengths [<xref ref-type="bibr" rid="B16">16</xref>], amino acid chemical characteristics profiles [<xref ref-type="bibr" rid="B31">31</xref>], etc. In order to appropriately analyse the amino acid resemblances and differences between IG, TR, MHC and RPI chains, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTeducation/Aide-memoire/_UK/aminoacids/IMGTclasses.html">eleven IMGT classes</ext-link> were defined for the 'chemical characteristics' amino acid properties and used to set up IMGT Colliers de Perles reference profiles [<xref ref-type="bibr" rid="B31">31</xref>]. The IMGT Colliers de Perles reference profiles allow to easily compare amino acid properties at each position whatever the domain, the chain, the receptor or the species. The IG and TR variable and constant domains represent a privileged situation for the analysis of amino acid properties in relation with 3D structures, by the conservation of their 3D structure despite divergent amino acid sequences, and by the considerable amount of genomic (IMGT Repertoire), structural (IMGT/3Dstructure-DB) and functional data available. These data are not only useful to study mutations and allele polymorphisms, but are also needed to establish correlations between amino acids in the protein sequences and 3D structures and to determine amino acids potentially involved in the immunogenicity.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec>
+      <title>Conclusion</title>
+      <p>In order to allow any IMGT component to be automatically queried and to achieve a higher level of interoperability inside the IMGT information system and with other information systems, our current objectives include the modelling of the three major IMGT biological approaches, genomics, genetics and structural approaches, the analysis of the IMGT components (databases, tools and Web resources) in relation with the concepts, and the development of Web services <ext-link ext-link-type="uri" xlink:href="http://www.w3.org/2002/ws/"/>[<xref ref-type="bibr" rid="B2">2</xref>]. They are the first steps towards the implementation of IMGT-Choreography [<xref ref-type="bibr" rid="B2">2</xref>], which corresponds to the process of complex immunogenetics knowledge [<xref ref-type="bibr" rid="B25">25</xref>] and to the connection of treatments performed by the IMGT component Web services. IMGT-Choreography has for goal to combine and join the IMGT database queries and analysis tools. In order to keep only significant approaches, a rigorous analysis of the scientific standards [<xref ref-type="bibr" rid="B3">3</xref>,<xref ref-type="bibr" rid="B4">4</xref>], of the biologist requests and of the clinician needs [<xref ref-type="bibr" rid="B39">39</xref>-<xref ref-type="bibr" rid="B42">42</xref>] has been undertaken in the three main biological approaches: genomics, genetics and structural approaches. The design of IMGT-Choreography and the creation of dynamic interactions between the IMGT databases and tools, using the Web services and IMGT-ML, represent novel and major developments of IMGT, the international reference in immunogenetics and immunoinformatics. IMGT-Choreography enhances the dynamic interactions between the IMGT components to answer complex biological and clinical requests.</p>
+      <p>Since July 1995, IMGT has been available on the Web at <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/>. IMGT has an exceptional response with more than 140,000 requests a month. The information is of much value to clinicians and biological scientists in general. IMGT databases, tools and Web resources are extensively queried and used by scientists from both academic and industrial laboratories, from very diverse research domains: (i) fundamental and medical research (repertoire analysis of the IG antibody sites and of the TR recognition sites in normal and pathological situations such as autoimmune diseases, infectious diseases, AIDS, leukemias, lymphomas, myelomas), (ii) veterinary research (IG and TR repertoires in farm and wild life species), (iii) genome diversity and genome evolution studies of the adaptive immune responses, (iv) structural evolution of the IgSF and MhcSF proteins, (v) biotechnology related to antibody engineering (single chain Fragment variable (scFv), phage displays, combinatorial libraries, chimeric, humanized and human antibodies), (vi) diagnostics (clonalities, detection and follow up of residual diseases) and (vii) therapeutical approaches (grafts, immunotherapy, vaccinology).</p>
+    </sec>
+    <sec>
+      <title>Citing IMGT</title>
+      <p>If you use IMGT databases, tools and/or Web resources, please cite [<xref ref-type="bibr" rid="B1">1</xref>] and this paper as references, and quote the IMGT Home page URL address, <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr"/>.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <sec>
+        <title>Acknowledgements</title>
+        <p>I am very grateful to V&#xE9;ronique Giudicelli, Chantal Ginestoux, Joumana Jabado-Michaloud, G&#xE9;raldine Folch, Elodie Duprat, Denys Chaume, Quentin Kaas, and G&#xE9;rard Lefranc for their expertise, constant motivation and helpful discussion. I am thankful to Wafae El Alaoui, Aur&#xE9;lie Frigoul, Lamia Zaghloul, Fran&#xE7;ois Ehrenmann, Arnaud Henry, Emmanuel-Jean Servier, our "2005" students, for their enthusiasm, and to the many IMGT users who have expressed their encouragement and support. IMGT is a registered mark of Centre National de la Recherche Scientifique (CNRS). IMGT has obtained the National Bioinformatics Platform RIO label since 2001 (CNRS, INSERM, CEA, INRA). IMGT was funded in part by the BIOMED1 (BIOCT930038), Biotechnology BIOTECH2 (BIO4CT960037) and 5th PCRDT Quality of Life and Management of Living Resources (QLG2-2000-01287) programmes of the European Union and received subventions from Association pour la Recherche sur le Cancer (ARC) and from the G&#xE9;nopole-Montpellier-Languedoc-Roussillon. IMGT is currently supported by the CNRS, the Minist&#xE8;re de l'Education Nationale, de l'Enseignement Sup&#xE9;rieur et de la Recherche MENESR (R&#xE9;seau National des G&#xE9;nopoles, Universit&#xE9; Montpellier II Plan Pluri-Formation, Institut Universitaire de France, ACI-IMPBIO IMP82-2004 and BIOSTIC-LR2004 R&#xE9;gion Languedoc-Roussillon) and GIS AGENAE (contrat AD2351 2005&#x2013;2007).</p>
+      </sec>
+    </ack>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Jabado-Michaloud</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Scaviner</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Ginestoux</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Cl&#xE9;ment</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT, the international ImMunoGeneTics information system<sup>&#xAE;</sup></article-title>
+          <source>Nucl Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>D593</fpage>
+          <lpage>D597</lpage>
+          <comment>PMID: 15608269</comment>
+          <pub-id pub-id-type="pmid">15608269</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gki065</pub-id>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Cl&#xE9;ment</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Chastellan</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Coelho</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Combres</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ginestoux</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT-Choreography for immunogenetics and immunoinformatics</article-title>
+          <source>In Silico Biology</source>
+          <year>2004</year>
+          <volume>5</volume>
+          <fpage>0006</fpage>
+          <comment>Epub <ext-link ext-link-type="uri" xlink:href="http://www.bioinfo.de/isb/2004/05/0006/"/>, <italic>In Silico </italic>Biology, 2005, <bold>5</bold>, 45-60. PMID: 15972004</comment>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>The Immunoglobulin FactsBook</source>
+          <year>2001</year>
+          <publisher-name>Academic Press, London, UK</publisher-name>
+          <fpage>458</fpage>
+          <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/factsbook.html"/>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>The T cell receptor FactsBook</source>
+          <year>2001</year>
+          <publisher-name>Academic Press, London, UK</publisher-name>
+          <fpage>398</fpage>
+          <ext-link ext-link-type="uri" xlink:href="http://imgt.cines.fr/textes/IMGTindex/factsbook.html"/>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>Ontology for Immunogenetics: the IMGT-ONTOLOGY</article-title>
+          <source>Bioinformatics</source>
+          <year>1999</year>
+          <volume>12</volume>
+          <fpage>1047</fpage>
+          <lpage>1054</lpage>
+          <comment>PMID: 10745995</comment>
+          <pub-id pub-id-type="pmid">10745995</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/15.12.1047</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Busin</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Malik</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mougenot</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>D&#xE9;hais</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>LIGM-DB/IMGT: an integrated database of Ig and TcR, part of the Immunogenetics database</source>
+          <year>1995</year>
+          <volume>764</volume>
+          <publisher-name>Annals of the New York Academy of Sciences</publisher-name>
+          <fpage>47</fpage>
+          <lpage>49</lpage>
+          <comment>PMID: 7486568</comment>
+          <pub-id pub-id-type="pmid">7486568</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Ginestoux</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Folch</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Jabado-Michaloud</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/LIGM-DB, the IMGT comprehensive database of immunoglobulin and T cell receptor nucleotide sequences</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2006</year>
+          <volume>34</volume>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/GENE-DB: a comprehensive database for human and mouse immunoglobulin and T cell receptor genes</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>D256</fpage>
+          <lpage>D261</lpage>
+          <comment>PMID: 15608191</comment>
+          <pub-id pub-id-type="pmid">15608191</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gki010</pub-id>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Ruiz</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/3D structure-DB and IMGT/StructuralQuery, a database and a tool for immunoglobulin, T cell receptor and MHC structural data</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>D208</fpage>
+          <lpage>D210</lpage>
+          <comment>PMID: 14681396</comment>
+          <pub-id pub-id-type="pmid">14681396</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkh042</pub-id>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/V-QUEST, an integrated software program for immunoglobulin and T cell receptor V-J and V-D-J rearrangement analysis</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>W435</fpage>
+          <lpage>W440</lpage>
+          <comment>PMID: 15215425</comment>
+          <pub-id pub-id-type="pmid">15215425</pub-id>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yousfi Monod</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/JunctionAnalysis: the first tool for the analysis of the immunoglobulin and T cell receptor complex V-J and V-D-J JUNCTIONs</article-title>
+          <source>Bioinformatics</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <fpage>I379</fpage>
+          <lpage>I385</lpage>
+          <comment>PMID: 15262823</comment>
+          <pub-id pub-id-type="pmid">15262823</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/bth945</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Elemento</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/PhyloGene: an on-line tool for comparative analysis of immunoglobulin and T cell receptor genes</article-title>
+          <source>Dev Comp Immunol</source>
+          <year>2003</year>
+          <volume>27</volume>
+          <fpage>763</fpage>
+          <lpage>779</lpage>
+          <comment>PMID: 12818634</comment>
+          <pub-id pub-id-type="pmid">12818634</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0145-305X(03)00078-8</pub-id>
+        </citation>
+      </ref>
+      <ref id="B13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baum</surname>
+              <given-names>TP</given-names>
+            </name>
+            <name>
+              <surname>Pasqual</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Thuderoz</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Hierle</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Jouvin-Marche</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Marche</surname>
+              <given-names>PN</given-names>
+            </name>
+            <name>
+              <surname>Demongeot</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/GeneInfo: enhancing V(D)J recombination database accessibility</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>D51</fpage>
+          <lpage>D54</lpage>
+          <comment>PMID: 14681357</comment>
+          <pub-id pub-id-type="pmid">14681357</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkh041</pub-id>
+        </citation>
+      </ref>
+      <ref id="B14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>Unique database numbering system for immunogenetic analysis</article-title>
+          <source>Immunol Today</source>
+          <year>1997</year>
+          <volume>18</volume>
+          <fpage>509</fpage>
+          <comment>PMID: 9386342</comment>
+          <pub-id pub-id-type="pmid">9386342</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0167-5699(97)01163-8</pub-id>
+        </citation>
+      </ref>
+      <ref id="B15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>The IMGT unique numbering for Immunoglobulins, T cell receptors and Ig-like domains</article-title>
+          <source>The Immunologist</source>
+          <year>1999</year>
+          <volume>7</volume>
+          <fpage>132</fpage>
+          <lpage>136</lpage>
+        </citation>
+      </ref>
+      <ref id="B16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Pommi&#xE9;</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Ruiz</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Foulquier</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Truong</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Thouvenin-Contet</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT unique numbering for immunoglobulin and T cell receptor variable domains and Ig superfamily V-like domains</article-title>
+          <source>Dev Comp Immunol</source>
+          <year>2003</year>
+          <volume>27</volume>
+          <fpage>55</fpage>
+          <lpage>77</lpage>
+          <comment>PMID: 12477501</comment>
+          <pub-id pub-id-type="pmid">12477501</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0145-305X(02)00039-3</pub-id>
+        </citation>
+      </ref>
+      <ref id="B17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Pommi&#xE9;</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Bosc</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Guiraudou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Jean</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Ruiz</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Da Piedade</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Rouard</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Foulquier</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Thouvenin</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT unique numbering for immunoglobulin and T cell receptor constant domains and Ig superfamily C-like domains</article-title>
+          <source>Dev Comp Immunol</source>
+          <year>2005</year>
+          <volume>29</volume>
+          <fpage>185</fpage>
+          <lpage>203</lpage>
+          <comment>PMID: 15572068</comment>
+          <pub-id pub-id-type="pmid">15572068</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.dci.2004.07.003</pub-id>
+        </citation>
+      </ref>
+      <ref id="B18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Tranne</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Thiriot</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT unique numbering for MHC groove G-DOMAIN and MHC superfamily (MhcSF) G-LIKE-DOMAIN</article-title>
+          <source>Dev Comp Immunol</source>
+          <year>2005</year>
+          <volume>29</volume>
+          <fpage>917</fpage>
+          <lpage>938</lpage>
+          <comment>PMID:15936075.</comment>
+          <pub-id pub-id-type="pmid">15936075</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.dci.2005.03.003</pub-id>
+        </citation>
+      </ref>
+      <ref id="B19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ruiz</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT gene identification and Colliers de Perles of human immunoglobulins with known 3D structures</article-title>
+          <source>Immunogenetics</source>
+          <year>2002</year>
+          <volume>53</volume>
+          <fpage>857</fpage>
+          <lpage>883</lpage>
+          <comment>PMID: 11862387</comment>
+          <pub-id pub-id-type="pmid">11862387</pub-id>
+          <pub-id pub-id-type="doi">10.1007/s00251-001-0408-6</pub-id>
+        </citation>
+      </ref>
+      <ref id="B20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Williams</surname>
+              <given-names>AF</given-names>
+            </name>
+            <name>
+              <surname>Barclay</surname>
+              <given-names>AN</given-names>
+            </name>
+          </person-group>
+          <article-title>The immunoglobulin family: domains for cell surface recognition</article-title>
+          <source>Annu Rev Immunol</source>
+          <year>1988</year>
+          <volume>6</volume>
+          <fpage>381</fpage>
+          <lpage>405</lpage>
+          <comment>PMID: 3289571</comment>
+          <pub-id pub-id-type="pmid">3289571</pub-id>
+        </citation>
+      </ref>
+      <ref id="B21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Garelle</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT standardization for alleles and mutations of the V-LIKE-DOMAINs and C-LIKE-DOMAINs of the immunoglobulin superfamily</article-title>
+          <source>Recent Res Devel Human Genet</source>
+          <year>2004</year>
+          <volume>2</volume>
+          <fpage>111</fpage>
+          <lpage>136</lpage>
+        </citation>
+      </ref>
+      <ref id="B22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bertrand</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Marti</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Coste</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of human FCGR3B*02 (HNA-1b, NA2) cDNAs and IMGT standardized description of FCGR3B alleles</article-title>
+          <source>Tissue Antigens</source>
+          <year>2004</year>
+          <volume>64</volume>
+          <fpage>119</fpage>
+          <lpage>131</lpage>
+          <comment>PMID: 15245367</comment>
+          <pub-id pub-id-type="pmid">15245367</pub-id>
+          <pub-id pub-id-type="doi">10.1111/j.1399-0039.2004.00259.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Maenaka</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>EY</given-names>
+            </name>
+          </person-group>
+          <article-title>MHC superfamily structure and the immune system</article-title>
+          <source>Curr Opin Struct Biol</source>
+          <year>1999</year>
+          <volume>9</volume>
+          <fpage>745</fpage>
+          <lpage>753</lpage>
+          <comment>PMID: 10607669</comment>
+          <pub-id pub-id-type="pmid">10607669</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0959-440X(99)00039-1</pub-id>
+        </citation>
+      </ref>
+      <ref id="B24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frigoul</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>MICA: standardized IMGT allele nomenclature, polymorphisms and diseases</article-title>
+          <source>Recent Res Devel Human Genet</source>
+          <year>2005</year>
+          <volume>3</volume>
+          <fpage>95</fpage>
+          <lpage>145</lpage>
+        </citation>
+      </ref>
+      <ref id="B25">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Combres</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ginestoux</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Danos V, Schachter V</surname>
+            </name>
+          </person-group>
+          <article-title>IMGT-Choreography: processing of complex immunogenetics knowledge. Computational Methods in Systems Biology: International Conference CMSB Paris, France</article-title>
+          <source>Lecture Notes in Computer Science</source>
+          <year>2004</year>
+          <publisher-name>Springer-Verlag GmbH Berlin Heidelberg</publisher-name>
+          <fpage>73</fpage>
+          <lpage>84</lpage>
+        </citation>
+      </ref>
+      <ref id="B26">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT-ML a language for IMGT-ONTOLOGY and IMGT/LIGM-DB data</article-title>
+          <source>CORBA and XML: Towards a bioinformatics integrated network environment, Proceedings of NETTAB Network tools and applications in biology</source>
+          <year>2001</year>
+          <fpage>71</fpage>
+          <lpage>75</lpage>
+        </citation>
+      </ref>
+      <ref id="B27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wain</surname>
+              <given-names>HM</given-names>
+            </name>
+            <name>
+              <surname>Bruford</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Lovering</surname>
+              <given-names>RC</given-names>
+            </name>
+            <name>
+              <surname>Lush</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Wright</surname>
+              <given-names>MW</given-names>
+            </name>
+            <name>
+              <surname>Povey</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Guidelines for human gene nomenclature</article-title>
+          <source>Genomics</source>
+          <year>2002</year>
+          <volume>79</volume>
+          <fpage>464</fpage>
+          <lpage>470</lpage>
+          <comment>PMID: 11944974</comment>
+          <pub-id pub-id-type="pmid">11944974</pub-id>
+          <pub-id pub-id-type="doi">10.1006/geno.2002.6748</pub-id>
+        </citation>
+      </ref>
+      <ref id="B28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Robinson</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Waller</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Parham</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>de Groot</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Bontrop</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>LJ</given-names>
+            </name>
+            <name>
+              <surname>Stoehr</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Marsh</surname>
+              <given-names>SG</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT/HLA and IMGT/MHC sequence databases for the study of the major histocompatibility complex</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>311</fpage>
+          <lpage>314</lpage>
+          <comment>PMID: 12520010</comment>
+          <pub-id pub-id-type="pmid">12520010</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg070</pub-id>
+        </citation>
+      </ref>
+      <ref id="B29">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Chaume</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Jabado-Michaloud</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Engelbrecht R, Geissbuhler A, Lovis C, Mihalas G</surname>
+            </name>
+          </person-group>
+          <article-title>Immunogenetics sequence annotation: the strategy of IMGT based on IMGT-ONTOLOGY</article-title>
+          <source>The XIXth International Congress of the European Federation for Medical Informatics, Geneva, Switzerland, Connecting Medical Informatics and Bio-informatics Proceedings of the Medical Informatics Europe MIE</source>
+          <year>2005</year>
+          <volume>116</volume>
+          <publisher-name>IOS Press, Technology and Informatics</publisher-name>
+          <fpage>3</fpage>
+          <lpage>8</lpage>
+        </citation>
+      </ref>
+      <ref id="B30">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Giudicelli</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Veskler BA</surname>
+            </name>
+          </person-group>
+          <article-title>Interactive IMGT on-line tools for the analysis of immunoglobulin and T cell receptor repertoires</article-title>
+          <source>New Research on Immunology</source>
+          <year>2005</year>
+          <publisher-name>Nova Science</publisher-name>
+          <fpage>77</fpage>
+          <lpage>105</lpage>
+        </citation>
+      </ref>
+      <ref id="B31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pommi&#xE9;</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Sabatier</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT standardized criteria for statistical analysis of immunoglobulin V-REGION amino acid properties</article-title>
+          <source>J Mol Recognit</source>
+          <year>2004</year>
+          <volume>17</volume>
+          <fpage>17</fpage>
+          <lpage>32</lpage>
+          <comment>PMID: 14872534</comment>
+          <pub-id pub-id-type="pmid">14872534</pub-id>
+          <pub-id pub-id-type="doi">10.1002/jmr.647</pub-id>
+        </citation>
+      </ref>
+      <ref id="B32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Letovsky</surname>
+              <given-names>SI</given-names>
+            </name>
+            <name>
+              <surname>Cottingham</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Porter</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>PW</given-names>
+            </name>
+          </person-group>
+          <article-title>GDB: the Human Genome Database</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1998</year>
+          <volume>26</volume>
+          <fpage>94</fpage>
+          <lpage>99</lpage>
+          <comment>PMID: 9399808</comment>
+          <pub-id pub-id-type="pmid">9399808</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/26.1.94</pub-id>
+        </citation>
+      </ref>
+      <ref id="B33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pruitt</surname>
+              <given-names>KD</given-names>
+            </name>
+            <name>
+              <surname>Maglott</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <article-title>RefSeq and LocusLink: NCBI gene-centered resources</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>137</fpage>
+          <lpage>140</lpage>
+          <comment>PMID: 11125071</comment>
+          <pub-id pub-id-type="pmid">11125071</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/29.1.137</pub-id>
+        </citation>
+      </ref>
+      <ref id="B34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Safran</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Chalifa-Caspi</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Shmueli</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Olender</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Lapidot</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Rosen</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Shmoish</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Peter</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Glusman</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Feldmesser</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Adato</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Peter</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Khen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Atarot</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Groner</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Lancet</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Human Gene-Centric Databases at the Weizmann Institute of Science: GeneCards, UDB, CroW 21 and HORDE</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>142</fpage>
+          <lpage>146</lpage>
+          <comment>PMID: 12519968</comment>
+          <pub-id pub-id-type="pmid">12519968</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg050</pub-id>
+        </citation>
+      </ref>
+      <ref id="B35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Blake</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Richardson</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Bult</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Kadin</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Eppig</surname>
+              <given-names>JT</given-names>
+            </name>
+            <collab>Mouse Genome Database Group</collab>
+          </person-group>
+          <article-title>MGD: the Mouse Genome Database</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>193</fpage>
+          <lpage>195</lpage>
+          <comment>PMID: 12519980</comment>
+          <pub-id pub-id-type="pmid">12519980</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg047</pub-id>
+        </citation>
+      </ref>
+      <ref id="B36">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Duprat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Le Tourneur</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>IMGT standardization for molecular characterization of the T cell receptor/peptide/MHC complexes</article-title>
+          <source>Springer</source>
+          <comment/>
+        </citation>
+      </ref>
+      <ref id="B37">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kaas</surname>
+              <given-names>Q</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+          </person-group>
+          <article-title>Interactive IMGT on-line database and tool for the structural analysis of immunoglobulins, T cell receptors, MHC and related proteins of the immune system</article-title>
+          <source>Focus on Immunology Research, Nova Science</source>
+          <comment/>
+        </citation>
+      </ref>
+      <ref id="B38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berman</surname>
+              <given-names>HM</given-names>
+            </name>
+            <name>
+              <surname>Westbrook</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Feng</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Gilliland</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Bhat</surname>
+              <given-names>TN</given-names>
+            </name>
+            <name>
+              <surname>Weissig</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Shindyalov</surname>
+              <given-names>IN</given-names>
+            </name>
+            <name>
+              <surname>Bourne</surname>
+              <given-names>PE</given-names>
+            </name>
+          </person-group>
+          <article-title>The Protein Data Bank</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2000</year>
+          <volume>28</volume>
+          <fpage>235</fpage>
+          <lpage>242</lpage>
+          <comment>PMID: 10592235</comment>
+          <pub-id pub-id-type="pmid">10592235</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/28.1.235</pub-id>
+        </citation>
+      </ref>
+      <ref id="B39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chassagne</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Laffly</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Drouet</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Herodin</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Thullier</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>A high affinity macaque antibody Fab with human-like framework regions obtained from a small phage display immune library</article-title>
+          <source>Mol Immunol</source>
+          <year>2004</year>
+          <volume>41</volume>
+          <fpage>539</fpage>
+          <lpage>546</lpage>
+          <comment>PMID: 15183932</comment>
+          <pub-id pub-id-type="pmid">15183932</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.molimm.2004.03.040</pub-id>
+        </citation>
+      </ref>
+      <ref id="B40">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Laffly</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Danjou</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Condemine</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Vidal</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Drouet</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Lefranc</surname>
+              <given-names>M-P</given-names>
+            </name>
+            <name>
+              <surname>Bottex</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Thullier</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Selection of a macaque Fab with human-like framework regions, high affinity, and that neutralizes the protective antigen (PA) of <italic>Bacillus anthracis</italic></article-title>
+          <source>Antimicrob Agents Chemother</source>
+          <year>2005</year>
+          <volume>49</volume>
+          <fpage>3414</fpage>
+          <lpage>3420</lpage>
+          <comment>PMID: 16048955</comment>
+          <pub-id pub-id-type="pmid">16048955</pub-id>
+          <pub-id pub-id-type="doi">10.1128/AAC.49.8.3414-3420.2005</pub-id>
+        </citation>
+      </ref>
+      <ref id="B41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stamatopoulos</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Belessi</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Papadaki</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Kalagiakou</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Stavroyianni</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Douka</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Afendaki</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Saloum</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Parasi</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Anagnostou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Laoutaris</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Fassas</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Anagnostopoulos</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Immunoglobulin heavy- and light-chain repertoire in Splenic Marginal Zone Lymphoma</article-title>
+          <source>Mol Med</source>
+          <year>2005</year>
+          <comment>PMID: 15706403</comment>
+          <pub-id pub-id-type="pmid">15706403</pub-id>
+        </citation>
+      </ref>
+      <ref id="B42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ghia</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Stamatopoulos</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Belessi</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Moreno</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Stella</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Guida</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Michel</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Crespo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Laoutaris</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Montserrat</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Anagnostopoulos</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Dighiero</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Fassas</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Caligaris-Cappio</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Davi</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title>Geographic patterns and pathogenetic implications of IGHV gene usage in chronic lymphocytic leukemia: the lesson of the IGHV3-21 gene</article-title>
+          <source>Blood</source>
+          <year>2005</year>
+          <volume>105</volume>
+          <fpage>1678</fpage>
+          <lpage>1685</lpage>
+          <comment>PMID: 15466924</comment>
+          <pub-id pub-id-type="pmid">15466924</pub-id>
+          <pub-id pub-id-type="doi">10.1182/blood-2004-07-2606</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

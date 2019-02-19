@@ -1,0 +1,933 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17031593</article-id>
+      <article-id pub-id-type="pmc">1705482</article-id>
+      <article-id pub-id-type="publisher-id">9185</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-006-9185-6</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Evaluation of Important Treatment Parameters in Supraphysiological Thermal Therapy of Human Liver Cancer HepG2 Cells</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Shah</surname>
+            <given-names>Bhavik</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Bhowmick</surname>
+            <given-names>Sankha</given-names>
+          </name>
+          <address>
+            <email>sbhowmick@umassd.edu</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Department of Mechanical Engineering, University of Massachusetts, Dartmouth, 285 Old Westport Road, North Dartmouth, MA 02747-2300 USA </aff>
+        <aff id="Aff2"><label>2</label>Bioengineering and Biotechnology Program, University of Massachusetts, Dartmouth, North Dartmouth, MA USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>11</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>34</volume>
+      <issue>11</issue>
+      <fpage>1745</fpage>
+      <lpage>1757</lpage>
+      <history>
+        <date date-type="received">
+          <day>21</day>
+          <month>12</month>
+          <year>2005</year>
+        </date>
+        <date date-type="accepted">
+          <day>21</day>
+          <month>8</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>This study was aimed at simulating the effect of various treatment parameters like heating rate (HR), peak temperature (PT) and hold/total treatment time on the viability of human liver cancer HepG2 cells subjected to different thermal therapy conditions. The problem was approached by investigating the injury kinetics obtained using experimentally measured viability of the cells, heated to temperatures of 50&#x2013;70&#xB0;C for 0&#x2013;9&#xA0;min at HRs of 100, 200, 300 and 525&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. An empirical expression obtained between the activation energy (<italic>E</italic>) and HR was extended to obtain the <italic>E</italic> values over a broad range of HRs from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> that mimic the actual conditions encountered in a typical thermal therapy protocol. Further, the effect of the HR (5&#x2013;600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>) and PT (50&#x2013;85&#xB0;C) on the cell survival was studied over a range of hold times. A significant drop in survival from 90% to 0% with the simultaneous increase in HR and PT was observed as the hold time increased from 0 to 5&#xA0;min. For complete cell death, the hold time increased with the increase in the HR for a given PT, while the total time showed presence of minima for 60, 65 and 70&#xB0;C at HRs of 50, 100 and 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, respectively.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Heating rates</kwd>
+        <kwd>Peak temperatures</kwd>
+        <kwd>Hold time</kwd>
+        <kwd>Total treatment time</kwd>
+        <kwd>Minimal treatment time</kwd>
+        <kwd>Injury kinetics</kwd>
+        <kwd>Arrhenius model</kwd>
+        <kwd>Clinical protocols</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Primary liver cancer is the fifth most common malignancy in the world, with a global annual incidence of about one million new patients.<xref ref-type="bibr" rid="CR6">6</xref> In 2004, the American Cancer Society estimated 18,920 new cases of Hepatocellular Carcinoma (HCC) and the estimated deaths were 14,720.<xref ref-type="bibr" rid="CR1">1</xref> Surgical resection, the gold standard for the treatment of primary liver cancer, shows low success rate (20&#x2013;37%) and a high recurrence (50&#x2013;60%) rate due to many surgical complications.<xref ref-type="bibr" rid="CR10">10</xref>,<xref ref-type="bibr" rid="CR25">25</xref> Liver transplantation is limited because of fewer donors.<xref ref-type="bibr" rid="CR18">18</xref> Combination treatment methods, using chemotherapy, embolization and chemoembolization have a limited effect even with the newer drugs available and their beneficial effects on the patient survival remain controversial in randomized studies.<xref ref-type="bibr" rid="CR18">18</xref>,<xref ref-type="bibr" rid="CR24">24</xref> Use of radiation therapy is limited to alleviating the symptoms such as pain or just to shrink the tissue rather than destroying it. Ablation therapies that use heat to destroy the tumor are gaining increasing attention as an alternative because the treatment procedure is faster, simpler, less painful and cheaper.<xref ref-type="bibr" rid="CR20">20</xref></p>
+      <p>There are two known approaches for the application of these ablative procedures: hyperthermia, where the treatment modalities use temperatures ranging from 42 to 50&#xB0;C for periods of 30&#xA0;min to few hours. Another approach is thermal therapy, where the destruction of the tumor takes place by the application of heat at temperatures higher than 50&#xB0;C within very short time periods of few minutes to seconds. The tumor is heated using any one of radiofrequency, microwave, laser or high intensity focused ultrasound energy sources. Several clinical trials have been performed to test the efficacy of these thermal ablative therapies in treatment of liver cancer using the above-mentioned energy sources. The results have shown survivals of 83&#x2013;94% after 1&#xA0;year, 50% after 2&#xA0;years, 33% after 3&#xA0;years and 33&#x2013;40% after 5&#xA0;years for hyperthermic radiofrequency ablation in studies conducted on 29&#x2013;123 patients.<xref ref-type="bibr" rid="CR18">18</xref> Survival of 86% after 1&#xA0;year in 55 patients has been reported for hyperthermic interstitial laser therapy;<xref ref-type="bibr" rid="CR12">12</xref> survivals of 73&#x2013;86% after 3&#xA0;years, <xref ref-type="bibr" rid="CR18">18</xref> 50% after 4&#xA0;years and 48.6% after 5&#xA0;years<xref ref-type="bibr" rid="CR17">17</xref> have been reported for microwave coagulation therapy. In spite of all the above-mentioned clinical trials, no data exists showing the effect of thermal therapy on the survival of liver cancer cells. Effect of hyperthermic temperatures on human liver cancer cell lines has also been investigated in few <italic>in vitro</italic> studies. Callari <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR7">7</xref> used HTC hepatoma cells to study the action of retinol on viable cell recovery after <italic>in vitro</italic> hyperthermia at temperatures between 42&#xB0;C and 44&#xB0;C for 1&#xA0;h. Hasumura <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR13">13</xref> studied the effect of TNF along with hyperthermia on JHH-4, JHH-5 and JHH-7 human hepatoma cells between temperatures of 41.4&#xB0;C and 42.5&#xB0;C. However, none of the studies demonstrated the effect of temperatures above 50&#xB0;C any liver cancer cell lines.</p>
+      <p>Since in thermal therapy, the injury accumulates at very high temperatures within a short period of time, knowledge of the injury kinetics is very useful for predicting the cell/tumor damage<xref ref-type="bibr" rid="CR15">15</xref> for these thermal histories. Several thermal therapy studies have been performed to obtain the injury kinetics in different cell lines. Landry <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR19">19</xref> heated HeLa cells up to 55&#xB0;C using water bath, with thermal equilibrium time of 1&#xA0;min for 55&#xB0;C. To reduce this equilibrium time Borrelli <italic>et&#xA0;al.</italic><xref ref-type="bibr" rid="CR5">5</xref> heated cells to 57&#xB0;C on 0.025-mm thick mylar pieces. Cell injury kinetics was obtained by measuring the cell survival using clonogenic assay in both the studies. In addition, studies on T24 human bladder carcinoma,<xref ref-type="bibr" rid="CR22">22</xref> skeletal muscle,<xref ref-type="bibr" rid="CR11">11</xref> SN12 renal cell carcinoma<xref ref-type="bibr" rid="CR15">15</xref> and Dunning AT-1 prostate cancer cells<xref ref-type="bibr" rid="CR4">4</xref> in the temperature range of 40&#x2013;70&#xB0;C obtained cell injury kinetics using dye uptake assays and thus showed that dye uptake assay is a reasonable conservative estimate of the cell survival. Also, two recent <italic>in vitro</italic> studies in human benign prostatic hyperplasia tissue and rodent prostate cancer tissue showed that the cell injury kinetics measured by membrane integrity vital dye assay and histology assays are very similar.<xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR3">3</xref> Therefore, a key observation from the above studies is that vital dye uptake assay can be used as an alternate and reliable conservative maker as it provides rapidity, automation and better control.<xref ref-type="bibr" rid="CR15">15</xref></p>
+      <p>A key difference of high temperature&#x2013;short time thermal therapy protocols from the traditional hyperthermia protocols is the significant injury accumulation during the non-isothermal portion of the thermal history (heating up/cooling down period). Therefore, injury accumulation tends to be a complex function of hold time as well ramp up and cooling time. Hence, accurate prediction of the cell injury kinetics requires the knowledge of heating/cooling rates in addition to peak temperatures (PTs) and hold/total time. This model also better represents the thermo-clinical applications because the rate at which the PTs are achieved at different locations inside the tumor vary with the applicator location and plays a paramount role in determining the amount of injury accumulated. The knowledge of the injury accumulated in reaching a PT or the PT required to obtain a desired injury under different heating rates (HRs) are some of the very important parameters in designing better and optimal clinical protocols.</p>
+      <p>This study was used to investigate experimentally and through simulations the parameters affecting thermal therapy of primary human liver cancer HepG2 cells between 50&#xB0;C and 70&#xB0;C using Ethd-1 uptake cell membrane integrity assay. The cells were thermally challenged on a programmable heating stage which can control and record the entire thermal history profile, allowing us to recreate typical thermal therapy protocols. Cell membrane integrity dye uptake (Ethd-1) was used as an irreversible injury marker. The first-order Arrhenius rate model was used to extract the kinetic parameters activation energy, <italic>E</italic> (kJ&#xA0;mol<sup>&#x2212;1</sup>) and frequency factor <italic>A</italic> (s<sup>&#x2212;1</sup>).<xref ref-type="bibr" rid="CR16">16</xref> The survival data was fitted into the Arrhenius model for various HRs and the <italic>E</italic> and <italic>A</italic> values were predicted by minimizing the least square between the model predictions and the experimental data for suspended and attached cells. Based on the predicted <italic>E</italic> values, a relationship between the <italic>E</italic> and HR was obtained experimentally and was further used to simulate the survival map for different hold periods by varying the target PT and the HR. Finally, the hold time and the total injury time necessary for complete cell death (Survival&#xA0;&#x2264;&#xA0;0.001%) was predicted for target PTs of 60&#x2013;85&#xB0;C and HRs of 5&#x2013;600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> representing the typical transient thermo-clinical protocol.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <sec id="Sec3">
+        <title>HEPG2 Cell Culture and Sample Preparation</title>
+        <p>Human liver cancer Hepg2 cells (ATCC, VA) were propagated in MEM cell culture media with 10% Fetal Bovine Serum (Hyclone, UT) and 1% penicillin/streptomycin (Invitrogen, CA). They were then incubated in 10% CO<sub>2</sub> and 95% humidified air at 37&#xB0;C in 75-cm<sup>2</sup> T flasks. The cells were trypsinized with Trypsin-EDTA (ATCC, VA) for 5&#x2013;10&#xA0;min, centrifuged at 1200&#xA0;rpm for 5&#xA0;min and re-suspended in the media to an appropriate concentration. Suspended cell samples were prepared by placing 3&#xA0;&#x3BC;l of cell suspension onto the center of the 12-mm diameter coverglass, covering it with another coverglass to prevent evaporation during heating. For attached cell studies, cell suspension was scattered over about 18&#x2013;20, 12-mm cover glasses lying in a 110-mm diameter Petri dish. Overnight attachment of the cells on top of the coverglass was allowed in the incubator and then the cell sample was prepared in the same way as the suspended sample.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Heating Stage</title>
+        <p>Attached and suspended cell samples were heated on a programmable heating stage, at different HRs. Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> shows the setup diagram of the heating stage and the feedback control used. Cement T-type thermocouple (Omega Engg Inc., CT) was used for temperature detection, which is interfaced with a data acquisition board (DAB) (Keithly Inc., Cleveland, OH) connected to the computer port. The interface between the user and the DAB is through a Visual Basic code that calculates the output voltage based on the set point and instantaneous temperature and controls it based on proportional and derivative constants used in the feedback loop. Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> shows the combinations of proportionality (<italic>k</italic><sub>p</sub>) and derivative (<italic>k</italic><sub>d</sub>) constants used in the feedback loop to achieve different HRs (100, 200, 300 and 525&#xB0;C&#xA0;min<sup>&#x2212;1</sup>). An OPAMP (Analog Devices Inc, MA) circuit is used to amplify the feedback voltage signal from the DAB and heat the stage. The stage was calibrated using fixed temperature tempi labels and sticks (MSC Industrial Supply Co., NY) to an accuracy of &#xB1;0.3&#xB0;C for all PTs at each HR used in the study.
+<fig id="Fig1"><label>Figure&#xA0;1.</label><caption><p>Block diagram of the amplifying OPAMP circuit and feedback control of the heating stage. The OPAMP circuit amplifies the voltage signal from the data acquisition board to heat the stage, while the feedback control system, through the VB code, controls the amount of voltage based on the instantaneous temperature of the stage.</p></caption><graphic position="anchor" xlink:href="10439_2006_9185_Fig1_HTML" id="MO1"/></fig><table-wrap id="Tab1"><label>Table&#xA0;1.</label><caption><p>Values of proportionality (<italic>k</italic><sub>p</sub>) and derivative (<italic>k</italic><sub>d</sub>) constants for different HRs to obtain desired PTs.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">HR (&#xB0;C&#xA0;min<sup>-1</sup>)</th><th align="left">PT (&#xB0;C)</th><th align="left"><italic>k</italic><sub>p</sub></th><th align="left"><italic>k</italic><sub>d</sub></th></tr></thead><tbody><tr><td align="left" rowspan="3">100</td><td align="center">60</td><td char="." align="char">0.0155</td><td char="." align="char">0.0925</td></tr><tr><td align="center">65</td><td char="." align="char">0.0155</td><td char="." align="char">0.0925</td></tr><tr><td align="center">70</td><td char="." align="char">0.0155</td><td char="." align="char">0.0925</td></tr><tr><td align="left" rowspan="3">200</td><td align="center">60</td><td char="." align="char">0.035</td><td char="." align="char">0.108</td></tr><tr><td align="center">65</td><td char="." align="char">0.035</td><td char="." align="char">0.108</td></tr><tr><td align="center">70</td><td char="." align="char">0.035</td><td char="." align="char">0.121</td></tr><tr><td align="left" rowspan="3">300</td><td align="center">60</td><td char="." align="char">0.085</td><td char="." align="char">0.255</td></tr><tr><td align="center">65</td><td char="." align="char">0.085</td><td char="." align="char">0.255</td></tr><tr><td align="center">70</td><td char="." align="char">0.0903</td><td char="." align="char">0.275</td></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Heating Studies and Ethd-1 Dye Uptake Assay </title>
+        <p>Suspended and attached HepG2 cell samples were heated to different time&#x2013;temperature histories. Isothermal heating was carried out for suspended and attached cells at temperatures between 50&#xB0;C and 70&#xB0;C for 0.5&#x2013;9&#xA0;min. The cell sample was placed on the center of the heating stage after the PT was reached. The time for each cell sample to equilibrate to any given PT was experimentally calculated to be &#x223C;5&#xA0;s and was added to the hold time during heating. HRs of 100, 200 and 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup> were employed for heating attached cells non-isothermally between temperatures of 60&#xB0;C and 70&#xB0;C for a hold time of 0&#x2013;3&#xA0;min using the entire temperature&#x2013;time history, which includes the rise, hold and the cooling period. The HRs were assumed to be constant for the entire thermal history and were obtained by taking a tangent to the exponential curve of the temperature rise. Therefore, the cell sample was placed on the center of the heating stage before starting the heating cycle. The cooling time for each sample from a given PT was calculated based on the experimentally measured cooling rate of 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup>.</p>
+        <p>Cellular injury post heating for isothermal and non-isothermal studies was quantified using Ethd-1 (Sigma-Aldrich, MO) vital dye assay by counting the number of cells stained with Ethd-1 dye (dead only) and the total number of the cells stained with Hoechst (Sigma-Aldrich). Thermally treated cell samples were placed in a 50&#xA0;&#x3BC;l drop of 2.5&#xA0;&#x3BC;M Ethd-1 and 10&#xA0;&#x3BC;M Hoechst dye solution in a 35-mm Petri dish and incubated for 3&#xA0;h. The incubation time of 3&#xA0;h was based on the experiments conducted after 1, 2 and 3&#xA0;h of incubation (data not included), which confirmed that membrane damage equilibrates within this period and a significant amount of media is pulled between the cover glasses to stain the cells. Control samples underwent the same procedure without heating. After 3&#xA0;h, the dead and the total number of cells were counted with a fluorescent microscope (Nikon Eclipse TS 100, Tokyo) using a 20&#xD7; objective. Multiple fields with at least 150&#x2013;300 cells were counted for each run.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Normalized Cell Survival</title>
+        <p>For all the cell samples, the normalized cell survival (<italic>S</italic><sub>e</sub>) was calculated as follows: <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ S_{\rm{e}}\ { = }\,{{\left[ {{\rm{(}}N_{{\rm{H,t}}} \, - \,N_{{\rm{E,t}}} {\rm{)/}}N_{{\rm{H,t}}} } \right]} \mathord{\left/ {\vphantom {{\left[ {{\rm{(}}N_{{\rm{H,t}}} \, - \,N_{{\rm{E,t}}} {\rm{)/}}N_{{\rm{H,t}}} } \right]} {\left[ {{\rm{(}}N_{{\rm{H,c}}} \, - \,N_{{\rm{E,c}}} {\rm{)/}}N_{{\rm{H,c}}} } \right]}}} \right. \kern-\nulldelimiterspace} {\left[ {{\rm{(}}N_{{\rm{H,c}}} \, - \,N_{{\rm{E,c}}} {\rm{)/}}N_{{\rm{H,c}}} } \right]}} $$\end{document}</tex-math></disp-formula></p>
+        <p><italic>N</italic><sub>H</sub> and <italic>N</italic><sub>E</sub> are the number of total and dead cells stained with Hoechst and Ethd-1 respectively; subscripts &#x2018;t&#x2019; and &#x2018;c&#x2019; represent thermally treated and control cells, respectively. The calculated cell survival was based on three separate experiments, with two runs for every data point in each experiment.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>The Cell Injury Model</title>
+        <p>Thermally induced cellular injury was considered as a first-order irreversible process as shown below and as used in many previous heating studies; <disp-formula id="Equ2"><label>2</label><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ V\,\xrightarrow{k}\,I{\text{ }} $$\end{document}</tex-math></disp-formula>where <italic>V</italic> represents the viable state of a cell, <italic>I</italic> represents the injured state of a cell and <italic>k</italic> is the cell injury rate. The predicted cell viability (<italic>S</italic><sub>c</sub>) was calculated using the following equation: <disp-formula id="Equ3"><label>3</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ S_{\text{c}} \, = \,\exp \left( { - \int\limits_0^\delta {k\,dt} } \right) $$\end{document}</tex-math></disp-formula><italic>&#x3B4;</italic> is the total treatment time (s).</p>
+        <p>The Arrhenius model<xref ref-type="bibr" rid="CR16">16</xref> was adopted in this study as it has been extensively used in previous studies to obtain the cell injury kinetics<xref ref-type="bibr" rid="CR14">14</xref>,<xref ref-type="bibr" rid="CR21">21</xref> as shown below; <disp-formula id="Equ4"><label>4</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ k\, = \,A\,{\text{exp}}\left( {\frac{{ - E}} {{RT}}} \right) $$\end{document}</tex-math></disp-formula><italic>A</italic> is frequency factor (s<sup>&#x2212;1</sup>), <italic>E</italic> is activation energy (J&#xA0;mol<sup>&#x2212;1</sup>) and <italic>R</italic> is the universal gas constant (8.314&#xA0;J&#xA0;mol<sup>&#x2212;1&#xA0;</sup>K<sup>&#x2212;1</sup>). <italic>A</italic> and <italic>E</italic> are related by an empirical formula, obtained by compiling the injury kinetics of various proteins, cells and tissues.<xref ref-type="bibr" rid="CR15">15</xref><disp-formula id="Equ5"><label>5</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ {\text{ln}}\,{\text{(}}A{\text{)}}\,{\text{ = }}\,{\text{0}}{\text{.38}}\,{\text{E}}\, - \,{\text{9}}{\text{.36 }} $$\end{document}</tex-math></disp-formula></p>
+      </sec>
+      <sec id="Sec8">
+        <title>Determination of Arrhenius Model Parameters</title>
+        <p>The kinetic parameters <italic>E</italic> and <italic>A</italic> were determined by fitting Eqs. (4) and (5) in Eq. (1) as obtained by He and Bischof<xref ref-type="bibr" rid="CR15">15</xref> They were further refined using a simple optimization subroutine to minimize the root mean square error between the experimental data and model prediction. <disp-formula id="Equ6"><label>6</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ f({\text{X}})\, = \,\left[ {\frac{1} {N}\,\sum\limits_{i = 1}^n {\left( {S_{{\text{e,}}i} {\text{(X)}}\, - \,S_{{\text{c,}}i} {\text{(X)}}} \right)^{\text{2}} } } \right]^{0.5} $$\end{document}</tex-math></disp-formula></p>
+        <p><italic>N</italic> is the total number of data points, vector &#x2018;X&#x2019; contains variables <italic>E</italic> and <italic>A</italic>. <italic>S</italic><sub>e,i</sub> and <italic>S</italic><sub>c,i</sub> represent the <italic>i</italic>th measured data point and model fit, respectively. The goodness of the fit (<italic>R</italic><sup>2</sup>) is calculated as follows: <disp-formula id="Equ7"><label>7</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ R^2 \, = \,1 - \frac{{\sum \left({\left( {S_{{\text{e,}}i} {\text{(X)}}\, - \,S_{{\text{c,}}i} {\text{(X)}}} \right)^2 }\right) }} {{\sum \left({\left( {S_{{\text{e,}}i} {\text{(X)}}\, - \,S_{{\text{av}}} } \right)^2 }\right) }} $$\end{document}</tex-math></disp-formula></p>
+        <p><italic>S</italic><sub>av</sub> is the measured average survival from the Etdh-1 studies.</p>
+      </sec>
+    </sec>
+    <sec id="Sec9" sec-type="results">
+      <title>Results</title>
+      <p>The results were generated by counting the number of total and dead cells from the micrographs of the cell samples as shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> and using Eq. (1) to calculate the normalized cell survival for each sample. Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a, b represent the control sample, where the number of dead cells, stained with Ethd-1 (red) dye, is very less compared to the total number of cells, stained with Hoechst (blue) dye and the cell survival is higher than 0.96. The cell survival decreases slightly as the number of dead cells compared to the total number of cells increases for the cell sample heated at 50&#xB0;C for 9&#xA0;min, as shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>c, d. The survival drops dramatically with a sharp increase in the number of dead cells compared to total cells at 70&#xB0;C as seen in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>e, f.
+<fig id="Fig2"><label>Figure&#xA0;2.</label><caption><p>Micrographs showing cell samples stained with Hoechst (Blue-all cells) and Ethd-1 (Red-dead cells only). (a and b) &#x2013; control samples without heating; (c and d) &#x2013; samples heated at 50&#xB0;C for 9&#xA0;min; (e and f) &#x2013; samples heated at 70&#xB0;C for 1&#xA0;min.</p></caption><graphic position="anchor" xlink:href="10439_2006_9185_Fig2_HTML" id="MO2"/></fig></p>
+      <sec id="Sec10">
+        <title>Isothermal Heating Studies</title>
+        <p>The isothermal heating studies were used to understand the effect of different temperature&#x2013;time histories on the viability of attached and suspended HepG2 cells and to quantify the cellular injury associated with these histories. All the cell samples reached the PTs in &#x223C;5&#xA0;s at an approximate HR of 525&#xB0;C&#xA0;min<sup>&#x2212;1</sup> resulting in a negligible difference between the hold time and the total time of the treatment. Thus heating at the rate of 525&#xB0;C&#xA0;min<sup>&#x2212;1</sup> was referred as isothermal heating.</p>
+        <p>The data in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a, b represents the mean and the standard error for measured cell viability of attached and suspended HepG2 cells respectively using Ethd-1 dye uptake assay. Both the figures show that for a given PT, the survival drops with the increase in the hold time. At 50&#xB0;C, the survival drops from 0.84 to 0.43 for suspended cells and from 0.89 to 0.62 for attached cells, as the hold time increases from 2 to 9&#xA0;min. Similar trend was observed for heating at all the PTs. The figures also show that for a given hold time, the cell survival drops with the increase in the PT for suspended cells. For a hold time of 2&#xA0;min, the cell survival drops from 0.84 to 0.52 and from 0.52 to 0.29 as the PT increases from 50&#xB0;C to 55&#xB0;C and from 55&#xB0;C to 60&#xB0;C, respectively. For a hold time of 1&#xA0;min, the cell survival drops from 0.45 to 0.1 and from 0.1 to 0.003 as the PT increases for 50&#xB0;C to 55&#xB0;C and from 55&#xB0;C to 60&#xB0;C, respectively. The same trend is also seen for the attached cells but with slightly higher survival.
+<fig id="Fig3"><label>Figure&#xA0;3.</label><caption><p>(a) Plot of experimentally measured and predicted survival of <italic>attached cells heated isothermally</italic> versus hold time in minutes for single cell heating at PTs of 50, 55, 60, 65 and 70&#xB0;C. Cross (&#xD7;), filled circles (&#x2022;), filled diamonds (&#x2666;), filled squares (&#x25A0;) and filled triangles (&#x25B2;) represents heating of samples at 50, 55, 60, 65 and 70&#xB0;C, respectively. The lines represent the exponential fit through all the data points based on the predicted <italic>E</italic> and <italic>A</italic> values. (b) Plot of experimentally measured and predicted survival of <italic>suspended cells heated isothermally</italic> versus hold time in minutes for single cell heating at PTs of 50, 55, 60, 65 and 70&#xB0;C. Cross (&#xD7;), filled circles (&#x2022;), filled diamonds (&#x2666;), filled squares (&#x25A0;) and filled triangles (&#x25B2;) represents heating of samples at 50, 55, 60, 65 and 70&#xB0;C respectively. The lines represent the exponential fit through all the data points based on the predicted <italic>E</italic> and <italic>A</italic> values. (c) Direct comparison between suspended and attached HePG2 cell viability, using student <italic>t</italic>-test assuming unequal variance. Each data point is an average of three separate runs using two different cell samples for each run. The error bar in the figure represents the standard error of the mean. Data points marked with asterisks indicate the data points where viability of suspended and attached cells is significantly different.</p></caption><graphic position="anchor" xlink:href="10439_2006_9185_Fig3_HTML" id="MO3"/></fig></p>
+        <p>The figures also show the effect of PTs on the slope of the survival curve. The drop in the survival with the increase in the hold time is slow at low PTs. The survival curve gets steeper as the PT increases. When heated at 50&#xB0;C for up to 9&#xA0;min, the cell survival is still higher than 0.43 for both suspended and attached cells. This trend changes for 55&#xB0;C, where the cell survival drops to 0.03 after only 6&#xA0;min of heating. This trend magnifies sharply as the PTs increases to 60, 65 and 70&#xB0;C. For suspended cells, the survival at 60&#xB0;C varies from 0.58 to almost zero survival as the hold time increases from 0.5 to 3&#xA0;min. The survival dropped from 0.2 to 0.003 for an increase in the hold time from 15&#xA0;s to a min at 70&#xB0;C. The attached cells also showed a similar trend with slightly higher survival than the suspended cells for all the data points.</p>
+        <p>The student <italic>t</italic>-test assuming unequal variance was used to observe the statistical significance between the experimentally measured cell viability of suspended and attached HepG2 cells as shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>c. With <italic>p&#xA0;</italic>=&#xA0;0.05 as the criterion, no significant difference in the cell viability was observed for most of the data points. The data points that were significantly different (<italic>p&#xA0;</italic>&lt;&#xA0;0.05) are 50&#xB0;C &#x2013; 5&#xA0;min, 50&#xB0;C &#x2013; 9&#xA0;min, 60&#xB0;C &#x2013; 3&#xA0;min and 70&#xB0;C &#x2013; 1&#xA0;min. This difference for data points of 60&#xB0;C &#x2013; 3&#xA0;min and 70&#xB0;C &#x2013; 1&#xA0;min can be neglected as the experimentally calculated cell viability in suspended and attached HepG2 for both these thermal insults is of the order 10<sup>&#x2212;3</sup>. The <italic>p-</italic>value of 0.088 for 60&#xB0;C &#x2013; 2&#xA0;min data point suggests the difference in the cell viability is not significant, but is still different. As no significant difference between the survival of suspended and attached HepG2 cells was observed for most of the time&#x2013;temperature histories and since attached cells better describe the arrangement of the cells in a tissue, only attached cells were used for further non-isothermal studies.</p>
+        <p>The parameters of cell injury, <italic>E</italic> and <italic>A</italic>, were obtained by fitting the Arrhenius rate model into the survival data. This was done by minimizing the function in Eq. (6) using Eqs. (3) and (4). The predicted <italic>E</italic> and <italic>A</italic> values for suspended and attached cells for isothermal heating are shown in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. The <italic>E</italic> and <italic>A</italic> values obtained for suspended cells are 229.46 (kJ&#xA0;mol<sup>&#x2212;1</sup>) and 3.495&#xA0;&#xD7;&#xA0;10<sup>31 </sup>(s<sup>&#x2212;1</sup>) and those for attached cells are 248.64 (kJ&#xA0;mol<sup>&#x2212;1</sup>) and 5.396&#xA0;&#xD7;&#xA0;10<sup>36</sup> (s<sup>&#x2212;1</sup>), respectively. The predicted survival based on the predicted <italic>E</italic> and <italic>A</italic> values for attached and suspended cells is shown by the solid lines in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a, b, respectively. The goodness of the fit between the predicted and experimentally measured values, obtained using Eq. (7) for suspended and attached cells, is 0.86 and 0.84, respectively.
+<table-wrap id="Tab2"><label>Table&#xA0;2.</label><caption><p>Activation energy <italic>E</italic> (kJ&#xA0;mol<sup>&#x2212;</sup><sup>1</sup>) and frequency factor <italic>A</italic> (s<sup>&#x2212;</sup><sup>1</sup>) using all the data point for different HRs.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">HR (&#xB0;C&#xA0;min<sup>&#x2212;1</sup>)</th><th align="left">Activation energy <italic>E</italic> (kJ&#xA0;mol<sup>&#x2212;1</sup>)</th><th align="left">Frequency factor <italic>A</italic> (s<sup>-1</sup>)</th></tr></thead><tbody><tr><td align="left">100</td><td align="center">272.4</td><td char="&#xD7;" align="char">7.757&#xA0;&#xD7;&#xA0;10<sup>40</sup></td></tr><tr><td align="left">200</td><td align="center">262.02</td><td char="&#xD7;" align="char">1.502&#xA0;&#xD7;&#xA0;10<sup>39</sup></td></tr><tr><td align="left">300</td><td align="center">257.38</td><td char="&#xD7;" align="char">2.576&#xA0;&#xD7;&#xA0;10<sup>38</sup></td></tr><tr><td align="left">525 (Isothermal &#x2013; Attached)</td><td align="center">248.64</td><td char="&#xD7;" align="char">5.396&#xA0;&#xD7;&#xA0;10<sup>36</sup></td></tr><tr><td align="left">525 (Isothermal &#x2013; Suspended)</td><td align="center">229.46</td><td char="&#xD7;" align="char">3.495&#xA0;&#xD7;&#xA0;10<sup>31</sup></td></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec11">
+        <title>Non-Isothermal Heating Studies</title>
+        <p>The study focused next on the investigation of the effect of different HRs on the cell viability of attached HepG2 cells and extraction of kinetic parameters of the cellular injury associated with each HR. The HRs of 100, 200 and 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup> were employed in this study, as they all showed a considerable difference in the rise-time at all the PTs. The total injury time (rise, hold and cooling time) was taken into account to quantify the thermal injury for all the HRs.</p>
+        <p>The data in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a&#x2013;c represents the mean and the standard error of the measured cell viability using Ethd-1 dye uptake assay for attached HepG2 cells at HRs of 100, 200 and 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, respectively. All the figures show that, for a given HR, the cell survival drops with the increase in the hold time and the PT, similar to that observed in isothermal heating. At the HR of 100&#xA0;C&#xA0;min<sup>&#x2212;1</sup>, the survival drops from 0.82 for no hold time to 0.18 for a hold time of 2&#xA0;min for a PT of 60&#xB0;C. This trend remains the same for the PTs of 65&#xB0;C and 70&#xB0;C and for all the HRs. The survival drops from 0.82 at 60&#xB0;C to 0.69 at 65&#xB0;C and further to 0.11 at 70&#xB0;C, for no hold time at HR of 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. This trend continues for all the HRs and at all the hold times. The figures also illustrates that for any given PT and for a given hold time, the cell survival increases with the increase in the HR. At 60&#xB0;C for no hold time, the survival increases from 0.82 at 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup> to 0.85 at 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and further to 0.88 at 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. At 65&#xB0;C for a hold time of 0.5&#xA0;min, the survival increases from 0.15 at 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup> to 0.19 at 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and then to 0.22 at 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. This trend also continues for 70&#xB0;C for any given hold time.
+<fig id="Fig4"><label>Figure&#xA0;4.</label><caption><p>Plot of experimentally measured and predicted survival of attached cells heated at various heating rates versus time in minutes for single cell heating at temperature 60, 65 &amp; 70&#xB0;C. (a) 100&#xB0;C min<sup>&#x2212;1</sup>. (b) 200&#xB0;C min<sup>&#x2212;1</sup>. (c) 300&#xB0;C min<sup>&#x2212;1</sup>. Filled diamonds (&#x2666;), filled squares (&#x25A0;) and filled triangles (&#x25B2;) represents heating of samples at 60, 65 and 70&#xB0;C respectively. The lines represent the exponential fit through all the data points based on the predicted E and A values.</p></caption><graphic position="anchor" xlink:href="10439_2006_9185_Fig4_HTML" id="MO4"/></fig></p>
+        <p>A trend was observed in the Arrhenius parameters obtained from the non-isothermal heating studies as the <italic>E</italic>, and the corresponding <italic>A</italic> value, decreased with the increase in the HR. Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> shows the predicted <italic>E</italic> and <italic>A</italic> values for HRs of 100, 200 and 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. The activation energy decreases from 272.40&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup> at 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup> to 262.02&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup> at 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and then to 257.38&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup> at 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. The solid lines in the Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a&#x2013;c represent the predicted cell survival based on above values respectively. The goodness of fit between the predicted and measured cell survival for all data points obtained using Eq. (7) is 0.97 for all the HRs used in this study.
+<fig id="Fig5"><label>Figure&#xA0;5.</label><caption><p>Plot of the normalized survival of attached cells for various hold times at different peak temperatures and heating rates based on the predicted E and A values. (a) 0 <italic>min</italic>. (b) 0.25<italic> min</italic>. (c) 1<italic> min</italic>. (d) 5 <italic>min</italic>.</p></caption><graphic position="anchor" xlink:href="10439_2006_9185_Fig5_HTML" id="MO5"/></fig></p>
+      </sec>
+      <sec id="Sec12">
+        <title>Relation Between Activation Energy and HRs</title>
+        <p>The following relation was obtained by fitting a polynomial trend line through the data in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> that includes the isothermal heating at 525&#xB0;C&#xA0;min<sup>&#x2212;1</sup>; <disp-formula id="Equ8"><label>8</label><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ E\, = \,0.0001\,(HR)^2 \, - \,0.1173\,(HR)\, + \,282.67 $$\end{document}</tex-math></disp-formula></p>
+        <p><italic>E</italic> represents the activation energy and HR represents the HR. The above equation was then used to obtain the values of activation energy over a range of HRs from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> in order to simulate the effects of various parameters on the cell survival. The values of the activation energy shows a small decrease from 282.09 to 248.29&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup> over a large increase in the HR increased from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Effects of PTs, HRs and Hold Time on the Cell Survival</title>
+        <p>Based on the <italic>E</italic> and <italic>A</italic> values obtained at HRs of 5&#x2013;600&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>using the <italic>E</italic>&#x2013;HR relation, the cell survival was predicted at different hold times for PTs between 50&#xB0;C and 85&#xB0;C. The combined effect of the increase in the hold time and PT on the cell survival is shown in the Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a&#x2013;d for all the HRs mentioned above.</p>
+        <p>For a given hold time and HR, the cell survival drops consistently with the increase in the PT. For a HR of 20&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, the cell survival drops from 0.98 at 50&#xB0;C to 0.091 at 65&#xB0;C and then to no cell survival at temperature above 75&#xB0;C, when the hold time is 0&#xA0;min. The trend remains the same for any HR and hold time combination. The drop in the cell survival for any hold time is lower when the PTs are 55&#xB0;C and less. The survival drops slightly from 0.96 at 50&#xB0;C to 0.84 at 55&#xB0;C for heating at 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup> for a hold time of 1&#xA0;min. This drop is higher, from 0.84 to 0.48, when the temperature increases to 60&#xB0;C. This trend is magnified with the increase in the PT to 65&#xB0;C where the survival drops to 0.05 and to almost complete cell destruction for a further 5&#xB0;C rise in the PT. At any given hold time and PT, the cell survival increases with the increase in the HR. The survival increased from 0.006 to 0.56 at 60&#xB0;C for a hold time of 1&#xA0;min and from 0 to 0.002 for a hold time of 3&#xA0;min at 65&#xB0;C as the HR increased from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>.</p>
+        <p>For a given PT and a HR, the cell survival drops with the increase in the hold time. At 60&#xB0;C and 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup> the cell survival drops from 0.76 to 0.008 when the hold time increases from 0 to 5&#xA0;min. For the same increase in the hold time, the survival drops from 0.12 to zero at 70&#xB0;C and 400&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. For any hold time, almost complete cell destruction takes place at all the HRs when the PTs are 75&#xB0;C and above. For HRs of 50&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and lower, the PT to acquire almost complete cell death decreases with the increase in hold time. For zero hold time, 70&#xB0;C shows a survival of 0.004 and less for HRs of 50&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and less. When the hold time is 1&#xA0;min, complete cell death is observed at 65&#xB0;C for all the HRs below 50&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and at 60&#xB0;C for HR of 5&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. The survival at 55&#xB0;C decreases considerably with hold time at these low HRs but is still significantly high (&gt;10%), while the survival at 50&#xB0;C shows a very less drop. For a HR of 10&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, the survival at 55&#xB0;C drops from 0.79 to 0.28 with the increase in the hold time from 0 to 5&#xA0;min. At 50&#xB0;C, this drop is from 0.96 to 0.79. This trend is depicted in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a&#x2013;d as the drop in the slope of the vertical portion with the increase in the hold time.</p>
+      </sec>
+      <sec id="Sec14">
+        <title>Hold and Total Injury Time for Complete Cell Destruction</title>
+        <p>The relationship between activation energies and HRs was further used to predict the hold time and total injury time required to attain complete cell destruction at different target PTs and HRs that represents different scenarios of a clinical thermal therapy protocol. Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a, b shows the calculated hold time and total time in minutes resulting in complete cell death at target PTs between 60&#xB0;C and 85&#xB0;C and HRs between 5 and 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, which represents the transient clinical problem strictly under thermal therapy conditions.
+<fig id="Fig6"><label>Figure&#xA0;6.</label><caption><p>(a) Plot of hold time in minutes to attain complete destruction of <italic>attached HepG2 cells</italic> at various PTs between 50&#xB0;C and 85&#xB0;C and at HRs from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. (b) Plot of total time (min) to attain complete destruction of <italic>attached HepG2 cells</italic> at various PTs between 50&#xB0;C and 85&#xB0;C and at HRs from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> .</p></caption><graphic position="anchor" xlink:href="10439_2006_9185_Fig6_HTML" id="MO6"/></fig></p>
+        <p>Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a shows that, for a given target PT, the hold time increases with the increase in the HRs. It increases from 0.45 to 8.4&#xA0;min, from 0 to 2.2&#xA0;min, from 0 to 0.61&#xA0;min, from 0 to 0.17&#xA0;min and from 0 to 0.05&#xA0;min at a target PT of 60, 65, 70, 75 and 80&#xB0;C, respectively. The increase in the hold is negligible at 85&#xB0;C. Further, the hold time decreases with the increase in target PT, for any given HR. At 300&#xB0;C&#xA0;min<sup>&#x2212;1</sup> the hold time for complete cell destruction decreases from 7.2&#xA0;min at 60&#xB0;C to 0.4&#xA0;min at 80&#xB0;C. For very low HRs of 5 and 10&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, complete cell destruction is achieved for target PTs of 65&#xB0;C and above without any hold time. Similarly, no hold time is required when the target PTs are 70&#xB0;C and above at 20&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and 75&#xB0;C and above at 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. Heating, targeted at PTs of 80&#xB0;C and 85&#xB0;C, kills all the cells without any hold period for any of the above used HR. These results demonstrate that significant cell death takes place during the ramp up and ramp down period.</p>
+        <p>Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>b shows the variation in the total injury time (rise, hold and cooling time) to achieve complete cell destruction with the change in the target PTs and HRs. For 60, 65 and 70&#xB0;C, the total injury time showed a minima with the decrease in the HR. For example, the total time at the target PT of 60&#xB0;C, decreases from 8.8 for 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> to 5.9 for 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and then again increases to 7.8&#xA0;min for 5&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. At 65&#xB0;C, the total time decreases from 2.7&#xA0;min to 2&#xA0;min and then increases to 3.2&#xA0;min for a decrease of HR from 600 to 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and again to 20&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, respectively. The trend remains the same at 70&#xB0;C, the transition of hold time being at a higher rate of 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. For target PTs of 75, 80 and 85&#xB0;C, this trend reverses as the total injury time consistently increases with the decrease in the HR, unlike for all other target PTs. The total time increased almost twice from 0.76, 0.69 and 0.7 at 75, 80 and 85&#xB0;C respectively, as the HR dropped from 600 to 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. For the target PTs (85&#xB0;C to 65&#xB0;C) where no hold time is required to attain complete cell death, total injury time was obtained as 1, 1.35, 2.4, 3.96 and 6.93&#xA0;min at HRs of 100, 50, 20, 10 and 5&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, respectively. The trend in the change of the total injury time with change in target PT, for any given HR remains the same as that for the hold time.</p>
+      </sec>
+    </sec>
+    <sec id="Sec15" sec-type="discussion">
+      <title>Discussion</title>
+      <sec id="Sec16">
+        <title>Injury Kinetics of Attached and Suspended Cells</title>
+        <p>The comparison of the survival data for the suspended and the attached cells (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a, b) indicate that the suspended cells are a slightly more susceptible to heat than the attached ones. He and Bischof<xref ref-type="bibr" rid="CR15">15</xref> also obtained similar results for SN12 human renal cell carcinoma within the same temperature range, where the reason for this difference between suspended and attached cells was assumed to be the difference in their protein synthesis and gene expression. It may be assumed that some of the above differences also exist between attached and suspended HepG2 cells used in this study. The results shows a clear difference between the frequency factors for both the cell types, but the activation energies does not show much variation. But since the difference in the survival of suspended and attached cells is small either of the cell type can be used in studying the cell injury kinetics in HepG2 cells.</p>
+      </sec>
+      <sec id="Sec17">
+        <title>Comparison with Previous Hyperthermic Studies</title>
+        <p>Hyperthermic studies are mainly characterized by the presence of a shoulder region followed a slope in the survival curve. In these studies, the shoulder region is typically associated with considerably higher (&#x223C;30&#x2013;40%) cell survival within a long heating period of few hours and has been observed in the temperature range of 42&#x2013;45&#xB0;C in many studies. Chinese hamster ovary (CHO) cells showed a small (15%) drop in the survival followed by reduction in the slope of the survival curve when heated at 42&#xB0;C for 3&#xA0;h.<xref ref-type="bibr" rid="CR9">9</xref> Human melanoma HTB-66 cells, when heated between 42&#xB0;C and 45&#xB0;C, also showed a considerably high survival (&#x223C;30%) followed by reduction in the slope at 42.5&#xB0;C even after 5&#xA0;h of heating.<xref ref-type="bibr" rid="CR23">23</xref> In this study, heating at 45&#xB0;C for 15&#xA0;min (data not included) and at 50&#xB0;C for 9&#xA0;min also shows a significantly higher (&gt;42%) survival for attached and suspended HepG2 cells indicating the possibility of a shoulder region for these short time protocols. However, whether they biologically behave in a similar fashion to the hyperthermic shoulders by demonstrating thermotolerance has not been studied and further investigation is clearly warranted to verify these facts.</p>
+        <p>Another important aspect of the single cell heating studies is the presence of a break point, after which the slope of the Arrhenius plot drops significantly with the increasing temperature. The break point is believed to be the indication of an achieved thermotolerance and change in the mechanism/target of the thermally induced cellular injury beyond it.<xref ref-type="bibr" rid="CR9">9</xref> Such break points have been observed at 43.5&#xB0;C for human cell lines and 43&#xB0;C for rodent cell lines. We have observed no significant break point for our studies between temperatures of 55&#x2013;70&#xB0;C. However, one interesting observation in our study was that heating at 60&#xB0;C for 3&#xA0;min for attached and suspended cells, shows a sudden change in the slope of the survival curve. The survival drops from &#x223C;0.25 at 2&#xA0;min to 0.003 after 3&#xA0;min of heating, suggesting the possibility of a distinct change in the response to heating at 60&#xB0;C for HepG2 cells.</p>
+      </sec>
+      <sec id="Sec18">
+        <title>Comparison of Arrhenius Parameters</title>
+        <p>This study shows a linear relationship between activation energies and HRs for a temperature range of 50&#x2013;70&#xB0;C. The activation energies between 282.09&#xA0;kJ&#xA0;mol<sup>&#x2212;1 </sup>and 248.29&#xA0;kJ&#xA0;mol<sup>&#x2212;1 </sup>were obtained for HRs of 5&#x2013;600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, which are within the range of the activation energies obtained in most of the dye uptake assays. Thermal injury in Dunning AT-1 attached prostate cancer cells from 40&#xB0;C to 60&#xB0;C gave activation energy of 245&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup>.<xref ref-type="bibr" rid="CR4">4</xref> Activation energy values obtained in renal cell carcinoma studies are 290&#x2013;360&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup>.<xref ref-type="bibr" rid="CR15">15</xref> and in skeletal muscle tissue is 230&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup>.<xref ref-type="bibr" rid="CR11">11</xref> The activation energies for clonogenic assays for various studies like AT-1 prostate cancer cells (40&#x2013;70&#xB0;C),<xref ref-type="bibr" rid="CR4">4</xref> T24 human bladder carcinoma cells (48&#x2013;65&#xB0;C) and CHO (48&#x2013;65&#xB0;C)<xref ref-type="bibr" rid="CR22">22</xref> were found to be 500, 600 and 680&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup>, respectively. These values are higher than the ones obtained in this study which is not surprising since clonogenic assay yields higher activation energies than dye uptake assays. Since the activation energies obtained in this study are in the same range of the values obtained for other dye uptake assays, we suggest that the mechanism of thermal injury and its measurement is consistent with other studies.</p>
+      </sec>
+      <sec id="Sec19">
+        <title>Clinical Relevance</title>
+        <p>Clinical thermal therapy is a transient conduction problem as the tumor gets heated by deposition of energy from the source and by diffusion of the heat from the applicator. Based on the size and heat absorption pattern of the tumor, different radial locations are heated to different PTs at different rates. The regions closer to the applicator gets heated to higher PTs at higher HRs than the ones that are further away resulting in different survival patterns at various locations inside the tumor. Thus, accurate prediction of the hold time of the applicator inside the tumor is very important to ensure desired cellular injury accumulation at every location. As in these high temperature&#x2013;short time thermal therapy protocols a considerable (&gt;10%) injury accumulates within the non-isothermal portion of the thermal history, the determination of the total treatment time (rise, hold and cooling) is also necessary to obtain desired injury accumulation. Since the maximum size of a liver tumor that can be treated using various energy sources is limited to 4&#x2013;6&#xA0;cm diameter,<xref ref-type="bibr" rid="CR8">8</xref> the HRs between 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and 5&#xB0;C&#xA0;min<sup>&#x2212;1</sup> are representative of all the locations within the tumor for any selected energy source, while the temperatures between 85&#xB0;C and 50&#xB0;C are descriptive of the actual temperature distribution inside the tumor during the thermal application. Temperatures higher than 85&#xB0;C might result in carbonization near the applicator as well as overheating of the healthy tissue beyond the edge of the tumor, while temperatures lower than 50&#xB0;C may result in insufficient injury accumulation within the short treatment time. Therefore, design of clinical thermal therapy protocols requires knowledge of the survival patterns for different hold times and precise prediction of hold and total treatment times to obtain desired cellular injury within the above mentioned range of HRs and PTs.</p>
+        <p>Such an attempt has been made in a previous study carried out by He and Bischof<xref ref-type="bibr" rid="CR15">15</xref> on SN12 renal cell carcinoma. The cell injury kinetics, based on the non-isothermal heating at an average rate of 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, were used to predict the PTs necessary to obtain a considerable (&gt;10%) amount of cellular injury in cells during the rise period. This prediction was extended to various HR&#x2013;activation energy combinations just by selecting HRs between 2&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and 200&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and activation energies up to 1000&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup>. However, experimental calculations to determine <italic>E</italic> as a function of HRs was not included in above study. The unique feature of this study is that for all PTs, prediction of survival and treatment time at any given HR is based on a specific experimentally calculated <italic>E</italic>&#x2013;<italic>A</italic> combination for that HR, which results in a close approximation of the actual cellular injury for these high temperatures-short time thermal treatments.</p>
+        <p>An important assumption made in this study is that the HR used to attain a target PT remains constant. The temperature rise on the heating stage, based on the constants <italic>k</italic><sub>p</sub> and <italic>k</italic><sub>d</sub> in the feedback loop, was found to be exponential. The HR was approximated by taking a tangent to the temperature&#x2013;time curve, resulting in a constant value for the entire temperature rise. However, inside a tumor, the bioheat equation is required to model the transient temperature rise which is rarely linear. But as an initial step in understanding the effect of important parameters governing thermal therapy, this assumption may be a good approximation to predict desired cellular injury and Figs.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> and <xref rid="Fig6" ref-type="fig">6</xref> may provide important insights in this direction.</p>
+        <p>The predicted survival at different hold times in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a&#x2013;d shows that for any HR, the PT required to attain a considerable amount of injury accumulation (&gt;90%) decreases as the hold time increases. A smaller flat portion representing complete cell death and the steeper vertical portion representing considerable (&gt;10%) survival for zero hold time in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a intersects at 70&#xB0;C and complete cell death is observed for HRs of 50&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and lower. This suggests that for HRs of 50&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and lower, typically at the boundary of the tumor, PTs of only 70&#xB0;C and above are capable of accumulating significant amount of injury. This information is helpful in developing treatment protocols for small sized tumors, where the use of high target PTs will not significantly damage the healthy tissue beyond the range of the tumor, even though the temperatures at those locations are higher than 60&#xB0;C. As the hold time increases the intersection shifts toward lower PTs increasing the flat portion of complete cell destruction. The decrease in steepness of the vertical portion also implies that sufficient cell damage can be obtained at tumor boundaries at these low temperatures. For example, when the hold time is 5&#xA0;min, more than 80% survival is observed even at 55&#xB0;C at the boundary of the tumor where the HR is as low as 5&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. This shows that thermal protocols with higher hold times are beneficial for cell injury in large size tumors. Since it is necessary that the intersection should coincide with the tumor boundary to maximize the damage within the tumor as well as minimize the damage of the surrounding healthy tissue, the contours obtained in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a&#x2013;d are very important in the selection of the hold times based on the size of the tumor.</p>
+        <p>Since the goal of every clinical application is complete tumor destruction, it is very important to know the hold time required to destroy all the tumor cells for different PT&#x2013;HR combinations (that may represent different regions within a tumor depending upon its geometry and the energy source used). Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a shows the hold time necessary to acquire complete damage in attached HepG2 cells at PTs between 60&#xB0;C and 85&#xB0;C and HRs between 5&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and suggests that the hold time increases with the simultaneous decrease in the PT and the HR. Therefore, as the distance from the applicator increases, decreasing the PT and the HR, the hold time for tumor destruction increases. For example, Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a shows that the hold time increases from almost zero at 85&#xB0;C &#x2013; 500&#xB0;C&#xA0;min<sup>&#x2212;1</sup> to 4.84&#xA0;min at 60&#xB0;C &#x2013; 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. Significant increase in the hold time for PTs of 60&#xB0;C and 65&#xB0;C suggests that in the regions away from the applicator (HRs of 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and lower), the injury accumulation strongly depends on the hold time.</p>
+        <p>However, the hold time is very less for PTs of 70&#xB0;C and above even at high HRs and decreases to almost zero as the HR decreases, suggesting that the majority of the cell damage at these temperatures occurs just within the rise and cooling period. At 70&#xB0;C and above for HRs of 20&#xB0;C&#xA0;min<sup>&#x2212;1 </sup>and lower, the hold time completely vanishes and the thermally induced cellular injury is just a function of the non-isothermal portion of the thermal history. Therefore it is necessary to investigate the variation in the total treatment time (rise, hold and cooling) to attain complete cellular destruction at various PT&#x2013;HR combinations.</p>
+        <p>Figure&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>b shows the variation in the total treatment time based on the temperature distribution within the tumor, depending upon its geometry and the energy source used. For PTs of 75&#xB0;C and above, unlike hold time, the total treatment time increases with the decrease in the HR. This is due to the fact that for HRs above 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, the hold time is very small and negligible compared to the rise time to reach these high PTs and the time to cool down back to the room temperature. It was also observed that for a given target PT (&gt;70&#xB0;C)&#x2013;HR (&lt;50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>) combination, where the hold time is zero, the total treatment time is lower than the calculated time. This suggests that if damage within a tumor is desired at very slower rate at PTs higher than 70&#xB0;C, the tumor actually gets destroyed before even reaching the target PT at any location. But the interesting observation in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>b is the presence of a minimal total treatment time at PTs of 70, 65 and 60&#xB0;C for HRs of 200, 100 and 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, respectively. This implies that based on the size of the tumor and the energy source selected, if the temperature distribution within the tumor results in any of the above PT&#x2013;HR combinations at the boundary, complete cell death can be achieved in the entire tumor within a minimal total treatment time. For example, if the temperature distribution is such that the boundary of the tumor reaches 60&#xB0;C at 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, the entire tumor can be destroyed in 5.9&#xA0;min. Thus based on the size of the tumor, Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>a, b may help in selecting hold and total treatment time in order to design an optimal clinical protocol.</p>
+        <p>Since this study is based on experimental single cell data to obtain the activation energies at different HR, it can serve as an accurate model for designing better thermo-surgical protocols using appropriate energy sources of heat delivery. Also, for a clinician practicing the technique, it can serve as a database, from where an optimal thermal therapy protocol can be selected for the treatment of liver cancer. By selecting appropriate blood flow and tissue properties and by using the bioheat equation, this <italic>in&#xA0;vitro</italic> protocol can be extended to <italic>in&#xA0;vivo</italic> clinical protocols.</p>
+      </sec>
+    </sec>
+    <sec id="Sec20">
+      <title>Summary</title>
+      <p>The investigation of injury kinetics in human liver cancer HepG2 cells between temperatures of 50&#xB0;C and 70&#xB0;C at HRs of 100, 200, 300 and 525&#xB0;C&#xA0;min<sup>&#x2212;1</sup> (isothermal) was used to extract Arrhenius parameters, <italic>E</italic> and <italic>A</italic>, that showed a minor decay with the increase in the HR. The extrapolation of the kinetic parameters over a range of heating conditions showed that the <italic>E</italic> value decreased from 282.09 to 248.29&#xA0;kJ&#xA0;mol<sup>&#x2212;1 </sup>as the HR increases from 5 to 600&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. The measured and the predicted survival at all the HRs dropped as the PT and hold time increased. A sharp drop in the survival was observed after 2&#xA0;min of heating at 60&#xB0;C for all HRs. The measured and predicted cell survival increased with the increase in the HR at any PTs and hold time. This increase in the survival reduced significantly for target PTs of 65&#xB0;C and above and for hold times of a minute and higher. The hold time for complete cell damage decreases with the increase in the target PT and increases with the increase in the HR. No hold time is required for target PTs of 75&#xB0;C and above with the decrease in the HR below 100&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. The cellular damage is a dominant function of hold time at target PTs of 60&#xB0;C and less and for HRs of 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and higher. Total time (rise, hold and cooling time) plays a major role in accumulating the cellular injury when the temperatures are 70&#xB0;C and above and when the HRs are between 0&#xB0;C&#xA0;min<sup>&#x2212;1</sup> and 50&#xB0;C&#xA0;min<sup>&#x2212;1</sup>. Minimal total treatment time for complete cellular damage was observed at target PTs of 60, 65 and 70&#xB0;C and HRs of 50, 50 and 20&#xB0;C&#xA0;min<sup>&#x2212;1</sup>, respectively.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgement</title>
+      <p>I would like to thank Dr. Tesfay Meressi, Chairperson, Mechanical Engineering Department, University of Massachusetts, Dartmouth, for help with the feedback control system.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="book">
+          <source>Cancer Facts and Figures</source>
+          <year>2004</year>
+          <publisher-loc>Atlanta, GA, USA</publisher-loc>
+          <publisher-name>American Cancer Society, Inc</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">American Cancer Society Statistics 2004 Cancer Facts and Figures, American Cancer Society, Inc., Atlanta, GA, USA </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bhowmick</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Bhowmick</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Coad</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>Bischof</surname>
+              <given-names>J. C.</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>In vitro</italic> assessment of the efficacy of thermal therapy in human benign prostatic hyperplasia tissue</article-title>
+          <source>Int. J. Hyperthermia.</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <issue>4</issue>
+          <fpage>421</fpage>
+          <lpage>439</lpage>
+          <pub-id pub-id-type="doi">10.1080/02656730310001637343</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bhowmick P., Bhowmick S., Coad J. E., Bischof J. C. 2004 In vitro assessment of the efficacy of thermal therapy in human benign prostatic hyperplasia tissue Int. J. Hyperthermia. 20(4):421&#x2013;439 <pub-id pub-id-type="pmid">15204522</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bhowmick</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Coad</surname>
+              <given-names>J. E.</given-names>
+            </name>
+            <name>
+              <surname>Swanlund</surname>
+              <given-names>D. J.</given-names>
+            </name>
+            <name>
+              <surname>Bischof</surname>
+              <given-names>J. C.</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>In vitro</italic> thermal therapy of AT-1 Dunning prostate tumors</article-title>
+          <source>Int. J. Hyperthermia.</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <issue>1</issue>
+          <fpage>73</fpage>
+          <lpage>92</lpage>
+          <pub-id pub-id-type="doi">10.1080/0265673031000111932</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bhowmick S., Coad J. E., Swanlund D. J., Bischof J. C. 2004 In vitro thermal therapy of AT-1 Dunning prostate tumors Int. J. Hyperthermia. 20(1):73&#x2013;92 <pub-id pub-id-type="pmid">14612315</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bhowmick</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Swanlund</surname>
+              <given-names>D. J.</given-names>
+            </name>
+            <name>
+              <surname>Bischof</surname>
+              <given-names>J. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Supraphysiological thermal injury in dunning AT-1 prostate tumor cells</article-title>
+          <source>ASME J. Biomech. Eng.</source>
+          <year>2000</year>
+          <volume>122</volume>
+          <fpage>51</fpage>
+          <lpage>59</lpage>
+          <pub-id pub-id-type="doi">10.1115/1.429627</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bhowmick S., Swanlund D. J., Bischof J. C. 2000 Supraphysiological thermal injury in dunning AT-1 prostate tumor cells ASME J. Biomech. Eng. 122:51&#x2013;59 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Borrelli</surname>
+              <given-names>M. J.</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>L. L.</given-names>
+            </name>
+            <name>
+              <surname>Cain</surname>
+              <given-names>A. A.</given-names>
+            </name>
+            <name>
+              <surname>Dewey</surname>
+              <given-names>W. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Time-temperature analysis of cell killing of BHK cells heated at temperatures in the range of 43.5degree C to 57 degree C</article-title>
+          <source>Int. J. Radiat. Oncol. Biol. Phys.</source>
+          <year>1990</year>
+          <volume>19</volume>
+          <issue>2</issue>
+          <fpage>389</fpage>
+          <lpage>399</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Borrelli M. J., Thompson L. L., Cain A. A., Dewey W. C. 1990 Time-temperature analysis of cell killing of BHK cells heated at temperatures in the range of 43.5degree C to 57 degree C Int. J. Radiat. Oncol. Biol. Phys. 19(2):389&#x2013;399 <pub-id pub-id-type="pmid">2394618</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bosch</surname>
+              <given-names>F. X.</given-names>
+            </name>
+            <name>
+              <surname>Ribes</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Borras</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Epidemiology of primary liver cancer</article-title>
+          <source>Semin. Liver Dis.</source>
+          <year>1999</year>
+          <volume>19</volume>
+          <fpage>271</fpage>
+          <lpage>285</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Bosch F. X., Ribes J., Borras J. 1999 Epidemiology of primary liver cancer Semin. Liver Dis. 19:271&#x2013;285 <pub-id pub-id-type="pmid">10518307</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Callari</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Blandino</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Saccone</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>D&#x2019;Amico</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Billitteri</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Action of retinol on viable cell recovery and clonogenic potential of HTC cells after in vitro hyperthermia</article-title>
+          <source>Boll. Soc. Ital. Biol. Sper.</source>
+          <year>1992</year>
+          <volume>68</volume>
+          <issue>12</issue>
+          <fpage>783</fpage>
+          <lpage>787</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Callari D., Blandino G., Saccone V., D&#x2019;Amico C., Billitteri A. 1992 Action of retinol on viable cell recovery and clonogenic potential of HTC cells after in vitro hyperthermia Boll. Soc. Ital. Biol. Sper. 68(12):783&#x2013;787 <pub-id pub-id-type="pmid">1307025</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Curley</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Radiofrequency ablation of malignant liver tumors</article-title>
+          <source>The Oncologist</source>
+          <year>2001</year>
+          <volume>6</volume>
+          <fpage>14</fpage>
+          <lpage>23</lpage>
+          <pub-id pub-id-type="doi">10.1634/theoncologist.6-1-14</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Curley S. 2001 Radiofrequency ablation of malignant liver tumors The Oncologist 6:14&#x2013;23 <pub-id pub-id-type="pmid">11161225</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dewhirst</surname>
+              <given-names>M. W.</given-names>
+            </name>
+            <name>
+              <surname>Viglianti</surname>
+              <given-names>B. L.</given-names>
+            </name>
+            <name>
+              <surname>Lora-Michiels</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Hanson</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Hoopes</surname>
+              <given-names>P. J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Basic principles of thermal dosimetry and thermal thresholds for tissue damage from hyperthermia</article-title>
+          <source>Int. J. Hyperthermia.</source>
+          <year>2003</year>
+          <volume>19</volume>
+          <issue>3</issue>
+          <fpage>267</fpage>
+          <lpage>294</lpage>
+          <pub-id pub-id-type="doi">10.1080/0265673031000119006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dewhirst M. W., Viglianti B. L., Lora-Michiels M., Hanson M., Hoopes P. J. 2003 Basic principles of thermal dosimetry and thermal thresholds for tissue damage from hyperthermia Int. J. Hyperthermia. 19(3):267&#x2013;294 <pub-id pub-id-type="pmid">12745972</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fong</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Sun</surname>
+              <given-names>R. L.</given-names>
+            </name>
+            <name>
+              <surname>Jarnagin</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Blumgart</surname>
+              <given-names>L. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>An analysis of 412 cases of hepatocellular carcinoma at a Western center</article-title>
+          <source>Ann. Surg.</source>
+          <year>1999</year>
+          <volume>229</volume>
+          <fpage>790</fpage>
+          <lpage>799</lpage>
+          <pub-id pub-id-type="doi">10.1097/00000658-199906000-00005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fong Y., Sun R. L., Jarnagin W., Blumgart L. H. 1999 An analysis of 412 cases of hepatocellular carcinoma at a Western center Ann. Surg. 229:790&#x2013;799 <pub-id pub-id-type="pmid">10363892</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="other">Gaylor, D. C. Physical mechanisms of cellular injury in electrical trauma. PhD thesis. Boston, MA: MIT (Lee RC, Supervisor), 1989</citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gilliams</surname>
+              <given-names>A. R.</given-names>
+            </name>
+            <name>
+              <surname>Brokes</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Hare</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Follow-up of patients with metastatic liver lesions treated with interstitial laser therapy</article-title>
+          <source>Br. J. Cancer</source>
+          <year>1997</year>
+          <volume>76</volume>
+          <fpage>31</fpage>
+        </citation>
+        <citation citation-type="display-unstructured">Gilliams A. R., Brokes J., Hare C. 1997 Follow-up of patients with metastatic liver lesions treated with interstitial laser therapy Br. J. Cancer 76:31,1997 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hasumura</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Nagamori</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Fujise</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Sujino</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Matsuura</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Shimizu</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Niiya</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of TNF on human hepatocellular carcinoma cell lines and their modification by hyperthermia</article-title>
+          <source>Human Cell</source>
+          <year>1988</year>
+          <volume>1</volume>
+          <issue>2</issue>
+          <fpage>238</fpage>
+          <lpage>244</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Hasumura S., Nagamori S., Fujise K., Sujino H., Matsuura T., Shimizu K., Niiya M. 1988 Effects of TNF on human hepatocellular carcinoma cell lines and their modification by hyperthermia Human Cell 1(2):238&#x2013;244 <pub-id pub-id-type="pmid">2856500</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>He</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Bischof</surname>
+              <given-names>J. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Quantification of temperature injury in thermal therapy and cryosurgery</article-title>
+          <source>Crit. Rev. Biomed. Eng.</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <issue>5</issue>
+          <fpage>355</fpage>
+          <lpage>421</lpage>
+          <pub-id pub-id-type="doi">10.1615/CritRevBiomedEng.v31.i56.10</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">He X., Bischof J. C. 2003 Quantification of temperature injury in thermal therapy and cryosurgery Crit. Rev. Biomed. Eng. 31(5):355&#x2013;421 <pub-id pub-id-type="pmid">15139301</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>He</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Bischof</surname>
+              <given-names>J. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>The kinetics of thermal injury in human renal carcinoma cells</article-title>
+          <source>Ann. Biomed. Eng.</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <issue>4</issue>
+          <fpage>502</fpage>
+          <lpage>510</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10439-005-2508-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">He X., Bischof J. C. 2005 The kinetics of thermal injury in human renal carcinoma cells Ann. Biomed. Eng. 33(4):502&#x2013;510 <pub-id pub-id-type="pmid">15909656</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Henriques</surname>
+              <given-names>F. C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Studies of thermal injury, the predictability and the significance of thermally induced rate processes leading to irreversible epidermal injury</article-title>
+          <source>Arch. Pathol.</source>
+          <year>1947</year>
+          <volume>43</volume>
+          <fpage>489</fpage>
+          <lpage>502</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Henriques F. C. Jr. 1947 Studies of thermal injury, the predictability and the significance of thermally induced rate processes leading to irreversible epidermal injury Arch. Pathol. 43:489&#x2013;502 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Itamoto</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Katayama</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Fukuda</surname>
+              <given-names>S.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Percutaneous microwave coagulation therapy for primary or recurrent hepatocellular carcinoma: long-term results</article-title>
+          <source>Hepatogastroenterology</source>
+          <year> 2001</year>
+          <volume>48</volume>
+          <fpage>1401</fpage>
+          <lpage>5</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Itamoto T., Katayama K., Fukuda S. et al. 2001 Percutaneous microwave coagulation therapy for primary or recurrent hepatocellular carcinoma: long-term results Hepatogastroenterology 48:1401&#x2013;5 <pub-id pub-id-type="pmid">11677974</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kelvin Kwok-Cha</surname>
+              <given-names>N. G.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Thermal ablative therapy for malignant liver tumors: A critical appraisal</article-title>
+          <source>J. Gastroenterol. Hepatol.</source>
+          <year>2003</year>
+          <volume>18</volume>
+          <fpage>616</fpage>
+          <lpage>629</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1440-1746.2003.02991.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kelvin Kwok-Cha N. G. et al. 2003 Thermal ablative therapy for malignant liver tumors: A critical appraisal J. Gastroenterol. Hepatol. 18:616&#x2013;629 <pub-id pub-id-type="pmid">12753142</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Landry</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Bernier</surname>
+              <given-names>J. P.</given-names>
+            </name>
+            <name>
+              <surname>Marceau</surname>
+              <given-names>N.</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparative evaluation of the mammalian cell thermal sensitivity to pulsed CO2-laser irradiation and hyperthermic water-bath treatment</article-title>
+          <source>Radiat. Res.</source>
+          <year>1977</year>
+          <volume>71</volume>
+          <issue>1</issue>
+          <fpage>240</fpage>
+          <lpage>250</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Landry J., Bernier J. P., Marceau N. 1977 Comparative evaluation of the mammalian cell thermal sensitivity to pulsed CO2-laser irradiation and hyperthermic water-bath treatment Radiat. Res. 71(1):240&#x2013;250 <pub-id pub-id-type="pmid">877240</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="other">Muneeb, A. <italic>et&#xA0;al.</italic> Thermal ablation therapy for HCC. J. Vasc. Interven. Radiol. 13(9 Pt 2):S231&#x2013;244, 2002</citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="other">Pearce, J. and S. Thomsen. Rate process analysis of thermal damage. In Optical Thermal Response of Laser-Irradiated Tissue, edited by A. J. Welch and M. J. C. Van Germert. New York: Plenum Press, 1995</citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prinsze</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Penning</surname>
+              <given-names>T. M. A.</given-names>
+            </name>
+            <name>
+              <surname>Dubbelman</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Steveninck</surname>
+              <given-names>J. V.</given-names>
+            </name>
+          </person-group>
+          <article-title>Interaction of photodynamic treatment and either hyperthermia or ionizing radiation and of ionizing radiation and hyperthermia with respect to cell killing of L929 fibroblast, Chinese hamster ovary cells, and T24 human bladder carcinoma cells</article-title>
+          <source>Cancer Res.</source>
+          <year>1992</year>
+          <volume>52</volume>
+          <fpage>117</fpage>
+          <lpage>120</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Prinsze C., Penning T. M. A., Dubbelman R., Steveninck J. V. 1992 Interaction of photodynamic treatment and either hyperthermia or ionizing radiation and of ionizing radiation and hyperthermia with respect to cell killing of L929 fibroblast, Chinese hamster ovary cells, and T24 human bladder carcinoma cells Cancer Res. 52:117&#x2013;120 <pub-id pub-id-type="pmid">1727371</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roizin-Towle</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Pirro</surname>
+              <given-names>J. P.</given-names>
+            </name>
+          </person-group>
+          <article-title>The response of human and rodent cells to hyperthermia</article-title>
+          <source>Int. J. Radiat. Oncol. Biol. Phys.</source>
+          <year>1991</year>
+          <volume>20</volume>
+          <fpage>751</fpage>
+          <lpage>756</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Roizin-Towle L., Pirro J. P. 1991 The response of human and rodent cells to hyperthermia Int. J. Radiat. Oncol. Biol. Phys. 20:751&#x2013;756 <pub-id pub-id-type="pmid">2004951</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sato</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Fujiwara</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Ogata</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Ohta</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Hayashi</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Oka</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Furui</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Oka</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Transcatheter arterial embolization for hepatocellular carcinoma. Benefits and limitations for unresectable cases with liver cirrhosis evaluated by comparison with other conservative treatments</article-title>
+          <source>Cancer</source>
+          <year>1985</year>
+          <volume>55</volume>
+          <issue>12</issue>
+          <fpage>2822</fpage>
+          <lpage>2825</lpage>
+          <pub-id pub-id-type="doi">10.1002/1097-0142(19850615)55:12&lt;2822::AID-CNCR2820551218&gt;3.0.CO;2-G</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sato Y., Fujiwara K., Ogata I., Ohta Y., Hayashi S., Oka Y., Furui S., Oka H. 1985 Transcatheter arterial embolization for hepatocellular carcinoma. Benefits and limitations for unresectable cases with liver cirrhosis evaluated by comparison with other conservative treatments Cancer 55(12):2822&#x2013;2825 <pub-id pub-id-type="pmid">2986826</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yamamoto</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Kosuge</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Takayama</surname>
+              <given-names>T.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Recurrence of hepatocellular carcinoma after surgery</article-title>
+          <source>Br. J. Surg.</source>
+          <year>1996</year>
+          <volume>83</volume>
+          <fpage>1219</fpage>
+          <lpage>1222</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2168.1996.02342.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yamamoto J., Kosuge T., Takayama T. et al. 1996 Recurrence of hepatocellular carcinoma after surgery Br. J. Surg. 83:1219&#x2013;1222 <pub-id pub-id-type="pmid">8983610</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

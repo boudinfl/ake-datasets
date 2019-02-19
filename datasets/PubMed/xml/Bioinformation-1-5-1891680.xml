@@ -1,0 +1,355 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17597879</article-id>
+      <article-id pub-id-type="pmc">1891680</article-id>
+      <article-id pub-id-type="publisher-id">43-1-2006</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Web Server</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A web server for transcription factor binding site prediction</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Su</surname>
+            <given-names>Gang</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Mao</surname>
+            <given-names>Binchen</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Wang</surname>
+            <given-names>Jin</given-names>
+          </name>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+        <aff>The State Key Laboratory of Pharmaceutical Biotechnology and Model Animal Research Center, School of Life Science, Nanjing University, Nanjing - 210093, China</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Jin Wang
+          E-mail:
+          <email>jwang@nju.edu.cn</email>; Corresponding author</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>15</day>
+        <month>6</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>1</volume>
+      <issue>5</issue>
+      <fpage>156</fpage>
+      <lpage>157</lpage>
+      <history>
+        <date date-type="received">
+          <day>30</day>
+          <month>4</month>
+          <year>2006</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>9</day>
+          <month>5</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>27</day>
+          <month>5</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2006 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2006</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction 
+				in any medium, for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Promoter prediction has gained increased attention in studies related to transcriptional regulation of gene expression.We developed a 
+				web server named PMSearch (Poly Matrix Search) which utilizes Position Frequency Matrices (PFMs) to predict transcription factor binding 
+				sites (TFBSs) in DNA sequences. PMSearch takes PFMs (either user-defined or retrieved from local dataset which currently contains 507 PFMs 
+				from Transfac Public 7.0 and JASPAR) and DNA sequences of interest as the input, then scans the DNA sequences with PFMs and reports the sites 
+				of high scores as the putative binding sites. The output of the server includes 1) A plot for the distribution of predicted TFBS along the DNA 
+				sequence, 2) A table listing location, score and motif for each putative binding site, and 3) Clusters of predicted binding sites. PMSearch also 
+				provides links for accessing clusters of PFMs that are similar to the input PFMs to facilitate complicated promoter analysis.</p>
+        <sec id="sble">
+          <title>Availability</title>
+          <p>PMSearch is available for free at
+			<ext-link ext-link-type="uri" xlink:href="http://www.nicemice.cn/bioinfo/PMS">
+          http://www.nicemice.cn/bioinfo/PMS</ext-link>
+			</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>position frequency matrix</kwd>
+        <kwd>motif</kwd>
+        <kwd>transcription factor binding site</kwd>
+        <kwd>web server</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>Transcription factors play a pivotal role in the regulation of gene expression by sequence specific binding to the promoters of target genes. 
+			Prediction of putative transcription factor binding sites has become an important resource to explore genome organization and regulatory mechanisms. 
+			The binding specificity of transcription factors are usually represented by known sequence motifs (consensus sequences) or matrices (PFM (Position 
+			Frequency Matrix) or PWM (Position Weight Matrix)). [<xref ref-type="bibr" rid="R01">1</xref>] High throughput analyses using SELEX (Systematic 
+			Evolution of Ligands by Exponential Enrichment) and CHIP-Chip (Chromatin Immunoprecipitation-Microarray) along with computational sampling methods have 
+			generated thousands of PFMs. These data together with the related transcription factor information are curated in online databases such as Transfac [<xref ref-type="bibr" rid="R02">2</xref>], JASPAR [<xref ref-type="bibr" rid="R03">3</xref>], etc.</p>
+      <p>Online applications, such as MatInspector [<xref ref-type="bibr" rid="R04">4</xref>,<xref ref-type="bibr" rid="R05">5</xref>], 
+			MATCH [<xref ref-type="bibr" rid="R06">6</xref>] and ConSite [<xref ref-type="bibr" rid="R07">7</xref>], have been built to utilize 
+			PFMs to predict transcription factor binding sites (TFBSs) embedded in promoter sequences. Many of the servers are comprehensive but lack the information on transcription 
+			factors whose binding specificities are similar to the input PFMs, which could effectively assist regulatory module finding. To provide such information and to meet the 
+			needs for efficient prediction tasks in the study of gene regulation network, we developed a server named PMSearch (Poly Matrix Search) for predicting TFBSs in DNA sequences 
+			with the novel functions of fetching similar PFMs and processing multi-forms of input motifs. PMSearch made the following improvements: 1) It has a more succinct and friendly 
+			user-interface. 2) It provides user with the convenience of customizing any set of PFMs from the local dataset. 3) It generates a resizable plot that shows the distribution 
+			and scores of predicted binding sites in variable scales. 4) It provides clusters of PFMs similar to the input PFMs.</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <p>We have implemented a scoring scheme adapted from
+previous algorithms. [<xref ref-type="bibr" rid="R04">4</xref>,<xref ref-type="bibr" rid="R06">6</xref>] The uninformative nucleotides (ambiguous letters: N, B, 
+D, H, and V) on either end of an input PFM are discarded before searching to enhance efficiency and specificity. We downloaded 507 PFMs from JASPAR and Transfac Public 7.0 to construct 
+a local dataset from which the user may take any subset of PFMs, or along with userdefined PFMs, for a prediction task. In addition to PFMs, the server could also accept sequence motifs 
+(modeled in the format of consensus sequences), which will then be converted into pseudo PFMs and applied in subsequent prediction. We have set a default global cutoff value of 0.85 previously 
+adopted by TFSEARCH. [<xref ref-type="bibr" rid="R09">9</xref>] The user may adjust this cutoff if required.</p>
+    </sec>
+    <sec id="s3">
+      <title>User interface</title>
+      <p>The web interface of PMSearch helps in promoter analysis. The inputs are composed of PFMs and sequences under analysis. The user may submit PFMs, motifs or retrieve desired 
+			PFMs from our dataset using keywords (e.g., name of the transcription factor), its source database accession number (e.g. Transfac Matrix Accession number M00001) or our local 
+			accession number (e.g. X00001). Sequences in FASTA format or Genbank format are acceptable and will be auto-parsed. When the user initiates a predication task, each sequence will 
+			fork an independent task in which corresponding results can be retrieved respectively. In the output, PMSearch plots a figure that illustrates binding sites that are scored above 
+			the cutoff value (<xref ref-type="fig" rid="F1">Figure 1</xref>). The user may specify a sub-region on the sequence that will be plotted for more detailed view, such as a specific promoter region in a sequence file. 
+			Other results including scores, sequence motifs and closely located putative binding sites (clusters) are also listed. In addition, the server provides a hyperlink for the user to 
+			fetch PFMs that are related to the input PFMs by implementing a gap-allowed alignment algorithm. A comprehensive instruction for users is available online.</p>
+    </sec>
+    <sec sec-type="conclusions" id="s4">
+      <title>Conclusion</title>
+      <p>PMSearch is an easy-to-use and efficient tool that utilizes PFMs to predict transcription factor binding sites in DNA sequences. It offers user the flexibility to search for
+putative TFBS with any set of PFMs. PMSearch outputs a plot demonstrating distribution of predicted binding sites and a table of the locations, scores, motifs and clusters of predicted binding 
+sites. In addition, PMSearch provides the user access to PFMs that are relative to an input PFM for more sophisticated promoter analysis, as the predicted binding sites of one transcription 
+factor could also be bond with other transcription factors that share the similar binding specificity. Such information may give hints to untangle the composite transcription regulatory network. 
+We propose to update PFMs in our local dataset regularly. The source codes are available from the authors upon request. </p>
+    </sec>
+    <sec id="s5">
+      <title>Caveats</title>
+      <p>It has been proposed that many of the predicted TFBSs lack biological function in vivo. [<xref ref-type="bibr" rid="R10">10</xref>] This could result from 1) The 
+			predicted site is located in a context which is insufficient to facilitate transcription factor binding, 2) The low specificity of the input PFM gives rise to large portion of false 
+			positive predictions. We suggest the users prepare a list of certain transcription factors that are suspected to regulate the target gene to specify a prediction task. </p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work is supported by the National Science Foundation of China (No.90208021) and 973 Project Grant No. 2003CB715905 founded by MOST of China. The implementation was done in IBM-NJU
+Laboratory of Bioinformatics.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stormo</surname>
+              <given-names>GD</given-names>
+            </name>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2000</year>
+          <volume>16</volume>
+          <fpage>16</fpage>
+          <pub-id pub-id-type="pmid">10812473</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wingender</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <source>In Silico Biol</source>
+          <year>2004</year>
+          <volume>4</volume>
+          <fpage>55</fpage>
+          <pub-id pub-id-type="pmid">15089753</pub-id>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vlieghe</surname>
+              <given-names>D</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2006</year>
+          <volume>34</volume>
+          <fpage>D95</fpage>
+          <pub-id pub-id-type="pmid">16381983</pub-id>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cartharius</surname>
+              <given-names>K</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>2933</fpage>
+          <pub-id pub-id-type="pmid">15860560</pub-id>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Werner</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>Methods Mol Biol</source>
+          <year>2000</year>
+          <volume>132</volume>
+          <fpage>337</fpage>
+          <pub-id pub-id-type="pmid">10547845</pub-id>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kel</surname>
+              <given-names>AE</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>3567</fpage>
+          <pub-id pub-id-type="pmid">12824369</pub-id>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sandelin</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>W249</fpage>
+          <pub-id pub-id-type="pmid">15215389</pub-id>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>J Mol Biol</source>
+          <year>1999</year>
+          <volume>286</volume>
+          <fpage>315</fpage>
+          <pub-id pub-id-type="pmid">9973553</pub-id>
+        </citation>
+      </ref>
+      <ref id="R09">
+        <label>9</label>
+        <citation citation-type="web">
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.cbrc.jp/research/db/TFSEARCH.html">
+     http://www.cbrc.jp/research/db/TFSEARCH.html</ext-link>
+          </comment>
+        </citation>
+      </ref>
+      <ref id="R10">
+        <label>10</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wasserman</surname>
+              <given-names>WW</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nat Rev Genet</source>
+          <year>2004</year>
+          <volume>5</volume>
+          <fpage>276</fpage>
+          <pub-id pub-id-type="pmid">15131651</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>The scoring scheme is illustrated. 1B: An example of binding site search with PFMs for NF-Kappa B, AP-1 and Sp1 on the sequence of adenovirus early E3 gene (NCBI nucleotide accession: 
+      X03002). Orange rectangles represent clusters of putative binding sites. Dark grey bar indicates coding sequence (CDS). The first cluster located on the 5' end contains verified binding 
+      sites. This cluster belongs to E3 promoter, which overlaps with the adjacent CDS. High scoring sites located in non-coding sequences or promoters are considered significant</p>
+        </caption>
+        <graphic xlink:href="97320630001156F1"/>
+      </fig>
+    </sec>
+    <fn-group>
+      <fn id="FN1" fn-type="other">
+        <p>
+      <bold>Citation:</bold>Su      
+      <italic>et al.</italic>, Bioinformation 1(5): 156-157 (2006)</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

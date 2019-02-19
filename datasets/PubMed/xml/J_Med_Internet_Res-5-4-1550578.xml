@@ -1,0 +1,2470 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Med Internet Res</journal-id>
+      <journal-id journal-id-type="publisher-id">JMIR</journal-id>
+      <journal-title-group>
+        <journal-title>Journal of Medical Internet Research</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1438-8871</issn>
+      <publisher>
+        <publisher-name>Gunther Eysenbach</publisher-name>
+        <publisher-loc>Centre for Global eHealth Innovation, Toronto, Canada</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">14713659</article-id>
+      <article-id pub-id-type="pmc">1550578</article-id>
+      <article-id pub-id-type="publisher-id">v5i4e31</article-id>
+      <article-id pub-id-type="doi">10.2196/jmir.5.4.e31</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Searching for Cancer Information on the Internet: Analyzing Natural Language Search Queries</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="contrib1" contrib-type="author" corresp="yes">
+          <name>
+            <surname>Bader</surname>
+            <given-names>Judith L</given-names>
+          </name>
+          <degrees>MD</degrees>
+          <address>
+            <institution>Communications Technology Branch</institution>
+            <institution>National Cancer Institute</institution>
+            <addr-line>6116 Executive Blvd, Suite 3048A</addr-line>
+            <addr-line>Bethesda MD 20852</addr-line>
+            <country>USA</country>
+            <phone>+1 301 594 3382</phone>
+            <fax>+1 301 435 6069</fax>
+            <email>jbader@mail.nih.gov</email>
+          </address>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib id="contrib2" contrib-type="author">
+          <name>
+            <surname>Theofanos</surname>
+            <given-names>Mary Frances</given-names>
+          </name>
+          <degrees>MS</degrees>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+      </contrib-group>
+      <contrib-group>
+        <contrib contrib-type="reviewer">
+          <name>
+            <surname>Kiley</surname>
+            <given-names>Robert</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="reviewer">
+          <name>
+            <surname>Zeng</surname>
+            <given-names>Q</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="reviewer">
+          <name>
+            <surname>McCaul</surname>
+            <given-names>Kevin</given-names>
+          </name>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1" rid="aff1">
+        <sup>1</sup>
+        <institution>National Cancer Institute</institution>
+        <institution>Office of Communications</institution>
+        <institution>Cancer Information Products and Services</institution>
+        <institution>Communications Technology Branch</institution>
+        <addr-line>Bethesda MD</addr-line>
+        <country>USA</country>
+      </aff>
+      <pub-date pub-type="collection">
+        <season>Oct-Dec</season>
+        <year>2003</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>11</day>
+        <month>12</month>
+        <year>2003</year>
+      </pub-date>
+      <volume>5</volume>
+      <issue>4</issue>
+      <elocation-id>e31</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>3</day>
+          <month>11</month>
+          <year>2003</year>
+        </date>
+        <date date-type="rev-request">
+          <day>13</day>
+          <month>11</month>
+          <year>2003</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>19</day>
+          <month>11</month>
+          <year>2003</year>
+        </date>
+        <date date-type="accepted">
+          <day>22</day>
+          <month>11</month>
+          <year>2003</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Judith L Bader, Mary Frances Theofanos.  Originally published in the Journal of Medical Internet Research (http://www.jmir.org), 11.12.2003.  Except where otherwise noted, articles published in the Journal of Medical Internet Research are distributed under the terms of the Creative Commons Attribution License (http://www.creativecommons.org/licenses/by/2.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited, including full bibliographic	details and the URL (see "please cite as" above), and this statement is included.</copyright-statement>
+        <copyright-year>2003</copyright-year>
+      </permissions>
+      <self-uri xlink:type="simple" xlink:href="http://www.jmir.org/2003/4/e31/"/>
+      <abstract>
+        <sec sec-type="background">
+          <title>Background</title>
+          <p>Searching for health information is one of the most-common tasks performed by Internet users. Many users begin searching on popular search engines rather than on prominent health information sites. We know that many visitors to our (National Cancer Institute) Web site, cancer.gov, arrive via links in search engine result.</p>
+        </sec>
+        <sec sec-type="objective">
+          <title>Objective</title>
+          <p>To learn more about the specific needs of our general-public users, we wanted to understand what lay users really wanted to know about cancer, how they phrased their questions, and how much detail they used.</p>
+        </sec>
+        <sec sec-type="methods">
+          <title>Methods</title>
+          <p>The National Cancer Institute partnered with AskJeeves, Inc to develop a methodology to capture, sample, and analyze 3 months of cancer-related queries on the Ask.com Web site, a prominent United States consumer search engine, which receives over 35 million queries per week. Using a benchmark set of 500 terms and word roots supplied by the National Cancer Institute, AskJeeves identified a test sample of cancer queries for 1 week in August 2001. From these 500 terms only 37 appeared &#x2265; 5 times/day over the trial test week in 17208 queries. Using these 37 terms, 204165 instances of cancer queries were found in the Ask.com query logs for the actual test period of June-August 2001. Of these, 7500 individual user questions were randomly selected for detailed analysis and assigned to appropriate categories. The exact language of sample queries is presented.</p>
+        </sec>
+        <sec sec-type="results">
+          <title>Results</title>
+          <p>Considering multiples of the same questions, the sample of 7500 individual user queries represented 76077 queries (37% of the total 3-month pool). Overall 78.37% of sampled Cancer queries asked about 14 specific cancer types. Within each cancer type, queries were sorted into appropriate subcategories including at least the following: General Information, Symptoms, Diagnosis and Testing, Treatment, Statistics, Definition, and Cause/Risk/Link. The most-common specific cancer types mentioned in queries were Digestive/Gastrointestinal/Bowel (15.0%), Breast (11.7%), Skin (11.3%), and Genitourinary (10.5%). Additional subcategories of queries about specific cancer types varied, depending on user input. Queries that were not specific to a cancer type were also tracked and categorized.</p>
+        </sec>
+        <sec sec-type="conclusions">
+          <title>Conclusions</title>
+          <p>Natural-language searching affords users the opportunity to fully express their information needs and can aid users na&#xEF;ve to the content and vocabulary. The specific queries analyzed for this study reflect news and research studies reported during the study dates and would surely change with different study dates. Analyzing queries from search engines represents one way of knowing what kinds of content to provide to users of a given Web site. Users ask questions using whole sentences and keywords, often misspelling words. Providing the option for natural-language searching does not obviate the need for good information architecture, usability engineering, and user testing in order to optimize user experience.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>Cancer</kwd>
+        <kwd>Internet</kwd>
+        <kwd>search engines</kwd>
+        <kwd>natural language processing</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="intro">
+      <title>Introduction</title>
+      <p>For members of the general public who use the Internet, many seek medical information [<xref ref-type="bibr" rid="ref1">1</xref>- <xref ref-type="bibr" rid="ref6">6</xref>]. According to a recent systematic review of 24 peer-reviewed publications describing the proportions of Internet users among various populations of cancer patients in the developed world, about 39% of cancer patients are using the Internet directly, and in addition, 15% to 20% of persons with cancer use the Internet "indirectly" through family and friends [<xref ref-type="bibr" rid="ref7">7</xref>]. Studies have evaluated information-seeking behavior on the Internet by cancer patients generally [<xref ref-type="bibr" rid="ref8">8</xref>- <xref ref-type="bibr" rid="ref10">10</xref>], their companions [<xref ref-type="bibr" rid="ref11">11</xref>,<xref ref-type="bibr" rid="ref12">12</xref>], and patients with the following common specific cancer diagnoses: breast [<xref ref-type="bibr" rid="ref13">13</xref>- <xref ref-type="bibr" rid="ref16">16</xref>], prostate [<xref ref-type="bibr" rid="ref17">17</xref>,<xref ref-type="bibr" rid="ref18">18</xref>], lung [<xref ref-type="bibr" rid="ref19">19</xref>], and gastrointestinal cancers [<xref ref-type="bibr" rid="ref20">20</xref>]. Studies have also evaluated information gathering by cancer patients undergoing radiotherapy [<xref ref-type="bibr" rid="ref21">21</xref>] and chemotherapy [<xref ref-type="bibr" rid="ref22">22</xref>], and those from centers outside of North America [<xref ref-type="bibr" rid="ref23">23</xref>,<xref ref-type="bibr" rid="ref24">24</xref>]. Individuals from certain disadvantaged groups have been shown to seek medical information online less frequently and with more difficulty [<xref ref-type="bibr" rid="ref7">7</xref>,<xref ref-type="bibr" rid="ref25">25</xref>,<xref ref-type="bibr" rid="ref26">26</xref>].</p>
+      <p>Eysenbach and Kohler found that general consumers search for medical content using search engines rather than medical portals or sites of medical societies or libraries [<xref ref-type="bibr" rid="ref27">27</xref>]. Newly-diagnosed cancer patients and their families often start their searches as users less sophisticated in Web and medical terminology. They too commonly begin searching on popular search engines rather than on prominent cancer-information sites. We know that many visitors to our own Web site [<xref ref-type="bibr" rid="ref28">28</xref>] arrive via search engine result links.</p>
+      <p>To better understand users' needs this research aimed to establish what lay users really want to know when they search online for cancer information. To do this we evaluated data from Ask.com [<xref ref-type="bibr" rid="ref29">29</xref>], a popular natural-language-processing (NLP) search engine. Natural-language-processing search engines allow users to create queries using whole phrases and sentences of any length, rather than just key words.</p>
+      <p>Earlier reports of this project have been published in abstract form only. The abstracts reported a brief project summary [<xref ref-type="bibr" rid="ref30">30</xref>], and data specific for breast cancer [<xref ref-type="bibr" rid="ref31">31</xref>] and gastrointestinal cancer [<xref ref-type="bibr" rid="ref20">20</xref>]. This is the first comprehensive report of the entire project.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>Methods</title>
+      <p>The National Cancer Institute (NCI) partnered with AskJeeves, Inc to develop a methodology to capture, sample, and analyze 3 months of cancer-related queries on the Ask.com Web site, a prominent US natural-language-processing consumer search engine. At the time of the project, Ask.com was receiving over 35 million queries per month.</p>
+      <sec>
+        <title>Search Terms</title>
+        <p>An NCI oncologist (JLB) developed a benchmark set of 500 terms and word roots that were matched against actual AskJeeves user queries. Most terms and word roots were from the NCI dictionary on the NCI Web site [<xref ref-type="bibr" rid="ref32">32</xref>]. NCI also suggested additional terms not included in the dictionary. These terms related to anatomy, organ systems, treatments, pharmaceuticals, treatment and diagnostic procedures, genetics, epidemiology, and pathology.</p>
+        <table-wrap id="table1" position="float">
+          <label>Table 1</label>
+          <caption>
+            <p>Top 37 search terms and roots with &#x2265; 5 queries per week during test week</p>
+          </caption>
+          <table frame="hsides" rules="groups" width="418" border="1" cellspacing="0" cellpadding="7">
+            <col width="105" span="1"/>
+            <col width="147" span="1"/>
+            <col width="122" span="1"/>
+            <thead>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">
+                  <bold>Term</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Actual Queries During Test Week</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>% of Total Queries</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*cancer*</td>
+                <td rowspan="1" colspan="1">9765</td>
+                <td rowspan="1" colspan="1">56.75</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*tumor*</td>
+                <td rowspan="1" colspan="1">1396</td>
+                <td rowspan="1" colspan="1">8.11</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*carcino*</td>
+                <td rowspan="1" colspan="1">656</td>
+                <td rowspan="1" colspan="1">3.81</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*leukemia*</td>
+                <td rowspan="1" colspan="1">635</td>
+                <td rowspan="1" colspan="1">3.69</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">lymphom*</td>
+                <td rowspan="1" colspan="1">419</td>
+                <td rowspan="1" colspan="1">2.43</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">chemotherapy</td>
+                <td rowspan="1" colspan="1">378</td>
+                <td rowspan="1" colspan="1">2.20</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">biopsy/biopsies</td>
+                <td rowspan="1" colspan="1">375</td>
+                <td rowspan="1" colspan="1">2.18</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*melano*</td>
+                <td rowspan="1" colspan="1">348</td>
+                <td rowspan="1" colspan="1">2.02</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*sarcoma*</td>
+                <td rowspan="1" colspan="1">294</td>
+                <td rowspan="1" colspan="1">1.71</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*dysplasia*</td>
+                <td rowspan="1" colspan="1">255</td>
+                <td rowspan="1" colspan="1">1.48</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">hodgkin*</td>
+                <td rowspan="1" colspan="1">245</td>
+                <td rowspan="1" colspan="1">1.42</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">MRI</td>
+                <td rowspan="1" colspan="1">214</td>
+                <td rowspan="1" colspan="1">1.24</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">clinical trial</td>
+                <td rowspan="1" colspan="1">187</td>
+                <td rowspan="1" colspan="1">1.09</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">mammogr</td>
+                <td rowspan="1" colspan="1">175</td>
+                <td rowspan="1" colspan="1">1.02</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">maligna*</td>
+                <td rowspan="1" colspan="1">170</td>
+                <td rowspan="1" colspan="1">0.99</td>
+              </tr>
+              <tr valign="bottom">
+                <td rowspan="1" colspan="1">*metasta*</td>
+                <td rowspan="1" colspan="1">155</td>
+                <td rowspan="1" colspan="1">0.90</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="table1fn1">
+              <p>"*" is a placeholder for the part of the search term before or after the root.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>The test sample of these 500 words and roots was used to filter cancer queries from the Ask.com Web site for 1 week in August 2001. From these 500 terms, only 37 appeared &#x2265; 5 times per day over the trial week. The list of 37 terms (plus common misspellings) yielded 17208 queries for the test week. The frequency of each term is shown in <xref ref-type="table" rid="table1">Table 1</xref>. Queries with common misspellings, (eg, prostate and prostrate, biopsy and biopsey, leukemia and lukemia, chemotherapy and chemothereapy) were captured and analyzed. It was felt that the cut off of 5 times per day (&#x2265; 35 times per week) would capture the key queries and include any common query topic, since even with a frequency of 35 queries a week, the majority of these terms accounted for less than 1% of the total population. Of the original 500 terms supplied by NCI, only 7% (35/500) appeared in the logs at a high frequency, but this 7% accounts for over 37% of user queries identified as cancer related on Ask.com during the study period.</p>
+      </sec>
+      <sec>
+        <title>Collecting Queries and Sampling</title>
+        <p>The process used for collecting and sampling queries is outlined in <xref ref-type="fig" rid="figure1">Figure 1</xref>. Using the 37 terms to search the Ask.com query logs, 204165 instances of cancer-related queries were found for June, July, and August 2001. Of these queries, 7500 individual user questions were randomly selected by AskJeeves for detailed analysis (see <xref ref-type="app" rid="app1">Appendix 1</xref>).</p>
+        <fig id="figure1" position="float">
+          <label>Figure 1</label>
+          <caption>
+            <p>Processing of cancer queries on Ask.com</p>
+          </caption>
+          <p>
+                        <graphic xlink:href="jmir_v5i4e31_fig1"/>
+                    </p>
+        </fig>
+        <p>Very often there were multiples of the same questions. Thus, these 7500 queries actually represented 76077 queries that were entered into Ask.com, about 37% (76077/204164) of all queries identified as cancer-related from the 3 month period of log analysis. For example, a user question might be "Where can I find information about breast cancer?" This individual example represents 1 user question, but might have been queried by more than 100 people on any given day. Each query was counted only once.</p>
+      </sec>
+      <sec>
+        <title>Sampling Issues</title>
+        <p>The random sample of 7500 individual queries provides a confidence interval of 1.11% at a confidence level of 95%. This means that even if more samples were taken from 204165 queries, 95% of those samples should not be off by more than 1.1%. While this means that the samples themselves would not vary more than 1.1% over 95% of the samples taken, as the data are categorized and classified, in effect smaller and smaller samples are taken. Therefore, to offset this problem additional queries were examined, even though a smaller sample would still provide a high degree of confidence in the results.</p>
+        <p>In other words, although broad generalizations&#x2014;such as "breast cancer accounts for 25% of all cancer queries"&#x2014;can be easily presented, a large sample size is required to break down data far enough to conclude that when users ask about breast cancer, they are most often asking about specific types of treatments.</p>
+      </sec>
+      <sec>
+        <title>Highest-Level Categories for Queries</title>
+        <p>User queries were assigned to a set of 6 highest-level categories (as shown in <xref ref-type="table" rid="table2">Table 2</xref>):</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Cancer (ie, specifically mentioning a cancer type)</p>
+          </list-item>
+          <list-item>
+            <p>General Research</p>
+          </list-item>
+          <list-item>
+            <p>Treatment</p>
+          </list-item>
+          <list-item>
+            <p>Diagnosis and Testing</p>
+          </list-item>
+          <list-item>
+            <p>Cause/Risk/Link</p>
+          </list-item>
+          <list-item>
+            <p>Coping</p>
+          </list-item>
+        </list>
+        <table-wrap id="table2" position="float">
+          <label>Table 2</label>
+          <caption>
+            <p>Highest-level categories for queries</p>
+          </caption>
+          <table frame="hsides" rules="groups" width="559" border="1" cellspacing="0" cellpadding="7">
+            <col width="184" span="1"/>
+            <col width="166" span="1"/>
+            <col width="165" span="1"/>
+            <thead>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">
+                  <bold>Highest-Level Category</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Number of Queries</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Percent of All Sampled Queries</bold>
+                  <xref ref-type="table-fn" rid="table2fn1">*</xref>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Cancer <xref ref-type="table-fn" rid="table2fn2">&#x2020;</xref></td>
+                <td rowspan="1" colspan="1">59619</td>
+                <td rowspan="1" colspan="1">78.37</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">General Research</td>
+                <td rowspan="1" colspan="1">7808</td>
+                <td rowspan="1" colspan="1">10.26</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Treatment</td>
+                <td rowspan="1" colspan="1">3832</td>
+                <td rowspan="1" colspan="1">5.04</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Diagnosis and Testing</td>
+                <td rowspan="1" colspan="1">3315</td>
+                <td rowspan="1" colspan="1">4.36</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Cause/Risk/Link</td>
+                <td rowspan="1" colspan="1">1249</td>
+                <td rowspan="1" colspan="1">1.64</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Coping</td>
+                <td rowspan="1" colspan="1">254</td>
+                <td rowspan="1" colspan="1">0.33</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">
+                  <bold>Total</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>76077</bold>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="table2fn1">
+              <p><sup>*</sup> Percentages do not sum to 100% due to rounding.</p>
+            </fn>
+            <fn id="table2fn2">
+              <p><sup>&#x2020;</sup> ie, specifically mentioning a cancer type.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>Highest-level categories were created in a collaborative effort between the AskJeeves data-analysis team and NCI staff before the study period began, but the final category titles were revised as the actual queries were analyzed. The initial categories were based on user queries entered into Ask.com and a variety of online sources, such as NCI's online dictionary [<xref ref-type="bibr" rid="ref32">32</xref>] and NCI's Physician Data Query (PDQ) [<xref ref-type="bibr" rid="ref33">33</xref>].</p>
+        <p>The highest-level categories were populated using proprietary AskJeeves filters and automated-analysis tools that sorted queries according to specific types of cancers, or&#x2014;in the absence of mentioning a specific cancer type&#x2014;whether the query asked about other areas such as Treatment or Coping. (AskJeeves did not share the filters and automated analysis tools with the authors.) Queries that could not be sorted by the filters and automated-analysis tools were placed in a temporarily-uncategorized category; they were categorized during the next step (reading and analysis).</p>
+        <p>Reading and analyzing each individual query not only verified the automated process, but also helped to refine existing categories and create new categories and subcategories, as appropriate. For example, without this type of analysis, the query "Where can I find a Web site with information on using high protein food to fight Breast cancer?" might have been left under Breast Cancer &gt; Media and Organizations &gt; Web sites (where "&gt;" indicates a change in category level). This would not be correct, as the true user intent was to inquire about Alternative Treatments. As a result, under the category Breast Cancer &gt; Treatment, "Alternative" was added to the Breast Cancer &gt; Treatment category analysis as a subtopic. (Treatment&#x2014;without a specific cancer site designated&#x2014;is both a highest-level category and a subcategory under Breast Cancer and under most cancer types.)</p>
+        <p>Approximately 78% of all categorized queries from the sample referenced a particular type of Cancer, and were placed in the highest-level category Cancer. An example of this kind of query would be "Where can I find information about Breast Cancer?" (This query would be classified as Cancer &gt; Breast Cancer &gt; General Information.) Any query that did not mention a specific kind of Cancer, even though the question was about cancer, was placed on 1 of the 5 other highest-level categories. An example of this type of query would be "Where can I find information on cancer treatment with radiation?" This query was assigned to the Radiation subcategory in the highest-level category Treatment (ie, it was classified as Treatment &gt; Radiation).</p>
+        <p>Queries that did not relate to a specific Cancer type were placed in 1 of the 5 other highest-level categories: General Research, Treatment, Diagnosis and Testing, Cause/Risk/Link, or Coping. For example the query "How does smoking cause cancer?" would be placed in the Cause/Risk/Link category, as it did not refer to any specific type of cancer.</p>
+      </sec>
+      <sec>
+        <title>"Cancer" Queries (Related to Specific Cancer Types)</title>
+        <p>As shown in <xref ref-type="table" rid="table3">Table 3</xref>, there were 14 cancer types (N = 59619 queries) selected as subcategories of the Cancer highest-level category. For cancer types with the most-frequent queries, like Digestive/Gastrointestinal/Bowel (D/G/B), Breast, and Genitourinary, there were enough queries to populate standard subcategories like General Information, Treatment, Symptoms, Diagnosis and Testing, and Cause/Risk/Link. These common cancer types often warranted the creation of customized subcategories, like Breast &gt; Media and Organizations &gt; Web sites. For the less-common cancer type queries, like Bile (duct) in D/G/B, few queries were received and only those in General Information are shown.</p>
+        <table-wrap id="table3" position="float">
+          <label>Table 3</label>
+          <caption>
+            <p>Cancer types</p>
+          </caption>
+          <table frame="hsides" rules="groups" width="504" border="1" cellspacing="0" cellpadding="4">
+            <col width="216" span="1"/>
+            <col width="66" span="1"/>
+            <col width="82" span="1"/>
+            <col width="82" span="1"/>
+            <thead>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">
+                  <bold>Type within Top-Level Cancer Category</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Number of Queries</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>% Queries in Cancer Category</bold>
+                  <xref ref-type="table-fn" rid="table3fn1">*</xref>
+                  <xref ref-type="table-fn" rid="table3fn2">&#x2020;</xref>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>% Queries in This Report</bold>
+                  <xref ref-type="table-fn" rid="table3fn1">*</xref>
+                  <xref ref-type="table-fn" rid="table3fn3">&#x2021;</xref>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="1" colspan="1">Digestive/Gastrointestinal/Bowel (D/G/B)</td>
+                <td rowspan="1" colspan="1">8959</td>
+                <td rowspan="1" colspan="1">15.0</td>
+                <td rowspan="1" colspan="1">11.8</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Breast</td>
+                <td rowspan="1" colspan="1">6953</td>
+                <td rowspan="1" colspan="1">11.7</td>
+                <td rowspan="1" colspan="1">9.1</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Skin</td>
+                <td rowspan="1" colspan="1">6709</td>
+                <td rowspan="1" colspan="1">11.3</td>
+                <td rowspan="1" colspan="1">8.8</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Genitourinary</td>
+                <td rowspan="1" colspan="1">6250</td>
+                <td rowspan="1" colspan="1">10.5</td>
+                <td rowspan="1" colspan="1">8.2</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Hematologic/Blood</td>
+                <td rowspan="1" colspan="1">5448</td>
+                <td rowspan="1" colspan="1">9.2</td>
+                <td rowspan="1" colspan="1">7.2</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Gynecological</td>
+                <td rowspan="1" colspan="1">5344</td>
+                <td rowspan="1" colspan="1">9.0</td>
+                <td rowspan="1" colspan="1">7.0</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Lung</td>
+                <td rowspan="1" colspan="1">4630</td>
+                <td rowspan="1" colspan="1">7.8</td>
+                <td rowspan="1" colspan="1">6.1</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Soft Tissue/Muscle</td>
+                <td rowspan="1" colspan="1">3954</td>
+                <td rowspan="1" colspan="1">6.6</td>
+                <td rowspan="1" colspan="1">5.2</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Lymphoma</td>
+                <td rowspan="1" colspan="1">3333</td>
+                <td rowspan="1" colspan="1">5.6</td>
+                <td rowspan="1" colspan="1">4.4</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Head and Neck</td>
+                <td rowspan="1" colspan="1">2522</td>
+                <td rowspan="1" colspan="1">4.2</td>
+                <td rowspan="1" colspan="1">3.3</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Brain/Neurological</td>
+                <td rowspan="1" colspan="1">1852</td>
+                <td rowspan="1" colspan="1">3.1</td>
+                <td rowspan="1" colspan="1">2.4</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Miscellaneous Cancer</td>
+                <td rowspan="1" colspan="1">1633</td>
+                <td rowspan="1" colspan="1">2.7</td>
+                <td rowspan="1" colspan="1">2.1</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Bone</td>
+                <td rowspan="1" colspan="1">1429</td>
+                <td rowspan="1" colspan="1">2.4</td>
+                <td rowspan="1" colspan="1">1.9</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Pediatric</td>
+                <td rowspan="1" colspan="1">603</td>
+                <td rowspan="1" colspan="1">1.0</td>
+                <td rowspan="1" colspan="1">0.8</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="table3fn1">
+              <p><sup>*</sup> Percentages do not sum to 100% due to rounding.</p>
+            </fn>
+            <fn id="table3fn2">
+              <p><sup>&#x2020;</sup> Denominator (N = 59619) was the total number of queries about specific types in the Cancer category.</p>
+            </fn>
+            <fn id="table3fn3">
+              <p><sup>&#x2021;</sup> Denominator (N = 76077) was the total number of queries analyzed in this report.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Privacy Issues</title>
+        <p>Although NCI helped create the search terms and the categories into which the analyzed data was placed, NCI did not have access to: the raw query logs at AskJeeves, any information about what AskJeeves users did with the searches generated on the AskJeeves Web site (ie, what links they picked), or the identities of any users of the Ask.com Web site. NCI did not require permission from the Institutional Review Board.</p>
+      </sec>
+    </sec>
+    <sec sec-type="results">
+      <title>Results</title>
+      <sec>
+        <title>Frequency of Top-Level Categories</title>
+        <p>As shown in <xref ref-type="table" rid="table2">Table 2</xref>, The 6 highest-level categories in order of decreasing frequency of queries were:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Cancer (N = 59619, 78.37%)</p>
+          </list-item>
+          <list-item>
+            <p>General Research (N = 7808, 10.26%)</p>
+          </list-item>
+          <list-item>
+            <p>Treatment (N = 3832, 5.04%)</p>
+          </list-item>
+          <list-item>
+            <p>Diagnosis and Testing (N = 3315, 4.36%)</p>
+          </list-item>
+          <list-item>
+            <p>Cause/Risk/Link (N = 1249, 1.64%)</p>
+          </list-item>
+          <list-item>
+            <p>Coping (N = 254, 0.33%)</p>
+          </list-item>
+        </list>
+        <p>The data in <xref ref-type="table" rid="table2">Table 2</xref> indicate that the great majority of users asked for information about specific types of cancers, but rarely asked about a Treatment option or Diagnosis and Testing procedure without specifying the particular cancer about which they were concerned. Similarly, users asked few queries about general Symptoms of cancer unrelated to a specific type of cancer (see Diagnosis and Testing &gt; Symptoms, N = 473, 14.27%). An example would be "what are some symptoms of cancer?"</p>
+      </sec>
+      <sec>
+        <title>Subdividing Cancer Queries</title>
+        <p>
+                    <xref ref-type="table" rid="table3">Table 3</xref> breaks down the highest-level category Cancer queries (N= 59619) into more specific cancer types. In order of decreasing frequency within the Cancer category, the 14 subcategories were:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Digestive/Gastrointestinal/Bowel (D/G/B) (N = 8959, 15.0%)</p>
+          </list-item>
+          <list-item>
+            <p>Breast (N = 6953, 11.7%)</p>
+          </list-item>
+          <list-item>
+            <p>Skin (N = 6709, 11.3%)</p>
+          </list-item>
+          <list-item>
+            <p>Genitourinary (N = 6250, 10.5%)</p>
+          </list-item>
+          <list-item>
+            <p>Hematologic/Blood (N = 5448, 9.2%)</p>
+          </list-item>
+          <list-item>
+            <p>Gynecological (N = 5344, 9.0%)</p>
+          </list-item>
+          <list-item>
+            <p>Lung (N = 4630, 7.8%)</p>
+          </list-item>
+          <list-item>
+            <p>Soft Tissue/Muscle (N = 3954, 6.6%)</p>
+          </list-item>
+          <list-item>
+            <p>Lymphoma (N = 3333, 5.6%)</p>
+          </list-item>
+          <list-item>
+            <p>Head and Neck (N = 2522, 4.2%)</p>
+          </list-item>
+          <list-item>
+            <p>Brain and Neurological (N = 1852, 3.1%)</p>
+          </list-item>
+          <list-item>
+            <p>Miscellaneous (N = 1633, 2.7%)</p>
+          </list-item>
+          <list-item>
+            <p>Bone (N = 1429, 2.4%)</p>
+          </list-item>
+          <list-item>
+            <p>Pediatric (N = 603, 1.0%)</p>
+          </list-item>
+        </list>
+        <p>Any query specifically mentioning a cancer type by name, was assigned to that subcategory. For example, questions about Breast-Cancer-specific Treatment, Diagnosis and Testing, Causes, and Coping are found in the Cancer &gt; Breast Cancer category, within 1 of the 10 subcategories displaying Breast Cancer information. All questions about Leukemia or Myeloma would be found in Hematologic/Blood, Hodgkin's Disease queries in Lymphoma, and Esophageal cancer questions in D/G/B.</p>
+        <p>The number of subcategories assigned to each of the 14 different cancer types varied somewhat and was driven by the nature and number of the specific queries in those cancer types.</p>
+      </sec>
+      <sec>
+        <title>Detailed Analysis of Queries</title>
+        <p>The detailed categorizations and verbatim display of examples of sampled queries are shown in <xref ref-type="app" rid="app1">Appendix 1</xref>. There is a breakdown of all the 14 cancer types within the highest-level category Cancer as well as a breakdown of queries within the 5 other highest-level categories not referencing any particular cancer type. These 19 are arranged alphabetically in the Appendix.</p>
+        <p>Major observations about the 19 categories and subcategories are noted below, in the order they appear in the Appendix. Our comments emphasize issues related to requested cancer content more than technology issues related to the natural language processing.</p>
+        <sec>
+          <title>1.0 Bone Cancer</title>
+          <p>As shown in <xref ref-type="app" rid="app1">Appendix 1</xref>, there were 1429 queries about Bone Cancer. The vast majority of Bone Cancer queries asked for General Information (N = 1107, 78%). An example of this category would be: "Where is information on bone cancer?" Users asked questions about Bone Cancers linked to various sites of Anatomy as well as certain Histologies. There were some questions related to Bone Cancers in teenagers that were assigned to this category, rather than the Pediatric category. There were more questions about Diagnosis and Testing (N = 64, 4.48%) and Symptoms (N = 135, 9.45%) than Treatment (N = 26, 1.82%).</p>
+        </sec>
+        <sec>
+          <title>2.0 Brain and Neurological Cancer</title>
+          <p>Of the 1852 Brain and Neurological Cancers queries, General Information accounted for the vast majority (N = 1323, 71.44%). There were 427 (23.1%) questions about specific cancer types in this category. Some cancer types queries asked about Medulloblastoma, which is typically but not always a Pediatric tumor. As with Bone Cancer above, some questions could have been meaningfully assigned to more than 1 top-level Cancer site category. In this category there were more queries about Symptoms (N = 259, 13.98%) than Treatment (N = 112, 6.05%).</p>
+        </sec>
+        <sec>
+          <title>3.0 Breast Cancer</title>
+          <p>As shown in <xref ref-type="app" rid="app1">Appendix 1</xref>, Breast Cancer was one of the simpler cancer types, from a data-display standpoint. There was only 1 anatomic-cancer type and all of the individual queries for that cancer type were assigned into 1 of 10 subcategories.</p>
+          <p>The 10 top-level Breast Cancer subcategories were:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>General Information (N = 3423, 49.23%)</p>
+            </list-item>
+            <list-item>
+              <p>Symptoms (N = 889, 12.79%)</p>
+            </list-item>
+            <list-item>
+              <p>Treatment (N = 570, 8.20%)</p>
+            </list-item>
+            <list-item>
+              <p>Media/Organization (N = 428, 6.16%)</p>
+            </list-item>
+            <list-item>
+              <p>Cause/Risk/Link (N = 393, 5.65%)</p>
+            </list-item>
+            <list-item>
+              <p>Diagnosis and Testing (N = 376, 5.41%)</p>
+            </list-item>
+            <list-item>
+              <p>Statistics (N = 274, 3.94%)</p>
+            </list-item>
+            <list-item>
+              <p>Pictures (N = 225, 3.24%)</p>
+            </list-item>
+            <list-item>
+              <p>Type (N = 217, 3.12%)</p>
+            </list-item>
+            <list-item>
+              <p>Definition (N = 158, 2.27%)</p>
+            </list-item>
+          </list>
+          <p>Nine of the 10 Breast Cancer subcategories were analyzed in detail in <xref ref-type="app" rid="app1">Appendix 1</xref>. The tenth, Pictures, did not require further analysis. Most queries asked for General Information.</p>
+          <p>There were more frequent queries about Breast Cancer (N = 6953) than any other cancer type. This may not be apparent from <xref ref-type="table" rid="table3">Table 3</xref>, which appears to show more D/G/B cancers (N = 8959). However, D/G/B overall is actually composed of 10 cancer types. The most frequently queried cancer type in D/G/B was Colorectal (N = 4,801) which had fewer queries than Breast.</p>
+          <p>Even though other cancer types may have been assigned more subcategories than the 10 for Breast, the detail and the medical specificity and technical vocabulary of Breast queries appear to be the most complex than other Cancer sites, probably reflecting the sophistication of basic research and clinical data on this topic and the relative sophistication of the breast cancer information seekers.</p>
+        </sec>
+        <sec>
+          <title>4.0 Cause and Risk</title>
+          <p>There were 1249 queries in this highest-level category. Without mentioning a specific cancer by name, there were N = 1115 (89.27%) queries about Causes and Links but only N = 134 (10.73%) about Prevention. Among the 1115 queries in the Causes and Links subcategory, the following topics were noted:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Drugs (N = 287, 25.74%)</p>
+            </list-item>
+            <list-item>
+              <p>Unspecified (N = 247, 22.15%) (eg, "What is cause a cancer?" [sic])</p>
+            </list-item>
+            <list-item>
+              <p>Radiation (N = 247, 22.15%)</p>
+            </list-item>
+            <list-item>
+              <p>Personal (N = 116, 10.40) (eg, "Can anti-persperant [sic] deodorant cause cancer?")</p>
+            </list-item>
+            <list-item>
+              <p>Chemical/Plastics (N = 74, 6.64%)</p>
+            </list-item>
+            <list-item>
+              <p>Environmental (N = 70, 6.28%)</p>
+            </list-item>
+            <list-item>
+              <p>Food Supplement (N = 64, 5.74%)</p>
+            </list-item>
+            <list-item>
+              <p>Genetic Mutation/Virus (N = 10, 0.90%)</p>
+            </list-item>
+          </list>
+          <p>Smoking was not in this list, probably because most queries about smoking were included under a query about a specific type of cancer, like Lung or Head and Neck.</p>
+        </sec>
+        <sec>
+          <title>5.0 Coping</title>
+          <p>There were only 254 queries about Coping. The queries referenced Support Groups (N = 127, 50%), Pain (N= 98, 38.58%), and Depression (N = 29, 11.42%). Even though there were few questions in this highest-level category, the issue was of specific interest to NCI, which asked for this category to be created and analyzed separately.</p>
+        </sec>
+        <sec>
+          <title>6.0 Diagnosis and Testing</title>
+          <p>There were 3315 queries in this highest-level category, which did not mention a specific cancer by name. Most were queries about specific Testing (N = 2842, 85.73%). The others (N = 473, 14.27%) were queries about Symptoms. Among Testing queries, CAT/CT scan (Computerized Axial Tomography/Computed Tomography scan) (N = 1509, 53.10%) and MRI (N = 587, 20.65%) were the most-common Testing topics, followed by Biopsy (N = 502, 17.66%).</p>
+        </sec>
+        <sec>
+          <title>7.0 Digestive/Gastrointestinal/Bowel (D/G/B)</title>
+          <p>The presentation of data queries for D/G/B in <xref ref-type="app" rid="app1">Appendix 1</xref> is complex because, there were 7 top-level subcategories, including General Information and 10 cancer types identified in the General Information subcategory</p>
+          <p>As shown in <xref ref-type="app" rid="app1">Appendix 1</xref>, 8959 queries for D/G/B sites were broken down into 7 subcategories:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>General Information (N = 5568, 62.15%)</p>
+            </list-item>
+            <list-item>
+              <p>Symptoms (N = 1506, 16.81%)</p>
+            </list-item>
+            <list-item>
+              <p>Diagnosis and Testing (N = 1125, 12.56%)</p>
+            </list-item>
+            <list-item>
+              <p>Treatment (N = 294, 3.28%)</p>
+            </list-item>
+            <list-item>
+              <p>Statistics (N = 184, 2.05%)</p>
+            </list-item>
+            <list-item>
+              <p>Definition (N = 163, 1.82%)</p>
+            </list-item>
+            <list-item>
+              <p>Cause/Risk/Link (N = 119, 1.33%)</p>
+            </list-item>
+          </list>
+          <p>Most queries asked for General Information. Examples of General Information queries would be "Where can I learn about the cancer esophageal cancer?"? and "Where can I find information on Stomach cancer"?</p>
+          <p>A breakdown of all D/G/B queries by cancer type is shown in the list below. The absolute numbers and percentages (of all D/G/B queries) in the list below differ from the pie diagram in <xref ref-type="app" rid="app1">Appendix 1</xref> because the list below includes organ-type queries from General Information plus the 6 other subcategories in D/G/B.</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Colorectal (N = 4801, 53.59)</p>
+            </list-item>
+            <list-item>
+              <p>Liver (N = 1413, 15.77%)</p>
+            </list-item>
+            <list-item>
+              <p>Gastrointestinal (stomach) (N = 1094, 12.21%)</p>
+            </list-item>
+            <list-item>
+              <p>Pancreas (N = 965, 10.77%)</p>
+            </list-item>
+            <list-item>
+              <p>Bowel (N = 273, 3.05%)</p>
+            </list-item>
+            <list-item>
+              <p>Esophagus (N = 260, 2.90%)</p>
+            </list-item>
+            <list-item>
+              <p>Other (N = 153, 1.7%)</p>
+            </list-item>
+          </list>
+          <p>The organ subsites in Other include Gall Bladder, Bile Duct, Anal, and Abdominal.</p>
+          <p>As noted in <xref ref-type="app" rid="app1">Appendix 1</xref>, for D/G/B there were far more questions about Symptoms (N = 1506, 16.81%) than Treatment (N = 294, 3.28%) possibly reflecting the fact that (1) users of Ask.com were just beginning their D/G/B information seeking and (2) there is less complexity in the published Treatment data for D/G/B compared to some other cancer types, like Breast Cancer.</p>
+          <p>The terms Bowel, Gastrointestinal, Stomach, and Abdominal may have been used interchangeably by users. They appear not to recognize that queries for sigmoid, rectum, cecum, appendix, transverse colon, small bowel, and stomach (gastric) cancer would provide much more useful information.</p>
+          <p>For D/G/B, some queries about Liver Metastases were included with queries about primary Liver Cancers.</p>
+        </sec>
+        <sec>
+          <title>8.0 General Research</title>
+          <p>There were 7808 queries assigned to the highest-level category General Research, a topic not linked to a specific cancer type. In this category the 5 most-common subcategories were:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Research (N = 2819, 36.10%)</p>
+            </list-item>
+            <list-item>
+              <p>Organization (N = 1656, 21.21%)</p>
+            </list-item>
+            <list-item>
+              <p>Clinical Trials (N = 1272, 16.29%)</p>
+            </list-item>
+            <list-item>
+              <p>Concerns (N = 1201, 15.38%)</p>
+            </list-item>
+            <list-item>
+              <p>Pictures (N = 559, 7.16%)</p>
+            </list-item>
+          </list>
+          <p>Among the queries about Organization, there were 1065 queries about the American Cancer Society (ACS) and 223 about the National Cancer Institute (NCI).</p>
+          <p>Among the 1272 queries about Clinical Trials, the most-common 3 questions/topics were:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>What are ... (N = 634, 49.84%) eg, "What are clinical trials?"</p>
+            </list-item>
+            <list-item>
+              <p>Latest ... (N = 260, 20.44%) eg, "latest cancer clinical trial research"</p>
+            </list-item>
+            <list-item>
+              <p>Types of ... (N = 111, 8.73%) eg, "types of cancer trials"</p>
+            </list-item>
+          </list>
+        </sec>
+        <sec>
+          <title>9.0 Genitourinary Cancers</title>
+          <p>In decreasing order, the frequency of Genitourinary organ-type queries (N = 6250) in all 12 Genitourinary subcategories including General Information was:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Prostate (N = 3141, 50.26%)</p>
+            </list-item>
+            <list-item>
+              <p>Testicular (N = 1772, 28.35%)</p>
+            </list-item>
+            <list-item>
+              <p>Bladder (N = 708, 11.33%)</p>
+            </list-item>
+            <list-item>
+              <p>Kidney (N = 496, 7.94%)</p>
+            </list-item>
+            <list-item>
+              <p>Other (N = 133, 2.12%)</p>
+            </list-item>
+          </list>
+          <p>Although it has been estimated that there were 198100 new cases of Prostate Cancer diagnosed in the US in 2001 and only 7200 cases of Testis Cancer [<xref ref-type="bibr" rid="ref34">34</xref>], the relative frequency of Testis Cancer queries was quite high. One possible reason might be that males diagnosed with Testis Cancer are generally much younger than those diagnosed with Prostate Cancer, and those younger individuals might be more-frequent information seekers on the Internet. It may also reflect the fact that the 2001 Tour de France bicycle race won by Lance Armstrong, a Testis Cancer survivor, was held during July, coinciding with the study period for this project.</p>
+          <p>As with most sites, the most-common Prostate Cancer questions were General Information (N = 1715, 54.6%). For Prostate Cancer, there were more questions about Treatment (N = 460, 14.65%) than Symptoms (N = 364, 11.59%). This may reflect major medical controversies about treatment options and the typically asymptomatic presentation of the disease.</p>
+          <p>For the Genitourinary category as a whole, there were more questions about Symptoms (N = 854, 13.66%) than Treatment (N = 604, 9.66%).</p>
+          <p>Expected misspellings of prostate (prostrate) were noted.</p>
+        </sec>
+        <sec>
+          <title>10.0 Gynecological Cancers</title>
+          <p>There were 5344 queries overall. The breakdown of subcategories in decreasing frequency was:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>General Information (N = 3409, 63.79%)</p>
+            </list-item>
+            <list-item>
+              <p>Symptoms (N = 939, 17.57%)</p>
+            </list-item>
+            <list-item>
+              <p>Diagnosis and Testing (N = 452, 8.46%)</p>
+            </list-item>
+            <list-item>
+              <p>Treatment (N = 247, 4.62%)</p>
+            </list-item>
+            <list-item>
+              <p>Definition (N = 158, 2.96%)</p>
+            </list-item>
+            <list-item>
+              <p>Cause/Risk (N = 83, 1.55%)</p>
+            </list-item>
+            <list-item>
+              <p>Statistics (N = 42, 0.79%)</p>
+            </list-item>
+            <list-item>
+              <p>Prevention (N = 14, 0.26%)</p>
+            </list-item>
+          </list>
+          <p>In decreasing order of frequency, the cancer types queried in all 8 Gynecological subcategories included the following:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Ovarian (N = 2031, 38.00%)</p>
+            </list-item>
+            <list-item>
+              <p>Cervical (N = 1924, 36.00%)</p>
+            </list-item>
+            <list-item>
+              <p>Uterine (N = 606, 11.34%)</p>
+            </list-item>
+            <list-item>
+              <p>Endometrial (N = 225, 4.21%)</p>
+            </list-item>
+            <list-item>
+              <p>Vulvar (N = 166, 3.11%)</p>
+            </list-item>
+            <list-item>
+              <p>Vaginal (N = 219, 4.09%)</p>
+            </list-item>
+            <list-item>
+              <p>Other or not specified (N = 173, 3.24%)</p>
+            </list-item>
+          </list>
+          <p>There were nearly as many questions about Cervical Cancer as Ovarian Cancer despite the fact that in the United States in 2001 the estimated incidence of new Ovarian Cancers was about twice that of invasive Cervical Cancer [<xref ref-type="bibr" rid="ref34">34</xref>].</p>
+          <p>There were questions about Endometrial cancer as well as Uterine cancer. These data suggest that Web site information needs to be provided using both labels.</p>
+        </sec>
+        <sec>
+          <title>11.0 Head and Neck</title>
+          <p>There were 2522 queries overall. Most queries asked for General Information (N = 1485, 58.88%). The vocabulary used to ask about specific cancer types within General Information was:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Throat</p>
+            </list-item>
+            <list-item>
+              <p>Mouth</p>
+            </list-item>
+            <list-item>
+              <p>Oral</p>
+            </list-item>
+            <list-item>
+              <p>Tongue</p>
+            </list-item>
+            <list-item>
+              <p>Head</p>
+            </list-item>
+            <list-item>
+              <p>Neck</p>
+            </list-item>
+          </list>
+          <p>The vocabulary confirms the need to offer health information with words that are not technical like larynx, glottis, pharynx, or nasopharynx. There were 59 questions asking about Definitions of Head and Neck cancer. Specifics about cancer anatomy of this cancer type may be less familiar to the general public than other sites.</p>
+          <p>There were 422 queries asking for Pictures of Head and Neck Cancer. There were only 47 questions (1.86%) asking about Cause/Risk/Link issues, despite the fact that there is a great deal known about the Causes and Prevention of Head and Neck Cancer. There were 418 questions (16.57%) about Symptoms and but only 52 (2.06%) about Treatment.</p>
+        </sec>
+        <sec>
+          <title>12.0 Hematologic and Blood Cancers</title>
+          <p>Among 5448 queries in this category, the 5 most common of the 12 subcategories were: General Information (N = 3781, 69.40%), Definition (N = 701, 12.96%), Symptoms (N = 539, 9.89%), Treatments (N = 175, 3.21%), and Organizations (N = 102, 187%). Within General Information users asked about Leukemia (N = 2895, 76.57%), Myeloma (N = 592, 15.66%), Bone Marrow (N = 148, 3.91%), and Blood Cancers (N = 146, 3.86%). Various misspellings of Leukemia were noted and nontechnical terms such as Blood Cancer and Bone Marrow Cancer were frequent.</p>
+        </sec>
+        <sec>
+          <title>13.0 Lung Cancer</title>
+          <p>Lung Cancer (N = 4630) accounted for 8% of organ-type specific queries within the highest-level Cancer category. This is a disproportionately-low percentage given the relative incidence of Lung Cancer in the United States in 2001 [<xref ref-type="bibr" rid="ref32">32</xref>]. There were more queries about Gynecological and Hematologic/Blood cancers, even though the US incidence for these is far lower.</p>
+          <p>Among Lung Cancer queries, the queries were classified as follows:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>General Information (N = 3223, 69.61%)</p>
+            </list-item>
+            <list-item>
+              <p>Symptoms (N = 530, 11.45%)</p>
+            </list-item>
+            <list-item>
+              <p>Cause/Risk/Link (N = 305, 6.59%)</p>
+            </list-item>
+            <list-item>
+              <p>Treatment (N = 219, 4.73%)</p>
+            </list-item>
+            <list-item>
+              <p>Definition (N = 150, 3.24%)</p>
+            </list-item>
+            <list-item>
+              <p>Statistics (N = 113, 2.44%)</p>
+            </list-item>
+            <list-item>
+              <p>Diagnosis and Testing (N = 90, 1.94%)</p>
+            </list-item>
+          </list>
+          <p>In the Cause/Risk/Link category of Lung Cancer, there were only N = 180 queries (59.02%) that asked generally about Causes of Lung Cancer and N = 102 queries (33.44%) that asked specifically about Smoking. There were N = 23 queries (7.54%) asking if Marijuana caused Lung Cancer.</p>
+          <p>Only N = 255 (7.91%) queries within General Information asked about Lung Cancer by (histologic cell) Type, despite the fact that this is a major determinant of triage for treatment.</p>
+          <p>For Lung Cancer &gt; Treatment, there were 219 queries (4.73%). Most Treatment queries were Unspecified (N = 118, 53.88%), eg, "What are treatments for lung cancer?" There were 26 Treatment questions about Cure (11.87%). There were few specific questions about Medications (chemotherapy) (N = 21, 9.59%), Radiation (N = 19, 8.68%), or Surgery (N = 10, 4.57%). Although all numbers were small, there were more questions about Alternative Treatment (N = 13, 5.94%) than Surgery (N = 10, 4.57%). There were only 4 Treatment questions (1.83%) about palliative care, despite the grave prognosis for most Lung Cancers. Clearly the questions about Lung Cancer, the most-common lethal cancer, were far less sophisticated than the questions about either Breast Cancer or Prostate Cancer.</p>
+        </sec>
+        <sec>
+          <title>14.0 Lymphomas</title>
+          <p>Among the 3333 queries about Lymphoma (including both Hodgkin's Disease and Non-Hodgkin's Lymphoma), General Information (N = 2391, 71.74%) questions were the most common. Unlike many cancer types, there was frequent mention of histologic types, as is appropriate, given the wide variety of clinically-different prognoses and treatments in this subcategory. There were many different spellings of Hodgkin's Disease.</p>
+        </sec>
+        <sec>
+          <title>15.0 Miscellaneous Cancers</title>
+          <p>There were 1633 queries assigned to this Cancer subcategory. The Miscellaneous Cancers were:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Endocrine (N = 901, 55.17%)</p>
+            </list-item>
+            <list-item>
+              <p>Neoplasm (N = 272, 16.66%)</p>
+            </list-item>
+            <list-item>
+              <p>Kaposis (N = 262, 16.04%)</p>
+            </list-item>
+            <list-item>
+              <p>Ocular (N = 179, 10.96%)</p>
+            </list-item>
+            <list-item>
+              <p>Germ Cell (N = 19, 1.16%)</p>
+            </list-item>
+          </list>
+          <p>Several of the Ocular queries, eg, Ocular Melanoma and Retinoblastoma, could have been considered for other subcategories, such as Skin and Pediatric respectively. Germ cell tumors could also have been placed in either Genitourinary or Gynecological subcategories. These ambiguities illustrate the difficulty in categorizing precise user information needs despite the use of natural language processing.</p>
+        </sec>
+        <sec>
+          <title>16.0 Pediatric</title>
+          <p>There were only 603 Pediatric queries, and most asked about a specific cancer type (N= 403, 66.83%). There were relatively few General Information queries (N = 81, 13.43%) eg, "where can I find information on children's cancers?" Since patients with Pediatric cancers in the US are usually managed generally by pediatric oncology specialists at major regional medical centers, those seeking Pediatric cancer information are probably directed to specialized Web sites rather than general sites like Ask.com.</p>
+          <p>Of 403 queries for cancer types, the most common were Hematologic/Blood (N = 137, 34%), Neuroblastoma (N = 133, 33%), and Rhabdomyosarcoma (N = 68, 16.87%). There were only 4 questions referring to pediatric Brain and Neurological cancers. Since this is such a common Pediatric tumor type, it is possible that some Pediatric neurological tumor questions were assigned to the Brain and Neurologic Cancer category even though the questions were really meant to target a Pediatric issue.</p>
+        </sec>
+        <sec>
+          <title>17.0 Skin Cancers</title>
+          <p>Among 6709 queries in this Cancer subcategory, 3596 (53.60%) asked for General Information. Like Lymphoma, there was frequent mention of specific Skin Cancer types (N = 2157, 32.15%), probably because of the significantly-different clinical prognoses and treatments.</p>
+          <p>Only 169 queries (2.52%) asked about Cause/Risk/Link, and 60 queries (0.89%) asked about Prevention despite the fact that so much is known about these topics and Skin Cancer.</p>
+          <p>Among Skin Cancers queried by histologic cancer type (N = 2157, 32.15%), Melanoma was the most common (N = 1707, 79.14%), even though it is far-less common than Basal Cell Skin Cancers (N = 322, 14.93%) [<xref ref-type="bibr" rid="ref10">10</xref>]. Frequent mention of Melanoma probably reflects its more-serious prognosis and more-complicated clinical triage.</p>
+        </sec>
+        <sec>
+          <title>18.0 Soft Tissue Cancers</title>
+          <p>There were 3954 queries in this Cancer subcategory. Although most appropriately refer to sarcomas of various types, there was a minority of misplaced queries. Some queries appear to reference conditions that are probably benign (Ganglion, Fibroid, Dysplasia, and Lipoma) and others should have been placed in different Cancer subcategories eg, Brain and Neurological (Oligodendroglioma and Glioma) These will be corrected on later analyses.</p>
+        </sec>
+        <sec>
+          <title>19.0 Treatment</title>
+          <p>In the 3832 highest-level category queries about Treatment, most questions were about a specific Treatment Type (N = 3223. 84.11%), even though no specific cancer was mentioned. Within Treatment &gt; Treatment Type there were many general queries about Chemotherapy (N = 2275, 70.59%). There were questions about general Radiation Therapy (N = 534, 16.57%), and few about specialized Radiation Therapy treatments like Gamma Knife, Laser, and Protons. There were more general questions about Alternative Therapies (N = 239, 7.42%) than Surgery (N = 127, 3.94%) Many Alternative Therapy questions also appear in specific organ-type subcategories, particularly Breast.</p>
+        </sec>
+      </sec>
+      <sec>
+        <title>Query Frequency Relative to US Incidence of Cancer Types</title>
+        <p>
+                    <xref ref-type="table" rid="table4">Table 4</xref> compares the incidence of selected cancers in the United States (US) in the year 2001 with the frequency of selected site-specific cancer queries in this report. It has been estimated that there were 1268000 new cancer cases in the US in 2001 [<xref ref-type="bibr" rid="ref34">34</xref>]. The sites in <xref ref-type="table" rid="table4">Table 4</xref> were selected specifically because they were easiest to compare directly.</p>
+        <p>The relative percentage of specific organ-type queries exceeds the percentage of annual incidence only for rarer cancers. The difficulty of finding useful information on prominent cancer portals or with standard search engines may be one explanation, although there are others. The comparison is not meant to be definitive as there are clearly issues with validity of this comparison:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Cancer prevalencemight be a better benchmark than incidence</p>
+          </list-item>
+          <list-item>
+            <p>US incidence data exclude cases of in situ breast and cervix cancers as well as the very-common basal cell and squamous cell skin cancers</p>
+          </list-item>
+          <list-item>
+            <p>Queries could have come from anywhere in the world, not just the United States</p>
+          </list-item>
+          <list-item>
+            <p>Query total may include those who accessed the site more than once</p>
+          </list-item>
+          <list-item>
+            <p>Queries could have come from individuals who are not newly-diagnosed patients</p>
+          </list-item>
+        </list>
+        <table-wrap id="table4" position="float">
+          <label>Table 4</label>
+          <caption>
+            <p>Comparing relative annual US incidence of selected cancers and query frequency</p>
+          </caption>
+          <table frame="hsides" rules="groups" width="516" border="1" cellspacing="0" cellpadding="4">
+            <col width="143" span="1"/>
+            <col width="80" span="1"/>
+            <col width="76" span="1"/>
+            <col width="66" span="1"/>
+            <col width="78" span="1"/>
+            <thead>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">
+                  <bold>Cancer Site</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Estimated Number of New US Cancers Diagnosed in 2001</bold>
+                  <xref ref-type="table-fn" rid="table4fn1">*</xref>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>% of Estimated New US Cancers in 2001</bold>
+                  <xref ref-type="table-fn" rid="table4fn1">*</xref>
+                  <xref ref-type="table-fn" rid="table4fn2">&#x2020;</xref>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>Number of Cancer Site-Specific Queries in This Report</bold>
+                </td>
+                <td rowspan="1" colspan="1">
+                  <bold>% Queries in Cancer Category</bold>
+                  <xref ref-type="table-fn" rid="table4fn2">&#x2020;</xref>
+                  <xref ref-type="table-fn" rid="table4fn3">&#x2021;</xref>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Digestive (D/G/B)</td>
+                <td rowspan="1" colspan="1">235700</td>
+                <td rowspan="1" colspan="1">18.6</td>
+                <td rowspan="1" colspan="1">8959</td>
+                <td rowspan="1" colspan="1">15.0</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Prostate</td>
+                <td rowspan="1" colspan="1">198000</td>
+                <td rowspan="1" colspan="1">15.6</td>
+                <td rowspan="1" colspan="1">3141</td>
+                <td rowspan="1" colspan="1">5.3</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Breast</td>
+                <td rowspan="1" colspan="1">193700</td>
+                <td rowspan="1" colspan="1">15.3</td>
+                <td rowspan="1" colspan="1">6953</td>
+                <td rowspan="1" colspan="1">11.7</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Lung</td>
+                <td rowspan="1" colspan="1">169000</td>
+                <td rowspan="1" colspan="1">13.3</td>
+                <td rowspan="1" colspan="1">4630</td>
+                <td rowspan="1" colspan="1">7.8</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Lymphoma</td>
+                <td rowspan="1" colspan="1">63600</td>
+                <td rowspan="1" colspan="1">5.0</td>
+                <td rowspan="1" colspan="1">3333</td>
+                <td rowspan="1" colspan="1">5.6</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Bladder</td>
+                <td rowspan="1" colspan="1">54300</td>
+                <td rowspan="1" colspan="1">4.3</td>
+                <td rowspan="1" colspan="1">708</td>
+                <td rowspan="1" colspan="1">1.2</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Uterus/Endometrial</td>
+                <td rowspan="1" colspan="1">38300</td>
+                <td rowspan="1" colspan="1">3.0</td>
+                <td rowspan="1" colspan="1">931</td>
+                <td rowspan="1" colspan="1">1.6</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Head and Neck</td>
+                <td rowspan="1" colspan="1">30100</td>
+                <td rowspan="1" colspan="1">2.3</td>
+                <td rowspan="1" colspan="1">2522</td>
+                <td rowspan="1" colspan="1">4.2</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Ovary</td>
+                <td rowspan="1" colspan="1">23400</td>
+                <td rowspan="1" colspan="1">1.9</td>
+                <td rowspan="1" colspan="1">2031</td>
+                <td rowspan="1" colspan="1">3.4</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Brain and Neurological</td>
+                <td rowspan="1" colspan="1">17200</td>
+                <td rowspan="1" colspan="1">1.4</td>
+                <td rowspan="1" colspan="1">1852</td>
+                <td rowspan="1" colspan="1">3.1</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Cervix</td>
+                <td rowspan="1" colspan="1">12900</td>
+                <td rowspan="1" colspan="1">1.0</td>
+                <td rowspan="1" colspan="1">1924</td>
+                <td rowspan="1" colspan="1">3.2</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Soft Tissue</td>
+                <td rowspan="1" colspan="1">8 700</td>
+                <td rowspan="1" colspan="1">0.69</td>
+                <td rowspan="1" colspan="1">3954</td>
+                <td rowspan="1" colspan="1">6.6</td>
+              </tr>
+              <tr valign="top">
+                <td rowspan="1" colspan="1">Testis</td>
+                <td rowspan="1" colspan="1">7200</td>
+                <td rowspan="1" colspan="1">0.57</td>
+                <td rowspan="1" colspan="1">1772</td>
+                <td rowspan="1" colspan="1">3.0</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="table4fn1">
+              <p><sup>*</sup> Data from 2001 Estimated Annual US Cancer Incidence Figures (N = 1268000) [<xref ref-type="bibr" rid="ref10">10</xref>].</p>
+            </fn>
+            <fn id="table4fn2">
+              <p><sup>&#x2020;</sup> Percentages in columns 3 and 5 do not add up to 100% because only selected cancers were included in this chart.</p>
+            </fn>
+            <fn id="table4fn3">
+              <p><sup>&#x2021;</sup> Only selected Cancers were included in this chart. Denominator (N = 59619) was the total number of queries about specific subsites in the Cancer category.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Other Observations</title>
+        <p>The query analysis reveals that online users generally seek information about Symptoms and Treatment for specific cancers, rather than about cancers generally. In addition, Symptom queries showed a frequency between 2 and 5 times that of Treatment queries, for most cancers.</p>
+        <p>For this study we did not specifically target queries about Adult Immune Deficiency Syndrome (AIDS), even though AIDS can often be associated with Cancer. There were 262 questions about Kaposi's Sarcoma in the Miscellaneous Cancers category.</p>
+      </sec>
+    </sec>
+    <sec sec-type="discussion">
+      <title>Discussion</title>
+      <p>General Information was the largest category for almost all cancers, probably reflecting the nature of the Ask.com consumer search engine. It is a consumer-oriented Web-wide search engine where users tend to seek general information that can help them learn either how or where they should further pursue their inquiries. It is likely the users are just starting their Web searches on Ask.com and they are not yet interested in or they do not yet know enough information to ask more-sophisticated questions. This behavior may not reflect that of users who go directly to a known cancer-information portal with a predetermined need for detailed information.</p>
+      <p>We attempted to capture and analyze all cancer-related queries, including those with correct and incorrect spellings. Misspellings were noted relatively frequently, but we have no data on the number of misspellings, as we did not target this in advance as an endpoint, and we did not have direct access to the raw data logs. <xref ref-type="app" rid="app1">Appendix 1</xref> shows verbatim queries with examples of the misspellings. Automating help for users who enter misspelled words is a major issue for search engines in order to optimize query results. Other researchers have noted the search difficulties related to spelling of cancer search terms correctly [<xref ref-type="bibr" rid="ref35">35</xref>].</p>
+      <p>Ask.com users entered both keyword searches and sentence-style queries, despite the fact that this is a natural-language-processing search engine. We recognize that even if users typed in a long query it was still sometimes difficult to discern absolutely what specific information the user needed, particularly since we did not have access to the links users picked.</p>
+      <p>The vocabulary employed by users of Ask.com ranged from unsophisticated to very sophisticated. This suggests that allowing users to employ less-technical language on cancer Web sites would significantly help them find the information they seek.</p>
+      <p>The queries captured for this study undoubtedly reflect the news and research studies in the public arena during the time period from June to August 2001. A different time period would certainly reflect a different distribution. Examples of the kinds of events that could affect the results include the diagnosis or death of a celebrity with cancer, the publication of a major trial about bone marrow transplantation for breast cancer, or the Food and Drug Administration approval of an important new drug.</p>
+      <p>The presence of a search engine with natural language processing on a Web site, while potentially valuable to users, does not obviate the need for good user-centered Web site design and information architecture [<xref ref-type="bibr" rid="ref36">36</xref>]. It has been shown that searching via search engine can be minimized and user satisfaction maximized if information architecture and link titles follow appropriate guidelines [<xref ref-type="bibr" rid="ref37">37</xref>]. Nevertheless, for less-sophisticated users, a natural-language-processing search engine can be helpful in finding the information users seek and provide enhanced success in searching.</p>
+      <p>An October 30, 2003 search of the PubMed Web site [<xref ref-type="bibr" rid="ref38">38</xref>] of the National Library of Medicine [<xref ref-type="bibr" rid="ref39">39</xref>] yielded 458 search results from a query for "Natural Language Processing." Most citations were from publications within the last 3 years, attesting to the currency of natural language processing as an important research topic cutting across a wide variety of research disciplines. Potential data-mining applications of this tool in medicine extend far beyond the use described in this paper.</p>
+      <p>Eysenbach and Kohler have recently developed a novel methodology, similar to the method used in this study, to estimate the actual volume and prevalence of health-related searches on the Web in relation to the total number of searches conducted daily on the Internet [<xref ref-type="bibr" rid="ref40">40</xref>]. They collected queries from 2 search engines, Metacrawler (a search engine of search engines) [<xref ref-type="bibr" rid="ref41">41</xref>] and Ask.com [<xref ref-type="bibr" rid="ref29">29</xref>] (the same natural-language-processing search engine used for this report). These 2 search engines were selected because they allowed "peeking" at actual user search-query topics. They concluded that 4.5% of all searches on the Web might be health related. The queries were collected from Metacrawler between February 2001 and April 2002, and from Ask.com between February 2001 and April 2001. The first date range overlapped our study dates and the second occurred just before data collection for our study.</p>
+      <p>In summary, natural-language-processing tools such as the one used for this study are able to filter and subset raw query data into useful analysis categories. Retrieval and analysis of these data can be used to better understand the actual content users want and the level of understanding and sophistication they have when they come to the Web site. Using the information on a continuing basis can form the basis for updating content on Web sites based on the most-current user needs. If a natural-language search engine were offered on a health-information portal, for example, it could improve customer access to desired information, particularly for those users with less sophistication about content or language. Additional analyses of query results are planned for the future. Consideration has been given to piloting the use of natural language processing on subsites of our Web portal.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The natural-language-processing project was initiated and funded at NCI by Cherie Nichols and Bernard Glassman of the Office of Science Policy. The project was supported programmatically by Janice Nall, William Trefzger, and Su Hubbard. At AskJeeves, Inc, several staff members provided important technical and programmatic support, including the production of a final report to NCI upon which this paper is based. These individuals are Jeff Hjelt, Rob Thomson, and Kent Schmitt.</p>
+    </ack>
+    <fn-group>
+      <fn fn-type="conflict">
+        <p>None declared.</p>
+      </fn>
+    </fn-group>
+    <ref-list>
+      <ref id="ref1">
+        <label>1</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cline</surname>
+              <given-names>R J</given-names>
+            </name>
+            <name>
+              <surname>Haynes</surname>
+              <given-names>K M</given-names>
+            </name>
+          </person-group>
+          <article-title>Consumer health information seeking on the Internet: the state of the art</article-title>
+          <source>Health Educ Res</source>
+          <year>2001</year>
+          <month>12</month>
+          <volume>16</volume>
+          <issue>6</issue>
+          <fpage>671</fpage>
+          <lpage>92</lpage>
+          <pub-id pub-id-type="medline">21639062</pub-id>
+          <pub-id pub-id-type="doi">10.1093/her/16.6.671</pub-id>
+          <pub-id pub-id-type="pmid">11780707</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref2">
+        <label>2</label>
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Taylor</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <source>Cyberchondriacs update</source>
+          <year>2001</year>
+          <month>4</month>
+          <day>18</day>
+          <date-in-citation>2003 Nov 16</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.harrisinteractive.com/harris_poll/index.asp?PID=229">http://www.harrisinteractive.com/harris_poll/index.asp?PID=229</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref3">
+        <label>3</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fox</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Fallows</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Internet health resources: health searches and email have become more commonplace, but there is room for improvement in searches and overall Internet access</source>
+          <year>2003</year>
+          <month>7</month>
+          <day>16</day>
+          <publisher-loc>Washington, DC</publisher-loc>
+          <publisher-name>Pew Internet &amp; American Life Project</publisher-name>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.pewtrusts.com/pdf/pew_internet_health_resources_0703.pdf">http://www.pewtrusts.com/pdf/pew_internet_health_resources_0703.pdf</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref4">
+        <label>4</label>
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lebo</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <source>The UCLA Internet report. Surveying the digital future: year three</source>
+          <year>2003</year>
+          <month>2</month>
+          <date-in-citation>2003 Nov 16</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.ccp.ucla.edu/pdf/UCLA-Internet-Report-Year-Three.pdf">http://www.ccp.ucla.edu/pdf/UCLA-Internet-Report-Year-Three.pdf</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref5">
+        <label>5</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baker</surname>
+              <given-names>Laurence</given-names>
+            </name>
+            <name>
+              <surname>Wagner</surname>
+              <given-names>Todd H</given-names>
+            </name>
+            <name>
+              <surname>Singer</surname>
+              <given-names>Sara</given-names>
+            </name>
+            <name>
+              <surname>Bundorf</surname>
+              <given-names>M Kate</given-names>
+            </name>
+          </person-group>
+          <article-title>Use of the Internet and e-mail for health care information: results from a national survey</article-title>
+          <source>JAMA</source>
+          <year>2003</year>
+          <month>5</month>
+          <day>14</day>
+          <volume>289</volume>
+          <issue>18</issue>
+          <fpage>2400</fpage>
+          <lpage>6</lpage>
+          <pub-id pub-id-type="doi">10.1001/jama.289.18.2400</pub-id>
+          <pub-id pub-id-type="pii">289/18/2400</pub-id>
+          <pub-id pub-id-type="medline">22631234</pub-id>
+          <pub-id pub-id-type="pmid">12746364</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref6">
+        <label>6</label>
+        <element-citation publication-type="book">
+          <collab collab-type="authors">National Telecommunications and Information Administration</collab>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Clancy</surname>
+              <given-names>Roger E</given-names>
+            </name>
+          </person-group>
+          <source>A Nation Online: How Americans Are Expanding Their Use of the Internet</source>
+          <year>2002</year>
+          <month>5</month>
+          <day>1</day>
+          <publisher-loc>Washington, DC</publisher-loc>
+          <publisher-name>Nova Science Pub Inc</publisher-name>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.ntia.doc.gov/ntiahome/dn/index.html">http://www.ntia.doc.gov/ntiahome/dn/index.html</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref7">
+        <label>7</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eysenbach</surname>
+              <given-names>Gunther</given-names>
+            </name>
+          </person-group>
+          <article-title>The impact of the Internet on cancer outcomes</article-title>
+          <source>CA Cancer J Clin</source>
+          <year>2003</year>
+          <volume>53</volume>
+          <issue>6</issue>
+          <fpage>356</fpage>
+          <lpage>71</lpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://caonline.amcancersoc.org/cgi/content/full/53/6/356">http://caonline.amcancersoc.org/cgi/content/full/53/6/356</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">23397027</pub-id>
+          <pub-id pub-id-type="pmid">15224975</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref8">
+        <label>8</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Siu</surname>
+              <given-names>L L</given-names>
+            </name>
+          </person-group>
+          <article-title>Impact of the media and the internet on oncology: survey of cancer patients and oncologists in Canada</article-title>
+          <source>J Clin Oncol</source>
+          <year>2001</year>
+          <month>12</month>
+          <day>1</day>
+          <volume>19</volume>
+          <issue>23</issue>
+          <fpage>4291</fpage>
+          <lpage>7</lpage>
+          <pub-id pub-id-type="medline">21588291</pub-id>
+          <pub-id pub-id-type="pmid">11731511</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref9">
+        <label>9</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Helft</surname>
+              <given-names>Paul R</given-names>
+            </name>
+            <name>
+              <surname>Hlubocky</surname>
+              <given-names>Fay</given-names>
+            </name>
+            <name>
+              <surname>Daugherty</surname>
+              <given-names>Christopher K</given-names>
+            </name>
+          </person-group>
+          <article-title>American oncologists' views of internet use by cancer patients: a mail survey of American Society of Clinical Oncology members</article-title>
+          <source>J Clin Oncol</source>
+          <year>2003</year>
+          <month>3</month>
+          <day>1</day>
+          <volume>21</volume>
+          <issue>5</issue>
+          <fpage>942</fpage>
+          <lpage>7</lpage>
+          <pub-id pub-id-type="medline">22497247</pub-id>
+          <pub-id pub-id-type="doi">10.1200/JCO.2003.08.007</pub-id>
+          <pub-id pub-id-type="pmid">12610198</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref10">
+        <label>10</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Norum</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluation of Norwegian cancer hospitals web sites and explorative survey among cancer patients on their use of the internet</article-title>
+          <source>J Med Internet Res</source>
+          <year>2001</year>
+          <month>12</month>
+          <day>26</day>
+          <volume>3</volume>
+          <issue>4</issue>
+          <fpage>e30</fpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.jmir.org/2001/4/e30/">http://www.jmir.org/2001/4/e30/</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">21635291</pub-id>
+          <pub-id pub-id-type="doi">10.2196/jmir.3.4.e30</pub-id>
+          <pub-id pub-id-type="pmid">11772545</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref11">
+        <label>11</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Monnier</surname>
+              <given-names>Jeannine</given-names>
+            </name>
+            <name>
+              <surname>Laken</surname>
+              <given-names>Marilyn</given-names>
+            </name>
+            <name>
+              <surname>Carter</surname>
+              <given-names>Cindy L</given-names>
+            </name>
+          </person-group>
+          <article-title>Patient and caregiver interest in internet-based cancer services</article-title>
+          <source>Cancer Pract</source>
+          <year>2002</year>
+          <volume>10</volume>
+          <issue>6</issue>
+          <fpage>305</fpage>
+          <lpage>10</lpage>
+          <pub-id pub-id-type="pii">cpa106005</pub-id>
+          <pub-id pub-id-type="medline">22293860</pub-id>
+          <pub-id pub-id-type="doi">10.1046/j.1523-5394.2002.106005.x</pub-id>
+          <pub-id pub-id-type="pmid">12406053</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref12">
+        <label>12</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yakren</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Shi</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Thaler</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Use of the Internet and other information resources among adult cancer patients and their companions [abstract]</article-title>
+          <source>Proc Am Soc Clin Oncol</source>
+          <year>2001</year>
+          <volume>20</volume>
+          <fpage>298a</fpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.asco.org/ac/1,1003,_12-002489-00_18-002001-00_19-001589-00_28-00RESULTPAGE,00.asp">http://www.asco.org/ac/1,1003,_12-002489-00_18-002001-00_19-001589-00_28-00RESULTPAGE,00.asp</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref13">
+        <label>13</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pereira</surname>
+              <given-names>J L</given-names>
+            </name>
+            <name>
+              <surname>Koski</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hanson</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Bruera</surname>
+              <given-names>E D</given-names>
+            </name>
+            <name>
+              <surname>Mackey</surname>
+              <given-names>J R</given-names>
+            </name>
+          </person-group>
+          <article-title>Internet usage among women with breast cancer: an exploratory study</article-title>
+          <source>Clin Breast Cancer</source>
+          <year>2000</year>
+          <month>7</month>
+          <volume>1</volume>
+          <issue>2</issue>
+          <fpage>148</fpage>
+          <lpage>53</lpage>
+          <comment>discussion 154-155</comment>
+          <pub-id pub-id-type="medline">21897513</pub-id>
+          <pub-id pub-id-type="pmid">11899653</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref14">
+        <label>14</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Satterlund</surname>
+              <given-names>Melisa J</given-names>
+            </name>
+            <name>
+              <surname>Mccaul</surname>
+              <given-names>Kevin D</given-names>
+            </name>
+            <name>
+              <surname>Sandgren</surname>
+              <given-names>Ann K</given-names>
+            </name>
+          </person-group>
+          <article-title>Information gathering over time by breast cancer patients</article-title>
+          <source>J Med Internet Res</source>
+          <year>2003</year>
+          <month>8</month>
+          <day>27</day>
+          <volume>5</volume>
+          <issue>3</issue>
+          <fpage>e15</fpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.jmir.org/2003/3/e15/">http://www.jmir.org/2003/3/e15/</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">22879614</pub-id>
+          <pub-id pub-id-type="doi">10.2196/jmir.5.3.e15</pub-id>
+          <pub-id pub-id-type="pmid">14517106</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref15">
+        <label>15</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Meric</surname>
+              <given-names>Funda</given-names>
+            </name>
+            <name>
+              <surname>Bernstam</surname>
+              <given-names>Elmer V</given-names>
+            </name>
+            <name>
+              <surname>Mirza</surname>
+              <given-names>Nadeem Q</given-names>
+            </name>
+            <name>
+              <surname>Hunt</surname>
+              <given-names>Kelly K</given-names>
+            </name>
+            <name>
+              <surname>Ames</surname>
+              <given-names>Frederick C</given-names>
+            </name>
+            <name>
+              <surname>Ross</surname>
+              <given-names>Merrick I</given-names>
+            </name>
+            <name>
+              <surname>Kuerer</surname>
+              <given-names>Henry M</given-names>
+            </name>
+            <name>
+              <surname>Pollock</surname>
+              <given-names>Raphael E</given-names>
+            </name>
+            <name>
+              <surname>Musen</surname>
+              <given-names>Mark A</given-names>
+            </name>
+            <name>
+              <surname>Singletary</surname>
+              <given-names>S Eva</given-names>
+            </name>
+          </person-group>
+          <article-title>Breast cancer on the world wide web: cross sectional survey of quality of information and popularity of websites</article-title>
+          <source>BMJ</source>
+          <year>2002</year>
+          <month>3</month>
+          <day>9</day>
+          <volume>324</volume>
+          <issue>7337</issue>
+          <fpage>577</fpage>
+          <lpage>81</lpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://bmj.bmjjournals.com/cgi/content/full/324/7337/577">http://bmj.bmjjournals.com/cgi/content/full/324/7337/577</ext-link>
+          </comment>
+          <pub-id pub-id-type="pmid">11884322</pub-id>
+          <pub-id pub-id-type="medline">21881327</pub-id>
+          <pub-id pub-id-type="doi">10.1136/bmj.324.7337.577</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref16">
+        <label>16</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fogel</surname>
+              <given-names>Joshua</given-names>
+            </name>
+            <name>
+              <surname>Albert</surname>
+              <given-names>Steven M</given-names>
+            </name>
+            <name>
+              <surname>Schnabel</surname>
+              <given-names>Freya</given-names>
+            </name>
+            <name>
+              <surname>Ditkoff</surname>
+              <given-names>Beth Ann</given-names>
+            </name>
+            <name>
+              <surname>Neugut</surname>
+              <given-names>Alfred I</given-names>
+            </name>
+          </person-group>
+          <article-title>Use of the Internet by women with breast cancer</article-title>
+          <source>J Med Internet Res</source>
+          <year>2002</year>
+          <month>11</month>
+          <day>22</day>
+          <volume>4</volume>
+          <issue>2</issue>
+          <fpage>e9</fpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.jmir.org/2002/2/e9/">http://www.jmir.org/2002/2/e9/</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">22442441</pub-id>
+          <pub-id pub-id-type="doi">10.2196/jmir.4.2.e9</pub-id>
+          <pub-id pub-id-type="pmid">12554556</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref17">
+        <label>17</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>R P</given-names>
+            </name>
+            <name>
+              <surname>Devine</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Denittis</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Whittington</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Metz</surname>
+              <given-names>J M</given-names>
+            </name>
+          </person-group>
+          <article-title>Internet use by patients with prostate cancer undergoing radiotherapy</article-title>
+          <source>Urology</source>
+          <year>2003</year>
+          <month>8</month>
+          <volume>62</volume>
+          <issue>2</issue>
+          <fpage>273</fpage>
+          <lpage>7</lpage>
+          <pub-id pub-id-type="pii">S0090429503002516</pub-id>
+          <pub-id pub-id-type="medline">22776290</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0090-4295(03)00251-6</pub-id>
+          <pub-id pub-id-type="pmid">12893334</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref18">
+        <label>18</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pautler</surname>
+              <given-names>S E</given-names>
+            </name>
+            <name>
+              <surname>Tan</surname>
+              <given-names>J K</given-names>
+            </name>
+            <name>
+              <surname>Dugas</surname>
+              <given-names>G R</given-names>
+            </name>
+            <name>
+              <surname>Pus</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Ferri</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hardie</surname>
+              <given-names>W R</given-names>
+            </name>
+            <name>
+              <surname>Chin</surname>
+              <given-names>J L</given-names>
+            </name>
+          </person-group>
+          <article-title>Use of the internet for self-education by patients with prostate cancer</article-title>
+          <source>Urology</source>
+          <year>2001</year>
+          <month>2</month>
+          <volume>57</volume>
+          <issue>2</issue>
+          <fpage>230</fpage>
+          <lpage>3</lpage>
+          <pub-id pub-id-type="pii">S0090429500010128</pub-id>
+          <pub-id pub-id-type="medline">21113925</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0090-4295(00)01012-8</pub-id>
+          <pub-id pub-id-type="pmid">11182326</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref19">
+        <label>19</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peterson</surname>
+              <given-names>Michael W</given-names>
+            </name>
+            <name>
+              <surname>Fretz</surname>
+              <given-names>Peter C</given-names>
+            </name>
+          </person-group>
+          <article-title>Patient use of the internet for information in a lung cancer clinic</article-title>
+          <source>Chest</source>
+          <year>2003</year>
+          <month>2</month>
+          <volume>123</volume>
+          <issue>2</issue>
+          <fpage>452</fpage>
+          <lpage>7</lpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.chestjournal.org/cgi/pmidlookup?view=long&amp;pmid=12576365">http://www.chestjournal.org/cgi/pmidlookup?view=long&amp;pmid=12576365</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">22464109</pub-id>
+          <pub-id pub-id-type="doi">10.1378/chest.123.2.452</pub-id>
+          <pub-id pub-id-type="pmid">12576365</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref20">
+        <label>20</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bader</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Nall</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Gastrointestinal cancer on the internet: what people really want to know [abstract] <ext-link ext-link-type="uri" xlink:href="http://www.asco.org/ac/1,1003,_12-002489-00_18-002003-00_19-00101280-00_28-00RESULTPAGE,00.asp">http://www.asco.org/ac/1,1003,_12-002489-00_18-002003-00_19-00101280-00_28-00RESULTPAGE,00.asp</ext-link>
+                    </article-title>
+          <source>Proc Am Soc Clin Oncol</source>
+          <year>2003</year>
+          <volume>22</volume>
+          <fpage>284</fpage>
+        </element-citation>
+      </ref>
+      <ref id="ref21">
+        <label>21</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Metz</surname>
+              <given-names>James M</given-names>
+            </name>
+            <name>
+              <surname>Devine</surname>
+              <given-names>Pamela</given-names>
+            </name>
+            <name>
+              <surname>Denittis</surname>
+              <given-names>Albert</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>Heather</given-names>
+            </name>
+            <name>
+              <surname>Hampshire</surname>
+              <given-names>Margaret</given-names>
+            </name>
+            <name>
+              <surname>Goldwein</surname>
+              <given-names>Joel</given-names>
+            </name>
+            <name>
+              <surname>Whittington</surname>
+              <given-names>Richard</given-names>
+            </name>
+          </person-group>
+          <article-title>A multi-institutional study of Internet utilization by radiation oncology patients</article-title>
+          <source>Int J Radiat Oncol Biol Phys</source>
+          <year>2003</year>
+          <month>7</month>
+          <day>15</day>
+          <volume>56</volume>
+          <issue>4</issue>
+          <fpage>1201</fpage>
+          <lpage>5</lpage>
+          <pub-id pub-id-type="pii">S0360301603004073</pub-id>
+          <pub-id pub-id-type="medline">22713416</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0360-3016(03)00407-3</pub-id>
+          <pub-id pub-id-type="pmid">12829160</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref22">
+        <label>22</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nair</surname>
+              <given-names>M G</given-names>
+            </name>
+            <name>
+              <surname>Hickok</surname>
+              <given-names>J T</given-names>
+            </name>
+            <name>
+              <surname>Roscoe</surname>
+              <given-names>J A</given-names>
+            </name>
+            <name>
+              <surname>Morrow</surname>
+              <given-names>G R</given-names>
+            </name>
+          </person-group>
+          <article-title>Sources of information used by patients to learn about chemotherapy side effects</article-title>
+          <source>J Cancer Educ</source>
+          <year>2000</year>
+          <volume>15</volume>
+          <issue>1</issue>
+          <fpage>19</fpage>
+          <lpage>22</lpage>
+          <pub-id pub-id-type="medline">20193041</pub-id>
+          <pub-id pub-id-type="pmid">10730798</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref23">
+        <label>23</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mills</surname>
+              <given-names>Moyra E</given-names>
+            </name>
+            <name>
+              <surname>Davidson</surname>
+              <given-names>Robin</given-names>
+            </name>
+          </person-group>
+          <article-title>Cancer patients' sources of information: use and quality issues</article-title>
+          <source>Psychooncology</source>
+          <year>2002</year>
+          <volume>11</volume>
+          <issue>5</issue>
+          <fpage>371</fpage>
+          <lpage>8</lpage>
+          <pub-id pub-id-type="doi">10.1002/pon.584</pub-id>
+          <pub-id pub-id-type="medline">22215958</pub-id>
+          <pub-id pub-id-type="pmid">12228870</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref24">
+        <label>24</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carlsson</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Cancer patients seeking information from sources outside the health care system</article-title>
+          <source>Support Care Cancer</source>
+          <year>2000</year>
+          <month>11</month>
+          <volume>8</volume>
+          <issue>6</issue>
+          <fpage>453</fpage>
+          <lpage>7</lpage>
+          <pub-id pub-id-type="medline">20544098</pub-id>
+          <pub-id pub-id-type="pmid">11094989</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref25">
+        <label>25</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fogel</surname>
+              <given-names>Joshua</given-names>
+            </name>
+          </person-group>
+          <article-title>Internet use for cancer information among racial/ethnic populations and low literacy groups</article-title>
+          <source>Cancer Control</source>
+          <year>2003</year>
+          <volume>10</volume>
+          <issue>5 Suppl</issue>
+          <fpage>45</fpage>
+          <lpage>51</lpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.moffitt.usf.edu/pubs/ccj/v10s5/pdf/45.pdf">http://www.moffitt.usf.edu/pubs/ccj/v10s5/pdf/45.pdf</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">22942135</pub-id>
+          <pub-id pub-id-type="pmid">14581904</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref26">
+        <label>26</label>
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lazarus</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Lipper</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Roberts</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Fireman</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Rose</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>The search for high-quality online content for low-income and underserved communities: evaluating and producing what's needed</source>
+          <date-in-citation>2003 Nov 16</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.contentbank.org/research/Qualitycontent.pdf">http://www.contentbank.org/research/Qualitycontent.pdf</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref27">
+        <label>27</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eysenbach</surname>
+              <given-names>Gunther</given-names>
+            </name>
+            <name>
+              <surname>K&#xF6;hler</surname>
+              <given-names>Christian</given-names>
+            </name>
+          </person-group>
+          <article-title>How do consumers search for and appraise health information on the world wide web? Qualitative study using focus groups, usability tests, and in-depth interviews</article-title>
+          <source>BMJ</source>
+          <year>2002</year>
+          <month>3</month>
+          <day>9</day>
+          <volume>324</volume>
+          <issue>7337</issue>
+          <fpage>573</fpage>
+          <lpage>7</lpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://bmj.bmjjournals.com/cgi/content/full/324/7337/573">http://bmj.bmjjournals.com/cgi/content/full/324/7337/573</ext-link>
+          </comment>
+          <pub-id pub-id-type="pmid">11884321</pub-id>
+          <pub-id pub-id-type="medline">21881326</pub-id>
+          <pub-id pub-id-type="doi">10.1136/bmj.324.7337.573</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref28">
+        <label>28</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">National Cancer Institute</collab>
+          <source>Home page</source>
+          <date-in-citation>2003 Nov 16</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://cancer.gov/">http://cancer.gov/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref29">
+        <label>29</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">AskJeeves Inc</collab>
+          <source>Home page</source>
+          <date-in-citation>2003 Nov 16</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.ask.com/">http://www.ask.com/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref30">
+        <label>30</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bader</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Trefzger</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Glassman</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Nichols</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Natural language processing to evaluate Internet cancer queries [abstract]. 2002</article-title>
+          <source>Proc Am Soc Clin Oncol</source>
+          <year>2002</year>
+          <volume>21</volume>
+          <issue>2</issue>
+          <fpage>196b</fpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.asco.org/ac/1,1003,_12-002489-00_18-002002-00_19-002602-00_28-00RESULTPAGE,00.asp">http://www.asco.org/ac/1,1003,_12-002489-00_18-002002-00_19-002602-00_28-00RESULTPAGE,00.asp</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref31">
+        <label>31</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bader</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Trefzger</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Glassman</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Nichols</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Breast cancer on the internet: what people really want to know</article-title>
+          <source>Breast Cancer Research and Treatment</source>
+          <year>2002</year>
+          <month>12</month>
+          <volume>76</volume>
+          <issue>Supp1</issue>
+          <fpage>S86</fpage>
+        </element-citation>
+      </ref>
+      <ref id="ref32">
+        <label>32</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">National Cancer Institute</collab>
+          <source>Cancer.gov dictionary</source>
+          <date-in-citation>2003 Oct 31</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://cancer.gov/dictionary/">http://cancer.gov/dictionary/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref33">
+        <label>33</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">National Cancer Institute</collab>
+          <source>PDQ: NCI's comprehensive cancer database</source>
+          <date-in-citation>2003 Oct 31</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.cancer.gov/cancerinfo/pdq">http://www.cancer.gov/cancerinfo/pdq</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref34">
+        <label>34</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Greenlee</surname>
+              <given-names>R T</given-names>
+            </name>
+            <name>
+              <surname>Hill-harmon</surname>
+              <given-names>M B</given-names>
+            </name>
+            <name>
+              <surname>Murray</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Thun</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Cancer statistics, 2001</article-title>
+          <source>CA Cancer J Clin</source>
+          <year>2001</year>
+          <volume>51</volume>
+          <issue>1</issue>
+          <fpage>15</fpage>
+          <lpage>36</lpage>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://caonline.amcancersoc.org/cgi/pmidlookup?view=long&amp;pmid=11577478">http://caonline.amcancersoc.org/cgi/pmidlookup?view=long&amp;pmid=11577478</ext-link>
+          </comment>
+          <pub-id pub-id-type="medline">21461956</pub-id>
+          <pub-id pub-id-type="pmid">11577478</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref35">
+        <label>35</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Biermann</surname>
+              <given-names>J S</given-names>
+            </name>
+            <name>
+              <surname>Golladay</surname>
+              <given-names>G J</given-names>
+            </name>
+            <name>
+              <surname>Greenfield</surname>
+              <given-names>M L</given-names>
+            </name>
+            <name>
+              <surname>Baker</surname>
+              <given-names>L H</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluation of cancer information on the Internet</article-title>
+          <source>Cancer</source>
+          <year>1999</year>
+          <month>8</month>
+          <day>1</day>
+          <volume>86</volume>
+          <issue>3</issue>
+          <fpage>381</fpage>
+          <lpage>90</lpage>
+          <pub-id pub-id-type="medline">99357313</pub-id>
+          <pub-id pub-id-type="pii">10.1002/(SICI)1097-0142(19990801)86:3&lt;381::AID-CNCR4&gt;3.0.CO;2-G</pub-id>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0142(19990801)86:3&lt;381::AID-CNCR4&gt;3.0.CO;2-G</pub-id>
+          <pub-id pub-id-type="pmid">10430244</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref36">
+        <label>36</label>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Koyani</surname>
+              <given-names>Sanjay J</given-names>
+            </name>
+            <name>
+              <surname>Bailey</surname>
+              <given-names>Robert W</given-names>
+            </name>
+            <name>
+              <surname>Nall</surname>
+              <given-names>Janice R</given-names>
+            </name>
+          </person-group>
+          <source>Research-Based Web Design &amp; Usability Guidelines</source>
+          <year>2004</year>
+          <month>8</month>
+          <publisher-loc>Bethesda, MD</publisher-loc>
+          <publisher-name>Computer Psychology</publisher-name>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://usability.gov/pdfs/guidelines_book.pdf">http://usability.gov/pdfs/guidelines_book.pdf</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref37">
+        <label>37</label>
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Koyani</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Bailey</surname>
+              <given-names>RW</given-names>
+            </name>
+          </person-group>
+          <source>Searching vs. linking on the Web: a summary of the research</source>
+          <date-in-citation>2003 Oct 31</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.usability.gov/searchlinkfinalal1.pdf">http://www.usability.gov/searchlinkfinalal1.pdf</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref38">
+        <label>38</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">National Library of Medicine</collab>
+          <source>PubMed</source>
+          <date-in-citation>2003 Oct 31</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/PubMed/">http://www.ncbi.nlm.nih.gov/PubMed/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref39">
+        <label>39</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">National Library of Medicine</collab>
+          <source>Home page</source>
+          <date-in-citation>2003 Oct 31</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/">http://www.nlm.nih.gov/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+      <ref id="ref40">
+        <label>40</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eysenbach</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Kohler</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>What is the prevalence of health related searches on the World Wide Web? Qualitative and quantitative analysis of search engine queries on the Internet</article-title>
+          <source>AMIA Annu Symp Proc</source>
+          <year>2003</year>
+          <fpage>225</fpage>
+          <lpage>229</lpage>
+          <pub-id pub-id-type="medline">14728167</pub-id>
+          <pub-id pub-id-type="pmid">14728167</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref41">
+        <label>41</label>
+        <element-citation publication-type="webpage">
+          <collab collab-type="authors">Infospace Inc</collab>
+          <source>Metacrawler</source>
+          <date-in-citation>2003 Nov 16</date-in-citation>
+          <comment>
+            <ext-link ext-link-type="uri" xlink:href="http://www.metacrawler.com/">http://www.metacrawler.com/</ext-link>
+          </comment>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <title>Abbreviations</title>
+      <def-list>
+        <def-item>
+          <term id="abb1">AIDS</term>
+          <def>
+            <p>Adult Immune Deficiency Syndrome</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb2">ACS</term>
+          <def>
+            <p>American Cancer Society</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb3">D/G/B</term>
+          <def>
+            <p>Digestive, Gastrointestinal, and Bowel</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb4">NCI</term>
+          <def>
+            <p>National Cancer Institute</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term id="abb5">US</term>
+          <def>
+            <p>United States</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+    <app-group>
+      <app id="app1">
+        <title>Data Supplement Appendix: Data Categorization, Counts, and Charts</title>
+        <p>Click here for complete Data Supplement Appendix: <fig id="d32e3115" position="anchor"><media xlink:href="jmir_v5i4e31_app1.zip" mimetype="application" mime-subtype="x-zip-compressed"/></fig>
+                </p>
+        <sec>
+          <title>Overview</title>
+          <p>
+                    <xref ref-type="app" rid="app1">Appendix 1</xref> contains the counts and exact wording for all of the categorized questions from the sample of 7,500 user questions. Each category (such as <italic>Breast or Head &amp; Neck</italic>) will have the highest level of breakdown on the first page, and subsequent breakdowns (if possible) on that page and following pages.</p>
+        </sec>
+        <sec>
+          <title>Rounding in Pie Charts</title>
+          <p>When looking at certain pie charts in <xref ref-type="app" rid="app1">Appendix 1</xref> there will be categories that are shown to be 0%. This is due to rounding of numbers in Microsoft Excel. The actual percentage can be seen in the tabular format.</p>
+        </sec>
+        <sec>
+          <title>Additional Information in Pie Charts</title>
+          <p>The charts embedded within the Appendix can be double clicked to reveal additional information.</p>
+        </sec>
+        <sec>
+          <title>Tables</title>
+          <p>Most categories are broken out into tables with 4 columns. An excerpted example is shown below before the actual data tables are displayed. It shows the breakdown of Brain and Neurological Cancer &gt; General Information &gt; Cancer Type. The columns contain the following information:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>The first column starts with the category name in a yellow cell. In the example shown this is Cancer Type. Below Cancer Type are the types of cancers found within that category. For other categories, these would be the representative terms for that category, ie, for a category such as Treatment there might be listings for Alternative, Chemotherapy, Surgery, and Radiation.</p>
+            </list-item>
+            <list-item>
+              <p>The second column of the illustrative table contains the raw count of user queries for that field. As shown in the example, Astrocytoma was queried 144 times, which is 33.72% of all queries that are found in the subcategory of Cancer Type.</p>
+            </list-item>
+            <list-item>
+              <p>The third column shows the percentages for that subcategory. These are category specific, meaning that they are percentages of only those terms within that category or subcategory. Therefore Benign cancers represent 2.81% of all Cancer Type queries and are not 2.81% of all Brain &amp; Neurological Cancer queries. While it was not the intention to include benign queries in this analysis, a small number were captured and analyzed, and therefore appear in the tables.</p>
+            </list-item>
+            <list-item>
+              <p>The fourth column header notes where the subcategory is in relation to the main category. In this case Cancer Type was created within the General Information category of the cancer site Brain &amp; Neurological Cancers. The counts are also included, to illustrate that out of the total number of Brain &amp; Neurological Cancers (N = 1852 queries), General Information queries accounted for 1323 queries, which were 72% of all Brain and Neurological Cancer queries. Within the subcategory of General Information there is another subcategory of Cancer Type which accounts for 427 queries or 32.28% of all General Information queries. Included in the fourth column underneath this relationship map are examples of actual user queries for the terms on the left. Neither spelling, nor punctuation nor capitalization has been corrected. These and all queries are taken directly from the logs, with the goal of illuminating the types of queries that the users are asking. Sometimes users type full, even excessively-long queries, and other times, they choose to use keywords.</p>
+            </list-item>
+          </list>
+          <p>It might not be possible to strictly compare categories for one Cancer Type to another because each analysis is driven by the user queries themselves. If 50% of all users asking about Breast Cancer had asked about Treatment, but no one querying Lung Cancer asked about treatment, there would be no Treatment subcategory under Lung Cancer.</p>
+          <p>Excerpted example illustrative of table contents (see explanation above, in Tables)</p>
+          <table-wrap id="tableA1" position="anchor">
+            <label>Table A1</label>
+            <caption>
+              <p>General Information</p>
+            </caption>
+            <table frame="hsides" rules="groups" border="1" cellspacing="0" cellpadding="4">
+              <tbody>
+                <tr>
+                  <td rowspan="1" colspan="1">Brain &amp; Neurological 1852 - General Information 1323 72% Cancer Type 427 32.28%</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1">how can I get information on glioblastoma</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1">Astrocytoma Brain Tumor Research Online</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1">find information on medulloblastoma</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1">BENIGN BRAIN TUMORS</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec>
+          <title>Bone Cancer</title>
+          <fig id="figureA1" position="anchor">
+            <label>Figure A1</label>
+            <caption>
+              <p>Bone Cancer</p>
+            </caption>
+            <graphic xlink:href="jmir_v5i4e31_fig2"/>
+          </fig>
+          <table-wrap id="tableA2" position="anchor">
+            <label>Table A2</label>
+            <caption>
+              <p>Bone Cancer</p>
+            </caption>
+            <table frame="hsides" rules="groups" border="1" cellspacing="0" cellpadding="4">
+              <col width="200" span="1"/>
+              <col width="400" span="1"/>
+              <thead>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">Bone Cancer Total Count 1429</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="1" colspan="1">General Information</td>
+                  <td rowspan="1" colspan="1">Where is information on bone cancer?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">What are the symptoms of bone cancer in teenagers?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1">Diagnosis &amp;Testing</td>
+                  <td rowspan="1" colspan="1">What is a bone marrow biopsy?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">What is the life expectancy of someone diagnosed with bone cancer?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">where find bone cancer treatments?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">how to deal with bone cancer pain?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">will agent orange cause bone cancer?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">bone cancer and the american cancer society</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">which u.s. president had cancer in his left jaw?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">what are good web sites to look up bone cancer?</td>
+                </tr>
+                <tr>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1">prevention of bone cancer?</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+      </app>
+    </app-group>
+  </back>
+</article>
+</pmc-articleset>

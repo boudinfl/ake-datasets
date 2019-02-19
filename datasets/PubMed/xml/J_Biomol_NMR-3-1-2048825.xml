@@ -1,0 +1,760 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Biomol NMR</journal-id>
+      <journal-title>Journal of Biomolecular Nmr</journal-title>
+      <issn pub-type="ppub">0925-2738</issn>
+      <issn pub-type="epub">1573-5001</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17922259</article-id>
+      <article-id pub-id-type="pmc">2048825</article-id>
+      <article-id pub-id-type="publisher-id">9199</article-id>
+      <article-id pub-id-type="doi">10.1007/s10858-007-9199-x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A global analysis of NMR distance constraints from the PDB</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Vranken</surname>
+            <given-names>Wim</given-names>
+          </name>
+          <address>
+            <email>wim@ebi.ac.uk</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Macromolecular Structure Database, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge, CB10 1SD UK </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>9</day>
+        <month>10</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>39</volume>
+      <issue>4</issue>
+      <fpage>303</fpage>
+      <lpage>314</lpage>
+      <history>
+        <date date-type="received">
+          <day>3</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>9</day>
+          <month>9</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Information obtained from Nuclear Magnetic Resonance (NMR) experiments is encoded as a set of constraint lists when calculating three-dimensional structures for a protein. With the amount of constraint data from the world wide Protein Data Bank (wwPDB) that is now available, it is possible to do a global, large-scale analysis using only information from the constraints, without taking the coordinate information into account. This article describes such an analysis of distance constraints from NOE data based on a set of 1834 NMR PDB entries containing 1909 protein chains. In order to best represent the quality and extent of the data that is currently deposited at the wwPDB, only the original data as deposited by the authors was used, and no attempt was made to &#x2018;clean up&#x2019; and further interpret this information. Because the constraint lists provide a single set of data, and not an ensemble of structural solutions, they are easier to analyse and provide a reduced form of structural information that is relevant for NMR analysis only. The online resource resulting from this analysis (<ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/msd/srv/docs/NMR/analysis/results/html/comparison.html">http://www.ebi.ac.uk/msd/srv/docs/NMR/analysis/results/html/comparison.html</ext-link>) makes it possible to check, for example, how often a particular contact occurs when assigning NOESY spectra, or to find out whether a particular sequence fragment is likely to be difficult to assign. In this respect it formalises information that scientists with experience in spectrum analysis are aware of but cannot necessarily quantify. The analysis described here illustrates the importance of depositing constraints (and all other possible NMR derived information) along with the structure coordinates, as this type of information can greatly assist the NMR community.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Constraint analysis</kwd>
+        <kwd>NOE assignment</kwd>
+        <kwd>NOE distances</kwd>
+        <kwd>Nuclear Magnetic Resonance (NMR)</kwd>
+        <kwd>PDB</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1">
+      <title>Introduction</title>
+      <p>The information contained in the world wide Protein Data Bank (wwPDB) (Berman et&#xA0;al. <xref ref-type="bibr" rid="CR2">2007</xref>) is growing steadily, with increasing numbers of structures being deposited from both traditional single laboratory sources and recent structural genomics efforts. The two main methods to determine these structures are X-ray crystallography and Nuclear Magnetic Resonance (NMR). NMR structures account for around 15% of all entries in the wwPDB. While inherent size restrictions limit the method to molecules of lower molecular weight, NMR has still made a significant contribution to protein folds and molecular interaction data. However, NMR structures are less straightforward to use than structures determined by X-ray because they are often represented as &#x2018;ensembles&#x2019; of structures, where the whole ensemble (and not individual structures by themselves) represents the solution of the structure determination problem based on the experimental data. The reason for this is that information derived from NMR is insufficient with respect to the structure calculation process and thus cannot lead to a single exact solution. For example, measured distance-related NOE data is ensemble and time averaged, so that the final observed NOE data for a set of multiple distinct conformations in fast exchange will be a degenerate mix of the distance information in each of those conformations. All calculated structures that conform to a set of criteria based on the fit to the experimental data (NMR derived constraints) and physical characteristics encoded in the calculation process (overall energy minimum, inter-atomic packing, &#x2026;) are therefore in principle equally valid (Spronk et&#xA0;al. <xref ref-type="bibr" rid="CR19">2003</xref>). However, there is no &#x2018;standard&#x2019; set of criteria, and different programs and researchers use different sets when selecting the &#x2018;best&#x2019; structures out of the calculated ones. The quality of the NMR structures deposited at the wwPDB therefore varies widely (Nabuurs et&#xA0;al. <xref ref-type="bibr" rid="CR13">2006</xref>). This problem is being addressed by novel structure determination methods like Inferential Structure Determination (ISD) (Rieping et&#xA0;al. <xref ref-type="bibr" rid="CR17">2005</xref>) that perform more objective structure calculations and select statistically relevant ensembles as a representative solution to the experimental data. These methods are, however, computationally expensive.</p>
+      <p>The observed NMR data is used in structure calculations to constrain inter-atomic distances, relative bond orientations and/or dihedral angles. Only just over half of the NMR entries in the wwPDB were deposited together with the constraint lists used in the structure calculation process. These constraint lists provide very valuable information, as, for example, they enable recalculation of the structures with better or different protocols, and a globally consistent comparison of the constraints to the original coordinates for validation purposes. However, a major problem in using this information is that constraint files come in many file formats, and that the atom naming and residue numbering in the coordinate and the constraint files often differs. To handle the problem of different file formats, constraint lists are now continuously converted into the NMR-STAR format at the BioMagResBank (BMRB) (Doreleijers et&#xA0;al. <xref ref-type="bibr" rid="CR3">2003</xref>; Ulrich et&#xA0;al. <xref ref-type="bibr" rid="CR20">1989</xref>). A further step, as part of the DOCR project (Doreleijers et&#xA0;al. <xref ref-type="bibr" rid="CR4">2005</xref>), addresses the atom naming and residue numbering problem by directly relating the constraint atoms to the coordinate atoms and molecular system using the FormatConverter and CCPN data model (Fogh et&#xA0;al. <xref ref-type="bibr" rid="CR6">2002</xref>; Vranken et&#xA0;al. <xref ref-type="bibr" rid="CR22">2005</xref>). This data is then checked for consistency and redundant constraints are removed using the WATTOS software as part of the FRED project (Doreleijers et&#xA0;al. <xref ref-type="bibr" rid="CR4">2005</xref>). In the original implementation the DOCR/FRED project resulted in a set of more than 500 internally consistent constraint lists, molecular system information and structure coordinates. This data led to the construction of the RECOORD (Nederveen et&#xA0;al. <xref ref-type="bibr" rid="CR14">2005</xref>) and DRESS (Nabuurs et&#xA0;al. <xref ref-type="bibr" rid="CR12">2004</xref>) databanks, where structures from the PDB were respectively recalculated and re-refined based on the cleaned up constraint lists.</p>
+      <p>These efforts, as well as validation software like AQUA (Doreleijers et&#xA0;al. <xref ref-type="bibr" rid="CR5">1998</xref>) or Procheck-NMR (Laskowski et&#xA0;al. <xref ref-type="bibr" rid="CR10">1996</xref>), are applied on a per-entry basis, where the original or recalculated coordinates are related to the original or standardised constraint lists. With the amount of constraint data that is now available it has become possible to do a global, large-scale analysis using only the information from the constraints, without taking the coordinate information into account. The constraint lists are the &#x2018;final product&#x2019; of the usually human analysis of NMR spectra, and as such they represent the experimental NMR-derived information that is relevant for the structure calculation. The constraint lists also provide a single set of data, whereas NMR structures are usually represented as ensembles that can be calculated in many different ways, which complicates their interpretation. Analysing the constraint data on a large scale can thus provide insights into the NMR data analysis process (e.g. which type of inter-atomic contact is often derived from the spectra), and the relation of the constraints to the coordinate data (e.g. does the structure calculation process add any distance information that is relevant for NMR).</p>
+      <p>The analysis described here relates only to distance constraints derived from NOE data, with a base set of 1834 NMR PDB entries containing 1909 protein chains. Only constraints between protons in protein chains were retained for analysis, and for validation purposes the base set was further divided into subsets for entries that contain intra-residue constraints and entries where all the original constraint and coordinate information was recognised and linked to each other. A coordinate data set based on the original coordinate files was also generated and used for comparison. This article explores some of the issues surrounding distance constraints and the NMR data they are derived from, and hopes to highlight the importance of depositing the constraint lists used for structure calculations along with the molecular coordinates.</p>
+    </sec>
+    <sec id="Sec2" sec-type="materials|methods">
+      <title>Materials and methods</title>
+      <p>The data was obtained from two sources: the molecular system, coordinate, secondary structure and author information from the wwPDB, and the original constraint information as NMR-STAR files from the NMR Restraints Grid at the BioMagResBank. Each file was directly parsed and combined into the CCPN data model via the FormatConverter software (Vranken et&#xA0;al. <xref ref-type="bibr" rid="CR22">2005</xref>), in a process that extends the procedure used in the original DOCR/FRED project. To handle the larger number of entries an automatic mapping procedure was developed that maps the molecule sequence as derived from the PDB file to the atom information and sequence code numbering used within the constraint lists. For some entries manual mapping between the information from the PDB file and the constraint file was required. The original 409 mappings from the RECOORD project (by Aart Nederveen) and a further mappings 124 by the author and 17 by Jurgen Doreleijers were used to correctly set the PDB-constraint file mapping for the entries in the base set. Using the automatic or manual mapping the atom information from the constraints was then connected to that for the molecule. During this process the dependence on string-based atom names for the assignment (as used in all constraint files) was also removed, since the CCPN data model is object-based. The final CCPN project, in which all the information from the original files is now highly organised, was then written out. This process was completed for 2643 PDB entries.</p>
+      <p>Three subsets of the base set were generated for comparison and validation purposes (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). Sets HIP and AHIP contain only entries with intra-residue constraints, sets AHP and AHIP only include entries where over 99% of relevant constraint information was assigned to atoms. In addition a set was generated based on the coordinates for the entries included in the HP set. Only the HP, HPC and AHIP sets are further referred to in this article, the HIP and AHP sets are available online for reference purposes.
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Overview of the available data sets used in the analysis</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Set </th><th align="left">Name</th><th align="left">Data type</th><th align="left">Details</th></tr></thead><tbody><tr><td align="left">1</td><td align="left">HP</td><td align="left">Constraints</td><td align="left">Base set</td></tr><tr><td align="left">2</td><td align="left">HIP</td><td align="left">Constraints</td><td align="left">Intra-residue</td></tr><tr><td align="left">3</td><td align="left">AHP</td><td align="left">Constraints</td><td align="left">High assignment</td></tr><tr><td align="left">4</td><td align="left">AHIP</td><td align="left">Constraints</td><td align="left">Intra-residue, high assignment</td></tr><tr><td align="left">5</td><td align="left">HPC</td><td align="left">Coordinates</td><td align="left">Original coordinate data</td></tr></tbody></table></table-wrap></p>
+      <p>A workflow based on Python (van Rossum <xref ref-type="bibr" rid="CR21">2003</xref>) scripts and dictionaries was then developed to handle the information from the CCPN project files for the 2643 entries (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). This workflow was run separately for the base set and each subset. In the first step, the original information was filtered so that only valid constraints between protons in protein chains were retained (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Entries were removed for the following reasons (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>): (1) <italic>No valid protein chains</italic>: the entry contained only chains that are sequence fragments or duplicates of other chains (only the chain with the highest number of valid constraints linked to it is retained in the data set), (2) <italic>No valid constraint lists</italic>: the originally deposited constraint lists could not be parsed or handled correctly, or (for sets HIP and AHIP), did not contain any intra-residue constraints, (3) <italic>Insufficient linking</italic>: less than 80% (sets HP, HIP) or 99.9% (sets AHP, AHIP) of the constraint information could be linked to the atom information (constraint information belonging to non-protein chains was ignored for this purpose), (4) <italic>Insufficient valid constraints</italic>: less then 20% of constraints remained for all lists after removing invalid constraints. Constraints were considered invalid if they did not have any valid items, no upper distance limit, an upper distance limit of larger than 10&#xA0;&#xC5;, or had only items between invalid atoms (non-proton, unlinked or non-protein). Note that some entries had specific distance constraint lists and/or constraints removed for these reasons, but were still included in the analysed set.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Overview of the workflow employed in the analysis. Grey boxes indicate files, white boxes Python scripts</p></caption><graphic position="anchor" xlink:href="10858_2007_9199_Fig1_HTML" id="MO1"/></fig><table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Overview, for each data set, of the number of removed and analysed entries</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left">HP</th><th align="left">HIP</th><th align="left">AHP</th><th align="left">AHIP</th></tr></thead><tbody><tr><td align="left">No valid protein chains</td><td char="." align="char">396</td><td char="." align="char">396</td><td char="." align="char">396</td><td char="." align="char">396</td></tr><tr><td align="left">No valid constraint lists</td><td char="." align="char">310</td><td char="." align="char">409</td><td char="." align="char">310</td><td char="." align="char">409</td></tr><tr><td align="left">Insufficient linking</td><td char="." align="char">48</td><td char="." align="char">37</td><td char="." align="char">677</td><td char="." align="char">635</td></tr><tr><td align="left">Insufficient valid constraints</td><td char="." align="char">55</td><td char="." align="char">55</td><td char="." align="char">55</td><td char="." align="char">55</td></tr><tr><td align="left">Total included entries</td><td char="." align="char">1834</td><td char="." align="char">1746</td><td char="." align="char">1203</td><td char="." align="char">1146</td></tr><tr><td align="left">Total included chains</td><td char="." align="char">1909</td><td char="." align="char">1817</td><td char="." align="char">1252</td><td char="." align="char">1192</td></tr></tbody></table></table-wrap></p>
+      <p>In the second step, the data from all relevant entries was collated (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). After reading in the CCPN projects, non-relevant information was removed based on the filtering information, and the data reorganised into a set of Python dictionaries that contain the overall information on the entry, residue and constraint levels. In the final analysis step these dictionaries were read in, areas and data of interest were marked, and organised HTML output was produced for browsing. A Python dictionary with highly reduced information that can be further used for validation or constraint filtering purposes was also generated.</p>
+      <p>The same 1834 entries from the HP set were used to generate the HPC set. The original coordinates were analysed using <italic>r</italic><sup>&#x2212;6</sup> distance averaging for equivalent and prochiral atom sets over all structures in the ensemble (Nilges <xref ref-type="bibr" rid="CR15">1995</xref>). Only individual distances of less then 7&#xA0;&#xC5; were retained, and final averaged distances of less than 5&#xA0;&#xC5; were considered to be equivalent to an observable constraint contact. Atoms without coordinates were ignored in the analysis.</p>
+      <p>Highlights from the analysis are described in the results section, and complete details are available from a web site (<ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/msd-srv/docs/NMR/analysis/results/html/comparison.html">http://www.ebi.ac.uk/msd-srv/docs/NMR/analysis/results/html/comparison.html</ext-link>). For all statistical operations, the R package (Bates et&#xA0;al. <xref ref-type="bibr" rid="CR1">2007</xref>) was accessed via the RPy Python module (Moreira and Warnes <xref ref-type="bibr" rid="CR11">2006</xref>). Since a contact is either observed or not observed, it was possible to use a binomial analysis to determine, for example, which secondary structure specific contacts were significantly less or more likely to be observed. Binomial analysis was used throughout with a confidence level of 0.99, meaning that only 1 out of every 100 determined outliers is a false positive. The correlations between the coordinate and the constraint data within a data set and correlations between data sets were plotted via RPy, with linear correlation coefficients determined by both the Spearman and Pearson methods. The Spearman method (Spearman <xref ref-type="bibr" rid="CR18">1904</xref>) is a non-parametric measure of correlation, which does not make assumptions about the frequency distribution of the variables, and does not require a linear relationship between the variables. The Pearson method (Pearson <xref ref-type="bibr" rid="CR16">1896</xref>) on the other hand assesses if the relationship between the variables is linear.</p>
+      <p>In the analysis, a residue is marked as &#x2018;assigned&#x2019; when at least one proton belonging to it is linked to a constraint. The total number of times a particular inter-atomic contact is observed can be a fraction, as for ambiguous constraints each constraint item contributes a fraction of 1 to the total:</p>
+      <p><disp-formula id="Equa"><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ f_{{{\text{contribution}}}} = \frac{1} {{n_{{{\text{items}}}} }}\quad n_{{{\text{actual}}}} = {\sum\limits_{i = 0}^{n_{{{\text{constraints}}}} } {f_{{{\text{contribution,i}}}} } } $$\end{document}</tex-math></disp-formula> The total number of relevant distances for a particular inter-atomic contact (<italic>n</italic><sub>dist</sub>) is always an integer. The occurrence for a particular inter-atomic contact is calculated as: <disp-formula id="Equb"><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ f_{{{\text{occurrence}}}} = \frac{{n_{{{\text{actual}}}} }} {{n_{{{\text{possible}}}} }} $$\end{document}</tex-math></disp-formula>where <italic>n</italic><sub>actual</sub> is the number of times the contact occurs (with ambiguity taken into account), and <italic>n</italic><sub>possible</sub> the total number of times this contact could occur between the relevant residues, either for all residues or only between &#x2018;assigned&#x2019; residues. The occurrence is given in percent or as a fraction. The &#x2018;ambiguity&#x2019; of an inter-atomic contact is defined as: <disp-formula id="Equc"><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{ambiguity}} = 1 - \frac{{n_{{{\text{actual}}}} }} {{n_{{{\text{dist}}}} }} $$\end{document}</tex-math></disp-formula></p>
+      <p>If the ambiguity is 0, this means that all contributing contacts are unambiguously assigned. The more highly ambiguous the contributing contacts are, the closer this number will be to 1, which also means it is less dependable. Within secondary structure combinations, the same definitions are used, except that <italic>n</italic><sub>possible</sub> and <italic>n</italic><sub>actual</sub> are now determined within that secondary structure combination as <italic>n</italic><sub>possible,ss</sub> and <italic>n</italic><sub>actual,ss</sub>. The uniqueness of a contact for a secondary structure combination, which indicates how unique the contact is within that combination, is defined as: <disp-formula id="Equd"><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\text{uniqueness}} = \frac{{n_{{{\text{actual,ss}}}} }} {{n_{{{\text{actual}}}} }} $$\end{document}</tex-math></disp-formula></p>
+      <p>For prochiral and possible non-equivalent atom sets, the contacts are divided into the individual atom names (e.g. H&#x3B2;2 and H&#x3B2;3, or H&#x3B4;1 and H&#x3B4;2 for Phe) if they occur by themselves in a constraint. If both the atom names occur in different items within the same constraint to the same other atom, then they are grouped (e.g. H&#x3B2;*, or H&#x3B4;* for Phe). If they occur as a group in one constraint item they are used as is. In order to obtain total statistics for these contacts, they were also combined (e.g. (H&#x3B2;2&#xA0;+&#xA0;H&#x3B2;3), or (H&#x3B4;1&#xA0;+&#xA0;H&#x3B4;2) for Phe). To get the combined occurrence, the <italic>n</italic><sub>actual</sub> for the group is added to the individual contribution with the highest <italic>n</italic><sub>actual</sub> to obtain the <italic>n</italic><sub>actual</sub> used to calculate the occurrence for the combined contact. The combined distance information is obtained from all contributions, and the ambiguity is then calculated from the total <italic>n</italic><sub>actual</sub> of all contributions.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>Results</title>
+      <sec id="Sec4">
+        <title>Information from analysis</title>
+        <p>The analysis of the data for each set is divided into separate categories (visible on the left-hand side menu in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>): (1) <italic>Contact analysis</italic>: Arranges inter-atomic distances by residue&#x2013;residue combination, secondary structure of those residues, and contact type (intra-residue (<italic>i&#x2013;i</italic>), sequential (<italic>i&#x2013;i&#xA0;+&#xA0;1</italic>), medium-range defined here as up to 6 residues separation (<italic>i&#x2013;i&#xA0;+&#xA0;n</italic>), and long range (<italic>i&#x2013;i&#xA0;+&#xA0;6&lt;</italic>)). (2) <italic>Protein secondary structure analysis</italic>: Groups inter-atomic distances by secondary structure combinations. (3) <italic>Residue atom analysis</italic>: Shows assignment percentages for the atoms in each amino acid. (4) <italic>Unassigned fragments breakdown</italic>: Lists unassigned sequence fragments. (5) <italic>Fragment analysis by residue</italic>: Analyses tripeptide fragments based on the assignment status of the central residue.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Example web page for Ala&#xA0;&#x2192;&#xA0;Ala <italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;2 contact information from <ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/msd-srv/docs/NMR/analysis/results/html/comparison.html">http://www.ebi.ac.uk/msd-srv/docs/NMR/analysis/results/html/comparison.html</ext-link>. The different data sets, comparisons between them, and analysis categories can be accessed via the left hand side menu. In this contact information page, overall statistics for the individual Ala residues involved in this contact are shown in the &#x2018;Residue 1&#x2019; and &#x2018;Residue 2&#x2019; tables at the top, statistics for the combined Ala&#x2013;Ala residues in the &#x2018;Residue combination&#x2019; table. The information on an atom level is listed in the &#x2018;Breakdown per contact&#x2019; table. Outliers per secondary structure combination based on a binomial analysis are highlighted in red (higher than expected) and blue (lower than expected). This colour coding is used throughout the web pages for other types of analyses</p></caption><graphic position="anchor" xlink:href="10858_2007_9199_Fig2_HTML" id="MO2"/></fig></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Validation of data sets</title>
+        <p>The relevance of the base set (HP) was validated by comparison with the most restricted AHIP set. This is necessary because the HP set contains entries without intra-residue constraints and entries where less constraint information is linked to atoms. The correlation between the occurrences of contacts between both sets is very high (0.97) (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>), and in a breakdown per contact type no correlation is less than 0.91 (results on web pages). A further detailed analysis shows that out of 43,984 compared contacts only 5 differ significantly at a confidence level of 0.999. Of these, 3 are His&#xA0;&#x2192;&#xA0;His contacts where the differences are most likely introduced by changes in the number of His residues that are assigned in the data sets (from 71.66% in HP to 68.47% in AHIP). The other 2 are long-range contacts involving side chain protons between Leu&#xA0;&#x2192;&#xA0;Phe and Phe&#xA0;&#x2192;&#xA0;Val, which are uncommon, and these differences can be attributed to accidental variations in the number of entries that have these contacts and are included in the data set. Overall, this data shows that including the additional 688 entries does not introduce major changes in the occurrence levels. The HP set was therefore chosen as the reference set, as estimates of, for example, significant differences between contacts in secondary structure elements tend to become more reliable as more data is included. Information on correlations between all data sets is available from the web pages (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>, the &#x2018;Comparison&#x2019; link in the left-hand side menu).
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Correlation between the <italic>f</italic><sub>occurrence</sub> for the HP and AHIP data sets (correlation Spearman 0.971, Pearson 0.996)</p></caption><graphic position="anchor" xlink:href="10858_2007_9199_Fig3_HTML" id="MO3"/></fig></p>
+        <p>A further way to validate the constraint information is that it should reproduce the typical contacts that are observed in secondary structure elements. The secondary structure definitions as determined by DSSP (Kabsch and Sander <xref ref-type="bibr" rid="CR9">1983</xref>) were taken from the PDB file header for each entry. Because of the size of the data that is generated by the analysis, only the Ala residue is used here as an example. The complete information can be accessed via the web pages (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). The numbers that are relevant in order to determine whether a contact is significant for a particular secondary structure element are the occurrence within that particular secondary structure element (which has to be significantly higher than expected from the overall occurrence), the ambiguity of the contact (if it is high it comes, by definition, from highly ambiguous constraints and is therefore unreliable), and the uniqueness of the contact (which indicates how often the contact is seen within that secondary structure element compared to the total number of times it is observed).</p>
+        <p>For intra-residue contacts there are not many significant differences in the observed occurrence within different secondary structure elements, although overall fewer contacts are observed when secondary structure is absent (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). This is likely due to higher signal overlap for atoms in &#x2018;random coil&#x2019; fragments, which complicates assignment. The information from the coordinate-derived HPC set is provided throughout for comparison: there are, as expected when using a distance cutoff of 5&#xA0;&#xC5;, no differences for this HPC set between the occurrence for different secondary structure elements, and only minor differences in the average and mean distance are observed (data available on web pages).
+<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p><italic>f</italic><sub>occurrence</sub> for selected backbone Ala&#x2013;Ala contacts</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Type</th><th align="left">Atom 1</th><th align="left">Atom 2</th><th align="left">&#x3B1;-helix</th><th align="left">&#x3B2;-sheet</th><th align="left">No secondary structure</th></tr></thead><tbody><tr><td align="left" rowspan="3"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic></td><td align="left">H</td><td align="left">H&#x3B1;</td><td align="left"><bold>0.50</bold>/1.00</td><td align="left">0.51/1.00</td><td align="left"><italic>0.43</italic>/1.00</td></tr><tr><td align="left">H</td><td align="left">H&#x3B2;*</td><td align="left"><bold>0.73</bold>/1.00</td><td align="left"><bold>0.68</bold>/1.00</td><td align="left"><italic>0.57</italic>/1.00</td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H&#x3B2;*</td><td align="left">0.32/1.00</td><td align="left">0.33/1.00</td><td align="left"><italic>0.29</italic>/1.00</td></tr><tr><td align="left" rowspan="4"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;1</td><td align="left">H</td><td align="left">H</td><td align="left"><bold>0.84</bold>/1.00</td><td align="left"><italic>0.50</italic>/<italic>1.00</italic></td><td align="left"><italic>0.57</italic>/1.00</td></tr><tr><td align="left">H</td><td align="left">H&#x3B2;*</td><td align="left"><bold>0.22</bold>/<bold>0.99</bold></td><td align="left"><italic>0.07/0.69</italic></td><td align="left"><italic>0.10/</italic>0.83</td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H</td><td align="left"><italic>0.52</italic>/1.00</td><td align="left"><bold>0.90</bold>/1.00</td><td align="left"><bold>0.67</bold>/1.00</td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H&#x3B2;*</td><td align="left"><italic>0.03/0.42</italic></td><td align="left"><bold>0.30</bold>/<bold>1.00</bold></td><td align="left">0.11/<bold>0.93</bold></td></tr><tr><td align="left" rowspan="6"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i&#xA0;</italic>+&#xA0;2</td><td align="left">H</td><td align="left">H</td><td align="left"><bold>0.47</bold>/<bold>0.99</bold></td><td align="left"><italic>0.00/0.00</italic></td><td align="left"><italic>0.16/0.45</italic></td></tr><tr><td align="left">H</td><td align="left">H&#x3B2;*</td><td align="left"><bold>0.09</bold>/<bold>0.79</bold></td><td align="left">0.00/<italic>0.00</italic></td><td align="left">0.03/<italic>0.25</italic></td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H</td><td align="left"><bold>0.28</bold>/<bold>0.97</bold></td><td align="left"><italic>0.04/0.04</italic></td><td align="left">0.17/<italic>0.60</italic></td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H&#x3B2;*</td><td align="left">0.02/<bold>0.63</bold></td><td align="left">0.00/<italic>0.00</italic></td><td align="left">0.02/<italic>0.27</italic></td></tr><tr><td align="left">H&#x3B2;*</td><td align="left">H</td><td align="left">0.22/<bold>0.98</bold></td><td align="left">0.09/<italic>0.45</italic></td><td align="left">0.17/0.77</td></tr><tr><td align="left">H&#x3B2;*</td><td align="left">H&#x3B2;*</td><td align="left"><italic>0.02/0.12</italic></td><td align="left">0.05/<bold>0.70</bold></td><td align="left">0.01/<bold>0.51</bold></td></tr><tr><td align="left" rowspan="6"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;3</td><td align="left">H</td><td align="left">H</td><td align="left"><bold>0.09</bold>/<bold>0.86</bold></td><td align="left">0.04/<italic>0.12</italic></td><td align="left">0.04/<italic>0.16</italic></td></tr><tr><td align="left">H</td><td align="left">H&#x3B2;*</td><td align="left"><bold>0.12</bold>/<bold>0.84</bold></td><td align="left">0.04/<italic>0.12</italic></td><td align="left">0.04/<italic>0.22</italic></td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H</td><td align="left"><bold>0.66</bold>/<bold>0.99</bold></td><td align="left"><italic>0.00/0.04</italic></td><td align="left"><italic>0.14/0.28</italic></td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H&#x3B2;*</td><td align="left"><bold>0.58</bold>/<bold>0.99</bold></td><td align="left"><italic>0.00/0.04</italic></td><td align="left"><italic>0.14/0.33</italic></td></tr><tr><td align="left">H&#x3B2;*</td><td align="left">H</td><td align="left"><bold>0.14</bold>/<bold>0.91</bold></td><td align="left">0.04/<italic>0.16</italic></td><td align="left"><italic>0.06/0.34</italic></td></tr><tr><td align="left">H&#x3B2;*</td><td align="left">H&#x3B2;*</td><td align="left">0.11/<bold>0.97</bold></td><td align="left">0.04/<italic>0.12</italic></td><td align="left">0.07/<italic>0.46</italic></td></tr><tr><td align="left" rowspan="6"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;4 </td><td align="left">H</td><td align="left">H</td><td align="left">0.02/0.01</td><td align="left">0.00/0.00</td><td align="left">0.02/0.03</td></tr><tr><td align="left">H</td><td align="left">H&#x3B2;*</td><td align="left">0.01/<italic>0.01</italic></td><td align="left">0.05/0.09</td><td align="left">0.02/0.07</td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H</td><td align="left"><bold>0.32</bold>/<bold>0.94</bold></td><td align="left"><italic>0.00/0.00</italic></td><td align="left"><italic>0.07/0.16</italic></td></tr><tr><td align="left">H&#x3B1;</td><td align="left">H&#x3B2;*</td><td align="left">0.02/<bold>0.79</bold></td><td align="left">0.00/<italic>0.00</italic></td><td align="left">0.02/<italic>0.23</italic></td></tr><tr><td align="left">H&#x3B2;*</td><td align="left">H</td><td align="left"><bold>0.09</bold>/<bold>0.85</bold></td><td align="left">0.00/<italic>0.09</italic></td><td align="left">0.02/<italic>0.22</italic></td></tr><tr><td align="left">H&#x3B2;*</td><td align="left">H&#x3B2;*</td><td align="left">0.03/<bold>0.93</bold></td><td align="left">0.00/<italic>0.09</italic></td><td align="left">0.01/<italic>0.37</italic></td></tr></tbody></table><table-wrap-foot><p>In the secondary structure columns, the first value is from the HP set, the second from the HPC set. A bold value indicates a contact that occurs significantly more than average, a italic value significantly less</p></table-wrap-foot></table-wrap></p>
+        <p>For sequential Ala&#x2013;Ala contacts, the H&#x2013;H contact is observed significantly more in &#x3B1;-helices than in &#x3B2;-sheets (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>), and is also highly unique (0.65). This situation is, as expected, reversed for the H&#x3B1;&#x2013;H contact, which is observed significantly less in &#x3B1;-helices and more in &#x3B2;-sheets. Overall, however, this contact is more uniquely observed in &#x3B1;-helices (0.49 compared to 0.08 for &#x3B2;-sheets), which is due to the prevalence of Ala&#x2013;Ala fragments in &#x3B1;-helices (56.2% compared to 5.35%). Interestingly, however, an H&#x2013;H&#x3B2;* contact is also observed significantly more in &#x3B1;-helices than in &#x3B2;-sheets or when no secondary structure is present, and has a uniqueness of 0.71, so within a sequential Ala&#x2013;Ala fragment this type of contact is highly predictive of &#x3B1;-helical structure. The sequential H&#x3B1;&#x2013;H&#x3B2;* contact is, on the other hand, highly predictive of &#x3B2;-sheet with a uniqueness of 0.20, although it is on average mostly observed when no secondary structure is present (0.38). This illustrates that the uniqueness of a contact is strongly related to the prevalence of a particular sequence combination in a particular secondary structure element, and is not necessarily indicative of the kind of secondary structure element a particular contact usually occurs in. The information from the constraints and the coordinates show clear differences, as illustrated by comparison with some of the contacts described earlier. The H&#x2013;H&#x3B2;* contact occurs quite often in &#x3B2;-sheets based on the coordinate data, with a median distance that is slightly higher than in &#x3B1;-helices (4.63&#xA0;&#xC5; compared to 4.31&#xA0;&#xC5;). The H&#x3B1;&#x2013;H&#x3B2;* contact, which would generally be difficult to identify due to overlap in the aliphatic region of a NOESY spectrum, is always present based on the coordinate data, but is only seen in 0.30 cases based on the constraints. These differences illustrate that the NOE constraint data not only incorporates distance information, but also encodes NMR-specific information such as the difficulty with which a particular contact can be assigned.</p>
+        <p>For <italic>i&#x2013;i</italic>&#xA0;+&#xA0;2 and <italic>i&#x2013;i</italic>&#xA0;+&#xA0;3 contacts, as expected, the typical H&#x2013;H, H&#x3B1;&#x2013;H, H&#x3B1;&#x2013;H&#x3B2;* and H&#x3B2;*&#x2013;H contacts are highly prevalent for &#x3B1;-helices (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>), with generally high uniqueness and low ambiguity. An H&#x2013;H&#x3B2;* contact is also more often observed than average (respectively in 0.09 and 0.12 cases), while H&#x3B2;*&#x2013;H&#x3B2;* contacts are very rarely seen for <italic>i&#x2013;i</italic>&#xA0;+&#xA0;2 contacts in an &#x3B1;-helix. Note that based on the coordinate data the <italic>i&#x2013;i</italic>&#xA0;+&#xA0;2 H&#x3B2;*&#x2013;H&#x3B2;* contact is highly relevant for &#x3B2;-sheets (0.70), but it is in practice rarely observed (0.05), probably because it falls in a densely populated region of a typical NOESY spectrum. For 3<sub>10</sub> helices the percentages are often similar to the &#x3B1;-helical ones, but there are often not enough data to determine whether a difference is significant (data on web pages). Also of interest is the <italic>i&#x2013;i</italic>&#xA0;+&#xA0;3 contact between H&#x3B2;*&#x2013;H, which occurs in 0.04 cases for &#x3B2;-sheets and 0.06 cases where secondary structure is absent. The binomial analysis indicates that the 0.06 fraction is observed significantly less, while it does not mark the 0.04 fraction. This is because this type of analysis is dependent on sample size (only 1 sample for the 0.04 fraction, 12 for the 0.06 fraction).</p>
+        <p>For the <italic>i&#x2013;i</italic>&#xA0;+&#xA0;4 contacts, H&#x3B1;&#x2013;H and H&#x3B2;*&#x2013;H connections are again highly prevalent for &#x3B1;-helices, while H&#x3B1;&#x2013;H&#x3B2;* and H&#x3B2;*&#x2013;H&#x3B2;* contacts are present in the coordinate set but are seldom observed in practice (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). All contacts with a separation of 5 residues or higher are very rarely observed in &#x3B1;-helices, but become highly prevalent for &#x3B2;-sheets (data not shown). The only exception to this are long range H&#x3B1;&#x2013;H&#x3B2;* and H&#x3B2;*&#x2013;H&#x3B2;* contacts, which are seen in significantly higher percentages between &#x3B1;-helices as compared to the average.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Contact data highlights</title>
+        <p>Traditionally, and as described above, identifying secondary structure contacts is based on the commonly observed contacts between protons from the backbone and the &#x3B2; position (W&#xFC;thrich <xref ref-type="bibr" rid="CR24">1986</xref>). However, with experience in assigning NOE peaks comes the knowledge that other contacts are also often observed (e.g. <italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;2 contacts between side chain protons in a &#x3B2;-sheet). In this analysis, such contacts are readily observed (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>). For example, the sequential Trp H&#x3B5;3&#x2013;Gly H contact is quite common based on the coordinate data, but is in practice particularly observed in a &#x3B2;-sheet. The sequential Trp H&#x3B5;3&#x2013;Phe H&#x3B1; contact is seemingly more often observed in an &#x3B1;-helix, but the differences are not significant. This is a case that could be clarified if more relevant data were available. The Thr H&#x3B3;2*&#x2013;Tyr H&#x3B5;* <italic>i&#x2013;i</italic>&#xA0;+&#xA0;2 contact is clearly observed in mostly &#x3B2;-sheet. Interesting in this case is that according to the constraint data it can occur in an &#x3B1;-helix, while this is not the case based on the coordinate data, even though the ambiguity of the contact is 0.00. This is possible because this data point is based on one contact with an upper distance limit of 6&#xA0;&#xC5;, whereas the cutoff used for coordinates is 5&#xA0;&#xC5;. Generally speaking this type of situation can occur for highly ambiguous constraints, where other constraint items satisfy the upper distance limit. An H&#x3B1;&#x2013;H&#x3B4;1* <italic>i&#x2013;i</italic>&#xA0;+&#xA0;3 contact between Ala and Ile is observed almost exclusively in an &#x3B1;-helix (and never in a &#x3B2;-sheet), and is very unique (0.78). To be able to discern whether this contact is very common from the H&#x3B1; of any amino acid to the H&#x3B4;1* of an Ile, the data was joined as Xxx residues to produce generic information to and from each amino acid (data on web pages). The specific information for the <italic>i&#x2013;i</italic>&#xA0;+&#xA0;3 H&#x3B1;&#x2013;H&#x3B4;1* contact from all residues to Ile is shown in Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref> and shows that this contact is common in &#x3B1;-helices. Finally, some other interesting <italic>i&#x2013;i</italic>&#xA0;+&#xA0;4 side chain contacts that often occur in helices are listed in Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>.
+<table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p><italic>f</italic><sub>occurrence</sub> for selected secondary structure related contacts</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Type</th><th align="left">Atom 1</th><th align="left">Atom 2</th><th align="left">&#x3B1;-helix</th><th align="left">&#x3B2;-sheet</th><th align="left">No secondary structure</th></tr></thead><tbody><tr><td align="left" rowspan="2"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;1</td><td align="left">Trp H&#x3B5;3</td><td align="left">Gly H</td><td align="left">0.05/0.45</td><td align="left"><bold>0.56</bold>/<bold>0.88</bold></td><td align="left">0.24/0.63</td></tr><tr><td align="left">Trp H&#x3B5;3</td><td align="left">Phe H&#x3B1;</td><td align="left">0.55/0.68</td><td align="left">0.11/0.16</td><td align="left">0.13/0.47</td></tr><tr><td align="left"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;2</td><td align="left">Thr H&#x3B3;2*</td><td align="left">Tyr H&#x3B5;*</td><td align="left"><italic>0.02</italic>/<italic>0.00</italic></td><td align="left">0.46/<bold>0.80</bold></td><td align="left"><italic>0.12</italic>/<italic>0.41</italic></td></tr><tr><td align="left" rowspan="2"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;3</td><td align="left">Ala H&#x3B1;</td><td align="left">Ile H&#x3B4;1</td><td align="left"><bold>0.66</bold>/<bold>0.93</bold></td><td align="left"><italic>0.00</italic>/<italic>0.00</italic></td><td align="left"><italic>0.11</italic>/<italic>0.21</italic></td></tr><tr><td align="left">Xxx H&#x3B1;</td><td align="left">Ile H&#x3B4;1</td><td align="left"><bold>0.57</bold>/<bold>0.92</bold></td><td align="left"><italic>0.00</italic>/<italic>0.02</italic></td><td align="left"><italic>0.09</italic>/<italic>0.22</italic></td></tr><tr><td align="left" rowspan="2"><italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;4</td><td align="left">Trp H&#x3B6;2</td><td align="left">Thr H&#x3B3;2</td><td align="left"><bold>0.52</bold>/<bold>0.56</bold></td><td align="left">0.00/0.00</td><td align="left">0.00/<italic>0.00</italic></td></tr><tr><td align="left">Tyr H&#x3B5;1&#xA0;+&#xA0;H&#x3B5;2</td><td align="left">Val H&#x3B3;2</td><td align="left"><bold>0.47</bold>/<bold>0.74</bold></td><td align="left"><italic>0.00/0.05</italic></td><td align="left"><italic>0.06</italic>/0.21</td></tr></tbody></table><table-wrap-foot><p>In the secondary structure columns, the first value is from the HP set, the second from the HPC set. A bold value indicates a contact that occurs significantly more than average, an italic value significantly less</p></table-wrap-foot></table-wrap></p>
+        <p>It is not possible to describe all information in detail in this article, and the web pages serve as the reference resource for any investigations. However, to provide a better overview of the overall trends in secondary structure elements, all backbone contacts were grouped by atom type (H, H&#x3B1;, H&#x3B2;) and secondary structure combinations (Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>, full data from web site). For intra-residue contacts, more contacts involving H&#x3B2; protons are defined in &#x3B2; sheets. Sequential contacts in &#x3B1; helices originating from the H and H&#x3B2; protons are observed significantly more often, whereas ones originating from the H&#x3B1; proton are less common. This situation is reversed in &#x3B2; sheets (except for H&#x3B2;&#x2013;H contacts). There are, only for sequential contacts, some discrepancies between the data from the HP and HPC sets, with, for example, the rate at which sequential H&#x2013;H&#x3B1; contacts are observed being reversed in the HPC set as compared to the HP set. The reasons for this are not immediately clear, but are likely related to overlap. Most <italic>i&#x2013;i</italic>&#xA0;+&#xA0;2 contacts are more common in &#x3B1; helices, except for ones to the H&#x3B1; proton and between H&#x3B2; protons. The latter contact is more often observed in &#x3B2; sheets. As expected most <italic>i&#x2013;i</italic>&#xA0;+&#xA0;3 contacts are commonly observed in &#x3B1; helices, except for H&#x3B2;&#x2013;H&#x3B1; and H&#x2013;H&#x3B1;. The latter is again more frequently seen for &#x3B2; sheets, but in this case this is expected to be between different strands in the hairpin area. The trends are not as clear for <italic>i&#x2013;i</italic>&#xA0;+&#xA0;4 contacts, where H&#x3B1;&#x2013;H, H&#x3B1;&#x2013;H&#x3B2; and H&#x3B2;&#x2013;H contacts are more frequent in &#x3B1; helices, and all other ones more frequent in &#x3B2; sheets. This is again likely related to hairpin contacts. All contacts from <italic>i</italic>&#xA0;&#x2192;&#xA0;<italic>i</italic>&#xA0;+&#xA0;5 and more are very infrequent for &#x3B1; helices but relatively very frequent for &#x3B2; sheets.
+<table-wrap id="Tab5"><label>Table&#xA0;5</label><caption><p>Brief overview of general trends in joint secondary structure information for all contacts</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2">Type</th><th align="left" rowspan="2">SS</th><th align="left" colspan="3">H (i)</th><th align="left" colspan="3">H&#x3B1; (i)</th><th align="left" colspan="3">H&#x3B2; (i)</th></tr><tr><th align="left">H</th><th align="left">H&#x3B1;</th><th align="left">H&#x3B2;</th><th align="left">H</th><th align="left">H&#x3B1;</th><th align="left">H&#x3B2;</th><th align="left">H</th><th align="left">H&#x3B1;</th><th align="left">H&#x3B2;</th></tr></thead><tbody><tr><td align="left" rowspan="2"><italic>i&#x2013;i</italic></td><td align="left">Helix</td><td align="left"/><td align="left">. . </td><td align="left">+ .</td><td align="left">. .</td><td align="left"><bold>&#x2212;</bold> .</td><td align="left"><bold>&#x2212;</bold> .</td><td align="left">+ .</td><td align="left"><bold>&#x2212;</bold> .</td><td align="left"><bold>&#x2212;</bold> .</td></tr><tr><td align="left">Sheet</td><td align="left"/><td align="left">. .</td><td align="left">+ .</td><td align="left">. .</td><td align="left">. .</td><td align="left">+ .</td><td align="left">+ .</td><td align="left">+ .</td><td align="left">+ .</td></tr><tr><td align="left" rowspan="2"><italic>i&#x2013;i</italic>&#xA0;+&#xA0;1</td><td align="left">Helix</td><td align="left">+ .</td><td align="left">+ <bold>&#x2212;</bold></td><td align="left">+ +</td><td align="left"><bold>&#x2212;</bold> .</td><td align="left"><bold>&#x2212;</bold> +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ .</td><td align="left">+ +</td><td align="left">+ +</td></tr><tr><td align="left">Sheet</td><td align="left"><bold>&#x2212;</bold> .</td><td align="left"><bold>&#x2212;</bold> +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ .</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ .</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td></tr><tr><td align="left" rowspan="2"><italic>i&#x2013;i</italic>&#xA0;+&#xA0;2</td><td align="left">Helix</td><td align="left">+ +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ +</td><td align="left">+ +</td><td align="left">- -</td><td align="left">. +</td><td align="left">+ +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td></tr><tr><td align="left">Sheet</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ .</td><td align="left">+ +</td></tr><tr><td align="left" rowspan="2"><italic>i&#x2013;i</italic>&#xA0;+&#xA0;3</td><td align="left">Helix</td><td align="left">+ +</td><td align="left">. <bold>&#x2212;</bold></td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ +</td></tr><tr><td align="left">Sheet</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td></tr><tr><td align="left" rowspan="2"><italic>i&#x2013;i</italic>&#xA0;+&#xA0;4</td><td align="left">Helix</td><td align="left">. .</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">++</td><td align="left">. .</td><td align="left">+ +</td><td align="left">+ +</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">. +</td></tr><tr><td align="left">Sheet</td><td align="left">++</td><td align="left">+ +</td><td align="left">+ .</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left">+ <bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left">. <bold>&#x2212;</bold></td><td align="left">+ .</td><td align="left">+ <bold>&#x2212;</bold></td></tr><tr><td align="left" rowspan="2"><italic>i&#x2013;i</italic>&#xA0;+&#xA0;4&lt;</td><td align="left">Helix</td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td><td align="left"><bold>&#x2212;</bold><bold>&#x2212;</bold></td></tr><tr><td align="left">Sheet</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td><td align="left">+ +</td></tr></tbody></table><table-wrap-foot><p>+ Indicates that signals observed more than average, &#x2212; less than average, . signifies that there is no trend. The first character in each cell contains the constraint HP set information, the second the coordinate HPC set</p></table-wrap-foot></table-wrap></p>
+        <p>An analysis of the percentage of atoms that were assigned within each residue type (<italic>Residue atom analysis</italic> on the website) shows that generally atoms are significantly higher assigned in &#x3B1;-helices and &#x3B2;-sheets, and lower when no secondary structure is present. This finding is not surprising as the secondary structure elements are defined by constraints, and the atoms have to be assigned to obtain those. Another general trend is that prochiral methylenes are within &#x3B1;-helices significantly more degenerated, i.e. the HB2 and HB3 atoms exists as a QB pseudoatom or an HB* type atom set. This type of analysis can be significantly improved by cleaning up the stereospecific assignment status based on the coordinates.</p>
+        <p>The unique sequence fragments for which no assignments were found are also listed on the website (<italic>Unassigned fragments breakdown</italic>). An example from this data is that often no constraints are found for His tags. The LEHHHHH fragment, for example, was not assigned in 13 entries. A general overview of the percentage of residues that are assigned confirms that His residues, for example, are assigned in only 71.66% of cases, while Trp is assigned in 97.87% of cases (<italic>Fragment analysis by residue</italic>).</p>
+        <p>To examine this in more detail, all tripeptide fragments where a particular amino acid is the central residue are listed (for the N- and C-terminus these are dipeptide fragments). Listed for each fragment are (1) the total number of times the tripeptide fragment occurs in the data set, (2) the percentage of times it is unassigned compared to the total number of times the amino acid occurs, (3) the number of times the amino acid is not assigned, (4) the number of times the tripeptide fragment occurs overall, and (5) the assignment percentages per secondary structure element. The entries in which the fragments are unassigned are also listed. Continuing with His as an example, it is not assigned when part of the EHH fragment in 69% of cases, and when part of a C-terminal HH fragment it is not assigned in 96% of all times the fragment occurs. To get a better overall view of the sequence fragments that are difficult to assign, they were grouped by joining, respectively, the <italic>i</italic>&#xA0;&#x2212;&#xA0;1 and i&#xA0;+&#xA0;1 residues. The results for His and some selected other fragments are shown in Table&#xA0;<xref rid="Tab6" ref-type="table">6</xref>. A Ser residue preceded or followed by a Gly, for example, is often unassigned. This type of information could be useful for predicting which areas of a protein sequence are difficult to assign from an NMR perspective.
+<table-wrap id="Tab6"><label>Table&#xA0;6</label><caption><p>Selected sequence fragments where the central residue is often unassigned. The unassigned percentages are relative to the total number of times the fragment occurs</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Fragment</th><th align="left">Unassigned (%)</th><th align="left">Total</th></tr></thead><tbody><tr><td align="left">Xxx&#x2013;His&#x2013;His</td><td char="." align="char">62</td><td char="." align="char">756</td></tr><tr><td align="left">Xxx&#x2013;His&#x2013;Met</td><td char="." align="char">5</td><td char="." align="char">83</td></tr><tr><td align="left">Gly&#x2013;His&#x2013;Xxx</td><td char="." align="char">2</td><td char="." align="char">34</td></tr><tr><td align="left">His&#x2013;His&#x2013;Xxx</td><td char="." align="char">63</td><td char="." align="char">740</td></tr><tr><td align="left">Ser&#x2013;His&#x2013;Xxx</td><td char="." align="char">8</td><td char="." align="char">114</td></tr><tr><td align="left">Xxx&#x2013;Ser&#x2013;Gly</td><td char="." align="char">18</td><td char="." align="char">365</td></tr><tr><td align="left">Gly&#x2013;Ser&#x2013;Xxx</td><td char="." align="char">19</td><td char="." align="char">479</td></tr><tr><td align="left">Xxx&#x2013;Pro&#x2013;Ser</td><td char="." align="char">8</td><td char="." align="char">157</td></tr></tbody></table></table-wrap></p>
+      </sec>
+    </sec>
+    <sec id="Sec7">
+      <title>Discussion</title>
+      <p>In this analysis only the original data as deposited by the authors was used, and no attempt was made to &#x2018;clean up&#x2019; and further interpret this information, except for linking the constraint with the coordinate data and removing identical sequences from the data set pool (where only the entry with the highest number of constraints linked to atoms was kept). This approach is intentional, as it best represents the quality and extent of the data that is currently deposited at the PDB. Only the distance constraint information was included in the analysis, and the information from dihedral, H-bond and RDC constraints was ignored. Even though these constraints contain important structural information, they were, as experimental data, recorded independently from the NOE data. They are used in the structure determination process, however, and it was not investigated whether their presence influences the quality of the final distance constraint lists. There are several other issues that can still be addressed, and although these are likely to improve some of the aspects of this type of study, it is also important to start with the original information so that a comparison point is available.</p>
+      <p>The first issue is that stereospecific assignments can be swapped or deassigned based on the original coordinates, similar to the approach in the RECOORD project. This could in principle reveal preferences related to stereospecifically assigned atoms in secondary structure elements. The second issue concerns the distances that were provided with the constraints. These are often &#x2018;binned&#x2019; in weak/medium/strong classes with fixed distance cutoffs, so that the resulting distance distributions often show spikes at these distances. In Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>, for example, it is clear that spikes occur at 3.0, 3.5 and 5.0&#xA0;&#xC5;. Recalibrating the distances based on the deposited coordinates should improve the quality of the resulting information, and reveal relationships between distance and occurrence. The third issue concerns the sequences that are included: the current data sets include protein sequences with a high homology. This is clearly not an ideal situation, but there is currently not enough data available for a cleaner analysis. It is therefore important to check whether a particular contact appears in a large amount of entries, or the observed occurrence might be due to systematic error from homologous proteins produced by the same laboratory. The fourth problem is the identification of the secondary structure fragments. This is now based on the PDB DSSP analysis from the original coordinates for only the first or representative model so that secondary structure elements are not always identified properly. If chemical shifts were available an identification based on CSI (Wishart et&#xA0;al. <xref ref-type="bibr" rid="CR23">1992</xref>) would become possible so secondary structure stretches can be included that are more flexible and less defined on the coordinate level. More refined secondary structure identifications from the coordinates could also reveal patterns related to, for example, turns. Overall, the best way to improve this analysis remains to increase the sample size by encouraging deposition of constraint lists and all related NMR information (peak lists, chemical shifts, spectra), and ensuring that the data is consistent when deposited by the authors. Efforts like the CCPN project (Fogh et&#xA0;al. <xref ref-type="bibr" rid="CR6">2002</xref>, <xref ref-type="bibr" rid="CR7">2005</xref>), which allow data harvesting from NMR data collection to structure calculation, should provide this kind of data without requiring any additional effort by the scientists who produce the data.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Distance distribution from the constraint information for sequential Ala&#x2013;Ala contacts between backbone H protons</p></caption><graphic position="anchor" xlink:href="10858_2007_9199_Fig4_HTML" id="MO4"/></fig></p>
+      <p>In this analysis a particular inter-atomic contact between two residues from one PDB entry is either observed or not observed. The reason why a contact is observed (or not) implicitly includes distance information, peak overlap, water exchange line broadening, and all other factors that can lead to not observing or assigning a contact during analysis of a spectrum. This is different from the traditional meaning of an &#x2018;assigned atom&#x2019; on the chemical shift level, where it means that the chemical shift value for the resonance that arises from the atom is known. However, this does not necessarily mean that these assigned atoms produce any valid inter-atomic distance information. Thus, an &#x2018;assigned atom&#x2019; (or residue) on the constraint level means that a chemical shift assignment also produced useful and valid information related to the inter-atomic distances within the molecule.</p>
+      <p>The original study that defined the inter-atomic contacts relevant for assigning secondary structure elements with NMR used a set of 19 high-resolution protein crystal structures comprising about 3,200 residues (W&#xFC;thrich et&#xA0;al. <xref ref-type="bibr" rid="CR25">1984</xref>). In this study the extent of identification was defined as the percentage of times a distance was smaller than a particular cutoff value within a secondary structure element, while the uniqueness of identification is the percentage of times the distance is observed within a particular secondary structure element out of the total number of times it is observed. The extent is equivalent to the <italic>f</italic><sub>occurence</sub> used in this study for the constraint sets, with the exception that no distance cutoff is used (although some distance information is, as mentioned, implicitly included because the reason a constraint is observed or not is very dependent on distance), and that values are labelled as significant based on a binomial analysis. The uniqueness has the same definition, except that again it is based on the amount of constraints that are observed.</p>
+      <p>Also of interest is the relationship between the information that comes directly from the deposited constraints and the information that comes from the deposited coordinates. Here, the constraint information is compared to the distances from the originally deposited coordinates. Although a set of recalculated coordinates (as in RECOORD) or X-ray structures could have equally well been used, the originally deposited coordinates were chosen because they should best match the content of the constraint lists. All comparisons between constraint and coordinate information are intended for informative purposes only: the constraints represent the experimental NMR side of the information contained in the coordinates, and are in effect only a subset of the information contained therein. However, a dependable determination of whether a particular NOE contact is observed or not is not possible based on an NMR structural ensemble, but is trivial based on the constraints because they inherently contain NMR-specific information like signal overlap, dynamics, etc.</p>
+      <p>From Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> it is clear that the contact occurrence is almost always higher for the HPC set compared to the HP set. This is related to the use of a direct distance cutoff of 5.0&#xA0;&#xC5; in the HPC set: contacts with long distances could give rise to peaks that are too weak to be seen in a real spectrum but are still included. Also, many contacts have an <italic>f</italic><sub>occurrence </sub>of 1.0 in the HPC set because of conformational constraints from covalent bonds. Not all of these contacts are seen in real spectra because of, for example, peak overlap or line broadening. The correlations between the occurrences overall are not very high (Spearman 0.770, Pearson 0.694), with especially the intra-residue contacts giving bad correlations (Spearman 0.451, Pearson 0.356, see web site), and <italic>i&#x2013;i</italic>&#xA0;+&#xA0;2 (Spearman 0.720, Pearson 0.783) and <italic>i</italic>&#xA0;+&#xA0;3 (Spearman 0.711, Pearson 0.659) contacts giving the best results. An indication that the main reason for the bad correlation between the occurrences is distance related comes from the large improvement that is observed in the overall correlations if only coordinate distances of less than 3.6&#xA0;&#xC5; are considered (Spearman 0.906, Pearson 0.916). However, results from using both the HP and HPC information to filter ambiguous constraints lists show that both sets essentially give the same results (personal data), even though the constraints are available in a much more &#x2018;compressed&#x2019; form than the coordinates, and no force field information was used.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Correlation between the <italic>f</italic><sub>occurrence</sub> from the HPC (Coordinates) and HP (Constraint) sets</p></caption><graphic position="anchor" xlink:href="10858_2007_9199_Fig5_HTML" id="MO5"/></fig></p>
+      <p>In the KNOWNOE (Gronwald et&#xA0;al. <xref ref-type="bibr" rid="CR8">2002</xref>) X-ray structure based approach to obtain probabilities for assignments, the distance distributions for inter-atomic contacts are used to generate volume-based probabilities in addition to the atom identity based probabilities. This approach improves the probabilities that are generated, but it does require that the original peak list with volumes is available. This is not possible within the current analysis, although this will be pursued if a meaningful way to recalibrate the distance constraint bounds is available. This would also allow a better comparison between the NMR constraint data and any coordinate data (from NMR or X-ray structures).</p>
+    </sec>
+    <sec id="Sec8">
+      <title>Conclusion</title>
+      <p>A resource is now available where it is possible to check how likely a particular contact is when assigning NOESY spectra, or if a particular sequence fragment is likely to be difficult to assign. In this respect it formalises information that scientists with experience in spectrum analysis are aware of but cannot quantify. The amount of information provided here is extensive, however, and is even more useful when used as &#x2018;knowledge based&#x2019; probabilities in automatic assignment strategies, to filter and/or validate ambiguous constraint possibilities, and as a tool to rank assignment possibilities in spectrum analysis programs. These are being implemented as part of the CCPN framework.</p>
+      <p>Finally, the NMR constraint lists encompass the experimental NMR data encoded in the NMR structural ensembles, and comprise a single set of data that is much easier to analyse than an ensemble of solutions. As such, they provide a reduced form of structural information that is relevant for NMR analysis only. For this reason, and to allow a basic level of scientific reproducibility and validation, it is important that constraints, and all other possible NMR derived information, are deposited along with the structure coordinates. It is very likely that a lot more information than described in this article can be gained from it, which in turn can assist the NMR community and can help to understand the relationships between NMR and structure.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>The author thanks Aart Nederveen and Jurgen Doreleijers for the RECOORD and DOCR/FRED collaborations that were instrumental in creating the setup to harmonise constraints and coordinates, and Kim Henrick and Wolfgang Rieping for reading the manuscript and suggesting improvements. Most importantly, this work would not be possible without the members of the NMR community who made the effort to deposit their coordinates and constraints at the PDB. This project was funded by the EU FP6 Extend-NMR grant (18988) and by the Wellcome Trust (WT GR075968MA).</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="other">Bates D, Chambers J, Dalgaard P et&#xA0;al (2007) The R project for statistical computing. <ext-link ext-link-type="uri" xlink:href="http://www.r-project.org/">http://www.r-project.org/</ext-link>. Cited 10 Apr 2006. University site</citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berman</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Henrick</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Nakamura</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The worldwide Protein Data Bank (wwPDB): ensuring a single uniform archive of PDB data</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2007</year>
+          <volume>35</volume>
+          <fpage>D301</fpage>
+          <lpage>D303</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/gkl971</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Berman H, Henrick K, Nakamura H et&#xA0;al (2007) The worldwide Protein Data Bank (wwPDB): ensuring a single uniform archive of PDB data. Nucleic Acids Res 35:D301&#x2013;D303 <pub-id pub-id-type="pmid">17142228</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Doreleijers</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>Rullmann</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Kaptein</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Quality assessment of NMR structures: a statistical survey</article-title>
+          <source>J Mol Biol</source>
+          <year>1998</year>
+          <volume>281</volume>
+          <fpage>149</fpage>
+          <lpage>164</lpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1998.1808</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Doreleijers JF, Rullmann JA, Kaptein R (1998) Quality assessment of NMR structures: a statistical survey. J Mol Biol 281:149&#x2013;164 <pub-id pub-id-type="pmid">9680482</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Doreleijers</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>Mading</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Maziuk</surname>
+              <given-names>D</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>BioMagResBank database with sets of experimental NMR constraints corresponding to the structures of over 1400 biomolecules deposited in the Protein Data Bank</article-title>
+          <source>J Biomol NMR</source>
+          <year>2003</year>
+          <volume>26</volume>
+          <fpage>139</fpage>
+          <lpage>146</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1023514106644</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Doreleijers JF, Mading S, Maziuk D et&#xA0;al (2003) BioMagResBank database with sets of experimental NMR constraints corresponding to the structures of over 1400 biomolecules deposited in the Protein Data Bank. J Biomol NMR 26:139&#x2013;146 <pub-id pub-id-type="pmid">12766409</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Doreleijers</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>Nederveen</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Vranken</surname>
+              <given-names>W</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>BioMagResBank databases DOCR and FRED containing converted and filtered sets of experimental NMR restraints and coordinates from over 500 protein PDB structures</article-title>
+          <source>J Biomol NMR</source>
+          <year>2005</year>
+          <volume>32</volume>
+          <fpage>1</fpage>
+          <lpage>12</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10858-005-2195-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Doreleijers JF, Nederveen AJ, Vranken W et&#xA0;al (2005) BioMagResBank databases DOCR and FRED containing converted and filtered sets of experimental NMR restraints and coordinates from over 500 protein PDB structures. J Biomol NMR 32:1&#x2013;12 <pub-id pub-id-type="pmid">16041478</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fogh</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Ionides</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Ulrich</surname>
+              <given-names>E</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The CCPN project: an interim report on a data model for the NMR community</article-title>
+          <source>Nat Struct Biol</source>
+          <year>2002</year>
+          <volume>9</volume>
+          <fpage>416</fpage>
+          <lpage>418</lpage>
+          <pub-id pub-id-type="doi">10.1038/nsb0602-416</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fogh R, Ionides J, Ulrich E et&#xA0;al (2002) The CCPN project: an interim report on a data model for the NMR community. Nat Struct Biol 9:416&#x2013;418 <pub-id pub-id-type="pmid">12032555</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fogh</surname>
+              <given-names>RH</given-names>
+            </name>
+            <name>
+              <surname>Boucher</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Vranken</surname>
+              <given-names>WF</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A framework for scientific data modeling and automated software development</article-title>
+          <source>Bioinformatics</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>1678</fpage>
+          <lpage>1684</lpage>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/bti234</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fogh RH, Boucher W, Vranken WF et&#xA0;al (2005) A framework for scientific data modeling and automated software development. Bioinformatics 21:1678&#x2013;1684 <pub-id pub-id-type="pmid">15613391</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gronwald</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Moussa</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Elsner</surname>
+              <given-names>R</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Automated assignment of NOESY NMR spectra using a knowledge based method (KNOWNOE)</article-title>
+          <source>J Biomol NMR</source>
+          <year>2002</year>
+          <volume>23</volume>
+          <fpage>271</fpage>
+          <lpage>287</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1020279503261</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gronwald W, Moussa S, Elsner R et&#xA0;al (2002) Automated assignment of NOESY NMR spectra using a knowledge based method (KNOWNOE). J Biomol NMR 23:271&#x2013;287 <pub-id pub-id-type="pmid">12398348</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kabsch</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Sander</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Dictionary of protein secondary structure: pattern recognition of hydrogen-bonded and geometrical features</article-title>
+          <source>Biopolymers</source>
+          <year>1983</year>
+          <volume>22</volume>
+          <fpage>2577</fpage>
+          <lpage>2637</lpage>
+          <pub-id pub-id-type="doi">10.1002/bip.360221211</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kabsch W, Sander C (1983) Dictionary of protein secondary structure: pattern recognition of hydrogen-bonded and geometrical features. Biopolymers 22:2577&#x2013;2637 <pub-id pub-id-type="pmid">6667333</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Laskowski</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Rullmann</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>MacArthur</surname>
+              <given-names>MW</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>AQUA and PROCHECK-NMR: programs for checking the quality of protein structures solved by NMR</article-title>
+          <source>J Biomol NMR</source>
+          <year>1996</year>
+          <volume>8</volume>
+          <fpage>477</fpage>
+          <lpage>486</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF00228148</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Laskowski RA, Rullmann JA, MacArthur MW et&#xA0;al (1996) AQUA and PROCHECK-NMR: programs for checking the quality of protein structures solved by NMR. J Biomol NMR 8:477&#x2013;486 <pub-id pub-id-type="pmid">9008363</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="other">Moreira W, Warnes GR (2006) RPy (R from Python). <ext-link ext-link-type="uri" xlink:href="http://rpy.sourceforge.net/">http://rpy.sourceforge.net/</ext-link>. SourceForge site</citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nabuurs</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Nederveen</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Vranken</surname>
+              <given-names>W</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>DRESS: a database of REfined solution NMR structures</article-title>
+          <source>Proteins</source>
+          <year>2004</year>
+          <volume>55</volume>
+          <fpage>483</fpage>
+          <lpage>486</lpage>
+          <pub-id pub-id-type="doi">10.1002/prot.20118</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nabuurs SB, Nederveen AJ, Vranken W et&#xA0;al (2004) DRESS: a database of REfined solution NMR structures. Proteins 55:483&#x2013;486 <pub-id pub-id-type="pmid">15103611</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nabuurs</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Spronk</surname>
+              <given-names>CA</given-names>
+            </name>
+            <name>
+              <surname>Vuister</surname>
+              <given-names>GW</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Traditional biomolecular structure determination by NMR spectroscopy allows for major errors</article-title>
+          <source>PLoS Comp Biol</source>
+          <year>2006</year>
+          <volume>2</volume>
+          <fpage>e9</fpage>
+          <pub-id pub-id-type="doi">10.1371/journal.pcbi.0020009</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nabuurs SB, Spronk CA, Vuister GW et&#xA0;al (2006) Traditional biomolecular structure determination by NMR spectroscopy allows for major errors. PLoS Comp Biol 2:e9 </citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nederveen</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Doreleijers</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>Vranken</surname>
+              <given-names>W</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>RECOORD: a recalculated coordinate database of 500+ proteins from the PDB using restraints from the BioMagResBank</article-title>
+          <source>Proteins</source>
+          <year>2005</year>
+          <volume>59</volume>
+          <fpage>662</fpage>
+          <lpage>672</lpage>
+          <pub-id pub-id-type="doi">10.1002/prot.20408</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nederveen AJ, Doreleijers JF, Vranken W et&#xA0;al (2005) RECOORD: a recalculated coordinate database of 500+ proteins from the PDB using restraints from the BioMagResBank. Proteins 59:662&#x2013;672 <pub-id pub-id-type="pmid">15822098</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nilges</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Calculation of protein structures with ambiguous distance restraints: automated assignment of ambiguous NOE crosspeaks and disulphide connectivities</article-title>
+          <source>J Mol Biol</source>
+          <year>1995</year>
+          <volume>245</volume>
+          <fpage>645</fpage>
+          <lpage>660</lpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1994.0053</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nilges M (1995) Calculation of protein structures with ambiguous distance restraints: automated assignment of ambiguous NOE crosspeaks and disulphide connectivities. J Mol Biol 245:645&#x2013;660 <pub-id pub-id-type="pmid">7844833</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pearson</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Mathematical contributions to the theory of evolution: III. Regression heredity and panmixia</article-title>
+          <source>Phil Trans Royal Soc London Ser A</source>
+          <year>1896</year>
+          <volume>187</volume>
+          <fpage>253</fpage>
+          <lpage>318</lpage>
+          <pub-id pub-id-type="doi">10.1098/rsta.1896.0007</pub-id>
+          <!-- WARNING: Occurrence has not been converted -->
+        </citation>
+        <citation citation-type="display-unstructured">Pearson K (1896) Mathematical contributions to the theory of evolution: III. Regression heredity and panmixia. Phil Trans Royal Soc London Ser A 187:253&#x2013;318 </citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rieping</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Habeck</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nilges</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Inferential structure determination</article-title>
+          <source>Science</source>
+          <year>2005</year>
+          <volume>309</volume>
+          <fpage>303</fpage>
+          <lpage>306</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.1110428</pub-id>
+          <!-- WARNING: Occurrence has not been converted -->
+        </citation>
+        <citation citation-type="display-unstructured">Rieping W, Habeck M, Nilges M (2005) Inferential structure determination. Science 309:303&#x2013;306 <pub-id pub-id-type="pmid">16002620</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spearman</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>The proof and measurement of association between two rings</article-title>
+          <source>Am J Psych</source>
+          <year>1904</year>
+          <volume>15</volume>
+          <fpage>72</fpage>
+          <lpage>101</lpage>
+          <pub-id pub-id-type="doi">10.2307/1412159</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Spearman C (1904) The proof and measurement of association between two rings. Am J Psych 15:72&#x2013;101 </citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spronk</surname>
+              <given-names>CA</given-names>
+            </name>
+            <name>
+              <surname>Nabuurs</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Bonvin</surname>
+              <given-names>AM</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The precision of NMR structure ensembles revisited</article-title>
+          <source>J Biomol NMR</source>
+          <year>2003</year>
+          <volume>25</volume>
+          <fpage>225</fpage>
+          <lpage>234</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1022819716110</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Spronk CA, Nabuurs SB, Bonvin AM et&#xA0;al (2003) The precision of NMR structure ensembles revisited. J Biomol NMR 25:225&#x2013;234 <pub-id pub-id-type="pmid">12652134</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ulrich</surname>
+              <given-names>EL</given-names>
+            </name>
+            <name>
+              <surname>Markley</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Kyogoku</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <article-title>Creation of a nuclear magnetic resonance data repository and literature database</article-title>
+          <source>Protein Seq Data Anal</source>
+          <year>1989</year>
+          <volume>2</volume>
+          <fpage>23</fpage>
+          <lpage>37</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ulrich EL, Markley JL, Kyogoku Y (1989) Creation of a nuclear magnetic resonance data repository and literature database. Protein Seq Data Anal 2:23&#x2013;37 <pub-id pub-id-type="pmid">2911559</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="other">van Rossum G (2003) The Python language reference manual. Network Theory Ltd Bristol UK</citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vranken</surname>
+              <given-names>WF</given-names>
+            </name>
+            <name>
+              <surname>Boucher</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Stevens</surname>
+              <given-names>TJ</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The CCPN data model for NMR spectroscopy: development of a software pipeline</article-title>
+          <source>Proteins</source>
+          <year>2005</year>
+          <volume>59</volume>
+          <fpage>687</fpage>
+          <lpage>696</lpage>
+          <pub-id pub-id-type="doi">10.1002/prot.20449</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vranken WF, Boucher W, Stevens TJ et&#xA0;al (2005) The CCPN data model for NMR spectroscopy: development of a software pipeline. Proteins 59:687&#x2013;696 <pub-id pub-id-type="pmid">15815974</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wishart</surname>
+              <given-names>DS</given-names>
+            </name>
+            <name>
+              <surname>Sykes</surname>
+              <given-names>BD</given-names>
+            </name>
+            <name>
+              <surname>Richards</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <article-title>The chemical shift index: a fast and simple method for the assignment of protein secondary structure through NMR spectroscopy</article-title>
+          <source>Biochemistry</source>
+          <year>1992</year>
+          <volume>31</volume>
+          <fpage>1647</fpage>
+          <lpage>1651</lpage>
+          <pub-id pub-id-type="doi">10.1021/bi00121a010</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wishart DS, Sykes BD, Richards FM (1992) The chemical shift index: a fast and simple method for the assignment of protein secondary structure through NMR spectroscopy. Biochemistry 31:1647&#x2013;1651 <pub-id pub-id-type="pmid">1737021</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>W&#xFC;thrich</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <source>NMR of proteins and nucleic acids</source>
+          <year>1986</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Wiley-Interscience</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">W&#xFC;thrich K (1986) NMR of proteins and nucleic acids. Wiley-Interscience, New York </citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>W&#xFC;thrich</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Billeter</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Braun</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <article-title>Polypeptide secondary structure determination by nuclear magnetic resonance observation of short proton&#x2013;proton distances</article-title>
+          <source>J Mol Biol</source>
+          <year>1984</year>
+          <volume>180</volume>
+          <fpage>715</fpage>
+          <lpage>740</lpage>
+          <pub-id pub-id-type="doi">10.1016/0022-2836(84)90034-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">W&#xFC;thrich K, Billeter M, Braun W (1984) Polypeptide secondary structure determination by nuclear magnetic resonance observation of short proton&#x2013;proton distances. J Mol Biol 180:715&#x2013;740 <pub-id pub-id-type="pmid">6084719</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

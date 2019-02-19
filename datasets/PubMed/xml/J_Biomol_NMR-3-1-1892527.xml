@@ -1,0 +1,1298 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Biomol NMR</journal-id>
+      <journal-title>Journal of Biomolecular Nmr</journal-title>
+      <issn pub-type="ppub">0925-2738</issn>
+      <issn pub-type="epub">1573-5001</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17334824</article-id>
+      <article-id pub-id-type="pmc">1892527</article-id>
+      <article-id pub-id-type="publisher-id">9142</article-id>
+      <article-id pub-id-type="doi">10.1007/s10858-007-9142-1</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>All-atom molecular dynamics simulations using orientational constraints from anisotropic NMR samples</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Sternberg</surname>
+            <given-names>Ulrich</given-names>
+          </name>
+          <address>
+            <phone>+49-7247-826950</phone>
+            <fax>+49-7247-824842</fax>
+            <email>Ulrich.Sternberg@ibg.fzk.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Witter</surname>
+            <given-names>Raiker</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Ulrich</surname>
+            <given-names>Anne S.</given-names>
+          </name>
+          <address>
+            <email>anne.ulrich@ibg.fzk.de</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Institute of Biological Interfaces, Forschungszentrum Karlsruhe, Hermann-von-Helmholtz-Platz 1, POB 3640, 76021 Karlsruhe, Germany </aff>
+        <aff id="Aff2"><label>2</label>Institute of Organic Chemistry, University of Karlsruhe, Fritz-Haber-Weg 6, 76131 Karlsruhe, Germany </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>3</day>
+        <month>3</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>5</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>38</volume>
+      <issue>1</issue>
+      <fpage>23</fpage>
+      <lpage>39</lpage>
+      <history>
+        <date date-type="received">
+          <day>7</day>
+          <month>7</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>14</day>
+          <month>12</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media B.V. 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Orientational constraints obtained from solid state NMR experiments on anisotropic samples are used here in molecular dynamics (MD) simulations for determining the structure and dynamics of several different membrane-bound molecules. The new MD technique is based on the inclusion of orientation dependent pseudo-forces in the COSMOS-NMR force field. These forces drive molecular rotations and re-orientations in the simulation, such that the motional time-averages of the tensorial NMR properties approach the experimentally measured parameters. The orientational-constraint-driven MD simulations are universally applicable to all NMR interaction tensors, such as chemical shifts, dipolar couplings and quadrupolar interactions. The strategy does not depend on the initial choice of coordinates, and is in principle suitable for any flexible molecule. To test the method on three systems of increasing complexity, we used as constraints some deuterium quadrupolar couplings from the literature on pyrene, cholesterol and an antimicrobial peptide embedded in oriented lipid bilayers. The MD simulations were able to reproduce the NMR parameters within experimental error. The alignment of the three membrane-bound molecules and some aspects of their conformation were thus derived from the NMR data, in good agreement with previous analyses. Furthermore, the new approach yielded for the first time the distribution of segmental orientations with respect to the membrane and the order parameter tensors of all three systems.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Molecular dynamics simulations</kwd>
+        <kwd>Orientational NMR constraints</kwd>
+        <kwd><sup>2</sup>H-NMR</kwd>
+        <kwd>Oriented samples</kwd>
+        <kwd>Cholesterol</kwd>
+        <kwd>Pyrene</kwd>
+        <kwd>PGLa peptide</kwd>
+        <kwd>Order parameters</kwd>
+        <kwd>Force field calculations</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Using anisotropic media, such as partially oriented bicelles or macroscopically oriented membranes, NMR investigations can reveal a wealth of information about molecular properties, namely conformation, orientation and dynamics. In many solid state NMR studies of membrane-active peptides and transmembrane proteins, the samples are conveniently prepared with macroscopically oriented bilayers to obtain structural information. The NMR data analysis relies on a uniform alignment of all molecules with respect to the static magnetic field, as it makes use of the orientation dependence of the chemical shift, quadrupolar coupling or dipolar coupling interactions. In contrast to single crystal studies, where the molecules are immobilized in a unique conformation, in the case of lipid membranes and liquid crystalline systems one has to consider a wide distribution of molecular orientations and anisotropic motions. Here, we apply for the first time a new MD strategy to deduce such structural and dynamics information on three representative compounds in biomembranes with increasing complexity: (i) pyrene, (ii) cholesterol, and (iii) the antimicrobial peptide PGLa.</p>
+      <p>A convenient nucleus for solid state NMR investigations of oriented membranes is deuterium for several reasons (for reviews see e.g., Vold <xref ref-type="bibr" rid="CR26">1994</xref>; Davis <xref ref-type="bibr" rid="CR5">1983</xref>; Ulrich and Grage <xref ref-type="bibr" rid="CR24">1998</xref>). First, the influence of <sup>2</sup>H substitutions on the molecular structure and dynamics is negligible. More importantly, in most biologically relevant cases the quadrupolar interaction tensor of a carbon-bound deuterium is to a good approximation aligned parallel to the <sup>2</sup>H&#x2013;C bond and directly reflects the local molecular orientation and dynamics of the labelled segment. Using <sup>2</sup>H-NMR, the alignment and dynamic behaviour of lipids, small organic guest molecules and membrane-active peptides has been studied in numerous examples. Most previous strategies to extract the molecular orientation from NMR data, however, have been restricted to molecules with a rigid conformation, e.g. peptides assuming an ideal &#x3B1;-helix with fixed backbone torsion angles. In these studies, several individual labels are usually placed into strategic positions on the rigid molecular part. The measured quadrupolar splittings are then compared in a least squares RMSD analysis with the predicted values upon systematically varying the molecular alignment. The best-fit molecular orientation is determined from a 3D error plot as the one yielding minimal differences between the observed and calculated NMR parameters. However, this RMSD (root mean square deviation) analysis can only give preliminary results for flexible molecules such as peptides or proteins with a high degree of internal mobility.</p>
+      <p>A proper way to account for motional averaging of the NMR parameters caused by molecular mobility is to run all-atom MD simulations. When applied to biomembranes, however, such simulations pose two closely connected problems: (i) large size of the system and (ii) long simulation times. In particular, water surrounding the lipid bilayer has to be included into the MD simulations, and time-spans have to be covered approaching the NMR time scale. Moreover, the volume of interest has to be surrounded by multiple copies of the central cell to avoid boundary effects. Nevertheless, such simulations have been demonstrated to be feasible for moderately sized membrane segments hosting medium size molecules (see e.g. Tieleman et&#xA0;al. <xref ref-type="bibr" rid="CR22">2001</xref>). In the present contribution, we propose an alternative strategy, in which the oriented medium is not explicitly considered, but instead the ordering membrane environment is replaced in the MD simulations by pseudo-forces derived from the measured NMR parameters. This way sufficiently long MD runs become possible and allow to calculate the motionally averaged parameters observed in the NMR experiments. As a result, the full information about molecular orientation, order, segmental motions and even aspects of the molecular conformation could be revealed.</p>
+      <p>There is one remarkable advantage in the calculations involving orientational constraints. Since an experimentally observed NMR value usually represents a time average over the motions of the molecules, knowledge of the geometry and strength of these molecular motions is a prerequisite for properly interpreting the NMR data in terms of structural parameters. The order parameter, which is typically used to describe the effect of molecular motion on the NMR spectra, however, is often not known <italic>a priori</italic>. In the present approach, the molecular motions are intrinsically included and the order parameters are obtained as part of the simulation result.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Theory</title>
+      <sec id="Sec3">
+        <title>NMR interaction tensors and coordinate transformations</title>
+        <p>The orientation dependence of the observed frequencies or splittings of an NMR property can be described by a 2nd rank tensor <bold>P</bold>, whose components are specified in the context of a coordinate system. On the one hand, a description in a molecule-fixed frame of reference is required to follow changes in orientation, but on the other hand the NMR observables are extracted from the interaction tensor in the laboratory frame related to the static magnetic field. We will define the molecule-fixed frames in the following way from the coordinates of the three bonded atoms A&#x2013;B&#x2013;C (see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>):
+<disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\begin{array}{l}
+\vec{\nu}_z=\vec{\nu}_{\rm A-B}\\
+\vec{\nu}_y=\vec{\nu}_z\times\vec{\nu}_{\rm B-C}\\
+\vec{\nu}_x=\vec{\nu}_y\times\vec{\nu}_z\end{array}
+$$\end{document}</tex-math></disp-formula><fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Local coordinate system used to define a tensorial NMR property on atom A. The bond from A to atom B is taken as the local <italic>z</italic>-direction, the plane spanned by A, B and C defines the <italic>x</italic>-direction in-plane, and the <italic>y</italic>-direction is perpendicular to that plane</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig1_HTML" id="MO22"/></fig></p>
+        <p>Atom A is selected as the position of the nucleus of interest (for instance <sup>2</sup>H), whose property <bold>P</bold><sub>A</sub> is to be calculated. In case there are several possible ways of selecting atoms B and C, they will be defined such that the valence of bond B&#x2013;C is a maximum (the valence can be estimated from the bond length, see O&#x2019;Keefe and Brese <xref ref-type="bibr" rid="CR13">1991</xref>). This selection ensures that the <italic>y</italic>-axis will be perpendicular to a &#x3C0;-system if it exists, and the <italic>x</italic>-axis will be positioned within the &#x3C0;-plane.</p>
+        <p>Once we have selected a coordinate system that is fixed to the molecule, we can calculate the columns of the transformation matrix <bold><italic>D</italic></bold> from the unit vectors along <inline-formula id="IEq1"><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\vec{\nu}_x,\vec{\nu}_y \hbox{ and } \vec{\nu}_z}$$\end{document}</tex-math></inline-formula> of this frame, given in coordinates of the laboratory frame.
+<disp-formula id="Equ2"><label>2</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$D=\left(\vec{e}_x,\;\vec{e}_y,\;\vec{e}_z\right)
+$$\end{document}</tex-math></disp-formula> Matrix <bold><italic>D</italic></bold> can be used to transform the tensorial properties from the molecular to the laboratory frame. The tensor components of <bold>P</bold> in the molecular frame are thus transformed to yield <bold>P</bold>&#x2032; in the laboratory frame according to
+<disp-formula id="Equ3"><label>3</label><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+P^{\prime}_{\alpha\beta}=D_{\alpha\alpha^{\prime}}D_{\beta\beta^{\prime}}P_{\alpha^{\prime}\beta^{\prime}}
+$$\end{document}</tex-math></disp-formula>where <bold><italic>D</italic></bold> is the transformation matrix as given in Eq.&#xA0;<xref rid="Equ2" ref-type="">2</xref> (the Einstein sum convention is used for Greek subscripts and &#x3B1;, &#x3B2;&#xA0;=&#xA0;{<italic>x</italic>, <italic>y</italic>, <italic>z</italic>}, the second index indicating the unit vector).</p>
+        <p>For most deuterium quadrupolar couplings, as well as vicinal dipolar couplings like <sup>15</sup>N&#x2013;<sup>1</sup>H and <sup>13</sup>C&#x2013;<sup>1</sup>H the tensor <bold>P</bold><sub>A</sub> will be to a good approximation diagonal in this coordinate system, hence we can easily assign the principal values of <bold>P</bold><sub>A</sub> to the three axes. In cases where the chemical shift tensor is to be analysed, the same molecular coordinate system can be used as in those calculations based on the bond polarization theory (BPT, see Sternberg <xref ref-type="bibr" rid="CR18">1988</xref>). Therefore, all these types of NMR interactions can be treated within the same formalism.</p>
+        <p>In static NMR experiments the tensor components are observed in a coordinate system of reference whose <italic>z</italic>-axis is aligned with <bold>B</bold><sub>0</sub>. In this frame the measured frequency or splitting is given by the <italic>zz</italic>-component of the tensor <bold>P</bold>. However, in the approach presented here we can incorporate further tensor components in the MD simulations, which are accessible for example by measuring the sample at further tilt angles.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Constraints and calculation of molecular properties</title>
+        <p>To include experimental constraints in the MD simulations, pseudo-energy terms are added to the molecular energy provided by the force field. These pseudo-energies are defined as functions of the difference between the experimental and a calculated tensor property, <bold>P</bold><sup><italic>i</italic></sup>:
+<disp-formula id="Equ4"><label>4</label><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+E_{\rm pseudo}=\frac{k}{2}\sum_{\alpha\beta}\sum_i{\left(P_{\alpha\beta}^{{\rm {theo}}_{i}}-P_{\alpha\beta}^{\exp_{i}}\right)}^2$$\end{document}</tex-math></disp-formula> where <italic>k</italic> is a force constant which is chosen to adjust the size and unit of the energy. The first sum runs over all observed tensor components and does not need to include all possible elements. In a 1D NMR measurement of a single label in an oriented or monocrystalline sample, only the <italic>zz</italic>-value of the tensor of this site can be experimentally determined. However, any additional tensor component introduced into the calculations will improve the characterization of the orientation of the system. Because of the nature of the tensor transform (Eq.&#xA0;<xref rid="Equ3" ref-type="">3</xref>) each principal axis of the tensor can be inverted without changing the observed NMR frequency. Therefore, eight discrete tensor orientations are equivalent, even if all elements of the observed tensor are used as constraints. If, however, only the three principal values of the tensor are known, then in addition to this eightfold degeneracy a continuous set of orientations (instead of discrete possibilities) will be compatible with the experimental data from a single label. Therefore, a larger number of orientational constraints from several labels are necessary to determine the orientation of a rigid molecular segment in an unambiguous way. Obviously, if a molecule is intrinsically flexible, an even higher number of constraints will be required.</p>
+        <p>The experimental NMR values represent an ensemble average over a large number of molecules as well as a time average. The relevant time scale for averaging is given by the inverse of the frequency range that results from the anisotropy of the relevant interaction. When motions are faster than this time scale, a time average of the corresponding NMR parameters is observed. Motions slower than this time scale will result in a distribution of the respective NMR property. In all-atom MD simulations of larger molecules we can only perform calculations for a single molecular system and for time spans on the order of a Larmor period. Assuming that the NMR interactions are already completely averaged within this time, averaged properties can be simulated. This is likely to be the case for motions within the molecule and for the rotational diffusion of small molecules in oriented media such as the lipid bilayer considered here, which are on the time scale of 30&#xA0;ps to 100&#xA0;ns (see Br&#xFC;schweiler <xref ref-type="bibr" rid="CR3">1994</xref>). We thus can assume that the time averages over the shorter period accessible for MD simulations do reflect the longer time averages observed by the NMR measurement. For the average of <bold>P</bold><sup>theo</sup> we obtain using Eq.&#xA0;<xref rid="Equ3" ref-type="">3</xref>:
+<disp-formula id="Equ5"><label>5</label><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+P_{\alpha\beta}^{\langle\,\rangle t}=\langle D_{\alpha\alpha^{\prime}}D_{\beta\beta^{\prime}}P_{\alpha^{\prime}\beta^{\prime}}\rangle_t $$\end{document}</tex-math></disp-formula>If the NMR property does not change with time, we have to perform the time averaging only over the products of the transformation matrix elements <inline-formula id="IEq4"><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${D_{\alpha\alpha^{\prime}}D_{\beta\beta^{\prime}}}$$\end{document}</tex-math></inline-formula>. For most deuterium quadrupolar couplings and vicinal dipolar couplings, any conformational influence on the NMR interaction can be neglected. In the case of chemical shift tensors, however, the change of the tensors in the course of the MD simulation has to be considered.</p>
+        <p>Since MD simulations are started with random velocities, we have to run many time steps before a thermal equilibrium is reached, and before the kinetic energy is redistributed properly between the different degrees of freedom of our system. During this equilibration phase of the MD the pseudo-energies will be large and unrealistic, since the proper mean values for the interaction tensors are not yet reached. Therefore the time averaging is performed here using an exponential memory function (Torda and van Gunsteren <xref ref-type="bibr" rid="CR23">1991</xref>):
+<disp-formula id="Equ6"><label>6</label><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\langle D_{\alpha\alpha^{\prime}}D_{\beta\beta^{\prime}}P_{\alpha^{\prime}\beta^{\prime}}\rangle_t=\frac{1}{N}
+\int_0^{t^{\prime}}\hbox{e}^{t^{\prime}/\tau}D_{\alpha\alpha^{\prime}}(t)D_{\beta\beta^{\prime}}(t)\,\hbox{d}t^{\prime}P_{\alpha^{\prime}\beta^{\prime}}$$\end{document}</tex-math></disp-formula>The memory time constant is denoted with &#x3C4;, and <italic>N</italic> is the norm of the integral. This memory function serves to scale down the contributions from the beginning of the MD calculation exponentially. By proper selection of &#x3C4; it can be ensured that we average mainly over the late, relevant time span of interest. Since in conventional MD simulations the equations of motion are integrated in finite time steps &#x394;<italic>t</italic>, the integral in Eq.&#xA0;<xref rid="Equ6" ref-type="">6</xref> is converted into a discrete sum <italic>S</italic>. During the MD simulation, the sum <italic>S</italic><sub><italic>n</italic>+1</sub> of the time step <italic>n</italic>&#xA0;+&#xA0;1 is calculated from the sum of the previous time step <italic>S</italic><sub><italic>n</italic></sub> in a recursive manner:
+<disp-formula id="Equ7"><label>7</label><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\begin{array}{l}
+{\bf S}_0={\bf P}\\
+N_0=1\\
+N_{n+1}=N_n\hbox{e}^{-\Delta t/\tau}+1\\
+{\bf S}_{n+1}=\frac{1}{N_{n+1}}\left(N_n{\bf S}_n\hbox{e}^{-\Delta
+t/\tau}+{\bf P}\right)
+\end{array}
+$$\end{document}</tex-math></disp-formula>In the course of the MD simulation, <bold>S</bold> will contain the exponentially weighted time average of the property <bold>P</bold>, and in the case of a tensor the time averaging will be performed with all of its components.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Calculation of pseudo-forces</title>
+        <p>To include the NMR constraints into the equations of motion, pseudo-forces <inline-formula id="IEq2"><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\vec{F}}$$\end{document}</tex-math></inline-formula> have to be calculated from the respective pseudo-energies (Eq.&#xA0;<xref rid="Equ4" ref-type="">4</xref>). They are obtained as the derivatives of the energies with respect to the coordinates of the atoms. In the case of orientational pseudo-forces, we have to derive the transformation matrices <bold><italic>D</italic></bold> with respect to the coordinates of the atoms that were used in their definition (see Eq.&#xA0;<xref rid="Equ1" ref-type="">1</xref>). The pseudo-forces in the Cartesian directions <italic>x</italic>, <italic>y</italic> and <italic>z</italic> (denoted with the Greek index &#x3B3;) acting on the atoms A, B, and C (denoted with <italic>j</italic>, see Eq. 1) are then given by
+<disp-formula id="Equ8"><label>8</label><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\begin{aligned}
+&amp;F_{x_{\gamma_j}}^{\rm A}=k\sum\limits_{\alpha\beta}^{3}
+(P_{\alpha\beta}^{\rm theo_A}-P_{\alpha\beta}^{\rm exp_A})\frac{\partial}{\partial x_{\gamma_j}}P_{\alpha\beta}^{\rm theo_A}\\
+&amp;\frac{\partial}{\partial x_{\gamma_j}} P_{\alpha\beta}^{\rm theo_A}=
+\left(D_{\beta\beta^{\prime}}\frac{\partial}{\partial x_{\gamma_j}}D_{\alpha\alpha^{\prime}}
++D_{\alpha\alpha^{\prime}}\frac{\partial}{\partial x_{\gamma_j}}D_{\beta\beta^{\prime}}\right)P_{\alpha\beta}^{\rm theo_A}
+\end{aligned}
+$$\end{document}</tex-math></disp-formula>The calculation of the orientational pseudo-forces is thus reduced to determining the derivatives of the elements of the transformation matrices <bold><italic>D</italic></bold> with respect to the Cartesian coordinates of atoms A, B, and C.</p>
+        <p>In the following expressions we will use a short notation for the derivatives, omitting all indices:
+<disp-formula id="Equ9"><label>9</label><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\partial=\frac{\partial}{\partial x_{\alpha_j}}\quad\alpha=\{1,2,3\}\quad \hbox{and}\,
+j=\{\hbox{A,B,C}\}
+$$\end{document}</tex-math></disp-formula>Using the definitions of Eqs. 1 and 9, these derivatives can be calculated in the following way:
+<disp-formula id="Equ10"><label>10</label><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\begin{array}{l}
+\partial\vec{\nu}_z=\partial\vec{\nu}_{\rm A-B}\\
+\partial\vec{\nu}_y=\partial\vec{\nu}_z\times\vec{\nu}_{\rm B-C}+
+\vec{\nu}_{\rm A-B}\times\partial\vec{\nu}_{\rm B-C}\\
+\partial\vec{\nu}_x=\partial\vec{\nu}_y\times\vec{\nu}_{\rm A-B}
++\vec{\nu}_y\times\partial\vec{\nu}_z\\
+\vec{e}=\frac{\vec{\nu}}{{\left(\vec{\nu}\vec{\nu}\right)}^{1/2}}\\
+\partial\vec{e}=\frac{1}{{\left(\vec{\nu}\vec{\nu}\right)}^{1/2}}\left(
+\partial\vec{\nu}-\frac{\vec{\nu}\partial\vec{\nu}}{\left(\vec{\nu}\vec{\nu}\right)}\vec{\nu}\right)
+\end{array}
+$$\end{document}</tex-math></disp-formula>The derivatives of the unit vectors <inline-formula id="IEq3"><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\partial\vec{e}_x,\partial\vec{e}_y\;\hbox{and}\;\partial\vec{e}_z }$$\end{document}</tex-math></inline-formula> can be used to construct the derivatives of the elements of the transformation matrices <inline-formula id="IEq5"><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\partial D_{\alpha\beta}=\partial e_{\alpha\beta}}$$\end{document}</tex-math></inline-formula>.</p>
+        <p>Because of the time dependence of the transformation matrices, the derivatives were calculated continuously during the MD simulation at each time step. The time average is only calculated for the NMR property.</p>
+        <p>As evident from Eq.&#xA0;<xref rid="Equ8" ref-type="">8</xref>, the pseudo-forces depend linearly on the difference between theory and experiment. To avoid too high pseudo-forces in the beginning of the MD simulation, when the deviation of the simulated and experimental values is still large, the contributions of the pseudo-forces are scaled down. Another possibility to avoid too large pseudo-forces is achieved by multiplying the pseudo-forces by weighting factors <inline-formula id="IEq6"><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${c(P^{\rm theo}-P^{\rm exp})}$$\end{document}</tex-math></inline-formula>, which lead to nearly constant forces if <inline-formula id="IEq7"><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${P^{\rm theo}-P^{\rm exp}}$$\end{document}</tex-math></inline-formula> exceeds a threshold 	&#x394;<italic>P</italic> (see Witter et&#xA0;al. <xref ref-type="bibr" rid="CR27">2001</xref>):
+<disp-formula id="Equ11"><label>11</label><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\begin{aligned}
+&amp;f=\hbox{e}^{\frac{(P^{\rm theo}-P^{\rm exp})}{\Delta P}}\\
+&amp;c(P^{\rm theo}-P^{\rm exp})=\frac{f-f^{-1}}{f+f^{-1}}
+\end{aligned}
+$$\end{document}</tex-math></disp-formula> For <inline-formula id="IEq8"><tex-math id="M19">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${P^{\rm theo}-P^{\rm exp} &lt; \Delta P}$$\end{document}</tex-math></inline-formula> this factor behaves similar to the derivative of the original energy expression (4). It is possible to choose different force constants <italic>k</italic> (Eq. 8) and width parameters &#x394;<italic>P</italic> for each type of NMR property of interest.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Order parameter calculation</title>
+        <p>Besides determining the structure of a molecule, it is equally important to describe its dynamic behaviour in an oriented medium such as a lipid bilayer. MD simulations provide a unique opportunity to obtain information on the molecular dynamics, which is difficult to determine experimentally. The traditional way to account for motional averages in NMR investigation is to introduce order parameters. To this aim, the time average of the transformation matrices <bold><italic>D</italic></bold> (Eq. 5) can be used to characterize the influence of restricted molecular motions on the anisotropic properties of a molecule. In a similar way, Saupe (<xref ref-type="bibr" rid="CR15">1964</xref>) defined the so called order tensor to describe the average orientation of a molecule:
+<disp-formula id="Equ12"><label>12</label><tex-math id="M20">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+S_{ij}=1/2\langle 3\cos\Theta_i\cos\Theta_j-\delta_{ij}\rangle
+$$\end{document}</tex-math></disp-formula> where &#x2329;&#xA0;&#x232A; denotes the mean value and cos&#x398;<sub><italic>i</italic></sub> are the <italic>z</italic> components of the unit vectors of a molecule-fixed frame within the laboratory system of reference. To describe the dynamic properties of flexible molecules, however, the Saupe approach is not sufficient, since molecular groups like peptide side chains may exhibit a larger mobility than the rest of the molecule. For this purpose Limmer (<xref ref-type="bibr" rid="CR17">1989</xref>) introduced a segmental or site-specific order tensor <bold>W</bold>, which is the tensorial product of the Saupe order tensor and a conformational order tensor.</p>
+        <p>By calculating the NMR properties in the course of the MD simulation it is possible to obtain the segmental order tensor <bold>W</bold><sup>A</sup> of the vicinity of atom A. The principal axis system of the tensor property is used to represent the instantaneous segmental orientation, which is then related to the average tensor <bold>P</bold> determined by Eq.&#xA0;<xref rid="Equ5" ref-type="">5</xref>. The transformation matrices <italic>D</italic><sup>PAS</sup>, which link the average <bold>P</bold> with the principal axis system of <bold>P</bold> at each time step of the simulation, can then be used to determine <bold>W</bold> (&#x2329;&#xA0;&#x232A;<sub><italic>t</italic></sub> denotes the time average):
+<disp-formula id="Equ13"><label>13</label><tex-math id="M21">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\begin{array}{l}
+P_{\alpha\beta}^{{\rm A}_t}=D_{\alpha\alpha^{\prime}}^{\rm PAS_A}D_{\beta\beta^{\prime}}^{\rm PAS_A}P_{\alpha^{\prime}\beta^{\prime}}^{\langle\,\rangle t}\\
+W_{\alpha\beta}^{\rm A}=\frac{1}{2}\langle 3D_{z\alpha}^{\rm PAS_A}
+D_{z\beta}^{\rm PAS_A}-\delta_{\alpha\beta}\rangle_t \end{array}
+$$\end{document}</tex-math></disp-formula>This average is calculated in every step of the MD simulation for all sites A for which the tensorial NMR properties are calculated. In general the complete order tensor has 81 elements, which reduce to nine components if we are interested only in the <italic>zz</italic> component of a property (Eq.&#xA0;<xref rid="Equ13" ref-type="">13</xref>). Since the order tensor <bold>W</bold> (and <bold>S</bold> as well) is symmetric and traceless, we have to consider only five independent elements. The transformation matrices <bold><italic>D</italic></bold><sup>PAS</sup> in Eq. 13 can be calculated from the eigenvectors corresponding to the principal values of <bold>P</bold><sup>A</sup>. After a full-length MD simulation, the order tensors <bold>W</bold><sup>A</sup> will contain the information describing the time averaged orientation of all sites A.</p>
+        <p>To calculate the molecular Saupe order tensor, a coordinate system has to be fixed to the molecule. In a perfectly rigid molecule any set of three atoms could be selected at will. However, as most molecules are intrinsically flexible, it does not make sense to define the coordinate system that way, as the Saupe order tensor would then depend on this selection. We therefore decided to use the principal axis system of the tensor of inertia to represent the orientation of the entire molecule (see Burnell and De Lange <xref ref-type="bibr" rid="CR4">1980</xref>). This way we can calculate a molecular order tensor that is independent of any particular choice of coordinates:
+<disp-formula id="Equ14"><label>14</label><tex-math id="M22">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+S_{kl}^{\rm inertia}\frac{1}{2}\left\langle 3D_{zk}^{\rm PAS}
+D_{zl}^{\rm PAS}-\delta_{kl}\right\rangle_t\quad k,l=\{a,b,c\}
+$$\end{document}</tex-math></disp-formula>The axes of inertia are denoted with <italic>a</italic>, <italic>b</italic> and <italic>c</italic>, corresponding to the moments of inertia in increasing order. For rod-like molecules the long axis will thus be the <italic>a</italic>-axis of least inertia.</p>
+        <p>In many cases it is convenient to diagonalize the order tensor to introduce a principal frame of order (Low <xref ref-type="bibr" rid="CR9">2002</xref>). Within this frame there are only two independent parameters: the order parameter <italic>S</italic> and a biaxality parameter &#x3BE;:
+<disp-formula id="Equ15"><label>15</label><tex-math id="M23">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+{\bf S}=\left(\begin{array}{lll}
+-\frac{1}{2}S-\xi&amp;0&amp;0\\
+0&amp;-\frac{1}{2}S+\xi&amp;0\\
+0&amp;0&amp;S
+\end{array}\right)
+$$\end{document}</tex-math></disp-formula>By ordering the principal components as <inline-formula id="IEq9"><tex-math id="M24">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${|S_{33}|\ge|S_{22}|\ge|S_{11}|}$$\end{document}</tex-math></inline-formula>, one gets <inline-formula id="IEq10"><tex-math id="M25">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\xi=(S_{22}-S_{11})/2}$$\end{document}</tex-math></inline-formula>. If the biaxiality &#x3BE; is zero, the orientational distribution of the molecule is defined by a single axis, which is called director. In the biaxial case with a non-zero &#x3BE;, there exists a second distinct direction orthogonal to the director, and the molecular motions are characterized by two axes. A perfectly axially symmetric molecule that is oriented parallel to the membrane normal will lead to the following order tensor:
+<disp-formula id="Equ16"><label>16</label><tex-math id="M26">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+{\bf S}=\left(\begin{array}{lll}
+-0.5&amp;0&amp;0\\
+0&amp;-0.5&amp;0\\
+0&amp;0&amp;1
+\end{array}\right)
+$$\end{document}</tex-math></disp-formula>When the molecular Saupe tensor is used to interpret the NMR observables, the conformational tensors <bold>C</bold><sup>A</sup> have to be known as well. These tensors mediate between the orientation and order of a site A and the molecular coordinate system. If the transformation matrices leading from the molecular coordinate system to the individual tensor systems of the sites A are known, <bold>C</bold><sup>A</sup> can be calculated the same way as the order tensor (see Limmer <xref ref-type="bibr" rid="CR17">1989</xref>). Only in the case of rigid molecules, simple expressions for <bold>C</bold><sup>A</sup> can be derived from the molecular geometry. Since in our MD simulations the segmental order tensors <bold>W</bold><sup>A</sup> and the molecular Saupe order tensor are calculated directly, the conformational order tensors become obsolete.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Molecular dynamics simulation</title>
+        <p>The integration of the equations of motions is based on Verlet&#x2019;s algorithm (Verlet <xref ref-type="bibr" rid="CR25">1967</xref>), and time steps of 0.5&#xA0;fs were employed to sample all high frequency hydrogen atom vibrations. In constrained MD simulations it is generally necessary to control the temperature during the simulation time. This is accomplished by coupling the molecular system to a heat bath which dissipates the heat generated by the pseudo-forces. All prevailing differences between the constraints and their calculated values are sources of heat. To obtain an <italic>NTV</italic> assemble (with conserved particle number <italic>N</italic>, temperature <italic>T</italic>, and volume <italic>V</italic>), we introduced a proper thermostating procedure (see Evans and Morriss <xref ref-type="bibr" rid="CR7">1990</xref>). The coupling to the thermostat is controlled by a coupling time constant &#x3B7; which should be much larger than the time step. This time span &#x3B7; allows an adjustment of the range of thermal fluctuations in the simulated molecular system.</p>
+        <p>To prevent too large pseudo-forces at the start of the MD simulation the pseudo-forces were gradually increased towards their final values during the MD simulation. To this aim we introduced time dependent scaling factors <inline-formula id="IEq11"><tex-math id="M27">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${f=1-\hbox{e}^{-t/\rho}}$$\end{document}</tex-math></inline-formula>, which approach the value 1.0 in an exponential fashion. The time constant was set in most cases to 200&#xA0;ps, leading to a relatively smooth course of the temperature.</p>
+        <p>When applying the NMR orientational constraints during an MD run, the resulting pseudo-forces will &#x201C;heat up&#x201D; the system and enhance its rotational degrees of freedoms. Because the averaging procedure depends on the molecular re-orientations caused by the NMR constraints, some net rotational motion will prevail up to the end of the simulation. In standard MD simulations any overall molecular rotations and translations are subtracted from the velocities, since these external degrees of freedom are not of interest. In the present orientationally constrained calculations, however, only the net translations of the systems are removed.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>Parametrization</title>
+        <p>For NMR spectroscopic considerations it is convenient to introduce the quadrupolar coupling tensor <bold>C</bold><sup>Q</sup> in frequency units:
+<disp-formula id="Equ17"><label>17</label><tex-math id="M28">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$C_{\alpha\beta}^Q=\frac{e^2}{h}V_{\alpha\beta}Q
+$$\end{document}</tex-math></disp-formula>where <italic>Q</italic> is the quadrupolar moment of the deuterium nucleus, and <bold>V</bold> the electric field gradient tensor at the nuclear position. The trace of <italic>C</italic><sup><italic>Q</italic></sup> is zero because of <inline-formula id="IEq12"><tex-math id="M29">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${V_{xx}+V_{yy}+V_{zz}=0}$$\end{document}</tex-math></inline-formula>, and in the case of carbon-bonded deuterons the quadrupolar coupling tensor can be considered to a good approximation as diagonal in the coordinate system aligned with the C&#x2013;<sup>2</sup>H bond. If the electron distribution is axially symmetric there is only one linearly independent tensor component, otherwise there are two. In the general high temperature case we observe two quadrupolar resonances with frequencies symmetric to zero:
+<disp-formula id="Equ18"><label>18</label><tex-math id="M30">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\nu_{Q}^{\pm}=\pm\frac{3}{4}D_{z\alpha}D_{z\beta}C_{\alpha\beta}^{Q}
+$$\end{document}</tex-math></disp-formula>If the <italic>z</italic>-axis of the local electric field gradient points into the direction of the magnetic field, the corresponding quadrupolar splitting &#x394; &#x3BD; is
+<disp-formula id="Equ19"><label>19</label><tex-math id="M31">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\Delta\nu=\frac{3}{2}C_{zz}^{Q}
+$$\end{document}</tex-math></disp-formula></p>
+        <p>In the case of a C&#x2013;<sup>2</sup>H bond the deuterium quadrupolar coupling depends only weakly on the molecular surrounding, hence representative values from static solid state NMR measurements of characteristic substances can be used as quadrupolar constants (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>). In this selection we have to keep in mind that the quadrupolar coupling constants depend strongly on the hybridization of the carbon, and to some extent also on the polarization of the C&#x2013;<sup>2</sup>H bonds by partial charges caused by electronegative groups.</p>
+        <p>The coordinate system for the local tensors is defined in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>. The <italic>zz</italic>-component is aligned with the C&#x2013;<sup>2</sup>H bond direction, and the <italic>yy</italic>-component is perpendicular to any &#x3C0; system. For an aromatic C&#x2013;<sup>2</sup>H (sp<sup>2</sup>) bond an asymmetry parameter of <inline-formula id="IEq13"><tex-math id="M32">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\eta_{Q}=0.06\;(\eta_{Q}=
+(C_{11}^{Q}-C_{22}^{Q})/C_{33}^{Q}}$$\end{document}</tex-math></inline-formula> with <inline-formula id="IEq14"><tex-math id="M33">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${C_{33}^{Q} &gt; C_{11}^{Q} &gt; C_{22}^{Q}}$$\end{document}</tex-math></inline-formula>) was assumed, and the tensor axes were assigned according to calculations of Bailey (<xref ref-type="bibr" rid="CR1">1998</xref>). The value for the &#x2013;CD<sub>3</sub> group is obtained from the C(sp<sup>3</sup>)&#x2013;<sup>2</sup>H value scaled by 1/3, assuming rapid rotation around the C&#x2013;CD<sub>3</sub> axis.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Program implementation</title>
+        <p>The routines to apply the proposed orientational constraints are included into the COSMOS-NMR force field, which has been used in a number of previous applications, but which had so far been restricted to distance and chemical shift constraints (see e.g. Sternberg et&#xA0;al. <xref ref-type="bibr" rid="CR20">2003</xref>; Witter et&#xA0;al. <xref ref-type="bibr" rid="CR28">2002</xref>), and for the force field (M&#xF6;llhoff and Sternberg <xref ref-type="bibr" rid="CR12">2001</xref>; Sternberg et&#xA0;al. <xref ref-type="bibr" rid="CR19">2001</xref>). These two types of NMR constraints can be combined with the new orientational constraints as will be demonstrated in the example of PGLa below. The authors provide the backend version of the full COSMOS program, containing all computational procedures without the graphics and modelling interface (GUI) (see <ext-link ext-link-type="uri" xlink:href="http://www.cosmos-software.de">http://www.cosmos-software.de</ext-link>). The COSMOS-backend (C++) was compiled for several operation systems including Windows, Unix and Linux.</p>
+      </sec>
+    </sec>
+    <sec id="Sec10">
+      <title>Applications</title>
+      <p>The use of NMR orientational constraints is particularly well suited to gain insight into the alignment and dynamics of molecules embedded in biomembranes. In the three examples presented here, we will first demonstrate our new MD approach on pyrene as a simple model compound dissolved in lipid bilayers, then we will apply it to cholesterol as an intrinsic membrane lipid, and finally to the antimicrobial peptide PGLa, which forms an amphiphilic &#x3B1;-helix in membranes.</p>
+      <sec id="Sec11">
+        <title>Pyrene</title>
+        <p>Pyrene was used as a first example, not only because of its relatively simple and rigid structure, but also because a full set of data is available from a recent <sup>2</sup>H-NMR analysis in oriented lipid bilayers (Hoff et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>). The same publication included an all-atom MD simulation of four pyrene molecules in a POPC (1-palmitoyl-2-oleoyl-phosphatedylcholine) membrane. Those previous results will thus allow a direct comparison of our new strategy with established simulation techniques. The present orientational constraint-driven simulation utilizes the experimental <sup>2</sup>H-NMR data of deuterium-labelled pyrene (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) embedded at 4&#xA0;mol% in POPC bilayers. Spectra had been acquired at two discrete sample orientations, namely with the membrane normal aligned parallel and perpendicular to the <italic>B</italic><sub>0</sub> field. In both orientations two pairs of narrow lines were observed (corresponding to the sites <sup>2</sup>H1 and <sup>2</sup>H2&#xA0;+&#xA0;<sup>2</sup>H3, respectively), whose splittings changed by a factor of 1/2. This situation can only originate from axially symmetric averaged quadrupolar tensors that are aligned with the membrane normal. This means that the pyrene molecules reorient quickly (on the time scale of the NMR interaction) about the membrane normal. Since the principal axis system of each averaged quadrupolar deuterium coupling tensor coincides with the membrane-fixed coordinate system, the absolute values of all 6 or 5 linearly independent components of the averaged coupling tensor are known and can be included in the present MD simulation. In this case, we could even make use of the signs of the principal quadrupolar components, as they had been deduced from the previous MD simulations mentioned above (Hoff et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>).<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Fully deuterated pyrene molecule with three kinds of labelled sites (<sup>2</sup>H1, <sup>2</sup>H2 and <sup>2</sup>H3), illustrating the principal axes of the local deuterium quadrupolar tensors and of the principal axes of inertia <italic>a</italic>, <italic>b</italic> and <italic>c</italic></p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig2_HTML" id="MO23"/></fig></p>
+        <p>Using the <sup>2</sup>H-NMR data from the literature, we performed two MD simulations on pyrene constrained by the complete tensors. In the first run, only the contributions to the pseudo-energy arising from the three diagonal elements (first sum in Eq.&#xA0;<xref rid="Equ4" ref-type="">4</xref>) were considered, and in a second run also the three off diagonal values (in this case 0.0) were included. In the first run, 11.4&#xA0;ns were simulated, with the MD parameters set as given in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. To study the time behaviour of the pseudo-forces they were not scaled up exponentially as in the other two case studies below. The width parameter was set equal to the experimental error as &#x394;<italic>P</italic>&#xA0;=&#xA0;1&#xA0;kHz, and the memory time was &#x3C4;&#xA0;=&#xA0;200&#xA0;ps. The time development of the simulated tensor components for the first nanosecond can be seen in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. The trajectories are shown for the <sup>2</sup>H2 site, which possesses an experimental splitting of 40.5&#xA0;kHz. After an initial time period of about 250&#xA0;ps, the final average coupling tensor components are reached and their values fluctuate only weakly. The residual fluctuations depend on four parameters: (i) the thermal fluctuations controlled by the coupling to the heat bath, (ii) the pseudo-energy, (iii) the width parameter &#x394;P given in Eq. 11, and (iv) the memory time &#x3C4; of Eq.&#xA0;<xref rid="Equ6" ref-type="">6</xref>. In the simulated <sup>2</sup>H-NMR spectra (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>) these prevailing small fluctuations translate into line broadening, and the resulting line shapes are indeed very similar to the experimentally observed spectrum (Hoff et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>).<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Deuterium quadrupolar coupling tensors</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Group</th><th align="left">C<sub arrange="stack"><italic>zz</italic></sub><sup arrange="stack"><italic>Q</italic></sup>/kHz</th><th align="left">C<sub arrange="stack"><italic>yy</italic></sub><sup arrange="stack"><italic>Q</italic></sup>/kHz</th><th align="left">C<sub arrange="stack"><italic>xx</italic></sub><sup arrange="stack"><italic>Q</italic></sup>/kHz</th><th align="left">Source</th></tr></thead><tbody><tr><td align="left">C(sp<sup>2</sup>)&#x2013;<sup>2</sup>H</td><td char="." align="char">193</td><td char="." align="char">&#x2212;102.29</td><td char="." align="char">&#x2212;90.71</td><td align="left">Benzene, naphthalene (Rinn&#xE9; and Depireux <xref ref-type="bibr" rid="CR14">1974</xref>)</td></tr><tr><td align="left">C(sp<sup>3</sup>)&#x2013;<sup>2</sup>H</td><td char="." align="char">175</td><td char="." align="char">&#x2212;87.5</td><td char="." align="char">&#x2212;87.5</td><td align="left">Acenaphthene bridge (Rinn&#xE9; and Depireux <xref ref-type="bibr" rid="CR14">1974</xref>)</td></tr><tr><td align="left">&#x2013;CD<sub>3</sub></td><td char="." align="char">58.33</td><td char="." align="char">&#x2212;29.17</td><td char="." align="char">&#x2212;29.17</td><td align="left">C(sp<sup>3</sup>)&#x2013;<sup>2</sup>H<sup>a</sup></td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>&#xA0;The values of the quadrupolar coupling constant are scaled by 1/3 to take into account the free methyl rotation</p></table-wrap-foot></table-wrap><table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>General parameters for the MD simulations with orientational constraints</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Parameter</th><th align="left">Value</th></tr></thead><tbody><tr><td align="left">Target temperature</td><td char="." align="char">293&#xA0;K</td></tr><tr><td align="left">MD time step</td><td char="." align="char">0.5&#xA0;fs</td></tr><tr><td align="left">Coupling time &#x3B7; to the heat bath</td><td char="." align="char">0.05&#xA0;ps</td></tr><tr><td align="left">Pseudo-force width &#x394;<italic>P</italic> (Eq.&#xA0;<xref rid="Equ11" ref-type="">11</xref>)</td><td char="." align="char">1&#xA0;kHz</td></tr><tr><td align="left">Memory decay time &#x3C4; for the average (Eqs.&#xA0;<xref rid="Equ6" ref-type="">6</xref>, <xref rid="Equ7" ref-type="">7</xref>)</td><td char="." align="char">200&#xA0;ps</td></tr><tr><td align="left">Time constant &#x3C1; for the exponential rise of pseudo-forces</td><td char="." align="char">200&#xA0;ps</td></tr><tr><td align="left">Total MD duration</td><td char="." align="char">1&#xA0;ns</td></tr></tbody></table></table-wrap><fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Trajectory of the time development of the averaging for the deuterium tensor components for <sup>2</sup>H2 of pyrene. Under the influence of orientational pseudo-forces all components approach their final values after a period of about 250&#xA0;ps. The component at about 20&#xA0;kHz is experimentally observable in an oriented sample with the membrane normal parallel to <italic>B</italic><sub>0</sub>. The component at &#x2212;10&#xA0;kHz would correspond to an experiment with a perpendicular sample alignment</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig3_HTML" id="MO24"/></fig><fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p><sup>2</sup>H-NMR spectrum from the MD simulation of deuterated pyrene, using orientational constraints from an NMR measurement in oriented POPC membranes (Hoff et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>)</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig4_HTML" id="MO25"/></fig></p>
+        <p>In this first simulation we had constrained only the three principal components of the quadrupolar tensor. It turned out that in this case small off-diagonal values did not approach zero but remain in the range of &#x2212;1.5 to 2&#xA0;kHz up to the end of the simulation (see Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). At the beginning of the simulation a high pseudo-energy of 31,000&#xA0;kJ/mol was encountered, which dropped to 0.8&#xA0;kJ/mol by the end of the simulation. Because of the large pseudo-energies at the start, we realized that it is preferable to first run a preliminary MD simulation (1&#x2013;4&#xA0;ns) with much smaller pseudo-forces, and then to step up the pseudo- forces after some initial averaging has been performed. In the next two cases studies the pseudo-forces were switched on exponentially to avoid long preliminary equilibration periods.</p>
+        <p>In a second MD simulation of pyrene over 7.8&#xA0;ns, we also constrained the three off-diagonal tensor components <italic>C</italic><sub><italic>xy</italic></sub>, <italic>C</italic><sub><italic>xz</italic></sub>, and <italic>C</italic><sub><italic>yz</italic></sub> to zero, which are averaged by rotations of the molecule about the membrane normal. The corresponding values calculated from the MD run yielded off-diagonal elements with absolute values smaller than 0.23&#xA0;kHz. The pseudo-energy increased by a factor of two, as it now contains contributions from both the diagonal and off-diagonal tensor components. In an attempt to compensate for the higher pseudo-energy, we set the memory time to a higher value of &#x3C4;&#xA0;=&#xA0;1,000&#xA0;ps (see Eq.&#xA0;<xref rid="Equ6" ref-type="">6</xref>). Altogether we obtained smaller fluctuations of the coupling tensor components and much narrower lines in simulated spectra, which can be most likely attributed to the damping effect of the memory function outweighing the higher pseudo-energies.</p>
+        <p>Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref> summarizes the calculated quadrupolar splittings corresponding to the results of the second simulation, in which all tensor components were constrained. The values were averaged for any sites on pyrene with mutually parallel C&#x2013;<sup>2</sup>H bond directions, so that the <sup>2</sup>H1 splitting is a mean value of two and the others are mean values of four sites each. The MD simulation is seen to reflect the experimental <sup>2</sup>H-NMR data very well in several aspects. First of all, the calculated quadrupolar splittings reproduce the experimental values very well. The marginally lower values found for the simulated splittings might be explained by a slightly elevated temperature encountered during the simulation. Namely, the mean temperature of this simulation was 302&#xA0;K and the final temperature 299&#xA0;K. Since the target temperature of the simulation was 290&#xA0;K, the NMR constraints produced a constant temperature increase of about 10&#xA0;K. This difference would explain the slightly smaller simulated splittings compared to the experiment. In full agreement with the experimental data, no significant difference was found for the sites <sup>2</sup>H2 and <sup>2</sup>H3. In the simulations, the difference between their splittings was within the scatter of the individual sites, and this difference could neither be resolved experimentally. Furthermore, also the averaging of the pyrene molecule in the membrane is reflected correctly in the simulation. The values for the tensor components perpendicular to the <italic>B</italic><sub>0</sub> field direction are negative and half of the values of Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>, indicating that the simulation does indeed lead to an averaged axially symmetric tensor aligned parallel to the membrane normal.<table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Calculated quadrupolar splittings in a 7.8&#xA0;ns constrained MD simulation of pyrene, compared with the experimental values obtained from a <sup>2</sup>H-NMR measurement of the deuterated pyrene in oriented POPC membranes</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Site</th><th align="left">Sign of tensor component<sup>a</sup></th><th align="left">Constrained MD splitting &#x394;&#x3BD; (kHz)</th><th align="left">NMR experimental<sup>b</sup> splitting &#x394; &#x3BD; (kHz)</th></tr></thead><tbody><tr><td align="left"><sup>2</sup>H1</td><td align="left">+</td><td char="." align="char">91.4 (91.39, 91.4)<sup>c</sup></td><td char="." align="char">93.0</td></tr><tr><td align="left"><sup>2</sup>H2</td><td align="left">+</td><td char="." align="char">39.9 (39.8&#x2013;40.0)<sup>c</sup></td><td char="." align="char">40.5</td></tr><tr><td align="left"><sup>2</sup>H3</td><td align="left">+</td><td char="." align="char">39.7 (39.6&#x2013;39.8)<sup>c</sup></td><td char="." align="char">40.5</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>&#xA0;The sign is given for the orientation of the membrane normal in <italic>B</italic><sub>0</sub> field direction</p><p><sup>b</sup>&#xA0;Hoff et&#xA0;al. (<xref ref-type="bibr" rid="CR8">2005</xref>)</p><p><sup>c</sup>&#xA0;Range of simulated values for two or four sites, respectively</p></table-wrap-foot></table-wrap></p>
+        <p>The experimental <sup>2</sup>H-NMR data only reflect dynamic averages of e.g. the C&#x2013;<sup>2</sup>H bond orientation, but can access only little information on the dynamic processes leading to the observed splittings. Here, the constraint-driven MD simulation provides a way to obtain details on molecular motions that are compatible with the experimental data. In the example of pyrene, the symmetry of the molecule and its motions in the membrane allowed us to derive information on the dynamic behaviour of the molecule from its observed splittings. Since in our case the coupling tensors are diagonal within the bond coordinate system and the segmental order tensor is also diagonal, simple expressions for the quadrupolar splittings are obtained:
+<disp-formula id="Equ20"><label>20</label><tex-math id="M34">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\Delta\nu^{\rm A}=W_{\alpha\alpha}^{\rm A}C_{\alpha\alpha}^{Q}
+$$\end{document}</tex-math></disp-formula> and for the case of an axially symmetric coupling tensor <bold>C</bold><sup>Q</sup> we get
+<disp-formula id="Equ21"><label>21</label><tex-math id="M35">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$
+\Delta\nu^{\rm A}=\frac{3}{2}W_{zz}^{\rm A}C_{zz}^{Q}
+$$\end{document}</tex-math></disp-formula>The latter expression is especially useful, since the quadrupolar splitting of a site A is directly related to a single segmental order parameter. Assuming that the order tensor is diagonal in the laboratory frame, Eq.&#xA0;<xref rid="Equ21" ref-type="">21</xref> applies to dipolar splittings as well, since the static dipolar coupling tensor is always axially symmetric and traceless, and the same holds for a rapidly rotating CD<sub>3</sub>-group. However, since the coupling tensor <bold>C</bold><sup>Q</sup> for the C(sp<sup>2</sup>)&#x2013;<sup>2</sup>H bonds is not axially symmetric (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>), the three principal elements of the order tensors <bold>W</bold><sup>A</sup> contribute to the splitting as in Eq.&#xA0;<xref rid="Equ20" ref-type="">20</xref>. It is therefore not possible to extract the order parameter tensor components from a single experimental splitting. From the course of our MD simulation, on the other hand, all components of the orders tensors <bold>W</bold><sup>A</sup> (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>) are available, and the terms of Eq. 20 can be readily analysed.<table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p>Simulated order parameters for pyrene in POPC</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Site</th><th align="left"><italic>W</italic><sub><italic>xx</italic></sub></th><th align="left"><italic>W</italic><sub><italic>yy</italic></sub></th><th align="left"><italic>W</italic><sub><italic>zz</italic></sub></th><th align="left">| <italic>W</italic><sub><italic>xy</italic></sub>,<italic>W</italic><sub><italic>xz</italic></sub>,<italic>W</italic><sub><italic>yz</italic></sub>|</th></tr></thead><tbody><tr><td align="left"><sup>2</sup>H1</td><td char="." align="char">+0.021</td><td char="." align="char">&#x2212;0.342</td><td char="." align="char">+0.321</td><td char="." align="char">&#x2264;0.03</td></tr><tr><td align="left"><sup>2</sup>H2</td><td char="." align="char">+0.181</td><td char="." align="char">&#x2212;0.310</td><td char="." align="char">+0.129</td><td char="." align="char">&#x2264;0.07</td></tr><tr><td align="left"><sup>2</sup>H3</td><td char="." align="char">+0.165</td><td char="." align="char">&#x2212;0.294</td><td char="." align="char">+0.129</td><td char="." align="char">&#x2264;0.03</td></tr><tr><td align="left"/><td char="." align="char"><italic>S</italic><sub><italic>bb</italic></sub></td><td char="." align="char"><italic>S</italic><sub><italic>cc</italic></sub></td><td char="." align="char"><italic>S</italic><sub><italic>aa</italic></sub></td><td char="." align="char">|<italic>S</italic><sub><italic>ab</italic></sub>, <italic>S</italic><sub><italic>ac</italic></sub>, <italic>S</italic><sub><italic>bc</italic></sub>|</td></tr><tr><td align="left">Molecule<sup>a</sup></td><td char="." align="char">+0.048</td><td char="." align="char">&#x2212;0.275</td><td char="." align="char">+0.228</td><td char="." align="char">&#x2264;0.006</td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>&#xA0;The values for the molecular Saupe order tensor are ordered in the columns such that the axes of inertia fit to the corresponding coordinate axes of the <sup>2</sup>H1 site (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>)</p></table-wrap-foot></table-wrap></p>
+        <p>For a perfectly rigid pyrene molecule the molecular Saupe order tensor <bold>S</bold> and the segmental order tensors <bold>W</bold><sup>A</sup> are linked by fixed conformation tensors. With our choice of the molecular coordinate system, <bold>S</bold> and <bold>W</bold><sup>A</sup> are identical for the site <sup>2</sup>H1, and for the other two sites the tensors are related by simple geometric expressions. Comparing the molecular order tensor <bold>S</bold> (last row in Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>) and the segmental order tensor <bold>W</bold> (e.g. of the site <sup>2</sup>H1, which is expressed in the same coordinate system, first row in Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>), it is noticed that most of the molecular <bold>S</bold> tensor components are slightly smaller than the corresponding values of the segmental order tensor <bold>W</bold>. This effect is caused by bond vibrations and molecular twists occurring during the MD simulation. However, as these contributions to the dynamics (manifested in the difference between segmental and molecular order) are small, the mobility of the pyrene in the membrane is well described by the molecular order tensor <bold>S</bold>. Further qualitative conclusions on the behaviour of the pyrene molecule in the membrane can thus be drawn from the order tensor. Because <italic>S</italic><sub><italic>aa</italic></sub> constitutes the largest (signed value) component, it is obvious that the corresponding axis <italic>a</italic> (in the system of inertia), and with it the long molecular axis of pyrene, shows some preference for an orientation in the direction of the membrane normal. Since <italic>S</italic><sub><italic>cc</italic></sub> and <italic>S</italic><sub><italic>bb</italic></sub> are different, the molecular motions are not axially symmetric, but display a preference for a second axis, expressed in a biaxiality parameter &#x3BE;&#xA0;=&#xA0;0.11 (see Eq.&#xA0;<xref rid="Equ16" ref-type="">16</xref>). This pronounced biaxiality is a consequence of the restricted motions of the flat pyrene molecule within the lipid matrix. A further indication for such a restricted motion is the fact that the smallest component of the order tensor <bold>S</bold> is found along the <italic>c</italic>-axis direction perpendicular to the aromatic ring system. This direction has thus the smallest average component <inline-formula id="IEq15"><tex-math id="M36">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\langle\cos \Theta_{c}^{2}\rangle}$$\end{document}</tex-math></inline-formula> along the membrane normal and is most conserved, as expected for the planar shape of the molecule. In their all-atom MD simulation including 128 lipid molecules and water, Hoff et&#xA0;al. (<xref ref-type="bibr" rid="CR8">2005</xref>) obtained essentially the same results as in this work, with the exception that they found a much higher Saupe order component <italic>S</italic><sub><italic>zz</italic></sub>&#xA0;=&#xA0;0.42 (in this work denoted with <italic>S</italic><sub><italic>cc</italic></sub>).</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Cholesterol</title>
+        <p>Cholesterol is a constituent of many biomembranes, and its orientation and motion within the lipid bilayer is of great interest to explain its influence on membrane properties. The behaviour of cholesterol in membranes has been studied extensively, especially by <sup>2</sup>H-NMR in view of its sensitivity towards molecular alignment and dynamics (Smith and Oldfield <xref ref-type="bibr" rid="CR16">1984</xref>). We have based our MD analysis on a recent study by Marsan et&#xA0;al. (<xref ref-type="bibr" rid="CR10">1999</xref>), who had measured and interpreted <sup>2</sup>H-NMR spectra of partially deuterated cholesterol in oriented DMPC (dimyristoylphosphatidylcholine) bilayers. The labelled sites in the sterol ring system are indicated in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>.<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Cholesterol molecule with <sup>2</sup>H-labelled sites indicated, for which experimental orientational constraints were available. From the MD simulation quadrupolar splittings were calculated for all deuterons in the ring system</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig5_HTML" id="MO26"/></fig></p>
+        <p>The authors examined six different models of cholesterol structures proposed in the literature using an RMSD analysis to assign all observed lines in the <sup>2</sup>H-NMR spectrum. In this analysis the quadrupolar splittings were calculated from the respective rigid molecular models, treating the molecular orientation and the Saupe tensor as free variables. It turned out that the results depended crucially on the selection of the molecular coordinates, and only the data from a neutron diffraction analysis (McMullan et&#xA0;al. <xref ref-type="bibr" rid="CR11">1992</xref>) of a cholesterol derivative (20-CH<sub>3</sub>-methylpregnene-3,20-diol) produced convincing results. This strong dependence on the exact coordinates is regarded as one of the main drawbacks of RMSD analyses of rigid molecular models.</p>
+        <p>In the analysis presented here, we performed MD simulations for both methylpregnenediol and cholesterol, having modelled the latter with COSMOS (see Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). As constraints for the MD simulations we used the <sup>2</sup>H-NMR splittings of the eight experimentally observed deuterium labels of Marsan et&#xA0;al. (<xref ref-type="bibr" rid="CR10">1999</xref>), together with their best assignment (see Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). In addition, from the MD simulations we predicted the putative quadrupolar splittings of all other protonated sites of the sterol ring system. This new data from our MD simulations can thus be used in the future to assign further <sup>2</sup>H-NMR spectra without the need for any special labelling schemes or particular molecular coordinates. As outlined above, we again used the full quadrupolar tensors as constraints. Two short preliminary MD runs were performed to determine the signs of the coupling constants, since this information is required for the full tensorial constraints. All quadrupolar splittings of cholesterol which had been measured in oriented samples with the membrane normal parallel to <italic>B</italic><sub>0</sub> yielded negative coupling constants, (giving correspondingly positive values for the perpendicular orientation, see Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). As in the example of pyrene, MD simulations over 1,000&#xA0;ps were sufficient to reproduce all features of molecular motion. To avoid too large pseudo-forces at the start of the simulation, the pseudo-forces were exponentially increased to their final values during the MD run. The parameters used in the simulations are summarized in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>.<table-wrap id="Tab5"><label>Table&#xA0;5</label><caption><p>Calculated deuterium quadrupolar splittings from a constrained MD simulation compared with the experimental <sup>2</sup>H-NMR data (Marsan et&#xA0;al. <xref ref-type="bibr" rid="CR10">1999</xref>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Site</th><th align="left">Constrained MD splitting of methyl-pregnenediol (kHz)</th><th align="left">Constrained MD splitting of cholesterol (kHz)</th><th align="left">Experimental NMR splitting (kHz)</th></tr></thead><tbody><tr><td align="left">H2a</td><td char="." align="char">&#x2212;101.5</td><td char="." align="char">&#x2212;101.4</td><td char="." align="char">101.68</td></tr><tr><td align="left">H2e</td><td char="." align="char">&#x2212;66.7</td><td char="." align="char">&#x2212;67.7</td><td char="." align="char">67.86</td></tr><tr><td align="left">H3_1</td><td char="." align="char">&#x2212;107.1</td><td char="." align="char">&#x2212;106.7</td><td char="." align="char">107.30</td></tr><tr><td align="left">H4e</td><td char="." align="char">&#x2212;63.2</td><td char="." align="char">&#x2212;62.3</td><td char="." align="char">62.68</td></tr><tr><td align="left">H4a</td><td char="." align="char">&#x2212;94.3</td><td char="." align="char">&#x2212;93.0</td><td char="." align="char">94.98</td></tr><tr><td align="left">H6</td><td char="." align="char">&#x2212;7.29</td><td char="." align="char">&#x2212;6.69</td><td char="." align="char">6.44</td></tr><tr><td align="left">H7a</td><td char="." align="char">&#x2212;92.9</td><td char="." align="char">&#x2212;95.4</td><td char="." align="char">96.12</td></tr><tr><td align="left">H7e</td><td char="." align="char">&#x2212;91.6</td><td char="." align="char">&#x2212;91.3</td><td char="." align="char">91.48</td></tr><tr><td align="left">C18&#x2013;CD<sub>3</sub></td><td char="." align="char">&#x2212;33.0</td><td char="." align="char">&#x2212;33.8</td><td char="." align="char"/></tr><tr><td align="left">C19&#x2013;CD<sub>3</sub></td><td char="." align="char">&#x2212;37.5</td><td char="." align="char">&#x2212;34.7</td><td char="." align="char"/></tr><tr><td align="left">H1a</td><td char="." align="char">&#x2212;104.2</td><td char="." align="char">&#x2212;99.2</td><td char="." align="char"/></tr><tr><td align="left">H1e</td><td char="." align="char">&#x2212;69.4</td><td char="." align="char">&#x2212;46.1</td><td char="." align="char"/></tr><tr><td align="left">H8_1</td><td char="." align="char">&#x2212;107.0</td><td char="." align="char">&#x2212;100.3</td><td char="." align="char"/></tr><tr><td align="left">H9_1</td><td char="." align="char">&#x2212;112.6</td><td char="." align="char">&#x2212;103.0</td><td char="." align="char"/></tr><tr><td align="left">H11a</td><td char="." align="char">&#x2212;106.4</td><td char="." align="char">&#x2212;102.7</td><td char="." align="char"/></tr><tr><td align="left">H11e</td><td char="." align="char">&#x2212;50.7</td><td char="." align="char">&#x2212;74.7</td><td char="." align="char"/></tr><tr><td align="left">H12a</td><td char="." align="char">&#x2212;46.4</td><td char="." align="char">&#x2212;13.1</td><td char="." align="char"/></tr><tr><td align="left">H12e</td><td char="." align="char">&#x2212;103.1</td><td char="." align="char">&#x2212;101.1</td><td char="." align="char"/></tr><tr><td align="left">H14_1</td><td char="." align="char">&#x2212;103.4</td><td char="." align="char">&#x2212;100.3</td><td char="." align="char"/></tr><tr><td align="left">H15_1</td><td char="." align="char">&#x2212;102.1</td><td char="." align="char">&#x2212;81.8</td><td char="." align="char"/></tr><tr><td align="left">H15_2</td><td char="." align="char">&#x2212;93.5</td><td char="." align="char">&#x2212;88.9</td><td char="." align="char"/></tr><tr><td align="left">H16_1</td><td char="." align="char">&#x2212;17.6</td><td char="." align="char">&#x2212;40.9</td><td char="." align="char"/></tr><tr><td align="left">H16_2</td><td char="." align="char">&#x2212;23.1</td><td char="." align="char">&#x2212;27.6</td><td char="." align="char"/></tr><tr><td align="left">H17_1</td><td char="." align="char">&#x2212;85.7</td><td char="." align="char">&#x2212;92.7</td><td char="." align="char"/></tr></tbody></table></table-wrap></p>
+        <p>The final results for the quadrupolar splittings obtained from the constrained MD simulations of both sterols are summarized in Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>. The corresponding simulated <sup>2</sup>H-NMR spectrum of cholesterol is shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>, indicating the peak positions of all ring deuterons. This presentation can be helpful in the future for assigning the signals of fully deuterated cholesterol derivatives. Overall, the theoretical and experimental values agree very well within 1&#xA0;kHz (except for <sup>2</sup>H6). The only noteworthy deviation is seen for <sup>2</sup>H7a, where the calculated splitting of methylpregnenediol differs by 3.2&#xA0;kHz from the experiment. Overall, the simulated cholesterol quadrupolar couplings agree slightly better with the experimental values than the respective methylpregnenediol values. This finding is also reflected in the lower mean temperature reached in the simulation of cholesterol (323&#xA0;K) than for methylpregnenediol (336&#xA0;K). The higher mean temperature of the latter is probably also responsible for the slight differences between the calculated splittings of the two molecules in some of the other sites, too (see Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>).<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Calculated <sup>2</sup>H-NMR spectrum from the MD simulation of deuterated cholesterol in an oriented membrane, with the membrane normal parallel to <italic>B</italic><sub>0</sub>. Pseudo-forces were applied in the MD simulation to a sub-set of deuterons for which experimental data was available (see Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>). The peak positions of all other deuterons connected to the ring skeleton are also predicted and indicated (see Table&#xA0;<xref rid="Tab5" ref-type="table">5</xref>). The intensity of the CD<sub>3</sub>-signals has to be multiplied by a factor of three</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig6_HTML" id="MO27"/></fig></p>
+        <p>The constrained MD simulation showed that both cholesterol derivatives essentially assume an upright orientation in the membrane and perform rotations mainly around their long molecular <italic>a</italic>-axis of inertia. This behaviour is reflected in the molecular Saupe order tensor (see Table&#xA0;<xref rid="Tab6" ref-type="table">6</xref>), whose values are not far from the ideal axially symmetric case of Eq.&#xA0;<xref rid="Equ16" ref-type="">16</xref> with a low biaxiality of &#x3BE;&#xA0;=&#xA0;0.01. Previous calculations of the order tensor from the NMR data (Marsan et&#xA0;al. <xref ref-type="bibr" rid="CR10">1999</xref>) had given similar results as the present MD simulation. We find that the preferred orientation of the long <italic>a</italic>-axis of the molecule displays a small mean tilt angle &#x398; <sub><italic>a</italic></sub> of 13&#xB0; with respect to the membrane normal. A similar result was obtained by Marsan et&#xA0;al. (<xref ref-type="bibr" rid="CR10">1999</xref>), who reported a tilt of the long molecular axis (as defined in the paper of Dufourc et&#xA0;al. <xref ref-type="bibr" rid="CR6">1984</xref>) with respect to the membrane normal of 12&#xB0; (provided that in their RMSD data analysis the restriction to a rotationally symmetric order tensor was dropped).<table-wrap id="Tab6"><label>Table&#xA0;6</label><caption><p>Molecular Saupe order tensor derived from the constrained MD simulation, compared with the values derived from the previous RMSD analysis (Marsan et&#xA0;al. <xref ref-type="bibr" rid="CR10">1999</xref>)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Tensor component</th><th align="left">MD simulation of methylpregnenediol</th><th align="left">MD simulation of cholesterol</th><th align="left">Static RMSD analysis</th></tr></thead><tbody><tr><td align="left"><italic>S</italic><sub><italic>aa</italic></sub></td><td char="." align="char">0.87</td><td char="." align="char">0.88</td><td char="." align="char">0.94</td></tr><tr><td align="left"><italic>S</italic><sub><italic>bb</italic></sub></td><td char="." align="char">&#x2212;0.44</td><td char="." align="char">&#x2212;0.44</td><td char="." align="char">&#x2212;0.48</td></tr><tr><td align="left"><italic>S</italic><sub><italic>cc</italic></sub></td><td char="." align="char">&#x2212;0.43</td><td char="." align="char">&#x2212;0.44</td><td char="." align="char">&#x2212;0.46</td></tr><tr><td align="left"><italic>S</italic><sub><italic>ab</italic></sub></td><td char="." align="char">0.0</td><td char="." align="char">&#x2212;0.11</td><td char="." align="char"/></tr><tr><td align="left"><italic>S</italic><sub><italic>ac</italic></sub></td><td char="." align="char">0.0</td><td char="." align="char">&#x2212;0.12</td><td char="." align="char"/></tr><tr><td align="left"><italic>S</italic><sub><italic>bc</italic></sub></td><td char="." align="char">0.0</td><td char="." align="char">0.0</td><td char="." align="char"/></tr></tbody></table></table-wrap></p>
+        <p>We note that the axially symmetric averaging of cholesterol does not imply that its motion resembles a smooth rotation about a fixed axis. In the MD simulation we observed frequent jumps of the long axis by 20 to 30&#xB0;, accompanied by a change of the conformation of the aliphatic tail of the molecule. This behaviour can be examined more closely by inspecting the trajectory of the angle &#x398; <sub><italic>a</italic></sub> between the <italic>a</italic>-axis of inertia and the membrane normal (<italic>z</italic>-axis, see Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>). Under the influence of the full pseudo-forces after 150&#xA0;ps, the long axis of cholesterol frequently jumps off the most preferred orientation of &#x398; <sub><italic>a</italic></sub>&#xA0;=&#xA0;4&#xB0;. As a consequence, the mean orientation and the most frequent orientation do not coincide. Methylpregnenediol behaves clearly different in the MD simulation, since it has only a short aliphatic tail that does not give rise to conformational changes.<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Trajectory of the time development of the angle &#x398;<sub><italic>a</italic></sub> between the <italic>a</italic>-axis of inertia and the <italic>z</italic>-direction (membrane normal). The axis frequently jumps off its most preferred orientation due to conformational changes in the aliphatic tail of the molecule, hence the mean tilt (13&#xB0;) and the most preferred tilt (4&#xB0;) do not coincide</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig7_HTML" id="MO28"/></fig></p>
+      </sec>
+      <sec id="Sec13">
+        <title>PGLa</title>
+        <p>In our third case study, the new MD approach was applied to a membrane bound peptide. PGLa is a 21-residue cationic peptide (GMASKAGAIAGKIAKVALKAL-NH2) from the magainin family of antibiotics present in frog skin, which folds into an amphiphilic &#x3B1;-helix when bound to lipid bilayers. The mechanism of antimicrobial activity has been addressed in numerous studies and is attributed to the perturbation of bacterial membranes. Solid state NMR has yielded much insight into its structure and dynamic behaviour in model membranes (Bechinger <xref ref-type="bibr" rid="CR2">1999</xref>). For our MD simulations we used the constraints from the <sup>2</sup>H-NMR investigations of Strandberg et&#xA0;al. (<xref ref-type="bibr" rid="CR21">2005</xref>), who had labelled four native alanine residues (positions 6, 8, 10 and 14) and two isoleucines (positions 9 and 13) one by one with <sup>2</sup>H<sub>3</sub>-alanine. At a peptide-to-lipid ratio of 1:200 in DMPC, it was found from the quadrupolar splittings of these six CD<sub>3</sub>-groups that the &#x3B1;-helical PGLa is aligned flat in the plane of the membrane, and the peptide undergoes fast rotational diffusion about the membrane normal at 35&#xB0;C. From the same data we now derived the full quadrupolar coupling tensors for the six <sup>2</sup>H-labelled sites, including the sign of the tensor elements, and used these as constraints for the MD simulations. For the quadrupolar coupling tensors we used the parameters of the CD<sub>3-</sub>group (Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>), both for the native Ala substitutions as well as for the nominal constraint along the C<sub>&#x3B1;</sub>&#x2013;C<sub>&#x3B2;</sub> segment of isoleucine.</p>
+        <p>It is known from previous NMR studies (Strandberg et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>) that membrane-bound PGLa forms an &#x3B1;-helix in the range of the labelled stretch, and further evidence for an &#x3B1;-helical conformation between residues 6 and 21 is provided by (Bechinger <xref ref-type="bibr" rid="CR2">1999</xref>). We therefore started the MD simulations with an idealized &#x3B1;-helix, and for all backbone hydrogen bonds we introduced 18 additional distance constraints of 1.86&#xA0;&#xC5; to keep the molecular model helical. At the end of the simulation, the RMSD of the backbone hydrogen bond lengths from their ideal values was only 0.2&#xA0;&#xC5;, thus confirming that that the molecule stayed indeed mostly helical during the MD simulation. It also had to be taken into account that the four lysine side chains and N-terminus are positively charged. Since charged NH<sub arrange="stack">3</sub><sup arrange="stack">+</sup> groups have a strong tendency to form hydrogen bonds, we added a water molecule near each hydrogen atom of a charged group. This way any undesired hydrogen bonds of lysines to the backbone could be prevented, and indeed at the end of the simulation all 15 water molecules were still in contact with the peptide.</p>
+        <p>Compared to the two small-molecule case studies above, the NMR data on PGLa provide only few constraints on the large and rather flexible molecule, as the pseudo-forces act only on six amino acids out of 21. Therefore, unrealistically large-pseudo forces at the start of the MD simulation have to be avoided. As a first measure, the pseudo-forces were increased exponentially to their final values during the MD simulation with a time constant of &#x3C1;&#xA0;=&#xA0;100&#xA0;ps, like in the cholesterol simulation. From the NMR studies it was known that PGLa rotates rapidly (on the NMR time scale) about the membrane normal. This motion opens up a second possibility to scale the pseudo-forces properly. We calculated rotational averages of the quadrupolar tensors in every step of the MD. Only three tensor values rotated by 120&#xB0; around the director axis (in this case the membrane normal oriented parallel to the <bold>B</bold><sub>0</sub> field directions) are necessary to obtain a mean tensor within the limits of a fast rotation. All off-diagonal values of the simulated tensors thus become zero and only the principal values of the tensors are left as constraints. The mean temperature at the end of the simulation was only 11&#xA0;K above the target temperature of 293&#xA0;K, indicating that exceedingly high pseudo-forces have been successfully avoided indeed, which would otherwise have lead to additional heat production.</p>
+        <p>As in the other two case studies above, the constraint-driven MD simulations were able to reproduce the experimental <sup>2</sup>H-NMR data correctly, as evident from the comparison in Table&#xA0;<xref rid="Tab7" ref-type="table">7</xref>. All calculated frequencies are well within the experimental error margins (as estimated from the experimental line widths). For some additional sites the quadrupolar frequencies were predicted from the MD simulation, and it would be of interest whether future measurements can confirm these values.<table-wrap id="Tab7"><label>Table&#xA0;7</label><caption><p>Calculated deuterium quadrupolar splittings from a constrained MD simulation of PGLa, compared with the experimental <sup>2</sup>H-NMR data (Strandberg et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>) in DMPC</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Site</th><th align="left">MD (kHz)</th><th align="left">NMR (kHz)</th></tr></thead><tbody><tr><td align="left">Ala3</td><td char="." align="char">&#x2212;22.2</td><td char="." align="char"/></tr><tr><td align="left">Ala6</td><td char="." align="char">+15.7</td><td char="." align="char">+15.6</td></tr><tr><td align="left">Ala8</td><td char="." align="char">+17.1</td><td char="." align="char">+17.2</td></tr><tr><td align="left">Ala10</td><td char="." align="char">&#x2212;15.0</td><td char="." align="char">&#x2212;15.0</td></tr><tr><td align="left">Ala14</td><td char="." align="char">&#x2212;26.8</td><td char="." align="char">&#x2212;26.6</td></tr><tr><td align="left">Ala17</td><td char="." align="char">+17.1</td><td char="." align="char"/></tr><tr><td align="left">Ala20</td><td char="." align="char">&#x2212;25.5</td><td char="." align="char"/></tr><tr><td align="left">Ile9</td><td char="." align="char">&#x2212;4.9</td><td char="." align="char">&#x2212;5.2</td></tr><tr><td align="left">Ile13</td><td char="." align="char">+26.2</td><td char="." align="char">26.4</td></tr></tbody></table></table-wrap></p>
+        <p>The major aim of the present NMR data analysis was the determination of the time- and ensemble averaged alignment of the helical PGLa backbone in the membrane environment. As illustrated in Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>, the principal axes of inertia offer a suitable molecule-fixed frame of reference to describe the peptide orientation. In the PGLa the <italic>a</italic>-axis of least inertia points along the helix, and the <italic>c</italic>-axis of highest inertia is located between the hydrophilic lysine-rich face and the hydrophobic face of the molecule formed by alanines, valines, leucines and isoleucines. Intuitively, we would expect the helix to be in contact with biomembranes just like it is displayed in this view, namely with the intermediate <italic>b</italic>-axis collinear with the membrane normal.<fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>View along the long axis of PGLa modelled as an idealized &#x3B1;-helix with only the lysine, alanine and isoleucine side chains displayed. The latter two types were labelled by <sup>2</sup>H<sub>3</sub>-alanine, and their <sup>2</sup>H-NMR splittings were included into the MD simulation. The principal <italic>a</italic>-axis of inertia, points along the helix, and the <italic>b</italic>-axis of inertia points radially through C<sub>&#x3B1;</sub> of lysine 12</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig8_HTML" id="MO29"/></fig></p>
+        <p>The outcome of the MD simulation is illustrated most appropriately in Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>, which visualizes the alignment and dynamic behaviour of PGLa in DMPC. Here, the peptide orientations during the MD simulation are presented as a scatter plot of the inertia axes <italic>a</italic>, <italic>b</italic> and <italic>c</italic> on the surface of a unit sphere. A narrow range of orientations is seen for the <italic>a</italic>-axis representing the peptide helix. In contrast, the broad scatter for <italic>b</italic> and <italic>c</italic> indicates that a high degree of motional freedom exists for motions around the helix axis. The time-averaged tilt angle of the <italic>a</italic>-axis with respect to the membrane normal in found to be 99&#xB0;, with a mean deviation of about &#xB1;4&#xB0;. This value is in very good agreement with the tilt angle &#x3C4; &#x2248; 98&#xB0; of PGLa that had been deduced from an RMSD plot of the <sup>2</sup>H-NMR by Strandberg et&#xA0;al. (<xref ref-type="bibr" rid="CR21">2005</xref>) assuming a rigid idealized &#x3B1;-helix. We note, however, that such helix axis definition is not exactly comparable to the <italic>a</italic>-axis of inertia used in our MD calculations. The authors further described the azimuthal alignment of the amphiphilic peptide by defining an angle &#x3C1; between an axis pointing from the centre of the helix radially through the C<sub>&#x3B1;</sub>-atom of lysine 12 and the membrane plane. In our case, the <italic>b</italic>-axis of inertia also happens to be directed to C<sub>&#x3B1;</sub> of lysine 12 (see Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>), but the centre of inertia does not exactly coincide with the helix axis. As can be seen from Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>, the angle &#x398; <sub><italic>b</italic></sub> between the <italic>b</italic>-axis and the membrane normal oscillates between 10&#xB0; and 70&#xB0;, with a mean value of 33&#xB0;. This average value corresponds to an angle &#x3C1; of approximately 123&#xB0;, which compares well with &#x3C1; &#x2248; 115&#xB0; extracted from the previous analysis (Strandberg et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>). In this comparison we have to keep in mind that in our simulations the PGLa molecule was found to be far from rigid and possesses a high degree of mobility around the helix long axis. The lysine side chains are found to spread out much more than in the initial model, and the PGLa helix itself exhibits a small bend.<fig id="Fig9"><label>Fig.&#xA0;9</label><caption><p>Visualization of the alignment and motional behaviour of the &#x3B1;-helical peptide PGLa (only lysine side chains shown) in a DMPC membrane, as determined by a 1&#xA0;ns MD simulation using experimental <sup>2</sup>H-NMR constraints (Strandberg et&#xA0;al. <xref ref-type="bibr" rid="CR21">2005</xref>) The instantaneous orientation of the three axes of inertia <italic>a</italic>, <italic>b</italic> and <italic>c</italic> is displayed as a scatter plot on a sphere, representing snapshots of these axes orientations every picosecond. The poles of the sphere are oriented parallel to the membrane normal. The helix long axis displays only a small scatter with a mean tilt angle of 99&#xB0;, while the two other axes oscillate about this direction producing a large scatter</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig9_HTML" id="MO30"/></fig><fig id="Fig10"><label>Fig.&#xA0;10</label><caption><p>Molecular dynamics trajectory of the angle &#x398;<sub><italic>b</italic></sub> between the intermediate <italic>b</italic>-axis of inertia and the membrane normal</p></caption><graphic position="anchor" xlink:href="10858_2007_9142_Fig10_HTML" id="MO31"/></fig></p>
+        <p>Similarly important as the alignment of the peptide are its dynamic properties, which also enter into the observed <sup>2</sup>H-NMR data. Table&#xA0;<xref rid="Tab8" ref-type="table">8</xref> lists the components of the molecular Saupe tensor, which is again used to describe the average alignment a molecule fixed frame (i.e. the principal axes of inertia) with respect to the laboratory frame. However, in contrast to the two previous case studies, this Saupe tensor does not represents the fast reorientation of the molecule around the membrane normal. No pseudo-forces were driving this motion in the simulation, since a rotational mean value was introduced. Here, the order tensor represents only the wobble of the long <italic>a</italic>-axis and the pronounced oscillations about this molecular axis (see Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>). As expected from the distribution of polar and hydrophobic residues on the different faces of the helix, it is seen that the Saupe tensor is not diagonal Table&#xA0;<xref rid="Tab8" ref-type="table">8</xref>). The biaxiality of &#x3BE;&#xA0;=&#xA0;0.09 (<italic>S</italic>&#xA0;=&#xA0;0.76, see Eq.&#xA0;<xref rid="Equ15" ref-type="">15</xref>) is clear evidence that the molecule does not behave like a rod-shaped object, and rotation about its long axis is restricted. In fact, oscillations of about 60&#xB0; around the long axis, but no complete rotation events were observed in the MD simulation (see Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>). These oscillations start after about 100&#xA0;ps when the pseudo-forces approach their full strength.<table-wrap id="Tab8"><label>Table&#xA0;8</label><caption><p>Molecular Saupe order tensor from a constrained MD simulation of PGLa</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Tensor component</th><th align="left">MD</th></tr></thead><tbody><tr><td align="left"><italic>S</italic><sub><italic>aa</italic></sub></td><td char="." align="char">+0.49</td></tr><tr><td align="left"><italic>S</italic><sub><italic>bb</italic></sub></td><td char="." align="char">&#x2212;0.28</td></tr><tr><td align="left"><italic>S</italic><sub><italic>cc</italic></sub></td><td char="." align="char">&#x2212;0.46</td></tr><tr><td align="left"><italic>S</italic><sub><italic>ab</italic></sub></td><td char="." align="char">&#x2212;0.46</td></tr><tr><td align="left"><italic>S</italic><sub><italic>ac</italic></sub></td><td char="." align="char">+0.06</td></tr><tr><td align="left"><italic>S</italic><sub><italic>bc</italic></sub></td><td char="." align="char">&#x2212;0.08</td></tr></tbody></table></table-wrap></p>
+        <p>At a first glance the rather regular oscillations of PGLa in Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>, or the rotations of cholesterol (Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>), may not seem to reflect reality. However, we have to keep in mind that our MD simulations are performed with single molecules in vacuum, and the temperature is controlled by a continuously acting NTV &#x201C;thermostat&#x201D; adjustment. In nature, heat is transferred by stochastic interactions with other molecules, thereby introducing a stochastic behaviour of molecular rotations and re-orientations. This stochastic aspect is not present in our MD simulations, but nonetheless the amplitudes, velocities and directions of the motions adopt realistic values as the NMR constraints have to be satisfied. The molecule in the simulation cannot stop in one preferred orientation, because then no averaging would be performed anymore.</p>
+      </sec>
+    </sec>
+    <sec id="Sec14" sec-type="conclusion">
+      <title>Conclusions</title>
+      <p>Solid state NMR is a valuable technique to gain insight into the behaviour of peptides and proteins in oriented media, provided the data can be interpreted in terms of molecular structure and dynamics. In this contribution we developed a new strategy in which all-atom MD simulations and NMR data obtained from oriented samples are combined to obtain such structural and motional information. To this aim, a molecular mechanics force field (in this case COSMOS-NMR) was extended to include pseudo-forces, which drive the molecular dynamics to meet the NMR constraints. They &#x201C;heat up&#x201D; molecular rotations or re-orientations, leading to proper averaging of the calculated tensor values such that the calculated tensor values agree with the corresponding experimental observations. The orientational constraints can be further combined with intramolecular constraints such as distances or chemical shifts. This way, similar results can be obtained as in full membrane MD simulations, but without the computational burden of having to perform a detailed simulation of the lipids and surrounding water molecules. Because they are performed in vacuum, the constrained MD simulations can be completed in relatively short simulation times (&#x2264;1&#xA0;ns), still reaching a complete averaging of the NMR observables.</p>
+      <p>In three case studies, ranging from a small rigid compound to a 21-residue membrane-active peptide, the MD simulations with orientational NMR constraints succeeded to produce a detailed picture of the molecular motions and orientations in oriented membranes. It could be demonstrated that this new method is not limited to rigid molecules and does not depend on the choice of the initial coordinates. Deuterium quadrupolar splittings from <sup>2</sup>H-labelled pyrene, cholesterol and PGLa in oriented lipid bilayers have been used as constraints in the present examples, but the general formalism presented will be applicable to all kinds of tensorial NMR properties.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgement</title>
+      <p>Many helpful discussions with Dr. Stephan Grage are gratefully acknowledged.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bailey</surname>
+              <given-names>WC</given-names>
+            </name>
+          </person-group>
+          <article-title>B3LYP calculation of deuterium quadrupole coupling constants in molecules</article-title>
+          <source>J Molec Spec</source>
+          <year>1998</year>
+          <volume>190</volume>
+          <fpage>318</fpage>
+          <lpage>323</lpage>
+          <pub-id pub-id-type="doi">10.1006/jmsp.1998.7604</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bailey WC (1998) B3LYP calculation of deuterium quadrupole coupling constants in molecules. J Molec Spec 190:318&#x2013;323 </citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bechinger</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>The structure, dynamics and orientation of antimicrobial peptides in membranes by multidimensional solid-state NMR spectroscopy</article-title>
+          <source>Biochem Biophys Acta</source>
+          <year>1999</year>
+          <volume>1462</volume>
+          <fpage>157</fpage>
+          <lpage>183</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0005-2736(99)00205-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bechinger B (1999) The structure, dynamics and orientation of antimicrobial peptides in membranes by multidimensional solid-state NMR spectroscopy. Biochem Biophys Acta 1462:157&#x2013;183 <pub-id pub-id-type="pmid">10590307</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="other">Br&#xFC;schweiler R (1994) Connections between NMR relaxation measurements and theoretical models of structural dynamics of biopolymers in solution. In: Tycko R (ed) Nuclear magnetic resonance probes molecular dynamics. Kluwer, pp 301&#x2013;334</citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Burnell</surname>
+              <given-names>EE</given-names>
+            </name>
+            <name>
+              <surname>Lange</surname>
+              <given-names>CA</given-names>
+            </name>
+          </person-group>
+          <article-title>Effects of Interaction between molecular internal motion and reorientation on NMR of anisotropic liquids</article-title>
+          <source>J Magn Reson</source>
+          <year>1980</year>
+          <volume>39</volume>
+          <fpage>461</fpage>
+          <lpage>480</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Burnell EE, De Lange CA (1980) Effects of Interaction between molecular internal motion and reorientation on NMR of anisotropic liquids. J Magn Reson 39:461&#x2013;480 </citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davis</surname>
+              <given-names>JH</given-names>
+            </name>
+          </person-group>
+          <article-title>The description of membrane lipid conformation, order and dynamics by <sup>2</sup>H-NMR</article-title>
+          <source>Biochim Biophys Acta</source>
+          <year>1983</year>
+          <volume>737</volume>
+          <fpage>117</fpage>
+          <lpage>171</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Davis JH (1983) The description of membrane lipid conformation, order and dynamics by 2H-NMR. Biochim Biophys Acta 737:117&#x2013;171 <pub-id pub-id-type="pmid">6337629</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dufourc</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Parish</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Chitrakorn</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>ICP</given-names>
+            </name>
+          </person-group>
+          <article-title>Structural and dynamical details of cholesterol-lipid interactions as revealed by deuterium NMR</article-title>
+          <source>Biochemistry</source>
+          <year>1984</year>
+          <volume>23</volume>
+          <fpage>6062</fpage>
+          <lpage>6071</lpage>
+          <pub-id pub-id-type="doi">10.1021/bi00320a025</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dufourc EJ, Parish EJ, Chitrakorn S, Smith ICP (1984) Structural and dynamical details of cholesterol-lipid interactions as revealed by deuterium NMR. Biochemistry 23:6062&#x2013;6071 </citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Evans</surname>
+              <given-names>DJ</given-names>
+            </name>
+            <name>
+              <surname>Morriss</surname>
+              <given-names>GP</given-names>
+            </name>
+          </person-group>
+          <source>Statistical mechanics of nonequilibrium liquids</source>
+          <year>1990</year>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Academic Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Evans DJ, Morriss GP (1990) Statistical mechanics of nonequilibrium liquids. Academic Press, London </citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hoff</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Strandberg</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Ulrich</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Tieleman</surname>
+              <given-names>DP</given-names>
+            </name>
+            <name>
+              <surname>Posten</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title><sup>2</sup>H-NMR study and molecular dynamics simulation of the location, alignment, and mobility of pyrene in POPC bilayers</article-title>
+          <source>Biophys J</source>
+          <year>2005</year>
+          <volume>88</volume>
+          <fpage>1818</fpage>
+          <lpage>1827</lpage>
+          <pub-id pub-id-type="doi">10.1529/biophysj.104.052399</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hoff B, Strandberg E, Ulrich AS, Tieleman DP, Posten C (2005) 2H-NMR study and molecular dynamics simulation of the location, alignment, and mobility of pyrene in POPC bilayers. Biophys J 88:1818&#x2013;1827 <pub-id pub-id-type="pmid">15596514</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Limmer</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Physical principles underlying the experimental methods for studying the orientational order of liquid crystals</article-title>
+          <source>Fortschritte der Physike</source>
+          <year>1989</year>
+          <volume>37</volume>
+          <fpage>879</fpage>
+          <lpage>931</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Limmer S (1989) Physical principles underlying the experimental methods for studying the orientational order of liquid crystals. Fortschritte der Physik 37:879&#x2013;931 </citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Low</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Measuring order and biaxiality</article-title>
+          <source>Eur J Phys</source>
+          <year>2002</year>
+          <volume>23</volume>
+          <fpage>111</fpage>
+          <lpage>117</lpage>
+          <!-- WARNING: Occurrence has not been converted -->
+          <!-- WARNING: Occurrence has not been converted -->
+          <pub-id pub-id-type="doi">10.1088/0143-0807/23/2/303</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Low RJ (2002) Measuring order and biaxiality. Eur J Phys 23:111&#x2013;117 </citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marsan</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Muller</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Ramos</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Rodriguez</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Dufourc</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Czaplicki</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Milon</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Cholesterol orientation and dynamics in dimyristoylphosphatidylcholine bilayers: A solid state deuterium NMR analysis</article-title>
+          <source>Biophys J</source>
+          <year>1999</year>
+          <volume>76</volume>
+          <fpage>351</fpage>
+          <lpage>359</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Marsan MP, Muller I, Ramos C, Rodriguez F, Dufourc EJ, Czaplicki J, Milon A (1999) Cholesterol orientation and dynamics in dimyristoylphosphatidylcholine bilayers: A solid state deuterium NMR analysis. Biophys J 76:351&#x2013;359 <pub-id pub-id-type="pmid">9876147</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McMullan</surname>
+              <given-names>RK</given-names>
+            </name>
+            <name>
+              <surname>Koetzle</surname>
+              <given-names>TF</given-names>
+            </name>
+            <name>
+              <surname>Fronckowiak</surname>
+              <given-names>MD</given-names>
+            </name>
+          </person-group>
+          <article-title>Structure of [20-CH<sub>3</sub>],[20-CD<sub>3</sub>]-methylpregnene-3,20-diol methanolate from neutron diffraction at 123 K</article-title>
+          <source>Acta Cryst</source>
+          <year>1992</year>
+          <volume>C48</volume>
+          <fpage>1509</fpage>
+          <lpage>1512</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">McMullan RK, Koetzle TF, Fronckowiak MD (1992) Structure of [20-CH3],[20-CD3]-methylpregnene-3,20-diol methanolate from neutron diffraction at 123 K. Acta Cryst C48:1509&#x2013;1512 </citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>M&#xF6;llhoff</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>U</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular mechanics with fluctuating atomic charges&#x2014;a new force field with a semi-empirical charge calculation</article-title>
+          <source>J Mol Model</source>
+          <year>2001</year>
+          <volume>7</volume>
+          <fpage>90</fpage>
+          <lpage>102</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">M&#xF6;llhoff M, Sternberg U (2001) Molecular mechanics with fluctuating atomic charges&#x2014;a new force field with a semi-empirical charge calculation. J Mol Model 7:90&#x2013;102 </citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>O&#x2019;Keefe</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Brese</surname>
+              <given-names>NE</given-names>
+            </name>
+          </person-group>
+          <article-title>Atom sizes and bond lengths in molecules and crystals</article-title>
+          <source>J Am Chem Soc</source>
+          <year>1991</year>
+          <volume>113</volume>
+          <fpage>3226</fpage>
+          <lpage>3229</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja00009a002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">O&#x2019;Keefe M, Brese NE (1991) Atom sizes and bond lengths in molecules and crystals. J Am Chem Soc 113:3226&#x2013;3229 </citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rinn&#xE9;</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Depireux</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Smith</surname>
+              <given-names>JAS</given-names>
+            </name>
+          </person-group>
+          <article-title>Nuclear quadrupole coupling constant of deuterium bound to carbon in organic molecules</article-title>
+          <source>Advances in nuclear quadrupole resonance</source>
+          <year>1974</year>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Heyden &amp; Son Ltd</publisher-name>
+          <fpage>345</fpage>
+          <lpage>357</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Rinn&#xE9; M, Depireux J (1974) Nuclear quadrupole coupling constant of deuterium bound to carbon in organic molecules. In: Smith JAS (ed) Advances in nuclear quadrupole resonance, vol 1. Heyden &amp; Son Ltd, London, pp 345&#x2013;357 </citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Saupe</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Kernresonanzen in kristallinen Fl&#xFC;ssigkeiten und kristallinfl&#xFC;ssigen L&#xF6;sungen</article-title>
+          <source>Z f Naturforschung</source>
+          <year>1964</year>
+          <volume>19a</volume>
+          <fpage>161</fpage>
+          <lpage>171</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Saupe A (1964) Kernresonanzen in kristallinen Fl&#xFC;ssigkeiten und kristallinfl&#xFC;ssigen L&#xF6;sungen. Z f Naturforschung 19a:161&#x2013;171 </citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Oldfield</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic structure of membranes by deuterium NMR</article-title>
+          <source>Science</source>
+          <year>1984</year>
+          <volume>255</volume>
+          <fpage>280</fpage>
+          <lpage>288</lpage>
+          <!-- WARNING: Occurrence has not been converted -->
+          <pub-id pub-id-type="doi">10.1126/science.6740310</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Smith RL, Oldfield E (1984) Dynamic structure of membranes by deuterium NMR. Science 255:280&#x2013;288 <pub-id pub-id-type="pmid">6740310</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>U</given-names>
+            </name>
+          </person-group>
+          <article-title>Theory of the influence of the second co-ordination sphere on the chemical shift</article-title>
+          <source>Mol Phys</source>
+          <year>1988</year>
+          <volume>63</volume>
+          <fpage>249</fpage>
+          <lpage>267</lpage>
+          <pub-id pub-id-type="doi">10.1080/00268978800100191</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sternberg U (1988) Theory of the influence of the second co-ordination sphere on the chemical shift. Mol Phys 63:249&#x2013;267 </citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Koch</surname>
+              <given-names>F-Th</given-names>
+            </name>
+            <name>
+              <surname>Br&#xE4;uer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kunert</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Anders</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular mechanics for zinc complexes with fluctuating atomic charges</article-title>
+          <source>J Mol Model</source>
+          <year>2001</year>
+          <volume>7</volume>
+          <fpage>54</fpage>
+          <lpage>64</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Sternberg U, Koch F-Th, Br&#xE4;uer M, Kunert M, Anders E (2001) Molecular mechanics for zinc complexes with fluctuating atomic charges. J Mol Model 7:54&#x2013;64 </citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Witter</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Ulrich</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>3D structure elucidation using NMR chemical shifts</article-title>
+          <source>Annu Rep NMR Spectroscopy</source>
+          <year>2003</year>
+          <volume>52</volume>
+          <fpage>53</fpage>
+          <lpage>103</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0066-4103(04)52002-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Sternberg U, Witter R, Ulrich AS (2003) 3D structure elucidation using NMR chemical shifts. Annu Rep NMR Spectroscopy 52:53&#x2013;103 </citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Strandberg</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Wadhwani</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Tremouilhac</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>D&#xFC;rr</surname>
+              <given-names>UHN</given-names>
+            </name>
+            <name>
+              <surname>Ulrich</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>Solid-state NMR analysis of the PGLa peptide orientation in DMPC bilayers: Structural fidelity of <sup>2</sup>H-labels versus high sensitivity of <sup>19</sup>F-NMR</article-title>
+          <source>Biphys J</source>
+          <year>2006</year>
+          <volume>90</volume>
+          <fpage>1676</fpage>
+          <lpage>1686</lpage>
+          <pub-id pub-id-type="doi">10.1529/biophysj.105.073858</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Strandberg E, Wadhwani P, Tremouilhac P, D&#xFC;rr UHN, Ulrich AS (2006) Solid-state NMR analysis of the PGLa peptide orientation in DMPC bilayers: Structural fidelity of 2H-labels versus high sensitivity of 19F-NMR. Biophys J 90:1676&#x2013;1686 </citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tieleman</surname>
+              <given-names>DP</given-names>
+            </name>
+            <name>
+              <surname>Berendsen</surname>
+              <given-names>HCJ</given-names>
+            </name>
+            <name>
+              <surname>Sansom</surname>
+              <given-names>MSP</given-names>
+            </name>
+          </person-group>
+          <article-title>Voltage-dependent insertion of alamethicin at phospholipid/water and octane/water interfaces</article-title>
+          <source>Biophys J</source>
+          <year>2001</year>
+          <volume>80</volume>
+          <fpage>331</fpage>
+          <lpage>346</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Tieleman DP, Berendsen HCJ, Sansom MSP (2001) Voltage-dependent insertion of alamethicin at phospholipid/water and octane/water interfaces. Biophys J 80:331&#x2013;346 <pub-id pub-id-type="pmid">11159406</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Torda</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Gunsteren</surname>
+              <given-names>WF</given-names>
+            </name>
+          </person-group>
+          <article-title>The refinement of NMR structures by molecular dynamics simulation</article-title>
+          <source>Comput Phys Commun</source>
+          <year>1991</year>
+          <volume>62</volume>
+          <fpage>289</fpage>
+          <lpage>296</lpage>
+          <!-- WARNING: Occurrence has not been converted -->
+          <pub-id pub-id-type="doi">10.1016/0010-4655(91)90101-P</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Torda AE, van Gunsteren WF (1991) The refinement of NMR structures by molecular dynamics simulation. Comput Phys Commun 62:289&#x2013;296 </citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ulrich</surname>
+              <given-names>AS</given-names>
+            </name>
+            <name>
+              <surname>Grage</surname>
+              <given-names>SL</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Ando</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Asakura</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Solid state <sup>2</sup>H-NMR</article-title>
+          <source>Solid state NMR of polymers</source>
+          <year>1998</year>
+          <publisher-loc>Amsterdam</publisher-loc>
+          <publisher-name>Elsevier</publisher-name>
+          <fpage>190</fpage>
+          <lpage>211</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Ulrich AS, Grage SL (1998) Solid state 2H-NMR. In: Ando I, Asakura T (eds) Solid state NMR of polymers. Elsevier, Amsterdam, pp 190&#x2013;211 </citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Verlet</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Computer &#x201C;experiments&#x201D; on classical fluids</article-title>
+          <source>Phys Rev</source>
+          <year>1967</year>
+          <volume>159</volume>
+          <fpage>98</fpage>
+          <lpage>103</lpage>
+          <!-- WARNING: Occurrence has not been converted -->
+          <pub-id pub-id-type="doi">10.1103/PhysRev.159.98</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Verlet L (1967) Computer &#x201C;experiments&#x201D; on classical fluids. Phys Rev 159:98&#x2013;103 </citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="other">Vold RR (1994) Deuterium NMR studies of dynamics in solids and liquid crystals. In: Tycko R (ed) Nuclear magnetic resonance probes of molecular dynamics. Kluwer Academic Publishers, pp 27&#x2013;112</citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Witter</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Prie&#xDF;</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>U</given-names>
+            </name>
+          </person-group>
+          <article-title>Chemical shift driven geometry optimization</article-title>
+          <source>J Comp Chem</source>
+          <year>2001</year>
+          <volume>23</volume>
+          <fpage>298</fpage>
+          <lpage>305</lpage>
+          <pub-id pub-id-type="doi">10.1002/jcc.10012</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Witter R, Prie&#xDF; W, Sternberg U (2001) Chemical shift driven geometry optimization. J Comp Chem 23:298&#x2013;305 <pub-id pub-id-type="pmid">11924742</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Witter</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Seyfart</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Greiner</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Reissmann</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Weston</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Anders</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>U</given-names>
+            </name>
+          </person-group>
+          <article-title>Structure determination of a pseudotripeptide zinc complex with the COSMOS-NMR force field and DFT methods</article-title>
+          <source>J Biomol NMR</source>
+          <year>2002</year>
+          <volume>24</volume>
+          <fpage>277</fpage>
+          <lpage>289</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1021625231147</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Witter R, Seyfart L, Greiner G, Reissmann S, Weston J, Anders E, Sternberg U (2002) Structure determination of a pseudotripeptide zinc complex with the COSMOS-NMR force field and DFT methods. J Biomol NMR 24:277&#x2013;289 <pub-id pub-id-type="pmid">12522293</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

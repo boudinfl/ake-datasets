@@ -1,0 +1,344 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17597863</article-id>
+      <article-id pub-id-type="pmc">1891659</article-id>
+      <article-id pub-id-type="publisher-id">25-1-2005</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Software</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>SSRscanner: a program for reporting distribution and exact location of simple sequence repeats</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Anwar</surname>
+            <given-names>Tamanna</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Khan</surname>
+            <given-names>Asad U</given-names>
+          </name>
+          <xref rid="A1" ref-type="aff">1</xref>
+          <xref rid="A2" ref-type="aff">2</xref>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="A1"><label>1</label>Distribution Information Sub-centre</aff>
+      <aff id="A2"><label>2</label>Interdisciplinary Biotechnology Unit Aligarh Muslim University, Aligarh - 202002, India</aff>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Asad U Khan
+          E-mail:
+          <email>huzzi99@hotmail.com</email> Phone: +91&#xAD;571&#xAD;2723088 
+          Fax: +91&#xAD;571&#xAD;2721776; Corresponding author</corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>20</day>
+        <month>2</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>1</volume>
+      <issue>3</issue>
+      <fpage>89</fpage>
+      <lpage>91</lpage>
+      <history>
+        <date date-type="received">
+          <day>6</day>
+          <month>2</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>12</day>
+          <month>2</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2006 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2006</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction 
+				in any medium, for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Simple sequence repeats (SSRs) have become important molecular markers for a broad range of applications, such as genome 
+          mapping and characterization, phenotype mapping, marker assisted selection of crop plants and a range of molecular ecology 
+          and diversity studies. These repeated DNA sequences are found in both prokaryotes and eukaryotes. They are distributed almost 
+          at random throughout the genome, ranging from mononucleotide to trinucleotide repeats. They are also found at longer lengths 
+          (&gt; 6 repeating units) of tracts. Most of the computer programs that find SSRs do not report its exact position. A computer 
+          program SSRscanner was written to find out distribution, frequency and exact location of each SSR in the genome. SSRscanner 
+          is user friendly. It can search repeats of any length and produce outputs with their exact position on chromosome and their 
+          frequency of occurrence in the sequence.  </p>
+        <sec id="sb1e">
+          <title>Availability</title>
+          <p>This program has been written in PERL and is freely available for non-commercial users by request from the authors. 
+          Please contact the authors by E-mail: huzzi99@hotmail.com</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>scanner</kwd>
+        <kwd>SSR</kwd>
+        <kwd>repeats</kwd>
+        <kwd>script</kwd>
+        <kwd>microsatellite</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>SSRs (simple sequence repeats) or microsatellites are the genetic loci where one or few bases are tandemly repeated for varying 
+      numbers of times. Such repetitions occur primarily due to slipped-strand mis-pairing and subsequent error(s) during DNA 
+      replication, repair, or recombination. [<xref ref-type="bibr" rid="R01">1</xref>] SSRs comprising 1&#xAD;6 bp long, 
+      occur frequently and are ubiquitously interspersed in many genomes. [<xref ref-type="bibr" rid="R02">2</xref>&#x2013;
+      <xref ref-type="bibr" rid="R03">3</xref>] The biological importance of SSR tracts has been clearly delineated. Microsatellite 
+      loci show extensive length polymorphism, and hence they are widely used in DNA fingerprinting and diversity studies. They are also 
+      considered as ideal genetic markers for the construction of high-density linkage maps. [<xref ref-type="bibr" rid="R04">4
+      </xref>&#x2013;<xref ref-type="bibr" rid="R05">5</xref>] In spite of its high significance, a bioinformatics tool for the 
+      analysis of these regions is not available. </p>
+      <p>Available algorithms directly or indirectly detect tandem repeats. However, there are many limitations with these algorithms. 
+      The drawbacks are high computational time required by the algorithm and their inability to predict the positions of SSRs in the 
+      genome. The program Tandem Repeats Finder [<xref ref-type="bibr" rid="R06">6</xref>] locates repeats with motifs 
+      of any size and type, including repeats with insertions and deletions. The program Sputnik [<xref ref-type="bibr" rid="R07">
+      7</xref>] (unpublished) uses recursion to search for both exact and approximate tandem repeats. Repeating unit 
+      lengths of 2 to 5 are sought, and a score is used to determine location. Tandem Repeat Occurrence Locator (TROLL) [<xref ref-type="bibr" rid="R08">8</xref>], uses a keyword tree adapted from bibliographic searching techniques and attempts to 
+      match the keywords exactly but it does not specify the positions of repeats. In this work, we describe a program called SSRscanner 
+      (Simple sequence repeat scanner) that uses dictionary approach to find simple sequence repeats of pre-selected motifs. </p>
+      <p>SSRscanner is a PERL script developed for scanning genomes to find repeats of any length, their exact position on chromosome 
+      and frequency of occurrence. It is fast and requires a standard Personal Computer (PC) and PERL to operate. SSRscanner can accept 
+      large sequences as input and large number of motifs can be searched simultaneously. Thus, the running time of the program is 
+      greatly reduced. To demonstrate the use of SSRscanner, <italic>Arabidopsis thaliana</italic> genome was analyzed for finding out 
+      distribution, 
+      frequency and specific position of SSRs in the genome. [<xref ref-type="bibr" rid="R09">9</xref>] The advantages 
+      over many other programs developed for SSR identification includes its ability to search motifs of any length repeated for a 
+      number of times and to give the exact position of the motif in the genome.</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <sec id="s2a">
+        <title>Program Input</title>
+        <p>SSRscanner (implemented in PERL) accepts two text files (.txt). Upon execution of the program, it prompts to enter the file 
+      name containing the DNA sequence data. It also prompts for a file containing motifs of different repeat types. It then prompts for 
+      the number of times for the motifs to be repeated (for example for searching tri-nucleotide repeats the user should enter 3) 
+      (<xref ref-type="fig" rid="F1">Figure 1B</xref>). </p>
+        <p>Input sequence and motifs are parsed to SSRscanner that extracts the SSRs giving their distribution/frequency and 
+      specific location. The results from SSRscanner are appended into result files (<xref ref-type="fig" rid="F1">Figure 1A</xref>).</p>
+      </sec>
+      <sec id="s2b">
+        <title>Program output</title>
+        <p>SSRscanner gives two files in output (<xref ref-type="fig" rid="F1">Figure 1A</xref>). They are (1) Motifposition.txt 
+				(gives the frequency of each repeat provided 
+      in the motif file) and (2) Motifresult.exe (gives the specific location of each repeat). The data obtained can then be arranged 
+      into desired formats.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Caveats and Future Development</title>
+      <p>SSRscanner is a PERL script and it requires PERL to be installed on a PC before running the program. We are developing a web 
+      based CGI for SSRscanner.  </p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors are grateful to Professor M. Saleemuddin for providing facilities to carryout this work and for his support 
+    throughout this project. We also thanks to the Staff of the Distribution information sub-center for their technical help. Department 
+    of Biotechnology, Ministry of Science and Technology, Government of India is acknowledged for the financial support.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levinson</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Gutman</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <source>Mol Biol Evol</source>
+          <year>1987</year>
+          <volume>4</volume>
+          <fpage>203</fpage>
+          <pub-id pub-id-type="pmid">3328815</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gur&#xAD;Arie</surname>
+              <given-names>R</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Genome Res</source>
+          <year>2000</year>
+          <volume>10</volume>
+          <fpage>62</fpage>
+          <pub-id pub-id-type="pmid">10645951</pub-id>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Toth</surname>
+              <given-names>G</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Genome Res</source>
+          <year>2000</year>
+          <volume>10</volume>
+          <fpage>967</fpage>
+          <pub-id pub-id-type="pmid">10899146</pub-id>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Beckmann</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Soller</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Biotechnology</source>
+          <year>1990</year>
+          <volume>8</volume>
+          <fpage>930</fpage>
+          <pub-id pub-id-type="pmid">1366775</pub-id>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Morgante</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Olivieri</surname>
+              <given-names>AM</given-names>
+            </name>
+          </person-group>
+          <source>Plant J</source>
+          <year>1993</year>
+          <volume>3</volume>
+          <fpage>175</fpage>
+          <pub-id pub-id-type="pmid">8401603</pub-id>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Benson</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>Nucleic Acids Res</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>573</fpage>
+          <pub-id pub-id-type="pmid">9862982</pub-id>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="web">
+          <comment>Sputnik
+        <ext-link ext-link-type="uri" xlink:href="http://abajian.net/sputnik/">[http://abajian.net/sputnik/]</ext-link></comment>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Castelo</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>634</fpage>
+          <pub-id pub-id-type="pmid">12016062</pub-id>
+        </citation>
+      </ref>
+      <ref id="R09">
+        <label>9</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anwar</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Khan</surname>
+              <given-names>AU</given-names>
+            </name>
+          </person-group>
+          <source>Bioinformation</source>
+          <year>2005</year>
+          <volume>1</volume>
+          <fpage>64</fpage>
+          <comment>Abstract</comment>
+        </citation>
+      </ref>
+    </ref-list>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <fig id="F1" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>(A) Overview of SSRscanner operational structure; (B) SSRscanner command line showing the executed program.</p>
+        </caption>
+        <graphic xlink:href="97320630001089F1"/>
+      </fig>
+    </sec>
+    <fn-group>
+      <fn id="FN1" fn-type="other">
+        <p>
+      <bold>Citation:</bold>Anwar &amp; Khan, Bioinformation 1(3): 89-91 (2006)</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>
+</pmc-articleset>

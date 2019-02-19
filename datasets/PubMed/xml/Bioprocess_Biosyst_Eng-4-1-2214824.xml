@@ -1,0 +1,993 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioprocess Biosyst Eng</journal-id>
+      <journal-title>Bioprocess and Biosystems Engineering</journal-title>
+      <issn pub-type="ppub">1615-7591</issn>
+      <issn pub-type="epub">1615-7605</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17566786</article-id>
+      <article-id pub-id-type="pmc">2214824</article-id>
+      <article-id pub-id-type="publisher-id">127</article-id>
+      <article-id pub-id-type="doi">10.1007/s00449-007-0127-y</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Feasibility of an in situ measurement device for bubble size and distribution</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Junker</surname>
+            <given-names>Beth</given-names>
+          </name>
+          <address>
+            <email>beth_junker@merck.com</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Maciejak</surname>
+            <given-names>Walter</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Darnell</surname>
+            <given-names>Branson</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Lester</surname>
+            <given-names>Michael</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Pollack</surname>
+            <given-names>Michael</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Fermentation and Development Operations, Merck Research Laboratories, Rahway, NJ USA </aff>
+        <aff id="Aff2"><label>2</label>Enviroptics, Colmar, PA USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>14</day>
+        <month>6</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>30</volume>
+      <issue>5</issue>
+      <fpage>313</fpage>
+      <lpage>326</lpage>
+      <history>
+        <date date-type="received">
+          <day>27</day>
+          <month>12</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>11</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>The feasibility of in situ measurement device for bubble size and distribution was explored. A novel in situ probe measurement system, the EnviroCam&#x2122;, was developed. Where possible, this probe incorporated strengths, and minimized weaknesses of historical and currently available real-time measurement methods for bubbles. The system was based on a digital, high-speed, high resolution, modular camera system, attached to a stainless steel shroud, compatible with standard Ingold ports on fermenters. Still frames and/or video were produced, capturing bubbles passing through the notch of the shroud. An LED light source was integral with the shroud. Bubbles were analyzed using customized commercially available image analysis software and standard statistical methods. Using this system, bubble sizes were measured as a function of various operating parameters (e.g., agitation rate, aeration rate) and as a function of media properties (e.g., viscosity, antifoam, cottonseed flour, and microbial/animal cell broths) to demonstrate system performance and its limitations. For selected conditions, mean bubble size changes qualitatively compared favorably with published relationships. Current instrument measurement capabilities were limited primarily to clear solutions that did not contain large numbers of overlapping bubbles.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>In situ</kwd>
+        <kwd>Bubbles</kwd>
+        <kwd>Measurement</kwd>
+        <kwd>Size</kwd>
+        <kwd>Distribution</kwd>
+        <kwd>Fermenter</kwd>
+        <kwd>Image analysis</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Accurate and representative bubble sizes and distributions are used to characterize biochemical processes containing gas-in-liquid dispersions, specifically processes for industrially important fermentation products. Quantification of bubble sizes and distributions during fermentation is important to establish mass transfer characteristics (based on gas&#x2013;liquid interfacial area) when oxygen transport to cells across gas&#x2013;liquid interfaces becomes a limiting factor. In these situations, there is a direct influence of bioreactor parameters that affect bubble size, such as agitation, on culture yields. Thus, measurements of bubble sizes and distributions are useful for biochemical process optimizations.</p>
+      <p>Direct application of bubble measurements in fermentation is based on linking bubble size to operational parameters, such as agitation and/or airflow rate, that influence gas&#x2013;liquid volumetric mass transfer coefficients [<xref ref-type="bibr" rid="CR1">1</xref>]. Such measurements can confirm that selected agitation/aeration conditions do not lead to impeller flooding and can quantify bubble distribution changes for (1) geometrically similar fermenters with scale up and (2) different fermenters of similar scale possessing different operating conditions, geometry, or bioreactor internals. Owing to the automated and fast (&lt;2&#xA0;min) nature of the Envirocam&#x2122; bubble measurement and analysis, it is a potential control tool for maintaining agitation/airflow rate set points to obtain desired bubble sizes and distributions for mass transfer, for gas hold up, or for minimizing bubble damage to cells. For example, utility costs for electricity to drive agitators or air compressors might be optimized further for large production scale fermenters.</p>
+      <p>Historical and currently available bubble measurement systems using photographic methods have been previously summarized, and the references cited within describe several applications of bubble analysis in clear solutions [<xref ref-type="bibr" rid="CR2">2</xref>]. The accuracy, representation, and simplicity of bubble size measurements improve when these measurements are performed on-line and in situ rather than off-line using broth samples. A newly developed novel on-line and in situ bubble measurement device is described and evaluated.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Novel in situ probe measurement system</title>
+      <sec id="Sec3">
+        <title>EnviroCam&#x2122; probe</title>
+        <p>The EnviroCam&#x2122; (Enviroptics; Colmar, PA) probe consisted of a hermetically sealed shroud constructed of 316&#xA0;l stainless steel for wetted product-contact parts (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). A silicone o-ring was used for the Ingold-style tank port insertion. The camera module itself attached to this shroud, and thus it was readily relocatable to other vessels without disturbing process integrity. There were no cracks or crevices since the shroud was entirely welded and helium leak-tested. The overall length of shroud was set at 6&#xA0;in. for consistency with insertion lengths of other commercially available, in situ probes (such as pH, dissolved oxygen, or optical density probes). This length avoided interfering with fermenter internals, such as larger diameter hydrofoil impellers, but extended far enough into the well-mixed fermenter zone. Since bubble sizes and distributions vary according to their distance from high shear impeller zones, measurements were taken at a constant insertion length from the fermenter sidewall. External shroud attachments were minimized to permit location in tight areas, in some cases near platform structural steel supports. The captive retaining nut was obtained from Mettler-Toledo (Ingold; Bedford, MA) to match existing Ingold ports.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Environcam&#x2122; shroud diagram</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig1_HTML" id="MO1"/></fig></p>
+        <p>Various prototype shrouds and camera modules were developed to evaluate different hardware options. A high-strength sapphire window was integrated into the 316&#xA0;l stainless steel shroud via a gold brazed joint rather than epoxy to provide improved robustness. The sapphire window was constructed at a 75&#xB0; angle to offset the 15&#xB0; angle of the fermenter&#x2019;s Ingold port. This angle resulted in the window being parallel to the vertical tank wall upon insertion. Owing to the low surface tension of sapphire, some small bubbles adhered to the window surface, particularly at the low agitation speeds used for animal cell cultivation. Using the 75&#xB0; vertical orientation, as well as raising agitation speeds, reduced but did not eliminate this accumulation.</p>
+        <p>A ceramic disc backscreen provided a measured path length. Initially, light from a 150&#xA0;Watt halogen lamp was reflected internally into the shroud backscreen via a high performance liquid light guide, but this arrangement did not result in uniform illumination. Next LEDs (red&#x2013;orange 640&#x2013;720&#xA0;nm wavelength) were incorporated directly into the shroud backscreen for more uniform illumination, which produced bubble images with improved border definition. To minimize the impact of distortion in the depth and width of the measurement volume, a diffuser was installed in the backscreen. A calibrated reticle, consisting of two intrusion lines (180&#xB0; apart with a gap of 7.5&#xA0;mm), emanating from the circumference and heading towards its center, became the standard for in situ calibration. This reticle was located on the sapphire window itself rather than the backscreen to avoid interferences in opaque media.</p>
+        <p>With a backscreen present on the shroud, a defined path length or notch was introduced. Prototype shrouds were constructed to change the notch size between 1/4 and 1.0&#xA0;in., but experiments were conducted with a 1/2&#xA0;in. notch unless otherwise noted. Due to the small width of the support (3/8&#xA0;in.), the orientation of the notch (i.e., up, down, sideways with the opening facing with or against agitator rotation) was deemed not to prevent larger bubbles from entering the measurement field nor influence measured bubble sizes or distributions. The externally located connector for the LED power supply provided confirmation of the internal notch position. Regardless of notch size, the bottom of the notch was located 1&#xA0;in. from the insertion end of the shroud (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). As notch size decreased, (1) the number of bubbles viewed per frame decreased, resulting in less overlap for high bubble volume broths, and (2) the path length decreased, providing more light for opaque solutions. In contrast, larger notch gaps may be required for lower bubble volume broths, such as animal cell cultivations.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>EnviroCam&#x2122; imaging system</title>
+        <p>The EnviroCam&#x2122; imaging system is shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>. One imaging system, containing the camera module (about tenfold higher cost than shroud), could be used with multiple shrouds. Two high performance, 1.3&#xA0;megapixel, 8&#xA0;bit, monochrome cameras were tested, each of which attached directly to the shroud: (1) a monochrome camera (PL-A741, Pixelink; Ottowa, ON), equipped with a CMOS image sensor which operated at a shutter speed of 1/10,000&#xA0;s (1/10,000&#xA0;s&#xA0;=&#xA0;100&#xA0;&#x3BC;s selected), and (2) a monochrome camera (EC-1380, Prosilica; Burnaby, BC), equipped with a CCD image sensor (IXC-285 Exview, Sony; Tokyo, Japan) which operated at a shutter speed up to 1/100,000&#xA0;s (1/25,000&#xA0;s&#xA0;=&#xA0;40&#xA0;&#x3BC;s selected). Primary magnification of 2&#xD7; (resulting in a system optical magnification of 30&#xD7;) was implemented using one additional screw-on lens. The faster shutter speed associated with the CCD camera required additional light, which was sufficiently provided by the backlit LED geometry of the shroud. A partially telecentric 55&#xA0;mm lens (Computar; CBC, Commack, New York) was selected for the CCD camera which reduced the viewing angle, but achieved magnification errors of &lt;1% while providing high resolution and contrast with low distortion. The CCD camera became the preferred configuration consistent with the designs of other currently available photographic systems [<xref ref-type="bibr" rid="CR2">2</xref>].
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Environcam&#x2122; system diagram</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig2_HTML" id="MO2"/></fig></p>
+        <p>The number of pixels [horizontal (H)&#xA0;&#xD7;&#xA0;vertical (V)] was altered using user-defined region of interest (ROI) controls. Higher pixel numbers increased resolution but reduced the number of frames per second (fps). For the selected CCD camera, the hardware was set at 20&#xA0;fps using 1,024&#xA0;&#xD7;&#xA0;1,024&#xA0;pixels with a minimum pixel size of 6.45&#xA0;&#x3BC;m and a pixel depth of 8&#xA0;bits (without additional magnification via screw-on lenses). This fps rate of 20 resulted in a time scale of about 25&#xA0;s for the initial image scan of 500 frames, which was small relative to expected changes in bubble size characteristics during the time course of a typical fermentation. Bubble residence time through the measurement field (1/2&#xA0;in.&#xA0;=&#xA0;12.5&#xA0;mm path length) was quantitatively estimated to be about 1.3&#x2013;3.3&#xA0;ms near the impeller blade tip (impeller tip speed of 3.8&#x2013;9.4&#xA0;m/s) and likely was up to an order of magnitude slower away from the impeller. Consequently, it was not necessary to increase the frame speed further above 20&#xA0;fps, which corresponded to a characteristic measurement time of 50&#xA0;ms/frame. The bubble residence time in the 1/2&#xA0;in. notch measurement field was qualitatively determined to be 40&#x2013;70&#xA0;ms by comparing common features of subsequent frames. Thus, it was necessary to skip at least four to five frames to ensure bubbles were not counted more than once.</p>
+        <p>For the CCD camera, pixel size was set at 20&#xA0;&#x3BC;m/pixel. With the 2&#xD7; magnification added, and other geometric and positional factors considered, it was reduced to 7.5&#xA0;&#x3BC;m/pixel. A small annulus of the viewing range (5&#xA0;pixels wide) was discarded to reduce grey scale variations near the edges. The measurement area was 81&#xA0;mm<sup>2</sup>, and the measurement volume was 993&#xA0;mm<sup>3</sup> (5.07&#xA0;mm diameter, 5.07&#xA0;mm height). A number-based hold-up estimate of 50&#x2013;150&#xA0;bubbles/cm<sup>3</sup> for a bubble size range of 0.5&#x2013;1&#xA0;mm was calculated [<xref ref-type="bibr" rid="CR2">2</xref>]. Thus, for the calculated measurement volume of nearly 1.0&#xA0;cm<sup>3</sup> about 50&#x2013;150&#xA0;bubbles were expected per frame image. The actual number of bubbles per image ranged up to 1,000 or more when larger numbers of smaller bubbles less than 0.5&#xA0;mm were detected.</p>
+        <p>In comparison with these values selected above for the Environcam&#x2122; system, prior researchers have used 4&#x2013;30&#xA0;&#x3BC;m/pixel and 512&#xA0;&#xD7;&#xA0;512&#xA0;pixels for gas/liquid and liquid/liquid bubble/drop dispersion measurements [<xref ref-type="bibr" rid="CR3">3</xref>&#x2013;<xref ref-type="bibr" rid="CR6">6</xref>]. For cell morphology measurements, 21&#xA0;&#x3BC;m/pixel was typical [<xref ref-type="bibr" rid="CR7">7</xref>], and 512&#xA0;&#xD7;&#xA0;512&#xA0;pixels was the most common for recent studies [<xref ref-type="bibr" rid="CR2">2</xref>].</p>
+        <p>The remainder of the Environcam&#x2122; hardware system is shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>. The computer itself consisted of an Intel Pentium 4 class notebook PC (XP operating system) with 1&#xA0;GB RAM (NEMA rating as required by the facility) and a graphic card minimum display resolution of 1,280&#xA0;&#xD7;&#xA0;1,024 (with 32&#xA0;bit color). The video output was the Firewire/IEEE 1394 interface, a universal interface that allowed direct connection of the camera to the PC laptop. A USB port was used for computer control of the external light source supplied by a Nema 4&#xD7; power supply, which was powered only when images were being acquired by the camera. The lens mount was a standard C-mount adapter used for camera installation to lenses and to standard microscopes. A CD/DVD R/W drive, USB drive, and/or some other type of network interface was used for archiving images and/or data files, preferably with at least 80&#xA0;GB of storage.</p>
+        <p>The operating temperature range was limited to 0&#x2013;50&#xB0;C for the camera module; consequently, it was not attached to the shroud during vessel sterilization. The shroud LED-operating temperature ranged up to 80&#x2013;90&#xB0;C, but its non-operating temperature ranged up to 120&#xB0;C. All other shroud components were steam-sterilizable, including the glass diffuser. Thus, the shroud could be sterilized with the vessel if the LEDs remained unpowered. A LED-power supply kill switch based on a bimetallic temperature sensor was installed with a trip value of 90&#xB0;C and reset value of 60&#xB0;C. When it was powered, typically intermittently for 10&#xA0;s per frame measurement cycle or continuously for video stream, the LED was required to be submerged in liquid as a heat sink for adequate cooling. LED lifetime was 100,000&#xA0;h assuming the non-operating temperature remained less than 120&#xB0;C; raising it a few degrees above this level for effective sterilization might sacrifice some lifetime, however. Shrouds were heat-tested using a 15&#x2013;30&#xA0;s temperature ramp from ambient to 130&#xB0;C, held for 1&#xA0;h, then returned to ambient temperature. No significant degradation, as measured by pixel light output, was observed after 50&#x2013;60 temperature cycles. In addition, an actual sterilization was conducted successfully with the shroud in a pilot scale fermenter (180&#xA0;l volume, 122&#xB0;C, 40&#xA0;min hold time). Based on this performance, shrouds were expected to withstand about 100 sterilizations of 45&#x2013;60&#xA0;min hold times for about a 3-year life span, assuming a 2-week batch length.</p>
+        <p>The 1951 USAF resolution target was used to evaluate the pure video resolution of the computer monitor, which was influenced by the quality of the video graphics card. Resolution was measured at 32&#xA0;line pairs/mm, the reciprocal of which resulted in a resolution of 31&#xA0;&#x3BC;m/pixel, significantly higher than the camera resolution of 7.5&#xA0;&#x3BC;m/pixel. Thus, the accuracy of the image display did not diminish the accuracy of the photographs obtained.</p>
+        <p>The software platform was customized based on National Instruments&#x2019; (Austen, TX) LabVIEW Graphical Development Environment (version 8.2). The system&#x2019;s main screen is shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>. The image analysis software had the following key features:<list list-type="order"><list-item><p>Measured frames were included in analysis until the number of desired objects to be measured (a user input) was attained. Specifically, for a measurement time of 25&#xA0;s (corresponding to 20&#xA0;fps) which generated 500 frames, typically every tenth frame was skipped (i.e., measured frames were taken every 0.5&#xA0;s) and 50 frames were measured to identify at least 500 bubbles. This number was consistent with other currently available measurement systems described in the literature [<xref ref-type="bibr" rid="CR2">2</xref>]. This approach also was similar to skipping every 25th frame when measuring floatation cell moving aggregate sizes [<xref ref-type="bibr" rid="CR8">8</xref>].</p></list-item><list-item><p>The background was subtracted from the original image, which avoided repeatedly counting bubbles lodged on the sapphire window and to remove fixed blemishes in the backscreen. (This approach is similar to subtracting a background image without cells from the original image [<xref ref-type="bibr" rid="CR9">9</xref>]). The background image was calculated by averaging all 500 frames obtained during the measurement period so that moving objects were filtered out to obtain a clear composite background image. This approach was speedy (800&#xA0;ms for 500 frames). In addition, the background image was readily reconstructable from stored images if necessary. A user-selectable alternative algorithm was developed to construct a background composed of the brightest pixel of each of the 500 frames for each position, assuming that no pixel should be any brighter than a background pixel. The time to construct the background using either of these methods was similar.</p></list-item><list-item><p>Edge enhancement techniques, based on a contrast threshold, were applied to convert grey images to binary black and white images so that the outside perimeters (or diameters) of bubbles were readily identifiable via object recognition.</p></list-item><list-item><p>The analyzed image output was prepared using the calibrated reticle (measurement shown in red in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>) located on the shroud backscreen in the form of a binary mask. In addition, a blue reference grid of 1&#xA0;&#xD7;&#xA0;1&#xA0;mm squares (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>) was overlayed to permit the user to approximate bubble sizes on the computer screen.</p></list-item><list-item><p>Depending on the application, bubbles of sizes greater than a designated cut-off (e.g., 2&#xA0;mm in diameter), between 40 and this cut-off, and below 40&#xA0;&#x3BC;m were identified. Both visual and numerical indications of the classification of objects were developed according to three tiers of predetermined rules:
+<list list-type="alpha-lower"><list-item><p>Green circles represented the first level of filtering. Rules in this first tier were: single bubbles of sizes within the target measurement range, circularity cut-off based on a user-selected tolerance above 1.0 value, and discard of bubbles touching the border. The green circle was the best fit &#x201C;circle&#x201D; so there were slight inaccuracies around some of the circumference if the bubbles were not uniformly round. Larger or smaller circular bubbles outside the target measurement range were excluded.</p></list-item><list-item><p>Yellow outlines indicated the second level of filtering typically using similar rules as the first level but with more relaxed, user-defined cut-offs. Additional rules also were added in this second tier. Up to three, more or less circular bubbles, that were touching but still individually discernable, were included in the count. Specifically, the ratio cut-off of cluster (i.e., more than one adjacent bubble overlapping) area to the calculated equivalent area for completely separated bubbles of the cluster was based on a user-selected tolerance below 1.0. Bubbles in this category were further differentiable using additional capabilities included in the LabVIEW software.</p></list-item><list-item><p>Red outlines comprised a third level that indicated bubbles located by the system that did not pass filtering levels 1 or 2.</p></list-item><list-item><p>White outlines comprised a fourth level of classification. This fourth tier contained non-circular blobs and large irregularly shaped or greatly overlapping bubbles. The percentage of viewing area occupied by blobs was estimated and measured frames were omitted based on a user-selected cut-off (e.g., if greater than a target percentage of 75% of the measurement area was comprised of blobs, the frame was discounted).</p></list-item></list></p></list-item><list-item><p>The relevant statistical quantities were calculated (e.g., arithmetic, geometric, and/or Sauter mean diameters), and the appropriate histograms were displayed [<xref ref-type="bibr" rid="CR2">2</xref>]. A customized SQL program extracted data into csv files (containing all raw data and analysis calculations). These csv files had a practical limit of including information about 65,000 bubbles, typically an amount greater than required for a single measurement cycle. Data was imported into an Excel template containing graphs and some statistical quantities as part of the measurement cycle (typically requiring 3&#xA0;s to 2&#xA0;min), and then into other statistical programs (e.g., Sigmaplot, LabView modules) for more advanced analysis should the user desire.</p></list-item><list-item><p>The front panel image containing the configuration and user-adjustable controls was archived so that an identical set up could be reproduced in the future, if desired.</p></list-item><list-item><p>Tiff files (still frames) and/or &#x201C;avi&#x201D; (video stream) files were archived, but avi files were reconstructable from Tiff files to save storage space. A video playback rate of 5&#xA0;fps appeared appropriate. The actual measurement frames utilized for analysis were saved separately for ease of review. Minimum storage requirements for these unanalyzed frames were estimated at about 50&#xA0;mB for each 500 frame measurement cycle (versus 4.5&#xA0;GB for analyzed frames) with the entire analysis reconstructable from saved data. Thus, the ability to retrieve images and recheck/reanalyze results readily existed.</p></list-item><list-item><p>For measurement frames, a review panel of the analysis sequence was created from archived files (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). The analysis progression panels were reviewed manually to confirm accuracy.</p></list-item></list></p>
+        <p>To obtain an image of acceptable contrast, the user varied the camera shutter speed (length of exposure to light), brightness level (luminescence of image on LCD monitor), aperture (amount of light reaching camera lens), and gain (amplification of signal strength). Several parameters in the software were adjustable to ensure optimal image analysis, and the values selected could be archived. As a first step, threshold was varied automatically by the software to determine the value at which the maximum number of bubbles was identified. Subsequently, various filtering strategies available in the software were examined. FFT (fast Fourier transform) was found to potentially improve accuracy for measurements in water, but it was not implemented for the present work. Localized thresholding [<xref ref-type="bibr" rid="CR10">10</xref>] was found to improve accuracy for bubble measurements in broths, and it was incorporated. The largest inscribable diameter was taken to calculate the bubble diameter [<xref ref-type="bibr" rid="CR11">11</xref>].
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Example main screen display</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig3_HTML" id="MO3"/></fig><fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Analyzed composite for a bubble frame (180&#xA0;l DI water with 0.001% P2000, agitation 100&#xA0;rpm, air flowrate 300&#xA0;rpm) showing <bold>a</bold> original raw camera image, <bold>b</bold> binary image output with edge enhancement, <bold>c</bold> binary mask prior to application to image, <bold>d</bold> image after binary mask, <bold>e</bold> analysis output image containing colored circles identifying objects according to the three tiers of rules, and <bold>f</bold> instrument screen including histogram</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig4_HTML" id="MO4"/></fig></p>
+        <p>Key features of the EnviroCam&#x2122; gas bubble measurement system are summarized in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> in a format readily comparable to those assembled for prior and currently available optically based measurement systems [<xref ref-type="bibr" rid="CR2">2</xref>].
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Envirocam&#x2122; characteristics</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Camera and mode of attachment</th><th align="left">Magnification/calibration</th><th align="left">Illumination/shutter or frame speed</th><th align="left">Image measurement and analysis method</th></tr></thead><tbody><tr><td align="left">CCD monochrome camera (Prosilica) probe inserted into an in situ Ingold-fitting shroud; 32&#xA0;line pairs/mm</td><td align="left">30&#xD7;/internal reticle</td><td align="left">LEDs in back screen (back lit)/20&#xA0;fps; 1/100,000&#xA0;s (1/25,000&#xA0;=&#xA0;40&#xA0;ms selected)</td><td align="left">National Instruments&#x2019; (Austin, TX) LabVIEW Graphical Development Environment as basis</td></tr></tbody></table><table frame="hsides" rules="groups"><thead><tr><th align="left">Measurement time per condition</th><th align="left">Number of objects per measurement</th><th align="left">Measurement error/size range</th><th align="left">Number of images (pictures/frames) per measurement</th></tr></thead><tbody><tr><td align="left">5&#x2013;25&#xA0;s data acquisition; &lt;2&#xA0;min data analysis</td><td align="left">&gt;500 (typically up to 10,000)</td><td align="left">&lt;10% for monodisperse beads/60&#x2013;2,000&#xA0;&#x3BC;m</td><td align="left">50 (20&#x2013;200&#xA0;bubbles/picture)</td></tr></tbody></table></table-wrap></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Bead calibration</title>
+        <p>A calibration was conducted using beads of a known size distribution in applicable size ranges for bubbles. Calibration beads were measured individually by manually moving the bead past the notch or in a small volume mixed solution contained in a magnetically stirred beaker. Vortexing was minimized by reducing the stirring speed. Settling of the larger glass microsphere beads (e.g., specific gravity of 2.46&#xA0;g/cm<sup>3</sup>) was reduced by performing the measurements in a perfluoropolyether (1,800&#xA0;Da, specific gravity of 1.88&#xA0;g/cm<sup>3</sup>, Fomblin 06/6 MFY06/6BB, Solvay Solexis; Bollate, Italy). In measurement frames, beads had a softer, lighter, less-contrasted outline when compared with bubbles, which slightly reduced the effectiveness of the optical imaging system without additional filters. Thus, measurement of beads was limited to sizes &#x2265;60&#xA0;&#x3BC;m, slightly higher than the lower limit for bubbles.</p>
+        <p>First, monodisperse spherical polyethylene calibration beads (Baltec; Balzers, Lichtenstein), 0.125&#xA0;&#xB1;&#xA0;0.002&#xA0;in. (1.2% rsd) or 3.175&#xA0;mm in diameter, were measured to evaluate the higher end of the expected Environcam&#x2122; measurement range. (Other reported options for calibration beads were expanded polystyrene beads with mean diameters of 5.47 and 3.1&#xA0;mm and a density of 30&#xA0;kg/m<sup>3</sup> [<xref ref-type="bibr" rid="CR12">12</xref>], 1.5&#xA0;mm ball bearings [<xref ref-type="bibr" rid="CR13">13</xref>], and red spherical particles of diameters 109 and 644&#xA0;&#x3BC;m [<xref ref-type="bibr" rid="CR7">7</xref>].) Using the external halogen lamp light source and the CMOS camera system, a value of 3,416&#xA0;&#x3BC;m (single measurement) was obtained which was 6.7% higher than the standard&#x2019;s value. Using the LED light source installed in the shroud backscreen and the CCD camera system, a value of 3,220&#xA0;&#x3BC;m was obtained which was 3.9% lower than the standard&#x2019;s value.</p>
+        <p>Next, high precision, NIST-tracable, glass micro-spheres (Whitehouse Scientific; Chester, UK) were selected in various monodisperse and polydisperse sizes. Distributions (in the format of count versus bin size) were fit to 4-parameter Sigmoidal or 4-parameter modified Gaussian distributions using Sigmaplot (Systat; San Jose, CA) (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). These distribution equations better fit the bead measurement data than distribution equations used for bubbles [<xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR15">15</xref>]. Monodisperse bead sizes, ranging from 20 to 600&#xA0;&#x3BC;m in increments of at least 15&#xA0;&#x3BC;m (corresponding to the instrument resolution), were tested (Table&#xA0;<xref rid="Tab3" ref-type="table">3</xref>). Measured size values agreed reasonably well with the manufacturer&#x2019;s data values. Measured ranges for 90% of the bead size range typically enveloped the manufacturer&#x2019;s data, with differences most likely owing to the nature of the fitted distributions. The distribution of polydisperse beads over most of the Environcam&#x2122; measurement range (50&#x2013;2,000&#xA0;&#x3BC;m) also was measured and compared with the analyzed manufacturer&#x2019;s distributions for three size ranges (Table&#xA0;<xref rid="Tab4" ref-type="table">4</xref>). Reasonable agreements in the distribution shape were obtained. The accuracy of these Environcam&#x2122; measurements showed that differences in means were observed and standard deviations were lower. In contrast, other researchers using calibration beads for optically based instrument systems reported that means were identical to the standard&#x2019;s values but standard deviations were higher (manufacturer: 109&#xA0;&#xB1;&#xA0;5&#xA0;&#x3BC;m, measured: 109&#xA0;&#xB1;&#xA0;10&#xA0;&#x3BC;m; manufacturer: 644&#xA0;&#xB1;&#xA0;13&#xA0;&#x3BC;m, measured: 644&#xA0;&#xB1;&#xA0;24.8&#xA0;&#x3BC;m) [<xref ref-type="bibr" rid="CR7">7</xref>].
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Distributions used to fit calibration bead measurement data (from Sigma plot software)</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Distribution</th><th align="left">Probability density function</th></tr></thead><tbody><tr><td align="left">Modified Gaussian 4-parameter (G)</td><td align="left"><italic>Y</italic>&#xA0;=&#xA0;<italic>Y</italic><sub>o</sub>&#xA0;+&#xA0;<italic>a </italic>exp[&#x2212;0.5(abs(<italic>X</italic>&#xA0;&#x2212;&#xA0;<italic>X</italic><sub>o</sub>)/<italic>b</italic>)<sup>2</sup>]</td></tr><tr><td align="left">Sigmoidal 4-parameter (G)</td><td align="left"><italic>Y</italic>&#xA0;=&#xA0;<italic>Y</italic><sub>o</sub>&#xA0;+&#xA0;<italic>a</italic>/(1&#xA0;+&#xA0;exp[&#x2212;(<italic>X</italic>&#xA0;&#x2212;&#xA0;<italic>X</italic><sub>o</sub>)/<italic>b</italic>])</td></tr></tbody></table></table-wrap><table-wrap id="Tab3"><label>Table&#xA0;3</label><caption><p>Comparison of manufacturer size (Whitehouse Scientific, Chester, UK) with measured size range for monodisperse beads</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Manufacturer&#x2019;s size data (&#x3BC;m)</th><th align="left">Manufacturer&#x2019;s data for 90% of beads within given range (&#x3BC;m)</th><th align="left" colspan="2">EnviroCam&#x2122; measured size (&#x3BC;m)</th><th align="left">EnviroCam&#x2122; data for 90% of beads within given range (&#x3BC;m)</th></tr></thead><tbody><tr><td align="left">22.81&#xA0;&#xB1;&#xA0;0.78</td><td char="&#x2013;" align="char">21.46&#x2013;24.23</td><td align="left" colspan="2">Not able to be measured</td><td align="left"/></tr><tr><td align="left">38.38&#xA0;&#xB1;&#xA0;0.54</td><td char="&#x2013;" align="char">36.5&#x2013;39.6</td><td align="left" colspan="2">Not able to be measured</td><td align="left"/></tr><tr><td align="left">59.63&#xA0;&#xB1;&#xA0;1.0</td><td char="&#x2013;" align="char">57.1&#x2013;62.2</td><td char="&#xB1;" align="char">66.3&#xA0;&#xB1;&#xA0;0.05 (G)</td><td char="&#xB1;" align="char">58.8&#xA0;&#xB1;&#xA0;0.03 (S)</td><td char="&#x2013;" align="char">53.4&#x2013;64.3 (S)</td></tr><tr><td align="left">83.43&#xA0;&#xB1;&#xA0;0.87</td><td char="&#x2013;" align="char">79.7&#x2013;87.5</td><td char="&#xB1;" align="char">82.5&#xA0;&#xB1;&#xA0;0.11 (G)</td><td char="&#xB1;" align="char">74.9&#xA0;&#xB1;&#xA0;0.09 (S)</td><td char="&#x2013;" align="char">64.2&#x2013;85.2 (S)</td></tr><tr><td align="left">98.10&#xA0;&#xB1;&#xA0;2.8</td><td char="&#x2013;" align="char">94.4&#x2013;102.8</td><td char="&#xB1;" align="char">98.28&#xA0;&#xB1;&#xA0;0.82 (G)</td><td char="&#xB1;" align="char">90.64&#xA0;&#xB1;&#xA0;0.27 (S)</td><td char="&#x2013;" align="char">76.0&#x2013;105.4 (S)</td></tr><tr><td align="left">155.8&#xA0;&#xB1;&#xA0;1.5</td><td char="&#x2013;" align="char">151.4&#x2013;163.1</td><td char="&#xB1;" align="char">163.9&#xA0;&#xB1;&#xA0;0.21 (G)</td><td char="&#xB1;" align="char">156.04&#xA0;&#xB1;&#xA0;0.2 (S)</td><td char="&#x2013;" align="char">143.7&#x2013;167.4 (S)</td></tr><tr><td align="left">200.9&#xA0;&#xB1;&#xA0;1.9</td><td char="&#x2013;" align="char">196&#x2013;206</td><td char="&#xB1;" align="char">200.69&#xA0;&#xB1;&#xA0;0.49 (G)</td><td char="&#xB1;" align="char">194.15&#xA0;&#xB1;&#xA0;0.07 (S)</td><td char="&#x2013;" align="char">187.6&#x2013;200.4 (S)</td></tr><tr><td align="left">258.6&#xA0;&#xB1;&#xA0;5.9</td><td char="&#x2013;" align="char">251.4&#x2013;265.6</td><td char="&#xB1;" align="char">259.77&#xA0;&#xB1;&#xA0;0.16 (G)</td><td char="&#xB1;" align="char">253.3&#xA0;&#xB1;&#xA0;0.07 (S)</td><td char="&#x2013;" align="char">246&#x2013;261 (S)</td></tr><tr><td align="left">297.9&#xA0;&#xB1;&#xA0;3.9</td><td char="&#x2013;" align="char">289.7&#x2013;309.3</td><td char="&#xB1;" align="char">303.1&#xA0;&#xB1;&#xA0;0.05 (G)</td><td char="&#xB1;" align="char">295&#xA0;&#xB1;&#xA0;0.07 (S)</td><td char="&#x2013;" align="char">275.3&#x2013;316.3 (S)</td></tr><tr><td align="left">361.6&#xA0;&#xB1;&#xA0;9.9</td><td char="&#x2013;" align="char">344&#x2013;376</td><td char="&#xB1;" align="char">366.5&#xA0;&#xB1;&#xA0;0.3 (G)</td><td char="&#xB1;" align="char">359.3&#xA0;&#xB1;&#xA0;0.86 (S)</td><td char="&#x2013;" align="char">337.4&#x2013;380.8 (S)</td></tr><tr><td align="left">405.9&#xA0;&#xB1;&#xA0;8.7</td><td char="&#x2013;" align="char">396&#x2013;419</td><td char="&#xB1;" align="char">411.7&#xA0;&#xB1;&#xA0;0.07 (G)</td><td char="&#xB1;" align="char">403.9&#xA0;&#xB1;&#xA0;0.2 (S)</td><td char="&#x2013;" align="char">385.9&#x2013;420.2 (S)</td></tr><tr><td align="left">589.0&#xA0;&#xB1;&#xA0;6</td><td char="&#x2013;" align="char">572&#x2013;615</td><td char="&#xB1;" align="char">586.7&#xA0;&#xB1;&#xA0;0.4 (G)</td><td char="&#xB1;" align="char">578&#xA0;&#xB1;&#xA0;0.09 (S)</td><td char="&#x2013;" align="char">551.9&#x2013;606.6 (S)</td></tr></tbody></table><table-wrap-foot><p>Envirocam&#x2122; measurements fitted to modified Gaussian 4-parameter equation (G) and sigmoidal 4-parameter equations (S) using Sigmaplot software. All <italic>r</italic><sup>2</sup> values &gt;0.99 unless otherwise noted. Beads of sizes 22 and 38&#xA0;&#x3BC;m were not measurable owing to blurry edges</p></table-wrap-foot></table-wrap><table-wrap id="Tab4"><label>Table&#xA0;4</label><caption><p>Comparison of manufacturer size (Whitehouse Scientific, Chester, UK) distribution with measured size distribution for polydisperse beads</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="3">Bead distribution (&#x3BC;m) </th><th align="left" colspan="10">Size at fixed percentiles (&#x3BC;m)</th></tr><tr><th align="left" colspan="2">10</th><th align="left" colspan="2">25</th><th align="left" colspan="2">50</th><th align="left" colspan="2">75</th><th align="left" colspan="2">90</th></tr><tr><th align="left">Standard</th><th align="left">EnviroCam&#x2122;</th><th align="left">Standard</th><th align="left">EnviroCam&#x2122;</th><th align="left">Standard</th><th align="left">EnviroCam&#x2122;</th><th align="left">Standard</th><th align="left">EnviroCam&#x2122;</th><th align="left">Standard</th><th align="left">Envirocam&#x2122;</th></tr></thead><tbody><tr><td align="left">500&#x2013;2,000</td><td char="&#xB1;" align="char">796&#xA0;&#xB1;&#xA0;10</td><td char="." align="char">744.5, 746.8</td><td char="&#xB1;" align="char">936&#xA0;&#xB1;&#xA0;9</td><td char="." align="char">849.3, 852.0</td><td char="&#xB1;" align="char">1,098&#xA0;&#xB1;&#xA0;11</td><td char="." align="char">1,069.6, 1,074.0</td><td char="&#xB1;" align="char">1,335&#xA0;&#xB1;&#xA0;32</td><td char="." align="char">1,232.0, 1,250.0</td><td char="&#xB1;" align="char">1,618&#xA0;&#xB1;&#xA0;40</td><td char="." align="char">1,442.5, 1,508.0</td></tr><tr><td align="left">150&#x2013;650</td><td char="&#xB1;" align="char">244&#xA0;&#xB1;&#xA0;4</td><td char="." align="char">245.8</td><td char="&#xB1;" align="char">306&#xA0;&#xB1;&#xA0;5</td><td char="." align="char">304.6</td><td char="&#xB1;" align="char">362&#xA0;&#xB1;&#xA0;5</td><td char="." align="char">368.2</td><td char="&#xB1;" align="char">424&#xA0;&#xB1;&#xA0;4</td><td char="." align="char">423.8</td><td char="&#xB1;" align="char">527&#xA0;&#xB1;&#xA0;18</td><td char="." align="char">493.9</td></tr><tr><td align="left">50&#x2013;350</td><td char="&#xB1;" align="char">94&#xA0;&#xB1;&#xA0;3.5</td><td char="." align="char">104.7</td><td char="&#xB1;" align="char">119&#xA0;&#xB1;&#xA0;1.2</td><td char="." align="char">130.9</td><td char="&#xB1;" align="char">151&#xA0;&#xB1;&#xA0;2.5</td><td char="." align="char">166.5</td><td char="&#xB1;" align="char">190&#xA0;&#xB1;&#xA0;4.8</td><td char="." align="char">202.8</td><td char="&#xB1;" align="char">237&#xA0;&#xB1;&#xA0;6.0</td><td char="." align="char">252.8</td></tr></tbody></table><table-wrap-foot><p>Envirocam&#x2122; measurements fitted to sigmoidal 4-parameter equation using Signmaplot software. Duplicate runs executed for 500&#x2013;2,000&#xA0;&#x3BC;m distribution</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec6">
+        <title>Gas bubble data analysis</title>
+        <p>The smallest bubble measurable was 30&#xA0;&#x3BC;m in diameter, based on an expected maximum system resolution of 7.5&#xA0;&#x3BC;m/pixel. A minimum of 2&#xA0;pixels were needed to quantify the radii, and radii were used for diameter calculations based on initial ease of programming. Since the radius accuracy was &#xB1;1&#xA0;pixel, the relative standard error for a 30&#xA0;&#x3BC;m bubble was 50%, dropping to 25% for a 60&#xA0;&#x3BC;m bubble. If required for other applications, smaller objects down to 20&#xA0;&#x3BC;m might be measured using (1) two pixels to determine diameter or (2) using a back-calculated diameter based on equivalent surface area since only 2&#xA0;pixels were required to define surface area.</p>
+        <p>Bubble diameter measurements, generated using the image analysis software, were compared with those generated manually for 225 objects from a single frame image taken using the CCD camera system and a 1/2&#xA0;in. gap shroud. Results demonstrated that the greatest percentage error was observed with smaller bubbles in the diameter range of 38&#x2013;57&#xA0;&#x3BC;m. This error generally decreased with larger bubble diameters. Manually measured diameters were slightly longer than image analysis measurements greater than 99.7% of the time, most likely due to a small amount of shadowing around bubble edges. The measurement error was 0.1% for the calibration line itself. Coincidentally, for some actual bubble measurement conditions, the number of objects rose considerably for bubbles 38&#xA0;&#x3BC;m in diameter. This rise may be caused by the greater measurement inaccuracy at this size; thus small changes in size were not detectable.</p>
+        <p>Since the minimum hardware resolution was 15&#xA0;&#x3BC;m based on at least a 1&#xA0;pixel change in radius, buckets in the distribution possessed 15&#xA0;&#x3BC;m increments. This distribution resolution was consistent with the 25&#x2013;90&#xA0;&#x3BC;m value reported for an optical bubble measurement system with a 20&#xD7; magnification [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR4">4</xref>] and similar to the 15&#xA0;&#x3BC;m value reported for a stationary flatbed scanner set up [<xref ref-type="bibr" rid="CR7">7</xref>]. The system&#x2019;s ability to measure bubble size changes due to typical differences in fermenter operating conditions was estimated based on this resolution. Specifically, an agitation rate increase from 100 to 150&#xA0;rpm decreased the size of 300&#xA0;&#x3BC;m bubbles to 184&#xA0;&#x3BC;m, and an agitation rate increase from 100 to 125&#xA0;rpm decreased the size of 300&#xA0;&#x3BC;m bubbles to 230&#xA0;&#x3BC;m (<italic>D&#xA0;&#x3B1;&#xA0;N</italic><sup>&#x2212;1.2</sup>; [<xref ref-type="bibr" rid="CR2">2</xref>]). Both of these changes were substantially greater than the 15&#xA0;&#x3BC;m resolution, and thus bubble size differences caused by agitation rate changes were believed detectable using this measurement system. For other operating conditions where the effect on bubble change was less pronounced [<xref ref-type="bibr" rid="CR2">2</xref>], these differences were not expected to be as readily detectable.</p>
+        <p>Incremental and cumulative distributions were plotted, typically as number or cumulative percentage versus bubble size, respectively. Arithmetic, Sauter, and geometric means and standard deviations (as applicable) then were calculated according to published methods [<xref ref-type="bibr" rid="CR2">2</xref>]. In addition, the 5% largest bubbles and 5% smallest bubbles were discarded and the arithmetic and Sauter means recalculated. Using these 90% cut-offs significantly reduced the skewing and variability impact of smaller numbers of larger bubbles in the size distributions on the arithmetic and Sauter mean diameter calculations (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a, b). Owing to the nature of the geometric mean calculation, there was little effect when the 90% cut-off was used (Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>c).
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Arithmetic (<bold>a</bold>), Sauter (<bold>b</bold>), and geometric (<bold>c</bold>) means and standard deviations (as applicable) calculated using all the bubbles and for the 90% cutoff. Calculations conducted on 500 frames using every tenth frame for 50 frames and each calculation point covering 50 different frames, starting from successive initial frames</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig5_HTML" id="MO5"/></fig></p>
+        <p>The total number of bubbles required to be analyzed per measurement greatly affected the measurement and data acquisition times (MAT and DAT, respectively), plus the data storage requirements. Based on a survey of published techniques [<xref ref-type="bibr" rid="CR2">2</xref>], the target number was 500 bubbles per measurement condition. This value was confirmed based on determining that means and standard deviations changed only minimally (less than 4%) when bubbles numbers below and beyond 500 were analyzed (specifically 300, 400, 500, 750, 1,000, 1,500 and 2,000), also suggesting that as few as 300 bubbles were sufficient. The desired total bubble number target may be achieved based on a higher number of bubbles per frame (50) and a smaller number of frames (10), or a lower number of bubbles per frame (10) and a larger number of frames (50), with care taken not to count bubbles more than once in successive frames in either case.</p>
+        <p>Measurement reproducibility was evaluated using bubble measurement data from a 15,000&#xA0;l fermenter by analyzing every tenth frame for 500 frames starting at the first frame until 2,000 bubbles were obtained, then re-analyzing every tenth frame starting from the second frame, then again, starting from the third through tenth frames. The relative standard deviations of the averages typically were under 7.5% for the 90% cut-off Sauter mean diameter and under 4% for the 90% cut-off arithmetic and geometric means. Thus, the sampling of frames used for analysis was representative of the total number of frames collected.</p>
+        <p>Discarding the blob area from the measurement was not felt to significantly influence bubble diameter means and distributions, nor impact subsequent predictions of volumetric mass transfer coefficients. The overall blob interfacial area per unit volume, <italic>a</italic>, was relatively low compared to that of the selected measured bubbles (e.g., for 5&#xA0;cm blobs, <italic>a</italic>&#xA0;=&#xA0;1/500,000&#xA0;&#x3BC;m; for 5&#xA0;mm bubbles, <italic>a</italic>&#xA0;=&#xA0;1/5,000&#xA0;&#x3BC;m) owing to the large diameters of the blobs. In addition, the percentage of larger bubbles (i.e., 2.5&#x2013;5.0&#xA0;mm diameter) was relatively low (&lt;10%) for most typical agitator/sparger system set points and configurations. Their overall contribution to interfacial area also was low. Similarly, although bubbles below the 40&#xA0;&#x3BC;m limit of detection had a large, collective, interfacial area, their small individual volume resulted in fast oxygen depletion by the broth, making them a less substantial source of oxygen supply [<xref ref-type="bibr" rid="CR16">16</xref>]. Thus, accuracy for bubble sizes outside the target range of 40&#xA0;&#x3BC;m&#x2013;2&#xA0;mm was considered less critical. Consequently, the maximum bubble size cut-off of 2&#xA0;mm used for measurement appeared acceptable since larger bubbles tended to be non-spherical as previously described [<xref ref-type="bibr" rid="CR5">5</xref>], and smaller bubbles (&lt;2&#x2013;2.5&#xA0;mm diameter) in aqueous solutions previously were shown to behave as particles with rigid interfaces [<xref ref-type="bibr" rid="CR17">17</xref>]. Consequently, significant numbers of irregularly shaped bubbles were not obtained within the target measurement range and the use of bubble diameter to approximate size was reasonably accurate.</p>
+      </sec>
+    </sec>
+    <sec id="Sec7">
+      <title>Test systems</title>
+      <sec id="Sec8">
+        <title>Water/media/broth</title>
+        <p>Liquid test media consisted of deionized water (DIW) and the following solutions, all prepared using DIW: 50&#xA0;vol% glycerol (viscosity of 12&#x2013;14&#xA0;Pa&#xA0;s&#xA0;&#xD7;&#xA0;10<sup>3</sup> [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR18">18</xref>] vs. 1.01&#xA0;Pa&#xA0;s&#xA0;&#xD7;&#xA0;10<sup>3</sup> for water [<xref ref-type="bibr" rid="CR19">19</xref>]), 0.01&#x2013;2&#xA0;ml/l (0.001&#x2013;0.2&#xA0;vol%) P2000 (polypropylene glycol 2000; Dow, Freeport, TX), 0.01&#x2013;2&#xA0;ml/l (0.001&#x2013;0.2&#xA0;vol%) antifoam C (Sigma), mono/di potassium phosphate (effect of pH at constant ionic strength of 0.037&#xA0;M: 5&#xA0;g/l monopotassium phosphate at pH 4.4 versus 6.4&#xA0;g/l dipotassium phosphate at pH 8.8; effect of ionic strength at constant pH of 7.0: 0.037&#xA0;M (5&#xA0;g/l) versus 0.0037&#xA0;M (0.5&#xA0;g/l) monopotassium phosphate), 0.1&#x2013;2.5&#xA0;g/l (0.01&#x2013;0.25&#xA0;wt/vol%) cottonseed flour (size of 91% of particles &lt;74&#xA0;&#x3BC;m; Pharmamedia, Traders Protein; Memphis, TN), sterility medium [6&#xA0;g/l yeast extract (Biospringer; Milwaukee, WI), 6&#xA0;g/l cerelose (glucose monohydrate), 1&#xA0;ml/l P2000], and low-protein animal cell culture media (LPKM, JRH Biosciences; Lenexa, KS). Varying viscosity by using a glycerol solution varied surface tension by only a few dynes/cm [<xref ref-type="bibr" rid="CR20">20</xref>], but antifoam addition varied surface tension without appreciably changing viscosity. These solutions were selected to vary the physical and optical properties of the liquid phase sufficiently to detect changes in bubble size measurement ability. Temperature was 22&#xB0;C, except for when its effect on bubble size was examined for set points of 15, 22 and 37&#xB0;C (range of 22&#xB0;C). Back-pressure was zero except when its effect on bubble size was examined (0.3&#x2013;1.5&#xA0;kg<sub>f</sub>/cm<sup>2</sup>).</p>
+        <p>To ensure that contamination did not cause changes in surface active properties [<xref ref-type="bibr" rid="CR21">21</xref>], test media that supported growth were sterilized if the testing period was expected to be greater than 2&#x2013;3&#xA0;h. Also, since vessel cleanliness (i.e., residual surfactant concentrations) affected bubble density and size, all vessels were first rinsed thoroughly with hot water, and then a known amount of antifoam (0.001&#xA0;vol% P2000) was added to DIW. These model systems formed the basis for initial tests of actual fermentation broths of microbial (filamentous bacterial culture, <italic>Amycolatopsis fastidiosa</italic>) and animal cell (suspension-adapted CHO) cultivations.</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Fermenters equipped with open pipe/jet spargers</title>
+        <p>When performing measurements in agitated fermenters equipped with open pipe/jet spargers (1&#xA0;in. opening at 180, 600, and 15,000&#xA0;l scales; 0.7&#xA0;in. opening at 1,500&#xA0;l scale), it was apparent that under certain conditions the bubble distribution was bimodal. Some images consisted of smaller spherical bubbles along with very large irregularly shaped &#x201C;blob&#x201D; bubbles, presumably owing to gas entrainment from vortexing and possible impeller flooding at higher aeration rates relative to agitation rates. Quantification of the discarded blob area from each of these conditions assisted in identifying the onset of flooding conditions, and possibly was directly related to the gas hold up (even under conditions in which individual bubble diameters cannot be discerned).</p>
+        <p>Bubble size measurements were conducted at the 180, 600, 1,500, 15,000&#xA0;l scales, spanning an 80-fold range in scale, all in geometrically similar fermenters. For some combinations of agitation and airflow rates, the bubble density was too high to clearly obtain individual bubble diameter measurements. This limitation to low agitation and airflow rates, and void fractions under 2%, was similar to that observed for other optically based systems [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR22">22</xref>].</p>
+        <p>Qualitative pictures of the effect of agitation and airflow rate at the 180&#xA0;l scale for a fermenter equipped with a Rushton impeller are shown in Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>. As expected, higher agitation rates and thus power inputs (estimated at 0.24, 0.83, and 1.96&#xA0;hp/1,000&#xA0;l; [<xref ref-type="bibr" rid="CR23">23</xref>]) created larger numbers of smaller bubbles and higher airflow rates (0.55, 1.1 and 1.67&#xA0;vvm) increased the number and size of bubbles. Increases in both agitation and airflow rates increased bubble density often to the degree that measurement of individual bubbles was precluded.
+<fig id="Fig6"><label>Fig.&#xA0;6</label><caption><p>Qualitative bubble size as function of agitation and airflow rate for open pipe sparger (1&#xA0;in.) at the 180&#xA0;l scale (0.001% P2000 in DIW)</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig6_HTML" id="MO6"/></fig></p>
+        <p>Qualitative pictures of the effect of agitation and airflow rate at the 15,000&#xA0;l scale for a fermenter equipped with a Rushton impeller are shown in Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>a. Trends were similar to those obtained at the smaller scale, considering vvms (0.067, 0.13 and 0.2&#xA0;vvm) and power inputs (estimated at 0.02, 0.12, and 0.36&#xA0;hp/1,000&#xA0;l; [<xref ref-type="bibr" rid="CR23">23</xref>]) were considerably lower. The 90% cut-off Sauter mean diameter is shown by Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>b, following expected trends with agitation and airflow rate. A comparison of the arithmetic, Sauter and geometric mean diameters, both with and without the 90% cut-off, is shown by Fig.&#xA0;<xref rid="Fig7" ref-type="fig">7</xref>c with expected trends generally observed. The relationship between bubble size and agitation rate at the 15,000&#xA0;l scale was quantified for the 90% cut-off of the Sauter mean diameter as <italic>D&#xA0;&#x3B1;&#xA0;N</italic><sup>&#x2212;0.45</sup>, and compared to literature results, <italic>D&#xA0;&#x3B1;&#xA0;N</italic><sup>&#x2212;1.2</sup> [<xref ref-type="bibr" rid="CR2">2</xref>]. The lower dependence observed on agitation rate likely was due to the fact that the measured power inputs were lower than those used for the published correlation.
+<fig id="Fig7"><label>Fig.&#xA0;7</label><caption><p>Analysis of bubble data at the 15,000&#xA0;l scale, containing 0.001% P2000 in DIW, with an open pipe sparger (round 2&#xA0;in. ring with four jets of id 1&#xA0;in. each): <bold>a</bold> Qualitative bubble size as a function of agitation and airflow rates. <bold>b</bold> Bubble Sauter mean diameter (90% cutoff) as a function of agitation and airflow rates. <bold>c</bold> Arithmetic, Sauter and geometric mean comparisons as function of agitation rate at airflow rate of 2,000&#xA0;lpm</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig7_HTML" id="MO7"/></fig></p>
+        <p>At the 180&#xA0;l scale, 50&#xA0;vol% glycerol solution was tested using a fermenter equipped with Rushton impellers at constant agitation and airflow rates. The effect of agitation and airflow rate increases on bubble size and distribution was qualitatively similar between DIW (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>) and 50&#xA0;vol% glycerol (Fig.&#xA0;<xref rid="Fig8" ref-type="fig">8</xref>). The number of smaller bubbles qualitatively was somewhat greater for 50&#xA0;vol% glycerol, particularly at lower agitation rates, which was inconsistent with the expectation that bubble size increase with solution viscosity. However, at the same 100&#xA0;rpm agitation rate, the power per unit volume was likely higher for the glycerol solution, since the impeller Reynold&#x2019;s number, <italic>N</italic><sub>Re,</sub> was &#x223C;1.8&#xA0;&#xD7;&#xA0;10<sup>4</sup> in the laminar flow range for 50&#xA0;vol% glycerol and &#x223C;2.2&#xA0;&#xD7;&#xA0;10<sup>5</sup> in the turbulent range for DIW.
+<fig id="Fig8"><label>Fig.&#xA0;8</label><caption><p>Comparison of bubble sizes in DIW and 50&#xA0;vol% glycerol, containing 0.001% P2000, as a function of agitation and airflow rate at the 180&#xA0;l scale</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig8_HTML" id="MO8"/></fig></p>
+        <p>At the 180&#xA0;l scale, various solutions (differing in ionic strength, pH, temperature, pressure) were tested using a fermenter equipped with Rushton impellers at constant agitation and airflow rates, but notable qualitative changes in bubble distribution were not apparent. As greater amounts of P2000 (beyond 0.001%) were added to DIW, observations became progressively more limited to lower agitation and airflow rates before becoming too dark due to overlapping bubbles. Gas hold up was indirectly measured for aeration and agitation conditions at the 180, 600 and 1,500&#xA0;l scales, for conditions, which had high discarded area percentages (Fig.&#xA0;<xref rid="Fig9" ref-type="fig">9</xref>a, b). Hold up was estimated using the discarded area for each frame of the measurement and then averaging the results. Discarded areas were not calculated precisely as individual bubble areas, however, and standard deviations of average discard areas were around 50% at lower values, dropping to 10% at higher values. Trends in the values of discarded areas indicated that hold up, as well as bubble residence time, increased with greater agitation rates and airflow rates as observed by others [<xref ref-type="bibr" rid="CR6">6</xref>]. In addition, as airflow rate increased, the impact of higher agitation rates on discard areas decreased suggesting impeller flooding, which at 0.5&#xA0;vvm occurred for the 1,500&#xA0;l scale but was not evident at the 600&#xA0;l scale owing to lower gassed power draws. Specifically, higher discard areas were evident at the 600&#xA0;l scale for hydrofoil versus Rushton impellers, consistent with greater measured gassed power decreases and gas hold ups [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR24">24</xref>].
+<fig id="Fig9"><label>Fig.&#xA0;9</label><caption><p>Discarded bubble area as a function of <bold>a</bold> agitation rate at constant airflow rate and <bold>b</bold> airflow rate at constant agitation rate for 180&#xA0;l fermenter containing 0.001% P2000 in DIW</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig9_HTML" id="MO9"/></fig></p>
+      </sec>
+      <sec id="Sec10">
+        <title>Fermenters equipped with ring spargers</title>
+        <p>Bubble measurements in fermenters with open pipe spargers exhibited several bubbles in each frame, often in swarms. In contrast, bubble measurements in fermenters with ring spargers represented the opposite extreme in which only a few bubbles were present in each frame. These latter tests were conducted using purified water in 75 and 750&#xA0;l geometrically similar bioreactors, spanning a tenfold size range. Fermenters were equipped with A315 impellers and a ring sparger with holes drilled 1/32&#xA0;in. in diameter on the top surface of the sparger ring. Only a few bubbles were observed regardless of notch orientation (left, right, down, top). It was believed that the fewer bubbles observed per frame were due partially to lower gas hold ups, typically 0.02&#xA0;vvm, but also the relative spatial placement of the probe at the level of the sparger ring.</p>
+        <p>As the airflow rate was increased to its higher range values, more similarly sized bubbles were observed. In contrast, higher agitation rates caused more surface air entrainment; thus greater numbers of large, irregularly shaped bubbles were present in the frames. Higher airflow rates resulted in bubbles similar in nature to those observed at lower airflow rates, all governed by the holes in the ring sparger. In some cases owing to the slower agitation rates, smaller-sized (geometric mean of 95 vs. 200&#xA0;&#x3BC;m) bubbles collected on surface of the shroud&#x2019;s sapphire window, and these bubbles needed to be distinguished from the freely moving bubbles. Increases in silicone antifoam from 0.001 to 0.2% did not increase the low number of bubbles observed.</p>
+      </sec>
+    </sec>
+    <sec id="Sec11">
+      <title>Use of an in situ bubble measurement system in fermentation</title>
+      <p>The ability of the Envirocam&#x2122; to measure in opaque solutions was examined using several model systems:</p>
+      <p>For the 180&#xA0;l fermenter equipped with an open pipe sparger, the effect of Pharmamedia on bubble images was investigated. When 20&#xA0;g/l Pharmamedia and 2&#xA0;ml/l P2000 was added to DIW (100&#xA0;&#x3BC;s shutter speed, 20&#xA0;gain, 185&#xA0;brightness and 8&#xA0;aperture), the contrast of bubble edges decreased to an unacceptable level. The particles caused granularity on the screen and blurred bubble edges, making detection difficult using the 1/2&#xA0;in. gap shroud. When 20&#xA0;g/l Pharamedia and 0.5&#xA0;ml/l P2000 was added to DIW using the 1/4&#xA0;in. gap shroud to decrease path length (100&#xA0;&#x3BC;s shutter speed, 0&#xA0;brightness, 31&#xA0;gain, 8&#xA0;aperture), bubble contrast was improved, but the resulting opaque solution appeared still too high for reliable analysis.</p>
+      <p>In addition, there was limited ability to obtain bubbles with edges sufficiently sharp enough for accurate measurements when 50% diluted <italic>Amycolatopsis </italic>broth (initial dcw of 3&#xA0;&#xB1;&#xA0;0.5&#xA0;g/l) was tested, despite raising settings to maximum values. The use of localized thresholding was attempted to sufficiently sharpen the bubble edges by reducing fuzziness for analysis, but it was only partially successful (Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>a). Note that the bubble density is considerably lower for this image taken at 200&#xA0;rpm and 300&#xA0;lpm, compared with images taken in 0.001% P2000 at 200&#xA0;rpm and 100&#xA0;lpm (Fig.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref>). This comparison demonstrated that the presence of broth potentially improves the agitation and aeration range over which the Envirocam&#x2122; can measure bubbles should the optical limitations of the broth on the measurement be mitigated.
+<fig id="Fig10"><label>Fig.&#xA0;10</label><caption><p>Bubble photographs in fermentation broth: <bold>a</bold><italic>Amycolatopsis fastidiosa </italic>broth with 1% P2000, 3&#xA0;g/l dry cell weight diluted 1:1 with DIW, 180&#xA0;l scale and open pipe sparger, 200&#xA0;rpm, 300&#xA0;lpm; <bold>b</bold> LPKM medium with 0.001% antifoam C, 40&#xA0;l scale and ring sparger, 50&#xA0;rpm, 4&#xA0;lpm</p></caption><graphic position="anchor" xlink:href="449_2007_127_Fig10_HTML" id="MO10"/></fig></p>
+      <p>For the 75&#xA0;l fermenter with the ring sparger, images taken in cell-free LPKM medium (Fig.&#xA0;<xref rid="Fig10" ref-type="fig">10</xref>b) were compared with those taken in a 10-day CHO cell culture containing animal protein-free medium (containing 1&#xA0;g/l Pluronic F68 and no antifoam) with about 7&#xA0;&#xD7;&#xA0;10<sup>6</sup>&#xA0;cells/ml at 45% viability. Despite the low cell density of this broth, bubble edges remained fuzzy preventing accurate size analysis.</p>
+    </sec>
+    <sec id="Sec12">
+      <title>Summary and future considerations</title>
+      <p>A novel in situ bubble size and distribution measurement device was developed. The bubble measurement instrument design strategy permitted one camera module to be attached to a shroud, and thus one sensor (the camera) was able to be moved to multiple locations without disturbing the fermentation process. The small size and flexibility of the camera attachment permitted it to be readily relocatable. An Ethernet connection for the camera can further reduce the extent of the field hardware, and thus permit one camera system to be even more transportable.</p>
+      <p>The measurement system was tested at the pilot scale, both in clear and opaque model systems, which included fermentation broth. Experimental data for mean bubble size changes versus expected behavior qualitatively compared favorably with published relationships for selected conditions [<xref ref-type="bibr" rid="CR2">2</xref>]. Quantitative comparisons were more difficult to establish owing to limitations in bubble size measurement capability at the higher agitation and airflow rate ranges at which these published correlations often were established.</p>
+      <p>At this time, application of the EnviroCam&#x2122; bubble measurement system appears limited to clear solutions that do not contain large numbers of overlapping bubbles. Different liquids (e.g., water, cottonseed flour, microbial broth, animal cell broth) possess different UV spectrum and light scattering properties, as well as varying surfactant properties, which influence bubble size and hold up. These differences suggest that some adaptation of the measurement system is necessary when moving from system to system. Specifically, agitation and aeration rate combinations which produce too many bubbles for measurement in a model DIW system may produce acceptable amounts of bubbles in a fermentation broth owing to changes in surfactant levels, but the ability to distinguish these bubble edges is diminished. Further expansion of the versatility and range of this instrument is the subject of future efforts, but key approaches being considered involve the further examination of available LabView filtering techniques to process bubble images and the use of smaller notch sizes.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Akita</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Yoshida</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title>Bubble size, interfacial area, and liquid phase mass transfer coefficient in bubble columns</article-title>
+          <source>Ind Eng Chem Process Des Develop</source>
+          <year>1974</year>
+          <volume>13</volume>
+          <issue>1</issue>
+          <fpage>84</fpage>
+          <lpage>91</lpage>
+          <pub-id pub-id-type="doi">10.1021/i260049a016</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Akita K, Yoshida F (1974) Bubble size, interfacial area, and liquid phase mass transfer coefficient in bubble columns. Ind Eng Chem Process Des Develop 13(1):84&#x2013;91 </citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Junker</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Measurement of bubble and pellet size distributions: past and current image analysis technology</article-title>
+          <source>Bioprocess Biosyst Eng</source>
+          <year>2006</year>
+          <volume>29</volume>
+          <fpage>185</fpage>
+          <lpage>206</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00449-006-0070-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Junker B (2006) Measurement of bubble and pellet size distributions: past and current image analysis technology. Bioprocess Biosyst Eng 29:185&#x2013;206 <pub-id pub-id-type="pmid">16855822</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pacek</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Moore</surname>
+              <given-names>IPT</given-names>
+            </name>
+            <name>
+              <surname>Nienow</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Calabrese</surname>
+              <given-names>RV</given-names>
+            </name>
+          </person-group>
+          <article-title>Video technique for measuring dynamics of liquid&#x2013;liquid dispersion during phase inversion</article-title>
+          <source>AIChE J</source>
+          <year>1994</year>
+          <volume>40</volume>
+          <issue>12</issue>
+          <fpage>1940</fpage>
+          <lpage>1949</lpage>
+          <pub-id pub-id-type="doi">10.1002/aic.690401203</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pacek AW, Moore IPT, Nienow AW, Calabrese RV (1994) Video technique for measuring dynamics of liquid&#x2013;liquid dispersion during phase inversion. AIChE J 40(12):1940&#x2013;1949 </citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pacek</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Man</surname>
+              <given-names>CC</given-names>
+            </name>
+            <name>
+              <surname>Nienow</surname>
+              <given-names>AW</given-names>
+            </name>
+          </person-group>
+          <article-title>On the Sauter mean diameter and size distributions in turbulent liquid/liquid dispersions in a stirred vessel</article-title>
+          <source>Chem Eng Sci</source>
+          <year>1998</year>
+          <volume>52</volume>
+          <issue>11</issue>
+          <fpage>2005</fpage>
+          <lpage>2011</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0009-2509(98)00068-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pacek AW, Man CC, Nienow AW (1998) On the Sauter mean diameter and size distributions in turbulent liquid/liquid dispersions in a stirred vessel. Chem Eng Sci 52(11):2005&#x2013;2011 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Machon</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Pacek</surname>
+              <given-names>AW</given-names>
+            </name>
+            <name>
+              <surname>Nienow</surname>
+              <given-names>AW</given-names>
+            </name>
+          </person-group>
+          <article-title>Bubble sizes in electrolyte and alcohol solutions in a turbulent stirred vessel</article-title>
+          <source>Trans IChemE</source>
+          <year>1997</year>
+          <volume>75</volume>
+          <issue>Pt. A</issue>
+          <fpage>339</fpage>
+          <lpage>348</lpage>
+          <pub-id pub-id-type="doi">10.1205/026387697523651</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Machon V, Pacek AW, Nienow AW (1997) Bubble sizes in electrolyte and alcohol solutions in a turbulent stirred vessel. Trans IChemE 75(Pt. A):339&#x2013;348 </citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="other">Honkanen M, Saarenrinne P (2002) Turbulent bubbly flow measurements in a mixing vessel with PIV. In: Proceedings of the 11th international symposium on applications of laser techniques to fluid mechanics. Instituto Superior Technico, Lisbon, pp 1&#x2013;12</citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>O&#x2019;Cleirigh</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Walsh</surname>
+              <given-names>PK</given-names>
+            </name>
+            <name>
+              <surname>O&#x2019;Shea</surname>
+              <given-names>DG</given-names>
+            </name>
+          </person-group>
+          <article-title>Morphological quantification of pellets in <italic>Streptomyces hygroscopicus </italic>var. <italic>geldanus </italic>fermentation broths using a flatbed scanner</article-title>
+          <source>Biotechnol Lett</source>
+          <year>2003</year>
+          <volume>25</volume>
+          <fpage>1677</fpage>
+          <lpage>1683</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1025622100475</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">O&#x2019;Cleirigh C, Walsh PK, O&#x2019;Shea DG (2003) Morphological quantification of pellets in Streptomyces hygroscopicus var. geldanus fermentation broths using a flatbed scanner. Biotechnol Lett 25:1677&#x2013;1683 <pub-id pub-id-type="pmid">14584928</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Malysa</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Ng</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Cymbalisty</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Czarnecki</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Masliyah</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>A method of visualization and characterization of aggregate flow inside a separation vessel, Part 1. Size, shape and rise velocity of the aggregates</article-title>
+          <source>Int J Miner Process</source>
+          <year>1999</year>
+          <volume>55</volume>
+          <fpage>171</fpage>
+          <lpage>188</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0301-7516(98)00031-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Malysa K, Ng S, Cymbalisty L, Czarnecki J, Masliyah J (1999) A method of visualization and characterization of aggregate flow inside a separation vessel, Part 1. Size, shape and rise velocity of the aggregates. Int J Miner Process 55:171&#x2013;188 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Coelho</surname>
+              <given-names>MAZ</given-names>
+            </name>
+            <name>
+              <surname>Belo</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Pinheiro</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Amaral</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Mota</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Coutinho</surname>
+              <given-names>JAP</given-names>
+            </name>
+            <name>
+              <surname>Ferreira</surname>
+              <given-names>EC</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of hyperbaric stress on yeast morphology: study by automated image analysis</article-title>
+          <source>Appl Microbiol Biotechnol</source>
+          <year>2004</year>
+          <volume>66</volume>
+          <fpage>318</fpage>
+          <lpage>324</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00253-004-1648-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Coelho MAZ, Belo I, Pinheiro R, Amaral AL, Mota M, Coutinho JAP, Ferreira EC (2004) Effect of hyperbaric stress on yeast morphology: study by automated image analysis. Appl Microbiol Biotechnol 66:318&#x2013;324 <pub-id pub-id-type="pmid">15257421</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nadimpalli</surname>
+              <given-names>UD</given-names>
+            </name>
+            <name>
+              <surname>Price</surname>
+              <given-names>RR</given-names>
+            </name>
+            <name>
+              <surname>Hall</surname>
+              <given-names>SG</given-names>
+            </name>
+            <name>
+              <surname>Bomma</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>A comparison of image processing techniques for bird recognition</article-title>
+          <source>Biotechnol Prog</source>
+          <year>2006</year>
+          <volume>22</volume>
+          <fpage>9</fpage>
+          <lpage>13</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp0500922</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nadimpalli UD, Price RR, Hall SG, Bomma P (2006) A comparison of image processing techniques for bird recognition. Biotechnol Prog 22:9&#x2013;13 <pub-id pub-id-type="pmid">16454486</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pichon</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Vivier</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Pons</surname>
+              <given-names>MN</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Karim</surname>
+              <given-names>MN</given-names>
+            </name>
+            <name>
+              <surname>Stephanopoulos</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Growth monitoring of mammalian cells on microcarriers by image analysis</article-title>
+          <source>Modeling and control of biotechnical processes</source>
+          <year>1992</year>
+          <publisher-loc>Oxford</publisher-loc>
+          <publisher-name>Pergamon</publisher-name>
+          <fpage>311</fpage>
+          <lpage>314</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Pichon D, Vivier H, Pons MN (1992) Growth monitoring of mammalian cells on microcarriers by image analysis. In: Karim MN, Stephanopoulos G (eds) Modeling and control of biotechnical processes. Pergamon, Oxford, pp 311&#x2013;314 </citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pan</surname>
+              <given-names>X-H</given-names>
+            </name>
+            <name>
+              <surname>Luo</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>X-Y</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>H-J</given-names>
+            </name>
+          </person-group>
+          <article-title>Three dimensional particle image tracking for dilute particle-liquid flows in a pipe</article-title>
+          <source>Meas Sci Technol</source>
+          <year>2002</year>
+          <volume>13</volume>
+          <issue>8</issue>
+          <fpage>1206</fpage>
+          <lpage>1216</lpage>
+          <pub-id pub-id-type="doi">10.1088/0957-0233/13/8/307</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pan X-H, Luo R, Yang X-Y, Yang H-J (2002) Three dimensional particle image tracking for dilute particle-liquid flows in a pipe. Meas Sci Technol 13(8):1206&#x2013;1216 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dudley</surname>
+              <given-names>BT</given-names>
+            </name>
+            <name>
+              <surname>Howgrave-Graham</surname>
+              <given-names>AR</given-names>
+            </name>
+            <name>
+              <surname>Bruton</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Wallis</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <article-title>Image analysis to quantify and measure UASB digester granules</article-title>
+          <source>Biotechnol Bioeng</source>
+          <year>1993</year>
+          <volume>42</volume>
+          <fpage>279</fpage>
+          <lpage>283</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.260420303</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dudley BT, Howgrave-Graham AR, Bruton AG, Wallis FM (1993) Image analysis to quantify and measure UASB digester granules. Biotechnol Bioeng 42:279&#x2013;283 <pub-id pub-id-type="pmid">18613010</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="other">Greaves M, Barigou M (1988) The internal structure of gas&#x2013;liquid dispersions in a stirred reactor. In: Proceedings 6th European conference on mixing, BHRA, Fluid Engineering Centre, Bedford, pp 313&#x2013;320</citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Barigou</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Greaves</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Bubble size distributions in a mechanically agitated gas&#x2013;liquid contactor</article-title>
+          <source>Chem Eng Sci</source>
+          <year>1992</year>
+          <volume>47</volume>
+          <issue>8</issue>
+          <fpage>2009</fpage>
+          <lpage>2025</lpage>
+          <pub-id pub-id-type="doi">10.1016/0009-2509(92)80318-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Barigou M, Greaves M (1992a) Bubble size distributions in a mechanically agitated gas&#x2013;liquid contactor. Chem Eng Sci 47(8):2009&#x2013;2025 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Franz</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Buchholz</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Schugerl</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Comprehensive study of the gas hold up and bubble size distributions in highly viscous liquids</article-title>
+          <source>Chem Eng Commun</source>
+          <year>1980</year>
+          <volume>5</volume>
+          <fpage>165</fpage>
+          <lpage>202</lpage>
+          <pub-id pub-id-type="doi">10.1080/00986448008935962</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Franz K, Buchholz R, Schugerl K (1980) Comprehensive study of the gas hold up and bubble size distributions in highly viscous liquids. Chem Eng Commun 5:165&#x2013;202 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moo-Young</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Blanch</surname>
+              <given-names>HW</given-names>
+            </name>
+          </person-group>
+          <article-title>Design of biochemical reactors, mass transfer criteria for simple and complex systems</article-title>
+          <source>Adv Biochem Eng</source>
+          <year>1981</year>
+          <volume>19</volume>
+          <fpage>1</fpage>
+          <lpage>69</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Moo-Young M, Blanch HW (1981) Design of biochemical reactors, mass transfer criteria for simple and complex systems. Adv Biochem Eng 19:1&#x2013;69 </citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Walter</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>Blanch</surname>
+              <given-names>HW</given-names>
+            </name>
+          </person-group>
+          <article-title>Bubble break-up in gas&#x2013;liquid bioreactors: break-up in turbulent flows.</article-title>
+          <source>Chem Eng J</source>
+          <year>1986</year>
+          <volume>32</volume>
+          <fpage>B7</fpage>
+          <lpage>B17</lpage>
+          <pub-id pub-id-type="doi">10.1016/0300-9467(86)85011-0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Walter JF, Blanch HW (1986) Bubble break-up in gas&#x2013;liquid bioreactors: break-up in turbulent flows. Chem Eng J 32:B7&#x2013;B17 </citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vermeulen</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Langlois</surname>
+              <given-names>GE</given-names>
+            </name>
+          </person-group>
+          <article-title>Interfacial area in liquid&#x2013;liquid and gas&#x2013;liquid agitation</article-title>
+          <source>Chem Eng Prog</source>
+          <year>1955</year>
+          <volume>51</volume>
+          <issue>2</issue>
+          <fpage>85F</fpage>
+          <lpage>94F</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Vermeulen T, Williams GM, Langlois GE (1955) Interfacial area in liquid&#x2013;liquid and gas&#x2013;liquid agitation. Chem Eng Prog 51(2):85F&#x2013;94F </citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="other">Kumar R, Kuloor NR (1970) The formation of bubbles and drops. In: Drew TB, Cokelet GR, Hoopes JW Jr, Vermeulen T (eds) Advances in chemical engineering, vol. 8. Academic, New York, pp 255&#x2013;368</citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rodger</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Trice</surname>
+              <given-names>VG</given-names>
+            </name>
+            <name>
+              <surname>Rushton</surname>
+              <given-names>JH</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of fluid motion on interfacial area of dispersions</article-title>
+          <source>Chem Eng Prog</source>
+          <year>1956</year>
+          <volume>52</volume>
+          <issue>12</issue>
+          <fpage>515</fpage>
+          <lpage>520</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Rodger WA, Trice VG, Rushton JH (1956) Effect of fluid motion on interfacial area of dispersions. Chem Eng Prog 52(12):515&#x2013;520 </citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Laakkonen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Honkanen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Saarenrinne</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Aittamaa</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Local bubble size distributions, gas&#x2013;liquid interfacial areas and gas hold-ups in a stirred vessel with particle image velocimetry</article-title>
+          <source>Chem Eng J</source>
+          <year>2005</year>
+          <volume>109</volume>
+          <fpage>37</fpage>
+          <lpage>47</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.cej.2005.03.002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Laakkonen M, Honkanen M, Saarenrinne P, Aittamaa J (2005) Local bubble size distributions, gas&#x2013;liquid interfacial areas and gas hold-ups in a stirred vessel with particle image velocimetry. Chem Eng J 109:37&#x2013;47 </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Junker</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Scale-up methodologies for <italic>Escherichia coli </italic>and yeast fermentation processes</article-title>
+          <source>J Biosci Bioeng</source>
+          <year>2004</year>
+          <volume>97</volume>
+          <issue>6</issue>
+          <fpage>347</fpage>
+          <lpage>364</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Junker B (2004) Scale-up methodologies for Escherichia coli and yeast fermentation processes. J Biosci Bioeng 97(6):347&#x2013;364 <pub-id pub-id-type="pmid">16233642</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Junker</surname>
+              <given-names>BH</given-names>
+            </name>
+            <name>
+              <surname>Stanik</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Barna</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Salmon</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Paul</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Buckland</surname>
+              <given-names>BC</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of impeller type on power input in fermentation vessels</article-title>
+          <source>Bioprocess Eng</source>
+          <year>1998</year>
+          <volume>18</volume>
+          <fpage>401</fpage>
+          <lpage>412</lpage>
+          <pub-id pub-id-type="doi">10.1007/s004490050463</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Junker BH, Stanik M, Barna C, Salmon P, Paul E, Buckland BC (1998) Influence of impeller type on power input in fermentation vessels. Bioprocess Eng 18:401&#x2013;412 </citation>
+      </ref>
+    </ref-list>
+    <glossary>
+      <title>Abbreviations</title>
+      <def-list>
+        <def-item>
+          <term>Avi</term>
+          <def>
+            <p>Audio video interleaves</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>BSA</term>
+          <def>
+            <p>Bovine serum albumin</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>CCD</term>
+          <def>
+            <p>Solid state charge coupled device cameras, two-dimensional, self-scanning, electronic analog imaging device</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>CCIR</term>
+          <def>
+            <p>Consultive Committee for International Radio standard, European TV standard-625 lines, 50&#xA0;Hz</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>CCTV</term>
+          <def>
+            <p>Closed circuit television, standard camera equipment</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>Chalnicon</term>
+          <def>
+            <p>Sensor tube that has cadmium selenide-based target layer for face plate material</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>CMOS</term>
+          <def>
+            <p>Complementary metal oxide semiconductor, low power and low heat circuit</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>DAT</term>
+          <def>
+            <p>Data acquisition time</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>DIW</term>
+          <def>
+            <p>Deionized water</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>EC</term>
+          <def>
+            <p>Electronic commerce</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>fps</term>
+          <def>
+            <p>Frames per second</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>FFT</term>
+          <def>
+            <p>Fast Fourier transform</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>H</term>
+          <def>
+            <p>Horizontal</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>IPS</term>
+          <def>
+            <p>In-plane-switching, technology to produce high quality LCDs</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>LED</term>
+          <def>
+            <p>Light emitting diode</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>MAT</term>
+          <def>
+            <p>Measurement acquisition time</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>NTSC</term>
+          <def>
+            <p>National Television System Committee, 525 lines, 30&#xA0;Hz (Americas and Far East)</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>PAT</term>
+          <def>
+            <p>Process analytical technology</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>PC</term>
+          <def>
+            <p>Personal computer</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>ROI</term>
+          <def>
+            <p>Region of interest</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>RW</term>
+          <def>
+            <p>Read/write</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>SVHS</term>
+          <def>
+            <p>Super VHS (vertical helical scan), enhanced quality and higher horizontal resolution</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>TIFF</term>
+          <def>
+            <p>Tagged image file format</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>V</term>
+          <def>
+            <p>Vertical</p>
+          </def>
+        </def-item>
+        <def-item>
+          <term>vvm</term>
+          <def>
+            <p>Vessel volumes per minute</p>
+          </def>
+        </def-item>
+      </def-list>
+    </glossary>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,881 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Bioinformation</journal-id>
+      <journal-id journal-id-type="publisher-id">Bioinformation</journal-id>
+      <journal-title>Bioinformation</journal-title>
+      <issn pub-type="epub">0973-2063</issn>
+      <publisher>
+        <publisher-name>Biomedical Informatics Publishing Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18305827</article-id>
+      <article-id pub-id-type="pmc">2241933</article-id>
+      <article-id pub-id-type="publisher-id">004400022007</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Hypothesis</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Functional gene clustering via gene annotation sentences, MeSH and GO keywords from biomedical literature</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Natarajan</surname>
+            <given-names>Jeyakumar</given-names>
+          </name>
+          <xref ref-type="aff" rid="A1">1</xref>
+          <xref ref-type="corresp" rid="COR1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Ganapathy</surname>
+            <given-names>Jawahar</given-names>
+          </name>
+          <xref ref-type="aff" rid="A1">1</xref>
+        </contrib>
+        <aff id="A1"><label>1</label>Centre of Excellence in Bioinformatics, School of Biotechnology, Madurai Kamaraj University, Madurai 625021, India</aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="COR1"><label>*</label>Corresponding author: E-mail: <email>jkumar@mrna.tn.nic.in</email></corresp>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>30</day>
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>2</volume>
+      <issue>5</issue>
+      <fpage>185</fpage>
+      <lpage>193</lpage>
+      <history>
+        <date date-type="received">
+          <day>18</day>
+          <month>11</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>30</day>
+          <month>12</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2007 Biomedical Informatics Publishing Group</copyright-statement>
+        <copyright-year>2007</copyright-year>
+        <license license-type="open-access">
+          <p>This is an open-access article, which permits unrestricted use, distribution, and reproduction in any medium, 
+		for non-commercial purposes, provided the original author and source are credited.</p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>
+Gene function annotation remains a key challenge in modern biology. This is especially true for high-throughput techniques such as gene expression experiments. 
+Vital information about genes is available electronically from biomedical literature in the form of full texts and abstracts. In addition, various publicly 
+available databases (such as GenBank, Gene Ontology and Entrez) provide access to gene-related information at different levels of biological organization, 
+granularity and data format. This information is being used to assess and interpret the results from high-throughput experiments. To improve keyword extraction 
+for annotational clustering and other types of analyses, we have developed a novel text mining approach, which is based on keywords identified at the level of 
+gene annotation sentences (in particular sentences characterizing biological function) instead of entire abstracts. Further, to improve the expressiveness and 
+usefulness of gene annotation terms, we investigated the combination of sentence-level keywords with terms from the Medical Subject Headings (MeSH) and Gene 
+Ontology (GO) resources. We find that sentence-level keywords combined with MeSH terms outperforms the typical &#x2018;baseline&#x2019; set-up (term frequencies at the level 
+of abstracts) by a significant margin, whereas the addition of GO terms improves matters only marginally. We validated our approach on the basis of a manually 
+annotated corpus of 200 abstracts generated on the basis of 2 cancer categories and 10 genes per category. We applied the method in the context of three sets of 
+differentially expressed genes obtained from pediatric brain tumor samples. This analysis suggests novel interpretations of discovered gene expression patterns.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>text mining</kwd>
+        <kwd>functional clustering</kwd>
+        <kwd>microarray data analysis</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>In recent years, increasing amounts of biological data have become available through techniques such as DNA microarrays and other high-throughput gene and 
+protein assays. [<xref ref-type="bibr" rid="R01">1</xref>,<xref ref-type="bibr" rid="R02">2</xref>] As large numbers of genes can be included in such studies, the task of assigning meaningful biological function to gene patterns or gene clusters 
+is a considerable challenge. Typical analyses using supervised (classification) or unsupervised (clustering) methods require the user to incorporate the necessary background 
+knowledge. [<xref ref-type="bibr" rid="R03">3</xref>] This ability to incorporate background knowledge is fundamental to effective and efficient scientific discovery. A substantial amount of biomedical knowledge is 
+captured in free-text form in abstracts and full-text articles and also in specialized biological information systems such as Gene Ontology (GO) [<xref ref-type="bibr" rid="R04">4</xref>], Medical Subject Headings 
+(MeSH) [<xref ref-type="bibr" rid="R05">5</xref>], Database of Interacting Proteins (DIP) [<xref ref-type="bibr" rid="R06">6</xref>] etc. Until only a few years ago, human reasoning was the primary method for the extracting, synthesizing and interpreting 
+the information contained in the biomedical literature and supporting biological information systems. </p>
+      <p>However, in recent years the number of online documents (and other biological information repositories) has grown tremendously. This is both an opportunity and a challenge. 
+On one hand, such resources facilitate automated processing of the knowledge and information contained in these documents. On the other hand, such processing poses considerable 
+algorithmic and computational challenges [<xref ref-type="bibr" rid="R07">7</xref>]. For example, the biomedical abstract database MEDLINE [<xref ref-type="bibr" rid="R08">8</xref>] currently contains about 15 million citations and about 40 000 citations 
+are added monthly. </p>
+      <p>Text mining is the application of techniques from machine learning, natural language processing (NLP), information extraction and statistical/mathematical approaches to 
+automated extraction of useful knowledge from text [<xref ref-type="bibr" rid="R09">9</xref>]. Text mining of biomedical literature has been applied successfully to various biological problems. Many studies focus 
+on protein-protein [<xref ref-type="bibr" rid="R10">10</xref>&#x2013;<xref ref-type="bibr" rid="R13">13</xref>] and gene-protein interactions. [<xref ref-type="bibr" rid="R14">14</xref>] Other specific relationships between biological entities such as sub-cellular localization of proteins [<xref ref-type="bibr" rid="R15">15</xref>,<xref ref-type="bibr" rid="R16">16</xref>], 
+molecular binding relationships [<xref ref-type="bibr" rid="R17">17</xref>] and interaction between genes and drugs [<xref ref-type="bibr" rid="R18">18</xref>] are also explored. Text analysis of biomedical literature has also been applied successfully 
+to incorporate functional information of gene expression data [<xref ref-type="bibr" rid="R19">19</xref>&#x2013;<xref ref-type="bibr" rid="R23">23</xref>]. For example, MedMOLE [<xref ref-type="bibr" rid="R19">19</xref>] identifies the functions among a group of genes by simple text clustering of 
+entire MEDLINE documents associated with the genes. Blaschke et al. [<xref ref-type="bibr" rid="R20">20</xref>] extracted information about the common biological characteristics of gene clusters from MEDLINE using 
+a statistical term weighting approach. This method returns an ordered set of keywords with a high probability of occurrence in abstracts. Liu et al. [<xref ref-type="bibr" rid="R24">24</xref>] extended this approach 
+by clustering such keywords to find gene-to-gene relationships. Clustering genes by functional keyword association can provide direct information about the nature of genes and 
+their functional association [<xref ref-type="bibr" rid="R25">25</xref>]. However, the quality of the keyword lists extracted from the biomedical literature for each gene significantly affects the clustering results. 
+Commonly, these approaches represent genes by extracting keywords from entire abstracts [<xref ref-type="bibr" rid="R25">25</xref>]. These keywords may undergo transformations such as <italic>weighting</italic> or <italic>dimension reduction</italic> 
+with the goal of improving clustering quality and efficiency. However, gene clustering using entire abstracts has the following main drawbacks. (a) Abstracts normally contain a 
+large number of irrelevant sentences. These sentences may influence the clustering process and are likely to obscure information useful for gene annotation. (b) The number of 
+unique terms in abstracts is typically very large. This requires the ability to deal with sparse data spaces or methods for dimensionality reduction. (c) Dimension reduction 
+methods such as principal component analysis or signal-to-noise methods increase the computational complexity, may lead to the loss of important keywords and do not guarantee 
+that the reduced dimensionality will yield better clustering/annotation information. Also, the composite features may be hard to interpret. </p>
+      <p>To avoid the above drawbacks and improve the clustering process, we decided to use gene annotation sentences from abstracts instead of using full abstracts to extract the 
+keywords. Current NLP techniques allow such sentence extraction from documents. Using clustering on the basis of sentence-extraction techniques has the advantage of avoiding 
+complex dimensionality reduction and term weighting techniques. Further, this approach is likely to yield more specific terms which are easier to interpret. We first extracted 
+the potential sentences describing gene annotation information from abstracts using a NLP method utilizing gene/protein name dictionaries and pattern-matching-based rules. In 
+addition to this sentence-keywords approach, we carried out two further experiments involving MeSH terms and GO terms as supplementary keywords. Hence, in our method, each gene 
+is represented by set of keywords extracted from <italic>sentences</italic>, MeSH terms and GO terms. To demonstrate the usefulness of the proposed text mining methods, we performed hierarchical 
+clustering of a <italic>gene</italic> &#xD7; <italic>keyword</italic> matrix to find functionally discrete sub-groups of genes. The overall experimental design and its components are illustrated in the <xref ref-type="fig" rid="F1">Figure 1</xref>.</p>
+      <p>We validated the performance of keywords extracted by our method using a manually annotated corpus of 200 abstracts. We also evaluated the usefulness of our method by sorting 
+differentially expressed genes from a microarray experiment into functional sub-groups. The objective of our gene clustering process using functional keywords is to identify and 
+summarize potential functional gene groups and to complement the conventional gene expression data clustering tasks.</p>
+    </sec>
+    <sec sec-type="methods" id="s2">
+      <title>Methodology</title>
+      <sec id="s2a">
+        <title>Gene/Protein name and synonym dictionary creation</title>
+        <p>One of the major obstacles in biomedical literature processing is the variety of names each gene or protein is known by. To address this problem in the present study, we 
+developed a gene/protein name dictionary. Essentially, each entry of this dictionary consists of a preferred (or canonical) name for a gene/protein and a list of synonyms used for 
+this gene/protein. The dictionary was created on the basis of the Entrez Gene [<xref ref-type="bibr" rid="R26">26</xref>] (previously LocusLink) database, one the most stable and complete sources of information on genes. 
+Since our study is part of a wider investigation in the context of human brain tumor research, we focused specifically on human genes/proteins. We developed PERL scripts to extract 
+and select from the Entrez Gene entries the official symbols as preferred name of the gene and other aliases as known synonyms. In addition, we augmented the dictionary with relevant 
+synonyms from other publicly available databases including GeneCards [<xref ref-type="bibr" rid="R27">27</xref>], SwissProt [<xref ref-type="bibr" rid="R28">28</xref>], GoldenPath [<xref ref-type="bibr" rid="R29">29</xref>] and HUGO [<xref ref-type="bibr" rid="R30">30</xref>]. The final dictionary contains 26 731 unique human gene/protein 
+names and 274 845 synonym names.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Keywords extraction from biomedical literature</title>
+        <p>In our study each gene is represented by a list of keywords extracted from MEDLINE abstract sentences, MeSH terms and GO terms. The procedure for extracting keywords from each data 
+source is discussed below.</p>
+      </sec>
+      <sec id="s2c">
+        <title>MEDLINE abstracts keywords extraction</title>
+        <p>To extract the keywords associated with each abstract, we decided to use gene annotation <italic>sentences</italic> from the abstracts instead of constructing a large keyword vector based on the entire 
+abstract. The assumption is that the information given on sentence-level is much more specific and therefore useful to characterize the function of the genes. Only sentences that contain 
+one or more genes reference from our gene lists will be considered as gene annotation sentences, all other sentences are discarded from the analysis. We applied the following three steps 
+to extract sentence-level keywords (1) gene-name normalization, (2) sentence filtering, and (3) keyword extraction.</p>
+      </sec>
+      <sec id="s2d">
+        <title>Gene-name normalization</title>
+        <p>This process replaces all the gene names in the abstract with its unique canonical identifier (Entrez gene ID) using the gene-synonym dictionary specially constructed for this study.
+</p>
+      </sec>
+      <sec id="s2e">
+        <title>Sentence filtering</title>
+        <p>This process extracts all the gene annotation sentences from abstracts that contain one or more gene names from our gene lists using regular-expression pattern matching rules. We used different 
+regular expressions (which rely on matching of pre-defined patterns or rules such as arrangement of gene/protein names with articles, prepositions and other keywords) to filter sentences containing 
+one to three genes. We defined our regular expressions as nouns describing agents, passive verbs, active verbs and nouns describing actions. Table 1 (in <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>) depicts an example 
+for each type of expression.  For example, the regular expression 
+
+($gene @{0,6} $action (of|with) @{0,2} $gene)
+
+extracts sentences that match the structure shown below the expression. The notational construct &#x2018;A &#x2192; B &#x2192; ...&#x2019; is interpreted as &#x2018;A followed by B followed by ...&#x2019;.
+
+<italic>gene name</italic> &#x2192; 0-6 <italic>words</italic> &#x2192; <italic>action verb</italic> &#x2192; &#x2018;of&#x2019; or &#x2018;with&#x2019; &#x2192; 0-2 <italic>words</italic> &#x2192; <italic>gene name</italic>
+</p>
+      </sec>
+      <sec id="s2f">
+        <title>Sentence keyword extraction</title>
+        <p>Sentences containing one or more gene names were parsed using the Brill part-of-speech tagger. [<xref ref-type="bibr" rid="R31">31</xref>] This program labels each word in a sentence with its part-of-speech information such as 
+word category like noun, verb, adjective, preposition, etc. This information plays a critical role in identifying corresponding noun and verb phrases. Then, with a simple PERL program, noun 
+phrases containing gene names were filtered out and the remaining noun phrases and verb phrases were extracted as keywords. Initial tests showed that certain keywords were common for most of 
+the genes in the list (e.g., activates, associates, stimulates etc.). We manually removed these common keyword words from the list. The following example illustrates this process:</p>
+        <sec id="s2f1">
+          <title>Sentence</title>
+          <p>BRCA1 physically associates with p53 and stimulates its transcriptional activity.</p>
+        </sec>
+        <sec id="s2f2">
+          <title>Brill-POS-tagged sentence</title>
+          <p>BRCA1/NNP physically/RB associates/VBZ with/IN p53/NN and/CC stimulates/VBZ its/PRP$ transcriptional/JJ activity/NN. /.</p>
+        </sec>
+        <sec id="s2f3">
+          <title>Sentence keywords</title>
+          <p>associates, stimulates, transcription activity</p>
+        </sec>
+        <sec id="s2f4">
+          <title>Sentence keywords after manual curation</title>
+          <p>transcription activity</p>
+        </sec>
+      </sec>
+      <sec id="s2g">
+        <title>MeSH keywords extraction</title>
+        <p>To extract MeSH keywords, we searched for the gene names in our gene lists in the title and abstract of MEDLINE citations related to each gene and extracted the associated MeSH terms for 
+each gene. The extracted gene-MeSH term list was represented by scores indicating the frequency of gene-MeSH term co-occurrence. Initial tests showed that certain MeSH keywords in the list 
+were common biological terms and less useful from the point of view of gene annotation (e.g., human, DNA, animal, Support U.S Govt etc.). A collection of MeSH stop words was created manually 
+and these terms were removed from the gene-MeSH term lists. Finally, from the thus filtered gene-MeSH lists, the 20 highest-frequency MeSH terms associated with each gene were taken as MeSH 
+keywords associated with each gene. For example the MeSH keywords associated with a gene &#x201C;FOS&#x201D; in our gene list are oncogene, felypressin, transcription-factor, thermoreceptors, DNA-binding, 
+antibiosis, inflammatory-response, zinc-fingers, gene-regulation, and neuronal-plasticity.</p>
+      </sec>
+      <sec id="s2h">
+        <title>GO keyword extraction</title>
+        <p>We used the GO keywords information incorporated in Gene Ontology [Error! Bookmark not defined.] to extract GO keywords associated with each gene. Out of the three GO annotation categories 
+we included only molecular function and biological process as we believe that cellular component (e.g. nucleus, cell membrane etc.) is less important for characterizing genes in the context 
+of this study. Further, due to the hierarchical nature of GO and multiple inheritance in the GO structure, we consider with every ancestor up to level 2 in the GO tree in assigning GO keywords. 
+This enables us to use more generalized GO terms. For example the GO keywords associated with the gene &#x201C;FOS&#x201D; in our gene list are protein-dimerization, DNA binding, RNA polymerase, transcription 
+factor, DNA methylation, inflammatory-response, and nucleus.</p>
+      </sec>
+      <sec id="s2i">
+        <title>Keyword representation and calculation of numeric vectors</title>
+        <p>After the keyword extraction phase, each gene was described by a list of keywords extracted from MEDLINE abstract sentences, MeSH terms and GO terms. These keyword vectors then served as a basis 
+for clustering (i.e., unsupervised class discovery). To do this, each term vector needed to be represented by a numeric vector representing the relative importance of keywords for each gene. This 
+process is concerned with computing the numeric weight, w<sub>ij</sub>, for each gene-term pair (g<sub>i</sub>, t<sub>j</sub>) (i = 1, 2,&#x2026;n and j = 1, 2, &#x2026; k) to represent the gene's characteristics in terms of the associated keywords. 
+Common techniques for such numeric encoding includes (1) Binary, the presence or absence of a keyword relative to a gene, (2) Term frequency, he frequency of occurrence of a keyword with a gene (3) 
+Term frequency &#xD7; inverse document frequency (TF*IDF), the relative frequency of occurrence of a keyword with a gene compared to other genes.
+</p>
+        <p>As we derived the keywords from gene annotation sentences but not from full abstracts, we found the number of keywords associated with each gene is small. We noticed also that absolute frequency of 
+most keywords tended be one. Therefore, we adopted the binary encoding scheme as illustrated in Table 2 in <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>, in which each gene is represented by a vector of &#x2018;normalized&#x2019; absolute 
+keywords frequencies. The &#x2018;normalized&#x2019; absolute frequency of each vector element (keyword) is either zero or one. </p>
+      </sec>
+      <sec id="s2j">
+        <title>Gene clustering</title>
+        <p>Clustering is a data mining technique that groups or clusters data components (typically represented as numeric vectors) according to their similarity or dissimilarity. The goal is to maximize 
+intra-cluster and minimize inter-cluster similarity among the components. [<xref ref-type="bibr" rid="R32">32</xref>,<xref ref-type="bibr" rid="R33">33</xref>] Clustering is typically used to identify sample groups in data. Unlike supervised learning methods that require explicit 
+class label information, clustering is unsupervised and no information about target groups (classes) is used. Two basic approaches to clustering can be distinguished, hierarchical clustering (e.g., agglomerative 
+and divisive) and non-hierarchical clustering (e.g., k-means/c-means clustering). Agglomerative hierarchical clustering starts with each object representing a cluster and then merges the clusters in sequence. 
+Divisive hierarchical clustering starts with all samples in one cluster and successively split clusters. In hierarchical clustering the distance (similarity) between clusters is measured using different 
+techniques such as single linkage, average linkage or complete linkage [<xref ref-type="bibr" rid="R32">32</xref>] and basic distance and similarity metrics (e.g., Euclidean, Minkowski, Hamming distance). K-means clustering requires a priori 
+specification of the desired number of clusters, k. This method clusters data into groups by iteratively optimizing the positions of cluster centers (means) so that the sum of within-cluster similarities 
+(the similarity between data points and their cluster centers) is maximized.</p>
+        <p>Essentially, the sentence-level binary coding scheme adopted in this study consists of numeric row vectors representing genes (via the associated biological function/process terms), and numeric column 
+vectors representing annotation terms (via the associated genes). These two sets of vectors can be independently clustered using available clustering algorithms and tools. This approach can produce useful 
+and specific information about the biological characteristics of sets of genes. In this study, we have used average linkage hierarchical clustering algorithm. [<xref ref-type="bibr" rid="R33">33</xref>] Using this algorithm has two advantages 
+for this study. First, clustograms, a visualization of the substructures contained in a gene collection are produced, and second, individual clusters of genes are identified by clustogram splits at different 
+levels. Clustering was performed using Cluto [<xref ref-type="bibr" rid="R34">34</xref>] and Cluster/Treeview [<xref ref-type="bibr" rid="R35">35</xref>] facilitates visualization of the clustograms.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Results and discussion</title>
+      <sec id="s3a">
+        <title>Evaluation</title>
+        <p>To obtain a quantitative measure on the performance of the various keyword encoding schemes, we developed a text corpus of 200 manually annotated abstracts based on two cancer categories brain tumor and breast 
+cancer of our interest (see Table 4 under <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>). We used the following procedure to establish the corpus: (1)Determine randomly two cancer categories (brain tumor and breast cancer ), (2) For 
+each cancer category, select randomly 10 genes from Entrez such that species = human and number of associated abstracts &#x2265; 50, (3)For each gene identified in this way, select randomly 10 abstracts, resulting in 
+a total of 200 abstracts; 10 abstracts for each of the 10 genes associated with each of the two cancer categories, (4) For each of the 200 abstracts, identify manually the keywords characterizing biological 
+function and processes from abstracts, MeSH terms and GO terms.</p>
+        <p>With this text corpus we were able to construct a matrix containing all 20 genes and their associated keywords and keyword frequencies from abstracts, MeSH terms and Go terms. The manually annotated corpus 
+of 200 abstracts and the matrix of 20 annotated genes served as gold standard for our evaluation experiments. We carried our four evaluation experiments: (1) Abstract keywords (baseline). Extracts gene annotation 
+terms based on term frequencies * inverse document frequencies (TF*IDF) within the entire abstract without regard to sentence structure, (2) Sentence keywords. Extracts gene annotation terms based sentence-level 
+keywords, (3) Sentence + MeSH keywords. As in (2) above plus MeSH terms (see Section MeSH keywords extraction), (4) Sentence + MeSH + GO keywords. As in (2) above plus MeSH terms (see Section MeSH keywords 
+extraction) and GO terms (see Section GO keyword extraction).</p>
+        <p>Essentially, in each evaluation experiment the input is the text corpus of 200 abstracts and the output is a list of genes with its predicted annotation terms. Informally, the closer the predicted annotation 
+terms match the manually established annotation terms, the better is the method. Performance is measured via commonly used criteria such a recall (analogous to sensitivity), precision (analogous to positive 
+predictive value) and the F-measure (a score that combines recall and precision). The results we obtained are shown in Table 5 (below in <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>).</p>
+        <p>We notice that the baseline method comprising TF*IDF keywords fares worst among all four approaches. We interpret this as evidence for the validity of the methods involving sentence-level processing as this 
+information is likely to carry most specific characterizing terms. The &#x2018;brute-force&#x2019; abstract-level processing will have difficulty in extracting these terms correctly and consistently. We further notice that 
+the substantial improvements of precision and recall when we include MeSH terms and GO terms. This may be because these two categories are more specific and MeSH and GO annotations were done using full-papers 
+and these biological functions and process are not described in all abstracts.</p>
+      </sec>
+      <sec id="s3b">
+        <title>Clustering of genes resulting from microarray experiment</title>
+        <p>To demonstrate the usefulness of the presented keyword-extraction techniques to microarray data analysis, this method was applied to annotate and cluster gene lists that were found differentially expressed in 
+a microarray experiment investigating the impact of two mitogenic proteins, Epidermal growth factor (EGF) and Sphingosine 1-phosphate (S1P), on glioblastoma cell lines [<xref ref-type="bibr" rid="R36">36</xref>]. The microarray data set reveals three 
+sets of differentially expressed genes (p&lt;0.05), namely, genes differentially expressed with response to EGF, G(EGF), genes differentially expressed with respect to S1P, G(S1P) and genes differently expressed in 
+response to both, G(COM).</p>
+        <p>Genes were considered differentially expressed if their p-value is smaller than 0.05. We found that, when compared to the resting state, 19 genes were significantly differentially expressed as a response to EGF, 
+35 genes as a response to S1P and 30 genes as a response to COM, i.e., combined stimuli of S1P and EGF. The three gene lists are referred to as G(EGF), G(S1P) and G(COM), respectively (see Table 6 in <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>).</p>
+        <p>Using these the three gene lists obtained from the microarray experiment (Table 6 shown in <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>) as query in MEDLINE returned the three corresponding sets of abstracts A(EGF), A(S1P) and 
+A(COM), respectively. The abstracts were processed with the keyword extraction method involving sentence-level, MeSH and GO terms and the resulting representations were clustered using average linkage hierarchical 
+clustering algorithm. Our gene clustering strategy and clustering algorithms are explained in the Methodology section. The resulting clustograms are presented in <xref ref-type="fig" rid="F2">Figure 2</xref>, <xref ref-type="fig" rid="F3">Figure 3</xref>, and <xref ref-type="fig" rid="F4">Figure 4</xref>, respectively. </p>
+        <p>The clustograms depict associations between genes and biological function/process terms derived from the abstracts obtained with the various gene lists. For the investigating scientist, the clustograms fulfill the 
+following main functions: (1) Squares highlighted in a horizontal line link a gene to one or more biological functions or processes. This is useful to see which genes are associated with which functions/processes and 
+which genes have few or many associations. The interpretation of many and few is very much dependent on the associated biological function/process categories, the particular scientific question under investigation, 
+and also on how extensively a particular gene has been researched and reported in the literature. (2) Users may visually delineate clusters, i.e., rectangular areas with many highlighted squares in them and few 
+highlighted squares around them. Any cluster, small or large, is potentially very useful to have discovered. Each cluster identified in this way relates a set of genes to a group of biological functions and processes. 
+In a sense, each gene in the clustered is characterized by the same set of biological function and process concepts, a kind of &#x2018;guilt by association&#x2019;. This information is extremely useful as it provides clues as to 
+the roles genes may play collectively in pathways and functions, processes, and possible phenotypes, that are associated with these pathways. </p>
+      </sec>
+      <sec id="s3c">
+        <title>Summary of analysis of EGF cluster, G(EGF)</title>
+        <p>The clustograms in <xref ref-type="fig" rid="F2">Figure 2</xref> show the results obtained from extracting the sentence-level function/process keywords (plus MeSH and GO terms) from 28,913 abstracts (for the 19 genes detected in response to EGF 
+stimulus) and the subsequent clustering. In <xref ref-type="fig" rid="F2">Figure 2a</xref> several individual genes with very many (e.g., CALD1, CLU, FOS) and very few (e.g., HRY, DUSP6) associations stand out. Another interesting feature is the 
+large cluster at the lower left corner of <xref ref-type="fig" rid="F2">Figure 2a</xref> (reproduced in more detail in <xref ref-type="fig" rid="F2">Figure 2b</xref>) containing the genes DUSP, ID1, KLF2, CALD1, ABCA, CLU, FOS, JUN and SLC5A3. Many genes in this cluster are associated 
+with the same set of keywords (transcription factor, cell death and secretion).</p>
+      </sec>
+      <sec id="s3d">
+        <title>Summary of analysis of S1P cluster, G(S1P)</title>
+        <p>The clustograms in <xref ref-type="fig" rid="F3">Figure 3</xref> show the results obtained from extracting the sentence-level function/process keywords (plus MeSH and GO terms) from 19,705 abstracts (for the 30 genes detected in response to S1P 
+stimulus) and the subsequent clustering. In <xref ref-type="fig" rid="F3">Figure 3a</xref> several individual genes with very many (e.g., CCL3, IL6, IL8, F3) and very few (e.g., HERB2, DOC1) associations stand out. Another interesting feature is the 
+large cluster at the upper left corner of <xref ref-type="fig" rid="F3">Figure 3a</xref> (reproduced in more detail in <xref ref-type="fig" rid="F3">Figure 3b</xref>) containing the genes TNAIP, KLF5, BCL6, NAB1, BTG1, NFKBIA, NR4A1, SOCS5, CITED2, NRG1, JAG1, PLAU, CCL2, IL8, IL6, GLIPR1, 
+F3, MAP2K3, and EHD1. Many genes in this cluster are associated with the same set of keywords (atherogenesis, mitogenesis, assemble, inflammation, focal-contact, &#x2026;, and protein-binding).
+</p>
+      </sec>
+      <sec id="s3e">
+        <title>Summary of analysis of the common gene cluster, G(COM)</title>
+        <p>The clustograms in <xref ref-type="fig" rid="F4">Figure 4</xref> show the results obtained from extracting the sentence-level function/process keywords (plus MeSH and GO terms) from 39,890 abstracts (for the 30 genes detected in response to EFG and 
+S1P stimuli) and the subsequent clustering. In <xref ref-type="fig" rid="F4">Figure 4a</xref> several individual genes with very many (e.g., MYC, MAFF, ATF3) and very few (e.g., DIPA, UGCG, SNARK) associations stand out. Another interesting feature is 
+the large cluster at the upper left corner of <xref ref-type="fig" rid="F4">Figure 4a</xref> (reproduced in more detail in <xref ref-type="fig" rid="F4">Figure 4b</xref>) containing the genes SPRY2, GEM, ZYX, NEDD9, MYC, LIF, SERPINE1, DTR, MUCL1, C8FW, MAFF, ATF3, RTP801, EGR1, JUNB, 
+FOSL1, CEPED, TIEG, EGR2, EGR3, and ZFP36. Many genes in this cluster are associated with the same set of keywords (DNA binding, zinc fingers, repressor proteins, &#x2026;, and mitosis). 
+</p>
+        <p>An important aim in microarray data mining is to bind transcriptionally modulated genes to functional pathways or to understand how transcriptional modulation can be associated with specific biological events 
+such as genetic disease phenotype, molecular mechanism of drug action, cell differentiation etc. However, the amount of functional annotation available with each transcriptionaly modulated genes is still a limiting 
+factor because not all genes are well annotated. Our functional clustering/grouping will enable to select literally informative genes (<xref ref-type="fig" rid="F2">Figure 2b</xref>, <xref ref-type="fig" rid="F3">Figure 3b</xref>, and <xref ref-type="fig" rid="F4">Figure 4b</xref>) for further investigations in the above 
+data mining and knowledge discovery pipeline. Our evaluation suggests that this approach will provide more specific and useful information than typical approaches using abstract-level information. This is particularly 
+the case when the sentence-level terms are augmented by MeSH and GO keywords. </p>
+      </sec>
+    </sec>
+    <sec sec-type="conclusions" id="s4">
+      <title>Conclusion</title>
+      <p>The sequencing of whole genomes and the introduction high throughput analysis (e.g., oligonucleotide and cDNA chips, MALDI/SELDI-TOF MS) provides biomedical research with a global perspective, which necessitates 
+the development of novel mining tools to explore and interpret data in timely manner. This paper presents a novel approach to combine sentence-level keywords with GO and MeSH terms. In our evaluation experiment, this 
+approach has shown promising results. The present evaluation suggests that this approach will provide more specific information than typical approaches using abstract-level information. This is particularly the case 
+when the sentence-level terms are complemented by MeSH and GO terms. Further, clustering of genes into different functional groups based on literature keywords has the potential to help biologists identify and characterize 
+literally informative genes of interest for further investigations.</p>
+    </sec>
+    <sec id="s5">
+      <title>Future work</title>
+      <p>Future enhancements of the system will include additional data resources (OMIM. DIP, KEGG) and the generation of association rules to identify correlations among genes in the same cluster. Association rules between 
+the genes in the same cluster seem particularly interesting because it allows one to find the presence of regularities between gene groups. Finally, abstracts were used in this study as they are readily and easily available 
+but they are limited in content. As full-text contains large number of irrelevent sentences compared to abstracts this approach may be useful for full-text analysis too, as it performs filtering of irrelevant sentences 
+before clustering. The plan to perform the current study with full-text articles and compare the results with that of abstracts is on the way.</p>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Supplementary material</title>
+      <supplementary-material content-type="local-data" id="SD1">
+        <caption>
+          <title>Data 1</title>
+        </caption>
+        <media xlink:href="97320630002185S1.pdf" xlink:type="simple" id="N0x1c24b50N0x1daf880" position="anchor" mimetype="application" mime-subtype="pdf"/>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>References</title>
+      <ref id="R01">
+        <label>1</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schulze</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Downward</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Nat Cell Biol</source>
+          <year>2001</year>
+          <volume>8</volume>
+          <fpage>E190</fpage>
+          <pub-id pub-id-type="pmid">11483980</pub-id>
+        </citation>
+      </ref>
+      <ref id="R02">
+        <label>2</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schena</surname>
+              <given-names>M</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Science</source>
+          <year>1995</year>
+          <volume>270</volume>
+          <fpage>467</fpage>
+          <pub-id pub-id-type="pmid">7569999</pub-id>
+        </citation>
+      </ref>
+      <ref id="R03">
+        <label>3</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eisen</surname>
+              <given-names>MB</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Proc Natl Acad Sci</source>
+          <year>1998</year>
+          <volume>95</volume>
+          <fpage>14863</fpage>
+          <pub-id pub-id-type="pmid">9843981</pub-id>
+        </citation>
+      </ref>
+      <ref id="R04">
+        <label>4</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.geneontology.org">http://www.geneontology.org</ext-link>
+        </citation>
+      </ref>
+      <ref id="R05">
+        <label>5</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/mesh/meshhome.html">http://www.ncbi.nlm.nih.gov/mesh/meshhome.html</ext-link>
+        </citation>
+      </ref>
+      <ref id="R06">
+        <label>6</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://dip.doe-mbi.ucla.edu/">http://dip.doe-mbi.ucla.edu/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R07">
+        <label>7</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Natarajan</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Crit Rev Biotechnol</source>
+          <year>2005</year>
+          <volume>869</volume>
+          <fpage>139</fpage>
+          <pub-id pub-id-type="pmid">15999851</pub-id>
+        </citation>
+      </ref>
+      <ref id="R08">
+        <label>8</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</ext-link>
+        </citation>
+      </ref>
+      <ref id="R09">
+        <label>9</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krallinger</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Valencia</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Genome Biology</source>
+          <year>2005</year>
+          <volume>6</volume>
+          <fpage>224</fpage>
+          <pub-id pub-id-type="pmid">15998455</pub-id>
+        </citation>
+      </ref>
+      <ref id="R10">
+        <label>10</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wong</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <source>Pac Sym on Biocomp</source>
+          <year>2001</year>
+          <volume>6</volume>
+          <fpage>520</fpage>
+          <pub-id pub-id-type="pmid">11262970</pub-id>
+        </citation>
+      </ref>
+      <ref id="R11">
+        <label>11</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Park</surname>
+              <given-names>JC</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Pac Sym on Biocomp</source>
+          <year>2001</year>
+          <volume>6</volume>
+          <fpage>396</fpage>
+          <pub-id pub-id-type="pmid">11262958</pub-id>
+        </citation>
+      </ref>
+      <ref id="R12">
+        <label>12</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yakushiji</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Pac Sym on Biocomp</source>
+          <year>2001</year>
+          <volume>6</volume>
+          <fpage>408</fpage>
+          <pub-id pub-id-type="pmid">11262959</pub-id>
+        </citation>
+      </ref>
+      <ref id="R13">
+        <label>13</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Friedman</surname>
+              <given-names>C</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Bioinformatics Suppl</source>
+          <year>2001</year>
+          <volume>1</volume>
+          <fpage>74</fpage>
+          <pub-id pub-id-type="pmid">11472995</pub-id>
+        </citation>
+      </ref>
+      <ref id="R14">
+        <label>14</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sekimizu</surname>
+              <given-names>T</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Genome Inform Ser Workshop Genome Inform</source>
+          <year>1998</year>
+          <volume>9</volume>
+          <fpage>62</fpage>
+          <pub-id pub-id-type="pmid">11072322</pub-id>
+        </citation>
+      </ref>
+      <ref id="R15">
+        <label>15</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Craven</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kumlien</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>Proc Int Conf Intell Syst Mol Biol</source>
+          <year>1999</year>
+          <fpage>77</fpage>
+          <pub-id pub-id-type="pmid">10786289</pub-id>
+        </citation>
+      </ref>
+      <ref id="R16">
+        <label>16</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stapley</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Pac Sym on Biocomp</source>
+          <year>2002</year>
+          <volume>7</volume>
+          <fpage>374</fpage>
+          <pub-id pub-id-type="pmid">11928491</pub-id>
+        </citation>
+      </ref>
+      <ref id="R17">
+        <label>17</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rindflesch</surname>
+              <given-names>TC</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Proc AMIA Symp</source>
+          <year>2000</year>
+          <fpage>127</fpage>
+          <pub-id pub-id-type="pmid">10566334</pub-id>
+        </citation>
+      </ref>
+      <ref id="R18">
+        <label>18</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rindflesch</surname>
+              <given-names>TC</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Pac Sym on Biocomp</source>
+          <year>2000</year>
+          <volume>5</volume>
+          <fpage>517</fpage>
+          <pub-id pub-id-type="pmid">10902199</pub-id>
+        </citation>
+      </ref>
+      <ref id="R19">
+        <label>19</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zuo</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Coombs</surname>
+              <given-names>GH</given-names>
+            </name>
+          </person-group>
+          <source>FEMS Microbiol Lett</source>
+          <year>1995</year>
+          <volume>130</volume>
+          <fpage>253</fpage>
+          <pub-id pub-id-type="pmid">7649448</pub-id>
+        </citation>
+      </ref>
+      <ref id="R20">
+        <label>20</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andrade</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Valencia</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Bioinformatics</source>
+          <year>1998</year>
+          <volume>14</volume>
+          <fpage>600</fpage>
+          <pub-id pub-id-type="pmid">9730925</pub-id>
+        </citation>
+      </ref>
+      <ref id="R21">
+        <label>21</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shatkay</surname>
+              <given-names>H</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Proc Int Conf Intell Syst Mol Biol</source>
+          <year>2000</year>
+          <fpage>317</fpage>
+          <pub-id pub-id-type="pmid">10977093</pub-id>
+        </citation>
+      </ref>
+      <ref id="R22">
+        <label>22</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jenssen</surname>
+              <given-names>TK</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Nat Genet</source>
+          <year>2001</year>
+          <volume>28</volume>
+          <fpage>21</fpage>
+          <pub-id pub-id-type="pmid">11326270</pub-id>
+        </citation>
+      </ref>
+      <ref id="R23">
+        <label>23</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tanabe</surname>
+              <given-names>L</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>Biotechniques</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>1210</fpage>
+          <pub-id pub-id-type="pmid">10631500</pub-id>
+        </citation>
+      </ref>
+      <ref id="R24">
+        <label>24</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Liu</surname>
+              <given-names>y</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>IEEE/ACM Trans on Comput Biol and Bioinf</source>
+          <year>2005</year>
+          <volume>2</volume>
+          <fpage>62</fpage>
+          <pub-id pub-id-type="pmid">17044165</pub-id>
+        </citation>
+      </ref>
+      <ref id="R25">
+        <label>25</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chaussabel</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Sher</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Genome Biology</source>
+          <year>2002</year>
+          <volume>3</volume>
+          <fpage>10</fpage>
+          <pub-id pub-id-type="pmid">12372143</pub-id>
+        </citation>
+      </ref>
+      <ref id="R26">
+        <label>26</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nih.gov/entrez/">http://www.ncbi.nih.gov/entrez/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R27">
+        <label>27</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://bioinformatics.weizmann.ac.il/cards/">http://bioinformatics.weizmann.ac.il/cards/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R28">
+        <label>28</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://ca.expasy.org/sprot/">http://ca.expasy.org/sprot/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R29">
+        <label>29</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.cse.ucsc.edu/centers/cbe/Genome/">http://www.cse.ucsc.edu/centers/cbe/Genome/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R30">
+        <label>30</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.gene.ucl.ac.uk/hugo/">http://www.gene.ucl.ac.uk/hugo/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R31">
+        <label>31</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www.cs.jhu.edu/~brill/">http://www.cs.jhu.edu/~brill/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R32">
+        <label>32</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Willet</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Information Processing and Management</source>
+          <year>1988</year>
+          <volume>24</volume>
+          <fpage>577</fpage>
+        </citation>
+      </ref>
+      <ref id="R33">
+        <label>33</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jain</surname>
+              <given-names>AK</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>ACM Computing surveys</source>
+          <year>1998</year>
+          <volume>31</volume>
+          <fpage>264</fpage>
+        </citation>
+      </ref>
+      <ref id="R34">
+        <label>34</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://www-users.cs.umn.edu/~karypis/cluto/">http://www-users.cs.umn.edu/~karypis/cluto/</ext-link>
+        </citation>
+      </ref>
+      <ref id="R35">
+        <label>35</label>
+        <citation citation-type="web">
+          <ext-link ext-link-type="uri" xlink:href="http://bonsai.imas.u-tokyo.ac.jp/~mdehoon/software/cluster">http://bonsai.imas.u-tokyo.ac.jp/~mdehoon/software/cluster</ext-link>
+        </citation>
+      </ref>
+      <ref id="R36">
+        <label>36</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Natarajan</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <source>BMC Bioinformatics</source>
+          <year>2006</year>
+          <volume>7</volume>
+          <fpage>373</fpage>
+          <pub-id pub-id-type="pmid">16901352</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+  <floats-wrap>
+    <fig id="F1" position="float">
+      <label>Figure 1</label>
+      <caption>
+        <p> Experimental design of gene clustering with sentences-level, MeSH and GO keywords</p>
+      </caption>
+      <graphic xlink:href="97320630002185F1"/>
+    </fig>
+    <fig id="F2" position="float">
+      <label>Figure 2</label>
+      <caption>
+        <p>Characterization 19 genes differentially expressed genes in response to EGF. (a) All 19 genes against the discovered 
+biological function/process terms. (b) Detailed view of group of manually selected cluster sharing common features (9 genes and 
+12 function/process terms)</p>
+      </caption>
+      <graphic xlink:href="97320630002185F2"/>
+    </fig>
+    <fig id="F3" position="float">
+      <label>Figure 3</label>
+      <caption>
+        <p>Characterization 30 genes differentially expressed genes in response to S1P. (a) All 30 genes against the discovered 
+biological function/process terms. (b) Detailed view of group of manually selected cluster sharing common features (19 genes and 
+17 function/process terms) </p>
+      </caption>
+      <graphic xlink:href="97320630002185F3"/>
+    </fig>
+    <fig id="F4" position="float">
+      <label>Figure 4</label>
+      <caption>
+        <p>Characterization 30 genes differentially expressed genes in response to both EGF and S1P. (a) All 30 genes against the 
+discovered biological function/process terms. (b) Detailed view of manually selected cluster sharing common features (21 genes and 
+18 function/process terms)</p>
+      </caption>
+      <graphic xlink:href="97320630002185F4"/>
+    </fig>
+  </floats-wrap>
+</article>
+</pmc-articleset>

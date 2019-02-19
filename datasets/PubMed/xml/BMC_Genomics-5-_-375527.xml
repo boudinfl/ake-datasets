@@ -1,0 +1,3132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">BMC Genomics</journal-id>
+      <journal-title>BMC Genomics</journal-title>
+      <issn pub-type="epub">1471-2164</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">15053842</article-id>
+      <article-id pub-id-type="pmc">375527</article-id>
+      <article-id pub-id-type="publisher-id">1471-2164-5-16</article-id>
+      <article-id pub-id-type="doi">10.1186/1471-2164-5-16</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Assessment of clusters of transcription factor binding sites in relationship to human promoter, CpG islands and gene expression</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Murakami</surname>
+            <given-names>Katsuhiko</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>katsu@gsc.riken.go.jp</email>
+        </contrib>
+        <contrib id="A2" contrib-type="author">
+          <name>
+            <surname>Kojima</surname>
+            <given-names>Toshio</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>tkojima@gsc.riken.go.jp</email>
+        </contrib>
+        <contrib id="A3" contrib-type="author">
+          <name>
+            <surname>Sakaki</surname>
+            <given-names>Yoshiyuki</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>sakaki@gsc.riken.go.jp</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>RIKEN Genomic Sciences Center, 1-7-22, Suehiro-cho, Tsurumi, Yokohama, Kanagawa, JAPAN</aff>
+      <pub-date pub-type="collection">
+        <year>2004</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>23</day>
+        <month>2</month>
+        <year>2004</year>
+      </pub-date>
+      <volume>5</volume>
+      <fpage>16</fpage>
+      <lpage>16</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2164/5/16"/>
+      <history>
+        <date date-type="received">
+          <day>19</day>
+          <month>5</month>
+          <year>2003</year>
+        </date>
+        <date date-type="accepted">
+          <day>23</day>
+          <month>2</month>
+          <year>2004</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2004 Murakami et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-statement>
+        <copyright-year>2004</copyright-year>
+        <copyright-holder>Murakami et al; licensee BioMed Central Ltd. This is an Open Access article: verbatim copying and redistribution of this article are permitted in all media for any purpose, provided this notice is preserved along with the article's original URL.</copyright-holder>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>Gene expression is regulated mainly by transcription factors (TFs) that interact with regulatory <italic>cis</italic>-elements on DNA sequences. To identify functional regulatory elements, computer searching can predict TF binding sites (TFBS) using position weight matrices (PWMs) that represent positional base frequencies of collected experimentally determined TFBS. A disadvantage of this approach is the large output of results for genomic DNA. One strategy to identify genuine TFBS is to utilize local concentrations of predicted TFBS. It is unclear whether there is a general tendency for TFBS to cluster at promoter regions, although this is the case for certain TFBS. Also unclear is the identification of TFs that have TFBS concentrated in promoters and to what level this occurs. This study hopes to answer some of these questions.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>We developed the cluster score measure to evaluate the correlation between predicted TFBS clusters and promoter sequences for each PWM. Non-promoter sequences were used as a control. Using the cluster score, we identified a PWM group called PWM-PCP, in which TFBS clusters positively correlate with promoters, and another PWM group called PWM-NCP, in which TFBS clusters negatively correlate with promoters. The PWM-PCP group comprises 47% of the 199 vertebrate PWMs, while the PWM-NCP group occupied 11 percent. After reducing the effect of CpG islands (CGI) against the clusters using partial correlation coefficients among three properties (promoter, CGI and predicted TFBS cluster), we identified two PWM groups including those strongly correlated with CGI and those not correlated with CGI.</p>
+        </sec>
+        <sec>
+          <title>Conclusion</title>
+          <p>Not all PWMs predict TFBS correlated with human promoter sequences. Two main PWM groups were identified: (1) those that show TFBS clustered in promoters associated with CGI, and (2) those that show TFBS clustered in promoters independent of CGI. Assessment of PWM matches will allow more positive interpretation of TFBS in regulatory regions.</p>
+        </sec>
+      </abstract>
+      <kwd-group>
+        <kwd>promoter</kwd>
+        <kwd>tissue-specific gene expression</kwd>
+        <kwd>position weight matrix</kwd>
+        <kwd>regulatory motif</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Background</title>
+      <p>Understanding the regulation of gene expression is a crucial issue in molecular biology. Since gene expression is mainly regulated by transcription factors (TFs), the elucidation of relationships among TFs, their binding sites (TFBS) and their controlling genes, is of great importance.</p>
+      <p>Although TFBS can be predicted by computer searches on DNA sequences, false positives (FP) are often produced. Several computer programs use position weight matrices (PWMs) [<xref ref-type="bibr" rid="B1">1</xref>] to predict TFBS <italic>in silico</italic>, including MatInspector [<xref ref-type="bibr" rid="B2">2</xref>], MATCH [<xref ref-type="bibr" rid="B3">3</xref>], and TFBS perl modules [<xref ref-type="bibr" rid="B4">4</xref>]. PWMs represent positional base preferences or frequencies constructed by a set of experimentally determined TFBS, and typically correspond to a single TF. The transcription factor database, known as TRANSFAC, is a widely used collection of PWMs [<xref ref-type="bibr" rid="B5">5</xref>]. TRANSFAC provides several PWMs for single TFs with different quality levels. Computer programs predict TFBS from DNA sequences, which are the same or similar to known TFBS. The low information contents in the matrices leads to many false positives, due to the weak preference or shortness of the site length (6&#x2013;30 bp). Various strategies have been proposed to allow correct identification of true positives (TPs) from predicted TFBS. One approach is to employ information from conserved regions in DNA sequences between different species, known as phylogenetic footprinting. Bayes block aligner (BBA) is a tool used to extract conserved regions from an alignment of two DNA sequences [<xref ref-type="bibr" rid="B6">6</xref>]. It was demonstrated that it could identify binding sites of muscle-specific transcription factors [<xref ref-type="bibr" rid="B6">6</xref>]. Another approach is to identify multiple TFBS that form a structural cluster on a DNA sequence coordinate. This seems a reasonable technique because the density of predicted TFBS in promoter sequences is reported to be higher than non-promoter sequences, especially in the region 300 bp upstream from the transcription start site [<xref ref-type="bibr" rid="B7">7</xref>]. Genes are regulated by interactions with multiple functional TFs in metazoans [<xref ref-type="bibr" rid="B8">8</xref>]. Therefore, many promoter prediction programs, such as promoterscan [<xref ref-type="bibr" rid="B9">9</xref>], TSSG, and TSSW [<xref ref-type="bibr" rid="B10">10</xref>], have been developed based on the density of TFBS. The identification of genuine TFBS by searching clusters of predicted TFBS has been successful; however, these studies were evaluated with only specific genes and TF sets, such as those found in <italic>Yeast</italic>[<xref ref-type="bibr" rid="B11">11</xref>], <italic>Drosophila </italic>(early developmental enhancer) [<xref ref-type="bibr" rid="B12">12</xref>-<xref ref-type="bibr" rid="B14">14</xref>], liver [<xref ref-type="bibr" rid="B15">15</xref>], LSF and muscle specific regulatory regions [<xref ref-type="bibr" rid="B16">16</xref>,<xref ref-type="bibr" rid="B17">17</xref>]. It is unknown whether this method is applicable to other species, or genes. Although many vertebrate promoter sequences have CpG islands (CGI), the relationship between clusters of predicted TFBS and CGI is often underestimated [<xref ref-type="bibr" rid="B18">18</xref>]. Another strategy for the identification of putative TFBS includes a combinatorial approach that uses both phylogenetic footprinting and cluster analysis [<xref ref-type="bibr" rid="B12">12</xref>,<xref ref-type="bibr" rid="B15">15</xref>,<xref ref-type="bibr" rid="B19">19</xref>]. The program rVISTA utilizes information from conserved regions between human and mouse, in addition to clusters of TFBS predicted by the MATCH (BIOBASE) program [<xref ref-type="bibr" rid="B19">19</xref>]. This approach was evaluated using several known TFs (AP-1, NFAT, and GATA-3) and genes from the cytokine gene cluster. It remains unclear whether the properties used for clusters of TFBS are general and can be applied to other TFs or regulatory regions. Several reports have described methods for determining the statistical significance of predicted TFBS [<xref ref-type="bibr" rid="B11">11</xref>,<xref ref-type="bibr" rid="B12">12</xref>,<xref ref-type="bibr" rid="B17">17</xref>,<xref ref-type="bibr" rid="B20">20</xref>-<xref ref-type="bibr" rid="B22">22</xref>]. These studies assume the use of appropriate PWMs to identify clustered TFBS. To determine if a particular cluster is genuinely related to the promoter, it is important to assess clusters of predicted TFBS for each individual PWM. This is done using real non-promoter sequences for the appropriate selection of the PWM and for the interpretation of clusters of predicted TFBS. Most of these studies use specific sets of coregulated genes to identify common predicted TFBS clusters, and therefore cannot be applied directly to the study of general properties of promoters.</p>
+      <p>In this study, we developed a measure that evaluates the degree of concentration of predicted TFBS to clarify whether predicted TFBS have a tendency to cluster in human promoter sequences rather than in non-promoter sequences for each PWM. We identified some PWMs in which predicted TFBS clusters occur more significantly in promoter than non-promoter sequences and vice versa. Using partial correlations among three properties (promoters, CGI and clusters of predicted TFBS), we identified two PWM groups, (1) those in which TFBS cluster in promoters as a result of the presence of CpG islands, and (2) those in which TFBS cluster in promoters independent of CpG islands. We show that transcription factors corresponding to the latter PWM group tend to be tissue-specific. In summary, this analysis is useful for the interpretation of predicted TFBS in regulatory regions.</p>
+    </sec>
+    <sec>
+      <title>Results</title>
+      <sec>
+        <title>Divergent preferences of TFBS for promoter sequences</title>
+        <p>We determined whether predicted TFBS formed clusters in human promoter sequences or in non-promoter sequences for each PWM using the cluster score described in the Method section. The higher the cluster score (derived from a logarithm of the p-value), the stronger the cluster of predicted TFBS is related to the promoter sequence. The threshold <italic>T</italic>, used to determine whether a cluster of predicted TFBS is found on a sequence, was calculated simultaneously. Since a prediction for the presence of a TFBS was performed for each PWM, an assessment for TFBS clusters was performed using the cluster score for each PWM. As a result, a number of PWMs do not tend to have clusters of TFBS in the promoter sequence. We observed a divergence of cluster scores. Of the 199 vertebrate PWMs in TRANSFAC, 94 (47%) PWMs had significantly high cluster scores, while 22 (11%) PWMs had significantly low cluster scores. The remaining 83 (42%) PWMs did not show significant cluster scores. A p-value of 1.0% was used to identify the above PWM set with Bonferroni correction for multiple testing ([<xref ref-type="bibr" rid="B23">23</xref>] Section 3.8). Figure <xref ref-type="fig" rid="F1">1</xref> shows a histogram of cluster scores. Although these results were derived from genes on chromosome 20, the results from other chromosomes were similar as described in the following subsection. PWMs with high cluster scores are shown in Table <xref ref-type="table" rid="T1">1</xref>. Some of the PWMs have thresholds <italic>T </italic>(of accumulated score <italic>C</italic>) equal to or less than 1.0. This indicates that the occurrence of single predicted TFBS is more discriminative than clusters. Sequence logo [<xref ref-type="bibr" rid="B24">24</xref>] of the top three PWMs are depicted in Fig. <xref ref-type="fig" rid="F2">2-(a)</xref>. See <xref ref-type="supplementary-material" rid="S1">additional file 1</xref> 'PWMs sorted by cluster score' for the entire PWM list.</p>
+        <fig position="float" id="F1">
+          <label>Figure 1</label>
+          <caption>
+            <p><bold>A histogram of cluster scores for PWMs.</bold>Each number of X-axis indicates the maximum score of PWMs in the bin.</p>
+          </caption>
+          <graphic xlink:href="1471-2164-5-16-1"/>
+        </fig>
+        <table-wrap position="float" id="T1">
+          <label>Table 1</label>
+          <caption>
+            <p>Top 50 PWMs for chromosome 20 sorted by cluster score <italic>S </italic>in descending order. Each column represents rank number, accession number in TRANSFAC, identifier in TRANSFAC, cluster score, and threshold.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">Rank</td>
+                <td align="left">ACCESSION</td>
+                <td align="left">ID</td>
+                <td align="left">S</td>
+                <td align="left">T</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="right">1</td>
+                <td align="left">M00736</td>
+                <td align="left">E2F1DP1_01</td>
+                <td align="right">189.3</td>
+                <td align="right">2.75</td>
+              </tr>
+              <tr>
+                <td align="right">2</td>
+                <td align="left">M00332</td>
+                <td align="left">WHN_B</td>
+                <td align="right">176.0</td>
+                <td align="right">1.90</td>
+              </tr>
+              <tr>
+                <td align="right">3</td>
+                <td align="left">M00652</td>
+                <td align="left">NRF1_Q6</td>
+                <td align="right">122.0</td>
+                <td align="right">0.93</td>
+              </tr>
+              <tr>
+                <td align="right">4</td>
+                <td align="left">M00649</td>
+                <td align="left">MAZ_Q6</td>
+                <td align="right">117.2</td>
+                <td align="right">4.35</td>
+              </tr>
+              <tr>
+                <td align="right">5</td>
+                <td align="left">M00491</td>
+                <td align="left">MAZR_01</td>
+                <td align="right">111.4</td>
+                <td align="right">1.78</td>
+              </tr>
+              <tr>
+                <td align="right">6</td>
+                <td align="left">M00739</td>
+                <td align="left">E2F4DP2_01</td>
+                <td align="right">103.8</td>
+                <td align="right">0.93</td>
+              </tr>
+              <tr>
+                <td align="right">7</td>
+                <td align="left">M00737</td>
+                <td align="left">E2F1DP2_01</td>
+                <td align="right">103.6</td>
+                <td align="right">0.94</td>
+              </tr>
+              <tr>
+                <td align="right">8</td>
+                <td align="left">M00108</td>
+                <td align="left">NRF2_01</td>
+                <td align="right">81.4</td>
+                <td align="right">0.92</td>
+              </tr>
+              <tr>
+                <td align="right">9</td>
+                <td align="left">M00665</td>
+                <td align="left">SP3_Q3</td>
+                <td align="right">72.1</td>
+                <td align="right">2.39</td>
+              </tr>
+              <tr>
+                <td align="right">10</td>
+                <td align="left">M00706</td>
+                <td align="left">TFIII_Q6</td>
+                <td align="right">61.4</td>
+                <td align="right">4.23</td>
+              </tr>
+              <tr>
+                <td align="right">11</td>
+                <td align="left">M00740</td>
+                <td align="left">E2F1DP1RB_01</td>
+                <td align="right">58.4</td>
+                <td align="right">0.90</td>
+              </tr>
+              <tr>
+                <td align="right">12</td>
+                <td align="left">M00324</td>
+                <td align="left">MINI20_B</td>
+                <td align="right">58.2</td>
+                <td align="right">1.61</td>
+              </tr>
+              <tr>
+                <td align="right">13</td>
+                <td align="left">M00032</td>
+                <td align="left">CETS1P54_01</td>
+                <td align="right">57.3</td>
+                <td align="right">3.70</td>
+              </tr>
+              <tr>
+                <td align="right">14</td>
+                <td align="left">M00743</td>
+                <td align="left">CETS168_Q6</td>
+                <td align="right">51.1</td>
+                <td align="right">1.75</td>
+              </tr>
+              <tr>
+                <td align="right">15</td>
+                <td align="left">M00341</td>
+                <td align="left">GABP_B</td>
+                <td align="right">48.6</td>
+                <td align="right">0.88</td>
+              </tr>
+              <tr>
+                <td align="right">16</td>
+                <td align="left">M00055</td>
+                <td align="left">NMYC_01</td>
+                <td align="right">41.1</td>
+                <td align="right">0.90</td>
+              </tr>
+              <tr>
+                <td align="right">17</td>
+                <td align="left">M00329</td>
+                <td align="left">PAX9_B</td>
+                <td align="right">39.2</td>
+                <td align="right">0.73</td>
+              </tr>
+              <tr>
+                <td align="right">18</td>
+                <td align="left">M00243</td>
+                <td align="left">EGR1_01</td>
+                <td align="right">37.3</td>
+                <td align="right">0.87</td>
+              </tr>
+              <tr>
+                <td align="right">19</td>
+                <td align="left">M00072</td>
+                <td align="left">CP2_01</td>
+                <td align="right">36.5</td>
+                <td align="right">1.66</td>
+              </tr>
+              <tr>
+                <td align="right">20</td>
+                <td align="left">M00054</td>
+                <td align="left">NFKAPPAB_01</td>
+                <td align="right">35.5</td>
+                <td align="right">0.85</td>
+              </tr>
+              <tr>
+                <td align="right">21</td>
+                <td align="left">M00056</td>
+                <td align="left">MYOGNF1_01</td>
+                <td align="right">35.1</td>
+                <td align="right">1.34</td>
+              </tr>
+              <tr>
+                <td align="right">22</td>
+                <td align="left">M00694</td>
+                <td align="left">E4F1_Q6</td>
+                <td align="right">35.0</td>
+                <td align="right">0.86</td>
+              </tr>
+              <tr>
+                <td align="right">23</td>
+                <td align="left">M00738</td>
+                <td align="left">E2F4DP1_01</td>
+                <td align="right">34.9</td>
+                <td align="right">0.91</td>
+              </tr>
+              <tr>
+                <td align="right">24</td>
+                <td align="left">M00143</td>
+                <td align="left">PAX5_01</td>
+                <td align="right">34.7</td>
+                <td align="right">0.84</td>
+              </tr>
+              <tr>
+                <td align="right">25</td>
+                <td align="left">M00235</td>
+                <td align="left">AHRARNT_01</td>
+                <td align="right">34.6</td>
+                <td align="right">0.92</td>
+              </tr>
+              <tr>
+                <td align="right">26</td>
+                <td align="left">M00698</td>
+                <td align="left">HEB_Q6</td>
+                <td align="right">33.6</td>
+                <td align="right">0.91</td>
+              </tr>
+              <tr>
+                <td align="right">27</td>
+                <td align="left">M00039</td>
+                <td align="left">CREB_01</td>
+                <td align="right">33.6</td>
+                <td align="right">1.00</td>
+              </tr>
+              <tr>
+                <td align="right">28</td>
+                <td align="left">M00514</td>
+                <td align="left">ATF4_Q2</td>
+                <td align="right">33.1</td>
+                <td align="right">1.71</td>
+              </tr>
+              <tr>
+                <td align="right">29</td>
+                <td align="left">M00650</td>
+                <td align="left">MTF1_Q4</td>
+                <td align="right">31.4</td>
+                <td align="right">0.88</td>
+              </tr>
+              <tr>
+                <td align="right">30</td>
+                <td align="left">M00194</td>
+                <td align="left">NFKB_Q6</td>
+                <td align="right">30.8</td>
+                <td align="right">0.82</td>
+              </tr>
+              <tr>
+                <td align="right">31</td>
+                <td align="left">M00007</td>
+                <td align="left">ELK1_01</td>
+                <td align="right">30.0</td>
+                <td align="right">0.85</td>
+              </tr>
+              <tr>
+                <td align="right">32</td>
+                <td align="left">M00733</td>
+                <td align="left">SMAD4_Q6</td>
+                <td align="right">29.7</td>
+                <td align="right">0.81</td>
+              </tr>
+              <tr>
+                <td align="right">33</td>
+                <td align="left">M00261</td>
+                <td align="left">OLF1_01</td>
+                <td align="right">28.8</td>
+                <td align="right">0.84</td>
+              </tr>
+              <tr>
+                <td align="right">34</td>
+                <td align="left">M00017</td>
+                <td align="left">ATF_01</td>
+                <td align="right">26.7</td>
+                <td align="right">0.98</td>
+              </tr>
+              <tr>
+                <td align="right">35</td>
+                <td align="left">M00053</td>
+                <td align="left">CREL_01</td>
+                <td align="right">25.6</td>
+                <td align="right">0.81</td>
+              </tr>
+              <tr>
+                <td align="right">36</td>
+                <td align="left">M00691</td>
+                <td align="left">ATF1_Q6</td>
+                <td align="right">25.5</td>
+                <td align="right">0.89</td>
+              </tr>
+              <tr>
+                <td align="right">37</td>
+                <td align="left">M00244</td>
+                <td align="left">NGFIC_01</td>
+                <td align="right">25.2</td>
+                <td align="right">0.88</td>
+              </tr>
+              <tr>
+                <td align="right">38</td>
+                <td align="left">M00041</td>
+                <td align="left">CREBP1CJUN_01</td>
+                <td align="right">24.9</td>
+                <td align="right">1.00</td>
+              </tr>
+              <tr>
+                <td align="right">39</td>
+                <td align="left">M00086</td>
+                <td align="left">IK1_01</td>
+                <td align="right">24.2</td>
+                <td align="right">0.90</td>
+              </tr>
+              <tr>
+                <td align="right">40</td>
+                <td align="left">M00287</td>
+                <td align="left">NFY_01</td>
+                <td align="right">24.0</td>
+                <td align="right">1.95</td>
+              </tr>
+              <tr>
+                <td align="right">41</td>
+                <td align="left">M00466</td>
+                <td align="left">HIF1_Q5</td>
+                <td align="right">22.7</td>
+                <td align="right">0.90</td>
+              </tr>
+              <tr>
+                <td align="right">42</td>
+                <td align="left">M00634</td>
+                <td align="left">GCM_Q2</td>
+                <td align="right">22.6</td>
+                <td align="right">0.84</td>
+              </tr>
+              <tr>
+                <td align="right">43</td>
+                <td align="left">M00273</td>
+                <td align="left">R_01</td>
+                <td align="right">21.8</td>
+                <td align="right">0.85</td>
+              </tr>
+              <tr>
+                <td align="right">44</td>
+                <td align="left">M00373</td>
+                <td align="left">PAX4_01</td>
+                <td align="right">21.7</td>
+                <td align="right">2.57</td>
+              </tr>
+              <tr>
+                <td align="right">45</td>
+                <td align="left">M00097</td>
+                <td align="left">PAX6_01</td>
+                <td align="right">21.5</td>
+                <td align="right">1.15</td>
+              </tr>
+              <tr>
+                <td align="right">46</td>
+                <td align="left">M00134</td>
+                <td align="left">HNF4_01</td>
+                <td align="right">21.1</td>
+                <td align="right">0.64</td>
+              </tr>
+              <tr>
+                <td align="right">47</td>
+                <td align="left">M00670</td>
+                <td align="left">TCF1P_Q6</td>
+                <td align="right">21.1</td>
+                <td align="right">0.80</td>
+              </tr>
+              <tr>
+                <td align="right">48</td>
+                <td align="left">M00057</td>
+                <td align="left">COMP1_01</td>
+                <td align="right">21.1</td>
+                <td align="right">0.59</td>
+              </tr>
+              <tr>
+                <td align="right">49</td>
+                <td align="left">M00035</td>
+                <td align="left">VMAF_01</td>
+                <td align="right">21.0</td>
+                <td align="right">1.32</td>
+              </tr>
+              <tr>
+                <td align="right">50</td>
+                <td align="left">M00222</td>
+                <td align="left">HAND1E47_01</td>
+                <td align="right">20.3</td>
+                <td align="right">0.81</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <fig position="float" id="F2">
+          <label>Figure 2</label>
+          <caption>
+            <p><bold>Sequence logos. </bold>(a) Top three PWMs from Table <xref ref-type="table" rid="T1">1</xref>, (b) representative PWMs from Table <xref ref-type="table" rid="T2">2</xref>, (c) representative PWMs from Table <xref ref-type="table" rid="T3">3</xref>.</p>
+          </caption>
+          <graphic xlink:href="1471-2164-5-16-2"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>Cluster scores for different datasets</title>
+        <p>To assess the robustness of the cluster score we compared cluster scores for different datasets from chromosomes 20, 21 and 22, respectively. Fig. <xref ref-type="fig" rid="F3">3</xref> shows the correlation of cluster scores between chromosomes 20 and 21 (a), and between chromosomes 20 and 22 (b). Some PWMs, the matches of which were detected on less than 50 subsequences, are not shown. The correlation coefficient points were 0.91 (a) and 0.93 (b).</p>
+        <fig position="float" id="F3">
+          <label>Figure 3</label>
+          <caption>
+            <p><bold>Title: Correlation of cluster scores (a) between chromosomes 20 and 21, (b) chromosomes 20 and 22. </bold>Each dot represents a distinct PWM (defined by the TRANSFAC matrix). The correlation coefficients were (a) 0.91 and (b) 0.93.</p>
+          </caption>
+          <graphic xlink:href="1471-2164-5-16-3"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>Correlations among promoter sequences, CpG islands, and clusters</title>
+        <p>About half of the human coding genes have a compositional bias for CGI over transcription start sites [<xref ref-type="bibr" rid="B25">25</xref>]. It is possible that some of the predicted TFBS clusters might be the consequence of the existence of a CGI. To investigate this possibility, we computed partial correlation coefficients of three categories of promoters, CGI and predicted TFBS clusters. In general, a partial correlation coefficient measures the correlation between any pair of variables when other, specified variables, have been held constant. For example, a partial correlation coefficient <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is the correlation between <italic>I </italic>and <italic>C </italic>while controlling for <italic>P</italic>, where <italic>I </italic>denotes CGI, <italic>C </italic>denotes accumulated score (strength of predicted TFBS clusters, see Methods) and <italic>P </italic>denotes promoters. If we calculate simple correlation coefficients, <italic>r</italic><sub><italic>PI </italic></sub>= 0.69, <italic>r</italic><sub><italic>IC </italic></sub>ranged from -0.25 to 0.57 for various PWMs, and <italic>r</italic><sub><italic>PC </italic></sub>ranged from -0.24 to 0.53 for various PWMs. These correlation coefficients are apparent ones. The partial correlation coefficients provide essential information and pure correlations, without the effect of the third variable. Fig. <xref ref-type="fig" rid="F4">4</xref> shows a plot of <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>against <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>for various PWMs. For most of the PWMs, <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is positive, although not particularly high (&lt;0.3). This implies a correlation between clusters of these PWM matches and promoter sequences, separate to the effect of CGI. For the PWMs in the right circle in Fig. <xref ref-type="fig" rid="F4">4</xref>, <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is high and <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is approximately zero, where the cluster is more correlated with the promoter than the CGI. Some PWMs have a negative <italic>r</italic><sub><italic>PC</italic>.<italic>I</italic></sub>, implying the absence of promoter sequences for these PWM matches. For the PWMs in the top circle in Fig. <xref ref-type="fig" rid="F4">4</xref>, <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is high and <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is approximately zero, suggesting that the correlation between promoters and clusters for these PWM matches is attributable to the presence of the CGI. While these promoters and clusters do not correlate directly, they appear to correlate because both are associated with CGI. </p>
+        <fig position="float" id="F4">
+          <label>Figure 4</label>
+          <caption>
+            <p><bold>Title: Plot of <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>against <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>for various PWMs. </bold>The top circle is the area where <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is around zero and <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is high. The right circle is the area where <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is around zero and <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is high. The two circles were drawn manually. Ideal CGI-related and CGI-independent PWMs are to be plotted in the top and right circles, respectively.</p>
+          </caption>
+          <graphic xlink:href="1471-2164-5-16-4"/>
+        </fig>
+        <p>Using these two values, we identified two PWM sets, (1) a CGI-related set (37 PWMs, Table <xref ref-type="table" rid="T2">2</xref>) in which TFBS clusters are correlated with CGI (independent of promoter), and (2) a CGI-independent set (54 PWMs, Table <xref ref-type="table" rid="T3">3</xref>) in which clusters of TFBS are correlated with promoters (independent of CGI). These sets were used for the following analysis.</p>
+        <table-wrap position="float" id="T2">
+          <label>Table 2</label>
+          <caption>
+            <p>CGI-related PWMs in descending order of <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>= <italic>Y</italic>. The columns are: rank number, accession number, Identifier in TRANSFAC, <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>(=<italic>X</italic>), <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>(=<italic>Y</italic>), cluster score and threshold.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">Rank</td>
+                <td align="left">ACCESSION</td>
+                <td align="left">ID</td>
+                <td align="left">X</td>
+                <td align="left">Y</td>
+                <td align="left">S</td>
+                <td align="left">T</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="right">1</td>
+                <td align="left">M00332</td>
+                <td align="left">WHN_B</td>
+                <td align="right">0.09</td>
+                <td align="right">0.43</td>
+                <td align="right">158.4</td>
+                <td align="right">1.9</td>
+              </tr>
+              <tr>
+                <td align="right">2</td>
+                <td align="left">M00736</td>
+                <td align="left">E2F1DP1_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.39</td>
+                <td align="right">151.8</td>
+                <td align="right">2.6</td>
+              </tr>
+              <tr>
+                <td align="right">3</td>
+                <td align="left">M00739</td>
+                <td align="left">E2F4DP2_01</td>
+                <td align="right">0.09</td>
+                <td align="right">0.29</td>
+                <td align="right">91.4</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">4</td>
+                <td align="left">M00737</td>
+                <td align="left">E2F1DP2_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.27</td>
+                <td align="right">81.9</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">5</td>
+                <td align="left">M00108</td>
+                <td align="left">NRF2_01</td>
+                <td align="right">0.09</td>
+                <td align="right">0.25</td>
+                <td align="right">72.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">6</td>
+                <td align="left">M00055</td>
+                <td align="left">NMYC_01</td>
+                <td align="right">0.05</td>
+                <td align="right">0.25</td>
+                <td align="right">34.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">7</td>
+                <td align="left">M00235</td>
+                <td align="left">AHRARNT_01</td>
+                <td align="right">0.02</td>
+                <td align="right">0.23</td>
+                <td align="right">26.8</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">8</td>
+                <td align="left">M00740</td>
+                <td align="left">E2F1DP1RB_01</td>
+                <td align="right">0.04</td>
+                <td align="right">0.23</td>
+                <td align="right">48.1</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">9</td>
+                <td align="left">M00652</td>
+                <td align="left">NRF1_Q6</td>
+                <td align="right">0.05</td>
+                <td align="right">0.22</td>
+                <td align="right">105.3</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">10</td>
+                <td align="left">M00466</td>
+                <td align="left">HIF1_Q5</td>
+                <td align="right">0.01</td>
+                <td align="right">0.22</td>
+                <td align="right">19.7</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">11</td>
+                <td align="left">M00341</td>
+                <td align="left">GABP_B</td>
+                <td align="right">0.1</td>
+                <td align="right">0.19</td>
+                <td align="right">46.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">12</td>
+                <td align="left">M00738</td>
+                <td align="left">E2F4DP1_01</td>
+                <td align="right">0.02</td>
+                <td align="right">0.19</td>
+                <td align="right">28.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">13</td>
+                <td align="left">M00538</td>
+                <td align="left">HTF_01</td>
+                <td align="right">0</td>
+                <td align="right">0.16</td>
+                <td align="right">9.7</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">14</td>
+                <td align="left">M00694</td>
+                <td align="left">E4F1_Q6</td>
+                <td align="right">0.03</td>
+                <td align="right">0.16</td>
+                <td align="right">23.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">15</td>
+                <td align="left">M00743</td>
+                <td align="left">CETS168_Q6</td>
+                <td align="right">0.13</td>
+                <td align="right">0.14</td>
+                <td align="right">47.1</td>
+                <td align="right">1</td>
+              </tr>
+              <tr>
+                <td align="right">16</td>
+                <td align="left">M00650</td>
+                <td align="left">MTF1_Q4</td>
+                <td align="right">0.04</td>
+                <td align="right">0.14</td>
+                <td align="right">22.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">17</td>
+                <td align="left">M00243</td>
+                <td align="left">EGR1_01</td>
+                <td align="right">0.07</td>
+                <td align="right">0.12</td>
+                <td align="right">32.4</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">18</td>
+                <td align="left">M00251</td>
+                <td align="left">XBP1_01</td>
+                <td align="right">0.01</td>
+                <td align="right">0.12</td>
+                <td align="right">7.8</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">19</td>
+                <td align="left">M00691</td>
+                <td align="left">ATF1_Q6</td>
+                <td align="right">0.07</td>
+                <td align="right">0.12</td>
+                <td align="right">17.3</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">20</td>
+                <td align="left">M00236</td>
+                <td align="left">ARNT_01</td>
+                <td align="right">0.02</td>
+                <td align="right">0.11</td>
+                <td align="right">6.5</td>
+                <td align="right">1</td>
+              </tr>
+              <tr>
+                <td align="right">21</td>
+                <td align="left">M00143</td>
+                <td align="left">PAX5_01</td>
+                <td align="right">0.09</td>
+                <td align="right">0.11</td>
+                <td align="right">25.7</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">22</td>
+                <td align="left">M00273</td>
+                <td align="left">R_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.11</td>
+                <td align="right">23.8</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">23</td>
+                <td align="left">M00244</td>
+                <td align="left">NGFIC_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.1</td>
+                <td align="right">23</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">24</td>
+                <td align="left">M00280</td>
+                <td align="left">RFX1_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.1</td>
+                <td align="right">11.1</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">25</td>
+                <td align="left">M00121</td>
+                <td align="left">USF_01</td>
+                <td align="right">0.03</td>
+                <td align="right">0.1</td>
+                <td align="right">7.6</td>
+                <td align="right">1</td>
+              </tr>
+              <tr>
+                <td align="right">26</td>
+                <td align="left">M00287</td>
+                <td align="left">NFY_01</td>
+                <td align="right">0.04</td>
+                <td align="right">0.1</td>
+                <td align="right">21.3</td>
+                <td align="right">1.9</td>
+              </tr>
+              <tr>
+                <td align="right">27</td>
+                <td align="left">M00039</td>
+                <td align="left">CREB_01</td>
+                <td align="right">0.04</td>
+                <td align="right">0.09</td>
+                <td align="right">23.2</td>
+                <td align="right">1</td>
+              </tr>
+              <tr>
+                <td align="right">28</td>
+                <td align="left">M00309</td>
+                <td align="left">ACAAT_B</td>
+                <td align="right">0.04</td>
+                <td align="right">0.09</td>
+                <td align="right">6.8</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">29</td>
+                <td align="left">M00651</td>
+                <td align="left">NFMUE1_Q6</td>
+                <td align="right">0.03</td>
+                <td align="right">0.09</td>
+                <td align="right">13</td>
+                <td align="right">1.8</td>
+              </tr>
+              <tr>
+                <td align="right">30</td>
+                <td align="left">M00017</td>
+                <td align="left">ATF_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.08</td>
+                <td align="right">19.2</td>
+                <td align="right">1</td>
+              </tr>
+              <tr>
+                <td align="right">31</td>
+                <td align="left">M00481</td>
+                <td align="left">AR_01</td>
+                <td align="right">0.05</td>
+                <td align="right">0.08</td>
+                <td align="right">7.5</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">32</td>
+                <td align="left">M00041</td>
+                <td align="left">CREBP1CJUN_01</td>
+                <td align="right">0.04</td>
+                <td align="right">0.08</td>
+                <td align="right">20.4</td>
+                <td align="right">1</td>
+              </tr>
+              <tr>
+                <td align="right">33</td>
+                <td align="left">M00040</td>
+                <td align="left">CREBP1_01</td>
+                <td align="right">0.03</td>
+                <td align="right">0.08</td>
+                <td align="right">4.7</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">34</td>
+                <td align="left">M00114</td>
+                <td align="left">TAXCREB_01</td>
+                <td align="right">0.02</td>
+                <td align="right">0.06</td>
+                <td align="right">7.3</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">35</td>
+                <td align="left">M00279</td>
+                <td align="left">MIF1_01</td>
+                <td align="right">0.02</td>
+                <td align="right">0.06</td>
+                <td align="right">10.9</td>
+                <td align="right">1.8</td>
+              </tr>
+              <tr>
+                <td align="right">36</td>
+                <td align="left">M00246</td>
+                <td align="left">EGR2_01</td>
+                <td align="right">0.04</td>
+                <td align="right">0.06</td>
+                <td align="right">9.7</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">37</td>
+                <td align="left">M00085</td>
+                <td align="left">ZID_01</td>
+                <td align="right">0.05</td>
+                <td align="right">0.06</td>
+                <td align="right">8</td>
+                <td align="right">0.8</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <table-wrap position="float" id="T3">
+          <label>Table 3</label>
+          <caption>
+            <p>CGI-independent PWMs in descending order of <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>(=<italic>X</italic>). The columns are: rank number, accession number, Identifier in TRANSFAC, <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>(=<italic>X</italic>), <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>(=<italic>Y</italic>), cluster score and threshold.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">Rank</td>
+                <td align="left">ACCESSION</td>
+                <td align="left">ID</td>
+                <td align="left">X</td>
+                <td align="left">Y</td>
+                <td align="left">S</td>
+                <td align="left">T</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="right">1</td>
+                <td align="left">M00491</td>
+                <td align="left">MAZR_01</td>
+                <td align="right">0.27</td>
+                <td align="right">0.15</td>
+                <td align="right">117.4</td>
+                <td align="right">1.8</td>
+              </tr>
+              <tr>
+                <td align="right">2</td>
+                <td align="left">M00706</td>
+                <td align="left">TFIII_Q6</td>
+                <td align="right">0.24</td>
+                <td align="right">0.06</td>
+                <td align="right">52.7</td>
+                <td align="right">3.5</td>
+              </tr>
+              <tr>
+                <td align="right">3</td>
+                <td align="left">M00324</td>
+                <td align="left">MINI20_B</td>
+                <td align="right">0.22</td>
+                <td align="right">0.1</td>
+                <td align="right">53.2</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">4</td>
+                <td align="left">M00056</td>
+                <td align="left">MYOGNF1_01</td>
+                <td align="right">0.22</td>
+                <td align="right">0</td>
+                <td align="right">31.6</td>
+                <td align="right">1.3</td>
+              </tr>
+              <tr>
+                <td align="right">5</td>
+                <td align="left">M00649</td>
+                <td align="left">MAZ_Q6</td>
+                <td align="right">0.21</td>
+                <td align="right">0.19</td>
+                <td align="right">114.4</td>
+                <td align="right">3.7</td>
+              </tr>
+              <tr>
+                <td align="right">6</td>
+                <td align="left">M00665</td>
+                <td align="left">SP3_Q3</td>
+                <td align="right">0.2</td>
+                <td align="right">0.14</td>
+                <td align="right">67.7</td>
+                <td align="right">1.7</td>
+              </tr>
+              <tr>
+                <td align="right">7</td>
+                <td align="left">M00032</td>
+                <td align="left">CETS1P54_01</td>
+                <td align="right">0.19</td>
+                <td align="right">0.1</td>
+                <td align="right">47.7</td>
+                <td align="right">1.8</td>
+              </tr>
+              <tr>
+                <td align="right">8</td>
+                <td align="left">M00053</td>
+                <td align="left">CREL_01</td>
+                <td align="right">0.19</td>
+                <td align="right">0.04</td>
+                <td align="right">26.9</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">9</td>
+                <td align="left">M00054</td>
+                <td align="left">NFKAPPAB_01</td>
+                <td align="right">0.19</td>
+                <td align="right">0.06</td>
+                <td align="right">33.5</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">10</td>
+                <td align="left">M00632</td>
+                <td align="left">GATA4_Q3</td>
+                <td align="right">0.19</td>
+                <td align="right">0.04</td>
+                <td align="right">25.1</td>
+                <td align="right">0.6</td>
+              </tr>
+              <tr>
+                <td align="right">11</td>
+                <td align="left">M00373</td>
+                <td align="left">PAX4_01</td>
+                <td align="right">0.19</td>
+                <td align="right">0.05</td>
+                <td align="right">26.1</td>
+                <td align="right">0.6</td>
+              </tr>
+              <tr>
+                <td align="right">12</td>
+                <td align="left">M00072</td>
+                <td align="left">CP2_01</td>
+                <td align="right">0.19</td>
+                <td align="right">0.08</td>
+                <td align="right">32</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">13</td>
+                <td align="left">M00733</td>
+                <td align="left">SMAD4_Q6</td>
+                <td align="right">0.18</td>
+                <td align="right">0.05</td>
+                <td align="right">26.3</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">14</td>
+                <td align="left">M00134</td>
+                <td align="left">HNF4_01</td>
+                <td align="right">0.18</td>
+                <td align="right">0.06</td>
+                <td align="right">25.7</td>
+                <td align="right">0.6</td>
+              </tr>
+              <tr>
+                <td align="right">15</td>
+                <td align="left">M00194</td>
+                <td align="left">NFKB_Q6</td>
+                <td align="right">0.18</td>
+                <td align="right">0.02</td>
+                <td align="right">28.5</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">16</td>
+                <td align="left">M00445</td>
+                <td align="left">XVENT1_01</td>
+                <td align="right">0.17</td>
+                <td align="right">0.01</td>
+                <td align="right">19.9</td>
+                <td align="right">0.7</td>
+              </tr>
+              <tr>
+                <td align="right">17</td>
+                <td align="left">M00057</td>
+                <td align="left">COMP1_01</td>
+                <td align="right">0.17</td>
+                <td align="right">0.05</td>
+                <td align="right">24.1</td>
+                <td align="right">0.5</td>
+              </tr>
+              <tr>
+                <td align="right">18</td>
+                <td align="left">M00097</td>
+                <td align="left">PAX6_01</td>
+                <td align="right">0.17</td>
+                <td align="right">0.06</td>
+                <td align="right">24.1</td>
+                <td align="right">0.5</td>
+              </tr>
+              <tr>
+                <td align="right">19</td>
+                <td align="left">M00104</td>
+                <td align="left">CDPCR1_01</td>
+                <td align="right">0.17</td>
+                <td align="right">0.03</td>
+                <td align="right">21.3</td>
+                <td align="right">0.6</td>
+              </tr>
+              <tr>
+                <td align="right">20</td>
+                <td align="left">M00222</td>
+                <td align="left">HAND1E47_01</td>
+                <td align="right">0.17</td>
+                <td align="right">0.02</td>
+                <td align="right">20.4</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">21</td>
+                <td align="left">M00626</td>
+                <td align="left">EFC_Q6</td>
+                <td align="right">0.17</td>
+                <td align="right">0.05</td>
+                <td align="right">22.6</td>
+                <td align="right">0.6</td>
+              </tr>
+              <tr>
+                <td align="right">22</td>
+                <td align="left">M00745</td>
+                <td align="left">LEF1_Q6</td>
+                <td align="right">0.16</td>
+                <td align="right">-0.02</td>
+                <td align="right">15.9</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">23</td>
+                <td align="left">M00707</td>
+                <td align="left">TFIIA_Q6</td>
+                <td align="right">0.16</td>
+                <td align="right">0.03</td>
+                <td align="right">20.2</td>
+                <td align="right">0.7</td>
+              </tr>
+              <tr>
+                <td align="right">24</td>
+                <td align="left">M00086</td>
+                <td align="left">IK1_01</td>
+                <td align="right">0.16</td>
+                <td align="right">0.06</td>
+                <td align="right">24.1</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">25</td>
+                <td align="left">M00329</td>
+                <td align="left">PAX9_B</td>
+                <td align="right">0.16</td>
+                <td align="right">0.1</td>
+                <td align="right">33.7</td>
+                <td align="right">0.7</td>
+              </tr>
+              <tr>
+                <td align="right">26</td>
+                <td align="left">M00478</td>
+                <td align="left">CDC5_01</td>
+                <td align="right">0.15</td>
+                <td align="right">0.03</td>
+                <td align="right">19</td>
+                <td align="right">0.6</td>
+              </tr>
+              <tr>
+                <td align="right">27</td>
+                <td align="left">M00670</td>
+                <td align="left">TCF1P_Q6</td>
+                <td align="right">0.15</td>
+                <td align="right">0.06</td>
+                <td align="right">22.7</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">28</td>
+                <td align="left">M00257</td>
+                <td align="left">RREB1_01</td>
+                <td align="right">0.15</td>
+                <td align="right">-0.02</td>
+                <td align="right">15.8</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">29</td>
+                <td align="left">M00007</td>
+                <td align="left">ELK1_01</td>
+                <td align="right">0.15</td>
+                <td align="right">0.08</td>
+                <td align="right">31</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">30</td>
+                <td align="left">M00698</td>
+                <td align="left">HEB_Q6</td>
+                <td align="right">0.15</td>
+                <td align="right">0.08</td>
+                <td align="right">28.7</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">31</td>
+                <td align="left">M00052</td>
+                <td align="left">NFKAPPAB65_01</td>
+                <td align="right">0.14</td>
+                <td align="right">-0.05</td>
+                <td align="right">9.4</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">32</td>
+                <td align="left">M00514</td>
+                <td align="left">ATF4_Q2</td>
+                <td align="right">0.14</td>
+                <td align="right">0.05</td>
+                <td align="right">21.8</td>
+                <td align="right">1.7</td>
+              </tr>
+              <tr>
+                <td align="right">33</td>
+                <td align="left">M00191</td>
+                <td align="left">ER_Q6</td>
+                <td align="right">0.14</td>
+                <td align="right">-0.03</td>
+                <td align="right">11</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">34</td>
+                <td align="left">M00003</td>
+                <td align="left">VMYB_01</td>
+                <td align="right">0.14</td>
+                <td align="right">0.05</td>
+                <td align="right">18</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">35</td>
+                <td align="left">M00261</td>
+                <td align="left">OLF1_01</td>
+                <td align="right">0.14</td>
+                <td align="right">0.07</td>
+                <td align="right">24.6</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">36</td>
+                <td align="left">M00490</td>
+                <td align="left">BACH2_01</td>
+                <td align="right">0.13</td>
+                <td align="right">-0.03</td>
+                <td align="right">9.3</td>
+                <td align="right">0.7</td>
+              </tr>
+              <tr>
+                <td align="right">37</td>
+                <td align="left">M00001</td>
+                <td align="left">MYOD_01</td>
+                <td align="right">0.13</td>
+                <td align="right">-0.03</td>
+                <td align="right">10.4</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">38</td>
+                <td align="left">M00634</td>
+                <td align="left">GCM_Q2</td>
+                <td align="right">0.12</td>
+                <td align="right">0.05</td>
+                <td align="right">19.8</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">39</td>
+                <td align="left">M00035</td>
+                <td align="left">VMAF_01</td>
+                <td align="right">0.12</td>
+                <td align="right">0.06</td>
+                <td align="right">17.5</td>
+                <td align="right">0.7</td>
+              </tr>
+              <tr>
+                <td align="right">40</td>
+                <td align="left">M00340</td>
+                <td align="left">ETS2_B</td>
+                <td align="right">0.12</td>
+                <td align="right">-0.08</td>
+                <td align="right">5</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">41</td>
+                <td align="left">M00005</td>
+                <td align="left">AP4_01</td>
+                <td align="right">0.12</td>
+                <td align="right">0.01</td>
+                <td align="right">14.1</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">42</td>
+                <td align="left">M00701</td>
+                <td align="left">SMAD3_Q6</td>
+                <td align="right">0.11</td>
+                <td align="right">0.03</td>
+                <td align="right">11.4</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">43</td>
+                <td align="left">M00531</td>
+                <td align="left">NERF_Q2</td>
+                <td align="right">0.1</td>
+                <td align="right">-0.08</td>
+                <td align="right">4.8</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">44</td>
+                <td align="left">M00339</td>
+                <td align="left">ETS1_B</td>
+                <td align="right">0.1</td>
+                <td align="right">-0.07</td>
+                <td align="right">5.7</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">45</td>
+                <td align="left">M00657</td>
+                <td align="left">PTF1BETA_Q6</td>
+                <td align="right">0.1</td>
+                <td align="right">0</td>
+                <td align="right">7.5</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">46</td>
+                <td align="left">M00254</td>
+                <td align="left">CAAT_01</td>
+                <td align="right">0.1</td>
+                <td align="right">-0.01</td>
+                <td align="right">6.6</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">47</td>
+                <td align="left">M00118</td>
+                <td align="left">MYCMAX_01</td>
+                <td align="right">0.09</td>
+                <td align="right">-0.02</td>
+                <td align="right">6.2</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">48</td>
+                <td align="left">M00693</td>
+                <td align="left">E12_Q6</td>
+                <td align="right">0.09</td>
+                <td align="right">-0.01</td>
+                <td align="right">6.5</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">49</td>
+                <td align="left">M00004</td>
+                <td align="left">CMYB_01</td>
+                <td align="right">0.08</td>
+                <td align="right">0</td>
+                <td align="right">7.1</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">50</td>
+                <td align="left">M00238</td>
+                <td align="left">BARBIE_01</td>
+                <td align="right">0.08</td>
+                <td align="right">0.02</td>
+                <td align="right">9.4</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">51</td>
+                <td align="left">M00648</td>
+                <td align="left">MAF_Q6</td>
+                <td align="right">0.07</td>
+                <td align="right">0.01</td>
+                <td align="right">5.8</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">52</td>
+                <td align="left">M00002</td>
+                <td align="left">E47_01</td>
+                <td align="right">0.06</td>
+                <td align="right">0.02</td>
+                <td align="right">5.3</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">53</td>
+                <td align="left">M00262</td>
+                <td align="left">STAF_01</td>
+                <td align="right">0.05</td>
+                <td align="right">0</td>
+                <td align="right">9.2</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">54</td>
+                <td align="left">M00119</td>
+                <td align="left">MAX_01</td>
+                <td align="right">0.05</td>
+                <td align="right">0.03</td>
+                <td align="right">4.9</td>
+                <td align="right">1</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Correlation between clusters of predicted TFBS and gene expression</title>
+        <p>Since all widely expressed, or housekeeping, genes have CGI [<xref ref-type="bibr" rid="B25">25</xref>], it is possible that clusters of PWM matches for CGI-independent sets are associated with tissue specific promoters. For this reason we examined the relationship between clusters of PWM matches and the tissue specificity of the associated genes using published gene expression data ([<xref ref-type="bibr" rid="B26">26</xref>,<xref ref-type="bibr" rid="B27">27</xref>]). The two resources used for this analysis are not consistent. Some genes annotated as housekeeping genes in one resource are referred to as tissue specific in another resource. We refer to these genes as mixed annotated genes. Genes with associated expression data were analysed and of these 72 were identified among the gene set covering the three chromosomes used in this study. They included 12 housekeeping genes, 9 mixed annotated genes, and 51 tissue specific genes. With the CGI-independent PWM sets we detected promoters with clusters of PWM matches. These clusters have significantly high Z-scores (see Methods) based on the accumulated score <italic>C </italic>in randomly generated DNA sequences (as control) with the same dinucleotide frequency of each promoter sequence. Table <xref ref-type="table" rid="T4">4</xref> shows the 40 genes detected, the <italic>DCC </italic>score (described below), their tissue specificity and start_p score. These genes are sorted according to the <italic>DCC </italic>score indicating the extent of association with CGI-independent PWMs over CGI-related PWMs. Results show that tissue specific genes tend to have high <italic>DCC </italic>scores and that transcription factors corresponding to CGI-independent PWMs are related to tissue specific genes. If we extract 20 genes which have <italic>DCC </italic>scores equal to or higher than -0.03, 18 (90%) of these are tissue specific genes. The 72 genes with known gene expressions data included 51 tissue specific genes (71%). The p-value of the event of extraction was 0.04 under cumulative hypergeometric distribution. The p-value of the ranking of the two groups (11 housekeeping and 29 tissue-specific) in Table <xref ref-type="table" rid="T4">4</xref> was 0.01 by Wilcoxon rank test. Note that <italic>DCC </italic>is not correlated with the CGI score (start_p).</p>
+        <table-wrap position="float" id="T4">
+          <label>Table 4</label>
+          <caption>
+            <p>The gene list sorted by <italic>DCC </italic>score. The genes, in which clusters of TFBS are found on promoters using CpG-related/independent PWMs, and tissue specificity, have been previously identified. HK denotes housekeeping. Tissue specific genes can be selected independent of CpG islands (start_p) using <italic>DCC </italic>score.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <tbody>
+              <tr>
+                <td align="right">1</td>
+                <td align="left">NM006272</td>
+                <td align="right">0.43</td>
+                <td align="left">brain</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">2</td>
+                <td align="left">NM007341</td>
+                <td align="right">0.4</td>
+                <td align="left">muscle</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">3</td>
+                <td align="left">NM002592</td>
+                <td align="right">0.37</td>
+                <td align="left">brain</td>
+                <td align="right">0.86</td>
+              </tr>
+              <tr>
+                <td align="right">4</td>
+                <td align="left">NM001819</td>
+                <td align="right">0.27</td>
+                <td align="left">brain</td>
+                <td align="right">0.68</td>
+              </tr>
+              <tr>
+                <td align="right">5</td>
+                <td align="left">NM004414</td>
+                <td align="right">0.23</td>
+                <td align="left">kidney</td>
+                <td align="right">0.89</td>
+              </tr>
+              <tr>
+                <td align="right">6</td>
+                <td align="left">NM002999</td>
+                <td align="right">0.19</td>
+                <td align="left">kidney</td>
+                <td align="right">0.73</td>
+              </tr>
+              <tr>
+                <td align="right">7</td>
+                <td align="left">NM003195</td>
+                <td align="right">0.16</td>
+                <td align="left">brain</td>
+                <td align="right">0.73</td>
+              </tr>
+              <tr>
+                <td align="right">8</td>
+                <td align="left">NM002591</td>
+                <td align="right">0.14</td>
+                <td align="left">liver</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">9</td>
+                <td align="left">NM000454</td>
+                <td align="right">0.11</td>
+                <td align="left">HK.liver</td>
+                <td align="right">0.87</td>
+              </tr>
+              <tr>
+                <td align="right">10</td>
+                <td align="left">NM003312</td>
+                <td align="right">0.1</td>
+                <td align="left">liver</td>
+                <td align="right">0.72</td>
+              </tr>
+              <tr>
+                <td align="right">11</td>
+                <td align="left">NM004339</td>
+                <td align="right">0.09</td>
+                <td align="left">brain</td>
+                <td align="right">0.9</td>
+              </tr>
+              <tr>
+                <td align="right">12</td>
+                <td align="left">NM020708</td>
+                <td align="right">0.08</td>
+                <td align="left">brain</td>
+                <td align="right">0.64</td>
+              </tr>
+              <tr>
+                <td align="right">13</td>
+                <td align="left">NM006870</td>
+                <td align="right">0.05</td>
+                <td align="left">HK</td>
+                <td align="right">0.7</td>
+              </tr>
+              <tr>
+                <td align="right">14</td>
+                <td align="left">NM003277</td>
+                <td align="right">0.04</td>
+                <td align="left">lung</td>
+                <td align="right">0.74</td>
+              </tr>
+              <tr>
+                <td align="right">15</td>
+                <td align="left">NM005194</td>
+                <td align="right">0.04</td>
+                <td align="left">brain</td>
+                <td align="right">0.86</td>
+              </tr>
+              <tr>
+                <td align="right">16</td>
+                <td align="left">NM003610</td>
+                <td align="right">0.01</td>
+                <td align="left">brain</td>
+                <td align="right">0.76</td>
+              </tr>
+              <tr>
+                <td align="right">17</td>
+                <td align="left">NM000355</td>
+                <td align="right">-0.03</td>
+                <td align="left">kidney</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">18</td>
+                <td align="left">NM002430</td>
+                <td align="right">-0.03</td>
+                <td align="left">muscle</td>
+                <td align="right">0.75</td>
+              </tr>
+              <tr>
+                <td align="right">19</td>
+                <td align="left">NM006767</td>
+                <td align="right">-0.03</td>
+                <td align="left">brain</td>
+                <td align="right">0.74</td>
+              </tr>
+              <tr>
+                <td align="right">20</td>
+                <td align="left">NM005137</td>
+                <td align="right">-0.03</td>
+                <td align="left">muscle</td>
+                <td align="right">0.76</td>
+              </tr>
+              <tr>
+                <td align="right">21</td>
+                <td align="left">NM003279</td>
+                <td align="right">-0.05</td>
+                <td align="left">muscle</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">22</td>
+                <td align="left">NM004535</td>
+                <td align="right">-0.05</td>
+                <td align="left">brain</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">23</td>
+                <td align="left">NM007019</td>
+                <td align="right">-0.05</td>
+                <td align="left">HK</td>
+                <td align="right">0.72</td>
+              </tr>
+              <tr>
+                <td align="right">24</td>
+                <td align="left">NM013236</td>
+                <td align="right">-0.07</td>
+                <td align="left">HK</td>
+                <td align="right">0.69</td>
+              </tr>
+              <tr>
+                <td align="right">25</td>
+                <td align="left">NM004175</td>
+                <td align="right">-0.07</td>
+                <td align="left">brain</td>
+                <td align="right">0.72</td>
+              </tr>
+              <tr>
+                <td align="right">26</td>
+                <td align="left">NM001958</td>
+                <td align="right">-0.07</td>
+                <td align="left">muscle</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">27</td>
+                <td align="left">NM001338</td>
+                <td align="right">-0.13</td>
+                <td align="left">vulva</td>
+                <td align="right">0.84</td>
+              </tr>
+              <tr>
+                <td align="right">28</td>
+                <td align="left">NM002676</td>
+                <td align="right">-0.14</td>
+                <td align="left">HK</td>
+                <td align="right">0.63</td>
+              </tr>
+              <tr>
+                <td align="right">29</td>
+                <td align="left">NM003098</td>
+                <td align="right">-0.16</td>
+                <td align="left">muscle</td>
+                <td align="right">0.71</td>
+              </tr>
+              <tr>
+                <td align="right">30</td>
+                <td align="left">NM002854</td>
+                <td align="right">-0.17</td>
+                <td align="left">brain</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">31</td>
+                <td align="left">NM002305</td>
+                <td align="right">-0.23</td>
+                <td align="left">HK</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">32</td>
+                <td align="left">NM005080</td>
+                <td align="right">-0.25</td>
+                <td align="left">HK</td>
+                <td align="right">0.84</td>
+              </tr>
+              <tr>
+                <td align="right">33</td>
+                <td align="left">NM001024</td>
+                <td align="right">-0.25</td>
+                <td align="left">HK</td>
+                <td align="right">0.76</td>
+              </tr>
+              <tr>
+                <td align="right">34</td>
+                <td align="left">NM021974</td>
+                <td align="right">-0.26</td>
+                <td align="left">HK</td>
+                <td align="right">0.63</td>
+              </tr>
+              <tr>
+                <td align="right">35</td>
+                <td align="left">NM014876</td>
+                <td align="right">-0.3</td>
+                <td align="left">HK</td>
+                <td align="right">0.95</td>
+              </tr>
+              <tr>
+                <td align="right">36</td>
+                <td align="left">NM001098</td>
+                <td align="right">-0.34</td>
+                <td align="left">muscle</td>
+                <td align="right">0.65</td>
+              </tr>
+              <tr>
+                <td align="right">37</td>
+                <td align="left">NM000071</td>
+                <td align="right">-0.37</td>
+                <td align="left">liver</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">38</td>
+                <td align="left">NM006198</td>
+                <td align="right">-0.37</td>
+                <td align="left">brain</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="right">39</td>
+                <td align="left">NM001675</td>
+                <td align="right">-0.39</td>
+                <td align="left">HK.muscle</td>
+                <td align="right">0.8</td>
+              </tr>
+              <tr>
+                <td align="right">40</td>
+                <td align="left">NM005423</td>
+                <td align="right">-0.68</td>
+                <td align="left">brain</td>
+                <td align="right">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </sec>
+    </sec>
+    <sec>
+      <title>Discussion</title>
+      <p>Clusters of TFBS are an important property of regulatory regions [<xref ref-type="bibr" rid="B7">7</xref>,<xref ref-type="bibr" rid="B8">8</xref>,<xref ref-type="bibr" rid="B19">19</xref>,<xref ref-type="bibr" rid="B28">28</xref>]. To determine if this is a general tendency for PWM matches and all protein coding genes, we have developed a measure that evaluates the correlation between predicted TFBS concentrations and promoter sequences. We then examined the correlation for individual PWMs using an unbiased sequence set. Our results show that not all TFBS are clustered in promoter sequences. We found that TFBS clusters corresponding to 47% of PWMs are positively correlated with promoter sequences, and that TFBS clusters corresponding to around 11% of PWMs are negatively correlated with promoter sequences. </p>
+      <p>It is important to ascertain the relationship between cluster scores of PWMs and CGI, because CGI are a prominent feature of promoter sequences. The consensus sequences of the top-ranked PWMs (Table <xref ref-type="table" rid="T1">1</xref>) are, 'ANNGACGCTNN' (WHN_B), 'TTTCSCGC' (E2F1DP1_Q6), 'NSGGGGGGGGMCN' (MAZR_01), and 'GGGGAGGG' (MAZ_Q6), where S represents C or G, M represents A or C, and N represents any bases. The sequence logos of the PWMs are depicted in Fig. <xref ref-type="fig" rid="F2">2-(a)</xref>. The G+C % of base composition of each matrix is 70%, 56%, 91%, and 86%, respectively. The sequences with high cluster scores appear to be GC-rich. Larsen <italic>et al </italic>found that 57% of human genes are associated with CGI, that all housekeeping genes have CGI covering transcription start sites (TSS), and that 40% of tissue specific genes have CGI [<xref ref-type="bibr" rid="B25">25</xref>]. Therefore, the association of PWM-PCP with CGI may be significant, and CGI-related PWMs may play important roles in housekeeping regulation. </p>
+      <p>To evaluate the relationship between PWM-PCP and CGI, we calculated the partial correlation coefficient for each PWM. In general, if a correlation coefficient <italic>r</italic><sub><italic>XY </italic></sub>is not small and <italic>r</italic><sub><italic>XY</italic>.<italic>Z </italic></sub>(defined in Methods) &#x2248; 0, the probable hypotheses concerning cause and effect will be either 1) the correlation of <italic>X </italic>and <italic>Y </italic>is a consequence of <italic>Z</italic>, or 2) <italic>Z </italic>intervenes between <italic>X </italic>and <italic>Y</italic>. For the PWMs in the top circle in Fig. <xref ref-type="fig" rid="F4">4</xref>, <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is high and <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is approximately zero. This suggests that the correlation between promoters and TFBS clusters is attributable to the presence of the CGI and that while they do not directly correlate they appear to because both independently correlate with CGI. The characteristic PWMs in Table <xref ref-type="table" rid="T2">2</xref> are NMYC_01 (M00055:0.25), AHRARNT_01 (M00235:0.23), and HIF1_Q5 (M00466:0.22), where parentheses include the accession number referred to in TRANSFAC and the recorded <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>(Y-value in Fig. <xref ref-type="fig" rid="F4">4</xref>). Sequence logos are depicted in Fig. <xref ref-type="fig" rid="F2">2-(b)</xref>. The PWMs in the middle right circle in Fig. <xref ref-type="fig" rid="F4">4</xref> have an <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>of approximately zero and a high <italic>r</italic><sub><italic>PC</italic>.<italic>I  </italic></sub><italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>value showing that the cluster is correlated with promoters independent of CGI. The predicted TFBS clusters corresponding to these PWMs could not be explained by the presence of CGI. Some of these PWMs have thresholds <italic>T </italic>less than 1.0 indicating that even the single occurrence of a predicted TFBS is more discriminative than clusters. Particular examples with high recorded <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>values and values for <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>&lt; 0.1 are TFIII_Q6 (M000706), MYOGNF1_01 (M00056) and CREL_01 (M00053). Sequence logos are depicted in Fig. <xref ref-type="fig" rid="F2">2-(c)</xref>. TFIII_Q6 is a matrix associated with a general transcription factor II-I with the consensus sequence RGAGGKAGG, where the K represents G or T. The matrix TFIII_Q6 contains many 'G', and 'C' is allowed only the fourth position with low frequency. MYOGNF1_01 is a matrix associated with myogenin, nuclear factor 1 or related factors, and is therefore involved in the regulation of differentiation. CREL_01 is a matrix associated with the C-Rel proto-oncogene protein (C-Rel protein). An understanding of the function of these factors is important to this study. The PWM groups described above may be involved in tissue-specific gene regulation. If all housekeeping genes have CGI [<xref ref-type="bibr" rid="B25">25</xref>] then genes without CGI can be assumed to be tissue-specific or rarely expressed. Thus, genes with a cluster of predicted TFBS not associated with CGI might be associated with tissue-specific regulation. Further analysis of extractions of tissue specific genes, shown in Results, supports the hypothesis.</p>
+      <p>Results from this analysis provide a solution to the promoter prediction problem. Hannenhalli <italic>et al. </italic>used additional information, including profiles of TF binding sites, for promoter prediction based on CGI [<xref ref-type="bibr" rid="B29">29</xref>], with no significant improvement to prediction performance. The report using 7 manually selected PWMs confirmed that CGI are the most dominant feature. Our results show that Sp1 and ATF have a strong correlation with CGI; a result consistent with their result that information including both PWM did not improve prediction accuracy. This observation is consistent with other PWMs. More stringent selection of PWMs is required for an improved accuracy of promoter prediction. One strategy is to utilise the CGI-independent PWMs identified in this study. Another problem is exemplified by the under-representation of Oct-1 (M00138) in the (-600:600) region of the human promoter and the absence of positional preferences [<xref ref-type="bibr" rid="B29">29</xref>]. This under-representation was not expected but is observed in 10% of known PWMs. OCT1_04 (M00138) is not in the high quality list of TRANSFAC, OCT1_01 (M00135) and OCT1_C (M00210) was found to have minus cluster scores (-0.63 and -2.89) in our table (<xref ref-type="supplementary-material" rid="S1">additional file 1</xref>).</p>
+      <p>It is noteworthy that Fig. <xref ref-type="fig" rid="F5">5</xref> shows TFBS (AP2_Q6) in non-promoters to occur randomly under a certain distribution. This distribution can be modelled by a binomial probability distribution. A model of Poisson distribution, which is an approximation of binomial probability distribution for a certain condition, was proposed in [<xref ref-type="bibr" rid="B11">11</xref>] as the probability distribution of TFBS density. Although we have not tested the goodness-of-fit, our observation does not contradict the Poisson distribution model. </p>
+      <fig position="float" id="F5">
+        <label>Figure 5</label>
+        <caption>
+          <p>Title: Distribution of accumulated score C for promoters and non-promoters for AP2_Q6</p>
+        </caption>
+        <graphic xlink:href="1471-2164-5-16-5"/>
+      </fig>
+      <p>To assess the robustness of the cluster score, we compared cluster scores for different datasets from chromosomes 20, 21 and 22 (Fig. <xref ref-type="fig" rid="F3">3</xref>). The correlation coefficients were 0.91 (a) and 0.93 (b), proving that the significance would be similar if we utilized the whole human genome dataset in the analysis. The scale of the figures between the Y-axis and X-axis are different because of the different number of sequences taken from each chromosome.</p>
+    </sec>
+    <sec>
+      <title>Conclusions</title>
+      <p>We have developed a measure that statistically evaluates the degree of concentration of predicted TFBS in promoter sequences. Using this strategy to analyse various PWMs we have determined that predicted TFBS tend to cluster in human promoter sequences rather than in non-promoter sequences. Our results show that local concentrations of predicted TFBS in human promoter sequences are not a general characteristic of PWMs. Only a portion of identified PWM matches corresponded to TFBS occurring in clusters in promoter sequences. By computing partial correlation coefficients, we identified PWM sets associated with CGI and others that are independent of CGI. Transcription factors and binding sites associated with CGI-independent PWMs are likely to be involved in tissue-specific gene regulation. Indeed, using the CGI-related/dependent PWM sets, we extracted tissue-specific genes with high accuracy by detecting clusters of predicted TFBS. These results will be useful to interpret predicted transcription factor binding sites and to further understand the role of their formation into clusters. Ultimately, these findings will further elucidate the various functions of promoters, genes and transcription factors.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>Methods</title>
+      <sec>
+        <title>Data</title>
+        <p>DNA sequences from the fully sequenced chromosomes (chromosomes 20, 21 and 22) were taken from the November, 2002 GenBank freeze (build 31) and assembled by NCBI, in accordance with the annotation of the UCSC genome browser [<xref ref-type="bibr" rid="B30">30</xref>]. RefSeq [<xref ref-type="bibr" rid="B31">31</xref>] genes were used as they have been reviewed by NCBI staff, are well studied, and are unlikely to be spurious. Some genes in the human genome have alternative promoters [<xref ref-type="bibr" rid="B32">32</xref>], complicating our analysis. For this reason, overlapping genes identified using the UCSC annotation were discarded. This check of RefSeq genes reduced the number of genes in the analysis from 527 to 373 for chromosome 20, 224 to 142 for chromosome 21, and 449 to 294 for chromosome 22. The resultant gene set <italic>U </italic>consists of 809 genes. </p>
+        <p>To increase the accuracy of the annotation of transcriptional start sites, we modified the annotation of RefSeq according to DBTSS (version 2, Mar 2002) [<xref ref-type="bibr" rid="B33">33</xref>], a database of transcriptional start sites for 5' end mRNA sequences. Suzuki <italic>et al. </italic>reported that a certain portion of sequences in DBTSS were longer (extended) toward 5' end of mRNA sequences than those in RefSeq [<xref ref-type="bibr" rid="B33">33</xref>]. We describe how the modification improved the first gene set <italic>U</italic>. Fig. <xref ref-type="fig" rid="F6">6</xref> shows the composition of different gene collections. The RefSeq database is updated daily by increasing the number of entries and correcting others. For illustration purpose, two versions of RefSeq are shown in Fig. <xref ref-type="fig" rid="F6">6</xref>. The old RefSeq is the version analysed by Suzuki <italic>et al. </italic>The new RefSeq is the current version used in this study. Of the 217,402 sequences contained in DBTSS 7,889 correspond to sequences in RefSeq and are referred to as cloned RefSeq sequences. The extension rate, defined as the rate of extension of mRNAs sequences from cloned RefSeq by DBTSS, was 0.34. Therefore, |{<italic>D</italic>,<italic>G</italic>}| (the number of gene set {<italic>D</italic>,<italic>G</italic>}) = 7,889 genes, |{<italic>Dex</italic>,<italic>Gex</italic>}| = 2,683 genes and |{<italic>Dex</italic>,<italic>Gex</italic>}|/|{<italic>D</italic>,<italic>G</italic>}| = 0.34. The ftp site of DBTSS provides the set of extended mRNA sequences (<italic>I</italic><sub><italic>ftp </italic></sub>= {<italic>Dex</italic>,<italic>Gex</italic>}). The gene set from chromosomes 20, 21 and 22 is a partial set <italic>U </italic>= {<italic>C</italic><sup><italic>u</italic></sup>, <italic>E</italic><sup><italic>u</italic></sup>, <italic>F</italic><sup><italic>u</italic></sup>, <inline-graphic xlink:href="1471-2164-5-16-i1.gif"/>, <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/>} from New RefSeq. We can identify the genes in set <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/> as the conjunction of <italic>I</italic><sub><italic>ftp </italic></sub>and <italic>U</italic>. The number of <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/> was counted (273 genes). If the extension rate of mRNAs sequences for {<inline-graphic xlink:href="1471-2164-5-16-i1.gif"/>, <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/>} is also 0.34, then |{<inline-graphic xlink:href="1471-2164-5-16-i2.gif"/>}|/|{<inline-graphic xlink:href="1471-2164-5-16-i1.gif"/>, <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/>}| = 0.34. Therefore, {|<inline-graphic xlink:href="1471-2164-5-16-i1.gif"/>, <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/>}| is estimated to be 802.9 genes. As |<italic>U</italic>| = 809, the number of genes in <italic>V </italic>= {<italic>C</italic><sup><italic>u</italic></sup>,<italic>E</italic><sup><italic>u</italic></sup>,<italic>F</italic><sup><italic>u</italic></sup>} is estimated to be 6.1 genes. If all human genes are cloned by the cap-targeted selection method called oligo-capping, a greater number will have extended 5' ends. If this were the case then 34% (or 2.1 genes) of <italic>V </italic>would have extended 5' ends. Thus, any further correction of TSS for our gene set is expected to be quite small.</p>
+        <fig position="float" id="F6">
+          <label>Figure 6</label>
+          <caption>
+            <p><bold>A Venn diagram of three gene sets (DBTSS, old RefSeq, and new RefSeq). </bold>Gene sets from <italic>A </italic>to <italic>G </italic>(Bold alphabet) consist of genes in the regions bounded by the thick lines. <italic>D </italic>consists of <italic>Dn </italic>(genes whose 5' end sequences were not extended from the old RefSeq sequences with DBTSS data) and <italic>Dex </italic>(genes whose 5' end sequences were extended). <italic>G </italic>consists of <italic>Gn </italic>(genes whose 5' end sequences were not extended from the old RefSeq sequences with DBTSS data) and <italic>Gex </italic>(genes whose 5' end sequences were extended). Namely <italic>D  </italic>= {<italic>Dn</italic>,<italic>Dex</italic>} and <italic>G </italic>= {<italic>Gn</italic>,<italic>Gex</italic>}. Genes in chromosomes 20, 21, 22 were denoted by <italic>U </italic>= {<italic>C</italic><sup><italic>u</italic></sup>, <italic>E</italic><sup><italic>u</italic></sup>, <italic>F</italic><sup><italic>u</italic></sup>, <inline-graphic xlink:href="1471-2164-5-16-i1.gif"/>, <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/>}. Gene sets <italic>C</italic><sup><italic>u</italic></sup>, <italic>E</italic><sup><italic>u</italic></sup>,<italic>F</italic><sup><italic>u</italic></sup>, <inline-graphic xlink:href="1471-2164-5-16-i1.gif"/> and <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/> are parts of <italic>C</italic>, <italic>E</italic>, <italic>F</italic>, <italic>Gn </italic>and <italic>Gex</italic>, respectively. Some of the numbers of the sets are given in [<xref ref-type="bibr" rid="B33">33</xref>], that is, |{<italic>D</italic>,<italic>G</italic>}| = 7889, |{<italic>Dex</italic>,<italic>Gex</italic>}| = 2683 and |{<italic>Dex</italic>,<italic>Gex</italic>}| / |{<italic>D</italic>,<italic>G</italic>}| = 0.34, where |{<italic>D</italic>,<italic>G</italic>}|  denotes the number of genes in set {<italic>D</italic>,<italic>G</italic>}.</p>
+          </caption>
+          <graphic xlink:href="1471-2164-5-16-6"/>
+        </fig>
+        <p>We identified the conjunction set <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/> (273 genes) of the above collected 809 RefSeq genes and 2,683 genes in DBTSS. The set <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/> was examined to determine if extended sequences existed on human genome sequences and if they are registered in the new RefSeq. Of this set, the BLAT program[<xref ref-type="bibr" rid="B34">34</xref>] identified 30 genes in which the 5' end sequences could not be detected. Due to the uncertainty of TSS these genes were not used in this study. Forty-one DBTSS mRNA sequences from <inline-graphic xlink:href="1471-2164-5-16-i2.gif"/> were shorter than corresponding sequences in the new RefSeq with regard to 5' end sequences. It is assumed that these RefSeq sequences were corrected following the old RefSeq release independent of DBTSS and were used as they were. Finally, we modified the exon annotation of 202 genes according to DBTSS. </p>
+        <p>We extracted promoter sequences at relative positions (-600:-1) from the TSS, and intron subsequences 600 bp in length from genome sequences. Only intron sequences were used for the non-promoter sequence data sets as exon sequences are known to have preferences in their oligomer statistics, such as G+C % and codon bias [<xref ref-type="bibr" rid="B35">35</xref>]. The first intron was not included in the data set as although regulatory elements are rare in introns, intron 1 occasionally contains regulatory elements such as enhancers. We investigated the frequency of enhancers in human introns by searching NCBI PubMed [<xref ref-type="bibr" rid="B36">36</xref>] with the keywords 'human', 'first intron', and 'enhancer'. This search yielded 194 papers. Replacing the keyword 'first intron' with 'second', 'third', 'fourth intron', 'fifth' or 'last intron' yielded 40, 15, 1, 1 and 6 papers, respectively. Replacing 'enhancer' with 'silencer' resulted in 281, 6, 3, 0, 0 and 0 papers, respectively. Removal of intron 1 from the data set greatly reduces the overall occurrence of regulatory elements in human intron sequences and allows our statistical analysis to be performed without significant interference from intronic regulatory sequences. Intergenic sequences are left out of the non-promoter dataset due the unknown occurrence of regulatory sequences.</p>
+      </sec>
+      <sec>
+        <title>Prediction of TFBS</title>
+        <p>Each promoter or non-promoter sequence was scanned by the MATCH program using 423 matrices in TRNASFAC version 6.3 (a transcription factor database) with options including 'vertebrate', 'minimize false negatives' (in cut-off selection) and 'use high quality matrices only'. As Kel <italic>et al. </italic>described, the cut-off was determined so that the false negative rate is 10% [<xref ref-type="bibr" rid="B3">3</xref>]. The option 'use high quality matrices only' uses approximately 70% of matrice [<xref ref-type="bibr" rid="B3">3</xref>]. Any PWM in the 'high quality' PWMs meet the criteria; When the PWM is used with a cut-off value which allows a false negative rate of 50%, then the match rate dropped below 1 match/kb in exon2 sequences [<xref ref-type="bibr" rid="B3">3</xref>]. If more than one matrix was matched to same transcription factor (prefix of "Identifier"), we selected a representative matrix with the highest quality and smallest suffix number according to the TRANSFAC definition. After scanning the sequences by MATCH, we set consecutive sampling windows (600 bp) in introns and promoter sequences, and then recorded corresponding TFBS predictions. To prevent double counting of palindromic binding sites, two matches for the same matrix at the same position was regarded as a single match and the match with the higher score was taken. Before MATCH ran, repeat sequences were masked to 'N' according to the annotation by RepeatMasker in the UCSC genome browser. From the above analysis we extracted 361, 129, and 278 promoter sequences from chromosomes 20, 21 and 22, respectively. The promoter sequences identified contained repeat sequences (e.g. ALU, L1) and simple repeats with low complexity, as observed in intron sequences. These sequences account for about 20% of all bases. To balance the rate of repeats between promoters and introns, we discarded intron sequences with high rates of repeats, so that the average rate of repeats in the intron samples was at the same level as in promoter sequences. The number of 600 bp intron sequences included in the analysis was 6,589 (chromosome 20), 4,324 (chromosome 21) and 4,531 (chromosome 22).</p>
+      </sec>
+      <sec>
+        <title>Accumulated scores of TFBS</title>
+        <p>When predicted TFBS occur many times in a sequence there is a high probability that it contains functional regulatory regions or promoters [<xref ref-type="bibr" rid="B7">7</xref>,<xref ref-type="bibr" rid="B8">8</xref>,<xref ref-type="bibr" rid="B19">19</xref>,<xref ref-type="bibr" rid="B28">28</xref>]. We tested this hypothesis for individual PWMs. The degree of concentration of predicted TFBS in a sequence was defined as the accumulated score <italic>C, </italic>which is a summation of the MATCH score for PWMs in the subsequence and is calculated for each PMW and corresponding sequence. <italic>C </italic>is assumed to be almost proportional to the frequency of predicted TFBS for the corresponding PWM. Many sequences generate different <italic>C </italic>values although some are identical. We then generated a series of <italic>C</italic><sub><italic>j </italic></sub>(<italic>j </italic>= 1 ... <italic>n</italic>) values for a PWM, where <italic>n </italic>is the number of different <italic>C </italic>values. Fig. <xref ref-type="fig" rid="F5">5</xref> shows the histogram of <italic>C </italic>for promoters and non-promoters respectively, using the TRANSFAC matrix of identifier 'AP2_Q6' as an example. Since <italic>C </italic>reflects the number of predicted TFBS found in a sequence, the figure shows the density of predicted TFBS in a sequence. This result is similar to the density plot described by Pestridge and Burks [<xref ref-type="bibr" rid="B7">7</xref>], although our figure (Fig. <xref ref-type="fig" rid="F5">5</xref>) is not a plot of predicted TFBS density for mixed PWMs, but instead is a plot of predicted TFBS density for individual PWMs. Also, the X-axis in our plot does not indicate the number of predicted TFBS but instead indicates the accumulated score <italic>C</italic>. The Y-axis is smoothed by averaging for the width of 5 in <italic>C </italic>value.</p>
+      </sec>
+      <sec>
+        <title>Cluster score and statistical significance for a PWM</title>
+        <p>Significance values for an individual PWM from a series of <italic>C</italic><sub><italic>j </italic></sub>can be determined from a contingency table. Table <xref ref-type="table" rid="T5">5</xref> shows a contingency table for the number of promoters and non-promoters above and below the threshold <italic>C</italic><sub><italic>j </italic></sub>for a given PWM. From this table, &#x3C7;<sup>2 </sup>value for a given <italic>C</italic><sub><italic>j </italic></sub>is defined as </p>
+        <table-wrap position="float" id="T5">
+          <label>Table 5</label>
+          <caption>
+            <p>A contingency table when predicted TFBS and a threshold <italic>T </italic>are given.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td/>
+                <td align="left">Sequences where TFBS clusters found</td>
+                <td align="left">Sequences where TFBS clusters not found</td>
+                <td align="left">Sum</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left"># of promoter</td>
+                <td align="left">
+                  <italic>A</italic>
+                  <sub>1</sub>
+                </td>
+                <td align="left">
+                  <italic>A</italic>
+                  <sub>2</sub>
+                </td>
+                <td align="left">
+                  <italic>A</italic>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"># of non-promoter</td>
+                <td align="left">
+                  <italic>B</italic>
+                  <sub>1</sub>
+                </td>
+                <td align="left">
+                  <italic>B</italic>
+                  <sub>2</sub>
+                </td>
+                <td align="left">
+                  <italic>B</italic>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i3.gif"/>
+        </p>
+        <p>where</p>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i4.gif"/>
+        </p>
+        <p>described in [<xref ref-type="bibr" rid="B37">37</xref>]. From the &#x3C7;<sup>2 </sup>value, we computed the probability <italic>P </italic>that the &#x3C7;<sup>2 </sup>value or greater is obtained by chance. The probability <italic>P </italic>was calculated from the &#x3C7;<sup>2</sup>. Since <italic>P </italic>is calculated for many PWMs, we must deal with the problem of multiple testing. Using the Bonferroni correction [<xref ref-type="bibr" rid="B23">23</xref>], <italic>Pn </italic>was calculated using the formula 1 - <italic>P</italic><sub><italic>n </italic></sub>= (1 - <italic>P</italic>)<sup><italic>n</italic></sup>, approximately <italic>P</italic><sub><italic>n </italic></sub>= <italic>P </italic>&#xD7; <italic>n </italic>for small <italic>P </italic>&#xD7; <italic>n</italic>. The <italic>n </italic>is the number of PWMs. When we determine the set of significant PWMs, <italic>Pn </italic>were compared with the significance level (i.e. 0.01). We also defined the statistical significance <italic>Q</italic><sub><italic>j </italic></sub>as <italic>Q</italic><sub><italic>j </italic></sub>= -log<sub>10</sub>(<italic>P</italic><sub><italic>n</italic></sub>) if <italic>Rprom </italic>&gt;<italic>Rnonprom </italic>and <italic>Q</italic><sub><italic>j </italic></sub>= + log<sub>10</sub>(<italic>P</italic><sub><italic>n</italic></sub>) otherwise, where <italic>Rprom </italic>= <italic>A</italic>1/<italic>A </italic>(a rate of sequences in promoters where clusters found), <italic>Rnonprom </italic>= <italic>B</italic>1/<italic>B </italic>(a rate of sequences in non-promoters where clusters found). Although the <italic>P </italic>is an indicator of the difference between the occurrence of promoters and non-promoters, the probability <italic>P </italic>itself does not represent the preferences of PWMs for promoters. To represent the preference of predicted TFBS for or against promoters, we add signs for statistical significance <italic>Q</italic><sub><italic>j</italic></sub>. Positive <italic>Q</italic><sub><italic>j </italic></sub>indicates that predicted TFBS tend to appear frequently in promoters, while negative <italic>Q</italic><sub><italic>j </italic></sub>indicates that predicted TFBS tend to avoid promoters. </p>
+        <p>We studied how statistical significance <italic>Q</italic><sub><italic>j </italic></sub>varies with the threshold of <italic>C j</italic>. Fig. <xref ref-type="fig" rid="F7">7</xref> shows the presence of a peak of <italic>Q</italic><sub><italic>j </italic></sub>when we change the threshold. We define the cluster score <italic>S </italic>of a PWM in such a way that the significance is the maximum, namely</p>
+        <fig position="float" id="F7">
+          <label>Figure 7</label>
+          <caption>
+            <p>Title: significant score <italic>Q</italic><sub><italic>j </italic></sub>of matrix AP2_Q6 for different thresholds.</p>
+          </caption>
+          <graphic xlink:href="1471-2164-5-16-7"/>
+        </fig>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i5.gif"/>
+        </p>
+        <p>We simultaneously define a unique threshold <italic>T </italic>of the PWM by</p>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i6.gif"/>
+        </p>
+        <p>For the all-vertebrate TRANSFAC PWMs, we determined thresholds <italic>T </italic>and calculated significance scores (or cluster scores) <italic>S</italic>. The highest scoring PWMs are listed in Table <xref ref-type="table" rid="T1">1</xref>.</p>
+      </sec>
+      <sec>
+        <title>Correlations among promoter sequences, CpG islands, and clusters</title>
+        <p>For every 600 bp sequence, three numerical features (promoter, CGI, and clusters) were annotated. CGI were identified using the CpGProD program [<xref ref-type="bibr" rid="B38">38</xref>] for original long sequences (not for short sequences of 600 bp). Regions larger than 500 bp with a G+C % equal to or greater than 50% and 'observed CpG / expected CpG' equal to or greater than 0.60 were classified as CGI [<xref ref-type="bibr" rid="B38">38</xref>,<xref ref-type="bibr" rid="B39">39</xref>]. The CpGProD program outputs 'start_p' scores for the predicted CGI. This score indicates the probability that the region is a CGI located over a transcription start site (start CGI). Short 600 bp sequences sampled from long sequences containing CGI were annotated as CGI if the overlapping CGI region was longer than 300 bp. The accumulated score <italic>C </italic>was used for cluster annotation. From sequences with feature annotation, the correlation coefficients between every two of the three features were computed for each PWM by the statistical language R [<xref ref-type="bibr" rid="B40">40</xref>]. We use <italic>P </italic>to denote whether the sequences is promoter or not, namely <italic>P </italic>= {1,0}, and <italic>I </italic>to the denote 'start_p' score for CGI calculated using the CpGProD program [<xref ref-type="bibr" rid="B38">38</xref>]. A partial correlation coefficient for each PWM was calculated using the subsequences. For example, a partial correlation coefficient <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is the correlation between <italic>P </italic>and <italic>C </italic>while controlling for <italic>I</italic>, defined by </p>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i7.gif"/>
+        </p>
+        <p>where <italic>r</italic><sub><italic>PI </italic></sub>is a correlation coefficient between variable <italic>P </italic>and <italic>I</italic>, <italic>r</italic><sub><italic>PC </italic></sub>is a correlation coefficient between variable <italic>P </italic>and <italic>C </italic>and <italic>r</italic><sub><italic>CI </italic></sub>is a correlation coefficient between variable C and I. A partial correlation coefficient differs from a correlation coefficient. If the correlation between <italic>P </italic>and <italic>C </italic>depends entirely on the common cause <italic>I</italic>, then when <italic>I </italic>is constant, the correlation between <italic>P </italic>and <italic>C </italic>should be zero. The partial correlation <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>expresses such a relationship. Even when <italic>I </italic>varies, <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is expected to be zero in such a situation, while the correlation coefficient <italic>r</italic><sub><italic>PC </italic></sub>may not be zero. See chapter 16.4 in [<xref ref-type="bibr" rid="B41">41</xref>] for details. </p>
+        <p>Fig. <xref ref-type="fig" rid="F4">4</xref> shows a plot of <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>against <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>for various PWMs. Using these two values, we identified two PWM sets including, (1) a CGI-related set consisting of 37 PWMs in which the clusters are correlated with CGI independent of promoters, and (2) a CGI-independent set consisting of 54 PWMs, in which the clusters are correlated with promoters independent of CGI. The CGI-related set requires that <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>&gt;<italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>and that the partial correlation coefficient (PCC) <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is significantly high (<italic>p </italic>&lt; 0.01) under the hypothesis that <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>is zero (see below). The CGI-independent set requires that <italic>r</italic><sub><italic>IC</italic>.<italic>P </italic></sub>&lt;<italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>and that <italic>r</italic><sub><italic>PC</italic>.<italic>I </italic></sub>is likewise significantly high. To calculate the statistical significance of PCC, a PCC <italic>r </italic>was subjected to z-transformation defined as</p>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i8.gif"/>
+        </p>
+        <p>The values of <italic>z </italic>are supposed to be normally distributed and the expected variance is </p>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i9.gif"/>
+        </p>
+        <p>where <italic>n </italic>is the sample size [<xref ref-type="bibr" rid="B41">41</xref>]. The CGI-related PWMs and CGI-independent PWMs are listed in Tables <xref ref-type="table" rid="T2">2</xref> and <xref ref-type="table" rid="T3">3</xref>.</p>
+      </sec>
+      <sec>
+        <title>Gene expression data</title>
+        <p>To examine the relationship between clusters of predicted TFBS and the tissue specificity of the genes where clusters were found, we generated a list of genes with expression data. This list includes 535 housekeeping or maintenance genes expressed in 11 human adult and foetal tissues from [<xref ref-type="bibr" rid="B26">26</xref>], and 451 housekeeping or maintenance genes available at HugeIndex database <ext-link ext-link-type="uri" xlink:href="http://www.hugeindex.org"/>[<xref ref-type="bibr" rid="B27">27</xref>]. We then identified 581 non-redundant housekeeping genes and 'tissue-selective' genes, which are predominantly, but not exclusively, expressed in one tissue type. Tissue-selective genes were expressed in brain (589 genes), kidney (129 genes), liver (271 genes), lung (68 genes), muscle (302 genes), prostate (45 genes) and vulva (95 genes) [<xref ref-type="bibr" rid="B27">27</xref>]. These genes corresponded to 2,069 RefSeq entries. Seventy-two of these genes were identified in our gene set covering chromosome 20, 21 and 22 and were used for further analysis.</p>
+      </sec>
+      <sec>
+        <title>Tissue specific gene detection based on clusters of predicted TFBS</title>
+        <p>Using the two PWM sets described above, we searched clusters of predicted TFBS in promoter sequences. We calculated <italic>C </italic>and statistical significance of <italic>C </italic>as follows. For each promoter sequence, 30 random 600 bp sequences were generated under the first order Markov model, which is based on dinucleotide frequency and can identify promoter CpG bias and G+C%. The MATCH program was run with given matrix thresholds. The accumulated score <italic>C </italic>of PWMs was computed in every random sequence. A mean <inline-graphic xlink:href="1471-2164-5-16-i10.gif"/> and a variance <inline-graphic xlink:href="1471-2164-5-16-i11.gif"/> of <italic>C </italic>for each PWM were estimated from the random sequences. Then, for the given promoter sequence <italic>S</italic><sub><italic>p </italic></sub>and the PWM (<italic>M</italic>), we can run MATCH and calculate <italic>C </italic>and its significance score (<italic>Z</italic>-score), namely </p>
+        <p>
+          <inline-graphic xlink:href="1471-2164-5-16-i12.gif"/>
+        </p>
+        <p>If the <italic>Z</italic>-score value was above three, the promoter sequence was taken and considered together with the PWM. Table <xref ref-type="table" rid="T4">4</xref> lists genes identified with clusters of predicted TFBS with significant <italic>C </italic>values for the CGI-related/dependent PWM set. The computation of p-value of cumulative hypergeometric distribution was performed using the AS R77 algorithm [<xref ref-type="bibr" rid="B42">42</xref>]. </p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Authors' contributions</title>
+      <p>KM designed the study and carried out statistical analysis. TK participated in the design and carried out functional analysis. YS directed the study. All authors read and approved the final manuscript.</p>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Supplementary Material</title>
+      <supplementary-material content-type="local-data" id="S1">
+        <caption>
+          <title>Additional File 1</title>
+          <p>The list of PWM-PCP/NCP sorted by cluster score. Each column represents rank number, accession number in TRANSFAC, identifier in TRANSFAC, cluster score, threshold.</p>
+        </caption>
+        <media xlink:href="1471-2164-5-16-S1.csv" mimetype="text" mime-subtype="plain">
+          <caption>
+            <p>Click here for file</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stormo</surname>
+              <given-names>GD</given-names>
+            </name>
+          </person-group>
+          <article-title>DNA binding sites: representation and discovery</article-title>
+          <source>Bioinformatics</source>
+          <year>2000</year>
+          <volume>16</volume>
+          <fpage>16</fpage>
+          <lpage>23</lpage>
+          <pub-id pub-id-type="pmid">10812473</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/16.1.16</pub-id>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Quandt</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Frech</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Karas</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Wingender</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Werner</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>MatInd and MatInspector: new fast and versatile tools for detection of consensus matches in nucleotide sequence data</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1995</year>
+          <volume>23</volume>
+          <fpage>4878</fpage>
+          <lpage>4884</lpage>
+          <pub-id pub-id-type="pmid">8532532</pub-id>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kel</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Gossling</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Reuter</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Cheremushkin</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Kel-Margoulis</surname>
+              <given-names>OV</given-names>
+            </name>
+            <name>
+              <surname>Wingender</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>MATCH: A tool for searching transcription factor binding sites in DNA sequences</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>3576</fpage>
+          <lpage>3579</lpage>
+          <pub-id pub-id-type="pmid">12824369</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg585</pub-id>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lenhard</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Wasserman</surname>
+              <given-names>WW</given-names>
+            </name>
+          </person-group>
+          <article-title>TFBS: Computational framework for transcription factor binding site analysis</article-title>
+          <source>Bioinformatics</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>1135</fpage>
+          <lpage>1136</lpage>
+          <pub-id pub-id-type="pmid">12176838</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/18.8.1135</pub-id>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Matys</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Fricke</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Geffers</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Gossling</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Haubrock</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hehl</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Hornischer</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Karas</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Kel</surname>
+              <given-names>AE</given-names>
+            </name>
+            <name>
+              <surname>Kel-Margoulis</surname>
+              <given-names>OV</given-names>
+            </name>
+            <name>
+              <surname>Kloos</surname>
+              <given-names>DU</given-names>
+            </name>
+            <name>
+              <surname>Land</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lewicki-Potapov</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Michael</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Munch</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Reuter</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Rotert</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Saxel</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Scheer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Thiele</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Wingender</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>TRANSFAC: transcriptional regulation, from patterns to profiles</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>374</fpage>
+          <lpage>378</lpage>
+          <pub-id pub-id-type="pmid">12520026</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg108</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wasserman</surname>
+              <given-names>WW</given-names>
+            </name>
+            <name>
+              <surname>Palumbo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Fickett</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Lawrence</surname>
+              <given-names>CE</given-names>
+            </name>
+          </person-group>
+          <article-title>Human-mouse genome comparisons to locate regulatory sites</article-title>
+          <source>Nat Genet</source>
+          <year>2000</year>
+          <volume>26</volume>
+          <fpage>225</fpage>
+          <lpage>228</lpage>
+          <pub-id pub-id-type="pmid">11017083</pub-id>
+          <pub-id pub-id-type="doi">10.1038/79965</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prestridge</surname>
+              <given-names>DS</given-names>
+            </name>
+            <name>
+              <surname>Burks</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>The density of transcriptional elements in promoter and non-promoter sequences</article-title>
+          <source>Hum Mol Genet</source>
+          <year>1993</year>
+          <volume>2</volume>
+          <fpage>1449</fpage>
+          <lpage>1453</lpage>
+          <pub-id pub-id-type="pmid">8242068</pub-id>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arnone</surname>
+              <given-names>MI</given-names>
+            </name>
+            <name>
+              <surname>Davidson</surname>
+              <given-names>EH</given-names>
+            </name>
+          </person-group>
+          <article-title>The hardwiring of development: organization and function of genomic regulatory systems</article-title>
+          <source>Development</source>
+          <year>1997</year>
+          <volume>124</volume>
+          <fpage>1851</fpage>
+          <lpage>1864</lpage>
+          <pub-id pub-id-type="pmid">9169833</pub-id>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prestridge</surname>
+              <given-names>DS</given-names>
+            </name>
+          </person-group>
+          <article-title>Predicting Pol II promoter sequences using transcription factor binding sites</article-title>
+          <source>J Mol Biol</source>
+          <year>1995</year>
+          <volume>249</volume>
+          <fpage>923</fpage>
+          <lpage>932</lpage>
+          <pub-id pub-id-type="pmid">7791218</pub-id>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1995.0349</pub-id>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Solovyev</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Salamov</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>The Gene-Finder computer tools for analysis of human and model organisms genome sequences</article-title>
+          <source>Proc Int Conf Intell Syst Mol Biol</source>
+          <year>1997</year>
+          <volume>5</volume>
+          <fpage>294</fpage>
+          <lpage>302</lpage>
+          <pub-id pub-id-type="pmid">9322052</pub-id>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wagner</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Genes regulated cooperatively by one or more transcription factors and their identification in whole eukaryotic genomes</article-title>
+          <source>Bioinformatics</source>
+          <year>1999</year>
+          <volume>15</volume>
+          <fpage>776</fpage>
+          <lpage>784</lpage>
+          <pub-id pub-id-type="pmid">10705431</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/15.10.776</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berman</surname>
+              <given-names>BP</given-names>
+            </name>
+            <name>
+              <surname>Nibu</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Pfeiffer</surname>
+              <given-names>BD</given-names>
+            </name>
+            <name>
+              <surname>Tomancak</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Celniker</surname>
+              <given-names>SE</given-names>
+            </name>
+            <name>
+              <surname>Levine</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Eisen</surname>
+              <given-names>MB</given-names>
+            </name>
+          </person-group>
+          <article-title>Exploiting transcription factor binding site clustering to identify cis-regulatory modules involved in pattern formation in the Drosophila genome</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>2002</year>
+          <volume>99</volume>
+          <fpage>757</fpage>
+          <lpage>762</lpage>
+          <pub-id pub-id-type="pmid">11805330</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.231608898</pub-id>
+        </citation>
+      </ref>
+      <ref id="B13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Halfon</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Grad</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Church</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Michelson</surname>
+              <given-names>AM</given-names>
+            </name>
+          </person-group>
+          <article-title>Computation-based discovery of related transcriptional regulatory modules and motifs using an experimentally validated combinatorial model</article-title>
+          <source>Genome Res</source>
+          <year>2002</year>
+          <volume>12</volume>
+          <fpage>1019</fpage>
+          <lpage>1028</lpage>
+          <pub-id pub-id-type="pmid">12097338</pub-id>
+        </citation>
+      </ref>
+      <ref id="B14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Papatsenko</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Makeev</surname>
+              <given-names>VJ</given-names>
+            </name>
+            <name>
+              <surname>Lifanov</surname>
+              <given-names>AP</given-names>
+            </name>
+            <name>
+              <surname>Regnier</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nazina</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Desplan</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Extraction of functional binding sites from unique regulatory regions: the Drosophila early developmental enhancers</article-title>
+          <source>Genome Res</source>
+          <year>2002</year>
+          <volume>12</volume>
+          <fpage>470</fpage>
+          <lpage>481</lpage>
+          <pub-id pub-id-type="pmid">11875036</pub-id>
+          <comment>10.1101/gr.212502. Article published online before print in February 2002</comment>
+        </citation>
+      </ref>
+      <ref id="B15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Krivan</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Wasserman</surname>
+              <given-names>WW</given-names>
+            </name>
+          </person-group>
+          <article-title>A predictive model for regulatory sequences directing liver-specific transcription</article-title>
+          <source>Genome Res</source>
+          <year>2001</year>
+          <volume>11</volume>
+          <fpage>1559</fpage>
+          <lpage>1566</lpage>
+          <pub-id pub-id-type="pmid">11544200</pub-id>
+          <pub-id pub-id-type="doi">10.1101/gr.180601</pub-id>
+        </citation>
+      </ref>
+      <ref id="B16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frith</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Weng</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <article-title>Detection of cis-element clusters in higher eukaryotic DNA</article-title>
+          <source>Bioinformatics</source>
+          <year>2001</year>
+          <volume>17</volume>
+          <fpage>878</fpage>
+          <lpage>889</lpage>
+          <pub-id pub-id-type="pmid">11673232</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/17.10.878</pub-id>
+        </citation>
+      </ref>
+      <ref id="B17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frith</surname>
+              <given-names>MC</given-names>
+            </name>
+            <name>
+              <surname>Spouge</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Weng</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <article-title>Statistical significance of clusters of motifs represented by position specific scoring matrices in nucleotide sequences</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>3214</fpage>
+          <lpage>3224</lpage>
+          <pub-id pub-id-type="pmid">12136103</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkf438</pub-id>
+        </citation>
+      </ref>
+      <ref id="B18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levy</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hannenhalli</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification of transcription factor binding sites in the human genome sequence</article-title>
+          <source>Mamm Genome</source>
+          <year>2002</year>
+          <volume>13</volume>
+          <fpage>510</fpage>
+          <lpage>514</lpage>
+          <pub-id pub-id-type="pmid">12370781</pub-id>
+          <pub-id pub-id-type="doi">10.1007/s00335-002-2175-6</pub-id>
+        </citation>
+      </ref>
+      <ref id="B19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Loots</surname>
+              <given-names>GG</given-names>
+            </name>
+            <name>
+              <surname>Ovcharenko</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Pachter</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Dubchak</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>EM</given-names>
+            </name>
+          </person-group>
+          <article-title>rVista for comparative sequence-based discovery of functional transcription factor binding sites</article-title>
+          <source>Genome Res</source>
+          <year>2002</year>
+          <volume>12</volume>
+          <fpage>832</fpage>
+          <lpage>839</lpage>
+          <pub-id pub-id-type="pmid">11997350</pub-id>
+          <comment>10.1101/gr.225502. Article published online before print in April 2002</comment>
+        </citation>
+      </ref>
+      <ref id="B20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Aerts</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Thijs</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Coessens</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Staes</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Moreau</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>De Moor</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Toucan: deciphering the cis-regulatory logic of coregulated genes</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>1753</fpage>
+          <lpage>1764</lpage>
+          <pub-id pub-id-type="pmid">12626717</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg268</pub-id>
+        </citation>
+      </ref>
+      <ref id="B21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rajewsky</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Vergassola</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Gaul</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Siggia</surname>
+              <given-names>ED</given-names>
+            </name>
+          </person-group>
+          <article-title>Computational detection of genomic cis-regulatory modules applied to body patterning in the early Drosophila embryo</article-title>
+          <source>BMC Bioinformatics</source>
+          <year>2002</year>
+          <volume>3</volume>
+          <fpage>30</fpage>
+          <pub-id pub-id-type="pmid">12398796</pub-id>
+          <pub-id pub-id-type="doi">10.1186/1471-2105-3-30</pub-id>
+        </citation>
+      </ref>
+      <ref id="B22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johansson</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Alkema</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Wasserman</surname>
+              <given-names>WW</given-names>
+            </name>
+            <name>
+              <surname>Lagergren</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification of functional clusters of transcription factor binding motifs in genome sequences: the MSCAN algorithm</article-title>
+          <source>Bioinformatics</source>
+          <year>2003</year>
+          <volume>19 Suppl 1</volume>
+          <fpage>I169</fpage>
+          <lpage>I176</lpage>
+          <pub-id pub-id-type="pmid">12855453</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/btg1021</pub-id>
+        </citation>
+      </ref>
+      <ref id="B23">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ewens</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Grant</surname>
+              <given-names>GR</given-names>
+            </name>
+          </person-group>
+          <source>Statistical Methods in Bioinformatics: An Introduction.</source>
+          <year>2001</year>
+          <publisher-name>Springer-Verlag New York, Inc.</publisher-name>
+        </citation>
+      </ref>
+      <ref id="B24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schneider</surname>
+              <given-names>TD</given-names>
+            </name>
+            <name>
+              <surname>Stephens</surname>
+              <given-names>RM</given-names>
+            </name>
+          </person-group>
+          <article-title>Sequence logos: a new way to display consensus sequences</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>1990</year>
+          <volume>18</volume>
+          <fpage>6097</fpage>
+          <lpage>6100</lpage>
+          <pub-id pub-id-type="pmid">2172928</pub-id>
+        </citation>
+      </ref>
+      <ref id="B25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Larsen</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Gundersen</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Lopez</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Prydz</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>CpG islands as gene markers in the human genome</article-title>
+          <source>Genomics</source>
+          <year>1992</year>
+          <volume>13</volume>
+          <fpage>1095</fpage>
+          <lpage>1107</lpage>
+          <pub-id pub-id-type="pmid">1505946</pub-id>
+        </citation>
+      </ref>
+      <ref id="B26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Warrington</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Nair</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Mahadevappa</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Tsyganskaya</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of human adult and fetal expression and identification of 535 housekeeping/maintenance genes</article-title>
+          <source>Physiol Genomics</source>
+          <year>2000</year>
+          <volume>2</volume>
+          <fpage>143</fpage>
+          <lpage>147</lpage>
+          <pub-id pub-id-type="pmid">11015593</pub-id>
+        </citation>
+      </ref>
+      <ref id="B27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hsiao</surname>
+              <given-names>LL</given-names>
+            </name>
+            <name>
+              <surname>Dangond</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Yoshida</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Hong</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>RV</given-names>
+            </name>
+            <name>
+              <surname>Misra</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Dillon</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>KF</given-names>
+            </name>
+            <name>
+              <surname>Clark</surname>
+              <given-names>KE</given-names>
+            </name>
+            <name>
+              <surname>Haverty</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Weng</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Mutter</surname>
+              <given-names>GL</given-names>
+            </name>
+            <name>
+              <surname>Frosch</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Macdonald</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Milford</surname>
+              <given-names>EL</given-names>
+            </name>
+            <name>
+              <surname>Crum</surname>
+              <given-names>CP</given-names>
+            </name>
+            <name>
+              <surname>Bueno</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Pratt</surname>
+              <given-names>RE</given-names>
+            </name>
+            <name>
+              <surname>Mahadevappa</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Warrington</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Stephanopoulos</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Gullans</surname>
+              <given-names>SR</given-names>
+            </name>
+          </person-group>
+          <article-title>A compendium of gene expression in normal human tissues</article-title>
+          <source>Physiol Genomics</source>
+          <year>2001</year>
+          <volume>7</volume>
+          <fpage>97</fpage>
+          <lpage>104</lpage>
+          <pub-id pub-id-type="pmid">11773596</pub-id>
+        </citation>
+      </ref>
+      <ref id="B28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levy</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hannenhalli</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Workman</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Enrichment of regulatory signals in conserved non-coding genomic sequence</article-title>
+          <source>Bioinformatics</source>
+          <year>2001</year>
+          <volume>17</volume>
+          <fpage>871</fpage>
+          <lpage>877</lpage>
+          <pub-id pub-id-type="pmid">11673231</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/17.10.871</pub-id>
+        </citation>
+      </ref>
+      <ref id="B29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hannenhalli</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Levy</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Predicting transcription factor synergism</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>4278</fpage>
+          <lpage>4284</lpage>
+          <pub-id pub-id-type="pmid">12364607</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkf535</pub-id>
+        </citation>
+      </ref>
+      <ref id="B30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kent</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Sugnet</surname>
+              <given-names>CW</given-names>
+            </name>
+            <name>
+              <surname>Furey</surname>
+              <given-names>TS</given-names>
+            </name>
+            <name>
+              <surname>Roskin</surname>
+              <given-names>KM</given-names>
+            </name>
+            <name>
+              <surname>Pringle</surname>
+              <given-names>TH</given-names>
+            </name>
+            <name>
+              <surname>Zahler</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Haussler</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>The human genome browser at UCSC</article-title>
+          <source>Genome Res</source>
+          <year>2002</year>
+          <volume>12</volume>
+          <fpage>996</fpage>
+          <lpage>1006</lpage>
+          <pub-id pub-id-type="pmid">12045153</pub-id>
+          <comment>10.1101/gr.229102. Article published online before print in May 2002</comment>
+        </citation>
+      </ref>
+      <ref id="B31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pruitt</surname>
+              <given-names>KD</given-names>
+            </name>
+            <name>
+              <surname>Tatusova</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Maglott</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <article-title>NCBI Reference Sequence project: update and current status</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>34</fpage>
+          <lpage>37</lpage>
+          <pub-id pub-id-type="pmid">12519942</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg111</pub-id>
+        </citation>
+      </ref>
+      <ref id="B32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Suzuki</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Taira</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Tsunoda</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Mizushima-Sugano</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Sese</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hata</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Ota</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Isogai</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Tanaka</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Morishita</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Okubo</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Sakaki</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Nakamura</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Suyama</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Sugano</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Diverse transcriptional initiation revealed by fine, large-scale mapping of mRNA start sites</article-title>
+          <source>EMBO Rep</source>
+          <year>2001</year>
+          <volume>2</volume>
+          <fpage>388</fpage>
+          <lpage>393</lpage>
+          <pub-id pub-id-type="pmid">11375929</pub-id>
+        </citation>
+      </ref>
+      <ref id="B33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Suzuki</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Yamashita</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Nakai</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Sugano</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>DBTSS: DataBase of human Transcriptional Start Sites and full-length cDNAs</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2002</year>
+          <volume>30</volume>
+          <fpage>328</fpage>
+          <lpage>331</lpage>
+          <pub-id pub-id-type="pmid">11752328</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/30.1.328</pub-id>
+        </citation>
+      </ref>
+      <ref id="B34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kent</surname>
+              <given-names>WJ</given-names>
+            </name>
+          </person-group>
+          <article-title>BLAT--the BLAST-like alignment tool</article-title>
+          <source>Genome Res</source>
+          <year>2002</year>
+          <volume>12</volume>
+          <fpage>656</fpage>
+          <lpage>664</lpage>
+          <pub-id pub-id-type="pmid">11932250</pub-id>
+          <comment>10.1101/gr.229202. Article published online before March 2002</comment>
+        </citation>
+      </ref>
+      <ref id="B35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Claverie</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Sauvaget</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Bougueleret</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>K-tuple frequency analysis: from intron/exon discrimination to T-cell epitope mapping</article-title>
+          <source>Methods Enzymol</source>
+          <year>1990</year>
+          <volume>183</volume>
+          <fpage>237</fpage>
+          <lpage>252</lpage>
+          <pub-id pub-id-type="pmid">1690334</pub-id>
+          <pub-id pub-id-type="doi">10.1016/0076-6879(90)83017-4</pub-id>
+        </citation>
+      </ref>
+      <ref id="B36">
+        <citation citation-type="other">
+          <article-title>PubMed.</article-title>
+          <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed"/>
+        </citation>
+      </ref>
+      <ref id="B37">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Press</surname>
+              <given-names>WH</given-names>
+            </name>
+            <name>
+              <surname>Teukolsky</surname>
+              <given-names>SA</given-names>
+            </name>
+            <name>
+              <surname>Vetterling</surname>
+              <given-names>WT</given-names>
+            </name>
+            <name>
+              <surname>Flannery</surname>
+              <given-names>BP</given-names>
+            </name>
+          </person-group>
+          <source>Numerical recipes in C</source>
+          <year>1992</year>
+          <edition>second</edition>
+          <publisher-name>New York, Press Syndicate of the University of Cambridge</publisher-name>
+        </citation>
+      </ref>
+      <ref id="B38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ponger</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Mouchiroud</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>CpGProD: identifying CpG islands associated with transcription start sites in large genomic mammalian sequences</article-title>
+          <source>Bioinformatics</source>
+          <year>2002</year>
+          <volume>18</volume>
+          <fpage>631</fpage>
+          <lpage>633</lpage>
+          <pub-id pub-id-type="pmid">12016061</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/18.4.631</pub-id>
+        </citation>
+      </ref>
+      <ref id="B39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gardiner-Garden</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Frommer</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>CpG islands in vertebrate genomes</article-title>
+          <source>J Mol Biol</source>
+          <year>1987</year>
+          <volume>196</volume>
+          <fpage>261</fpage>
+          <lpage>282</lpage>
+          <pub-id pub-id-type="pmid">3656447</pub-id>
+        </citation>
+      </ref>
+      <ref id="B40">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ihaka</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Gentleman</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>A Language for Data Analysis and Graphics</article-title>
+          <source>Journal of Computational and Graphical Statistics</source>
+          <year>1996</year>
+          <volume>5</volume>
+          <fpage>299</fpage>
+          <lpage>314</lpage>
+        </citation>
+      </ref>
+      <ref id="B41">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sokal</surname>
+              <given-names>RR</given-names>
+            </name>
+            <name>
+              <surname>Rohlf</surname>
+              <given-names>FJ</given-names>
+            </name>
+          </person-group>
+          <source>Biometry</source>
+          <year>1995</year>
+          <edition>Third</edition>
+          <publisher-name>Freeman and Company</publisher-name>
+        </citation>
+      </ref>
+      <ref id="B42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shea</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Remark</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <article-title>AS R77: A remark on algorithm AS 152: Cumulative hypergeometric probabilities</article-title>
+          <source>Applied Statistics</source>
+          <year>1989</year>
+          <volume>38</volume>
+          <fpage>199</fpage>
+          <lpage>204</lpage>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

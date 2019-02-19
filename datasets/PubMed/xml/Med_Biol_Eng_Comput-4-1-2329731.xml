@@ -1,0 +1,1565 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Med Biol Eng Comput</journal-id>
+      <journal-id journal-id-type="iso-abbrev">Med Biol Eng Comput</journal-id>
+      <journal-title-group>
+        <journal-title>Medical &amp; Biological Engineering &amp; Computing</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0140-0118</issn>
+      <issn pub-type="epub">1741-0444</issn>
+      <publisher>
+        <publisher-name>Springer Berlin Heidelberg</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">18324432</article-id>
+      <article-id pub-id-type="pmc">2329731</article-id>
+      <article-id pub-id-type="publisher-id">325</article-id>
+      <article-id pub-id-type="doi">10.1007/s11517-008-0325-z</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Special Issue</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Decomposition cross-correlation for analysis of collagen matrix deformation by single smooth muscle cells</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>van den Akker</surname>
+            <given-names>Jeroen</given-names>
+          </name>
+          <address>
+            <email>jeroenvandenakker@amc.uva.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Pistea</surname>
+            <given-names>Adrian</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Bakker</surname>
+            <given-names>Erik N. T. P.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name>
+            <surname>VanBavel</surname>
+            <given-names>Ed</given-names>
+          </name>
+          <address>
+            <email>e.vanbavel@amc.uva.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1"><institution-wrap><institution-id institution-id-type="ISNI">0000000404654431</institution-id><institution-id institution-id-type="GRID">grid.5650.6</institution-id><institution>Department of Medical Physics, </institution><institution>Academic Medical Center, University of Amsterdam, </institution></institution-wrap>PO Box 22700, 1100 DE Amsterdam, The Netherlands </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>7</day>
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="pmc-release">
+        <day>7</day>
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <year>2008</year>
+      </pub-date>
+      <volume>46</volume>
+      <issue>5</issue>
+      <fpage>443</fpage>
+      <lpage>450</lpage>
+      <history>
+        <date date-type="received">
+          <day>25</day>
+          <month>10</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>18</day>
+          <month>2</month>
+          <year>2008</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; The Author(s) 2008</copyright-statement>
+      </permissions>
+      <abstract id="Abs1">
+        <p>Microvascular remodeling is known to depend on cellular interactions with matrix tissue. However, it is difficult to study the role of specific cells or matrix elements in an in vivo setting. The aim of this study is to develop an automated technique that can be employed to obtain and analyze local collagen matrix remodeling by single smooth muscle cells. We combined a motorized microscopic setup and time-lapse video microscopy with a new cross-correlation based image analysis algorithm to enable automated recording of cell-induced matrix reorganization. This method rendered 60&#x2013;90 single cell studies per experiment, for which collagen deformation over time could be automatically derived. Thus, the current setup offers a tool to systematically study different components active in matrix remodeling.</p>
+      </abstract>
+      <kwd-group xml:lang="en">
+        <title>Keywords</title>
+        <kwd>Matrix remodeling</kwd>
+        <kwd>Collagen</kwd>
+        <kwd>Smooth muscle cell</kwd>
+        <kwd>Microscopy</kwd>
+        <kwd>Image analysis</kwd>
+        <kwd>Cross-correlation</kwd>
+        <kwd>Deformation</kwd>
+      </kwd-group>
+      <custom-meta-group>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; International Federation for Medical and Biological Engineering 2008</meta-value>
+        </custom-meta>
+      </custom-meta-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>The extracellular matrix (ECM) provides a biophysical and biochemical environment for cell mechanical behavior. In turn, cellular interactions with the ECM resulting from adhesive, proteolytic and migratory activity govern continuous matrix reorganization. One such example occurs in eutrophic inward remodeling of small arteries [<xref ref-type="bibr" rid="CR34">34</xref>]. Here, the existing collagen matrix is rearranged around a smaller diameter. Such inward remodeling is a hallmark of many hypertensive disorders and has been shown to have predictive value for cardiovascular events [<xref ref-type="bibr" rid="CR9">9</xref>].</p>
+      <p>In vitro setups of cell-seeded matrix scaffolds allow studying the specific components that are active in vascular remodeling [<xref ref-type="bibr" rid="CR22">22</xref>]. Especially, matrix reorganization can be monitored in the presence of specific cells, matrix elements, and blockers or markers of remodeling enzymes such as the matrix metalloproteases and transglutaminases [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR2">2</xref>]. Several approaches using multi-cellular preparations have been developed. Thus, free-floating collagen gels can be seeded with contractile cells, and the remodeling is monitored from the dimensions of these gels [<xref ref-type="bibr" rid="CR8">8</xref>, <xref ref-type="bibr" rid="CR13">13</xref>, <xref ref-type="bibr" rid="CR16">16</xref>, <xref ref-type="bibr" rid="CR20">20</xref>]. In the so-called culture force monitor, collagen gels mixed with cells are allowed to polymerize between a fixed plate and a force transducer. Contractile force development is measured during subsequent culture of this preparation [<xref ref-type="bibr" rid="CR12">12</xref>, <xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR22">22</xref>, <xref ref-type="bibr" rid="CR36">36</xref>]. However, interpretation of data derived from these multi-cellular approaches is troubled by variability in cellular mechanical activity, lack of information on cell density, and synergistic contractile effects [<xref ref-type="bibr" rid="CR30">30</xref>]. Therefore, microscopic observations on matrix reorganization by single cells may provide more detailed and fundamental information on the mechanisms of remodeling.</p>
+      <p>Several groups have studied the effect of single cell activity on local deformation of matrices [<xref ref-type="bibr" rid="CR5">5</xref>, <xref ref-type="bibr" rid="CR28">28</xref>]. The most frequently used substrates are silicone rubber [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR18">18</xref>, <xref ref-type="bibr" rid="CR21">21</xref>] and polyacrylamide sheets. Local deformation is then monitored by tracing the texture, sometimes facilitated by using fluorescent beads or imprinted micropatterns. Although these inert scaffolds provide a geometrical framework to study processes like cell locomotion, they do not resemble the physiological ECM. This has been solved in some cases by coating the polyacrylamide membrane with a thin layer of collagen [<xref ref-type="bibr" rid="CR11">11</xref>, <xref ref-type="bibr" rid="CR17">17</xref>, <xref ref-type="bibr" rid="CR26">26</xref>, <xref ref-type="bibr" rid="CR27">27</xref>, <xref ref-type="bibr" rid="CR37">37</xref>]. However, remaining issues are the orientation of the collagen fibrils in the coating as compared to native collagen, and the inability of the cells to chemically modify (e.g. by cross-linking) the artificial sheets.</p>
+      <p>A possible way to overcome these issues is the use of collagen-based matrices. Cell-induced deformation patterns of these matrices and the degree of reversibility of such deformation provide information on physical remodeling and the underlying biochemical processes. Deformations have been assessed by manually tracing beads or landmarks in consecutive images [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR28">28</xref>, <xref ref-type="bibr" rid="CR30">30</xref>]. However, so far, only a few algorithms were developed for automatic detection of substrate deformations. In particular, very few of such algorithms allow tracing in the absence of embedded beads [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR33">33</xref>, <xref ref-type="bibr" rid="CR35">35</xref>], and more stable algorithms are required.</p>
+      <p>While single cell observations provide a more fundamental insight into matrix remodeling than macroscopic studies, a concern is efficiency. Time-lapsed video microscopy of single cells forms a labor-intensive and time-consuming experiment. Meaningful experiments require the comparison of large data sets, including different cell types, various matrix compositions, or the use of biochemical or molecular interventions. A fully automated, motorized microscopy setup is required that scans series of individual cells and their surrounding matrix. In addition, each individual cell should automatically be kept in focus during remodeling experiments, which take up 24&#xA0;h or more. Finally, stable algorithms are needed for the automated analysis of geometrical reorganization with minimal user input.</p>
+      <p>The aim of this study is to develop an automated technique that can be employed to obtain and analyze local matrix remodeling by individual cells. The system that we present allows for monitoring of &#x223C;75 cells in parallel, using time-lapse video microscopy and computer-controlled stage positioning. In addition, we present and evaluate a new algorithm for automated detection of collagen matrix deformation around these cells.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Methods</title>
+      <sec id="Sec3">
+        <title>Cell culturing and collagen matrix preparation</title>
+        <p>Smooth muscle cells, obtained from mesenteric small arteries, were cultured in Leibovitz medium with 10% (v/v) heat-inactivated fetal calf serum. Cells from passages three to nine were used in experiments.</p>
+        <p>Matrix constructs were produced from calf skin collagen (MP Biomedicals) at a concentration of 1&#xA0;mg/ml; pH was buffered by HEPES, and a mix of antibiotics (PSF and ciproxin) was added. Immediately after preparation at 4&#xB0;C, the collagen mixture was poured into a 3.8&#xA0;cm<sup>2</sup> culture well and a 1.5-h polymerization period at 37&#xB0;C was allowed. Then, SMCs were seeded at a concentration of about 1 cell per mm<sup>2</sup> in the presence of 1&#xA0;ml serum-free Leibovitz medium. The cells were maintained in an incubation chamber that was set to a temperature of 37&#xB0;C throughout the experimental procedure. After a stabilization period of about 1&#xA0;h, cell&#x2013;matrix interactions were monitored by microscopic imaging for a period of 24&#xA0;h of spontaneous cell contraction.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Automated microscopic imaging</title>
+        <p>In order to enable simultaneous monitoring of cell-induced matrix remodeling at multiple locations, microscopy was combined with a motorized stage. Individual cells and their surrounding matrix were studied by phase-contrast microscopy (Olympus IMT-2 with 10&#xD7; objective and 2.5&#xD7; projection lens). Images were captured by a Qimaging Retiga SRV camera. The calibration factor for these images (1,392&#xA0;&#xD7;&#xA0;1,040&#xA0;pixels) was 0.88&#xA0;&#x3BC;m/pixel. The microscopic field of view was set by a motorized stage, controlled by custom written software (Matlab 7.0 with Image Acquisition Toolbox 2.0). After manually determining and storing a set of <italic>x</italic>, <italic>y</italic>, <italic>z</italic>-coordinates for about 60&#x2013;90 appropriate cells, these positions were tracked through time at a 15-min interval and images were captured by an automated procedure.</p>
+        <p>During the time-lapsed image acquisition, samples were kept in focus by means of implementation into the acquisition software of one of the general auto-focus algorithms. Image contrast is optimal when a histogram of intensity values shows a broad distribution over all bins. This characteristic feature can be approximated by the standard deviation of pixel intensity values. For each image, contrast was enhanced by histogram equalization, and standard deviation was calculated. A normalized focus index (FI) was defined by dividing the standard deviation of the original image (SD<sub>original</sub>) by the standard deviation of the contrast enhanced image (SD<sub>enhanced</sub>): <disp-formula id="Equa"><alternatives><tex-math id="M1">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}
+$$ {\text{FI}} = \frac{{{\text{SD}}_{{{\text{original}}}} }} {{{\text{SD}}_{{{\text{enhanced}}}} }} $$\end{document}</tex-math><graphic xlink:href="11517_2008_325_Equa.gif" position="anchor"/></alternatives></disp-formula>For each cell, a series of images was captured at five different heights. The image was then defined to be in focus at the vertical level of maximal normalized focus. This height (<italic>z</italic>) was used as the central level when capturing the <italic>z</italic>-series in the next time step, thus allowing gradual vertical shift during the time-lapsed image acquisition. Finally, a stack of time-lapsed images was constructed for each <italic>x</italic>, <italic>y</italic>-position and analyzed off-line.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Gel dynamics analysis</title>
+        <p>Cell&#x2013;matrix interactions were quantified offline using in-house designed, automated image analysis software (Matlab 7.0 with Image Processing Toolbox 4.2). Matrix reorganization was assessed by calculation of the displacement field around a cell. This was achieved by performing a cross-correlation between each two successive images in an image stack; resolution of the displacement field was refined by correlation of subimages of decreasing size. This procedure is explained below and illustrated in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Graphical representation of parameters used in matrix deformation analysis. The image shows a single SMC in the center, surrounded with a collagen matrix of relatively smooth texture. The <italic>white box</italic> (768&#xA0;&#xD7;&#xA0;768&#xA0;pixels) indicates the area for the most coarse correlation analysis. This correlation between two successive images was applied over an area as indicated by the <italic>yellow box</italic> (960&#xA0;&#xD7;&#xA0;960&#xA0;pixels). The <italic>green boxes</italic> show the more refined cross-correlation windows (stages 2&#x2013;5). Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref> indicates the area expansion used for these correlation analyses</p></caption><graphic xlink:href="11517_2008_325_Fig1_HTML" id="MO1"/></fig>
+</p>
+        <p>First, gross displacement was defined at the point of maximal correlation between two parent images <italic>I</italic>
+<sub>1</sub> (at <italic>t</italic>&#xA0;=&#xA0;<italic>t</italic>
+<sub>0</sub>) and <italic>I</italic>
+<sub>2</sub> (at <italic>t</italic>&#xA0;=&#xA0;<italic>t</italic>
+<sub>0</sub>&#xA0;+&#xA0;&#x394;<italic>t</italic>), using a correlation threshold of 0.5 and a maximum tested displacement of 11&#xA0;pixels. Then, <italic>I</italic>
+<sub>1</sub> was decomposed into four equal-sized square subimages, for which another cross-correlation was performed. The position of the correlation subwindow of <italic>I</italic>
+<sub>2</sub> was refined using the displacement as calculated for the parent image, with a safety measure to prevent <italic>I</italic>
+<sub>2</sub> crossing the borders of <italic>I</italic>
+<sub>1</sub>. This procedure of accurately positioning a correlation window not only reduced the possibility of an accidental cross-correlation match between a subimage of <italic>I</italic>
+<sub>1</sub> and any random subimage of <italic>I</italic>
+<sub>2</sub>, but also drastically reduced calculation time. Resolution of the displacement field was refined to the fifth decomposition stage in our experiments (see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>), using maximum tested displacements (<italic>n</italic>
+<sub>cc</sub>) as indicated in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. When insufficient correlation (<italic>r</italic>&#xA0;&lt;&#xA0;0.5) was found in any small area, displacement field from the next larger images were used. The calculated displacements were then assigned to the corresponding subimage centers. Subsequently, a continuous displacement field was obtained by bicubic interpolation. Finally, matrix compaction for each stack was quantified by tracking circular areas centered around the cell (see Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>).
+<table-wrap id="Tab1"><label>Table&#xA0;1</label><caption><p>Settings for matrix compaction analysis by decomposition cross-correlation</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Decomposition stage</th><th align="left">Cross-correlation window</th><th align="left">Search area expansion (<italic>n</italic>
+<sub>cc</sub>)</th></tr></thead><tbody><tr><td align="left">1</td><td char="&#xD7;" align="char">768&#xA0;&#xD7;&#xA0;768</td><td char="." align="char">96</td></tr><tr><td align="left">2</td><td char="&#xD7;" align="char">384&#xA0;&#xD7;&#xA0;384</td><td char="." align="char">48</td></tr><tr><td align="left">3</td><td char="&#xD7;" align="char">192&#xA0;&#xD7;&#xA0;192</td><td char="." align="char">24</td></tr><tr><td align="left">4</td><td char="&#xD7;" align="char">96&#xA0;&#xD7;&#xA0;96</td><td char="." align="char">24</td></tr><tr><td align="left">
+<bold>5</bold>
+</td><td char="&#xD7;" align="char">
+<bold>48&#xA0;</bold>&#xD7;<bold>&#xA0;48</bold>
+</td><td char="." align="char">
+<bold>24</bold>
+</td></tr><tr><td align="left">6</td><td char="&#xD7;" align="char">24&#xA0;&#xD7;&#xA0;24</td><td char="." align="char">12</td></tr><tr><td align="left">7</td><td char="&#xD7;" align="char">12&#xA0;&#xD7;&#xA0;12</td><td char="." align="char">6</td></tr></tbody></table><table-wrap-foot><p>Dimensions of the cross-correlation window <italic>I</italic>
+<sub>1</sub> were reduced by 50% for each decomposition stage. The search area of <italic>I</italic>
+<sub>2</sub> for correlation with <italic>I</italic>
+<sub>1</sub> was obtained by increasing the cross-correlation window with <italic>n</italic>
+<sub>cc</sub> pixels on all image sides. The settings which were used for gel dynamics analysis and validation are given in bold</p></table-wrap-foot></table-wrap>
+</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Validation</title>
+        <p>The method described above (decomposition CC) was validated on several test series against a straightforward cross-correlation analysis (direct CC), with settings according to decomposition stage 1.</p>
+        <p>The first test case consisted of an image of a collagen-embedded cell, which was artificially resized by 3%, thereby simulating matrix compaction. Secondly, increasing amounts of white noise were added to the resized image in order to test the stability of both correlation methods. Relative dispersion (RD), which is defined as standard deviation divided by mean, was used as a noise level index. Finally, image resizing was followed by a horizontal translation of 60&#xA0;pixels for a low and high noise example (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>).
+<table-wrap id="Tab2"><label>Table&#xA0;2</label><caption><p>Characteristics of validation images: CC was tested by addition of Gaussian white noise with mean 0.0 and increasing variance levels, in several cases the image was resized or translated</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Index</th><th align="left">Scaling (%)</th><th align="left">Gaussian white noise variance</th><th align="left">RD image</th><th align="left">RD increase (%)</th><th align="left">RD noise</th><th align="left">Horizontal shift (pixels)</th></tr></thead><tbody><tr><td align="left">a</td><td char="." align="char">1</td><td char="." align="char">0.0000</td><td char="." align="char">0.250</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">0</td></tr><tr><td align="left">b</td><td char="." align="char">0.97</td><td char="." align="char">0.0000</td><td char="." align="char">0.251</td><td char="." align="char">0.5</td><td char="." align="char"/><td char="." align="char">0</td></tr><tr><td align="left">c</td><td char="." align="char">0.97</td><td char="." align="char">0.0005</td><td char="." align="char">0.260</td><td char="." align="char">4.1</td><td char="." align="char">0.104</td><td char="." align="char">0</td></tr><tr><td align="left">d</td><td char="." align="char">0.97</td><td char="." align="char">0.0010</td><td char="." align="char">0.269</td><td char="." align="char">7.6</td><td char="." align="char">0.146</td><td char="." align="char">0</td></tr><tr><td align="left">e</td><td char="." align="char">0.97</td><td char="." align="char">0.0020</td><td char="." align="char">0.285</td><td char="." align="char">14.1</td><td char="." align="char">0.207</td><td char="." align="char">0</td></tr><tr><td align="left">f</td><td char="." align="char">0.97</td><td char="." align="char">0.0030</td><td char="." align="char">0.301</td><td char="." align="char">20.2</td><td char="." align="char">0.253</td><td char="." align="char">0</td></tr><tr><td align="left">g</td><td char="." align="char">0.97</td><td char="." align="char">0.0040</td><td char="." align="char">0.316</td><td char="." align="char">26.3</td><td char="." align="char">0.293</td><td char="." align="char">0</td></tr><tr><td align="left">h</td><td char="." align="char">0.97</td><td char="." align="char">0.0050</td><td char="." align="char">0.329</td><td char="." align="char">31.7</td><td char="." align="char">0.327</td><td char="." align="char">0</td></tr><tr><td align="left">i</td><td char="." align="char">0.97</td><td char="." align="char">0.0005</td><td char="." align="char">0.259</td><td char="." align="char">4.1</td><td char="." align="char">0.108</td><td char="." align="char">60</td></tr><tr><td align="left">j</td><td char="." align="char">0.97</td><td char="." align="char">0.0030</td><td char="." align="char">0.303</td><td char="." align="char">20.2</td><td char="." align="char">0.265</td><td char="." align="char">60</td></tr></tbody></table><table-wrap-foot><p>Relative dispersion (<italic>RD</italic>) in an image is defined as standard deviation divided by mean, RD increase is expressed as RD value compared to case &#x201C;a&#x201D;, RD noise is calculated as ratio of noise variance and image mean</p></table-wrap-foot></table-wrap>
+</p>
+      </sec>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Results</title>
+      <sec id="Sec8">
+        <title>Parallel recording of matrix compaction movies</title>
+        <p>We were able to record on average 66 movies on collagen compaction by single cells in parallel at a time resolution of 15&#xA0;min (<italic>n</italic>&#xA0;=&#xA0;10 experiments). Critical issues that limited this number were the need to avoid rapid acceleration and deceleration of the microscope stage, and the time-consuming autofocus algorithm. If cells were properly focused in the initialization stage, only a small fraction (&lt;5%) ran out of focus during 24-h compaction experiments. Under the given incubation conditions, the majority of the cells adhered firmly to the collagen matrix and demonstrated little migratory activity. Typically, cell centroids remained within a 150&#xA0;&#x3BC;m radius of their original <italic>xy</italic> position. <italic>z</italic> position decreased slowly in many cases, reflecting compaction of the matrix in the vertical direction (data not shown).</p>
+      </sec>
+      <sec id="Sec9">
+        <title>Validation of the collagen compaction analysis</title>
+        <p>Analysis based on cross-correlation of images at a series of decomposition stages was compared with straightforward cross-correlation. This was performed on images simulating matrix compaction, subsequently followed by a challenge of increasing amounts of image noise and artificial translation.</p>
+        <p>Decomposition CC was more time-consuming than direct CC: respectively, 84 and 54&#xA0;s per image pair. This was due to a larger number of cross-correlations that have to be performed, and more complex data storage and lookup operations. For low noise levels (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case c, d), both analysis methods render 100% correct displacement vectors (see Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). When noise increased, the number of vectors in the smallest decomposition stage that had insufficient cross-correlation (<italic>r</italic>&#xA0;&lt;&#xA0;0.5) rose. However, this effect was smaller in the decomposition CC versus direct CC. As an example, the percentage correct displacement vectors at 20.2% noise (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case f) was 77.7% in direct CC versus 89.5% in decomposition CC. Concurrently, the average displacement error at this noise level amounted to 2.1 and 0.7&#xA0;pixels, respectively.
+<fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Noise sensitivity of the cross-correlation methods. <italic>Top</italic> from <italic>left</italic> to <italic>right</italic> simulated displacement field of 3% compaction (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case b), displacement field as predicted by direct CC, displacement field as predicted by decomposition CC; both cross-correlations were performed at a RD increase of 20.2% (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case f); vectors were not scaled to absolute displacements, but to optimal visual illustration; <italic>red asterisks</italic> indicate vectors based on cross-correlation values below threshold (0.5) at the highest resolution. <italic>Middle</italic> the fraction of displacement vectors in the smallest decomposition stage that is calculated correctly (error in horizontal and vertical direction &#x2264;1&#xA0;pixel). This fraction decreased at higher noise levels (relative dispersion: Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case c&#x2013;h). <italic>Bottom</italic> the average error between calculated and simulated displacement vectors increased for higher noise levels (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case c&#x2013;h). The decomposition method resulted in a slightly lower number of incorrect vectors, and a large decrease in displacement error</p></caption><graphic xlink:href="11517_2008_325_Fig2_HTML" id="MO2"/></fig>
+</p>
+        <p>Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows estimates for matrix compaction for these simulated deformations. The simulated compaction over a disc with 350&#xA0;pixels radius was 6%. For noise levels up to 7.6% (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case d), such compaction was indeed found by both correlation methods. At higher noise levels, direct CC underestimated compaction much more severely as compared to decomposition CC. As an example, after a noise increase of 20.2%, decomposition CC estimated a compaction value of 5.9% as compared to only 4.1% for direct CC.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Calculated area at a radial distance of 350&#xA0;pixels after a simulated 3% compaction. Increasing displacement errors, caused by higher noise levels, resulted in a mismatch between calculated area and simulated compacted area (94% of original). The decomposition method showed stable results at larger relative dispersion values (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case c&#x2013;h)</p></caption><graphic xlink:href="11517_2008_325_Fig3_HTML" id="MO3"/></fig>
+</p>
+        <p>When an additional horizontal shift was imposed, both analysis methods correctly estimated compaction for 4.1% noise (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case i). For higher noise levels, decomposition CC succeeded in a correct area assessment. In contrast, at 20.2% noise and 60&#xA0;pixels translation (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case j), direct CC predicted 1.2% rather than 6% compaction of the 350&#xA0;pixels disc (see Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). This effect was not due to more incorrect displacement vectors, but could be attributed to a rise in average displacement error up to 14.6&#xA0;pixels.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Sensitivity of the correlation methods to translation of the image. A horizontal displacement of 60&#xA0;pixels was imposed after application of a 3% compaction and noise addition (4.1, respectively, 20.2% RD increase). <italic>Top left</italic> displacement field for high noise example (RD increase: 20.2%), as calculated by direct CC. <italic>Red asterisks</italic> indicate displacements where cross-correlation was below threshold (0.5); at these positions, a large mismatch between calculated compaction and simulated compaction occurs. <italic>Top right</italic> visual representation of matrix deformation at a radial distance of 270&#xA0;pixels. <italic>Bottom</italic> calculated area remaining after a simulated compaction. At low noise levels (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case i), a horizontal shift after image resizing did not affect the calculated area; for high noise (Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>, case j), failing correlation in the direct method results in a high offset in calculated area</p></caption><graphic xlink:href="11517_2008_325_Fig4_HTML" id="MO4"/></fig>
+</p>
+      </sec>
+      <sec id="Sec10">
+        <title>Collagen compaction by individual smooth muscle cells</title>
+        <p>Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref> shows an example of collagen matrix compaction by an individual smooth muscle cell. In this particular case, gross geometrical reorganization occurred in the first 6&#xA0;h of the 22-h observation period. Compaction magnitude decreases with distance, and there was a time delay of around 1.5&#xA0;h before compaction visible at a radius of 97&#xA0;&#x3BC;m (110&#xA0;pixels) became apparent at a distance of 308&#xA0;&#x3BC;m (350&#xA0;pixels).
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>Typical example of collagen matrix compaction by individual smooth muscle cell as estimated by decomposition cross-correlation, obtained at a resolution of 1 frame per 15&#xA0;min. <italic>Top left</italic> displacement field represented by vectors, refined in five decomposition stages. Vectors originating from a <italic>red asterisk</italic> were created at a larger correlation scale; for the smallest window, cross-correlation value at these positions was below threshold (0.5). <italic>Top right</italic> visual representation of matrix compaction at a radial distance of 350&#xA0;pixels, as estimated from a series of displacement fields, showing an initial (<italic>yellow</italic>) <italic>circle</italic> and its deformed (<italic>green</italic>) state. <italic>Bottom</italic> estimation of compacted area after 22&#xA0;h at distances of 110, 230 and 350&#xA0;pixels (scaling: 0.88&#xA0;&#x3BC;m/pixel)</p></caption><graphic xlink:href="11517_2008_325_Fig5_HTML" id="MO5"/></fig>
+</p>
+      </sec>
+    </sec>
+    <sec id="Sec11" sec-type="discussion">
+      <title>Discussion</title>
+      <p>This study aimed at developing an automated technique for obtaining and analyzing matrix remodeling by individual cells. Emphasis was put on construction of an automatic, reliable algorithm for assessment of a detailed matrix displacement field. Especially, refinement of a cross-correlation based image analysis with a decomposition scheme was investigated. While &#x201C;classic&#x201D; direct CC sufficed for pairs of images with high correlation and low noise, this was no longer the case when substantial matrix remodeling occurred within the time frame between two consecutive images. This resulted in failing of CC at spots of high geometrical reorganization. However, when using decomposition CC, the gross displacements at these positions could be estimated by analysis of parent images with larger dimensions. This way, at a RD increase of 20.2% the average displacement error was lowered threefold in decomposition CC as compared to direct CC.</p>
+      <p>The method of refining displacement field accuracy with each decomposition step becomes progressively more important with larger displacements. Therefore we investigated the effect of a horizontal shift superimposed on a simulated compaction. Such shift occurred in our in vitro experiments when a group of neighboring cells pulled strongly on the matrix adjacent to a cell of interest. The shift interfered with direct CC because zero deformation was assumed when no proper correlation could be found. The result was an irregular displacement field (see Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). When using decomposition CC, on the other hand, the gross displacement was already detected in the first decomposition stage. Displacement values were then adjusted when local compaction was detected in subsequent decomposition stages. Using this strategy, a lack of local correlation at the finest resolution resulted in only a minor displacement error, with an average of 0.9 as compared to 14.6&#xA0;pixels for direct CC.</p>
+      <p>Both cross-correlation methods differ not only in stability of displacement field estimation, but in efficiency of calculation time as well. Direct CC requires a large search area, i.e. the subwindows of <italic>I</italic>
+<sub>2</sub> have to extend considerably beyond the boundaries of their corresponding <italic>I</italic>
+<sub>1</sub> subwindow in order to perform a meaningful correlation. On the other hand, with decomposition CC <italic>n</italic>
+<sub>cc</sub> can decrease with each stage (see Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>), since each subwindow of <italic>I</italic>
+<sub>2</sub> is repositioned according to the preliminary displacement as calculated for its parent window. Due to the increased number of calculations and data manipulations that have to be performed, analysis time was still about 50% larger for decomposition CC at the settings as stated in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>.</p>
+      <p>We chose a correlation threshold of 0.5 for both techniques, as well as cross-correlation windows as indicated in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. These values were empirically determined as an optimum in the trade-off between calculation time, false positive displacements and overlooking local deformations. Clearly, these choices depend on the contrast and texture of the images and the nature of the deformation, and will need to be optimized for specific future experiments.</p>
+      <p>Cell traction is frequently assessed by quantification of deformations in a flexible substratum. Both 2D and 3D approaches have been used, resulting in different cellular morphologies [<xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR20">20</xref>, <xref ref-type="bibr" rid="CR29">29</xref>]. While the latter seems more physiological, interpretation of the 3D experiments is more complex [<xref ref-type="bibr" rid="CR35">35</xref>]. 2D substrates offer more straightforward tools for analyzing mechanical behavior of single cells. These materials can be enriched with fluorescent microbeads to increase image contrast. In order to achieve a high resolution in the vicinity of cells, which can change their morphology rapidly, manual tracking of specific landmarks was employed in several studies [<xref ref-type="bibr" rid="CR6">6</xref>, <xref ref-type="bibr" rid="CR28">28</xref>, <xref ref-type="bibr" rid="CR30">30</xref>]. However, this labor-intensive method inherently limits the number of cells under study. In several studies particle tracking was performed on individual microbeads [<xref ref-type="bibr" rid="CR11">11</xref>]. In this case, resolution depends on particle distribution, which is typically far from homogeneous in collagen substrates [<xref ref-type="bibr" rid="CR23">23</xref>].</p>
+      <p>Several nested cross-correlation methods have been developed [<xref ref-type="bibr" rid="CR35">35</xref>]. All of these algorithms are based on empirical determination of square size, distance for pattern search, and normalized CC threshold. In order to spatially limit the search region, a relative translational shift has been derived from image registration [<xref ref-type="bibr" rid="CR23">23</xref>, <xref ref-type="bibr" rid="CR33">33</xref>]. Several schemes have been implemented to increase displacement field resolution in a step-by-step manner. In a single refinement cycle, Dembo and colleagues [<xref ref-type="bibr" rid="CR26">26</xref>] decreased the subwindow size if significant displacement was observed. On the other hand, window size can be increased if correspondence failure occurs at high resolution [<xref ref-type="bibr" rid="CR23">23</xref>]. The algorithm developed by Wang and coworkers [<xref ref-type="bibr" rid="CR33">33</xref>] resembled our decomposition CC to a large extent. However, these authors aimed at construction of traction fields with a smooth nature by incorporation of filtering procedures at several stages.</p>
+      <p>Geometrical matrix reorganization provides a qualitative index of the traction forces present in the underlying material. The actual forces can be derived from a displacement field series using material properties of the ECM construct. However, for collagen scaffolds these are highly heterogenous. Frequently, local stiffness is estimated by either microneedles [<xref ref-type="bibr" rid="CR5">5</xref>, <xref ref-type="bibr" rid="CR10">10</xref>, <xref ref-type="bibr" rid="CR21">21</xref>, <xref ref-type="bibr" rid="CR30">30</xref>] or optical tweezers [<xref ref-type="bibr" rid="CR4">4</xref>, <xref ref-type="bibr" rid="CR15">15</xref>, <xref ref-type="bibr" rid="CR32">32</xref>]. Tractions can then be calculated by application of stress&#x2013;strain relationships, including appropriate boundary conditions [<xref ref-type="bibr" rid="CR7">7</xref>, <xref ref-type="bibr" rid="CR24">24</xref>, <xref ref-type="bibr" rid="CR25">25</xref>, <xref ref-type="bibr" rid="CR31">31</xref>, <xref ref-type="bibr" rid="CR37">37</xref>, <xref ref-type="bibr" rid="CR38">38</xref>]. However, this translation to quantitative traction forces lies beyond the scope of this article.</p>
+      <p>In conclusion, we presented integral methodology for the study of matrix remodeling. These techniques allow systematic screening of the role of matrix components such as collagen, elastin, fibronectin and laminin. Likewise, the function of stationary cells like smooth muscle cells, fibroblasts, and osteoblasts can be investigated. Our method can be applied under a wide variety of other experimental conditions. The single requirement for the image quality is a sufficiently high contrast in the material under investigation, without the neeed for laborious and potentially interfering micropatterning. Furthermore, our graphical user interface enables a flexible tuning of parameters such as number of decompositions, size of correlation window, search area and cross-correlation threshold. Using our motorized microscopy stage it is possible to patch individual images together in order to create one large field of view for the study of motile cells such as keratocytes. Finally, the method can be extended with fluorescence imaging of specific cell structures, cytokines, hormones and enzymes [<xref ref-type="bibr" rid="CR15">15</xref>].</p>
+    </sec>
+  </body>
+  <back>
+    <fn-group>
+      <fn>
+        <p>An Erratum for this chapter can be found at <preformat><ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s11517-008-0337-8">http://dx.doi.org/10.1007/s11517-008-0337-8</ext-link></preformat>
+</p>
+      </fn>
+    </fn-group>
+    <ack>
+      <title>Open Access</title>
+      <p>This article is distributed under the terms of the Creative Commons Attribution Noncommercial License which permits any noncommercial use, distribution, and reproduction in any medium, provided the original author(s) and source are credited.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bakker</surname>
+              <given-names>EN</given-names>
+            </name>
+            <name>
+              <surname>Buus</surname>
+              <given-names>CL</given-names>
+            </name>
+            <name>
+              <surname>Spaan</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Perree</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Ganga</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Rolf</surname>
+              <given-names>TM</given-names>
+            </name>
+            <name>
+              <surname>Sorop</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Bramsen</surname>
+              <given-names>LH</given-names>
+            </name>
+            <name>
+              <surname>Mulvany</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>VanBavel</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Small artery remodeling depends on tissue-type transglutaminase</article-title>
+          <source>Circ Res</source>
+          <year>2005</year>
+          <volume>96</volume>
+          <fpage>119</fpage>
+          <lpage>126</lpage>
+          <pub-id pub-id-type="doi">10.1161/01.RES.0000151333.56089.66</pub-id>
+          <pub-id pub-id-type="pmid">15550691</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bakker</surname>
+              <given-names>EN</given-names>
+            </name>
+            <name>
+              <surname>Pistea</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Spaan</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Rolf</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>de Vries</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>van Rooijen</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Candi</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>VanBavel</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Flow-dependent remodeling of small arteries in mice deficient for tissue-type transglutaminase: possible compensation by macrophage-derived factor XIII</article-title>
+          <source>Circ Res</source>
+          <year>2006</year>
+          <volume>99</volume>
+          <fpage>86</fpage>
+          <lpage>92</lpage>
+          <pub-id pub-id-type="doi">10.1161/01.RES.0000229657.83816.a7</pub-id>
+          <pub-id pub-id-type="pmid">16741156</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Balaban</surname>
+              <given-names>NQ</given-names>
+            </name>
+            <name>
+              <surname>Schwarz</surname>
+              <given-names>US</given-names>
+            </name>
+            <name>
+              <surname>Riveline</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Goichberg</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Tzur</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Sabanay</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Mahalu</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Safran</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Bershadsky</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Addadi</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Geiger</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Force and focal adhesion assembly: a close relationship studied using elastic micropatterned substrates</article-title>
+          <source>Nat Cell Biol</source>
+          <year>2001</year>
+          <volume>3</volume>
+          <fpage>466</fpage>
+          <lpage>472</lpage>
+          <pub-id pub-id-type="doi">10.1038/35074532</pub-id>
+          <pub-id pub-id-type="pmid">11331874</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bausch</surname>
+              <given-names>AR</given-names>
+            </name>
+            <name>
+              <surname>Moller</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Sackmann</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Measurement of local viscoelasticity and forces in living cells by magnetic tweezers</article-title>
+          <source>Biophys J</source>
+          <year>1999</year>
+          <volume>76</volume>
+          <fpage>573</fpage>
+          <lpage>579</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(99)77225-5</pub-id>
+          <pub-id pub-id-type="pmid">9876170</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Beningo</surname>
+              <given-names>KA</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>YL</given-names>
+            </name>
+          </person-group>
+          <article-title>Flexible substrata for the detection of cellular traction forces</article-title>
+          <source>Trends Cell Biol</source>
+          <year>2002</year>
+          <volume>12</volume>
+          <fpage>79</fpage>
+          <lpage>84</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0962-8924(01)02205-X</pub-id>
+          <pub-id pub-id-type="pmid">11849971</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Burton</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>JH</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>DL</given-names>
+            </name>
+          </person-group>
+          <article-title>Keratocytes generate traction forces in two phases</article-title>
+          <source>Mol Biol Cell</source>
+          <year>1999</year>
+          <volume>10</volume>
+          <fpage>3745</fpage>
+          <lpage>3769</lpage>
+          <pub-id pub-id-type="doi">10.1091/mbc.10.11.3745</pub-id>
+          <pub-id pub-id-type="pmid">10564269</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Butler</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Tolic-Norrelykke</surname>
+              <given-names>IM</given-names>
+            </name>
+            <name>
+              <surname>Fabry</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Fredberg</surname>
+              <given-names>JJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Traction fields, moments, and strain energy that cells exert on their surroundings</article-title>
+          <source>Am J Physiol Cell Physiol</source>
+          <year>2002</year>
+          <volume>282</volume>
+          <fpage>C595</fpage>
+          <lpage>C605</lpage>
+          <pub-id pub-id-type="doi">10.1152/ajpcell.00270.2001</pub-id>
+          <pub-id pub-id-type="pmid">11832345</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cooke</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Sakai</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Mosher</surname>
+              <given-names>DF</given-names>
+            </name>
+          </person-group>
+          <article-title>Contraction of collagen matrices mediated by alpha2beta1A and alpha(v)beta3 integrins</article-title>
+          <source>J Cell Sci</source>
+          <year>2000</year>
+          <volume>113</volume>
+          <issue>Pt 13</issue>
+          <fpage>2375</fpage>
+          <lpage>2383</lpage>
+          <pub-id pub-id-type="pmid">10852817</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>De Ciuceis</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Porteri</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Rizzoni</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Rizzardi</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Paiardi</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Boari</surname>
+              <given-names>GE</given-names>
+            </name>
+            <name>
+              <surname>Miclini</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Zani</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Muiesan</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Donato</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Salvetti</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Castellano</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Tiberio</surname>
+              <given-names>GA</given-names>
+            </name>
+            <name>
+              <surname>Giulini</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Agabiti</surname>
+              <given-names>RE</given-names>
+            </name>
+          </person-group>
+          <article-title>Structural alterations of subcutaneous small-resistance arteries may predict major cardiovascular events in patients with hypertension</article-title>
+          <source>Am J Hypertens</source>
+          <year>2007</year>
+          <volume>20</volume>
+          <fpage>846</fpage>
+          <lpage>852</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.amjhyper.2007.03.016</pub-id>
+          <pub-id pub-id-type="pmid">17679031</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dembo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Oliver</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Ishihara</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Jacobson</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Imaging the traction stresses exerted by locomoting cells with the elastic substratum method</article-title>
+          <source>Biophys J</source>
+          <year>1996</year>
+          <volume>70</volume>
+          <fpage>2008</fpage>
+          <lpage>2022</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(96)79767-9</pub-id>
+          <pub-id pub-id-type="pmid">8785360</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dembo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>YL</given-names>
+            </name>
+          </person-group>
+          <article-title>Stresses at the cell-to-substrate interface during locomotion of fibroblasts</article-title>
+          <source>Biophys J</source>
+          <year>1999</year>
+          <volume>76</volume>
+          <fpage>2307</fpage>
+          <lpage>2316</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(99)77386-8</pub-id>
+          <pub-id pub-id-type="pmid">10096925</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Feng</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Yamato</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Akutsu</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Nakamura</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Okano</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Umezu</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Investigation on the mechanical properties of contracted collagen gels as a scaffold for tissue engineering</article-title>
+          <source>Artif Organs</source>
+          <year>2003</year>
+          <volume>27</volume>
+          <fpage>84</fpage>
+          <lpage>91</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1525-1594.2003.07187.x</pub-id>
+          <pub-id pub-id-type="pmid">12534718</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Franco</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Ho</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Mulholland</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Hou</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Islam</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Donaldson</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Bendeck</surname>
+              <given-names>MP</given-names>
+            </name>
+          </person-group>
+          <article-title>Doxycycline alters vascular smooth muscle cell adhesion, migration, and reorganization of fibrillar collagen matrices</article-title>
+          <source>Am J Pathol</source>
+          <year>2006</year>
+          <volume>168</volume>
+          <fpage>1697</fpage>
+          <lpage>1709</lpage>
+          <pub-id pub-id-type="doi">10.2353/ajpath.2006.050613</pub-id>
+          <pub-id pub-id-type="pmid">16651635</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Freyman</surname>
+              <given-names>TM</given-names>
+            </name>
+            <name>
+              <surname>Yannas</surname>
+              <given-names>IV</given-names>
+            </name>
+            <name>
+              <surname>Yokoo</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Gibson</surname>
+              <given-names>LJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Fibroblast contractile force is independent of the stiffness which resists the contraction</article-title>
+          <source>Exp Cell Res</source>
+          <year>2002</year>
+          <volume>272</volume>
+          <fpage>153</fpage>
+          <lpage>162</lpage>
+          <pub-id pub-id-type="doi">10.1006/excr.2001.5408</pub-id>
+          <pub-id pub-id-type="pmid">11777340</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Galbraith</surname>
+              <given-names>CG</given-names>
+            </name>
+            <name>
+              <surname>Yamada</surname>
+              <given-names>KM</given-names>
+            </name>
+            <name>
+              <surname>Sheetz</surname>
+              <given-names>MP</given-names>
+            </name>
+          </person-group>
+          <article-title>The relationship between force and focal complex development</article-title>
+          <source>J Cell Biol</source>
+          <year>2002</year>
+          <volume>159</volume>
+          <fpage>695</fpage>
+          <lpage>705</lpage>
+          <pub-id pub-id-type="doi">10.1083/jcb.200204153</pub-id>
+          <pub-id pub-id-type="pmid">12446745</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Garcia</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Collighan</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Griffin</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Pandit</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Assessment of cell viability in a three-dimensional enzymatically cross-linked collagen scaffold</article-title>
+          <source>J Mater Sci Mater Med</source>
+          <year>2007</year>
+          <volume>18</volume>
+          <fpage>1991</fpage>
+          <lpage>2001</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10856-007-3091-9</pub-id>
+          <pub-id pub-id-type="pmid">17554605</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gaudet</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Marganski</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Kim</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>CT</given-names>
+            </name>
+            <name>
+              <surname>Gunderia</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Dembo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Wong</surname>
+              <given-names>JY</given-names>
+            </name>
+          </person-group>
+          <article-title>Influence of type I collagen surface density on fibroblast spreading, motility, and contractility</article-title>
+          <source>Biophys J</source>
+          <year>2003</year>
+          <volume>85</volume>
+          <fpage>3329</fpage>
+          <lpage>3335</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(03)74752-3</pub-id>
+          <pub-id pub-id-type="pmid">14581234</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Harris</surname>
+              <given-names>AK</given-names>
+            </name>
+            <name>
+              <surname>Wild</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Stopak</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Silicone rubber substrata: a new wrinkle in the study of cell locomotion</article-title>
+          <source>Science</source>
+          <year>1980</year>
+          <volume>208</volume>
+          <fpage>177</fpage>
+          <lpage>179</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.6987736</pub-id>
+          <pub-id pub-id-type="pmid">6987736</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jiang</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Grinnell</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title>Cell-matrix entanglement and mechanical anchorage of fibroblasts in three-dimensional collagen matrices</article-title>
+          <source>Mol Biol Cell</source>
+          <year>2005</year>
+          <volume>16</volume>
+          <fpage>5070</fpage>
+          <lpage>5076</lpage>
+          <pub-id pub-id-type="doi">10.1091/mbc.E05-01-0007</pub-id>
+          <pub-id pub-id-type="pmid">16107563</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kim</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Lakshman</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Petroll</surname>
+              <given-names>WM</given-names>
+            </name>
+          </person-group>
+          <article-title>Quantitative assessment of local collagen matrix remodeling in 3-D culture: the role of Rho kinase</article-title>
+          <source>Exp Cell Res</source>
+          <year>2006</year>
+          <volume>312</volume>
+          <fpage>3683</fpage>
+          <lpage>3692</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.yexcr.2006.08.009</pub-id>
+          <pub-id pub-id-type="pmid">16978606</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lee</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Leonard</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Oliver</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Ishihara</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Jacobson</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Traction forces generated by locomoting keratocytes</article-title>
+          <source>J Cell Biol</source>
+          <year>1994</year>
+          <volume>127</volume>
+          <fpage>1957</fpage>
+          <lpage>1964</lpage>
+          <pub-id pub-id-type="doi">10.1083/jcb.127.6.1957</pub-id>
+          <pub-id pub-id-type="pmid">7806573</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marenzana</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Wilson-Jones</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Mudera</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>The origins and regulation of tissue tension: identification of collagen tension-fixation process in vitro</article-title>
+          <source>Exp Cell Res</source>
+          <year>2006</year>
+          <volume>312</volume>
+          <fpage>423</fpage>
+          <lpage>433</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.yexcr.2005.11.005</pub-id>
+          <pub-id pub-id-type="pmid">16337188</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marganski</surname>
+              <given-names>WA</given-names>
+            </name>
+            <name>
+              <surname>Dembo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>YL</given-names>
+            </name>
+          </person-group>
+          <article-title>Measurements of cell-generated deformations on flexible substrata using correlation-based optical flow</article-title>
+          <source>Methods Enzymol</source>
+          <year>2003</year>
+          <volume>361</volume>
+          <fpage>197</fpage>
+          <lpage>211</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0076-6879(03)61012-8</pub-id>
+          <pub-id pub-id-type="pmid">12624913</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marquez</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Genin</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Zahalak</surname>
+              <given-names>GI</given-names>
+            </name>
+            <name>
+              <surname>Elson</surname>
+              <given-names>EL</given-names>
+            </name>
+          </person-group>
+          <article-title>The relationship between cell and tissue strain in three-dimensional bio-artificial tissues</article-title>
+          <source>Biophys J</source>
+          <year>2005</year>
+          <volume>88</volume>
+          <fpage>778</fpage>
+          <lpage>789</lpage>
+          <pub-id pub-id-type="doi">10.1529/biophysj.104.041947</pub-id>
+          <pub-id pub-id-type="pmid">15596491</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marquez</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Genin</surname>
+              <given-names>GM</given-names>
+            </name>
+            <name>
+              <surname>Zahalak</surname>
+              <given-names>GI</given-names>
+            </name>
+            <name>
+              <surname>Elson</surname>
+              <given-names>EL</given-names>
+            </name>
+          </person-group>
+          <article-title>Thin bio-artificial tissues in plane stress: the relationship between cell and tissue strain, and an improved constitutive model</article-title>
+          <source>Biophys J</source>
+          <year>2005</year>
+          <volume>88</volume>
+          <fpage>765</fpage>
+          <lpage>777</lpage>
+          <pub-id pub-id-type="doi">10.1529/biophysj.104.040808</pub-id>
+          <pub-id pub-id-type="pmid">15596492</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Munevar</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Dembo</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Traction force microscopy of migrating normal and H-ras transformed 3T3 fibroblasts</article-title>
+          <source>Biophys J</source>
+          <year>2001</year>
+          <volume>80</volume>
+          <fpage>1744</fpage>
+          <lpage>1757</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(01)76145-0</pub-id>
+          <pub-id pub-id-type="pmid">11259288</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pelham</surname>
+              <given-names>RJ</given-names>
+              <suffix>Jr</suffix>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <article-title>High resolution detection of mechanical forces exerted by locomoting fibroblasts on the substrate</article-title>
+          <source>Mol Biol Cell</source>
+          <year>1999</year>
+          <volume>10</volume>
+          <fpage>935</fpage>
+          <lpage>945</lpage>
+          <pub-id pub-id-type="doi">10.1091/mbc.10.4.935</pub-id>
+          <pub-id pub-id-type="pmid">10198048</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Petroll</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Ma</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Direct, dynamic assessment of cell-matrix interactions inside fibrillar collagen lattices</article-title>
+          <source>Cell Motil Cytoskeleton</source>
+          <year>2003</year>
+          <volume>55</volume>
+          <fpage>254</fpage>
+          <lpage>264</lpage>
+          <pub-id pub-id-type="doi">10.1002/cm.10126</pub-id>
+          <pub-id pub-id-type="pmid">12845599</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pizzo</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Kokini</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Vaughn</surname>
+              <given-names>LC</given-names>
+            </name>
+            <name>
+              <surname>Waisner</surname>
+              <given-names>BZ</given-names>
+            </name>
+            <name>
+              <surname>Voytik-Harbin</surname>
+              <given-names>SL</given-names>
+            </name>
+          </person-group>
+          <article-title>Extracellular matrix (ECM) microstructural composition regulates local cell-ECM biomechanics and fundamental fibroblast behavior: a multidimensional perspective</article-title>
+          <source>J Appl Physiol</source>
+          <year>2005</year>
+          <volume>98</volume>
+          <fpage>1909</fpage>
+          <lpage>1921</lpage>
+          <pub-id pub-id-type="doi">10.1152/japplphysiol.01137.2004</pub-id>
+          <pub-id pub-id-type="pmid">15618318</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roy</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Petroll</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Cavanagh</surname>
+              <given-names>HD</given-names>
+            </name>
+            <name>
+              <surname>Chuong</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Jester</surname>
+              <given-names>JV</given-names>
+            </name>
+          </person-group>
+          <article-title>An in vitro force measurement assay to study the early mechanical interaction between corneal fibroblasts and collagen matrix</article-title>
+          <source>Exp Cell Res</source>
+          <year>1997</year>
+          <volume>232</volume>
+          <fpage>106</fpage>
+          <lpage>117</lpage>
+          <pub-id pub-id-type="doi">10.1006/excr.1997.3511</pub-id>
+          <pub-id pub-id-type="pmid">9141627</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roy</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Petroll</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Chuong</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Cavanagh</surname>
+              <given-names>HD</given-names>
+            </name>
+            <name>
+              <surname>Jester</surname>
+              <given-names>JV</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of cell migration on the maintenance of tension on a collagen matrix</article-title>
+          <source>Ann Biomed Eng</source>
+          <year>1999</year>
+          <volume>27</volume>
+          <fpage>721</fpage>
+          <lpage>730</lpage>
+          <pub-id pub-id-type="doi">10.1114/1.227</pub-id>
+          <pub-id pub-id-type="pmid">10625145</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Roy</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Rajfur</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Pomorski</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Jacobson</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Microscope-based techniques to study cell adhesion and migration</article-title>
+          <source>Nat Cell Biol</source>
+          <year>2002</year>
+          <volume>4</volume>
+          <fpage>E91</fpage>
+          <lpage>E96</lpage>
+          <pub-id pub-id-type="doi">10.1038/ncb0402-e91</pub-id>
+          <pub-id pub-id-type="pmid">11944042</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tolic-Norrelykke</surname>
+              <given-names>IM</given-names>
+            </name>
+            <name>
+              <surname>Butler</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>Spatial and temporal traction response in human airway smooth muscle cells</article-title>
+          <source>Am J Physiol Cell Physiol</source>
+          <year>2002</year>
+          <volume>283</volume>
+          <fpage>C1254</fpage>
+          <lpage>C1266</lpage>
+          <pub-id pub-id-type="doi">10.1152/ajpcell.00169.2002</pub-id>
+          <pub-id pub-id-type="pmid">12225988</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>VanBavel</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Bakker</surname>
+              <given-names>EN</given-names>
+            </name>
+            <name>
+              <surname>Pistea</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Sorop</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Spaan</surname>
+              <given-names>JA</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanics of microvascular remodeling</article-title>
+          <source>Clin Hemorheol Microcirc</source>
+          <year>2006</year>
+          <volume>34</volume>
+          <fpage>35</fpage>
+          <lpage>41</lpage>
+          <pub-id pub-id-type="pmid">16543615</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vanni</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lagerholm</surname>
+              <given-names>BC</given-names>
+            </name>
+            <name>
+              <surname>Otey</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Lanni</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title>Internet-based image analysis quantifies contractile behavior of individual fibroblasts inside model tissue</article-title>
+          <source>Biophys J</source>
+          <year>2003</year>
+          <volume>84</volume>
+          <fpage>2715</fpage>
+          <lpage>2727</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(03)75077-2</pub-id>
+          <pub-id pub-id-type="pmid">12668480</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wakatsuki</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Kolodney</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Zahalak</surname>
+              <given-names>GI</given-names>
+            </name>
+            <name>
+              <surname>Elson</surname>
+              <given-names>EL</given-names>
+            </name>
+          </person-group>
+          <article-title>Cell mechanics studied by a reconstituted model tissue</article-title>
+          <source>Biophys J</source>
+          <year>2000</year>
+          <volume>79</volume>
+          <fpage>2353</fpage>
+          <lpage>2368</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0006-3495(00)76481-2</pub-id>
+          <pub-id pub-id-type="pmid">11053115</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Naruse</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Stamenovic</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Fredberg</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Mijailovich</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Tolic-Norrelykke</surname>
+              <given-names>IM</given-names>
+            </name>
+            <name>
+              <surname>Polte</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Mannix</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Ingber</surname>
+              <given-names>DE</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical behavior in living cells consistent with the tensegrity model</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2001</year>
+          <volume>98</volume>
+          <fpage>7765</fpage>
+          <lpage>7770</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.141199598</pub-id>
+          <pub-id pub-id-type="pmid">11438729</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zeng</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Ferrari</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Ulmer</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Veligodskiy</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Fischer</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Spatz</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Ventikos</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Poulikakos</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Kroschewski</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Three-dimensional modeling of mechanical forces in the extracellular matrix during epithelial lumen formation</article-title>
+          <source>Biophys J</source>
+          <year>2006</year>
+          <volume>90</volume>
+          <fpage>4380</fpage>
+          <lpage>4391</lpage>
+          <pub-id pub-id-type="doi">10.1529/biophysj.105.073494</pub-id>
+          <pub-id pub-id-type="pmid">16565042</pub-id>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

@@ -1,0 +1,3267 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="review-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Anal Bioanal Chem</journal-id>
+      <journal-title>Analytical and Bioanalytical Chemistry</journal-title>
+      <issn pub-type="ppub">1618-2642</issn>
+      <issn pub-type="epub">1618-2650</issn>
+      <publisher>
+        <publisher-name>Springer-Verlag</publisher-name>
+        <publisher-loc>Berlin/Heidelberg</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17047948</article-id>
+      <article-id pub-id-type="pmc">1797063</article-id>
+      <article-id pub-id-type="publisher-id">720</article-id>
+      <article-id pub-id-type="doi">10.1007/s00216-006-0720-y</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Review</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>The effect of the chemical, biological, and physical environment on quorum sensing in structured microbial communities</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Horswill</surname>
+            <given-names>Alexander R.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Stoodley</surname>
+            <given-names>Paul</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Stewart</surname>
+            <given-names>Philip S.</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Parsek</surname>
+            <given-names>Matthew R.</given-names>
+          </name>
+          <address>
+            <phone>+1-206-221-7871</phone>
+            <fax>+1-206-543-8297</fax>
+            <email>parsem@u.washington.edu</email>
+          </address>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Department of Microbiology, University of Iowa, Iowa, IA 52242 USA </aff>
+        <aff id="Aff2"><label>2</label>Center for Genomic Sciences, Allegheny-Singer Research Institute, Pittsburgh, PA 15212 USA </aff>
+        <aff id="Aff3"><label>3</label>Center for Biofilm Engineering, Montana State University, Bozeman, MT 59717-3980 USA </aff>
+        <aff id="Aff4"><label>4</label>Department of Microbiology, School of Medicine, University of Washington, 1959 NE Pacific Street, Box 357242, Seattle, WA 98195-7242 USA </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>19</day>
+        <month>9</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>1</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>387</volume>
+      <issue>2</issue>
+      <fpage>371</fpage>
+      <lpage>380</lpage>
+      <history>
+        <date date-type="received">
+          <day>16</day>
+          <month>6</month>
+          <year>2006</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>25</day>
+          <month>7</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>28</day>
+          <month>7</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer-Verlag 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>As researchers attempt to study quorum sensing in relevant clinical or environmental settings, it is apparent that many factors have the potential to affect signaling. These factors span a range of physical, chemical, and biological variables that can impact signal production, stability and distribution. Optimizing experimental systems to natural or clinical environments may be crucial for defining when and where quorum sensing occurs. These points are illustrated in our case study of <italic>S. aureus</italic> signaling in biofilms, where signal stability may be affected by the host environment. The basic signaling schemes have been worked out at the molecular level for a few of the major quorum-sensing systems. As these studies continue to refine our understanding of these mechanisms, an emerging challenge is to identify if and when the local environment can affect signaling.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Clinical/Biomedical analysis</kwd>
+        <kwd>Cell systems/Single cell analysis</kwd>
+        <kwd>Biosensors</kwd>
+        <kwd>Biofilm</kwd>
+        <kwd>Quorum sensing</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer-Verlag 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>As illustrated by many articles in this special issue, the diversity of mechanisms bacteria use to communicate with one another is remarkable. Quorum sensing is widespread among different bacterial species, emphasizing the importance of coordinating behavior as a group.</p>
+      <p>When considering the relevant context of quorum sensing, it is clear that the environment can be profoundly important. Many bacteria exist in spatially structured, multi-species communities, such as biofilms on submerged surfaces or flocs in the water column of aquatic environments [<xref ref-type="bibr" rid="CR1">1</xref>, <xref ref-type="bibr" rid="CR2">2</xref>]. Within these communities bacteria may achieve the high cell numbers capable of generating the local signal concentrations required to produce a quorum sensing response. Quorum sensing undoubtedly occurs in situations where bacteria are growing planktonically, for example <italic>Vibrio harveyi</italic> quorum sensing-controlled bioluminescence in the ocean, thought to produce the &#x201C;milky seas&#x201D; phenomenon [<xref ref-type="bibr" rid="CR3">3</xref>, <xref ref-type="bibr" rid="CR4">4</xref>]. An argument could, however, be made that quorum sensing is more likely to occur in structured communities. If the reader accepts this point, further considerations lead to some interesting questions for example: 
+<list list-type="bullet"><list-item><p>Are certain signals better suited for signaling in different types of environments?</p></list-item><list-item><p>What are the important parameters influencing signaling in different environments?</p></list-item></list></p>
+      <p>Take, as an example, the well-studied, environmentally ubiquitous <italic>Pseudomonas aeruginosa</italic>. This bacterium has been isolated from a range of soil and aquatic samples [<xref ref-type="bibr" rid="CR5">5</xref>&#x2013;<xref ref-type="bibr" rid="CR7">7</xref>]. The nature of signaling in these environments could be quite different, because signal production and diffusion dynamics may change.</p>
+      <p>This review will discuss factors that may affect signaling in structured microbial communities. In addition, quorum sensing in <italic>Staphylococcus aureus</italic>, a peptide-based signaling system, will be briefly reviewed and its role in biofilm formation will be discussed.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Factors affecting signal diffusion, stability, and distribution</title>
+      <p>The traditional way of studying quorum sensing in the laboratory is in shaken liquid-batch cultures. The quorum sensing response occurs at a specific point in the growth curve, coinciding with a threshold concentration of signal. Volume is fixed in a culture flask and signal molecules produced by bacteria usually increase in concentration with time (unless they are degraded). Batch cultures represent a closed system in which only gaseous exchange occurs. Most structured communities are in open systems in which exchange occurs with the surrounding liquid [<xref ref-type="bibr" rid="CR1">1</xref>]. In an open, flowing system, signals may be &#x201C;washed&#x201D; away by the overlying fluid. In open systems the concentration of signal molecules within structured communities is primarily a function of: 
+<list list-type="order"><list-item><p>signal-production rate;</p></list-item><list-item><p>the degradation rate or half-life of the signal;</p></list-item><list-item><p>the diffusion properties of the signal; and</p></list-item><list-item><p>the external hydrodynamic or mass-transfer conditions.</p></list-item></list></p>
+      <p>The prevailing environmental conditions and resident biology are, to different degrees, important for each of these processes.</p>
+      <sec id="Sec3">
+        <title>The effects of signal and environmental chemistry on quorum sensing</title>
+        <p>Some of the best-studied quorum-sensing signals include the acyl-homoserine lactones (AHL) used by many Gram-negative bacterial species, small peptides used by some Gram-positive species, and the furans of the phylogenetically widely spread AI-2 signaling (reviews are available elsewhere [<xref ref-type="bibr" rid="CR8">8</xref>&#x2013;<xref ref-type="bibr" rid="CR10">10</xref>]). Signal chemistry varies widely in different quorum-sensing systems and is important for determining its stability and diffusion characteristics in different environments.</p>
+        <p>All AHL signals have a characteristic homoserine lactone moiety. The homoserine lactone is derived from <italic>S</italic>-adenosylmethionine, one of the substrates for AHL synthesis [<xref ref-type="bibr" rid="CR11">11</xref>&#x2013;<xref ref-type="bibr" rid="CR13">13</xref>]. Although stable at neutral and slightly acidic pH, the lactone ring is subject to chemical hydrolysis under basic conditions [<xref ref-type="bibr" rid="CR14">14</xref>, <xref ref-type="bibr" rid="CR15">15</xref>]. The resulting product (e.g. butyryl-homoserine lactone would become butyryl-homoserine) lacks biological signaling activity and is capable of spontaneously re-lactonizing when the pH is lowered. The formula describing the relationship between pH and the lactone ring stability is 1/(1&#xD7;10<sup>7</sup>&#xD7;[OH<sup>&#x2212;</sup>]) [<xref ref-type="bibr" rid="CR14">14</xref>], which gives the half life in days. For example, at pH 7 the homoserine lactone ring would be stable for hours whereas at pH 8.5 the stability would be of the order of minutes (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). In many environments this might be insignificant. In some alkaline environments, however, like the photosynthetic mats at Octopus Springs in Yellowstone National Park, the pH is high enough to potentially affect signal gradients. Kaufmann et al. recently demonstrated that in addition to lactone hydrolysis, the 3-oxo-C12 AHL of <italic>P. aeruginosa</italic> is capable of spontaneously undergoing a Claisen-like condensation reaction in aqueous environments, forming a tetramic acid product, 3-hydroxydecylidene 5-(2-hydroxyethyl) pyrrolidine-2,4-dione (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) [<xref ref-type="bibr" rid="CR16">16</xref>]. This compound was shown to have significant antimicrobial activity against other species and a high affinity for iron. It was proposed this iron-binding activity constituted an alternative means of acquiring iron by <italic>P. aeruginosa</italic>.
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Predicted AHL half-lives in different alkaline environments</p></caption><graphic position="anchor" xlink:href="216_2006_720_Fig1_HTML" id="MO1"/></fig><fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Structures of quorum-sensing signals and their derivatives. Letter designations for the Gram-positive peptide signals indicate amino acids. For the <italic>L. lactis</italic> signal nisin, the structural abbreviations were: <italic>Bu</italic>, dehydrobutirine with a lanthionine bridge; <italic>Ha</italic>, dehydroalanine; <italic>Hb</italic>, dehydrobutirine</p></caption><graphic position="anchor" xlink:href="216_2006_720_Fig2_HTML" id="MO2"/></fig></p>
+        <p>Structured communities can create highly heterogeneous localized niches where chemistry can vary drastically over very small distances. For example, consumption of dissolved oxygen by laboratory biofilm cells can result in completely anaerobic regions within the biofilm only 100&#xA0;&#x3BC;m from the fully oxygen saturated overlying liquid [<xref ref-type="bibr" rid="CR17">17</xref>]. Similarly, pH can vary dramatically, as demonstrated by pH microelectrodes positioned in biofilms formed from the dental pathogen <italic>Streptococcus mutans</italic>. On addition of the growth substrate sucrose, the pH dropped from 7 outside the biofilm to 4.6 approximately 100&#xA0;&#x3BC;m deep within the biofilm (Gieseke A, Nguyen D, von Ohle C, Stoodley P; unpublished results). Clearly, if the half-life of signaling molecules is a function of local chemistry it is reasonable to expect that degradation rates will vary in the community.</p>
+        <p>The acyl side-chains of AHLs range in length from 4 to 18 carbon atoms [<xref ref-type="bibr" rid="CR18">18</xref>, <xref ref-type="bibr" rid="CR19">19</xref>]. The substitution chemistry of the acyl side-chain is also highly variable. Although most AHLs have a ketone group at the C1 position, some AHLs also have either a ketone or hydroxyl group at the C3 position. In addition, the acyl side-chain can vary in saturation. Although most AHLs have fully saturated acyl side-chains, some, for example the 3-hydroxy,7-<italic>cis</italic>-tetradecanoyl homoserine lactone of <italic>Rhizobium leguminosarum</italic>, are unsaturated [<xref ref-type="bibr" rid="CR19">19</xref>, <xref ref-type="bibr" rid="CR20">20</xref>]. All these features of AHL acyl side-chain chemistry, in particular acyl chain length, affect the relative hydrophobicity of the signal. Pearson et al. observed this for <italic>P. aeruginosa</italic>, which produces two major AHL signals, a C4 (i.e. four-carbon side-chain) and 3-oxo-C12 AHL (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) [<xref ref-type="bibr" rid="CR21">21</xref>]. They found that the C4 signal diffused freely across the cell membrane whereas the 3-oxo-C12 signal partitioned to the cell membrane, where its extrusion was aided by the activity of the MexAB-OprM efflux pump.</p>
+        <p>The hydrophobicity of the local environment could have a large effect on AHL diffusion properties. For example, several AHL-utilizing bacterial species are also capable of producing highly hydrophobic, secreted polysaccharides (e.g. the pel/psl polysaccharides of <italic>P. aeruginosa</italic>) [<xref ref-type="bibr" rid="CR22">22</xref>]. In a structured community, such as a biofilm, secreted polysaccharides can serve as the scaffolding holding the community together [<xref ref-type="bibr" rid="CR23">23</xref>]. Under such conditions these polysaccharides might also act as an AHL-sequestering matrix. Charlton et al. provided evidence of this, indicating that the 3-oxo-C12 signal of <italic>P. aeruginosa</italic> partitioned into the extracellular biofilm matrix [<xref ref-type="bibr" rid="CR24">24</xref>]. Perhaps the C4 signal has reduced reactivity with the biofilm matrix, making it a more effective signal in a biofilm and explaining why it is produced in greater amounts than 3-oxo-C12 by <italic>P. aeruginosa</italic> growing as a biofilm [<xref ref-type="bibr" rid="CR25">25</xref>].</p>
+        <p>Another factor affecting AHL stability in the environment is biologically-driven signal degradation. Emphasizing this point, Wang et al. demonstrated that radiolabled AHLs fed to soil microbial communities were almost instantly mineralized [<xref ref-type="bibr" rid="CR26">26</xref>]! Several bacterial species have the ability to use AHLs as carbon and nitrogen sources. These include species that produce their own AHLs and those known not to make them. Why some organisms both make and break down their own AHLs is a mystery. AHL degradation occurs as a result of two primary types of enzymatic activity, lactonases, which break the homoserine lactone ring, and acylases, which cleave the amide bond linking the acyl side-chain to the homoserine lactone ring [<xref ref-type="bibr" rid="CR27">27</xref>&#x2013;<xref ref-type="bibr" rid="CR31">31</xref>]. Biological AHL degradation is a key consideration in multi-species environments. Leadbetter proposed the concept of &#x201C;insulation&#x201D; in which AHL-degrading organisms could prevent AHLs produced by bacteria spatially fixed in one location from reaching other bacteria of the same species [<xref ref-type="bibr" rid="CR26">26</xref>].</p>
+        <p>Environmental chemistry also plays a key role in AI-2 signaling. The paradigm for this type of quorum sensing is the <italic>luxS</italic> system of <italic>Vibrio harveyi</italic> [<xref ref-type="bibr" rid="CR8">8</xref>]. One of the key steps in AI-2 signal synthesis is the LuxS-catalyzed conversion of <italic>S</italic>-ribosyl homocysteine to homocysteine and 4,5-dihydroxy-2,3-pentanedione (DPD) [<xref ref-type="bibr" rid="CR32">32</xref>]. DPD is believed to be the key precursor to all AI-2 signals. DPD undergoes non-enzymatic cyclization and a number of spontaneous, reversible rearrangements to form the active signal-a furanosyl borate diester and other furans [<xref ref-type="bibr" rid="CR33">33</xref>, <xref ref-type="bibr" rid="CR34">34</xref>]. The AI-2 signal for <italic>Salmonella typhimurium</italic> was recently solved and found to be, (2<italic>R</italic>,4<italic>S</italic>)-2-methyl-2,3,3,4-tetrahydroxytetrahydrofuran, a molecule related to, but structurally distinct from, the <italic>V. harveyi</italic> AI-2 (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) [<xref ref-type="bibr" rid="CR35">35</xref>]. Spontaneous extracellular chemical rearrangements of <italic>S. typhimurium</italic> AI-2 can produce the V. <italic>harveyi</italic> AI-2 signal; the reverse is also true [<xref ref-type="bibr" rid="CR35">35</xref>]. Current thinking is that the local chemical environment can affect the ratio of the different furanosyl esters. In particular, the presence of borate may shift the equilibrium toward formation of the V. <italic>harveyi</italic> AI-2 [<xref ref-type="bibr" rid="CR35">35</xref>].</p>
+        <p>The chemical structures of the Gram-positive quorum-sensing peptides vary greatly in the number of residues and the types of modification (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). Because of the post-translational modifications on these peptides and their inability to diffuse across membranes, their biosynthetic pathways are more complex than those of the AHLs and dedicated signal-export systems are usually required. Many also induce their own biosynthesis, and are thus frequently termed &#x201C;autoinducing peptides&#x201D;. Several signals are simple linear peptides, for example the 17-residue competence-stimulating peptide (CSP) which regulates competence in <italic>Streptococcus pneumoniae</italic> [<xref ref-type="bibr" rid="CR36">36</xref>]. The corresponding linear competence pheromone in <italic>Bacillus subtilis</italic>, called ComX, is more unusual in that an internal tryptophan residue has been cyclized and isoprenylated with a geranyl moiety [<xref ref-type="bibr" rid="CR37">37</xref>], a modification that is catalyzed by ComQ [<xref ref-type="bibr" rid="CR38">38</xref>].</p>
+        <p>Perhaps the largest and most complex peptide signals are the lantibiotics, which also have antimicrobial activity [<xref ref-type="bibr" rid="CR39">39</xref>]. These molecules, for example nisin produced by <italic>Lactococcus lactis</italic>, are known to positively regulate their own biosynthesis in a density-dependent manner. They also have extensive post-translation modifications, including dehydrated residues, such as dehydroalanine and dehydrobutyrine, and thioether bridges called lanthionines (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref> depicts the base structure of the lantibiotic, nisin, of <italic>L. lactis</italic>). An emerging class of peptide signals are the cyclic lactones and thiolactones [<xref ref-type="bibr" rid="CR40">40</xref>]. The first of this class to be discovered was the type I autoinducing peptide (AIP) of <italic>Staphylococcus aureus</italic>, an eight-residue thiolactone-containing peptide with the C-terminus constrained through linkage with a cysteine side-chain [<xref ref-type="bibr" rid="CR41">41</xref>]. Since the discovery of AIPs, related signals have been identified in <italic>Enterococcus faecalis</italic> [<xref ref-type="bibr" rid="CR42">42</xref>], <italic>Listeria monocytogenes</italic> [<xref ref-type="bibr" rid="CR43">43</xref>], and other Staphylococci [<xref ref-type="bibr" rid="CR44">44</xref>].</p>
+        <p>Environmental conditions can have a significant effect on peptide signal stability. The linear peptides are likely to have short half-lives as they are rapidly metabolized by the action of secreted proteases. Indeed, this issue has led some to question their role as a means of communication, raising the possibility they serve as a general strategy for a single cell to time regulatory events [<xref ref-type="bibr" rid="CR45">45</xref>]. In contrast, the lantibiotics have multiple lanthionine bridges that block the activity of many proteases [<xref ref-type="bibr" rid="CR46">46</xref>], greatly improving the longevity of these molecules. Like AHLs, lantibiotics are pH-sensitive, with solubility and stability dropping rapidly at higher pH; those with dehydrated residues are also reactive with thiols [<xref ref-type="bibr" rid="CR47">47</xref>]. Because of these chemical constraints, the lantibiotic nisin has a half-life of only 0.9&#xA0;h in mouse serum [<xref ref-type="bibr" rid="CR48">48</xref>], the pH of which is approximately 7.3. For <italic>L. lactis</italic> in the environment, however, growth and production of nisin are optimum at lower pH, at which stability is greater, facilitating autoinduction. In a similar fashion, the thiolactone-containing peptides are resistant to proteolysis and sensitive to high pH and reactive thiols (chemistry of the <italic>S. aureus</italic> AIP is discussed in more detail below), and some have increased sensitivity to oxidative damage [<xref ref-type="bibr" rid="CR49">49</xref>]. Although it remains to be demonstrated, protease resistance may be one of the most significant environmental constraints faced by bacteria using peptide communication signals and extensive post-translational modifications could have evolved to overcome this problem.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>The effect of the hydrodynamic environment on quorum sensing</title>
+        <p>Mass transfer is the physical process by which molecules are transported in a system, and it has the potential to affect cell-to-cell signaling in many ways. Delivery of nutrients to the active biomass in the structured community is one example. This could affect the relative metabolic activity of the community, which in turn has the potential to affect signal-production rates. Mass transfer is affected by the hydrodynamics of the bulk fluid and the geometry of the structured community. These two factors affect each other, because a microbial community both shapes, and is shaped by, its external environment.</p>
+        <p>If liquid flow is a feature of the environment, it will wash signal away, diluting its concentration within the community. In these circumstances the system can be divided into three zones (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). First, the biomass of the community which is producing signaling molecules, second, the viscous sublayer (<italic>&#x3B4;</italic>) located at the biomass-bulk fluid interface, and, third, the well mixed turbulent core of the overlying fluid. In laminar flow there is no turbulent core and <italic>&#x3B4;</italic> essentially extends to either the center of the channel if flow is in a closed conduit (e.g. pipe or catheter) or to the fluid surface if flow is in an open channel (e.g. river). Using this simplified system we have constructed a one-dimensional model based on a flat biofilm to illustrate how different values of <italic>&#x3B4;</italic> may result in different concentration profiles while the thickness of the biofilm, the cell density in the biofilm, and the rate of signal-production in the biofilm remain constant. The model is based on coupling the diffusion of signal through the viscous sublayer with the simultaneous diffusion and production of signal that occurs within the biofilm itself. In the fluid outside the biofilm, the concentration of signal changes linearly: 
+<disp-formula id="Equa"><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ C_{z} = C_{0} + {\left( {{k_{0} \times X_{b} \times L_{f} \times \delta } \mathord{\left/ {\vphantom {{k_{0} \times X_{b} \times L_{f} \times \delta } {D_{{aq}} }}} \right. \kern-\nulldelimiterspace} {D_{{aq}} }} \right)} \times \delta _{z} $$\end{document}</tex-math></disp-formula>where <italic>C</italic><sub><italic>z</italic></sub> is the signal concentration (mg L<sup>&#x2212;1</sup>) at depth <italic>z</italic>, <italic>C</italic><sub>0</sub> is the signal concentration outside the viscous sublayer (0&#xA0;mg L<sup>&#x2212;1</sup>), <italic>k</italic><sub>0</sub> is the signal production rate (2.96&#xD7;10<sup>&#x2212;17</sup>&#xA0;mg cell<sup>&#x2212;1</sup> s<sup>&#x2212;1</sup>), <italic>X</italic><sub>b</sub> is the active cell density in the biofilm (1&#xD7;10<sup>10</sup>&#xA0;CFU cm<sup>&#x2212;3</sup>), <italic>L</italic><sub>f</sub> is the biofilm thickness (50&#xA0;&#x3BC;m), <italic>&#x3B4;</italic> is the thickness of the viscous sublayer (0, 25, or 50&#xA0;&#x3BC;m), <italic>D</italic><sub>aq</sub> is the diffusion coefficient of the signal in water (4.9&#xD7;10<sup>&#x2212;6</sup>&#xA0;cm<sup>2</sup> s<sup>&#x2212;1</sup>), and <italic>&#x3B4;</italic><sub><italic>z</italic></sub> is the proportional depth within <italic>&#x3B4;</italic> (&#x3BC;m). Within the biofilm, the concentration of the signal changes quadratically with depth: 
+<disp-formula id="Equb"><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ C_{z} = {\left( {{k_{0} \times X_{b} \times L_{f} \times \delta } \mathord{\left/ {\vphantom {{k_{0} \times X_{b} \times L_{f} \times \delta } {D_{{aq}} }}} \right. \kern-\nulldelimiterspace} {D_{{aq}} }} \right)} \times L_{z} + {\left( {{k_{0} \times X_{b} \times L^{2}_{f} } \mathord{\left/ {\vphantom {{k_{0} \times X_{b} \times L^{2}_{f} } {D_{e} }}} \right. \kern-\nulldelimiterspace} {D_{e} }} \right)} \times L_{z} - {\left( {{k_{0} \times X_{b} \times L^{2}_{f} } \mathord{\left/ {\vphantom {{k_{0} \times X_{b} \times L^{2}_{f} } {D_{e} }}} \right. \kern-\nulldelimiterspace} {D_{e} }} \right)} \times L^{2}_{z} $$\end{document}</tex-math></disp-formula>where <italic>D</italic><sub>e</sub> is the effective diffusion coefficient of signal in the biofilm (1.23&#xD7;10<sup>&#x2212;6</sup>&#xA0;cm<sup>2</sup> s<sup>&#x2212;1</sup>) and <italic>L</italic><sub>z</sub> is the proportional depth within the biofilm (&#x3BC;m).
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>Schematic diagram illustrating how external flow may affect the concentration of a cell signal produced by biofilm cells. The biofilm is 50&#xA0;&#x3BC;m thick (so there is no oxygen limitation and we can assume equal signal production throughout the depth of the biofilm) and the relative concentration profiles are for three flow conditions: (<bold>a</bold>) Very high shear, negligible diffusion boundary layer (<italic>&#x3B4;</italic>). (<bold>b</bold>) Lower flow with a diffusion boundary layer of 25&#xA0;&#x3BC;m (<italic>&#x3B4;</italic><sub>B</sub>). (<bold>c</bold>) Lower flow, again, with a diffusion boundary layer of 50&#xA0;&#x3BC; (<italic>&#x3B4;</italic><sub>C</sub>). The model is steady-state Fickian diffusion for flat-slab geometry with a uniform density of bacteria producing signals at a constant rate with no degradation. There is no convection within the biofilm and no flux at the substratum. The concentration of signal in the turbulent core of the flow is zero. The effective diffusion coefficient in the biofilm is assumed to be 0.25 times that of the bulk fluid based on the molecular weight of 3-oxo-C12 AHL [<xref ref-type="bibr" rid="CR50">50</xref>]. For simplification the viscous sublayer is shown as the diffusion boundary layer. In reality the transition (the &#x201C;buffer region&#x201D; of the boundary layer) from the viscous sublayer to the turbulent core is not a sharp line, as depicted, but gradual. If we assume an inducing 3-oxo-C12 AHL concentration of 3&#xA0;mg L<sup>&#x2212;1</sup> (10&#xA0;&#x3BC;mol), depicted by the <italic>vertical dashed line</italic>, biofilm &#x201C;A&#x201D; is not induced at all, in biofilm &#x201C;B&#x201D; the bottom 50% is induced, and in biofilm &#x201C;C&#x201D; the bottom 75% is induced, as shown by the <italic>horizontal dashed lines</italic> where the inducing concentration intersects the concentration profile</p></caption><graphic position="anchor" xlink:href="216_2006_720_Fig3_HTML" id="MO3"/></fig></p>
+        <p>Where known we used data as best we could, based on the signal 3-oxo-C12 AHL, unknown model data were hypothetical. All data were based on those used for illustrative purposes by Stewart [<xref ref-type="bibr" rid="CR50">50</xref>].</p>
+        <p>These considerations led us to hypothesize that external flow conditions can affect quorum sensing in many ways. For example, in a somewhat closed, static system (e.g. a biofilm in a mud puddle or in the well of a microtitre plate), signals produced by a large, biofilm cell aggregate may induce a quorum-sensing response in neighboring bacteria that are not part of the aggregate. In contrast, in an open system subject to convective flow (e.g. a biofilm in a river, or the channel of a flow cell biofilm reactor), signals might be continuously removed from the system. Under these conditions mass transfer may prevent signals produced by a large biofilm cell aggregate from inducing cells in the vicinity of the aggregate. Experimental results on interspecies communications in dental plaque biofilms by Egland et al. [<xref ref-type="bibr" rid="CR51">51</xref>] support this idea, and suggest that diffusible signals are adapted to function over short distances. At higher flows the higher flux of signal molecules from structured communities may reduce signal concentration in the interior or core of the community. A subsequent consequence is that more biomass would be necessary to produce an inducing concentration of signal.</p>
+        <p>Few studies have directly addressed the effect of hydrodynamics on quorum sensing in structured communities. Purevdorj et al. [<xref ref-type="bibr" rid="CR52">52</xref>] found that at relatively high flow rates flow velocity was a stronger determinant of <italic>P. aeruginosa</italic> biofilm structure than quorum-sensing-required functions. Yarwood et al. [<xref ref-type="bibr" rid="CR54">54</xref>] grew wild type (WT) and accessory gene regulator (<italic>agr</italic>) mutant biofilms of <italic>S. aureus</italic> by batch culture under static conditions, batch culture on spinning disks, and in flow cells. The QS mutation had the greatest effect under static conditions, resulting in an increase in biofilm formation, consistent with the study of Vuong et al. [<xref ref-type="bibr" rid="CR55">55</xref>], who hypothesized that <italic>agr</italic> was a repressor of biofilm formation. Interestingly, there was no difference between WT and <italic>agr</italic> (quorum sensing) mutant biofilms when grown in flow cells. Care must, however, be taken in correlating growth system with phenotype, because media type and concentration were also varied in this study. Nevertheless, Fux et al. [<xref ref-type="bibr" rid="CR56">56</xref>] obtained similar results for flow cell-grown biofilms. After 24&#xA0;h the WT <italic>S. aureus</italic> biofilms had less biomass than a TRAP mutant but were significantly rougher. After 4&#xA0;days, however, there was little difference between the biofilms as measured by COMSTAT confocal image-analysis software [<xref ref-type="bibr" rid="CR57">57</xref>]. In the same study the opposite trend, as measured by viable plate counts, was observed for &#x201C;filter colony biofilms&#x201D; [<xref ref-type="bibr" rid="CR58">58</xref>] grown under static conditions on nutrient agar. The WT biofilms contained an order of magnitude more cells than the TRAP mutant. Interestingly, a regulatory network mathematical model has predicted that at intermediate concentrations of 3-oxo-C12, bacteria can suddenly switch between induced and noninduced states [<xref ref-type="bibr" rid="CR59">59</xref>]. This effect may help explain experimental observation of different biofilm phenotypes under what are assumed to be similar or even replicate growth conditions.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Quorum sensing in the gas phase with volatile signals</title>
+        <p>Quorum sensing is usually discussed and studied in the context of aqueous environments. Some environmental conditions, however, for example those found in soil, may not always be ideal for signaling in the liquid phase. Soil is subject to wetting and drying cycles, and even somewhat dry soils are teeming with metabolically active bacteria [<xref ref-type="bibr" rid="CR60">60</xref>, <xref ref-type="bibr" rid="CR61">61</xref>]. Under these conditions it may be advantageous to some bacterial species to engage in quorum sensing. Local cell numbers may be quite high, but not linked to one another through the liquid phase. The production of signals able to act through the gas phase would circumvent these issues. There is precedence for volatile signaling in the microbial world. An interesting example is the signaling molecule, 3-OH palmitic acid methyl ester (3-OH PAME) of <italic>Ralstonia solanacearum</italic> (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>) [<xref ref-type="bibr" rid="CR62">62</xref>]. The signal of this quorum-sensing system can act in the gas phase. This plant pathogen regulates the production of secreted polysaccharides (an important virulence factor) by use of 3-OH PAME [<xref ref-type="bibr" rid="CR63">63</xref>, <xref ref-type="bibr" rid="CR64">64</xref>], the synthesis of which is catalyzed by the <italic>phcB</italic> gene product [<xref ref-type="bibr" rid="CR63">63</xref>]. When 3-OH PAME concentrations reach &#x223C;5&#xA0;nmol L<sup>&#x2212;1</sup>, 3-OH PAME-regulated genes are induced, presumably because of interaction of the signal with the membrane-associated PhcS sensor kinase. Although homologs of <italic>phcB</italic> are not found on many of the microbial genomes yet sequenced, signaling in the gas phase may be one of the next important frontiers in quorum sensing.</p>
+      </sec>
+    </sec>
+    <sec id="Sec6">
+      <title>A case study of signaling in structured communities-Quorum-sensing in Staphylococcus aureus biofilms</title>
+      <p>Continuing with the themes of this review, a case study will be presented with a discussion on environmental, chemical, and biological factors discussed above that have the potential to affect quorum-sensing in <italic>S. aureus</italic> biofilms.</p>
+      <p><italic>S. aureus</italic> is a human commensal that resides in a non-pathogenic state in the nasal airways. When there is a breach in the host defenses enabling access, <italic>S. aureus</italic> can convert to a pathogenic state and secrete an impressive array of toxins, hemolysins, and degratory enzymes [<xref ref-type="bibr" rid="CR40">40</xref>], causing damage to host tissues. This lifestyle switch is mediated, in a cell-density-dependent manner, by the action of the AIP molecule. Early in the growth phase surface adhesins and antigens are produced, and when AIP reaches a critical concentration the quorum-sensing cascade is activated and these surface proteins are down-regulated and invasive factors are secreted. Microarray studies have revealed that 104 genes are up-regulated and 34 are down-regulated by the action of this quorum-sensing molecule [<xref ref-type="bibr" rid="CR65">65</xref>]; this represents almost five percent of the genome. Intriguingly, there are four specific classes of AIP molecule that approximately correlate with the type of disease caused by the producing <italic>S. aureus</italic> strain. In a fascinating mechanism of bacterial cross-talk these different classes of AIP cross-inhibit quorum-sensing in other <italic>S. aureus</italic> groups and other staphylococcal species [<xref ref-type="bibr" rid="CR41">41</xref>]; this may serve to isolate specific sub-populations for cooperative action.</p>
+      <p>The locus responsible for the quorum-sensing regulation in <italic>S. aureus</italic> is the accessory gene regulator or Agr locus and is known to contain two divergent transcripts, named RNAII and RNAIII [<xref ref-type="bibr" rid="CR40">40</xref>]. The RNAII transcript is an operon of four genes, <italic>agrBDCA</italic>, that encode factors required to synthesize AIP and activate the regulatory cascade (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>). The biosynthetic pathway leading to functional AIP is not clear, but it is known that AgrD is the peptide precursor of AIP and AgrB is a membrane protease involved in its processing [<xref ref-type="bibr" rid="CR66">66</xref>]. AgrC and AgrA form a typical two-component regulatory pair, and the binding of AIP to a surface receptor on AgrC activates this phosphoryl-transfer cascade [<xref ref-type="bibr" rid="CR67">67</xref>]. When phosphorylated, AgrA is known to bind and induce expression of the RNAIII transcript [<xref ref-type="bibr" rid="CR68">68</xref>], which encodes a regulatory RNA molecule that acts as the primary effector of <italic>S. aureus</italic> quorum-sensing [<xref ref-type="bibr" rid="CR69">69</xref>]. AgrA also induces expression of the Agr proteins through the RNAII transcript, triggering the autoinduction phenomenon.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>Schematic diagram of quorum-sensing systems of <italic>S. aureus</italic>. The gene locus for the <italic>agr</italic> system is shown in <italic>black</italic> and contains two divergent transcripts, RNAII and RNAIII, driven by the P2 and P3 promoters, respectively. The RNAII transcript encodes the <italic>agrBDCA</italic> operon, which encodes the signal, processing, and detection components for quorum-sensing in <italic>S. aureus</italic> (see text). The RNAIII transcript is a regulatory RNA that up-regulates and down-regulates all genes related to quorum-sensing. This transcript also encodes the amphipathic peptide &#x3B4;-hemolysin. RAP and TRAP are part of a second quorum-sensing system thought to be a precursor of the <italic>agr</italic> system. RAP is secreted and induces TRAP phosphorylation, which in turn induces expression of the RNAII transcript. RIP is a heptapeptide known to inhibit the ability of RAP to induce TRAP phosphorylation</p></caption><graphic position="anchor" xlink:href="216_2006_720_Fig4_HTML" id="MO4"/></fig></p>
+      <p>A second quorum-sensing cascade is thought to serve as a precursor to the Agr system [<xref ref-type="bibr" rid="CR70">70</xref>], setting the stage for AIP regulation. As <italic>S. aureus</italic> cells multiply, the RNAIII-activating protein (RAP) is secreted and accumulates outside the cell, and at a threshold concentration, RAP triggers the phosphorylation of the cytoplasmic protein TRAP [<xref ref-type="bibr" rid="CR71">71</xref>], which induces expression of the RNAII transcript (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>). Intriguingly, a linear heptapeptide called RIP is known to block the activity of RAP, enabling small-molecule control over <italic>S. aureus</italic> pathogenicity [<xref ref-type="bibr" rid="CR72">72</xref>].</p>
+      <sec id="Sec7">
+        <title>Chemistry of the <italic>S. aureus</italic> AIP signal</title>
+        <p>The reasons for evolving a cyclic thiolactone structure as a quorum-sensing signal are still not clear. The thioester bond and the presence of other labile amino acids reduce stability, because of the potential for oxidative damage, base-catalyzed hydrolysis, and thioester exchange. Indeed, the methionine residue in AIP is rapidly oxidized in vitro to a methionyl sulfoxide, converting the signal to an inactive byproduct [<xref ref-type="bibr" rid="CR49">49</xref>]. Similarly, oxidants produced in vivo by the phagocyte NADPH oxidase are known to accelerate this inactivation [<xref ref-type="bibr" rid="CR73">73</xref>]. Despite these issues, the AIP lifetime in host tissues is reported to be 3&#xA0;h [<xref ref-type="bibr" rid="CR74">74</xref>], which is more than adequate for regulation, bearing in mind that <italic>S. aureus</italic> doubles every 60&#xA0;min in the host [<xref ref-type="bibr" rid="CR75">75</xref>].</p>
+        <p>Structure-function studies have shown that the thiolactone cannot be replaced with a more stabile lactone, suggesting that the signal receptor might require acylation to activate the cascade [<xref ref-type="bibr" rid="CR76">76</xref>], although a lactam substitution does activate at high concentrations [<xref ref-type="bibr" rid="CR49">49</xref>]. As discussed above, constraining the peptide will improve metabolic stability to proteases [<xref ref-type="bibr" rid="CR77">77</xref>], by protecting the C-terminus and impeding access to endoproteases, which probably increases the half-life compared with that of the linear AIP counterpart. Clearly, further study is necessary to determine the physiological benefit of this thiolactone structure.</p>
+      </sec>
+      <sec id="Sec8">
+        <title>The relationship between <italic>S. aureus</italic> quorum-sensing and biofilm communities</title>
+        <p>Biofilm formation is increasingly being recognized as an important virulence factor in <italic>S. aureus</italic> pathogenesis. Several biofilm-associated diseases, including osteomyelitis [<xref ref-type="bibr" rid="CR78">78</xref>], endocarditis [<xref ref-type="bibr" rid="CR79">79</xref>], medical device infections [<xref ref-type="bibr" rid="CR80">80</xref>], and potentially even skin infections [<xref ref-type="bibr" rid="CR81">81</xref>], have much clinical relevance. The formation of <italic>S. aureus</italic> biofilms progresses in a similar fashion to the Gram-negative biofilms, with attachment followed by development into a highly-structured cell community. Several attachment factors, for example the microbial surface components recognizing adhesive matrix molecules (MSCRAMMs) and the surface-attached Atl protein, have been implicated in this initial stage of biofilm formation (reviewed elsewhere [<xref ref-type="bibr" rid="CR82">82</xref>, <xref ref-type="bibr" rid="CR83">83</xref>]). Secretion of a polysaccharide adhesin is thought to be critical for development of a structured biofilm [<xref ref-type="bibr" rid="CR84">84</xref>], although some biofilm-forming <italic>S. aureus</italic> strains cannot produce this polymer [<xref ref-type="bibr" rid="CR85">85</xref>]. Unlike some well-studied Gram-negative bacterial species, <italic>S. aureus</italic> are non-motile, which leads to significantly reduced biofilm architecture in flowing systems. The significance of this difference is not clear, because simple alterations of growth conditions for <italic>P. aeruginosa</italic> are known to eliminate higher-ordered biofilm structure [<xref ref-type="bibr" rid="CR86">86</xref>].</p>
+        <p>Because the development of a robust <italic>P. aeruginosa</italic> biofilm under some conditions requires an active quorum-sensing system [<xref ref-type="bibr" rid="CR53">53</xref>], one might assume the behavior of <italic>S. aureus</italic> is similar; the opposite seems to be true, however, because inactivation of the Agr system tends to enhance attachment [<xref ref-type="bibr" rid="CR87">87</xref>]. Agr is known to down-regulate surface attachment factors, providing an explanation of this observation. The Agr cascade also up-regulates both the secretion of proteases that can degrade these attachment factors and the secretion of amphipathic peptides (phenol-soluble modulins) that facilitate detachment [<xref ref-type="bibr" rid="CR83">83</xref>, <xref ref-type="bibr" rid="CR88">88</xref>], suggesting quorum-sensing may play a role in biofilm turnover. Despite these intriguing observations, deciphering the literature on this topic has been challenging, because of non-uniform biofilm culturing methods and strain-to-strain differences [<xref ref-type="bibr" rid="CR89">89</xref>]. To emphasize this point, enhanced attachment by Agr mutants in static biofilm systems is not observed in flowing biofilm reactor systems [<xref ref-type="bibr" rid="CR87">87</xref>, <xref ref-type="bibr" rid="CR90">90</xref>].</p>
+        <p>An elegant study by Yarwood et al. addressed some of the discrepancies in the literature and suggested an alterative role for <italic>S. aureus</italic> quorum-sensing in biofilms [<xref ref-type="bibr" rid="CR87">87</xref>]. Under static conditions attachment of Agr mutants was markedly better than that of wild-type; as shear force increased with increased flow rate, however, this advantage was lost and under some experimental conditions became a disadvantage. As in <italic>P. aeruginosa</italic> biofilm studies, the method and type of experiment seemed to dictate the requirement for the Agr system. By following a quorum-sensing promoter in a flow cell biofilm, Yarwood et al. observed that only patches of surface cells activated the Agr cascade. Surprisingly, these cells detached from the biofilm in periodic waves, suggesting an alternative role for the Agr system in the detachment and recycling phase of biofilm development.</p>
+        <p>In a biofilm infection of the host it seems probable that <italic>S. aureus</italic> will be subjected to increased flow and/or shear force, in addition to many other factors, which will affect the quorum-sensing phenomenon. Increased flow will probably dictate the local AIP concentration, potentially deactivating quorum-sensing by washing away the signal, whereas increased shear force could also perform this function, while also accelerating cell detachment. We can only speculate on how this interplay will affect <italic>S. aureus</italic> in the context of an infection, because studies in this area are limited, but given the medical importance of these biofilms, it warrants further exploration.</p>
+        <p>Complicating these biofilm studies are the frequent occurrence of quorum-sensing negative isolates in clinical models. In one study, 36% of <italic>S. epidermidis</italic> isolates from joint prostheses infections were Agr mutants [<xref ref-type="bibr" rid="CR80">80</xref>]; these mutants can also be isolated from chronic infections or through extended passage in vitro [<xref ref-type="bibr" rid="CR91">91</xref>, <xref ref-type="bibr" rid="CR92">92</xref>]. It has been proposed that the metabolic burden of the Agr cascade leads to the mutations in this locus [<xref ref-type="bibr" rid="CR40">40</xref>], with parallels to the in vitro conversion of mucoid <italic>P. aeruginosa</italic> strains to non-mucoid [<xref ref-type="bibr" rid="CR93">93</xref>]. The frequent occurrence of Agr mutants suggests it may be advantageous for some portion of an <italic>S. aureus</italic> population to dispense with the quorum-sensing system. By inactivating Agr, a more heterogeneous, robust biofilm is likely to form, with attachment of the mutants improved by the higher level of surface factor expression. Although it remains to be investigated, this heterogeneity could mirror findings for <italic>P. aeruginosa</italic> biofilms, in which variants arise at a greater frequency than in planktonic cultures [<xref ref-type="bibr" rid="CR94">94</xref>].</p>
+        <p>As studies on <italic>S. aureus</italic> progress, a plausible picture of the role of quorum-sensing in biofilm development is beginning to emerge. As <italic>S. aureus</italic> attaches and develops an initial biofilm, heterogeneity arising as a result of generation of Agr mutants may lead to a more robust structure with improved adherence properties. Communication between cells will be dictated by the secretion and sensing of AIP molecules, which will enable cross-activation or inhibition of quorum-sensing, depending on the staphylococcal subspecies present in close proximity. When a quorum is reached, a portion of the biofilm will slough off by down-regulation of adherence factors, which could potentially be dictated by the action of secreted proteases or amphipathic peptides. The detached <italic>S. aureus</italic> cells will have an activated quorum-sensing system that leads to the secretion of numerous invasive factors, enabling spread through the host tissues and the development of an infection. This model is in direct contrast to the well-studied <italic>P. aeruginosa</italic> paradigm, for which quorum sensing-regulated functions are important for maintaining the structural integrity of the biofilm. Clearly more studies are required to confirm or alter this hypothetical view of the <italic>S. aureus</italic> lifecycle, but as this model is refined, it may play a significant role in the development of treatment for staphylococcal diseases.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This work is supported by the (NSF), (NIH), and (CFF) and RO1 DC04173-04 (PI G.D. Ehrlich).</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hall-Stoodley</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Costerton</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Stoodley</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Nat Rev Microbiol</source>
+          <year>2004</year>
+          <volume>2</volume>
+          <issue>2</issue>
+          <fpage>95</fpage>
+          <lpage>108</lpage>
+          <pub-id pub-id-type="doi">10.1038/nrmicro821</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hall-Stoodley L, Costerton JW, Stoodley P (2004) Nat Rev Microbiol 2(2):95&#x2013;108 <pub-id pub-id-type="pmid">15040259</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davey</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>O&#x2019;Toole</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <source>Microbiol Mol Biol Rev</source>
+          <year>2000</year>
+          <volume>64</volume>
+          <issue>4</issue>
+          <fpage>847</fpage>
+          <lpage>867</lpage>
+          <pub-id pub-id-type="doi">10.1128/MMBR.64.4.847-867.2000</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Davey ME, O&#x2019;Toole GA (2000) Microbiol Mol Biol Rev 64(4):847&#x2013;867 <pub-id pub-id-type="pmid">11104821</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nealson</surname>
+              <given-names>KH</given-names>
+            </name>
+            <name>
+              <surname>Hastings</surname>
+              <given-names>JW</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2006</year>
+          <volume>72</volume>
+          <issue>4</issue>
+          <fpage>2295</fpage>
+          <lpage>2297</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.72.4.2295-2297.2006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nealson KH, Hastings JW (2006) Appl Environ Microbiol 72(4):2295&#x2013;2297 <pub-id pub-id-type="pmid">16597922</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Miller</surname>
+              <given-names>SD</given-names>
+            </name>
+            <name>
+              <surname>Haddock</surname>
+              <given-names>SH</given-names>
+            </name>
+            <name>
+              <surname>Elvidge</surname>
+              <given-names>CD</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>TF</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2005</year>
+          <volume>102</volume>
+          <issue>40</issue>
+          <fpage>14181</fpage>
+          <lpage>14184</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0507253102</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Miller SD, Haddock SH, Elvidge CD, Lee TF (2005) Proc Natl Acad Sci USA 102(40):14181&#x2013;14184, Epub 12005 Sep 14126 <pub-id pub-id-type="pmid">16186481</pub-id></citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schmeisser</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Stockigt</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Raasch</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Wingender</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Timmis</surname>
+              <given-names>KN</given-names>
+            </name>
+            <name>
+              <surname>Wenderoth</surname>
+              <given-names>DF</given-names>
+            </name>
+            <name>
+              <surname>Flemming</surname>
+              <given-names>HC</given-names>
+            </name>
+            <name>
+              <surname>Liesegang</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Schmitz</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Jaeger</surname>
+              <given-names>KE</given-names>
+            </name>
+            <name>
+              <surname>Streit</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2003</year>
+          <volume>69</volume>
+          <issue>12</issue>
+          <fpage>7298</fpage>
+          <lpage>7309</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.69.12.7298-7309.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schmeisser C, Stockigt C, Raasch C, Wingender J, Timmis KN, Wenderoth DF, Flemming HC, Liesegang H, Schmitz RA, Jaeger KE, Streit WR (2003) Appl Environ Microbiol 69(12):7298&#x2013;7309 <pub-id pub-id-type="pmid">14660379</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Troxler</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Azelvandre</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Zala</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Defago</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Haas</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>1997</year>
+          <volume>63</volume>
+          <issue>1</issue>
+          <fpage>213</fpage>
+          <lpage>219</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Troxler J, Azelvandre P, Zala M, Defago G, Haas D (1997) Appl Environ Microbiol 63(1):213&#x2013;219 <pub-id pub-id-type="pmid">16535486</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hu</surname>
+              <given-names>JY</given-names>
+            </name>
+            <name>
+              <surname>Fan</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Lin</surname>
+              <given-names>YH</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>HB</given-names>
+            </name>
+            <name>
+              <surname>Ong</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Dong</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Xu</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Ng</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>LH</given-names>
+            </name>
+          </person-group>
+          <source>Res Microbiol</source>
+          <year>2003</year>
+          <volume>154</volume>
+          <issue>9</issue>
+          <fpage>623</fpage>
+          <lpage>629</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.resmic.2003.09.004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hu JY, Fan Y, Lin YH, Zhang HB, Ong SL, Dong N, Xu JL, Ng WJ, Zhang LH (2003) Res Microbiol 154(9):623&#x2013;629 <pub-id pub-id-type="pmid">14596899</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Waters</surname>
+              <given-names>CM</given-names>
+            </name>
+            <name>
+              <surname>Bassler</surname>
+              <given-names>BL</given-names>
+            </name>
+          </person-group>
+          <source>Annu Rev Cell Dev Biol</source>
+          <year>2005</year>
+          <volume>21</volume>
+          <fpage>319</fpage>
+          <lpage>346</lpage>
+          <pub-id pub-id-type="doi">10.1146/annurev.cellbio.21.012704.131001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Waters CM, Bassler BL (2005) Annu Rev Cell Dev Biol 21:319&#x2013;346 <pub-id pub-id-type="pmid">16212498</pub-id></citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fuqua</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Nat Rev Mol Cell Biol</source>
+          <year>2002</year>
+          <volume>3</volume>
+          <issue>9</issue>
+          <fpage>685</fpage>
+          <lpage>695</lpage>
+          <pub-id pub-id-type="doi">10.1038/nrm907</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fuqua C, Greenberg EP (2002) Nat Rev Mol Cell Biol 3(9):685&#x2013;695 <pub-id pub-id-type="pmid">12209128</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lyon</surname>
+              <given-names>GJ</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>Peptides</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <issue>9</issue>
+          <fpage>1389</fpage>
+          <lpage>1403</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.peptides.2003.11.026</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lyon GJ, Novick RP (2004) Peptides 25(9):1389&#x2013;1403 <pub-id pub-id-type="pmid">15374643</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Parsek</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Val</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Hanzelka</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Cronan</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1999</year>
+          <volume>96</volume>
+          <issue>8</issue>
+          <fpage>4360</fpage>
+          <lpage>4365</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.96.8.4360</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Parsek MR, Val DL, Hanzelka BL, Cronan JE Jr, Greenberg EP (1999) Proc Natl Acad Sci USA 96(8):4360&#x2013;4365 <pub-id pub-id-type="pmid">10200267</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>More</surname>
+              <given-names>MI</given-names>
+            </name>
+            <name>
+              <surname>Finger</surname>
+              <given-names>LD</given-names>
+            </name>
+            <name>
+              <surname>Stryker</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Fuqua</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Eberhard</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Winans</surname>
+              <given-names>SC</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>1996</year>
+          <volume>272</volume>
+          <issue>5268</issue>
+          <fpage>1655</fpage>
+          <lpage>1658</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.272.5268.1655</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">More MI, Finger LD, Stryker JL, Fuqua C, Eberhard A, Winans SC (1996) Science 272(5268):1655&#x2013;1658 <pub-id pub-id-type="pmid">8658141</pub-id></citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schaefer</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Val</surname>
+              <given-names>DL</given-names>
+            </name>
+            <name>
+              <surname>Hanzelka</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Cronan</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1996</year>
+          <volume>93</volume>
+          <issue>18</issue>
+          <fpage>9505</fpage>
+          <lpage>9509</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.93.18.9505</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schaefer AL, Val DL, Hanzelka BL, Cronan JE Jr, Greenberg EP (1996) Proc Natl Acad Sci USA 93(18):9505&#x2013;9509 <pub-id pub-id-type="pmid">8790360</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schaefer</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Hanzelka</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Parsek</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Methods Enzymol</source>
+          <year>2000</year>
+          <volume>305</volume>
+          <fpage>288</fpage>
+          <lpage>301</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schaefer AL, Hanzelka BL, Parsek MR, Greenberg EP (2000) Methods Enzymol 305:288&#x2013;301 <pub-id pub-id-type="pmid">10812608</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Voelkert</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Grant</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <source>Anal Biochem</source>
+          <year>1970</year>
+          <volume>34</volume>
+          <fpage>131</fpage>
+          <lpage>137</lpage>
+          <pub-id pub-id-type="doi">10.1016/0003-2697(70)90093-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Voelkert E, Grant DR (1970) Anal Biochem 34:131&#x2013;137 <pub-id pub-id-type="pmid">5440902</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kaufmann</surname>
+              <given-names>GF</given-names>
+            </name>
+            <name>
+              <surname>Sartorio</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>S-H</given-names>
+            </name>
+            <name>
+              <surname>Rogers</surname>
+              <given-names>CJ</given-names>
+            </name>
+            <name>
+              <surname>Meijler</surname>
+              <given-names>MM</given-names>
+            </name>
+            <name>
+              <surname>Moss</surname>
+              <given-names>JA</given-names>
+            </name>
+            <name>
+              <surname>Clapham</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Brogan</surname>
+              <given-names>AP</given-names>
+            </name>
+            <name>
+              <surname>Dickerson</surname>
+              <given-names>TJ</given-names>
+            </name>
+            <name>
+              <surname>Janda</surname>
+              <given-names>KD</given-names>
+            </name>
+          </person-group>
+          <source>PNAS</source>
+          <year>2005</year>
+          <volume>102</volume>
+          <issue>2</issue>
+          <fpage>309</fpage>
+          <lpage>314</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0408639102</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kaufmann GF, Sartorio R, Lee S-H, Rogers CJ, Meijler MM, Moss JA, Clapham B, Brogan AP, Dickerson TJ, Janda KD (2005) PNAS 102(2):309&#x2013;314 <pub-id pub-id-type="pmid">15623555</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>deBeer</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Stoodley</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Roe</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Lewandowski</surname>
+              <given-names>Z</given-names>
+            </name>
+          </person-group>
+          <source>Biotechnol Bioeng</source>
+          <year>1994</year>
+          <volume>43</volume>
+          <fpage>1131</fpage>
+          <lpage>1138</lpage>
+          <pub-id pub-id-type="doi">10.1002/bit.260431118</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">deBeer D, Stoodley P, Roe F, Lewandowski Z (1994) Biotechnol Bioeng 43:1131&#x2013;1138 <pub-id pub-id-type="pmid">18615526</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schaefer</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Taylor</surname>
+              <given-names>TA</given-names>
+            </name>
+            <name>
+              <surname>Beatty</surname>
+              <given-names>JT</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2002</year>
+          <volume>184</volume>
+          <issue>23</issue>
+          <fpage>6515</fpage>
+          <lpage>6521</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.184.23.6515-6521.2002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schaefer AL, Taylor TA, Beatty JT, Greenberg EP (2002) J Bacteriol 184(23):6515&#x2013;6521 <pub-id pub-id-type="pmid">12426339</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wagner-Dobler</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Thiel</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Eberl</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Allgaier</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bodor</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Meyer</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ebner</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Hennig</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Pukall</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Schulz</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Chembiochem</source>
+          <year>2005</year>
+          <volume>6</volume>
+          <issue>12</issue>
+          <fpage>2195</fpage>
+          <lpage>2206</lpage>
+          <pub-id pub-id-type="doi">10.1002/cbic.200500189</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wagner-Dobler I, Thiel V, Eberl L, Allgaier M, Bodor A, Meyer S, Ebner S, Hennig A, Pukall R, Schulz S (2005) Chembiochem 6(12):2195&#x2013;2206 <pub-id pub-id-type="pmid">16283687</pub-id></citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Blosser-Middleton</surname>
+              <given-names>RS</given-names>
+            </name>
+            <name>
+              <surname>Gray</surname>
+              <given-names>KM</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2001</year>
+          <volume>183</volume>
+          <issue>23</issue>
+          <fpage>6771</fpage>
+          <lpage>6777</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.183.23.6771-6777.2001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Blosser-Middleton RS, Gray KM (2001) J Bacteriol 183(23):6771&#x2013;6777 <pub-id pub-id-type="pmid">11698364</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pearson</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Delden</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Iglewski</surname>
+              <given-names>BH</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>1999</year>
+          <volume>181</volume>
+          <issue>4</issue>
+          <fpage>1203</fpage>
+          <lpage>1210</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Pearson JP, Van Delden C, Iglewski BH (1999) J Bacteriol 181(4):1203&#x2013;1210 <pub-id pub-id-type="pmid">9973347</pub-id></citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kolter</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Nature</source>
+          <year>2006</year>
+          <volume>441</volume>
+          <issue>7091</issue>
+          <fpage>300</fpage>
+          <lpage>302</lpage>
+          <pub-id pub-id-type="doi">10.1038/441300a</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kolter R, Greenberg EP (2006) Nature 441(7091):300&#x2013;302 <pub-id pub-id-type="pmid">16710410</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Branda</surname>
+              <given-names>SS</given-names>
+            </name>
+            <name>
+              <surname>Vik</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Friedman</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Kolter</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <source>Trends Microbiol</source>
+          <year>2005</year>
+          <volume>13</volume>
+          <issue>1</issue>
+          <fpage>20</fpage>
+          <lpage>26</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.tim.2004.11.006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Branda SS, Vik S, Friedman L, Kolter R (2005) Trends Microbiol 13(1):20&#x2013;26 <pub-id pub-id-type="pmid">15639628</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Charlton</surname>
+              <given-names>TS</given-names>
+            </name>
+            <name>
+              <surname>Nys</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Netting</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Kumar</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Hentzer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Givskov</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kjelleberg</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Environ Microbiol</source>
+          <year>2000</year>
+          <volume>2</volume>
+          <issue>5</issue>
+          <fpage>530</fpage>
+          <lpage>541</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1462-2920.2000.00136.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Charlton TS, de Nys R, Netting A, Kumar N, Hentzer M, Givskov M, Kjelleberg S (2000) Environ Microbiol 2(5):530&#x2013;541 <pub-id pub-id-type="pmid">11233161</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Singh</surname>
+              <given-names>PK</given-names>
+            </name>
+            <name>
+              <surname>Schaefer</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Parsek</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Moninger</surname>
+              <given-names>TO</given-names>
+            </name>
+            <name>
+              <surname>Welsh</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Nature</source>
+          <year>2000</year>
+          <volume>407</volume>
+          <issue>6805</issue>
+          <fpage>762</fpage>
+          <lpage>764</lpage>
+          <pub-id pub-id-type="doi">10.1038/35037627</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Singh PK, Schaefer AL, Parsek MR, Moninger TO, Welsh MJ, Greenberg EP (2000) Nature 407(6805):762&#x2013;764 <pub-id pub-id-type="pmid">11048725</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>Y-J</given-names>
+            </name>
+            <name>
+              <surname>Leadbetter</surname>
+              <given-names>JR</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2005</year>
+          <volume>71</volume>
+          <issue>3</issue>
+          <fpage>1291</fpage>
+          <lpage>1299</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.71.3.1291-1299.2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wang Y-J, Leadbetter JR (2005) Appl Environ Microbiol 71(3):1291&#x2013;1299 <pub-id pub-id-type="pmid">15746331</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dong</surname>
+              <given-names>Y-H</given-names>
+            </name>
+            <name>
+              <surname>Xu</surname>
+              <given-names>J-L</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>X-Z</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L-H</given-names>
+            </name>
+          </person-group>
+          <source>PNAS</source>
+          <year>2000</year>
+          <volume>97</volume>
+          <issue>7</issue>
+          <fpage>3526</fpage>
+          <lpage>3531</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.060023897</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dong Y-H, Xu J-L, Li X-Z, Zhang L-H (2000) PNAS 97(7):3526&#x2013;3531 <pub-id pub-id-type="pmid">10716724</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lee</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>S-Y</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>J-J</given-names>
+            </name>
+            <name>
+              <surname>Yum</surname>
+              <given-names>D-Y</given-names>
+            </name>
+            <name>
+              <surname>Koo</surname>
+              <given-names>B-T</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>J-K</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2002</year>
+          <volume>68</volume>
+          <issue>8</issue>
+          <fpage>3919</fpage>
+          <lpage>3924</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.68.8.3919-3924.2002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lee SJ, Park S-Y, Lee J-J, Yum D-Y, Koo B-T, Lee J-K (2002) Appl Environ Microbiol 68(8):3919&#x2013;3924 <pub-id pub-id-type="pmid">12147491</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>H-B</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>L-H</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L-H</given-names>
+            </name>
+          </person-group>
+          <source>PNAS</source>
+          <year>2002</year>
+          <volume>99</volume>
+          <issue>7</issue>
+          <fpage>4638</fpage>
+          <lpage>4643</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.022056699</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Zhang H-B, Wang L-H, Zhang L-H (2002) PNAS 99(7):4638&#x2013;4643 <pub-id pub-id-type="pmid">11930013</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>JJ</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>J-I</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L-H</given-names>
+            </name>
+            <name>
+              <surname>Leadbetter</surname>
+              <given-names>JR</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2003</year>
+          <volume>69</volume>
+          <issue>10</issue>
+          <fpage>5941</fpage>
+          <lpage>5949</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.69.10.5941-5949.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Huang JJ, Han J-I, Zhang L-H, Leadbetter JR (2003) Appl Environ Microbiol 69(10):5941&#x2013;5949 <pub-id pub-id-type="pmid">14532048</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leadbetter</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2000</year>
+          <volume>182</volume>
+          <issue>24</issue>
+          <fpage>6921</fpage>
+          <lpage>6926</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.182.24.6921-6926.2000</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Leadbetter JR, Greenberg EP (2000) J Bacteriol 182(24):6921&#x2013;6926 <pub-id pub-id-type="pmid">11092851</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schauder</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Shokat</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Surette</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Bassler</surname>
+              <given-names>BL</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>2001</year>
+          <volume>41</volume>
+          <issue>2</issue>
+          <fpage>463</fpage>
+          <lpage>476</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2001.02532.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schauder S, Shokat K, Surette MG, Bassler BL (2001) Mol Microbiol 41(2):463&#x2013;476 <pub-id pub-id-type="pmid">11489131</pub-id></citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="other">Meijler MM, Hom LG, Kaufmann GF, McKenzie KM, Sun C, Moss JA, Matsushita M, Janda KD. Angew Chem Int Ed 43(16):2106&#x2013;2108</citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Schauder</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Potier</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Dorsselaer</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Pelczer</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Bassler</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Hughson</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>Nature</source>
+          <year>2002</year>
+          <volume>415</volume>
+          <issue>6871</issue>
+          <fpage>545</fpage>
+          <lpage>549</lpage>
+          <pub-id pub-id-type="doi">10.1038/415545a</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chen X, Schauder S, Potier N, Van Dorsselaer A, Pelczer I, Bassler BL, Hughson FM (2002) Nature 415(6871):545&#x2013;549 <pub-id pub-id-type="pmid">11823863</pub-id></citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Miller</surname>
+              <given-names>ST</given-names>
+            </name>
+            <name>
+              <surname>Xavier</surname>
+              <given-names>KB</given-names>
+            </name>
+            <name>
+              <surname>Campagna</surname>
+              <given-names>SR</given-names>
+            </name>
+            <name>
+              <surname>Taga</surname>
+              <given-names>ME</given-names>
+            </name>
+            <name>
+              <surname>Semmelhack</surname>
+              <given-names>MF</given-names>
+            </name>
+            <name>
+              <surname>Bassler</surname>
+              <given-names>BL</given-names>
+            </name>
+            <name>
+              <surname>Hughson</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <source>Molecular Cell</source>
+          <year>2004</year>
+          <volume>15</volume>
+          <issue>5</issue>
+          <fpage>677</fpage>
+          <lpage>687</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.molcel.2004.07.020</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Miller ST, Xavier KB, Campagna SR, Taga ME, Semmelhack MF, Bassler BL, Hughson FM (2004) Molecular Cell 15(5): 677&#x2013;687 <pub-id pub-id-type="pmid">15350213</pub-id></citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Havarstein</surname>
+              <given-names>LS</given-names>
+            </name>
+            <name>
+              <surname>Coomaraswamy</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Morrison</surname>
+              <given-names>DA</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1995</year>
+          <volume>92</volume>
+          <issue>24</issue>
+          <fpage>11140</fpage>
+          <lpage>11144</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.92.24.11140</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Havarstein LS, Coomaraswamy G, Morrison DA (1995) Proc Natl Acad Sci USA 92(24):11140&#x2013;11144 <pub-id pub-id-type="pmid">7479953</pub-id></citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Okada</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sato</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Cho</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Iwata</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Nishio</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Dubnau</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Sakagami</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <source>Nat Chem Biol</source>
+          <year>2005</year>
+          <volume>1</volume>
+          <issue>1</issue>
+          <fpage>23</fpage>
+          <lpage>24</lpage>
+          <pub-id pub-id-type="doi">10.1038/nchembio709</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Okada M, Sato I, Cho SJ, Iwata H, Nishio T, Dubnau D, Sakagami Y (2005) Nat Chem Biol 1(1):23&#x2013;24 <pub-id pub-id-type="pmid">16407988</pub-id></citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ansaldi</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Dubnau</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <issue>1</issue>
+          <fpage>15</fpage>
+          <lpage>21</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.186.1.15-21.2004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ansaldi M, Dubnau D (2004) J Bacteriol 186(1):15&#x2013;21 <pub-id pub-id-type="pmid">14679219</pub-id></citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kleerebezem</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Peptides</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <issue>9</issue>
+          <fpage>1405</fpage>
+          <lpage>1414</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.peptides.2003.10.021</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kleerebezem M (2004) Peptides 25(9):1405&#x2013;1414 <pub-id pub-id-type="pmid">15374644</pub-id></citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>2003</year>
+          <volume>48</volume>
+          <issue>6</issue>
+          <fpage>1429</fpage>
+          <lpage>1449</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2003.03526.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Novick RP (2003) Mol Microbiol 48(6):1429&#x2013;1449 <pub-id pub-id-type="pmid">12791129</pub-id></citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ji</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Beavis</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>1997</year>
+          <volume>276</volume>
+          <issue>5321</issue>
+          <fpage>2027</fpage>
+          <lpage>2030</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.276.5321.2027</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ji G, Beavis R, Novick RP (1997) Science 276(5321):2027&#x2013;2030 <pub-id pub-id-type="pmid">9197262</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nakayama</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Cao</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Horii</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Sakuda</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Akkermans</surname>
+              <given-names>AD</given-names>
+            </name>
+            <name>
+              <surname>Vos</surname>
+              <given-names>WM</given-names>
+            </name>
+            <name>
+              <surname>Nagasawa</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>2001</year>
+          <volume>41</volume>
+          <issue>1</issue>
+          <fpage>145</fpage>
+          <lpage>154</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2001.02486.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nakayama J, Cao Y, Horii T, Sakuda S, Akkermans AD, de Vos WM, Nagasawa H (2001) Mol Microbiol 41(1):145&#x2013;154 <pub-id pub-id-type="pmid">11454207</pub-id></citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Autret</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Raynaud</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Dubail</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Berche</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Charbit</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <source>Infect Immun</source>
+          <year>2003</year>
+          <volume>71</volume>
+          <issue>8</issue>
+          <fpage>4463</fpage>
+          <lpage>4471</lpage>
+          <pub-id pub-id-type="doi">10.1128/IAI.71.8.4463-4471.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Autret N, Raynaud C, Dubail I, Berche P, Charbit A (2003) Infect Immun 71(8):4463&#x2013;4471 <pub-id pub-id-type="pmid">12874326</pub-id></citation>
+      </ref>
+      <ref id="CR44">
+        <label>44.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ji</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Pei</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Qiu</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Lin</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Benito</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Lina</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2005</year>
+          <volume>187</volume>
+          <issue>9</issue>
+          <fpage>3139</fpage>
+          <lpage>3150</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.187.9.3139-3150.2005</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ji G, Pei W, Zhang L, Qiu R, Lin J, Benito Y, Lina G, Novick RP (2005) J Bacteriol 187(9):3139&#x2013;3150 <pub-id pub-id-type="pmid">15838041</pub-id></citation>
+      </ref>
+      <ref id="CR45">
+        <label>45.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perego</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Brannigan</surname>
+              <given-names>JA</given-names>
+            </name>
+          </person-group>
+          <source>Peptides</source>
+          <year>2001</year>
+          <volume>22</volume>
+          <issue>10</issue>
+          <fpage>1541</fpage>
+          <lpage>1547</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0196-9781(01)00490-9</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Perego M, Brannigan JA (2001) Peptides 22(10):1541&#x2013;1547 <pub-id pub-id-type="pmid">11587783</pub-id></citation>
+      </ref>
+      <ref id="CR46">
+        <label>46.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chatterjee</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Paul</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Xie</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Donk</surname>
+              <given-names>WA</given-names>
+            </name>
+          </person-group>
+          <source>Chem Rev</source>
+          <year>2005</year>
+          <volume>105</volume>
+          <issue>2</issue>
+          <fpage>633</fpage>
+          <lpage>684</lpage>
+          <pub-id pub-id-type="doi">10.1021/cr030105v</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chatterjee C, Paul M, Xie L, van der Donk WA (2005) Chem Rev 105(2):633&#x2013;684 <pub-id pub-id-type="pmid">15700960</pub-id></citation>
+      </ref>
+      <ref id="CR47">
+        <label>47.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Liu</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>JN</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>1990</year>
+          <volume>56</volume>
+          <issue>8</issue>
+          <fpage>2551</fpage>
+          <lpage>2558</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Liu W, Hansen JN (1990) Appl Environ Microbiol 56(8):2551&#x2013;2558 <pub-id pub-id-type="pmid">2119570</pub-id></citation>
+      </ref>
+      <ref id="CR48">
+        <label>48.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edwards</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Bradley</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Klugman</surname>
+              <given-names>KP</given-names>
+            </name>
+          </person-group>
+          <source>J Antimicrob Chemother</source>
+          <year>1998</year>
+          <volume>42</volume>
+          <issue>2</issue>
+          <fpage>265</fpage>
+          <lpage>266</lpage>
+          <pub-id pub-id-type="doi">10.1093/jac/42.2.265</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Edwards JR, Bradley JS, Klugman KP (1998) J Antimicrob Chemother 42(2):265&#x2013;266 <pub-id pub-id-type="pmid">9738849</pub-id></citation>
+      </ref>
+      <ref id="CR49">
+        <label>49.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McDowell</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Affas</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Reynolds</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Holden</surname>
+              <given-names>MT</given-names>
+            </name>
+            <name>
+              <surname>Wood</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Saint</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Cockayne</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Hill</surname>
+              <given-names>PJ</given-names>
+            </name>
+            <name>
+              <surname>Dodd</surname>
+              <given-names>CE</given-names>
+            </name>
+            <name>
+              <surname>Bycroft</surname>
+              <given-names>BW</given-names>
+            </name>
+            <name>
+              <surname>Chan</surname>
+              <given-names>WC</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>2001</year>
+          <volume>41</volume>
+          <issue>2</issue>
+          <fpage>503</fpage>
+          <lpage>512</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2001.02539.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">McDowell P, Affas Z, Reynolds C, Holden MT, Wood SJ, Saint S, Cockayne A, Hill PJ, Dodd CE, Bycroft BW, Chan WC, Williams P (2001) Mol Microbiol 41(2):503&#x2013;512 <pub-id pub-id-type="pmid">11489134</pub-id></citation>
+      </ref>
+      <ref id="CR50">
+        <label>50.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>PS</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2003</year>
+          <volume>185</volume>
+          <issue>5</issue>
+          <fpage>1485</fpage>
+          <lpage>1491</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.185.5.1485-1491.2003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stewart PS (2003) J Bacteriol 185(5):1485&#x2013;1491 <pub-id pub-id-type="pmid">12591863</pub-id></citation>
+      </ref>
+      <ref id="CR51">
+        <label>51.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Egland</surname>
+              <given-names>PG</given-names>
+            </name>
+            <name>
+              <surname>Palmer</surname>
+              <given-names>RJJ</given-names>
+            </name>
+            <name>
+              <surname>Kolenbrander</surname>
+              <given-names>PE</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2004</year>
+          <volume>101</volume>
+          <issue>48</issue>
+          <fpage>16917</fpage>
+          <lpage>16922</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0407457101</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Egland PG, Palmer RJJ, Kolenbrander PE (2004) Proc Natl Acad Sci USA 101(48):16917&#x2013;16922 <pub-id pub-id-type="pmid">15546975</pub-id></citation>
+      </ref>
+      <ref id="CR52">
+        <label>52.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Purevdorj</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Costerton</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Stoodley</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2002</year>
+          <volume>68</volume>
+          <fpage>4457</fpage>
+          <lpage>4464</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.68.9.4457-4464.2002</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Purevdorj B, Costerton JW, Stoodley P (2002) Appl Environ Microbiol 68:4457&#x2013;4464 <pub-id pub-id-type="pmid">12200300</pub-id></citation>
+      </ref>
+      <ref id="CR53">
+        <label>53.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davies</surname>
+              <given-names>DG</given-names>
+            </name>
+            <name>
+              <surname>Parsek</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Pearson</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Iglewski</surname>
+              <given-names>BH</given-names>
+            </name>
+            <name>
+              <surname>Costerton</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>1998</year>
+          <volume>280</volume>
+          <issue>5361</issue>
+          <fpage>295</fpage>
+          <lpage>298</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.280.5361.295</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Davies DG, Parsek MR, Pearson JP, Iglewski BH, Costerton JW, Greenberg EP (1998) Science 280(5361):295&#x2013;298 <pub-id pub-id-type="pmid">9535661</pub-id></citation>
+      </ref>
+      <ref id="CR54">
+        <label>54.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yarwood</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Bartels</surname>
+              <given-names>DJ</given-names>
+            </name>
+            <name>
+              <surname>Volper</surname>
+              <given-names>EM</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <issue>6</issue>
+          <fpage>1838</fpage>
+          <lpage>1850</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.186.6.1838-1850.2004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yarwood JM, Bartels DJ, Volper EM, Greenberg EP (2004) J Bacteriol 186(6):1838&#x2013;1850 <pub-id pub-id-type="pmid">14996815</pub-id></citation>
+      </ref>
+      <ref id="CR55">
+        <label>55.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vuong</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Kocianova</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Yao</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Carmody</surname>
+              <given-names>AB</given-names>
+            </name>
+            <name>
+              <surname>Otto</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Infect Dis</source>
+          <year>2004</year>
+          <volume>190</volume>
+          <fpage>1498</fpage>
+          <lpage>1505</lpage>
+          <pub-id pub-id-type="doi">10.1086/424487</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vuong C, Kocianova S, Yao Y, Carmody AB, Otto M (2004) J Infect Dis 190:1498&#x2013;1505 <pub-id pub-id-type="pmid">15378444</pub-id></citation>
+      </ref>
+      <ref id="CR56">
+        <label>56.</label>
+        <citation citation-type="other">Fux CA, Wilson S, Kim S, Nguyen D, Nistico L, Buchinsky FJ, Ehrlich GD, Balaban N, Stoodley P (2006) Antimicrob Agents Chemother Submitted</citation>
+      </ref>
+      <ref id="CR57">
+        <label>57.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heydorn</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Nielsen</surname>
+              <given-names>AT</given-names>
+            </name>
+            <name>
+              <surname>Hentzer</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sternberg</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Givskov</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Ersboll</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Molin</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Microbiology</source>
+          <year>2000</year>
+          <volume>146</volume>
+          <fpage>2395</fpage>
+          <lpage>2407</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Heydorn A, Nielsen AT, Hentzer M, Sternberg C, Givskov M, Ersboll B, Molin S (2000) Microbiology 146:2395&#x2013;2407 <pub-id pub-id-type="pmid">11021916</pub-id></citation>
+      </ref>
+      <ref id="CR58">
+        <label>58.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anderl</surname>
+              <given-names>JN</given-names>
+            </name>
+            <name>
+              <surname>Franklin</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Stewart</surname>
+              <given-names>PS</given-names>
+            </name>
+          </person-group>
+          <source>Antimicrob Agents Chemother</source>
+          <year>2000</year>
+          <volume>44</volume>
+          <fpage>1818</fpage>
+          <lpage>1824</lpage>
+          <pub-id pub-id-type="doi">10.1128/AAC.44.7.1818-1824.2000</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Anderl JN, Franklin MJ, Stewart PS (2000) Antimicrob Agents Chemother 44:1818&#x2013;1824 <pub-id pub-id-type="pmid">10858336</pub-id></citation>
+      </ref>
+      <ref id="CR59">
+        <label>59.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fagerlinda</surname>
+              <given-names>MG</given-names>
+            </name>
+            <name>
+              <surname>Rice</surname>
+              <given-names>SA</given-names>
+            </name>
+            <name>
+              <surname>Nilsson</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Harl&#xE9;n</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>James</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Charlton</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Kjelleberg</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>J Mol Microbiol Biotechnol</source>
+          <year>2003</year>
+          <volume>6</volume>
+          <fpage>88</fpage>
+          <lpage>100</lpage>
+          <pub-id pub-id-type="doi">10.1159/000076739</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fagerlinda MG, Rice SA, Nilsson P, Harl&#xE9;n M, James S, Charlton T, Kjelleberg S (2003) J Mol Microbiol Biotechnol 6:88&#x2013;100 <pub-id pub-id-type="pmid">15044827</pub-id></citation>
+      </ref>
+      <ref id="CR60">
+        <label>60.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Janssen</surname>
+              <given-names>PH</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>2006</year>
+          <volume>72</volume>
+          <issue>3</issue>
+          <fpage>1719</fpage>
+          <lpage>1728</lpage>
+          <pub-id pub-id-type="doi">10.1128/AEM.72.3.1719-1728.2006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Janssen PH (2006) Appl Environ Microbiol 72(3):1719&#x2013;1728 <pub-id pub-id-type="pmid">16517615</pub-id></citation>
+      </ref>
+      <ref id="CR61">
+        <label>61.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fierer</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Schimel</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Holden</surname>
+              <given-names>PA</given-names>
+            </name>
+          </person-group>
+          <source>Microb Ecol</source>
+          <year>2003</year>
+          <volume>45</volume>
+          <issue>1</issue>
+          <fpage>63</fpage>
+          <lpage>71</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00248-002-1007-2</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Fierer N, Schimel JP, Holden PA (2003) Microb Ecol 45(1):63&#x2013;71, Epub 2002 Dec 2010 <pub-id pub-id-type="pmid">12469245</pub-id></citation>
+      </ref>
+      <ref id="CR62">
+        <label>62.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Flavier</surname>
+              <given-names>AB</given-names>
+            </name>
+            <name>
+              <surname>Clough</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Schell</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Denny</surname>
+              <given-names>TP</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>1997</year>
+          <volume>26</volume>
+          <issue>2</issue>
+          <fpage>251</fpage>
+          <lpage>259</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.1997.5661945.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Flavier AB, Clough SJ, Schell MA, Denny TP (1997) Mol Microbiol 26(2):251&#x2013;259 <pub-id pub-id-type="pmid">9383151</pub-id></citation>
+      </ref>
+      <ref id="CR63">
+        <label>63.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clough</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Schell</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Denny</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>1997</year>
+          <volume>179</volume>
+          <issue>11</issue>
+          <fpage>3639</fpage>
+          <lpage>3648</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Clough S, Lee K, Schell M, Denny T (1997) J Bacteriol 179(11):3639&#x2013;3648 <pub-id pub-id-type="pmid">9171411</pub-id></citation>
+      </ref>
+      <ref id="CR64">
+        <label>64.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clough</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Flavier</surname>
+              <given-names>AB</given-names>
+            </name>
+            <name>
+              <surname>Schell</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Denny</surname>
+              <given-names>TP</given-names>
+            </name>
+          </person-group>
+          <source>Appl Environ Microbiol</source>
+          <year>1997</year>
+          <volume>63</volume>
+          <issue>3</issue>
+          <fpage>844</fpage>
+          <lpage>850</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Clough SJ, Flavier AB, Schell MA, Denny TP (1997) Appl Environ Microbiol 63(3):844&#x2013;850 <pub-id pub-id-type="pmid">16535550</pub-id></citation>
+      </ref>
+      <ref id="CR65">
+        <label>65.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dunman</surname>
+              <given-names>PM</given-names>
+            </name>
+            <name>
+              <surname>Murphy</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Haney</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Palacios</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Tucker-Kellogg</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>EL</given-names>
+            </name>
+            <name>
+              <surname>Zagursky</surname>
+              <given-names>RJ</given-names>
+            </name>
+            <name>
+              <surname>Shlaes</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Projan</surname>
+              <given-names>SJ</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2001</year>
+          <volume>183</volume>
+          <issue>24</issue>
+          <fpage>7341</fpage>
+          <lpage>7353</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.183.24.7341-7353.2001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dunman PM, Murphy E, Haney S, Palacios D, Tucker-Kellogg G, Wu S, Brown EL, Zagursky RJ, Shlaes D, Projan SJ (2001) J Bacteriol 183(24):7341&#x2013;7353 <pub-id pub-id-type="pmid">11717293</pub-id></citation>
+      </ref>
+      <ref id="CR66">
+        <label>66.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Qiu</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Pei</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Lin</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Ji</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <source>J Biol Chem</source>
+          <year>2005</year>
+          <volume>280</volume>
+          <issue>17</issue>
+          <fpage>16695</fpage>
+          <lpage>16704</lpage>
+          <pub-id pub-id-type="doi">10.1074/jbc.M411372200</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Qiu R, Pei W, Zhang L, Lin J, Ji G (2005) J Biol Chem 280(17):16695&#x2013;16704 <pub-id pub-id-type="pmid">15734745</pub-id></citation>
+      </ref>
+      <ref id="CR67">
+        <label>67.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lina</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Jarraud</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ji</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Greenland</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Pedraza</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Etienne</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Vandenesch</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>1998</year>
+          <volume>28</volume>
+          <issue>3</issue>
+          <fpage>655</fpage>
+          <lpage>662</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.1998.00830.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Lina G, Jarraud S, Ji G, Greenland T, Pedraza A, Etienne J, Novick RP, Vandenesch F (1998) Mol Microbiol 28(3):655&#x2013;662 <pub-id pub-id-type="pmid">9632266</pub-id></citation>
+      </ref>
+      <ref id="CR68">
+        <label>68.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Koenig</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Ray</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Maleki</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Smeltzer</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Hurlburt</surname>
+              <given-names>BK</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <issue>22</issue>
+          <fpage>7549</fpage>
+          <lpage>7555</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.186.22.7549-7555.2004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Koenig RL, Ray JL, Maleki SJ, Smeltzer MS, Hurlburt BK (2004) J Bacteriol 186(22):7549&#x2013;7555 <pub-id pub-id-type="pmid">15516566</pub-id></citation>
+      </ref>
+      <ref id="CR69">
+        <label>69.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Ross</surname>
+              <given-names>HF</given-names>
+            </name>
+            <name>
+              <surname>Projan</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Kornblum</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Kreiswirth</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Moghazeh</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Embo J</source>
+          <year>1993</year>
+          <volume>12</volume>
+          <issue>10</issue>
+          <fpage>3967</fpage>
+          <lpage>3975</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Novick RP, Ross HF, Projan SJ, Kornblum J, Kreiswirth B, Moghazeh S (1993) Embo J 12(10):3967&#x2013;3975 <pub-id pub-id-type="pmid">7691599</pub-id></citation>
+      </ref>
+      <ref id="CR70">
+        <label>70.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Balaban</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1995</year>
+          <volume>92</volume>
+          <issue>5</issue>
+          <fpage>1619</fpage>
+          <lpage>1623</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.92.5.1619</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Balaban N, Novick RP (1995) Proc Natl Acad Sci USA 92(5):1619&#x2013;1623 <pub-id pub-id-type="pmid">7533297</pub-id></citation>
+      </ref>
+      <ref id="CR71">
+        <label>71.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gov</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Borovok</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Korem</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Singh</surname>
+              <given-names>VK</given-names>
+            </name>
+            <name>
+              <surname>Jayaswal</surname>
+              <given-names>RK</given-names>
+            </name>
+            <name>
+              <surname>Wilkinson</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Rich</surname>
+              <given-names>SM</given-names>
+            </name>
+            <name>
+              <surname>Balaban</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <source>J Biol Chem</source>
+          <year>2004</year>
+          <volume>279</volume>
+          <issue>15</issue>
+          <fpage>14665</fpage>
+          <lpage>14672</lpage>
+          <pub-id pub-id-type="doi">10.1074/jbc.M311106200</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gov Y, Borovok I, Korem M, Singh VK, Jayaswal RK, Wilkinson BJ, Rich SM, Balaban N (2004) J Biol Chem 279(15):14665&#x2013;14672 <pub-id pub-id-type="pmid">14726534</pub-id></citation>
+      </ref>
+      <ref id="CR72">
+        <label>72.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Balaban</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Goldkorn</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Nhan</surname>
+              <given-names>RT</given-names>
+            </name>
+            <name>
+              <surname>Dang</surname>
+              <given-names>LB</given-names>
+            </name>
+            <name>
+              <surname>Scott</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Ridgley</surname>
+              <given-names>RM</given-names>
+            </name>
+            <name>
+              <surname>Rasooly</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Wright</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Larrick</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Rasooly</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Carlson</surname>
+              <given-names>JR</given-names>
+            </name>
+          </person-group>
+          <source>Science</source>
+          <year>1998</year>
+          <volume>280</volume>
+          <issue>5362</issue>
+          <fpage>438</fpage>
+          <lpage>440</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.280.5362.438</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Balaban N, Goldkorn T, Nhan RT, Dang LB, Scott S, Ridgley RM, Rasooly A, Wright SC, Larrick JW, Rasooly R, Carlson JR (1998) Science 280(5362):438&#x2013;440 <pub-id pub-id-type="pmid">9545222</pub-id></citation>
+      </ref>
+      <ref id="CR73">
+        <label>73.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rothfork</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Timmins</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Harris</surname>
+              <given-names>MN</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Lusis</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Otto</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Cheung</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Gresham</surname>
+              <given-names>HD</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2004</year>
+          <volume>101</volume>
+          <issue>38</issue>
+          <fpage>13867</fpage>
+          <lpage>13872</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0402996101</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rothfork JM, Timmins GS, Harris MN, Chen X, Lusis AJ, Otto M, Cheung AL, Gresham HD (2004) Proc Natl Acad Sci USA 101(38):13867&#x2013;13872 <pub-id pub-id-type="pmid">15353593</pub-id></citation>
+      </ref>
+      <ref id="CR74">
+        <label>74.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wright</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Jin</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2005</year>
+          <volume>102</volume>
+          <issue>5</issue>
+          <fpage>1691</fpage>
+          <lpage>1696</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0407661102</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Wright JS 3rd, Jin R, Novick RP (2005) Proc Natl Acad Sci USA 102(5):1691&#x2013;1696 <pub-id pub-id-type="pmid">15665088</pub-id></citation>
+      </ref>
+      <ref id="CR75">
+        <label>75.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Domingue</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Costerton</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>MR</given-names>
+            </name>
+          </person-group>
+          <source>FEMS Immunol Med Microbiol</source>
+          <year>1996</year>
+          <volume>16</volume>
+          <issue>3-4</issue>
+          <fpage>223</fpage>
+          <lpage>228</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1574-695X.1996.tb00139.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Domingue G, Costerton JW, Brown MR (1996) FEMS Immunol Med Microbiol 16(3-4):223&#x2013;228 <pub-id pub-id-type="pmid">9116639</pub-id></citation>
+      </ref>
+      <ref id="CR76">
+        <label>76.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mayville</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Ji</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Beavis</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Goger</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Novick</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Muir</surname>
+              <given-names>TW</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1999</year>
+          <volume>96</volume>
+          <issue>4</issue>
+          <fpage>1218</fpage>
+          <lpage>1223</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.96.4.1218</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mayville P, Ji G, Beavis R, Yang H, Goger M, Novick RP, Muir TW (1999) Proc Natl Acad Sci USA 96(4):1218&#x2013;1223 <pub-id pub-id-type="pmid">9990004</pub-id></citation>
+      </ref>
+      <ref id="CR77">
+        <label>77.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chan</surname>
+              <given-names>WC</given-names>
+            </name>
+            <name>
+              <surname>Coyle</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>J Med Chem</source>
+          <year>2004</year>
+          <volume>47</volume>
+          <issue>19</issue>
+          <fpage>4633</fpage>
+          <lpage>4641</lpage>
+          <pub-id pub-id-type="doi">10.1021/jm0400754</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Chan WC, Coyle BJ, Williams P (2004) J Med Chem 47(19):4633&#x2013;4641 <pub-id pub-id-type="pmid">15341477</pub-id></citation>
+      </ref>
+      <ref id="CR78">
+        <label>78.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smeltzer</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Thomas</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Hickmon</surname>
+              <given-names>SG</given-names>
+            </name>
+            <name>
+              <surname>Skinner</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>CL</given-names>
+            </name>
+            <name>
+              <surname>Griffith</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Parr</surname>
+              <given-names>TR</given-names>
+            </name>
+            <name>
+              <surname>Evans</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <source>J Orthop Res</source>
+          <year>1997</year>
+          <volume>15</volume>
+          <issue>3</issue>
+          <fpage>414</fpage>
+          <lpage>421</lpage>
+          <pub-id pub-id-type="doi">10.1002/jor.1100150314</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Smeltzer MS, Thomas JR, Hickmon SG, Skinner RA, Nelson CL, Griffith D, Parr TR Jr, Evans RP (1997) J Orthop Res 15(3):414&#x2013;421 <pub-id pub-id-type="pmid">9246088</pub-id></citation>
+      </ref>
+      <ref id="CR79">
+        <label>79.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cheung</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Eberhardt</surname>
+              <given-names>KJ</given-names>
+            </name>
+            <name>
+              <surname>Chung</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Yeaman</surname>
+              <given-names>MR</given-names>
+            </name>
+            <name>
+              <surname>Sullam</surname>
+              <given-names>PM</given-names>
+            </name>
+            <name>
+              <surname>Ramos</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Bayer</surname>
+              <given-names>AS</given-names>
+            </name>
+          </person-group>
+          <source>J Clin Invest</source>
+          <year>1994</year>
+          <volume>94</volume>
+          <issue>5</issue>
+          <fpage>1815</fpage>
+          <lpage>1822</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Cheung AL, Eberhardt KJ, Chung E, Yeaman MR, Sullam PM, Ramos M, Bayer AS (1994) J Clin Invest 94(5):1815&#x2013;1822 <pub-id pub-id-type="pmid">7962526</pub-id></citation>
+      </ref>
+      <ref id="CR80">
+        <label>80.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vuong</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Kocianova</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Yao</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Carmody</surname>
+              <given-names>AB</given-names>
+            </name>
+            <name>
+              <surname>Otto</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>J Infect Dis</source>
+          <year>2004</year>
+          <volume>190</volume>
+          <issue>8</issue>
+          <fpage>1498</fpage>
+          <lpage>1505</lpage>
+          <pub-id pub-id-type="doi">10.1086/424487</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vuong C, Kocianova S, Yao Y, Carmody AB, Otto M (2004) J Infect Dis 190(8):1498&#x2013;1505 <pub-id pub-id-type="pmid">15378444</pub-id></citation>
+      </ref>
+      <ref id="CR81">
+        <label>81.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Akiyama</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Kanzaki</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Tada</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Arata</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <source>J Dermatol Sci</source>
+          <year>1996</year>
+          <volume>11</volume>
+          <issue>3</issue>
+          <fpage>234</fpage>
+          <lpage>238</lpage>
+          <pub-id pub-id-type="doi">10.1016/0923-1811(95)00448-3</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Akiyama H, Kanzaki H, Tada J, Arata J (1996) J Dermatol Sci 11(3):234&#x2013;238 <pub-id pub-id-type="pmid">8785176</pub-id></citation>
+      </ref>
+      <ref id="CR82">
+        <label>82.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gotz</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <source>Mol Microbiol</source>
+          <year>2002</year>
+          <volume>43</volume>
+          <issue>6</issue>
+          <fpage>1367</fpage>
+          <lpage>1378</lpage>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2002.02827.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Gotz F (2002) Mol Microbiol 43(6):1367&#x2013;1378 <pub-id pub-id-type="pmid">11952892</pub-id></citation>
+      </ref>
+      <ref id="CR83">
+        <label>83.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kong</surname>
+              <given-names>KF</given-names>
+            </name>
+            <name>
+              <surname>Vuong</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Otto</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Int J Med Microbiol</source>
+          <year>2006</year>
+          <volume>296</volume>
+          <issue>2-3</issue>
+          <fpage>133</fpage>
+          <lpage>139</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.ijmm.2006.01.042</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kong KF, Vuong C, Otto M (2006) Int J Med Microbiol 296(2-3):133&#x2013;139 <pub-id pub-id-type="pmid">16487744</pub-id></citation>
+      </ref>
+      <ref id="CR84">
+        <label>84.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cramton</surname>
+              <given-names>SE</given-names>
+            </name>
+            <name>
+              <surname>Gerke</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Schnell</surname>
+              <given-names>NF</given-names>
+            </name>
+            <name>
+              <surname>Nichols</surname>
+              <given-names>WW</given-names>
+            </name>
+            <name>
+              <surname>Gotz</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <source>Infect Immun</source>
+          <year>1999</year>
+          <volume>67</volume>
+          <issue>10</issue>
+          <fpage>5427</fpage>
+          <lpage>5433</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Cramton SE, Gerke C, Schnell NF, Nichols WW, Gotz F (1999) Infect Immun 67(10):5427&#x2013;5433 <pub-id pub-id-type="pmid">10496925</pub-id></citation>
+      </ref>
+      <ref id="CR85">
+        <label>85.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Beenken</surname>
+              <given-names>KE</given-names>
+            </name>
+            <name>
+              <surname>Dunman</surname>
+              <given-names>PM</given-names>
+            </name>
+            <name>
+              <surname>McAleese</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Macapagal</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Murphy</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Projan</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Blevins</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Smeltzer</surname>
+              <given-names>MS</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <issue>14</issue>
+          <fpage>4665</fpage>
+          <lpage>4684</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.186.14.4665-4684.2004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Beenken KE, Dunman PM, McAleese F, Macapagal D, Murphy E, Projan SJ, Blevins JS, Smeltzer MS (2004) J Bacteriol 186(14):4665&#x2013;4684 <pub-id pub-id-type="pmid">15231800</pub-id></citation>
+      </ref>
+      <ref id="CR86">
+        <label>86.</label>
+        <citation citation-type="other">Shrout JD, Chopp DL, Just CL, Hentzer M, Givskov M, Parsek MR (2006) Submitted</citation>
+      </ref>
+      <ref id="CR87">
+        <label>87.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yarwood</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Bartels</surname>
+              <given-names>DJ</given-names>
+            </name>
+            <name>
+              <surname>Volper</surname>
+              <given-names>EM</given-names>
+            </name>
+            <name>
+              <surname>Greenberg</surname>
+              <given-names>EP</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <issue>6</issue>
+          <fpage>1838</fpage>
+          <lpage>1850</lpage>
+          <pub-id pub-id-type="doi">10.1128/JB.186.6.1838-1850.2004</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yarwood JM, Bartels DJ, Volper EM, Greenberg EP (2004) J Bacteriol 186(6):1838&#x2013;1850 <pub-id pub-id-type="pmid">14996815</pub-id></citation>
+      </ref>
+      <ref id="CR88">
+        <label>88.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Karlsson</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Saravia-Otten</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Tegmark</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Morfeldt</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Arvidson</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <source>Infect Immun</source>
+          <year>2001</year>
+          <volume>69</volume>
+          <issue>8</issue>
+          <fpage>4742</fpage>
+          <lpage>4748</lpage>
+          <pub-id pub-id-type="doi">10.1128/IAI.69.8.4742-4748.2001</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Karlsson A, Saravia-Otten P, Tegmark K, Morfeldt E, Arvidson S (2001) Infect Immun 69(8):4742&#x2013;4748 <pub-id pub-id-type="pmid">11447146</pub-id></citation>
+      </ref>
+      <ref id="CR89">
+        <label>89.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yarwood</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Schlievert</surname>
+              <given-names>PM</given-names>
+            </name>
+          </person-group>
+          <source>J Clin Invest</source>
+          <year>2003</year>
+          <volume>112</volume>
+          <issue>11</issue>
+          <fpage>1620</fpage>
+          <lpage>1625</lpage>
+          <pub-id pub-id-type="doi">10.1172/JCI200320442</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Yarwood JM, Schlievert PM (2003) J Clin Invest 112(11):1620&#x2013;1625 <pub-id pub-id-type="pmid">14660735</pub-id></citation>
+      </ref>
+      <ref id="CR90">
+        <label>90.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pratten</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Foster</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Chan</surname>
+              <given-names>PF</given-names>
+            </name>
+            <name>
+              <surname>Wilson</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nair</surname>
+              <given-names>SP</given-names>
+            </name>
+          </person-group>
+          <source>Microbes Infect</source>
+          <year>2001</year>
+          <volume>3</volume>
+          <issue>8</issue>
+          <fpage>633</fpage>
+          <lpage>637</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1286-4579(01)01418-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Pratten J, Foster SJ, Chan PF, Wilson M, Nair SP (2001) Microbes Infect 3(8):633&#x2013;637 <pub-id pub-id-type="pmid">11445449</pub-id></citation>
+      </ref>
+      <ref id="CR91">
+        <label>91.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schwan</surname>
+              <given-names>WR</given-names>
+            </name>
+            <name>
+              <surname>Langhorne</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Ritchie</surname>
+              <given-names>HD</given-names>
+            </name>
+            <name>
+              <surname>Stover</surname>
+              <given-names>CK</given-names>
+            </name>
+          </person-group>
+          <source>FEMS Immunol Med Microbiol</source>
+          <year>2003</year>
+          <volume>38</volume>
+          <issue>1</issue>
+          <fpage>23</fpage>
+          <lpage>28</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0928-8244(03)00098-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Schwan WR, Langhorne MH, Ritchie HD, Stover CK (2003) FEMS Immunol Med Microbiol 38(1):23&#x2013;28 <pub-id pub-id-type="pmid">12900051</pub-id></citation>
+      </ref>
+      <ref id="CR92">
+        <label>92.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Somerville</surname>
+              <given-names>GA</given-names>
+            </name>
+            <name>
+              <surname>Beres</surname>
+              <given-names>SB</given-names>
+            </name>
+            <name>
+              <surname>Fitzgerald</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>DeLeo</surname>
+              <given-names>FR</given-names>
+            </name>
+            <name>
+              <surname>Cole</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Hoff</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Musser</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>2002</year>
+          <volume>184</volume>
+          <issue>5</issue>
+          <fpage>1430</fpage>
+          <lpage>1437</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Somerville GA, Beres SB, Fitzgerald JR, DeLeo FR, Cole RL, Hoff JS, Musser JM (2002) J Bacteriol 184(5):1430&#x2013;1437 <pub-id pub-id-type="pmid">11844774</pub-id></citation>
+      </ref>
+      <ref id="CR93">
+        <label>93.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schurr</surname>
+              <given-names>MJ</given-names>
+            </name>
+            <name>
+              <surname>Martin</surname>
+              <given-names>DW</given-names>
+            </name>
+            <name>
+              <surname>Mudd</surname>
+              <given-names>MH</given-names>
+            </name>
+            <name>
+              <surname>Deretic</surname>
+              <given-names>V</given-names>
+            </name>
+          </person-group>
+          <source>J Bacteriol</source>
+          <year>1994</year>
+          <volume>176</volume>
+          <issue>11</issue>
+          <fpage>3375</fpage>
+          <lpage>3382</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Schurr MJ, Martin DW, Mudd MH, Deretic V (1994) J Bacteriol 176(11):3375&#x2013;3382 <pub-id pub-id-type="pmid">8195094</pub-id></citation>
+      </ref>
+      <ref id="CR94">
+        <label>94.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Boles</surname>
+              <given-names>BR</given-names>
+            </name>
+            <name>
+              <surname>Thoendel</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Singh</surname>
+              <given-names>PK</given-names>
+            </name>
+          </person-group>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2004</year>
+          <volume>101</volume>
+          <issue>47</issue>
+          <fpage>16630</fpage>
+          <lpage>16635</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.0407460101</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Boles BR, Thoendel M, Singh PK (2004) Proc Natl Acad Sci USA 101(47):16630&#x2013;16635 <pub-id pub-id-type="pmid">15546998</pub-id></citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

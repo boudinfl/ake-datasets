@@ -1,0 +1,1312 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Ann Biomed Eng</journal-id>
+      <journal-title>Annals of Biomedical Engineering</journal-title>
+      <issn pub-type="ppub">0090-6964</issn>
+      <issn pub-type="epub">1521-6047</issn>
+      <publisher>
+        <publisher-name>Kluwer Academic Publishers-Plenum Publishers</publisher-name>
+        <publisher-loc>New York</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17031597</article-id>
+      <article-id pub-id-type="pmc">1705502</article-id>
+      <article-id pub-id-type="publisher-id">9177</article-id>
+      <article-id pub-id-type="doi">10.1007/s10439-006-9177-6</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Single-Step 3-D Image Reconstruction in Magnetic Induction Tomography: Theoretical Limits of Spatial Resolution and Contrast to Noise Ratio</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Scharfetter</surname>
+            <given-names>Hermann</given-names>
+          </name>
+          <address>
+            <phone>+43-316-8737394</phone>
+            <fax>+43-316-8737890</fax>
+            <email>Hermann.scharfetter@tugraz.at</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Hollaus</surname>
+            <given-names>Karl</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Rosell-Ferrer</surname>
+            <given-names>Javier</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name name-style="western">
+            <surname>Merwa</surname>
+            <given-names>Robert</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label>Institute of Medical Engineering, Graz University of Technology, Krenngasse 37, Graz, A-8010 Austria </aff>
+        <aff id="Aff2"><label>2</label>Institute for Fundamentals and Theory in Electrical Engineering, Graz University of Technology, Kopernikusgasse 24, Graz, A-8010 Austria </aff>
+        <aff id="Aff3"><label>3</label>Department of Electronic Engineering, Universitat Politecnica de Catalunya, c/Gran Capita s/n, Barcelona, 08034 Spain </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>10</day>
+        <month>10</month>
+        <year>2006</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>11</month>
+        <year>2006</year>
+      </pub-date>
+      <volume>34</volume>
+      <issue>11</issue>
+      <fpage>1786</fpage>
+      <lpage>1798</lpage>
+      <history>
+        <date date-type="received">
+          <day>12</day>
+          <month>5</month>
+          <year>2006</year>
+        </date>
+        <date date-type="accepted">
+          <day>10</day>
+          <month>8</month>
+          <year>2006</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media, LLC 2006</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Magnetic induction tomography (MIT) is a low-resolution imaging modality for reconstructing the changes of the complex conductivity in an object. MIT is based on determining the perturbation of an alternating magnetic field, which is coupled from several excitation coils to the object. The conductivity distribution is reconstructed from the corresponding voltage changes induced in several receiver coils. Potential medical applications comprise the continuous, non-invasive monitoring of tissue alterations which are reflected in the change of the conductivity, e.g. edema, ventilation disorders, wound healing and ischemic processes. MIT requires the solution of an ill-posed inverse eddy current problem. A linearized version of this problem was solved for 16 excitation coils and 32 receiver coils with a model of two spherical perturbations within a cylindrical phantom. The method was tested with simulated measurement data. Images were reconstructed with a regularized single-step Gauss&#x2013;Newton approach. Theoretical limits for spatial resolution and contrast/noise ratio were calculated and compared with the empirical results from a Monte-Carlo study. The conductivity perturbations inside a homogeneous cylinder were localized for a SNR between 44 and 64&#xA0;dB. The results prove the feasibility of difference imaging with MIT and give some quantitative data on the limitations of the method.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Magnetic induction tomography</kwd>
+        <kwd>Passive electrical properties</kwd>
+        <kwd>Conductivity imaging</kwd>
+        <kwd>Inverse problem</kwd>
+        <kwd>Regularization</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Biomedical Engineering Society 2006</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Magnetic induction tomography (MIT) is a non-invasive and contact-less imaging modality for reconstructing the changes &#x394;&#x3BA; of the complex conductivity distribution &#x3BA; =&#xA0;&#x3C3;&#xA0;+&#xA0;<italic>j</italic>&#x3C9; &#x25B;<sub>0</sub>&#x25B;<sub><italic>r</italic></sub> in a target object.<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR13">13</xref>&#x2013;<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR22">22</xref> MIT requires an array of excitation (EXC) and receiving coils. Each EXC couples an alternating magnetic field <bold>B</bold><sub><bold>0</bold></sub> to the object under investigation (see Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>). Changes &#x394;&#x3BA; of the complex conductivity cause a field perturbation &#x394;<bold>B</bold> due to the induction of eddy currents. The perturbation induces voltage changes &#x394;<bold><italic>V</italic></bold> in the receiver coils. It is convenient to normalize &#x394;<bold><italic>V</italic></bold> to <bold><italic>V</italic></bold><sub>0</sub>, the voltage which is induced by the unperturbed field <bold>B</bold><sub><bold>0</bold></sub>.<fig id="Fig1"><label>Figure&#xA0;1.</label><caption><p>Schematic of a possible coil system for MIT with 16 excitation coils and 32 receiver coils.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig1_HTML" id="MO1"/></fig></p>
+      <p>Previous reviews of MIT have been given in<xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR22">22</xref>,<xref ref-type="bibr" rid="CR32">32</xref>. The method has been developed for industrial process tomography already more than 10&#xA0;years ago but is comparatively new in medical imaging. Potential medical applications usually aim at the characterization of biological tissues by means of their complex conductivity. The motivation for measuring the electrical properties is their characteristic dependence on the (patho-) physiological state of tissues, especially hydration and membrane disorders. Medical applications so far suggested are: imaging of limbs,<xref ref-type="bibr" rid="CR2">2</xref> imaging of the brain, e.g. for the monitoring of brain edema,<xref ref-type="bibr" rid="CR14">14</xref>,<xref ref-type="bibr" rid="CR16">16</xref>,<xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR26">26</xref> measurement of human body composition,<xref ref-type="bibr" rid="CR7">7</xref> monitoring of wound healing.<xref ref-type="bibr" rid="CR23">23</xref></p>
+      <p>In contrast to electrical impedance tomography (EIT) MIT avoids the ill-defined electrode-skin interface due to its inherently contact-less operation.</p>
+      <p>Figure&#xA0;<xref rid="Fig1" ref-type="fig">1</xref> shows a schematic MIT coil configuration with rectangular coils as receivers and a cylindrical object space. The solenoid excitation coils are distributed on two different rings in order to obtain a true 3-D-arrangement.</p>
+      <p>The reconstruction of the absolute conductivity in a target region &#x3A9; requires the solution of a complex inverse eddy current problem. Let be
+<disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf y}=\varvec{\Psi}(\varvec{{\bf \kappa}})$$\end{document}</tex-math></disp-formula> the discretized non-linear forward mapping of the conductivity vector
+<inline-formula id="IEq1"><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq1.gif --></inline-formula> to the vector of induced voltages <bold>y</bold>. <bold>y</bold> contains <italic>M</italic>&#xA0;=&#xA0;<italic>a</italic>&#xA0;&#xD7; <italic>b</italic> entries, <italic>a</italic> being the number of EXC and <italic>b</italic> that of receiving coils. The corresponding inverse problem
+<disp-formula id="Equ2"><label>2</label><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\bf\varvec{\kappa}=\varvec{\Psi}^{-1}({\bf y}) $$\end{document}</tex-math></disp-formula> is ill-posed and usually underdetermined. Uniqueness of the solution for this inverse boundary value problem was established in<xref ref-type="bibr" rid="CR21">21</xref> provided the angular frequency &#x3C9; of the AC field is not a resonant frequency. The generic approach for the solution of this type of non-linear problem is the application of an iterative scheme such as the regularized Gauss&#x2013;Newton approach, including an appropriate regularization scheme.</p>
+      <p>To the knowledge of the authors the full inverse problem of medical MIT in 3-D has not yet been solved satisfactorily, although some approximate solutions, especially for 2-D, have been presented.<xref ref-type="bibr" rid="CR3">3</xref>,<xref ref-type="bibr" rid="CR13">13</xref>,<xref ref-type="bibr" rid="CR33">33</xref> Some authors<xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR15">15</xref> proposed the use of weighted back-projection, similar to EIT. In all published cases the back-projection is done along magnetic flux tubes between excitation and receiving coils, the weights being calculated for the case of conducting perturbations in the empty space. However, own observations<xref ref-type="bibr" rid="CR17">17</xref>,<xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR29">29</xref> suggest that the basic requirements for the applicability of this kind of back-projection are not fulfilled in realistic anatomical structures, so that a more appropriate inverse approach is necessary. This paper is dedicated to demonstrating the feasibility of the 3-D reconstruction of a spherical perturbation within a cylindrical conducting body by means of a regularized one-step Gauss&#x2013;Newton reconstructor. The conductivities were chosen in the physiological range of human tissues.</p>
+    </sec>
+    <sec id="Sec2" sec-type="methods">
+      <title>Methods</title>
+      <p>The solution of (2) requires the target region to be discretized into <bold><italic>N</italic></bold> voxels. Within each voxel i the assigned component &#x3BA;<sub><italic>i</italic></sub> of the vector of conductivity
+<inline-formula id="IEq2"><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq2.gif --></inline-formula> is assumed to be constant. A grid of tetrahedral finite elements of second order was employed. In a general setup
+<inline-formula id="IEq3"><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq3.gif --></inline-formula> is then found with the iterative scheme: <list list-type="order"><list-item><p>Define the forward problem with an initial parameter vector
+<inline-formula id="IEq4"><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq4.gif --></inline-formula>.
+<disp-formula id="Equ3"><label>3</label><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf y}=\varvec{\Psi}(\varvec{\kappa}) $$\end{document}</tex-math></disp-formula></p></list-item><list-item><p>Measure the data vector <bold>y</bold><sub><bold>m</bold></sub>.</p></list-item><list-item><p>Solve iteratively for the estimated true parameters
+<inline-formula id="IEq5"><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}^{\ast}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq5.gif --></inline-formula><disp-formula id="Equ4"><label>4</label><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\kappa}^{\ast}=\arg\mathop{\min}\limits_{\varvec{\kappa}}\left( (\varvec{\Psi}(\varvec{\kappa})-{\bf y}_{\bf m})^T(\varvec{\Psi}(\varvec{\kappa})-{\bf y}_{\bf m})+\lambda \varvec{\kappa}^T{\bf R}^T{\bf R}\varvec{\kappa}\right). $$\end{document}</tex-math></disp-formula> whereby
+<inline-formula id="IEq6"><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}^{\ast}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq6.gif --></inline-formula> means the estimated &#x201C;true&#x201D; parameter vector. <bold>R</bold> and &#x3BB; are a regularization matrix and a regularization parameter, respectively, which are required to stabilize the iteration.</p></list-item></list></p>
+      <p>When applying Newton&#x2019;s method starting from an initial guess the parameter vector
+<inline-formula id="IEq7"><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq7.gif --></inline-formula> is updated by an increment <bold>p</bold><sub><italic>k</italic></sub> in each iteration step <bold><italic>k</italic></bold>+1
+<disp-formula id="Equa"><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \varvec{\kappa}_{k+1}=\varvec{\kappa}_{k}+{\bf p}_{k} $$\end{document}</tex-math></disp-formula> with the update step
+<disp-formula id="Equ5"><label>5</label><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf p}_k =({\bf G}^T_k {\bf G}_k +\lambda {\bf R}^T{\bf R})^{-1}{\bf G}^T_k {\bf e}_k $$\end{document}</tex-math></disp-formula> with
+<inline-formula id="IEq8"><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\bf e}_k=(\varvec{\Psi}(\varvec{\kappa}_k)-{\bf y}_{\bf m})$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq8.gif --></inline-formula>. The Jacobian
+<inline-formula id="IEq9"><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\bf G}_k=\frac{d\varvec{\Psi}_k}{d\varvec{\kappa}_k}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq9.gif --></inline-formula>, also called <italic>sensitivity matrix</italic>, must be recalculated in each iteration step. This procedure is very time consuming, hence a complete iterative identification run requires significant computing power, the bottleneck being the solution of the forward model. However, in EIT it could be shown that in practice most features of the image can already be recognized very satisfactorily after the first iteration. This fact led to the development of the so-called Newton-one-step reconstructor (NOSER<xref ref-type="bibr" rid="CR4">4</xref>). NOSER is especially appropriate for so-called dynamical imaging where only the change in the conductivity between two different states of the object under investigation (e.g. lung ventilation) are of interest. In this case the first Newton step corresponds to the solution of the linearized forward problem
+<disp-formula id="Equ6"><label>6</label><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \Delta {\bf y}_{\bf m}={\bf Gp}=\frac{d\varvec{\Psi}}{d\varvec{\kappa}}{\bf p} $$\end{document}</tex-math></disp-formula><disp-formula id="Equ7"><label>7</label><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf p}=({\bf G}^T{\bf G}+\lambda {\bf R}^T{\bf R})^{-1}{\bf G}^T(\Delta {\bf y}_{\bf m}) $$\end{document}</tex-math></disp-formula>whereby
+<inline-formula id="IEq10"><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\bf p}=\Delta\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq10.gif --></inline-formula> is the change of the conductivity between two states of the observed object, and &#x394;<bold>y</bold><sub><bold>m</bold></sub> is the corresponding change of the measured data. In the case of comparatively small changes the inversion of (6) according to (7) yields a fairly correct localization of the perturbed regions. We evaluated the feasibility of this kind of reconstruction in MIT by implementing a NOSER-approach according to (7) under consideration of four different regularization methods.</p>
+      <sec id="Sec3">
+        <title>Calculation of the Forward Solution and the Sensitivity Matrix</title>
+        <p>The forward mapping
+<inline-formula id="IEq11"><tex-math id="M19">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\Psi}(\varvec{\kappa})$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq11.gif --></inline-formula> is given by Maxwell&#x2019;s equations for harmonic excitation:
+<disp-formula id="Equ8"><label>8</label><tex-math id="M20">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \begin{array}{ll} \hbox{curl}{\bf H}={\bf J}&amp; \\ \hbox{curl}{\bf E}=-j\omega{\bf B}&amp;\hbox{in }\Omega \\ \hbox{div}{\bf B}=0&amp;\\ {\bf B}=\mu {\bf H},{\bf J}=\kappa{\bf E},\kappa =\sigma+j\omega \varepsilon&amp;\\ \end{array} $$\end{document}</tex-math></disp-formula> with <bold>H</bold>: magnetic field intensity, <bold>B</bold> magnetic flux density, <bold>E</bold> electric field strength, <bold>J</bold>: current density, &#x25B;: dielectric constant,&#xA0;&#x3BC;: magnetic permeability, &#x3C3;: real conductivity, &#x3BA;: complex conductivity, &#x3C9;: angular frequency. &#x3A9; denotes the interior of the object under investigation.</p>
+        <p>This forward problem is solved with a previously published finite element program,<xref ref-type="bibr" rid="CR12">12</xref><sup>,</sup><xref ref-type="bibr" rid="CR17">17</xref> which employs an <bold>A</bold><sub><bold>r</bold></sub>&#x2013;V, <bold>A</bold><sub><bold>r</bold></sub> &#x2013; formulation with edge elements of second order for the reduced magnetic vector potential <bold>A</bold><sub><bold>r</bold></sub> and nodal elements of second order for the electric scalar potential V. Boundary conditions on the far boundary (normal component of <bold>B</bold> vanishes) were prescribed on a spherical surface with a radius sufficiently large such that a change of this radius by 50% resulted in a change of the induced voltages by less than 1 %.</p>
+        <p>Special attention must be paid to the efficient calculation of the Jacobian
+<inline-formula id="IEq12"><tex-math id="M21">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${\bf G}=\frac{d\varvec{\Psi}}{d\varvec{\kappa}}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq12.gif --></inline-formula>. A mathematically rigorous treatment of this topic has been given in.<xref ref-type="bibr" rid="CR31">31</xref> In our implementation we exploited the integral formulation published by Mortarelli<xref ref-type="bibr" rid="CR20">20</xref>, which is based on a physical mutual energy concept. With this approach the absolute sensitivity <italic>dy</italic>/<italic>d</italic><inline-formula id="IEq13"><tex-math id="M22">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq13.gif --></inline-formula> for a certain pair of coils is calculated according to (9).
+<disp-formula id="Equ9"><label>9</label><tex-math id="M23">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \frac{dy}{d{\varvec \kappa}}={\varvec I}_\phi \int\limits_{\Omega}{\bf L}_\phi{\bf L}_\psi {\bf d}{\varvec \Omega} $$\end{document}</tex-math></disp-formula> with
+<disp-formula id="Equ10"><label>10</label><tex-math id="M24">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf L}_\phi =-\frac{\varvec{j}\omega {\bf A}_\phi +\nabla \varvec{V}_\phi }{{\bf I}_\phi}\quad \quad {\bf L}_\psi=\frac{\varvec{j}\omega {\bf A}_\psi +\nabla \varvec{V}_\psi}{{\bf I}_\Psi} $$\end{document}</tex-math></disp-formula></p>
+        <p><bold>A</bold><sub>&#x3D5;</sub>, <bold>A</bold><sub>&#x3A8;</sub>, <bold><italic>V</italic></bold><sub>&#x3D5;</sub> and <bold><italic>V</italic></bold><sub>&#x3C8;</sub> denote the total magnetic vector potential and the electric scalar potential in the region &#x3A9; due to currents <bold><italic>I</italic></bold><sub>&#x3D5;</sub> and <bold><italic>I</italic></bold><sub>&#x3C8;</sub> in the excitation and receiver coils, respectively. The sensitivity matrix
+<inline-formula id="IEq14"><tex-math id="M25">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$${d}\varvec{\Psi}/{d}\varvec{\kappa}$$\end{document}</tex-math><!-- Alternate image not processed: 10439_2006_9177_Article_IEq14.gif --></inline-formula> is then obtained by evaluating (9) for all individual elements and all coil pairs. The exact numerical implementation of (9) was described in detail in<xref ref-type="bibr" rid="CR11">11</xref>. The calculation of the sensitivity map for one pair of coils requires only two forward solutions of the eddy current problem for generating <bold>L</bold><sub>&#x3D5;</sub> and <bold>L</bold><sub>&#x3A8;</sub> in (10).</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Regularization</title>
+        <p>In EIT the regularization matrix <bold>R</bold><sup><italic>T</italic></sup><bold>R</bold> most frequently used is either the identity matrix <bold>I</bold> or a discrete spatial derivative operator of first or second order. Such approaches have been discussed extensively in the literature, for a good review see e.g.<xref ref-type="bibr" rid="CR10">10</xref> Several regularization matrices can be regarded as simple smoothness criteria for the solution but they have also a more general statistical meaning in the framework of Bayesian estimation theory (see e.g.<xref ref-type="bibr" rid="CR1">1</xref>). In the case of uncorrelated noise with equal variance for all measurement data the estimator in (7) is a maximum a posteriori (MAP) estimator with <bold>R</bold><sup><italic>T</italic></sup><bold>R</bold> being the inverse of the expected covariance matrix of the image <bold><italic>E</italic></bold>[<bold>pp</bold><sup><italic>T</italic></sup>]. In that sense e.g. the neighbouring matrix accounts for the case that all image values are de-correlated at borders between homogeneous regions with different mean values.</p>
+        <p>According to our own observations good results can be achieved with variance uniformization<xref ref-type="bibr" rid="CR5">5</xref> which imposes a special assumption of the prior distribution. The objective here is to uniformize the expected variance of the reconstructed conductivity changes over the region &#x3A9;, thus providing approximately equal image noise in the center as in the periphery. The algorithm has been described in detail in<xref ref-type="bibr" rid="CR5">5</xref> and requires singular value decomposition of <bold>G</bold> according to <bold>G</bold>&#xA0;=&#xA0;<bold>U</bold>&#x3A3;<bold>V</bold><sup><bold>T</bold></sup>. Then the regularization term is expressed as &#x3BB; <bold>R</bold><sup><bold>T</bold></sup><bold>R</bold>&#xA0;= <bold>VDV</bold><sup><bold>T</bold></sup>, with <bold>D</bold> a diagonal matrix with the entries <italic>d</italic><sub><italic>i</italic></sub><disp-formula id="Equ11"><label>11</label><tex-math id="M26">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ d_i=\frac{\sigma_i}{\sqrt{c}}-\sigma_i^2 $$\end{document}</tex-math></disp-formula> whereby &#x3C3;<sub><italic>i</italic></sub> is the <italic>I</italic>th singular value. <bold><italic>c</italic></bold> is a free scalar tuning parameter.</p>
+        <p>Alternatively truncated singular value decomposition (TSVD) has been applied in EIT-reconstruction,<xref ref-type="bibr" rid="CR19">19</xref> hence this approach was also implemented for MIT. In this case the inverse solution becomes
+<disp-formula id="Equ12"><label>12</label><tex-math id="M27">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf p}={\bf V}_t\Sigma_t^{-1} {\bf U}_t \Delta y_m $$\end{document}</tex-math></disp-formula> whereby <italic>t</italic> denotes the truncation level of the original matrices <bold>V</bold>, &#x3A3; and <bold>U</bold>, thus removing the contributions of singular values with index &gt;&#xA0;<italic>t</italic>.</p>
+        <p>In this paper the results obtained with four different regularization schemes were compared: <list list-type="order"><list-item><p><bold>R</bold><sup><bold>T</bold></sup><bold>R</bold>&#xA0;=&#xA0;<bold>I</bold>. Using the identity matrix is the most simple Tikhonov-regularization method, penalizing high values of the reconstructed conductivity changes. In the following this method will be abbreviated as &#x2018;IM&#x2019;.</p></list-item><list-item><p><bold>R</bold><sup><bold>T</bold></sup><bold>R</bold>&#xA0;=&#xA0;<bold>N</bold> with <bold>N</bold> the neighbouring matrix defined as:
+<disp-formula id="Equb"><tex-math id="M28">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ N_{ij}=\left\{{\begin{array}{ll} {n}_{\rm n}&amp;{\hbox{i}=\hbox{j}}\\ -\hbox{1}&amp;\hbox{i,j}\quad \hbox{neighbours}\\ 0&amp;\hbox{otherwise}\\ \end{array}}\right. $$\end{document}</tex-math></disp-formula></p></list-item></list></p>
+        <p><italic>n</italic><sub>n</sub> is the number of neighbouring elements for element<italic> i</italic>, whereby only elements with common facets are considered as neighbours. <bold>N</bold> is an approximation of the spatial derivative operator of second order. Due to the irregular structure of the grid this filter is not spatially invariant, nevertheless it gives good results and is common practice for this type of inverse problem. In the following this method will be abbreviated as &#x2018;NM&#x2019;. <list list-type="order"><list-item><p>&#x3BB; <bold>R</bold><sup><bold>T</bold></sup><bold>R</bold>&#xA0;=&#xA0;<bold>VDV</bold><sup><bold>T</bold></sup> according to the variance uniformization approach. In the following this method will be abbreviated as &#x2018;VU&#x2019;.</p></list-item><list-item><p>TSVD while choosing the truncation level <italic>t</italic> such as to remove all singular values below an appropriately chosen threshold.</p></list-item></list></p>
+        <p>Methods 1 and 2 require the regularization parameter to be chosen optimally while method 3 in addition implies the choice of the tuning parameter <italic>c</italic>. In practice it turns out that the value of c is not critical over a very wide range of values because the optimal &#x3BB; depends on <italic>c</italic>. That means that <italic>c</italic> can be fixed at a more or less arbitrary value if a method for the automatic determination of &#x3BB; is applied. In our case <italic>c</italic> was set to 0.1.</p>
+        <p>The regularization parameter &#x3BB; accounts for the degree of smoothness of the reconstructed image and determines the condition number of the term (<bold>G</bold><sup><bold>T</bold></sup><bold>G</bold>&#xA0;+&#xA0;&#x3BB;<bold>R</bold><sup><bold>T</bold></sup><bold>R</bold>) in (6). Several methods for the optimal choice of this parameter have been published in the past, the most well-known ones being L-curves, Generalized Cross-Validation and the Morozov-criterion.<xref ref-type="bibr" rid="CR10">10</xref> Because of its clear physical interpretation we choose the latter method. In this case the optimal &#x3BB; is the one where the estimated residuals <bold>Gp</bold>&#xA0;&#x2212;&#xA0;&#x394;<bold>y</bold><sub><bold>m</bold></sub> have the same variance as the measurement noise. The motivation for this criterion is that it is obviously meaningless to make the residuals lower than expected from the statistics of the data. This method provided always stable images independently of the regularization matrix and was considered as a good basis for a fair comparison between the different regularization methods.</p>
+      </sec>
+      <sec id="Sec5">
+        <title>Modeling Setup</title>
+        <p>The inverse solver was tested with the simple 3-D model comprising a cylindrical conductor with two spherical inhomogeneities placed with their centers at (<italic>x</italic>&#xA0;=&#xA0;&#xA0;&#x2212;&#xA0;60, <italic>y</italic>&#xA0;=&#xA0;0, <italic>z</italic>&#xA0;=&#xA0;0) (mm) and (<italic>x</italic>&#xA0;=&#xA0;&#xA0;&#x2212;&#xA0;30, <italic>y</italic>&#xA0;=&#xA0;52 and <italic>z</italic>&#xA0;=&#xA0;0) (mm) and the array of 16 excitation coils and 32 receiving coils shown in Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>. The exact geometry is illustrated in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>. The cylinder had a radius and a height of 100&#xA0;mm, the perturbing sphere had a radius of 20&#xA0;mm. The solenoid excitation coils were modeled by cylindrical rings with an inner diameter of 60&#xA0;mm, a thickness of 1&#xA0;mm and a width of 21&#xA0;mm. The exciters were placed in groups of 8 with their centers on two rings with radii of 125&#xA0;mm in two transversal planes of the cylinder. The lower ring is rotated by 22.5 degrees versus the upper one in order to achieve a lower degree of symmetry. The square receiver coils with an edge length of 40&#xA0;mm were placed with their centers on two symmetrically arranged parallel rings with a radius of 120&#xA0;mm, each comprising 16 evenly spaced coils. The orientation of the windings were opposite in both rings so that the 16 vertical pairs can be combined to planar gradiometers as published previously<xref ref-type="bibr" rid="CR26">26</xref>. The measured data were simulated in terms of induced voltage changes when changing the conductivity of the spherical perturbation from 0.2&#xA0;S/m (=&#xA0;background conductivity, homogeneous cylinder) to 0.3&#xA0;S/m. The relative permittivity was kept constant at 80 in all compartments. The excitation frequency was 100&#xA0;kHz.<fig id="Fig2"><label>Figure&#xA0;2.</label><caption><p>Schematic of the simulation model. 16 excitation coils and 32 receiver coils are placed on two concentric rings around the tank, respectively. Two spherical perturbations are placed at the shown locations with (<italic>x</italic>&#xA0;=&#xA0;&#xA0;&#x2212;&#xA0;60, <italic>y</italic>&#xA0;=&#xA0;0, <italic>z</italic>&#xA0;=&#xA0;0) and (<italic>x</italic>&#xA0;=&#xA0;&#xA0;&#x2212;&#xA0;30, <italic>y</italic>&#xA0;=&#xA0;52, <italic>z</italic>&#xA0;=&#xA0;0). All measures are given in (mm).</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig2_HTML" id="MO2"/></fig></p>
+        <p>This arrangement was chosen as the model system for our analysis because of two reasons: <list list-type="order"><list-item><p>It represents a true 3-D-arrangement which delivers theoretically 512 independent measuring combinations, i.e. 512 data points for one image reconstruction.</p></list-item><list-item><p>It is similar to our experimental system which employs 16 excitation sites in one plane and 14 planar gradiometers which are formed by connecting in counter-phase the coils in the upper and in the lower receiver plane.</p></list-item></list></p>
+        <p>Two different meshes A and B were used for the generation of an artificial dataset and for the reconstruction. Mesh A comprised 11000 elements within the cylinder and approximately 1200 in the spheres while mesh B comprised 17000 elements for the homogeneous cylinder without perturbation. In both cases the diameter of the surrounding spherical surface which approximated the far boundary was chosen as 1m, requiring approximately 30000 elements (mesh A) and 50000 elements (mesh B), respectively. Uncorrelated Gaussian noise was added to the voltage data in order to simulate the noise of the receiver channels. This type of noise, although common practice in simulations of this kind,, is not entirely valid for real situations. In addition the noise of the excitation coils is propagated to all receiver coils, thus resulting in a certain amount of correlated noise in all receiver channels. This phenomenon has been studied in detail for EIT,<xref ref-type="bibr" rid="CR6">6</xref> but should be disregarded here for simplicity.</p>
+        <p>The calculation of the complete sensitivity matrix required 48 forward solutions according to the Mortarelli-approach.</p>
+      </sec>
+      <sec id="Sec6">
+        <title>Theoretical Limits of Resolution and Contrast/Noise Ratio</title>
+        <p>For EIT the theoretical limits of image quality in terms of contrast/noise ratio (CNR) and resolution have been studied carefully in<xref ref-type="bibr" rid="CR30">30</xref> while no such study exists for MIT. A similarly rigorous discussion for MIT is certainly beyond the scope of this paper. However, a simplified analysis on resolution and CNR was carried out for our linear reconstruction scheme so as to have a certain theoretical basis for interpreting our empirical results.</p>
+        <p>There is a fundamental limit for the resolution which depends on the amount of available information in the data. This information depends on the number of data points, i.e. the number of possible sensor&#x2013;detector-combinations and on the degree of independence between these data points. In the case of EIT and MIT the number of independent data points is usually much lower than the number of voxels, so that the system is under-determined. Moreover the different data are correlated to a certain degree, so that the effective rank is comparatively low. In EIT, e.g. 16 electrodes provide 104 independent data points so that the information is no more than 104 &#x2018;effective pixels&#x2019;. Including some a priori-information in the form of the regularization terms leads to a defined &#x2018;smearing&#x2019; of this information over the imaging plane and provides the typical diffuse images known from EIT.</p>
+        <p>We characterized the resolution of MIT with the Raleigh criterion. Accordingly two point-shaped perturbations are still separable if their point spread functions (PSF) overlap in such a way that the peak of the first one coincides with the first zero crossing of the second one. In the case of a sinc-shaped PSF the lowest separable distance is equivalent to the 64%-width of the PSF. In contrast to e.g. X-ray CT in MIT the PSF depends on the location of the perturbation and on the geometry of the object under investigation. In this paper the object is the model cylinder which is also used for the numerical reconstruction examples and for the phantoms. The PSF is calculated by mapping the true parameter values <bold>p</bold><sup>*</sup> to the reconstructed ones <bold>p</bold> via the reconstruction equation
+<disp-formula id="Equ13"><label>13</label><tex-math id="M29">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \begin{aligned} &amp;{\bf y}_{\rm m}={\bf Gp}^{\ast}\\ &amp;{\bf p}={\bf Ay}_{\rm m}={\bf AGp}^{\ast}={\bf Mp}^{\ast} \end{aligned} $$\end{document}</tex-math></disp-formula></p>
+        <p><bold>A</bold> means the expression</p>
+        <p><bold>A</bold>&#xA0;=&#xA0;(<bold>G</bold><sup><italic>T</italic></sup><bold>G</bold>&#xA0;+&#xA0;&#x3BB; <bold>R</bold><sup><italic>T</italic></sup><bold>R</bold>)<sup>&#x2212;1</sup><bold>G</bold><sup><italic>T</italic></sup> for regularized methods 1&#x2013;3 or <bold>A</bold>&#xA0;=&#xA0;<bold>V</bold><sub><italic>t</italic></sub> &#x3A3;<sub arrange="stack"><italic>t</italic></sub><sup arrange="stack">&#x2212;1</sup><bold>U</bold><sub><italic>t</italic></sub> for TSVD.</p>
+        <p>The <italic>i</italic>th column of <bold>M</bold> in Eq. 13 is then the shifted PSF for the <italic>i</italic>th voxel. The theoretical limit was approximated by applying TSVD with the full set of non-zero singular values, i.e.
+<disp-formula id="Equ14"><label>14</label><tex-math id="M30">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\bf M}={\bf V}_t\Sigma_t^{-1}{\bf U}_t {\bf G}\quad \hbox{with}\ t=\hbox{rank} ({\bf G}^{T}{\bf G}) $$\end{document}</tex-math></disp-formula></p>
+        <p>We chose TSVD for the estimation of the theoretical limit because it requires the least explicit assumptions about the a-priori distribution of <bold>p</bold>. In MIT an additional difficulty is that, in general, the 64%-boundary of the three-dimensional PSF is not spherical and thus the resolution is anisotropic. In our simplified analysis we define as Raleigh-width the largest axis of the ellipsoid which best approximates the 64%-boundary.</p>
+        <p>As CNR at the point <bold>x</bold> we defined
+<disp-formula id="Equ15"><label>15</label><tex-math id="M31">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$\hbox{CNR}({\bf x})=\frac{\Delta p({\bf x})}{\hbox{std}(np({\bf x}))} $$\end{document}</tex-math></disp-formula> whereby &#x394;<bold><italic>p</italic></bold> is the reconstructed difference between perturbation and background and std(<italic>np</italic>) is the standard deviation of the image noise. We recognize that &#x394;<bold><italic>p</italic></bold> is not a contrast in the classical sense. Usually contrast is the difference between <bold><italic>p</italic></bold> in the perturbation and background divided by the background value. However, as our method is a differential one, the background value of the image is always zero and the classical contrast definition is meaningless. Moreover the determinant for the detectability of a perturbation is the difference &#x394;<italic>p</italic> rather than the contrast. The CNR depends on the size and location of the perturbation as well as on the noise level of the measured data. In contrast to resolution there is no theoretical lower limit in the case of noise-free data and a perfect reconstruction method.</p>
+        <p>We estimated std(<italic>np</italic>(<bold>x</bold>)) by calculating the Cramer-Rao lower bound of the covariance of the parameters. Given the covariance matrix <bold>X</bold> of the voltage changes &#x394;<bold>y</bold><sub><bold>m</bold></sub> the Cramer-Rao lower bound of the covariance matrix of the image noise vector <bold>np</bold> is
+<disp-formula id="Equ16"><label>16</label><tex-math id="M32">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \hbox{Cov}({\bf np})={\bf AXA}^T $$\end{document}</tex-math></disp-formula></p>
+        <p>From the diagonal elements of this matrix the expected lower bound of the coefficient of variation (CV) of the reconstructed conductivity in the perturbation can be calculated for any voxel. For the evaluation of Eq. 15 the reconstructed value &#x394;<italic>p</italic> in voxel i follows from Eq. 13:
+<disp-formula id="Equ17"><label>17</label><tex-math id="M33">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ \Delta \varvec{p}_i=\sum\limits_{\varvec{j}\in \varvec{P}} \varvec{M}_{ij} \varvec{p}_j^{\ast} $$\end{document}</tex-math></disp-formula> whereby P is the set of the indices of all voxels inside the true perturbation. This equation clearly shows that the CNR must decrease when the size of the perturbation shrinks. Assuming a small perturbation and an approximately constant PSF inside this region the CNR is approximately inversely proportional to the volume of the perturbation. The detectability limit can then be defined as the one where the CNR equals 1.</p>
+        <p>The shown approach is simple and allows the calculation of detectability limits for perturbations with different radii and locations but it is only valid in the linear case. Alternatively Monte-Carlo studies can be carried out for different perturbations varying in size and contrast. Such a study has been published previously for a spherical perturbation in the center of a brain model.<xref ref-type="bibr" rid="CR18">18</xref></p>
+        <p>For simplicity we assumed the noise to be Gaussian with zero mean, although in the general non-linear case this may not be entirely valid. For characterizing the noise level we defined as SNR the ratio max(|&#x394;<bold>V</bold>|)/std(<bold>V</bold>) whereby std(V) is the standard deviation of the noise voltage. &#x394;<bold>V</bold> is the vector of voltage changes in all excitation/sensor combinations when a test object is placed into the empty measurement system. In order to be independent on size and location of the perturbation we chose as the test object the homogeneous background cylinder of our model.</p>
+      </sec>
+    </sec>
+    <sec id="Sec7" sec-type="results">
+      <title>Results</title>
+      <p>The PSF was evaluated at 20 equally spaced points along the x-axis between the center and the border of the cylinder. This set includes also the point (0.6R<sub>0</sub>,0, 0), i.e. the center of one of the two perturbations in our simulation model. To mitigate discretization errors the PSF was calculated by rotating the coordinate system 8&#xA0;times about 45&#xB0; and averaging the data assuming radial symmetry of the true model. Then the normalized resolution was calculated from the PSF as the inverse of the ratio between the Raleigh-width and the cylinder radius. This normalized resolution can be interpreted as the number of points which can be resolved per cylinder radius. The resulting data were plotted in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> as a function of the normalized x-coordinate in the xy-plane. Curves are depicted for noise-free data (TSVD with truncation level 512) and TSVD with truncation levels corresponding to a SNR of 44, 50 and 64&#xA0;dB, respectively. The truncation levels were chosen according to the Morozov-criterion and are listed in table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>. The above three SNR levels were chosen because they correspond to the range in which our current measurement system operates.<xref ref-type="bibr" rid="CR25">25</xref><fig id="Fig3"><label>Figure&#xA0;3.</label><caption><p>Dependence of the theoretical normalized resolution on the noise level. Curves are depicted for noise-free data (TSVD with truncation level 512) and TSVD with truncation levels corresponding to a SNR of 44, 50 and 64&#xA0;dB, respectively.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig3_HTML" id="MO3"/></fig><table-wrap id="Tab1"><label>TABLE&#xA0;1.</label><caption><p>Tuning parameters for the regularization, chosen according to the Morozov-criterion.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left">Regularization method</th><th align="left">TSVD Truncation level</th><th align="left">IM &#x3BB;</th><th align="left">NM &#x3BB;</th><th align="left">VU &#x3BB;</th></tr></thead><tbody><tr><td align="left">SNR&#xA0;=&#xA0;64&#xA0;dB</td><td align="left">182</td><td align="left">2.40E&#xA0;&#x2212;&#xA0;20</td><td align="left">2.40E&#xA0;&#x2212;&#xA0;20</td><td align="left">2.35E&#xA0;&#x2212;&#xA0;11</td></tr><tr><td align="left">SNR&#xA0;=&#xA0;50&#xA0;dB</td><td align="left">100</td><td align="left">8.40E&#xA0;&#x2212;&#xA0;19</td><td align="left">8.80E&#xA0;&#x2212;&#xA0;19</td><td align="left">3.20E&#xA0;&#x2212;&#xA0;10</td></tr><tr><td align="left">SNR&#xA0;=&#xA0;44&#xA0;dB</td><td align="left">68</td><td align="left">1.25E&#xA0;&#x2212;&#xA0;17</td><td align="left">1.19E&#xA0;&#x2212;&#xA0;17</td><td align="left">7.40E&#xA0;&#x2212;&#xA0;10</td></tr></tbody></table><table-wrap-foot><p>The parameter <italic>c</italic> for VU was always kept at 0.1.</p></table-wrap-foot></table-wrap></p>
+      <p>A clear increase of the resolution with the distance from the center is observable. The theoretical limit for a point-shaped perturbation in the xy-plane is 3.5 (corresponding to 2.9&#xA0;cm separation) in the center and a maximum resolution of more than 6 (corresponding to 1.7&#xA0;cm separation) at the periphery. At the locations of the test spheres the resolution is in the range of 4, i.e. 2.5&#xA0;cm separation. The relative loss of resolution with the noise level is stronger in the center than in the periphery. At a SNR of 44&#xA0;dB the resolution does not increase any more continuously but levels off above a normalized <italic>x</italic> position of about 0.6.</p>
+      <p>In analogy to EIT the PSF depends strongly on the location, showing the broadest distribution in the center of the cylinder. This is reflected by increasing resolution when moving from the center towards the periphery. Increasing the amount of regularization or decreasing the truncation level according to increasing measurement noise the PSF broadens and its center of gravity is shifted towards the borders of the cylinder. Moreover increasingly strong ringing in form of star-like patterns becomes observable close to the border (not shown explicitly in this paper).</p>
+      <p>In Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref> the four regularization methods are compared at a SNR of 50&#xA0;dB. Except for few points TSVD, performs poorest which is in accordance with the assumption of least explicit a-priori information.<fig id="Fig4"><label>Figure&#xA0;4.</label><caption><p>Theoretical normalized resolution for the four regularization methods at a SNR of 50&#xA0;dB.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig4_HTML" id="MO4"/></fig></p>
+      <p>Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a shows the CNR for TSVD as a function of the normalized x-coordinate and in dependence on the noise level while Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b compares the four methods at a SNR of 50&#xA0;dB. As expected the theoretical CNR depends strongly on the location of the perturbation increasing from values around 2 in the center up to about 60&#xA0;at the cylinder border. At the location of the perturbing spheres the CNR drops from about 26 to 13 when decreasing the SNR from 64&#xA0;dB to 44&#xA0;dB. In the simulated images the CNR drops from 24 to 9, i.e. remains fairly in the same range. Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b reveals that IM and NM yield the highest CNR, followed by TSVD and VU, whereby VU is characterized by dramatically lower values. In the center VU yields a CNR around 2 which is already very close to the limit of detectability. When comparing the theoretical values with the reconstructed ones (see table 2) the reconstructions always produce a lower CNR than expected, the discrepancy being stronger at high noise levels.<fig id="Fig5"><label>Figure&#xA0;5.</label><caption><p>Panel A: CNR for TSVD as a function of the normalized x-coordinate (relative to the cylinder radius) and in dependence on the noise level. Panel B: comparison of the four methods at a SNR of 50&#xA0;dB.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig5_HTML" id="MO5"/></fig></p>
+      <p>Figures&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> and <xref rid="Fig7" ref-type="fig">7</xref> show the reconstructed mean images from a Monte-Carlo study with 50 runs for each of the four methods and an SNR of 64 and 50&#xA0;dB, respectively. Representative cross-sections in the xy-plane and in the xz-plane were selected. The respective regularization parameters are listed in Table&#xA0;<xref rid="Tab1" ref-type="table">1</xref>.<fig id="Fig6"><label>Figure&#xA0;6.</label><caption><p>Mean images of the Monte-Carlo study. Reconstructed &#x394; &#x3C3; (transversal and saggittal section through the origin) for the spherical perturbations with four different regularization matrices and a SNR of 64&#xA0;dB.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig6_HTML" id="MO6"/></fig><fig id="Fig7"><label>Figure&#xA0;7.</label><caption><p>Mean images of the Monte-Carlo study. Reconstructed &#x394; &#x3C3; (transversal and saggittal section through the origin) for the spherical perturbations with four different regularization matrices and a SNR of 50&#xA0;dB.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig7_HTML" id="MO7"/></fig></p>
+      <p>In all cases the two perturbations can be recognized as diffuse bright disks. The dotted circles in the figures delineate the original position of the perturbing spheres.</p>
+      <p>A number of performance indices were calculated in order to quantitatively assess the results in Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> and <xref rid="Fig7" ref-type="fig">7</xref>. They are summarized in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> and comprise:
+<list list-type="bullet"><list-item><p>Mean and CNR of the pixel values in the center of gravity of each reconstructed perturbation. These parameters quantify the correctness of the reconstructed values as well as their uncertainty. The theoretically expected values are listed for comparison. The center of gravity was chosen as evaluation point because the reconstructed perturbations deviate more or less from the spherical shape and show significant outward shift with increasing noise level.</p></list-item><list-item><p>Radial outward shift of the spheres in the reconstructed image (fidelity of the location). This shift was determined by localizing the center of gravity for each spot within a wedge-shaped search region with a height of 2.6&#xA0;times the sphere&#x2019;s radius and excluding the outermost 2&#xA0;mm as well as the innermost 40&#xA0;mm in radial direction from the center. The restriction of the search region to this volume prevented spurious contributions from outliers and negative image values far away from the real perturbing regions. Also for this parameter we present theoretical values as expected from the PSF.</p></list-item></list><table-wrap id="Tab2"><label>TABLE&#xA0;2.</label><caption><p>Summary of the performance indices defined in the text.</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left"/><th align="left"/><th align="left" colspan="3">SNR&#xA0;=&#xA0;64&#xA0;dB</th><th align="left" colspan="3">SNR&#xA0;=&#xA0;50&#xA0;dB</th><th align="left" colspan="3">SNR&#xA0;=&#xA0;44&#xA0;dB</th></tr><tr><th align="left">Method</th><th align="left">Performance index</th><th align="left">Sphere real</th><th align="left">Sphere theoret</th><th align="left">Background</th><th align="left">Sphere real</th><th align="left">Sphere theoret</th><th align="left">Background</th><th align="left">Sphere real</th><th align="left">Sphere theoret</th><th align="left">Background</th></tr></thead><tbody><tr><td align="left">IM</td><td align="left" rowspan="4">Mean central</td><td char="." align="char">0.021</td><td char="." align="char">0.016</td><td char="." align="char">0.00054</td><td char="." align="char">0.006</td><td char="." align="char">0.0043</td><td char="." align="char"/><td char="." align="char">0.0035</td><td char="." align="char">0.001</td><td char="." align="char"/></tr><tr><td align="left">NM</td><td char="." align="char">0.022</td><td char="." align="char">0.016</td><td char="." align="char">0.00056</td><td char="." align="char">0.006</td><td char="." align="char">0.004</td><td char="." align="char">0.00051</td><td char="." align="char">0.0032</td><td char="." align="char">0.001</td><td char="." align="char">0.00035</td></tr><tr><td align="left">VU</td><td char="." align="char">0.024</td><td char="." align="char">0.024</td><td char="." align="char">0.00055</td><td char="." align="char">0.01</td><td char="." align="char">0.0065</td><td char="." align="char">0.00043</td><td char="." align="char">0.0060</td><td char="." align="char">0.0036</td><td char="." align="char">0.00035</td></tr><tr><td align="left">TSVD</td><td char="." align="char">0.033</td><td char="." align="char">0.025</td><td char="." align="char">0.00054</td><td char="." align="char">0.01</td><td char="." align="char">0.0074</td><td char="." align="char">0.00050</td><td char="." align="char">0.0110</td><td char="." align="char">0.002</td><td char="." align="char">0.00055</td></tr><tr><td align="left">IM</td><td align="left" rowspan="4">CNR</td><td char="." align="char">42.3</td><td char="." align="char">45.0</td><td char="." align="char"/><td char="." align="char">16.1</td><td char="." align="char">23.0</td><td char="." align="char"/><td char="." align="char">12</td><td char="." align="char">20.1</td><td char="." align="char"/></tr><tr><td align="left">NM</td><td char="." align="char">41.1</td><td char="." align="char">44.0</td><td char="." align="char"/><td char="." align="char">16.5</td><td char="." align="char">22.5</td><td char="." align="char"/><td char="." align="char">10.7</td><td char="." align="char">19.3</td><td char="." align="char"/></tr><tr><td align="left">VU</td><td char="." align="char">7.9</td><td char="." align="char">8.2</td><td char="." align="char"/><td char="." align="char">5.6</td><td char="." align="char">5.2</td><td char="." align="char"/><td char="." align="char">3.4</td><td char="." align="char">3.3</td><td char="." align="char"/></tr><tr><td align="left">TSVD</td><td char="." align="char">23.9</td><td char="." align="char">25.8</td><td char="." align="char"/><td char="." align="char">13.7</td><td char="." align="char">18.4</td><td char="." align="char"/><td char="." align="char">9.1</td><td char="." align="char">13</td><td char="." align="char"/></tr><tr><td align="left">IM</td><td align="left" rowspan="4">Resolution</td><td char="." align="char"/><td char="." align="char">2.84</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.60</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.53</td><td char="." align="char"/></tr><tr><td align="left">NM</td><td char="." align="char"/><td char="." align="char">2.81</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.58</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.50</td><td char="." align="char"/></tr><tr><td align="left">VU</td><td char="." align="char"/><td char="." align="char">2.94</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.46</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.58</td><td char="." align="char"/></tr><tr><td align="left">TSVD</td><td char="." align="char"/><td char="." align="char">2.58</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.42</td><td char="." align="char"/><td char="." align="char"/><td char="." align="char">2.24</td><td char="." align="char"/></tr><tr><td align="left">IM</td><td align="left" rowspan="4">Normalized outward shift*</td><td char="." align="char">0.10</td><td char="." align="char">0.10</td><td char="." align="char"/><td char="." align="char">0.21</td><td char="." align="char">0.25</td><td char="." align="char"/><td char="." align="char">0.33</td><td char="." align="char">0.35</td><td char="." align="char"/></tr><tr><td align="left">NM</td><td char="." align="char">0.10</td><td char="." align="char">0.10</td><td char="." align="char"/><td char="." align="char">0.21</td><td char="." align="char">0.25</td><td char="." align="char"/><td char="." align="char">0.33</td><td char="." align="char">0.35</td><td char="." align="char"/></tr><tr><td align="left">VU</td><td char="." align="char">0.10</td><td char="." align="char">0.06</td><td char="." align="char"/><td char="." align="char">0.11</td><td char="." align="char">0.15</td><td char="." align="char"/><td char="." align="char">0.21</td><td char="." align="char">0.15</td><td char="." align="char"/></tr><tr><td align="left">TSVD</td><td char="." align="char">0.10</td><td char="." align="char">0.10</td><td char="." align="char"/><td char="." align="char">0.18</td><td char="." align="char">0.21</td><td char="." align="char"/><td char="." align="char">0.35</td><td char="." align="char">0.33</td><td char="." align="char"/></tr></tbody></table><table-wrap-foot><p>Performance measures for the comparison of the reconstruction methods.</p><p>*Normalized to the cylinder radius.</p></table-wrap-foot></table-wrap></p>
+      <p>In addition Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> lists the theoretical resolution limits for all methods and noise levels at the position of the perturbations.</p>
+      <p>With 64&#xA0;dB SNR noise the two spheres can be resolved comparatively easily with all four methods. With 50&#xA0;dB SNR noise the resolution is theoretically still possible for all methods. In the reconstruction the resolution is already somewhat below the limit for IM and VU, the image values in the notch between the two peaks being around 71% of the peak values. TSVD and NM appear to separate the perturbations even worse although theoretically this should not be the case. At higher noise all algorithms tend to shift the objects towards the borders of the cylinder when looking at the parameter &#x2018;normalized outward shift&#x2019; in Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. Here again the VU performs best by producing the lowest shift. At 64&#xA0;dB SNR the mean images (not shown here) are in general comparatively poor. IM and NM interestingly still allow a clear separation of two objects, but their localization is very poor, the outward shift being extremely large (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>). VU still provides a much better localization but only at the cost of CNR. TSVD failed to produce a clear image, an observation which was not expected from theory.</p>
+      <p>Depending on the regularization method the central voxel value of the perturbation at (&#x2212;&#xA0;0.6R<sub>0</sub>,0,0) decreases from 0.02&#x2013;0.03&#xA0;S/m to 0.002&#x2013;0.006&#xA0;S/m, compared to the true value of 0.1&#xA0;S/m. This means that even under nearly ideal conditions (64&#xA0;dB SNR) the conductivity changes are strongly underestimated. NM and TSVD yield nearly the same central voxel values as TSVD while VU produces much lower values.</p>
+      <p>Figure&#xA0;<xref rid="Fig8" ref-type="fig">8</xref> shows single reconstructions for IM and VU at all three noise levels. Both methods allow a separation of the perturbations in all cases, but the poor CNR of VU implicates a very noisy image at 44&#xA0;dB. The pronounced difference in outward shift is clearly visible at 44&#xA0;dB, where VU still allows a fair localization while IM fails completely to reconstruct the perturbations at the right positions.<fig id="Fig8"><label>Figure&#xA0;8.</label><caption><p>Comparison of single-shot images for VU and IM at the three different noise levels.</p></caption><graphic position="anchor" xlink:href="10439_2006_9177_Fig8_HTML" id="MO8"/></fig></p>
+      <p>IM and NM perform nearly identically, also their optimal regularization parameters are almost identical. VU yields, in general, larger values in the perturbed regions but also a larger STD.</p>
+    </sec>
+    <sec id="Sec8" sec-type="discussion">
+      <title>Discussion</title>
+      <p>The results demonstrate the feasibility of image reconstruction from MIT-data with the same methods as suggested for EIT. This finding is not self-evident, as the sensitivity distribution is significantly different in EIT and MIT.<xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR29">29</xref> In EIT the region of maximum sensitivity is located between the equipotential surfaces which meet the surface at the detection electrodes, i.e. within a tube-shaped region which connects injection and detection sites. As shown in<xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR29">29</xref> in MIT the sensitivity is not concentrated within a field tube between excitation and receiver coil but increases with the distance from the tube axis, according to the increase of the eddy current density. This may be the main reason why the reconstructed solution tends to be displaced towards the nearest border of the cylindrical tank, especially at higher noise levels. An extreme case for this effect can be observed if the perturbation is placed exactly in the origin and if the senders and receivers are all in the same plane (image not shown due to space restrictions). Instead of the expected spot in the origin two widely separated spots appear on the cylinder axis close to the top and bottom of the cylinder, respectively. In fact such a coil arrangement cannot distinguish between an object in the center and two objects on the cylinder axis placed symmetrically with respect to the origin, because it is always possible to find two corresponding conductivitiy changes so that the field perturbations in the median plane are the same. Obviously, in this ambiguous situation, the algorithm favors the splitted solution according to the sensitivity distribution. A similar ambiguity occurs when using differential sensors, such as the gradiometers employed in our setup. For getting rid of such artifacts it is very important to use a less symmetric transceiver setup which provides enough spatial information in 3-D.</p>
+      <p>The theoretical resolution limit was calculated from the PSF as derived from the TSVD method. This limit depends on the chosen regularization method, the geometry of the object and on the location within the object. The respective dependences are shown in Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> and Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref> for some selected positions inside a cylinder. TSVD was chosen for the calculation of the theoretical limits because it requires no explicit assumptions about any prior distribution of <bold>p</bold>. In this sense it contains less a-priori information than the other methods and thus describes the worst case, as confirmed by Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> and Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>. The calculated PSF shows all basic features of the reconstructed images.</p>
+      <p>The PSF is a 3-D-distribution similar to a 3-D analog of the sinc function. This means that most of its energy is concentrated in a diffuse cloud around the considered point but that there exist three-dimensional &#x2018;side lobes&#x2019; which decay with the distance and show some kind of &#x2018;periodicity&#x2019;. The &#x2018;bean&#x2019;-shaped artifacts which are visible in most top views of Figs.&#xA0;<xref rid="Fig6" ref-type="fig">6</xref> and <xref rid="Fig7" ref-type="fig">7</xref> are typical features of the PSF as well as the &#x2018;star-artifact&#x2019; in the TSVD-images. Therefore these ringing artifacts do not stem from inaccuracies of the reconstruction method or measurement errors, but, instead, are inherent in the PSF.</p>
+      <p>The resolution clearly also depends on the contrast in the presence of noise, because the contrast determines the SNR. Increased noise requires more regularization and hence leads to a broadening of the PSF-distributions. Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref> shows the dependence of the resolution on the noise in the case of TSVD at one single contrast of 0.5 only. A more complete analysis similar to that given for EIT in<xref ref-type="bibr" rid="CR30">30</xref> should also show the dependence of the resolution on contrast, size and location of the perturbation at a given noise level. However, such a comprehensive analysis requires a separate paper and should not be given here.</p>
+      <p>The CNR depends strongly on the radius and, to a less extent, on the noise level. Obviously IM and NM produce very similar values, followed by TSVD. VU in general yields comparatively small CNR but higher central voxel values. For centrally placed spheres with 4&#xA0;cm diameter VU yields CNRs close to the detection limit. When comparing the theoretical values with the reconstructed ones (see Table&#xA0;<xref rid="Tab2" ref-type="table">2</xref>) the reconstruction always produces a lower CNR than expected, the discrepancy being stronger at high noise levels. One surprising detail of Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a is that at higher noise levels the CNR-curves cross the curve for 64&#xA0;dB. This means that very close to the periphery noisier data yield higher CNR values than less noisy data. The reason for this counter-intuitive effect is not yet entirely clear but may be related to the strong outward shift of the PSF at higher noise. In those cases the evaluation of the CNR at the original position of the perturbation may not be appropriate any more and should be interpreted with caution.</p>
+      <p>In the case of weak perturbation we can assume that the CNR depends approximately linearly on the conductivity difference &#x394;&#x3C3;. The dependence on the volume of the perturbation is, in general, more complicated because the PSF depends on the location and is therefore not constant throughout the whole perturbation. Only in the case of small spatial extension of the perturbation an approximately linear dependence on the volume can be assumed.</p>
+      <p>The low number of significant singular values even at comparatively low noise (64&#xA0;dB SNR) suggests that, similar as in EIT, a significant amount of sensor combinations does not provide enough independent information. Intuitively one would expect this finding because there exist pairs of excitation/receiving coils which nearly fulfill the reciprocity condition and hence reduce the amount of useful combinations to about half of the number of possible combinations, i.e. to 256 in our case.</p>
+      <p>Further investigations should determine the maximum &#x2018;useful&#x2019; number of sensors in one plane, i.e. that number beyond which additional sensors do not increase the resolution significantly. Adding more sensors off-plane may add more 3-D-information and hence still provide improvement. This possibility should be studied in further research.</p>
+      <p>When comparing the regularization schemes after application of the Morozov-criterion, the IM and the NM approach yield the smoothest visual appearance and the highest CNR. However, they also tend to displace the perturbations towards the border of the tank. The best localization is obtained with VU, probably because the imposed variance counteracts somewhat the lower sensitivity in the center of the object. However, VU yields also the lowest CNR, i.e. the less homogeneous images and more pronounced ghosts. The failure of TSVD at a SNR of 44&#xA0;dB was not expected theoretically, although, in general, it produces the poorest theoretical resolution. In terms of separability of the two perturbations VU performs best, especially when also taking into account the correct localization.</p>
+      <p>In neither case, however, the single-step solution provides the correct values for &#x394;&#x3C3;. Even at a SNR of 64&#xA0;dB the reconstructed differences are too low by a factor of at least 5, thus demonstrating that the method yields the correct search direction but not the correct step size.</p>
+      <p>The highest mean voxel values are provided by VU and TSVD, the drop with the noise levels being lowest. However, on the other hand VU yields the highest standard deviations. Moreover VU tends to produce more pronounced &#x2018;ghost objects&#x2019; in the homogeneous region than IM and NM. As expected from the PSF TSVD tends to produce &#x2018;star-artifacts&#x2019; at the cylinder border, i.e. a periodic pattern with 16 peaks close to the centers of the receiving coils. This artifact gets worse at increasing noise level.</p>
+      <p>First experiments with smaller models and at least 10 iterations with an iterative solver show that the solution converges towards the correct voxel values. Nevertheless the single-step method may be completely justified in cases where only qualitative changes are sought for or where proportions are to be reconstructed, e.g. in frequency differential spectroscopic imaging. Therefore the area of applicability of a single-step approach has to be analyzed carefully in future work.</p>
+      <p>At least for the shown examples MIT appears relatively robust against Gaussian measurement noise. A SNR of 64&#xA0;dB allows for a stable and distinct solution. Even 44&#xA0;dB allow the recognition of the two spheres when applying the correct regularization. This result is very important for the practical implementation because, due to technical reasons, MIT is expected to yield low SNR (around 50&#xA0;dB) at frequencies as low as 100&#xA0;kHz, which are interesting for the imaging of pathophysiological processes.<xref ref-type="bibr" rid="CR28">28</xref><sup>,</sup><xref ref-type="bibr" rid="CR26">26</xref> However, our results have only been achieved with two single focal perturbations with a relatively large diameter of 20% of the background object. In a more advanced study the stability and the resolution of the images should be investigated for a series of perturbations with different diameter and spacing. For the monitoring of brain edema which usually do not split up in separate sub-regions our approach may be sufficiently stable. This hypothesis has to be tested both theoretically and empirically for centrally placed perturbations (worst case).</p>
+      <p>As to the detectability of spherical perturbations in a human brain simulation results in<xref ref-type="bibr" rid="CR18">18</xref> have shown that a sphere with a diameter of about 40&#xA0;mm, a background conductivity of 0.1&#xA0;S/m a contrast of 2 yields a SNR of 24&#xA0;dB at 100&#xA0;kHz when applying 1 A to an excitation coil with 45 turns and a receiver coil with 1 turn. The assumed acquisition time was 200&#xA0;ms, With our present technology single shot images are generated with an acquisition time of 20&#xA0;ms, an excitation coil with five turns and a current up to 20&#xA0;A. The receiver coils have 40 turns with otherwise unchanged geometry. This means an overall increase in SNR by 28&#xA0;dB. Extrapolating the analysis given in,<xref ref-type="bibr" rid="CR28">28</xref> an improvement of the SNR by a factor of 5&#x2013;10 is still technically possible, thus reaching 50&#x2013;60&#xA0;dB, which is obviously sufficient for producing fairly acceptable difference images.</p>
+      <p>Another open question is the influence of the mesh quality on the reconstruction results. We used a comparatively coarse non-uniform grid for the reconstruction. Therefore non-negligible numerical errors are to be expected which may explain the discrepancies between theoretically expected and the reconstructed values for CNR and radial displacement. Also the apparently somewhat worse spatial resolution in the reconstructed images than theoretically expected may be due to such numerical problems. The influence of the mesh and the optimization of mesh quality should be a major issue for further developments.</p>
+      <p>The results were obtained at a single frequency only. Future work should concentrate on the exploitation of the frequency dependence of the tissue conductivity and measurements at frequencies up to several MHz. A multi-frequency approach is expected to increase significantly the available information and thus the quality of the images. Possible applications may then in fact be the same as for EIT (lung function monitoring, lung edema monitoring) and hydration monitoring in the brain.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>This work was supported by a grant from the Spanish MECD (PR2004-0170) for Prof. J. Rosell. The authors would like to thank Prof. Oscar Biro from the Institute for Theory and Fundamentals of Electrical Engineering of the Graz University for Technology for his excellent support concerning the development of all FE-related code.</p>
+    </ack>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Adler</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Accounting for erroneous electrode data in electrical impedance tomography</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>227</fpage>
+          <lpage>238</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/25/1/028</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Adler A. (2004). Accounting for erroneous electrode data in electrical impedance tomography. Physiol. Meas. 25:227&#x2013;238 <pub-id pub-id-type="pmid">15005318</pub-id></citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Al-Zeibak</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Saunders</surname>
+              <given-names>H. N.</given-names>
+            </name>
+          </person-group>
+          <article-title>A feasibility study of in vivo electromagnetic imaging</article-title>
+          <source>Phys. Med. Biol.</source>
+          <year>1993</year>
+          <volume>38</volume>
+          <fpage>151</fpage>
+          <lpage>160</lpage>
+          <pub-id pub-id-type="doi">10.1088/0031-9155/38/1/011</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Al-Zeibak S., Saunders H. N. (1993). A feasibility study of in vivo electromagnetic imaging. Phys. Med. Biol. 38:151&#x2013;160 <pub-id pub-id-type="pmid">8426866</pub-id></citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Casanova</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Silva</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Borgss</surname>
+              <given-names>A. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>MIT image reconstruction based on edge preserving regularization</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>195</fpage>
+          <lpage>207</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/25/1/026</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Casanova R., Silva A., Borgss A. R. (2004). MIT image reconstruction based on edge preserving regularization. Physiol. Meas. 25:195&#x2013;207 <pub-id pub-id-type="pmid">15005316</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cheney</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Isaacson</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Newell</surname>
+              <given-names>J. C.</given-names>
+            </name>
+            <name>
+              <surname>Simske</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Goble</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>NOSER: An algorithm for solving the inverse conductivity problem</article-title>
+          <source>Int. J. Imag. Syst. Tech.</source>
+          <year>1990</year>
+          <volume>2</volume>
+          <fpage>66</fpage>
+          <lpage>75</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Cheney M., Isaacson D., Newell J. C., Simske S., Goble J. (1990). NOSER: An algorithm for solving the inverse conductivity problem. Int. J. Imag. Syst. Tech. 2:66&#x2013;75 </citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cohen-Bacrie</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Goussard</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Guardo</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Regularized reconstruction in electrical impedance tomography using a variance uniformization constraint</article-title>
+          <source>IEEE Trans. Med. Imaging</source>
+          <year>1997</year>
+          <volume>16</volume>
+          <fpage>562</fpage>
+          <lpage>571</lpage>
+          <pub-id pub-id-type="doi">10.1109/42.640745</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cohen-Bacrie C., Goussard Y., Guardo R. (1997). Regularized reconstruction in electrical impedance tomography using a variance uniformization constraint. IEEE Trans. Med. Imaging 16:562&#x2013;571 <pub-id pub-id-type="pmid">9368111</pub-id></citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frangi</surname>
+              <given-names>A. F.</given-names>
+            </name>
+            <name>
+              <surname>Riu</surname>
+              <given-names>P. J.</given-names>
+            </name>
+            <name>
+              <surname>Rosell</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Viergever</surname>
+              <given-names>M. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Propagation of measurement noise through backprojection reconstruction in electrical impedance tomography</article-title>
+          <source>IEEE Trans. Med. Imaging</source>
+          <year>2002</year>
+          <volume>21</volume>
+          <fpage>566</fpage>
+          <lpage>578</lpage>
+          <pub-id pub-id-type="doi">10.1109/TMI.2002.800612</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Frangi A. F., Riu P. J., Rosell J., Viergever M. A. (2002). Propagation of measurement noise through backprojection reconstruction in electrical impedance tomography. IEEE Trans. Med. Imaging 21:566&#x2013;578 <pub-id pub-id-type="pmid">12166852</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <citation citation-type="other">Goss, D. et&#xA0;al. Development of electromagnetic inductance tomography (EMT) hardware for determining human body composition. <italic>Proc. 3rd World Congress on Industrial Process Tomography</italic>: 377&#x2013;383, 2003.</citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Griffiths</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Magnetic induction tomography</article-title>
+          <source>Meas. Sci. Technol.</source>
+          <year>2001</year>
+          <volume>26</volume>
+          <fpage>1126</fpage>
+          <lpage>1131</lpage>
+          <pub-id pub-id-type="doi">10.1088/0957-0233/12/8/319</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Griffiths H. (2001). Magnetic induction tomography. Meas. Sci. Technol. 26: 1126&#x2013;1131 </citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Griffiths</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Stewart</surname>
+              <given-names>W. R.</given-names>
+            </name>
+            <name>
+              <surname>Gough</surname>
+              <given-names>W.</given-names>
+            </name>
+          </person-group>
+          <article-title>Magnetic induction tomography. A measuring system for biological tissues</article-title>
+          <source>Ann. N Y Acad. Sci.</source>
+          <year>1999</year>
+          <volume>873</volume>
+          <fpage>335</fpage>
+          <lpage>345</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1749-6632.1999.tb09481.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Griffiths H., Stewart W. R., Gough W. (1999). Magnetic induction tomography. A measuring system for biological tissues. Ann. N Y Acad. Sci. 873:335&#x2013;345 <pub-id pub-id-type="pmid">10372181</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <citation citation-type="other">Hansen, P. C. Rank-deficient and discrete ill-posed problems. <italic>SIAM</italic>, Philadelphia, 1998</citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hollaus</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Magele</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Merwa</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Fast calculation of the sensitivity matrix in magnetic induction tomography by tetrahedral edge finite elements and the reciprocity theorem</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>159</fpage>
+          <lpage>168</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/25/1/023</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hollaus K., Magele C., Merwa R., Scharfetter H. (2004). Fast calculation of the sensitivity matrix in magnetic induction tomography by tetrahedral edge finite elements and the reciprocity theorem. Physiol. Meas. 25:159&#x2013;168 <pub-id pub-id-type="pmid">15005313</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hollaus</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Magele</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Merwa</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Numerical simulation of the Eddy current problem in magnetic induction tomography for biomedical applications by edge elements</article-title>
+          <source>IEEE Trans. Magnetics</source>
+          <year>2004</year>
+          <volume>40</volume>
+          <fpage>623</fpage>
+          <lpage>626</lpage>
+          <pub-id pub-id-type="doi">10.1109/TMAG.2004.825424</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Hollaus K., Magele C., Merwa R., Scharfetter H. (2004). Numerical simulation of the eddy current problem in magnetic induction tomography for biomedical applications by edge elements. IEEE Trans. Magnetics 40:623&#x2013;626 </citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Karbeyaz</surname>
+              <given-names>U. B.</given-names>
+            </name>
+            <name>
+              <surname>Gencer</surname>
+              <given-names>N. G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Electrical conductivity imaging via contactless measurements: an experimental study</article-title>
+          <source>IEEE Trans. Med. Imaging</source>
+          <year>2003</year>
+          <volume>22</volume>
+          <fpage>627</fpage>
+          <lpage>635</lpage>
+          <pub-id pub-id-type="doi">10.1109/TMI.2003.812271</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Karbeyaz U. B., Gencer N. G. (2003). Electrical conductivity imaging via contactless measurements: an experimental study. IEEE Trans. Med. Imaging 22:627&#x2013;635 <pub-id pub-id-type="pmid">12846431</pub-id></citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Korjenevshy</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Cherepenin</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Sapetsky</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Magnetic induction tomography: experimental realization</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2000</year>
+          <volume>21</volume>
+          <fpage>89</fpage>
+          <lpage>94</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/21/1/311</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Korjenevshy A., Cherepenin V., Sapetsky S. (2000). Magnetic induction tomography: Experimental realization. Physiol. Meas. 21:89&#x2013;94 <pub-id pub-id-type="pmid">10720003</pub-id></citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Korjenevsky</surname>
+              <given-names>A. V.</given-names>
+            </name>
+            <name>
+              <surname>Cherepenin</surname>
+              <given-names>V. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Progress in realization of magnetic induction tomography</article-title>
+          <source>Ann. N Y Acad. Sci.</source>
+          <year>1999</year>
+          <volume>873</volume>
+          <fpage>346</fpage>
+          <lpage>352</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1749-6632.1999.tb09482.x</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Korjenevsky A. V., Cherepenin V. A. (1999). Progress in realization of magnetic induction tomography. Ann. N Y Acad. Sci. 873:346&#x2013;352 </citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Korzhenevskii</surname>
+              <given-names>A. V.</given-names>
+            </name>
+            <name>
+              <surname>Cherepenin</surname>
+              <given-names>V. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Magnetic induction tomography</article-title>
+          <source>J. Commun. Tech. Electron.</source>
+          <year>1997</year>
+          <volume>42</volume>
+          <fpage>469</fpage>
+          <lpage>474</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Korzhenevskii A. V., Cherepenin V. A. (1997). Magnetic induction tomography. J. Commun. Tech. Electron. 42:469&#x2013;474 </citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Merwa</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Hollaus</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Brandst&#xE4;tter</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Numerical solution of the general 3D eddy current problem for magnetic induction tomography (spectroscopy)</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2003</year>
+          <volume>24</volume>
+          <fpage>545</fpage>
+          <lpage>554</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/24/2/364</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Merwa R., Hollaus K., Brandst&#xE4;tter B., Scharfetter H. (2003). Numerical solution of the general 3D eddy current problem for magnetic induction tomography (spectroscopy). Physiol. Meas. 24:545&#x2013;554 <pub-id pub-id-type="pmid">12812437</pub-id></citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Merwa</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Hollaus</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Bir&#xF3;</surname>
+              <given-names>O.</given-names>
+            </name>
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Detection of brain oedema using magnetic induction tomography: a feasibility study of the likely sensitivity and detectability</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>347</fpage>
+          <lpage>354</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/25/1/038</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Merwa R., Hollaus K., Bir&#xF3; O., Scharfetter H. (2004). Detection of brain oedema using magnetic induction tomography: a feasibility study of the likely sensitivity and detectability. Physiol. Meas. 25:347&#x2013;354 <pub-id pub-id-type="pmid">15005328</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <citation citation-type="other">Metherall, P. Three dimensional electrical impedance tomography of the human thorax. PhD Thesis, University of Sheffield, 1998</citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mortarelli</surname>
+              <given-names>J. R.</given-names>
+            </name>
+          </person-group>
+          <article-title>A generalization of the geselowitz relationship useful in impedance plethysmographic field calculations</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>1980</year>
+          <volume>27</volume>
+          <fpage>665</fpage>
+          <lpage>667</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Mortarelli J. R. (1980). A generalization of the geselowitz relationship useful in impedance plethysmographic field calculations. IEEE Trans. Biomed. Eng. 27:665&#x2013;667 <pub-id pub-id-type="pmid">7203506</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ola</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>P&#xE4;iv&#xE4;rinta</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Somersalo</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+          <article-title>An inverse boundary value problem in electrodynamics</article-title>
+          <source>Duke Math. J.</source>
+          <year>1993</year>
+          <volume>70</volume>
+          <fpage>617</fpage>
+          <lpage>653</lpage>
+          <pub-id pub-id-type="doi">10.1215/S0012-7094-93-07014-7</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Ola P., P&#xE4;iv&#xE4;rinta L., Somersalo E. (1993). An inverse boundary value problem in electrodynamics. Duke Math. J. 70:617&#x2013;653 </citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peyton</surname>
+              <given-names>A. J.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>An overview of electromagnetic inductance tomography: description of three different systems</article-title>
+          <source>Meas. Sci. Technol.</source>
+          <year>1996</year>
+          <volume>7</volume>
+          <fpage>261</fpage>
+          <lpage>271</lpage>
+          <pub-id pub-id-type="doi">10.1088/0957-0233/7/3/006</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Peyton A. J. et&#xA0;al (1996). An overview of electromagnetic inductance tomography: Description of three different systems. Meas. Sci. Technol. 7:261&#x2013;271 </citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riedel</surname>
+              <given-names>C. H.</given-names>
+            </name>
+            <name>
+              <surname>Keppelen</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Nani</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Merges</surname>
+              <given-names>R. D.</given-names>
+            </name>
+            <name>
+              <surname>D&#xF6;ssel</surname>
+              <given-names>O.</given-names>
+            </name>
+          </person-group>
+          <article-title>Planar system for magnetic induction conductivity measurement using a sensor matrix</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>403</fpage>
+          <lpage>411</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/25/1/043</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Riedel C. H., Keppelen M., Nani S., Merges R. D., D&#xF6;ssel O. (2004). Planar system for magnetic induction conductivity measurement using a sensor matrix. Physiol. Meas. 25:403&#x2013;411 <pub-id pub-id-type="pmid">15005333</pub-id></citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rosell</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Casa&#xF1;as</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Sensitivity maps and system requirements for magnetic induction tomography using a planar gradiometer</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2001</year>
+          <volume>22</volume>
+          <fpage>121</fpage>
+          <lpage>130</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/22/1/316</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rosell J., Casa&#xF1;as R., Scharfetter H. (2001). Sensitivity maps and system requirements for magnetic induction tomography using a planar gradiometer. Physiol. Meas. 22:121&#x2013;130 <pub-id pub-id-type="pmid">11236873</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rosell-Ferrer</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Merwa</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Brunner</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+          <article-title>A multifrequency magnetic induction tomography system using planar gradiometers: data collection and calibration</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2006</year>
+          <volume>27</volume>
+          <fpage>S271</fpage>
+          <lpage>S280</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/27/5/S23</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Rosell-Ferrer J., Merwa R., Brunner P., Scharfetter H. (2006). A multifrequency magnetic induction tomography system using planar gradiometers: data collection and calibration. Physiol. Meas. 27:S271&#x2013;S280 <pub-id pub-id-type="pmid">16636418</pub-id></citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Lackner</surname>
+              <given-names>H. K.</given-names>
+            </name>
+            <name>
+              <surname>Rosell</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Magnetic induction tomography: Hardware for multi-frequency measurements in biological tissues</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2001</year>
+          <volume>22</volume>
+          <fpage>131</fpage>
+          <lpage>146</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/22/1/317</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Scharfetter H., Lackner H. K., Rosell J. (2001). Magnetic induction tomography: Hardware for multi-frequency measurements in biological tissues. Physiol. Meas. 22:131&#x2013;146 <pub-id pub-id-type="pmid">11236874</pub-id></citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Riu</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Populo</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Rosell</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Sensitivity maps for low-contrast-perturbations within conducting background in magnetic induction tomography (MIT)</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2002</year>
+          <volume>23</volume>
+          <fpage>195</fpage>
+          <lpage>202</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/23/1/320</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Scharfetter H., Riu P., Populo M., Rosell J. (2002). Sensitivity maps for low-contrast-perturbations within conducting background in magnetic induction tomography (MIT). Physiol. Meas. 23:195&#x2013;202 <pub-id pub-id-type="pmid">11876234</pub-id></citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Casa&#xF1;as</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Rosell</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Biological tissue characterization by magnetic induction spectroscopy (MIS): requirements and limitations</article-title>
+          <source>IEEE Trans. Biomed. Eng.</source>
+          <year>2003</year>
+          <volume>50</volume>
+          <fpage>870</fpage>
+          <lpage>880</lpage>
+          <pub-id pub-id-type="doi">10.1109/TBME.2003.813533</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Scharfetter H., Casa&#xF1;as R., Rosell J. (2003). Biological tissue characterization by magnetic induction spectroscopy (MIS): requirements and limitations. IEEE Trans. Biomed. Eng. 50:870&#x2013;880 <pub-id pub-id-type="pmid">12848355</pub-id></citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scharfetter</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Rauchenzauner</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Merwa</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Bir&#xF3;</surname>
+              <given-names>O.</given-names>
+            </name>
+            <name>
+              <surname>Hollaus</surname>
+              <given-names>K.</given-names>
+            </name>
+          </person-group>
+          <article-title>Planar gradiometer for magnetic induction tomography (MIT): Theoretical and experimental sensitivity maps for a low-contrast phantom</article-title>
+          <source>Physiol. Meas.</source>
+          <year>2004</year>
+          <volume>25</volume>
+          <fpage>325</fpage>
+          <lpage>333</lpage>
+          <pub-id pub-id-type="doi">10.1088/0967-3334/25/1/036</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Scharfetter H., Rauchenzauner S., Merwa R., Bir&#xF3; O., Hollaus K. (2004). Planar gradiometer for magnetic induction tomography (MIT): Theoretical and experimental sensitivity maps for a low-contrast phantom. Physiol. Meas. 25:325&#x2013;333 <pub-id pub-id-type="pmid">15005326</pub-id></citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Seagar</surname>
+              <given-names>A. D.</given-names>
+            </name>
+            <name>
+              <surname>Barber</surname>
+              <given-names>D. C.</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>B. H.</given-names>
+            </name>
+          </person-group>
+          <article-title>Theoretical limits to sensitivity and resolution in impedance imaging</article-title>
+          <source>Clin. Phys. Physiol. Meas.</source>
+          <year>1987</year>
+          <volume>8</volume>
+          <issue>Suppl A</issue>
+          <fpage>13</fpage>
+          <lpage>31</lpage>
+          <pub-id pub-id-type="doi">10.1088/0143-0815/8/4A/003</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Seagar A. D., Barber D. C., Brown B. H. (1987). Theoretical limits to sensitivity and resolution in impedance imaging. Clin. Phys. Physiol. Meas. 8(Suppl A):13&#x2013;31 <pub-id pub-id-type="pmid">3568561</pub-id></citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Somersalo</surname>
+              <given-names>E.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>A linearized inverse boundary value problem for Maxwell&#x2019;s equations</article-title>
+          <source>J. Comp. Applied. Math.</source>
+          <year>1992</year>
+          <volume>42</volume>
+          <fpage>123</fpage>
+          <lpage>136</lpage>
+          <pub-id pub-id-type="doi">10.1016/0377-0427(92)90167-V</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Somersalo E. et&#xA0;al (1992). A linearized inverse boundary value problem for Maxwell&#x2019;s equations. J. Comp. Applied. Math. 42:123&#x2013;136 </citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <citation citation-type="other">Tapp, H. S. and A. J. Peyton. A state of the art review of electromagnetic tomography. <italic>Proc. 3rd world congress on industrial process tomography</italic>: 340&#x2013;346, 2003.</citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <citation citation-type="other">Xie, C. G. Review of process tomography image reconstruction methods. In: <italic>Sensors VI: Technology, Systems and Applications</italic>, edited by Grattan KTV and Augousti AT. IOP Publishing, 1993, pp. 341&#x2013;346</citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

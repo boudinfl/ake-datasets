@@ -48,7 +48,7 @@ Below is a an example of reference file format:
 | ---------------------- | ---- | ------------ | ----: | --: | ---: | ----------: | ---------: | ------------: |
 | CSTR [1]               | en   | Full papers  | 130   | -   | 500  | A           | 5.4        | 11501.4       |
 | NUS [3]                | en   | Full papers  | -     | -   | 211  | A+R         | 11.0       | 8398.3        |
-| PubMed [5]             | en   | Full papers  | -     | -   | 1320 | A           | 5.4        | 820.6         |
+| PubMed [5]             | en   | Full papers  | -     | -   | 1320 | A           | 5.4        | 5322.9        |
 | ACM [6]                | en   | Full papers  | -     | -   | 2304 | A           | 5.3        | 9197.6        |
 | Citeulike-180 [13]     | en   | Full papers  | -     | -   | 182  | R           | 5.4        | 8589.7        |
 | SemEval-2010 [10]      | en   | Full papers  | 144   | -   | 100  | A+R         | 14.7       | 7961.2        |

@@ -1,0 +1,817 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="brief-report">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">J Mol Biol</journal-id>
+      <journal-id journal-id-type="iso-abbrev">J. Mol. Biol</journal-id>
+      <journal-title-group>
+        <journal-title>Journal of Molecular Biology</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0022-2836</issn>
+      <issn pub-type="epub">1089-8638</issn>
+      <publisher>
+        <publisher-name>Elsevier</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17594907</article-id>
+      <article-id pub-id-type="pmc">1950483</article-id>
+      <article-id pub-id-type="publisher-id">S0022-2836(07)00796-6</article-id>
+      <article-id pub-id-type="doi">10.1016/j.jmb.2007.06.015</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Communication</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Experiments Suggest that Simulations May Overestimate Electrostatic Contributions to the Mechanical Stability of a Fibronectin Type III Domain</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Ng</surname>
+            <given-names>Sean P.</given-names>
+          </name>
+          <xref rid="fn1" ref-type="fn">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Clarke</surname>
+            <given-names>Jane</given-names>
+          </name>
+          <email>jc162@cam.ac.uk</email>
+          <xref rid="cor1" ref-type="corresp">&#x204E;</xref>
+        </contrib>
+      </contrib-group>
+      <aff>Cambridge University Department of Chemistry, MRC Centre for Protein Engineering, Lensfield Rd, Cambridge, CB2 1EW, UK</aff>
+      <author-notes>
+        <corresp id="cor1"><label>&#x204E;</label>Corresponding author. <email>jc162@cam.ac.uk</email></corresp>
+        <fn id="fn1">
+          <label>1</label>
+          <p>Present address: S. P. Ng, Institute Of Bioengineering and Nanotechnology, 31 Biopolis Way, The Nanos, #04-01, Singapore 138669.</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="pmc-release">
+        <day>24</day>
+        <month>8</month>
+        <year>2007</year>
+      </pub-date>
+      <!-- PMC Release delay is 0 months and 0 days and was based on <pub-date
+						pub-type="ppub">.-->
+      <pub-date pub-type="ppub">
+        <day>24</day>
+        <month>8</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>371</volume>
+      <issue>4</issue>
+      <fpage>851</fpage>
+      <lpage>854</lpage>
+      <history>
+        <date date-type="received">
+          <day>10</day>
+          <month>4</month>
+          <year>2007</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>4</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>6</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2007 Elsevier Ltd.</copyright-statement>
+        <copyright-year>2007</copyright-year>
+        <copyright-holder>Elsevier Ltd</copyright-holder>
+        <license xlink:href="https://creativecommons.org/licenses/by/3.0/">
+          <license-p>Open Access under <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</ext-link> license</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Steered molecular dynamics simulations have previously been used to investigate the mechanical properties of the extracellular matrix protein fibronectin. The simulations suggest that the mechanical stability of the tenth type III domain from fibronectin (FNfn10) is largely determined by a number of critical hydrogen bonds in the peripheral strands. Interestingly, the simulations predict that lowering the pH from 7 to &#x223C;4.7 will increase the mechanical stability of FNfn10 significantly (by &#x223C;33 %) due to the protonation of a few key acidic residues in the A and B strands. To test this simulation prediction, we used single-molecule atomic force microscopy (AFM) to investigate the mechanical stability of FNfn10 at neutral pH and at lower pH where these key residues have been shown to be protonated. Our AFM experimental results show no difference in the mechanical stability of FNfn10 at these different pH values. These results suggest that some simulations may overestimate the role played by electrostatic interactions in determining the mechanical stability of proteins.</p>
+      </abstract>
+      <kwd-group>
+        <title>Abbreviations used</title>
+        <kwd>AFM, atomic force microscopy</kwd>
+        <kwd>SMD, steered molecular dynamics</kwd>
+        <kwd>fnIII, fibronectin type III</kwd>
+        <kwd>FNfn10, the tenth fnIII domain of human fibronectin</kwd>
+        <kwd>TNfn3, the third fnIII domain of human tenascin</kwd>
+      </kwd-group>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>AFM</kwd>
+        <kwd>MD simulations</kwd>
+        <kwd>titin</kwd>
+        <kwd>forced unfolding</kwd>
+        <kwd>extracellular matrix</kwd>
+      </kwd-group>
+    </article-meta>
+    <notes>
+      <p>Edited by C. R. Matthews</p>
+    </notes>
+  </front>
+  <body>
+    <p>Fibronectin is an extracellular matrix protein composed of three types of repeating domains (type I, type II and type III). The type III (fnIII) domains (which are ubiquitous in many multidomain mechanical proteins) in particular have been found to play a pivotal role in regulating and mediating physiological functions of cells. This is achieved through the interaction of various domains with the integrin family of cell surface receptors.<xref rid="bib1" ref-type="bibr"><sup>1</sup></xref> One of the critical interactions in fibronectin is the binding of the RGD (Arg-Gly-Asp) motif in the tenth fnIII domain of fibronectin (FNfn10) to cell-surface integrins. A linear RGD-peptide has been shown to bind (with reduced binding strength and selectivity) to different members of the integrin family.<xref rid="bib2" ref-type="bibr"><sup>2</sup></xref> It may be the dynamic structure of these domains that determines the functional states of the protein. Indeed, it has been suggested that force-induced conformational change of these fnIII domains may be crucial in transmitting cellular signals.<xref rid="bib3" ref-type="bibr"><sup>3</sup></xref> Thus knowledge of how fnIII domains respond to mechanical forces and their mechanical resistance to conformational change is of importance to understand the function of fibronectin at the molecular level.</p>
+    <p>A number of studies have investigated the mechanical properties of the fnIII domains of fibronectin by both experiment<xref rid="bib4 bib5" ref-type="bibr"><sup>4,5</sup></xref> and simulation.<xref rid="bib6 bib7 bib8" ref-type="bibr"><sup>6&#x2013;8</sup></xref> Using steered molecular dynamics (SMD) simulations, Vogel and co-workers<xref rid="bib6" ref-type="bibr"><sup>6</sup></xref> predicted a &#x201C;mechanical hierarchy&#x201D; of a number of fnIII domains that is in reasonable qualitative agreement with the hierarchy obtained from the atomic force microscopy (AFM) forced unfolding experiments.<xref rid="bib4" ref-type="bibr"><sup>4</sup></xref> One of the most mechanically weak fnIII domains is the tenth fnIII domain of human fibronectin, FNfn10, although, interestingly, this is thermodynamically the most stable fnIII domain to have been studied to date.<xref rid="bib9" ref-type="bibr"><sup>9</sup></xref><sup>,</sup><xref rid="bib10" ref-type="bibr"><sup>10</sup></xref> The simulations suggested that the mechanical stability of FNfn10 is largely determined by the hydrogen bonds between the A and B strands around Arg6 and Asp23 (<xref rid="fig1" ref-type="fig">Figure 1</xref>). Recent solution studies by Koide and co-workers<xref rid="bib10" ref-type="bibr"><sup>10</sup></xref> showed that FNfn10 becomes more thermodynamically stable at lower pH (&lt;5.0) as a consequence of the protonation of three negatively charged residues: Asp7, Asp23 and Glu9, which have raised p<italic>K</italic><sub>a</sub> values of 5.54, 5.40 and 5.25, respectively; they are essentially fully protonated below pH 4.7. Using their simulations, Vogel and co-workers<xref rid="bib6" ref-type="bibr"><sup>6</sup></xref> showed that protonation of these side-chains allows them to move closer together to form side-chain&#x2013;side-chain hydrogen bonds. They suggested that this stabilizes interactions between the A and B strands, resulting in a significant increase in the unfolding force in simulations at pH 4.7 even though it is well established that there is no correlation between mechanical stability and thermodynamic stability.<xref rid="bib11" ref-type="bibr"><sup>11</sup></xref><sup>,</sup><xref rid="bib12" ref-type="bibr"><sup>12</sup></xref> This interesting result suggests that the mechanical stability of fibronectin might be modulated by a change in the pH of the tissues.</p>
+    <p>We tested this prediction by monitoring the unfolding force of FNfn10 at different pH values: pH 4.5 (50&#xA0;mM acetate), pH 5.0 (50&#xA0;mM acetate) and pH 7.0 (50&#xA0;mM phosphate). It is important to note that Asp7, Asp23 and Glu9 are fully protonated at pH 4.5 as shown by NMR experiments carried out by Koide and co-workers.<xref rid="bib10" ref-type="bibr"><sup>10</sup></xref> Any increase in mechanical stability due to the protonation of these three residues, as shown in the SMD simulation, should be observed in the AFM experiments. Forced unfolding experiments were performed for a polyprotein containing eight repeats of the FNfn10 domain.</p>
+    <p><xref rid="fig2" ref-type="fig">Figure 2</xref> shows a &#x201C;typical&#x201D; force-extension trace. As has previously been observed<xref rid="bib5" ref-type="bibr"><sup>5</sup></xref> Fnfn10 unfolds either by a two-state unfolding mechanism (N&#xA0;&#x2192;&#xA0;U, where N is the native state and U the unfolded state) or a three-state unfolding mechanism <italic>via</italic> an intermediate (I) (N&#xA0;&#x2192;&#xA0;I&#xA0;&#x2192;&#xA0;U). The unfolding forces for three transitions could thus be determined: <italic>F</italic><sub>N&#x2192;U</sub>, the force of unfolding of N directly to U; <italic>F</italic><sub>N&#x2192;I</sub>, the force of unfolding of N to I; and <italic>F</italic><sub>I&#x2192;U</sub>, the force of unfolding of I to U (<xref rid="fig2" ref-type="fig">Figure 2</xref>).</p>
+    <p>The intermediate, I, has been shown, using site-directed mutagenesis, to be a species with the A-strand detached.<xref rid="bib5" ref-type="bibr"><sup>5</sup></xref> Thus one might expect, if the simulations of the unfolding of FNfn10 are correct, that both the N&#xA0;&#x2192;&#xA0;U and N&#xA0;&#x2192;&#xA0;I transitions will be at higher force at lower pH due to the new stabilising interactions between the A and B strands. However, since the A strand is detached in I, any stabilizing interactions between the A and B strands should not affect the mechanical stability of the intermediate, and <italic>F</italic><sub>I&#x2192;U</sub> is expected to be unaffected by pH. Furthermore, the unfolding forces of N&#xA0;&#x2192;&#xA0;U are higher than those of N&#xA0;&#x2192;&#xA0;I. Li <italic>et al.</italic><xref rid="bib5" ref-type="bibr"><sup>5</sup></xref> suggested that this may be due to the &#x201C;stochastic nature&#x201D; of mechanical unfolding. They suggested that since N&#xA0;&#x2192;&#xA0;I unfolding is observed at higher unfolding forces than the subsequent I&#xA0;&#x2192;&#xA0;U unfolding, the I&#xA0;&#x2192;&#xA0;U unfolding may sometimes occur at a force that is too low to be seen in the AFM force-extension traces.<xref rid="bib5" ref-type="bibr"><sup>5</sup></xref> That is, the unfolding is likely always to occur <italic>via</italic> this intermediate but it may not be observed, particularly when N unfolds at high forces. Thus if the simulations are correct we might expect to see fewer I&#xA0;&#x2192;&#xA0;U transitions at lower pH.</p>
+    <p>To our surprise, the unfolding forces at all pH values are the same within error (<xref rid="fig3" ref-type="fig">Figure 3</xref>). This is true at all pulling speeds. The dependence of the unfolding force on the pulling speed remains unchanged, suggesting that there has been no change in the unfolding pathway. Note also that the proportion of I&#xA0;&#x2192;&#xA0;U unfolding events remains about the same. Thus our results are in direct contradiction to the predictions from the steered molecular dynamics simulations.</p>
+    <p>AFM combined with protein engineering &#x424;-value analysis and molecular dynamics simulations has been previously used to solve the mechanical unfolding pathway of TNfn3, a homologous fnIII domain from the extracellular matrix protein tenascin.<xref rid="bib13" ref-type="bibr"><sup>13</sup></xref> The results suggest that the unfolding of fnIII domains is a complicated multi-step process. The major barrier to a forced unfolding event in TNfn3 is the conformational transition from a twisted to an aligned state, which involves the breaking of several key hydrogen bonds along the peripheral strands (A-B strands and some between the G and F-strands). But there is also significant loss of hydrophobic side-chain packing interactions of residues in the A, B and G-strands, and importantly there is significant core re-packing. Thus, hydrophobic contacts of the buried residues and the hydrogen bonding interactions along peripheral strands are both apparently critical to the mechanical stability of TNfn3. TNfn3 and FNfn10 fold into essentially identical tertiary structures encompassing seven beta-strands running in two antiparallel beta sheets. A structural alignment of TNfn3 and FNfn10 reveals that these two fnIII domains have essentially the same hydrogen bonding patterns<xref rid="bib14" ref-type="bibr"><sup>14</sup></xref> and molecular dynamics simulations have suggested that they have similar forced unfolding pathways. It is therefore reasonable to anticipate that these two fnIII domains will have the same molecular determinants for mechanical stability. We have made a &#x201C;core-swap&#x201D; version of FNfn10, with the core of Tnfn3 which is significantly more stable than Fnfn10 itself.<xref rid="bib15" ref-type="bibr"><sup>15</sup></xref> Considering these together, it seems that the mechanical stability of both FNfn10 and TNfn3 is likely to be associated with the complex interplay between key peripheral hydrogen bonds and hydrophobic effects from the packing of buried residues.</p>
+    <p>Molecular dynamics simulations have previously proved to be of great value in predicting and understanding the behavior of proteins placed under mechanical stress.<xref rid="bib6" ref-type="bibr"><sup>6</sup></xref><sup>,</sup><xref rid="bib7" ref-type="bibr"><sup>7</sup></xref><sup>,</sup><xref rid="bib11" ref-type="bibr"><sup>11</sup></xref><sup>,</sup><xref rid="bib13" ref-type="bibr"><sup>13</sup></xref><sup>,</sup><xref rid="bib16" ref-type="bibr"><sup>16</sup></xref><sup>,</sup><xref rid="bib17" ref-type="bibr"><sup>17</sup></xref> However, our results suggest that in the case of the simulations of forced unfolding of FNfn10 tested here,<xref rid="bib6" ref-type="bibr"><sup>6</sup></xref> the relative strength and importance of electrostatic and hydrophobic components may not be adequately described. It is possible that this discrepancy lies in the different timescale of the simulations and the experiments. AFM experiments are typically performed at extension rates of &#x223C;1&#xA0;&#x3BC;m s<sup>&#x2212;1</sup>, whereas the timescale of molecular dymamics simulations allows for full extension of the protein in 1 or 2&#xA0;ns, equivalent to a pulling speed of several m s<sup>&#x2212;1</sup>, many orders of magnitude faster. Many slow conformational changes in proteins will not be observed in simulations on the nanoseconds timescale. Furthermore, the pathway of forced unfolding may vary as a function of the loading rate.<xref rid="bib18" ref-type="bibr"><sup>18</sup></xref><sup>,</sup><xref rid="bib19" ref-type="bibr"><sup>19</sup></xref> Our study serves to emphasize the point that simulations need constantly to be benchmarked against experiment. However, the fact that simulators are prepared to make <italic>ab initio</italic> predictions that can be tested experimentally can only serve to improve our understanding of molecular mechanisms underlying mechanical strength in proteins.</p>
+  </body>
+  <back>
+    <ref-list>
+      <title>References</title>
+      <ref id="bib1">
+        <label>1.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shin</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Jo</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Mikos</surname>
+              <given-names>A.G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Biomimetic materials for tissue engineering</article-title>
+          <source>Biomaterials</source>
+          <volume>24</volume>
+          <year>2003</year>
+          <fpage>4353</fpage>
+          <lpage>4364</lpage>
+          <pub-id pub-id-type="pmid">12922148</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib2">
+        <label>2.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Verrier</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Pallu</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Bareille</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Jonczyk</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Meyer</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Dard</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Amedee</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Function of linear and cyclic RGD-containing peptides in osteoprogenitor cells adhesion process</article-title>
+          <source>Biomaterials</source>
+          <volume>23</volume>
+          <year>2002</year>
+          <fpage>585</fpage>
+          <lpage>596</lpage>
+          <pub-id pub-id-type="pmid">11761179</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib3">
+        <label>3.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vogel</surname>
+              <given-names>V.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanotransduction involving multimodular proteins: converting force into biochemical signals</article-title>
+          <source>Annu. Rev. Biophys. Biomol. Struct.</source>
+          <volume>35</volume>
+          <year>2006</year>
+          <fpage>459</fpage>
+          <lpage>488</lpage>
+          <pub-id pub-id-type="pmid">16689645</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib4">
+        <label>4.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oberhauser</surname>
+              <given-names>A.F.</given-names>
+            </name>
+            <name>
+              <surname>Badilla-Fernandez</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Carrion-Vazquez</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Fernandez</surname>
+              <given-names>J.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>The mechanical hierarchies of fibronectin observed with single-molecule AFM</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>319</volume>
+          <year>2002</year>
+          <fpage>433</fpage>
+          <lpage>447</lpage>
+          <pub-id pub-id-type="pmid">12051919</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib5">
+        <label>5.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Li</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>H.H.</given-names>
+            </name>
+            <name>
+              <surname>Badilla</surname>
+              <given-names>C.L.</given-names>
+            </name>
+            <name>
+              <surname>Fernandez</surname>
+              <given-names>J.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical unfolding intermediates observed by single-molecule force spectroscopy in a fibronectin type III module</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>345</volume>
+          <year>2005</year>
+          <fpage>817</fpage>
+          <lpage>826</lpage>
+          <pub-id pub-id-type="pmid">15588828</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib6">
+        <label>6.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Craig</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Gao</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Schulten</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Vogel</surname>
+              <given-names>V.</given-names>
+            </name>
+          </person-group>
+          <article-title>Tuning the mechanical stability of fibronectin type III modules through sequence variations</article-title>
+          <source>Structure</source>
+          <volume>12</volume>
+          <year>2004</year>
+          <fpage>21</fpage>
+          <lpage>30</lpage>
+          <pub-id pub-id-type="pmid">14725762</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib7">
+        <label>7.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Paci</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Karplus</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Forced unfolding of fibronectin type 3 modules: an analysis by biased molecular dynamics simulations</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>288</volume>
+          <year>1999</year>
+          <fpage>441</fpage>
+          <lpage>459</lpage>
+          <pub-id pub-id-type="pmid">10329153</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib8">
+        <label>8.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Klimov</surname>
+              <given-names>D.K.</given-names>
+            </name>
+            <name>
+              <surname>Thirumalai</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Native topology determines force induced unfolding pathways in globular proteins</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>97</volume>
+          <year>2000</year>
+          <fpage>7254</fpage>
+          <lpage>7259</lpage>
+          <pub-id pub-id-type="pmid">10860990</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib9">
+        <label>9.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cota</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Folding of beta-sandwich proteins: three-state transition of a fibronectin type III module</article-title>
+          <source>Protein Sci.</source>
+          <volume>9</volume>
+          <year>2000</year>
+          <fpage>112</fpage>
+          <lpage>120</lpage>
+          <pub-id pub-id-type="pmid">10739253</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib10">
+        <label>10.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Koide</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Jordan</surname>
+              <given-names>M.R.</given-names>
+            </name>
+            <name>
+              <surname>Horner</surname>
+              <given-names>S.R.</given-names>
+            </name>
+            <name>
+              <surname>Batori</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Koide</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Stabilization of a fibronectin type III domain by the removal of unfavorable electrostatic interactions on the protein surface</article-title>
+          <source>Biochemistry</source>
+          <volume>40</volume>
+          <year>2001</year>
+          <fpage>10326</fpage>
+          <lpage>10333</lpage>
+          <pub-id pub-id-type="pmid">11513611</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib11">
+        <label>11.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Best</surname>
+              <given-names>R.B.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Daggett</surname>
+              <given-names>V.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Can non-mechanical proteins withstand force? Stretching barnase by atomic force microscopy and molecular dynamics simulation</article-title>
+          <source>Biophys. J.</source>
+          <volume>81</volume>
+          <year>2001</year>
+          <fpage>2344</fpage>
+          <lpage>2356</lpage>
+          <pub-id pub-id-type="pmid">11566804</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib12">
+        <label>12.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Li</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Oberhauser</surname>
+              <given-names>A.F.</given-names>
+            </name>
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Fernandez</surname>
+              <given-names>J.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Atomic force microscopy reveals the mechanical design of a modular protein</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>97</volume>
+          <year>2000</year>
+          <fpage>6527</fpage>
+          <lpage>6531</lpage>
+          <pub-id pub-id-type="pmid">10823913</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib13">
+        <label>13.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ng</surname>
+              <given-names>S.P.</given-names>
+            </name>
+            <name>
+              <surname>Rounsevell</surname>
+              <given-names>R.W.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Geierhaas</surname>
+              <given-names>C.&#xA0;D.</given-names>
+            </name>
+            <name>
+              <surname>Williams</surname>
+              <given-names>P.M.</given-names>
+            </name>
+            <name>
+              <surname>Paci</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical unfolding of TNfn3: the unfolding pathway of a fnIII domain probed by protein engineering. AFM and MD simulation</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>350</volume>
+          <year>2005</year>
+          <fpage>776</fpage>
+          <lpage>789</lpage>
+          <pub-id pub-id-type="pmid">15964016</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib14">
+        <label>14.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cota</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Hamill</surname>
+              <given-names>S.J.</given-names>
+            </name>
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Two proteins with the same structure respond very differently to mutation: the role of plasticity in protein stability</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>302</volume>
+          <year>2000</year>
+          <fpage>713</fpage>
+          <lpage>725</lpage>
+          <pub-id pub-id-type="pmid">10986129</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib15">
+        <label>15.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ng</surname>
+              <given-names>S.P.</given-names>
+            </name>
+            <name>
+              <surname>Billings</surname>
+              <given-names>K.S.</given-names>
+            </name>
+            <name>
+              <surname>Ohashi</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Allen</surname>
+              <given-names>M.D.</given-names>
+            </name>
+            <name>
+              <surname>Best</surname>
+              <given-names>R.B.</given-names>
+            </name>
+            <name>
+              <surname>Randles</surname>
+              <given-names>L.G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Designing an extracellular matrix protein with enhanced mechanical stability</article-title>
+          <source>Proc. Natl Acad. Sci. USA</source>
+          <volume>104</volume>
+          <year>2007</year>
+          <fpage>9633</fpage>
+          <lpage>9637</lpage>
+          <pub-id pub-id-type="pmid">17535921</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib16">
+        <label>16.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Best</surname>
+              <given-names>R.B.</given-names>
+            </name>
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Herrera</surname>
+              <given-names>J.L.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Paci</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical unfolding of a titin Ig domain: structure of transition state revealed by combining atomic force microscopy, protein engineering and molecular dynamics simulations</article-title>
+          <source>J. Mol. Biol.</source>
+          <volume>330</volume>
+          <year>2003</year>
+          <fpage>867</fpage>
+          <lpage>877</lpage>
+          <pub-id pub-id-type="pmid">12850153</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib17">
+        <label>17.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marszalek</surname>
+              <given-names>P.E.</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Carrion-Vazquez</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Oberhauser</surname>
+              <given-names>A.F.</given-names>
+            </name>
+            <name>
+              <surname>Schulten</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Fernandez</surname>
+              <given-names>J.M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Mechanical unfolding intermediates in titin modules</article-title>
+          <source>Nature</source>
+          <volume>402</volume>
+          <year>1999</year>
+          <fpage>100</fpage>
+          <lpage>103</lpage>
+          <pub-id pub-id-type="pmid">10573426</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib18">
+        <label>18.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hyeon</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Dima</surname>
+              <given-names>R.I.</given-names>
+            </name>
+            <name>
+              <surname>Thirumalai</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Pathways and kinetic barriers in mechanical unfolding and folding of RNA and proteins</article-title>
+          <source>Structure</source>
+          <volume>14</volume>
+          <year>2006</year>
+          <fpage>1645</fpage>
+          <lpage>1663</lpage>
+        </element-citation>
+      </ref>
+      <ref id="bib19">
+        <label>19.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Williams</surname>
+              <given-names>P.M.</given-names>
+            </name>
+            <name>
+              <surname>Fowler</surname>
+              <given-names>S.B.</given-names>
+            </name>
+            <name>
+              <surname>Best</surname>
+              <given-names>R.B.</given-names>
+            </name>
+            <name>
+              <surname>Toca-Herrera</surname>
+              <given-names>J.L.</given-names>
+            </name>
+            <name>
+              <surname>Scott</surname>
+              <given-names>K.A.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hidden complexity in the mechanical properties of titin</article-title>
+          <source>Nature</source>
+          <volume>422</volume>
+          <year>2003</year>
+          <fpage>446</fpage>
+          <lpage>449</lpage>
+          <pub-id pub-id-type="pmid">12660787</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib20">
+        <label>20.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Toca-Herrera</surname>
+              <given-names>J.L.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Versatile cloning system for construction of multimeric proteins for use in atomic force microscopy</article-title>
+          <source>Protein Sci.</source>
+          <volume>11</volume>
+          <year>2002</year>
+          <fpage>2179</fpage>
+          <lpage>2183</lpage>
+          <pub-id pub-id-type="pmid">12192073</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="bib21">
+        <label>21.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rounsevell</surname>
+              <given-names>R.W.S.</given-names>
+            </name>
+            <name>
+              <surname>Steward</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Clarke</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Biophysical investigations of engineered polyproteins:implications for force data</article-title>
+          <source>Biophys. J.</source>
+          <volume>88</volume>
+          <year>2005</year>
+          <fpage>2022</fpage>
+          <lpage>2029</lpage>
+          <pub-id pub-id-type="pmid">15613637</pub-id>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This work was supported by the Wellcome Trust (grant reference GR064417MA) and the Medical Research Council. S.P.N. holds a scholarship from the Agency of Science and Technology and Research (A*STAR) of the Singapore Government. J.C. is a Wellcome Trust Senior Research Fellow. We thank Annette Steward and Lucy Randles for the assistance in preparing AFM polyprotein samples.</p>
+    </ack>
+  </back>
+  <floats-group>
+    <fig id="fig1">
+      <label>Figure 1</label>
+      <caption>
+        <p>The structure of FNfn10. The strands are labeled and the N and C termini shown. The Asp and Glu residues in the A and B strands that are protonated at pH 4.5 are in red.</p>
+      </caption>
+      <graphic xlink:href="gr1"/>
+    </fig>
+    <fig id="fig2">
+      <label>Figure 2</label>
+      <caption>
+        <p>A typical forced unfolding trace of a FNfn10 polyprotein. Two kinds of unfolding events are observed. The FNfn10 module unfolds either by a two-state unfolding mechanism (N&#xA0;&#x2192;&#xA0;U, unfolding force&#xA0;=&#xA0;<italic>F</italic><sub>N&#x2192;U</sub>) or a three-state unfolding mechanism <italic>via</italic> an intermediate (N&#xA0;&#x2192;&#xA0;I&#xA0;&#x2192;&#xA0;U, unfolding forces&#xA0;=&#xA0;<italic>F</italic><sub>N&#x2192;I</sub> and <italic>F</italic><sub>I&#x2192;U</sub>), where N, I and U are the native, intermediate and unfolded states, respectively. All AFM unfolding experiments of FNfn10 were carried out using a polyprotein construct comprising eight identical FNfn10 domains (96 residues long, residues Val1416 to Ile1511), cloned and expressed by standard methods.<xref rid="bib20" ref-type="bibr"><sup>20</sup></xref> Standard equilibrium denaturation experiments were undertaken to show that the FNfn10 domains were stable and folded in the polyprotein<xref rid="bib21" ref-type="bibr"><sup>21</sup></xref> (data not shown). Fernandez and co-workers<xref rid="bib5" ref-type="bibr"><sup>5</sup></xref> have previously investigated the unfolding pattern of wild-type and mutant forms of FNfn10 at pH 7.4 (PBS) but with a chimeric polyprotein construct consisting of the FNfn10 module and the I27 module (FNfn10-I27)<sub>4</sub>. The unfolding forces collected here are the same, within error as those observed in (FNfn10-I27)<sub>4</sub>.</p>
+      </caption>
+      <graphic xlink:href="gr2"/>
+    </fig>
+    <fig id="fig3">
+      <label>Figure 3</label>
+      <caption>
+        <p>The unfolding forces of FNfn10 are independent of pH. The unfolding forces for the N&#xA0;&#x2192;&#xA0;U transition (<italic>F</italic><sub>N&#x2192;U</sub>) the N&#xA0;&#x2192;&#xA0;I transition (<italic>F</italic><sub>N&#x2192;I</sub>) and the I&#xA0;&#x2192;&#xA0;U transition (<italic>F</italic><sub>I&#x2192;U</sub>) are shown at pH 7.0 (shaded red bars), 5.0 (shaded blue bars) and 4.5 (open bars). The number of unfolding events observed (<italic>N</italic>) is given. The error bars show&#xA0;&#xB1;&#xA0;1 s.d. There is no significant difference in unfolding forces, or in the relative frequency of I&#xA0;&#x2192;&#xA0;U unfolding events at any pH. All the data were collected at a single pulling speed (1000&#xA0;nm s<sup>&#x2212;1</sup>) using the same cantilever on the same day to eliminate errors in cantilever calibration. All force measurements were performed as described previously using a Molecular Force Probe-1D (Asylum Research, Santa Barbara, CA) and analysed by standard methods.<xref rid="bib13" ref-type="bibr"><sup>13</sup></xref></p>
+      </caption>
+      <graphic xlink:href="gr3"/>
+    </fig>
+  </floats-group>
+</article>
+</pmc-articleset>

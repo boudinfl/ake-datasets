@@ -1,0 +1,1130 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Biotechnol Lett</journal-id>
+      <journal-title>Biotechnology Letters</journal-title>
+      <issn pub-type="ppub">0141-5492</issn>
+      <issn pub-type="epub">1573-6776</issn>
+      <publisher>
+        <publisher-name>Springer Netherlands</publisher-name>
+        <publisher-loc>Dordrecht</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17641823</article-id>
+      <article-id pub-id-type="pmc">2045120</article-id>
+      <article-id pub-id-type="publisher-id">9466</article-id>
+      <article-id pub-id-type="doi">10.1007/s10529-007-9466-7</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Original Research Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Solute transport in orthorhombic lysozyme crystals: a molecular simulation study</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name name-style="western">
+            <surname>Malek</surname>
+            <given-names>Kourosh</given-names>
+          </name>
+          <address>
+            <email>K.Malek@tue.nl</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1"/>
+        </contrib>
+        <aff id="Aff1">Department of Chemistry, University of Tehran, P.O. Box 14155-6455, Tehran, Iran </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>20</day>
+        <month>7</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="ppub">
+        <month>12</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>29</volume>
+      <issue>12</issue>
+      <fpage>1865</fpage>
+      <lpage>1873</lpage>
+      <history>
+        <date date-type="received">
+          <day>4</day>
+          <month>5</month>
+          <year>2007</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>12</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>15</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; Springer Science+Business Media B.V. 2007</copyright-statement>
+      </permissions>
+      <abstract>
+        <p>Long-time equilibrium molecular dynamics simulations were performed to study the passage of a substrate, <sc>l</sc>-arabinose, through nanopores of orthorhombic hen egg white lysozyme crystals. Cross-linked protein crystals (CLPC), as novel biological nanoporous media, consist of an extensive regular matrix of chiral solvent-filled nanopores via which ions and solutes, e.g. sugars and amino acids, travel in and out. We studied the diffusive motion of arabinose inside protein channels. The computed diffusion coefficients within the crystal were orders of magnitudes lower relative to the diffusion coefficient of the solute in water. This study is valuable for understanding the nature of solute&#x2013;protein interactions and transport phenomena in CLPCs and provides an understanding of biocatalytic and bioseparation processes using CLPC.</p>
+      </abstract>
+      <kwd-group>
+        <title>Keywords</title>
+        <kwd>Diffusion</kwd>
+        <kwd><sc>l</sc>-arabinose</kwd>
+        <kwd>Lysozyme</kwd>
+        <kwd>Molecular dynamics</kwd>
+        <kwd>Protein crystal</kwd>
+      </kwd-group>
+      <custom-meta-wrap>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>&#xA9; Springer Science+Business Media B.V. 2007</meta-value>
+        </custom-meta>
+      </custom-meta-wrap>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p>Protein crystals are conventionally thought as important elements in structure determination of biomolecules as well as in protein purification (Johnson and Philips <xref ref-type="bibr" rid="CR20">1965</xref>; Blundell et&#xA0;al. <xref ref-type="bibr" rid="CR6">2003</xref>; Haring and Schnrier <xref ref-type="bibr" rid="CR16">1991</xref>). They contain pores that range from approx. 0.3&#xA0;nm to 10&#xA0;nm and occupy 25&#x2013;75% of the crystal volume (Bishop and Richards <xref ref-type="bibr" rid="CR3">1968</xref>). Their porosity is comparable to that of inorganic porous catalysts and sorbents, such as zeolites and silica-gel (Bishop and Richards <xref ref-type="bibr" rid="CR3">1968</xref>; Vilenchik et&#xA0;al. <xref ref-type="bibr" rid="CR40">1998</xref>; Margolin and Navia <xref ref-type="bibr" rid="CR26">2001</xref>). More robust cross-linked protein crystals (CLPC) have been applied successfully as extremely stable biocatalysts (Vilenchik et&#xA0;al. <xref ref-type="bibr" rid="CR40">1998</xref>) and as selective (chiral) separation media (Margolin and Navia <xref ref-type="bibr" rid="CR26">2001</xref>). The complex crystal structure of the protein contains many functional active sites. Moreover, it resists environmental degradation once it is cross-linked (Vilenchik et&#xA0;al. <xref ref-type="bibr" rid="CR40">1998</xref>; Margolin and Navia <xref ref-type="bibr" rid="CR26">2001</xref>).</p>
+      <p>Understanding the nature of transport of solutes in CLEC is relevant to many biotechnological processes (Margolin and Navia <xref ref-type="bibr" rid="CR26">2001</xref>; Margolin and Vilenchik <xref ref-type="bibr" rid="CR27">1996</xref>; Margolin et al. <xref ref-type="bibr" rid="CR28">2000</xref>; Vuolanto et&#xA0;al. <xref ref-type="bibr" rid="CR42">2002</xref>, <xref ref-type="bibr" rid="CR41">2004</xref>; Jokela et&#xA0;al. <xref ref-type="bibr" rid="CR21">2002</xref>). Properties of intracrystalline water molecules and ions, and their transport through the crystal, are essential to many of these applications. Apart from their practical use, protein crystals also provide a unique model to study transport phenomena in protein channels in cell membranes since the structure of water-filled pores in the crystals is determined to atomic resolution by X-ray diffraction (Morozova et&#xA0;al. <xref ref-type="bibr" rid="CR30">1996</xref>). There are effects of both the solute on protein and protein on the solute (Nagendra et&#xA0;al. <xref ref-type="bibr" rid="CR32">1998</xref>). The latter effect is more pronounced in protein crystals, where proteins make up the lining of small pores and water and ions affect the passage of substances through such pores (Nagendra et&#xA0;al. <xref ref-type="bibr" rid="CR32">1998</xref>; Eisenberg and Kauzmann <xref ref-type="bibr" rid="CR13">1969</xref>). Several studies have focused on the experimental determination of the solute and water transport in protein crystals (Bishop and Richards <xref ref-type="bibr" rid="CR3">1968</xref>; Morozov et&#xA0;al <xref ref-type="bibr" rid="CR31">1995</xref>; Velev et&#xA0;al. <xref ref-type="bibr" rid="CR39">2000</xref>; Cvetkovic et&#xA0;al. <xref ref-type="bibr" rid="CR9">2005a</xref>, <xref ref-type="bibr" rid="CR10">b</xref>; O&#x2019;Hara et al. <xref ref-type="bibr" rid="CR34">1995</xref>). Recent studies on diffusion in protein crystals still leave open questions concerning the mobility of solutes and protein&#x2013;solute interactions near proteins that constitute the pore walls (Cvetkovic et&#xA0;al. <xref ref-type="bibr" rid="CR9">2005a</xref>, <xref ref-type="bibr" rid="CR10">b</xref>). In addition to advanced experimental techniques, versatile computational tools are generally needed to correlate reactivity of the protein and transport of solute with nanoporosity of the enzyme crystals at atomistic level (Malek et&#xA0;al. <xref ref-type="bibr" rid="CR24">2004</xref>, <xref ref-type="bibr" rid="CR25">2005</xref>).</p>
+      <p>Molecular dynamics simulations with explicit representation of molecules and ions should, in principle, provide realistic information about the diffusive motion of water, individual solute molecules and ions at atomic resolution. These simulations, however, are only practical at longer time and length scales. Due to heterogeneity of the protein surface, it is necessary to treat transport of molecules at the protein&#x2013;water interface as a local property (Bon et&#xA0;al. <xref ref-type="bibr" rid="CR7">1999</xref>). There have been a number of such studies to determine how the water molecules on the protein surface are perturbed from the bulk (Bizzari and Cannistraro <xref ref-type="bibr" rid="CR4">1996</xref>; Bizzari et&#xA0;al. <xref ref-type="bibr" rid="CR5">1996</xref>). To our knowledge, there have been no such studies on dynamical motion of small solute molecules in a protein crystal. The mobility of small dipolar molecules, such as sugars and amino acids, in the vicinity and far from the protein surface in a confined biological channel, exhibits different dynamical and structural behavior from that in a free protein in solution (Velev et&#xA0;al. <xref ref-type="bibr" rid="CR39">2000</xref>; Cvetkovic et&#xA0;al. <xref ref-type="bibr" rid="CR9">2005a</xref>, <xref ref-type="bibr" rid="CR10">b</xref>; O&#x2019;Hara et al. <xref ref-type="bibr" rid="CR34">1995</xref>; Malek et&#xA0;al. <xref ref-type="bibr" rid="CR24">2004</xref>, <xref ref-type="bibr" rid="CR25">2005</xref>).</p>
+      <p>In the crystalline form, proteins are in a highly ordered three-dimensional structure, where the protein molecules strongly bind to each other with specific intermolecular interactions. Protein crystals are particularly interesting materials for chiral separations (Margolin and Navia <xref ref-type="bibr" rid="CR26">2001</xref>; Margolin and Vilenchik <xref ref-type="bibr" rid="CR27">1996</xref>; Margolin et al. <xref ref-type="bibr" rid="CR28">2000</xref>; Vuolanto et&#xA0;al. <xref ref-type="bibr" rid="CR42">2002</xref>, <xref ref-type="bibr" rid="CR41">2004</xref>; Jokela et&#xA0;al. <xref ref-type="bibr" rid="CR21">2002</xref>). The crystal framework poses an asymmetric environment and is made of <sc>l</sc>-amino acids. Enzymes in crystals have also specific binding sites for the substrates and cofactors. In addition, protein crystals are nanoporous materials. Based on these properties, many CLPCs have recently been used in chiral separation of racemic mixtures (Vuolanto et&#xA0;al. <xref ref-type="bibr" rid="CR41">2004</xref>; Jokela et&#xA0;al. <xref ref-type="bibr" rid="CR21">2002</xref>). These novel insights are valuable for biotechnological applications to devise highly selective biocatalysts, biosensors and bioseparators.</p>
+      <p>Here, we use orthorhombic lysozyme as a simple model enzyme to study diffusion of a chiral substrate through pore network of the enzyme crystal. Its well-known and extremely stable molecular structure makes it a good choice for computational studies. Moreover, lysozyme belongs to a large class of enzymes known as glycosidases. These are extremely efficient glycosidic hydrolysis catalysts. Biocatalysis inside the protein lattice has advanced features of product separation and catalyst recovery. Once the catalytic reaction occurs in lysozyme crystals, understanding the transport of products (sugars) through the lattice becomes an important issue. In short, the simple and well-known structure of lysozyme as model protein, the catalytic activity of lysozyme for hydrolyzing the glycosidic bond, the practical potential of protein crystals as biochemical porous media for chiral separation and as a model for biological channels, in general, were our first motivations for choosing a simulation model based on transport of sugar substrate into orthorhombic lysozyme lattice. Here we provide, for the first time, long-time MD simulations of diffusion of <sc>l</sc>-arabinose in orthorhombic hen egg white lysozyme crystals. Fundamental questions are; do solute molecules move by translation and/or rotation? How solute&#x2013;protein interactions influence transport of a chiral solute through the protein crystal? What is the detailed nature of the diffusive motion of solute molecules in a lysozyme crystal and what are the length scales and the time scales (dynamics) of all those events.</p>
+    </sec>
+    <sec id="Sec2">
+      <title>Computational methodology</title>
+      <p>We use MD simulations to examine diffusion of <sc>l</sc>-arabinose (Ara) in a fully hydrated orthorhombic lysozyme crystal. Ara is an aldopentose (Fig.&#xA0;<xref rid="Fig1" ref-type="fig">1</xref>) that has been extensively used as a substrate to probe diffusion properties of protein channels (Nikaido and Rosenberg <xref ref-type="bibr" rid="CR33">1981</xref>). Lysozyme consists of 129 amino acids with 1001 non-hydrogen atoms. The crystal structures of lysozyme, entry 1AKI (Artymiuk et&#xA0;al. <xref ref-type="bibr" rid="CR1">1982</xref>), is taken from the Brookhaven Protein Database and used as a starting point. Hydrogen atoms attached to aliphatic carbon atoms are incorporated with the latter, but the remaining 342 hydrogen atoms are treated explicitly, leading to 1,343 (pseudo-) atoms in total. The simulations are done at pH&#xA0;7. The amino acids Glu and Asp are taken to be deprotonated while Lys, Arg and His residues are protonated (Artymiuk et&#xA0;al. <xref ref-type="bibr" rid="CR1">1982</xref>; Stocker et&#xA0;al. <xref ref-type="bibr" rid="CR36">2000</xref>). This leads to +8 electron charges per protein molecule. Chloride ions are then added for electroneutrality. In an orthorhombic crystal, four protein molecules related by the crystallographic symmetry P2<sub>1</sub>2<sub>1</sub>2<sub>1</sub> are placed in the unit cell with <italic>a</italic>&#xA0;=&#xA0;5.9062&#xA0;nm, <italic>b</italic>&#xA0;=&#xA0;6.8451&#xA0;nm, and <italic>c</italic>&#xA0;=&#xA0;3.0517&#xA0;nm. Repeating the unit cell along crystallographic axes generates the pore network (Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>). Channels and cavities within the orthorhombic lysozyme lattices are determined by using a procedure explained elsewhere (Malek et&#xA0;al. <xref ref-type="bibr" rid="CR24">2004</xref>), based on HOLE and CHANNEL algorithms (Smart et&#xA0;al. <xref ref-type="bibr" rid="CR35">1996</xref>; Kisljuk et&#xA0;al. <xref ref-type="bibr" rid="CR22">1994</xref>). The radius of a pore is determined at any given distance along the pore axis by calculating the maximum size for a spherical probe to still fit in the pore without overlap with the van der Waals radii of atoms in the pore wall (Kisljuk et&#xA0;al. <xref ref-type="bibr" rid="CR22">1994</xref>).
+<fig id="Fig1"><label>Fig.&#xA0;1</label><caption><p>Ball-and-stick model of <sc>l</sc>-arabinose. <italic>CH</italic><sub><italic>n</italic></sub> groups are represented by united atoms</p></caption><graphic position="anchor" xlink:href="10529_2007_9466_Fig1_HTML" id="MO1"/></fig><fig id="Fig2"><label>Fig.&#xA0;2</label><caption><p>Computer generated images of an orthorhombic lysozyme lattice, visualized along <italic>z</italic>- crystallographic axis. The solvent channels are shown in grey. A single unit cell is labelled by square and its sphere representation is shown in (<bold>b</bold>). Red lines represent water molecules. The surface representation in (<bold>a</bold>) was computed from the electron density calculations using the crystal structure data (1AKI) available in the Brookhaven protein data bank. Hydrophilic, hydrophobic and polar regions are shown in blue, red and green respectively</p></caption><graphic position="anchor" xlink:href="10529_2007_9466_Fig2_HTML" id="MO2"/></fig></p>
+      <p>Simulations are carried out using a fully atomistic 1&#xA0;&#xD7;&#xA0;1&#xA0;&#xD7;&#xA0;5 lysozyme lattice (<italic>a</italic>&#xA0;=&#xA0;5.9062&#xA0;nm, <italic>b</italic>&#xA0;=&#xA0;6.8451&#xA0;nm, and <italic>c</italic>&#xA0;=&#xA0;15.2585&#xA0;nm). The single unit cell in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b is repeated five times along the <italic>z</italic>-axis, so that a long pore is constructed. We start from an initial configuration by random placing arabinose inside the lysozyme channel. The system contains 20 lysozyme molecules, 21 arabinoses, 6,239 crystallographic and non-crystallographic water molecules and 160 chloride ions, leading to 46,031 atoms in total. After that the system was equilibrated for 500&#xA0;ps using harmonic position restraints (1000&#xA0;kJ&#xA0;mol<sup>&#x2212;1</sup>&#xA0;nm<sup>&#x2212;2</sup>). Production runs were performed for another 26&#xA0;ns, the last 25&#xA0;ns of which was used for the analysis. Simulations are performed using GROMOS96 force field (van Gunsteren et&#xA0;al. <xref ref-type="bibr" rid="CR38">1990</xref>, <xref ref-type="bibr" rid="CR37">1996</xref>). In our force field, interactions between atoms are divided into non-bonded interactions, between any pair of atoms that are within a given cut-off radius, and bonded interactions between atoms connected by chemical bonds. In case of the non-bonded interactions (electrostatic and van der Waals), a partial charge and parameters for repulsion and attraction are assigned to each atom. The bonded interaction consists of bond, angle and dihedral terms. Bond and angle bending are given by simple harmonic potentials. The torsional rotational potential for the dihedral angle is a periodic function with a 3-fold barrier. The partial charges and interaction parameters for all species are taken from GROMOS96 database (van Gunsteren et&#xA0;al. <xref ref-type="bibr" rid="CR38">1990</xref>).</p>
+      <p>In our MD simulation, a cut-off of 1.4&#xA0;nm is used for Van der Waals interactions, while a cut-off of 1&#xA0;nm and PME with a grid spacing of 0.12&#xA0;nm and fourth order interpolation are used for electrostatics interactions (Morozova et&#xA0;al. <xref ref-type="bibr" rid="CR30">1996</xref>). During the simulations, the potential energy and the total energy are monitored in order to check if the system is in equilibrium. MD simulations are performed in a canonical (NVT) ensemble at 300&#xA0;K. The temperature (300&#xA0;K) is controlled by the Berendsen weak-coupling algorithm, separately for protein, Ara and solvent plus ions with a time constant of 0.1&#xA0;ps. During the simulations, polar hydrogen atoms are treated as dummy atoms with an increased mass of 4&#xA0;Da. This allowed the integration time step to be 5&#xA0;fs. Simulations are done with the GROMACS package (Lindahl et&#xA0;al. <xref ref-type="bibr" rid="CR23">2001</xref>; Berendsen et&#xA0;al. <xref ref-type="bibr" rid="CR2">1995</xref>; <ext-link ext-link-type="uri" xlink:href="http://www.gromacs.org">http://www.gromacs.org</ext-link>). Visualization is done by using the VMD v1.8.3 (Humphrey et&#xA0;al. <xref ref-type="bibr" rid="CR19">1996</xref>) commercial package.</p>
+    </sec>
+    <sec id="Sec3">
+      <title>Results and discussions</title>
+      <p>Figure&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a shows an instantaneous configuration of the atomic model of the orthorhombic lysozyme lattice, constructed of 3&#xA0;&#xD7;&#xA0;3&#xA0;&#xD7;&#xA0;3&#xA0;unit cells, whereas a single unit cell is framed in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>b. In each unit cell, there is a main pore lies along the <italic>z</italic>-axis and there are no remarkable pores in the other directions (Malek et&#xA0;al. <xref ref-type="bibr" rid="CR24">2004</xref>; Geremia et&#xA0;al. <xref ref-type="bibr" rid="CR15">2005</xref>; Falkner et&#xA0;al. <xref ref-type="bibr" rid="CR14">2005</xref>). Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a visualizes part of the main pores along the <italic>z</italic>-axis. The average pore radius is about 0.88&#xA0;&#xB1;&#xA0;0.02&#xA0;nm. Figure&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>b shows the pore radius as a function of the pore axis. The profiles show that there are constricted zones inside each pore. The pore radius slowly decreases from over 0.95&#xA0;nm to slightly less than 0.82&#xA0;nm at its narrowest point. The charged residues Lys1, Lys13, Lys33, Lys96, Lys97, Lys116, Arg14, Arg21, Arg114, Asp87, and Asp119 belonging to the lysozyme molecules lie in the pore space. The motion of these residues may affect the pore shape and pore size during the transport of Ara. Our analysis shows that the effect of the protein fluctuations on pore shape is negligible, particularly for solutes of sizes much smaller than the pore diameter, such as Ara.
+<fig id="Fig3"><label>Fig.&#xA0;3</label><caption><p>(<bold>a</bold>) Visualized pore along <italic>z</italic>-axis in a 1&#xA0;&#xD7;&#xA0;1&#xA0;&#xD7;&#xA0;5 lysozyme lattice. (<bold>b</bold>) Pore radius profile along the pore axis</p></caption><graphic position="anchor" xlink:href="10529_2007_9466_Fig3_HTML" id="MO3"/></fig></p>
+      <p>The averaged root mean square fluctuation (RMSF) of C-&#x3B1; of each residue, calculated from the distance fluctuation matrix of a 25&#xA0;ns trajectory in crystalline orthorhombic lysozyme is shown in Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a. The root mean square fluctuations from the X-ray structure are averaged over 20 proteins. The fluctuation results (Fig.&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>a) are consistent with previous works on fluctuations and correlations in lysozyme crystals (H&#xE9;ry et&#xA0;al. <xref ref-type="bibr" rid="CR17">1997</xref>, <xref ref-type="bibr" rid="CR18">1998</xref>). The largest fluctuations are for the &#x3B1;-helix loops. The &#x3B2;-strand residues show a low mobility with values on the order of 0.1&#xA0;nm. &#x3B2;-Strands exhibit a high degree of rigidity with moderate correlations, while only parts of &#x3B1;-helices are rigid or correlated (H&#xE9;ry et&#xA0;al. <xref ref-type="bibr" rid="CR18">1998</xref>). Although the protein atoms fluctuate slightly during the simulation, these are too small to cause significant changes in pore size or in diffusivity. Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b shows that the RMSF patterns are similar for all twenty lysozyme molecules. The residues Gly117, Gly71 and Asp101 show fluctuations above 0.10&#xA0;nm. Among these, Gly117 displays the maximum fluctuations ranging from 0.15&#xA0;nm to 0.25&#xA0;nm. Most of the charged residues accessible from the pore space show fluctuations around 0.05&#xA0;nm. The latter confirms that the pore shape and pore size are not affected by protein fluctuations during 25&#xA0;ns MD simulation.
+<fig id="Fig4"><label>Fig.&#xA0;4</label><caption><p>(<bold>a</bold>) A typical root mean square fluctuation of the C-&#x3B1; atoms of each residue of one of the 20 lysozyme molecules in the simulation box with respect to their average position. (<bold>b</bold>) RMSD of each resides of all lysozyme molecules. The curves are on the same scale. The full lines are shifted by 0.2&#xA0;nm in the vertical direction</p></caption><graphic position="anchor" xlink:href="10529_2007_9466_Fig4_HTML" id="MO4"/></fig></p>
+      <p>In order to study the motion of solutes inside orthorhombic lysozyme crystals, we take into account that proteins affect the dynamics of solute molecules. MD simulations provide information to the dynamic picture of the solute motion in the vicinity of protein molecules. The self-diffusion coefficient <italic>D</italic>, which has been widely used in both spectroscopic experiments and MD simulations, is a suitable parameter characterizing the dynamical behavior of solute in the water filled protein channels in protein crystals. The diffusion coefficient <italic>D</italic>, is related to the slope of the mean square displacement (MSD) of water molecules by the Einstein relation, which in <italic>d</italic> dimension is: <disp-formula id="Equ1"><label>1</label><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$$ D = {\mathop {\lim }\limits_{{\Updelta} t \to \infty}
+}\frac{{{\left\langle {{\left| {{\Updelta}
+\ifmmode\expandafter\bar\else\expandafter\=\fi{r}} \right|}^{2} }
+\right\rangle }_{{t_{0} }} }} {{2d{\Updelta t}}} $$\end{document}</tex-math></disp-formula>where 
+<inline-formula id="IEq1"><!-- Alternate image not processed: 10529_2007_9466_Article_IEq1.gif --><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}$$ {\left\langle {{\left| {{\Updelta} \overline{r} } \right|}^{2} } \right\rangle }_{{t_{0} }} $$\end{document}</tex-math></inline-formula> is the MSD of solute molecules during the time &#x394;<italic>t</italic>, averaged over the ensemble of molecules in a <italic>d</italic> dimensional space, from the moment <italic>t</italic><sub>0</sub> that their motion is equilibrated in the pore space. Use of the Einstein equation for the determination of <italic>D</italic> requires a linear dependence of the MSD with time. For the determination of the solute diffusivity, the MSD&#x2013;<italic>t</italic> linear relation is usually fulfilled on time scales longer than a few to hundred nanoseconds (Bizzari and Cannistraro <xref ref-type="bibr" rid="CR4">1996</xref>).</p>
+      <p>In order to study diffusion of a solute (Ara) inside pore space of an orthorhombic lysozyme crystal, we have performed extensive MD simulations of Ara transport in a fully hydrated lysozyme crystal. Protein atoms are subject to move according to the equation of motions. Ara molecules are randomly incorporated inside the main pore along <italic>z</italic>-axis (Fig.&#xA0;<xref rid="Fig3" ref-type="fig">3</xref>a). The dynamical motion of solute molecules was sampled each 10&#xA0;ps during 25&#xA0;ns simulation.</p>
+      <p>Figure&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>a shows the displacement of nine Ara molecules along the <italic>z</italic>-axis as a function of time. The location of the solute molecules is sufficiently randomized during the simulation time, so that the diffusion properties do not depend on the arbitrary initial placement of the Ara molecules. The motion of Ara molecules displays many jumps, with little motion between jumps. A few Ara molecules travel within the pore space with displacement in the order of 5&#x2013;10&#xA0;nm, while a few others remain around the same axial (<italic>z</italic>) position in the pore region, moving rather in <italic>xy</italic> plane. Overall, solute molecules move freely, some travel all the way within the pore network, a few remain in the pore and some go deep into the pore and return after some time. At some points along the trajectory, a group of two or three Ara molecules establish hydrogen bonding and perform a collective motion as a united body. The latter is particularly observed in longer simulation times thereby bringing an artefact in to the diffusion analysis of single Ara molecules. To calculate the self-diffusion (<italic>D</italic>) of solute molecules in the pore, the Einstein relationship (Eq. 1) is used.
+<fig id="Fig5"><label>Fig.&#xA0;5</label><caption><p>(<bold>a</bold>) The displacement of nine arabinose molecules along the <italic>z</italic>-axis through the pore region of lysozyme crystal shown in Fig.&#xA0;<xref rid="Fig2" ref-type="fig">2</xref>a. Different colours represent different Ara molecules. (<bold>b</bold>) Mean square displacement (MSD) of Ara molecules versus time</p></caption><graphic position="anchor" xlink:href="10529_2007_9466_Fig5_HTML" id="MO5"/></fig></p>
+      <p>Figure&#xA0;<xref rid="Fig4" ref-type="fig">4</xref>b shows Mean square displacement values (MSD) values versus time for Ara molecules diffusing in the pore network of lysozyme crystal. Only trajectories of individual Ara molecules are included in calculation of MSD and therefore the collective motion of solute molecules is not included in Fig.&#xA0;<xref rid="Fig5" ref-type="fig">5</xref>b. Overall, the log-log behavior of MSD vs. time (for 5&#xA0;ns&#xA0;&lt;&#xA0;<italic>t</italic>&#xA0;&lt;&#xA0;20) is linear with a slope close to one. This shows that in fully hydrated pores of the lattice, the Einstein relation, Eq. 1, can describe the diffusion of Ara. The diffusion coefficient of Ara in pores along <italic>z</italic>-axis is calculated from the intercept of the log&#x2013;log plot, that is (8.51&#xA0;&#xB1;&#xA0;0.064)&#xA0;&#xD7;&#xA0;10<sup>&#x2212;13</sup>&#xA0;m<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup>. Recently, we have performed combined dynamic Monte-Carlo and Brownian dynamic (MC&#x2013;BD) simulations to study electrostatic and steric confinement effects on the mobility of spherical probes in orthorhombic and tetragonal lysosyme crystals (Malek et&#xA0;al. <xref ref-type="bibr" rid="CR24">2004</xref>). The diffusion coefficient of a probe of size comparable to that of the hydrated Ara (0.86&#xA0;&#xB1;&#xA0;0.01&#xA0;nm), calculated by MC&#x2013;BD simulations is (8.85&#xA0;&#xB1;&#xA0;0.05)&#xA0;&#xD7;&#xA0;10<sup>&#x2212;13</sup>&#xA0;m<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup>, which is in good agreement with the MD prediction. This indicates that size exclusion is the main reason for uncharged solute transport in orthorhombic lysozyme crystals. The diffusion of solutes within lysozyme crystals has also been investigated using different experimental techniques (Velev et&#xA0;al. <xref ref-type="bibr" rid="CR39">2000</xref>; Cvetkovic et&#xA0;al. <xref ref-type="bibr" rid="CR9">2005a</xref>, <xref ref-type="bibr" rid="CR10">b</xref>; O&#x2019;Hara et al. <xref ref-type="bibr" rid="CR34">1995</xref>). Velev et&#xA0;al. (<xref ref-type="bibr" rid="CR39">2000</xref>) studied the diffusion of surfactants in lysozyme crystals using fluorescent probes by means of quantitative fluorescence microscopy. The diffusion coefficients obtained range from 2 to 30&#xA0;&#xD7;&#xA0;10<sup>&#x2212;14</sup>&#xA0;m<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup>.</p>
+      <p>By using 3-D laser scanning confocal microscopy visualizations, Cvetkovic et&#xA0;al. (<xref ref-type="bibr" rid="CR9">2005a</xref>, <xref ref-type="bibr" rid="CR10">b</xref>) investigated detailed diffusion coefficients of some solutes, fluorescein and rhodamine B, into tetragonal, orthorhombic, and triclinic lysozyme crystals. The results showed that the transport of solute molecules depends on the chemical nature of solutes (e.g., hydrophobic vs. hydrophilic), charge and size of solutes and pore network within protein crystal. The diffusion of fluorescein, with an average diameter of 0.69&#xA0;&#xB1;&#xA0;0.02&#xA0;nm, in orthorhombic lysozyme crystals was highly anisotropic and the diffusion coefficient was calculated as approx. 7.0&#xA0;&#xB1;&#xA0;0.5&#xA0;&#xD7;&#xA0;10<sup>&#x2212;13</sup>&#xA0;m<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup>.</p>
+      <p>The diffusion coefficient of Ara calculated from our MD simulation is in reasonable agreement to these experiments. The diffusion rate is 4&#x2013;5 orders of magnitude slower than that in free water (&#x223C;7.73&#xA0;&#xD7;&#xA0;10<sup>&#x2212;10</sup>&#xA0;m<sup>2</sup>&#xA0;s<sup>&#x2212;1</sup> at 298&#xA0;K) (Nikaido and Rosenberg <xref ref-type="bibr" rid="CR33">1981</xref>; Mogi et&#xA0;al. <xref ref-type="bibr" rid="CR29">2007</xref>). The deviation is most likely as a result of single-point interactions between solute and side chains of the XI, which are usually characterized by hydrogen bindings and dipole-dipole interactions. Our preliminary analysis based on hydrogen bonds, number of contacts and minimum distance between Ara molecules and residues on the pore wall showed that the solute molecules spend considerable time in the vicinity of active site residues Lys96, Lys97, Lys116, Arg14, Arg21, and Asp87. This indicates that the orientation and translational-rotational motion of Ara play an important role in its transport through channels in orthorhombic lysozyme crystals.</p>
+      <p>These results suggest that in lysozyme lattice, and in contrast to the free lysozyme in solution, the interactions between dipolar solute and protein are mostly promoted by a large electric field on the residues far from the active site cleft (which are Asp52, Asp53, Glu35, and Asp99). Many of the latter charged amino acids that act as adsorption/desorption sites for the solute are, in fact, buried, while the residues Lys96, Lys97, Lys116, Arg14, Arg21, and Asp87 are more easily accessible. Considerable experimental and computational evidence supports several aspects of the mechanism that has been proposed for the catalytic activity of the lysozyme in solution (Dao-Pin et&#xA0;al. <xref ref-type="bibr" rid="CR11">1989</xref>; Bottoni et&#xA0;al. <xref ref-type="bibr" rid="CR8">2005</xref>). In a manner similar to that proposed for free lysozyme, our simulation results can be validated based on finding the most favorable interaction of the substrate molecules in the mixture with the catalytic active centers of the enzyme molecules in lattice. Such qualitative agreement with experimental data corroborates predictive capabilities of our model. Moreover, our study highlights the importance of the protein&#x2013;solute interactions on the transport in protein crystals.</p>
+      <p>Despite its simplicity and obvious limitations, this computational study provides insight into the main features of solute transport in protein crystals. Our study allows relating transport properties of the nanopores in protein crystals to solvent and ion motion as well as to protein fluctuations. Although our findings are in good qualitative and quantitative agreement with existing experimental data, more experimental studies are still needed by which we can compare our data directly. These results in combination with experimental information provide vital insights for understanding biocatalytic and chiral separation processes in CLPC.</p>
+    </sec>
+    <sec id="Sec4" sec-type="conclusion">
+      <title>Conclusion</title>
+      <p>In the present study, we performed MD simulations to study the motion of an aldopentose molecule (<sc>l</sc>-arabinose) in nanopores of a fully hydrated orthorhombic lysozyme crystal. The electrostatic and steric interaction inside the crystal channel significantly influences the diffusion of solute. No clear adsorption site in the crystal was detected in the simulation, most likely due to the low solute concentration. However, our analysis show that the solute molecules spend considerable time in the vicinity of active site residues Lys96, Lys97, Lys116, Arg14, Arg21, and Asp87. According to our results, the average mobility of solute molecules in lysozyme crystal channels is reduced orders of magnitude compared to that in free water. This is why crystalline proteins are easily accessible to solute molecules that are smaller than the necks of the crystal channels. The results are of practical interest to evaluate the time necessary to impregnate the crystals with ligands, water and solutes and provide valuable insights of solute&#x2013;protein interactions during solute transport in nanopores of protein crystals.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Artymiuk</surname>
+              <given-names>PJ</given-names>
+            </name>
+            <name>
+              <surname>Blake</surname>
+              <given-names>CCF</given-names>
+            </name>
+            <name>
+              <surname>Rice</surname>
+              <given-names>DW</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The structure of the monoclinic and orthorhombic of hen&#x2013;egg-white lysozyme at 6-A resolution</article-title>
+          <source>Acta Crystallogr B</source>
+          <year>1982</year>
+          <volume>38</volume>
+          <fpage>778</fpage>
+          <lpage>783</lpage>
+          <pub-id pub-id-type="doi">10.1107/S0567740882004075</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Artymiuk PJ, Blake CCF, Rice DW et&#xA0;al (1982) The structure of the monoclinic and orthorhombic of hen&#x2013;egg-white lysozyme at 6-A resolution. Acta Crystallogr B 38:778&#x2013;783 </citation>
+      </ref>
+      <ref id="CR2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berendsen</surname>
+              <given-names>HJC</given-names>
+            </name>
+            <name>
+              <surname>Spoel</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Drunen</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>GROMACS &#x2013; a message-passing parallel molecular dynamics implementation</article-title>
+          <source>Comp Phys Commun</source>
+          <year>1995</year>
+          <volume>91</volume>
+          <fpage>43</fpage>
+          <lpage>56</lpage>
+          <pub-id pub-id-type="doi">10.1016/0010-4655(95)00042-E</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Berendsen HJC, van der Spoel D, van Drunen R (1995) GROMACS &#x2013; a message-passing parallel molecular dynamics implementation. Comp Phys Commun 91:43&#x2013;56 </citation>
+      </ref>
+      <ref id="CR3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bishop</surname>
+              <given-names>WH</given-names>
+            </name>
+            <name>
+              <surname>Richards</surname>
+              <given-names>FM</given-names>
+            </name>
+          </person-group>
+          <article-title>Properties of liquids in small pores: rates of diffusion of some solutes in cross-linked crystals of beta-lactoglobulin</article-title>
+          <source>J Mol Biol</source>
+          <year>1968</year>
+          <volume>38</volume>
+          <fpage>315</fpage>
+          <pub-id pub-id-type="doi">10.1016/0022-2836(68)90389-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bishop WH, Richards FM (1968) Properties of liquids in small pores: rates of diffusion of some solutes in cross-linked crystals of beta-lactoglobulin. J Mol Biol 38:315 <pub-id pub-id-type="pmid">5718555</pub-id></citation>
+      </ref>
+      <ref id="CR4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bizzari</surname>
+              <given-names>AR</given-names>
+            </name>
+            <name>
+              <surname>Cannistraro</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular dynamics simulation evidence of anomalous diffusion of protein hydration water</article-title>
+          <source>Phys Rev E</source>
+          <year>1996</year>
+          <volume>53</volume>
+          <fpage>R3040</fpage>
+          <lpage>R3043</lpage>
+          <pub-id pub-id-type="doi">10.1103/PhysRevE.53.R3040</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bizzari AR, Cannistraro S (1996) Molecular dynamics simulation evidence of anomalous diffusion of protein hydration water. Phys Rev E 53:R3040&#x2013;R3043 </citation>
+      </ref>
+      <ref id="CR5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bizzari</surname>
+              <given-names>AR</given-names>
+            </name>
+            <name>
+              <surname>Rocchi</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Cannistraro</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Origin of the anomalous diffusion observed by MD simulation at the protein&#x2013;water interface</article-title>
+          <source>Chem Phys Lett</source>
+          <year>1996</year>
+          <volume>263</volume>
+          <fpage>559</fpage>
+          <lpage>566</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0009-2614(96)01232-8</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bizzari AR, Rocchi C, Cannistraro S (1996) Origin of the anomalous diffusion observed by MD simulation at the protein&#x2013;water interface. Chem Phys Lett 263:559&#x2013;566 </citation>
+      </ref>
+      <ref id="CR6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Blundell</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Jhoti</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Abell</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>High-throughput crystallography for lead discovery in drug designs</article-title>
+          <source>Nat Rev Drug Discov</source>
+          <year>2003</year>
+          <volume>1</volume>
+          <fpage>45</fpage>
+          <lpage>54</lpage>
+          <pub-id pub-id-type="doi">10.1038/nrd706</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Blundell TL, Jhoti H, Abell C (2003) High-throughput crystallography for lead discovery in drug designs. Nat Rev Drug Discov 1:45&#x2013;54 <pub-id pub-id-type="pmid">12119609</pub-id></citation>
+      </ref>
+      <ref id="CR7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bon</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Lehmann</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Wilkinson</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Quasi-Laue neu iron-diffraction study of the water arrangement in crystals of triclinic hen egg-white lysozyme</article-title>
+          <source>Acta Crystallogr D</source>
+          <year>1999</year>
+          <volume>55</volume>
+          <fpage>978</fpage>
+          <lpage>987</lpage>
+          <pub-id pub-id-type="doi">10.1107/S0907444998018514</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bon C, Lehmann MS, Wilkinson C (1999) Quasi-Laue neu iron-diffraction study of the water arrangement in crystals of triclinic hen egg-white lysozyme. Acta Crystallogr D 55:978&#x2013;987 <pub-id pub-id-type="pmid">10216294</pub-id></citation>
+      </ref>
+      <ref id="CR8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bottoni</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Miscione</surname>
+              <given-names>GP</given-names>
+            </name>
+            <name>
+              <surname>Vivo</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>A theoretical DFT investigation of the lysozyme mechanism: computational evidence for a covalent intermediate pathway</article-title>
+          <source>Proteins Struct Funct Bioinform</source>
+          <year>2005</year>
+          <volume>59</volume>
+          <fpage>118</fpage>
+          <lpage>130</lpage>
+          <pub-id pub-id-type="doi">10.1002/prot.20396</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Bottoni A, Miscione GP, de Vivo M (2005) A theoretical DFT investigation of the lysozyme mechanism: computational evidence for a covalent intermediate pathway. Proteins Struct Funct Bioinform 59:118&#x2013;130 </citation>
+      </ref>
+      <ref id="CR9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cvetkovic</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Picioreanu</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Straathof</surname>
+              <given-names>AJJ</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Quantification of binary diffusion in protein crystals</article-title>
+          <source>J Phys Chem B</source>
+          <year>2005</year>
+          <volume>109</volume>
+          <fpage>10561</fpage>
+          <lpage>10566</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp050289c</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cvetkovic A, Picioreanu C, Straathof AJJ et&#xA0;al (2005a) Quantification of binary diffusion in protein crystals. J Phys Chem B 109:10561&#x2013;10566 <pub-id pub-id-type="pmid">16852280</pub-id></citation>
+      </ref>
+      <ref id="CR10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cvetkovic</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Picioreanu</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Straathof</surname>
+              <given-names>AJJ</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Relation between pore sizes of protein crystals and anisotropic solute diffusivities</article-title>
+          <source>J Am Chem Soc</source>
+          <year>2005</year>
+          <volume>127</volume>
+          <fpage>875</fpage>
+          <lpage>879</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja0440708</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Cvetkovic A, Picioreanu C, Straathof AJJ et&#xA0;al (2005b) Relation between pore sizes of protein crystals and anisotropic solute diffusivities. J Am Chem Soc 127:875&#x2013;879 <pub-id pub-id-type="pmid">15656625</pub-id></citation>
+      </ref>
+      <ref id="CR11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dao-Pin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Liao</surname>
+              <given-names>DI</given-names>
+            </name>
+            <name>
+              <surname>Remington</surname>
+              <given-names>SJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Electrostatic fields in the active sites of lysozymes</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1989</year>
+          <volume>86</volume>
+          <fpage>5361</fpage>
+          <lpage>5365</lpage>
+          <pub-id pub-id-type="doi">10.1073/pnas.86.14.5361</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Dao-Pin S, Liao DI, Remington SJ (1989) Electrostatic fields in the active sites of lysozymes. Proc Natl Acad Sci USA 86:5361&#x2013;5365 <pub-id pub-id-type="pmid">2664781</pub-id></citation>
+      </ref>
+      <ref id="CR12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leeuw</surname>
+              <given-names>SW</given-names>
+            </name>
+            <name>
+              <surname>Perram</surname>
+              <given-names>JW</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>ER</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Simulation of electrostatic systems in periodic boundary conditions 1. Lattice sums and dielectric-constant</article-title>
+          <source>Proc R Soc London Ser A</source>
+          <year>1980</year>
+          <volume>373</volume>
+          <fpage>27</fpage>
+          <lpage>56</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">de Leeuw SW, Perram JW, Smith ER et&#xA0;al (1980) Simulation of electrostatic systems in periodic boundary conditions 1. Lattice sums and dielectric-constant. Proc R Soc London Ser A 373:27&#x2013;56 </citation>
+      </ref>
+      <ref id="CR13">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eisenberg</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Kauzmann</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <source>The structure and properties of water</source>
+          <year>1969</year>
+          <publisher-loc>London</publisher-loc>
+          <publisher-name>Clarendon Press</publisher-name>
+        </citation>
+        <citation citation-type="display-unstructured">Eisenberg D, Kauzmann W (1969) The structure and properties of water. Clarendon Press, London </citation>
+      </ref>
+      <ref id="CR14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Falkner</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Al-Somali</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Jamison</surname>
+              <given-names>JA</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Generation of size-controlled, submicrometer protein crystals</article-title>
+          <source>Chem Mat</source>
+          <year>2005</year>
+          <volume>17</volume>
+          <fpage>2679</fpage>
+          <lpage>2686</lpage>
+          <pub-id pub-id-type="doi">10.1021/cm047924w</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Falkner JC, Al-Somali AM, Jamison JA et&#xA0;al (2005) Generation of size-controlled, submicrometer protein crystals. Chem Mat 17:2679&#x2013;2686 </citation>
+      </ref>
+      <ref id="CR15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Geremia</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Campagnolo</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Demitri</surname>
+              <given-names>N</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Similation of diffusion time of small molecules in protein crystals</article-title>
+          <source>Structure</source>
+          <year>2005</year>
+          <volume>14</volume>
+          <fpage>393</fpage>
+          <lpage>400</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.str.2005.12.007</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Geremia S, Campagnolo M, Demitri N et&#xA0;al (2005) Similation of diffusion time of small molecules in protein crystals. Structure 14:393&#x2013;400 <pub-id pub-id-type="pmid">16531224</pub-id></citation>
+      </ref>
+      <ref id="CR16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Haring</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Schnrier</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Cross-linked enzyme crystals</article-title>
+          <source>Curr Opin Chem Biol</source>
+          <year>1991</year>
+          <volume>3</volume>
+          <fpage>35</fpage>
+          <lpage>38</lpage>
+          <pub-id pub-id-type="doi">10.1016/S1367-5931(99)80007-6</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Haring D, Schnrier P (1991) Cross-linked enzyme crystals. Curr Opin Chem Biol 3:35&#x2013;38 <pub-id pub-id-type="pmid">10021400</pub-id></citation>
+      </ref>
+      <ref id="CR17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>H&#xE9;ry</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Genset</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Fluctuation and correlation in crystalline lysozyme</article-title>
+          <source>J Chem Comp Sci</source>
+          <year>1997</year>
+          <volume>37</volume>
+          <fpage>1011</fpage>
+          <lpage>1017</lpage>
+          <pub-id pub-id-type="doi">10.1021/ci970234a</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">H&#xE9;ry S, Genset D, Smith JC (1997) Fluctuation and correlation in crystalline lysozyme. J Chem Comp Sci 37:1011&#x2013;1017 </citation>
+      </ref>
+      <ref id="CR18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>H&#xE9;ry</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Genset</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>X-ray diffuse scattering and rigid-body motion in crystalline lysozyme probed by molecular dynamics simulation</article-title>
+          <source>J Mol Biol</source>
+          <year>1998</year>
+          <volume>279</volume>
+          <fpage>303</fpage>
+          <lpage>319</lpage>
+          <pub-id pub-id-type="doi">10.1006/jmbi.1998.1754</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">H&#xE9;ry S, Genset D, Smith JC (1998) X-ray diffuse scattering and rigid-body motion in crystalline lysozyme probed by molecular dynamics simulation. J Mol Biol 279:303&#x2013;319 <pub-id pub-id-type="pmid">9636718</pub-id></citation>
+      </ref>
+      <ref id="CR19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Humphrey</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Dalke</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Schulten</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>VMD: visual molecular dynamics</article-title>
+          <source>J Mol Graphics</source>
+          <year>1996</year>
+          <volume>14</volume>
+          <fpage>33</fpage>
+          <pub-id pub-id-type="doi">10.1016/0263-7855(96)00018-5</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Humphrey W, Dalke A, Schulten K (1996) VMD: visual molecular dynamics. J Mol Graphics 14:33 </citation>
+      </ref>
+      <ref id="CR20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johnson</surname>
+              <given-names>LN</given-names>
+            </name>
+            <name>
+              <surname>Phillips</surname>
+              <given-names>DC</given-names>
+            </name>
+          </person-group>
+          <article-title>Structure of some crystalline lysozyme-inhibitor complexes determined by X-ray analysis at 6 Angstrom resolution</article-title>
+          <source>Nature</source>
+          <year>1965</year>
+          <volume>206</volume>
+          <fpage>761</fpage>
+          <lpage>763</lpage>
+          <pub-id pub-id-type="doi">10.1038/206761a0</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Johnson LN, Phillips DC (1965) Structure of some crystalline lysozyme-inhibitor complexes determined by X-ray analysis at 6 Angstrom resolution. Nature 206:761&#x2013;763 <pub-id pub-id-type="pmid">5840126</pub-id></citation>
+      </ref>
+      <ref id="CR21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jokela</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Pastinen</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Leisola</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Isomerization of pentose and hexose sugars by an enzyme reactor packed with cross-linked xylose isomerase crystals</article-title>
+          <source>Enzyme Microb Technol</source>
+          <year>2002</year>
+          <volume>31</volume>
+          <fpage>67</fpage>
+          <lpage>76</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0141-0229(02)00074-1</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Jokela J, Pastinen O, Leisola M (2002) Isomerization of pentose and hexose sugars by an enzyme reactor packed with cross-linked xylose isomerase crystals. Enzyme Microb Technol 31:67&#x2013;76 </citation>
+      </ref>
+      <ref id="CR22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kisljuk</surname>
+              <given-names>OS</given-names>
+            </name>
+            <name>
+              <surname>Kachalova</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Lanina</surname>
+              <given-names>NP</given-names>
+            </name>
+          </person-group>
+          <article-title>An algorithm to find channels and cavities within protein crystals</article-title>
+          <source>J Mol Graph</source>
+          <year>1994</year>
+          <volume>12</volume>
+          <fpage>305</fpage>
+          <lpage>307</lpage>
+          <pub-id pub-id-type="doi">10.1016/0263-7855(94)80110-X</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Kisljuk OS, Kachalova GS, Lanina NP (1994) An algorithm to find channels and cavities within protein crystals. J Mol Graph 12:305&#x2013;307 <pub-id pub-id-type="pmid">7696223</pub-id></citation>
+      </ref>
+      <ref id="CR23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lindahl</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Hess</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Spoel</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>GROMACS 3.0: a package for molecular simulation and trajectory analysis</article-title>
+          <source>J Mol Mod</source>
+          <year>2001</year>
+          <volume>7</volume>
+          <fpage>306</fpage>
+          <lpage>317</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Lindahl E, Hess B, van der Spoel D (2001) GROMACS 3.0: a package for molecular simulation and trajectory analysis. J Mol Mod 7:306&#x2013;317 </citation>
+      </ref>
+      <ref id="CR24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Malek</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Odijk</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Coppens</surname>
+              <given-names>M-O</given-names>
+            </name>
+          </person-group>
+          <article-title>Diffusion in protein crystals: A computer simulation</article-title>
+          <source>Chem Phys Chem</source>
+          <year>2004</year>
+          <volume>5</volume>
+          <fpage>1596</fpage>
+          <lpage>1599</lpage>
+        </citation>
+        <citation citation-type="display-unstructured">Malek K, Odijk T, Coppens M-O (2004) Diffusion in protein crystals: A computer simulation. Chem Phys Chem 5:1596&#x2013;1599 <pub-id pub-id-type="pmid">15535560</pub-id></citation>
+      </ref>
+      <ref id="CR25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Malek</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Odijk</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Coppens</surname>
+              <given-names>M-O</given-names>
+            </name>
+          </person-group>
+          <article-title>Diffusion of water and sodium counter-ions in nanopores of a &#x3B2;-lactoglobulin crystal: a molecular dynamics study</article-title>
+          <source>Nanotechnology</source>
+          <year>2005</year>
+          <volume>16</volume>
+          <fpage>S522</fpage>
+          <lpage>S530</lpage>
+          <pub-id pub-id-type="doi">10.1088/0957-4484/16/7/029</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Malek K, Odijk T, Coppens M-O (2005) Diffusion of water and sodium counter-ions in nanopores of a &#x3B2;-lactoglobulin crystal: a molecular dynamics study. Nanotechnology 16:S522&#x2013;S530 </citation>
+      </ref>
+      <ref id="CR26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Margolin</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Navia</surname>
+              <given-names>MA</given-names>
+            </name>
+          </person-group>
+          <article-title>Protein crystals as novel catalytic materials</article-title>
+          <source>Angew Chem Int Ed</source>
+          <year>2001</year>
+          <volume>40</volume>
+          <fpage>2204</fpage>
+          <lpage>2222</lpage>
+          <pub-id pub-id-type="doi">10.1002/1521-3773(20010618)40:12&lt;2204::AID-ANIE2204&gt;3.0.CO;2-J</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Margolin AL, Navia MA (2001) Protein crystals as novel catalytic materials. Angew Chem Int Ed 40:2204&#x2013;2222 </citation>
+      </ref>
+      <ref id="CR27">
+        <citation citation-type="other">Margolin AL, Vilenchik LZ (1996) U.S. Patent WO9813119</citation>
+      </ref>
+      <ref id="CR28">
+        <citation citation-type="other">Margolin AL, Persichetti RA, St. Clair NL et&#xA0;al (2000) U.S. Patent 6140475</citation>
+      </ref>
+      <ref id="CR29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mogi</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Sugai</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Fuse</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <article-title>Infinite dilution binary diffusion coefficients for six sugars at 0.1&#xA0;MPa and temperatures from (273.2 to 353.2)&#xA0;K</article-title>
+          <source>J Chem Eng Data</source>
+          <year>2007</year>
+          <volume>52</volume>
+          <fpage>40</fpage>
+          <lpage>43</lpage>
+          <pub-id pub-id-type="doi">10.1021/je0601816</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Mogi N, Sugai E, Fuse Y (2007) Infinite dilution binary diffusion coefficients for six sugars at 0.1&#xA0;MPa and temperatures from (273.2 to 353.2)&#xA0;K. J Chem Eng Data 52:40&#x2013;43 </citation>
+      </ref>
+      <ref id="CR31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Morozov</surname>
+              <given-names>VN</given-names>
+            </name>
+            <name>
+              <surname>Kachalova</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Evtodienko</surname>
+              <given-names>VU</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Permeability of lysozyme tetragonal crystals to water</article-title>
+          <source>Eur Biophys J</source>
+          <year>1995</year>
+          <volume>24</volume>
+          <fpage>93</fpage>
+          <lpage>98</lpage>
+          <pub-id pub-id-type="doi">10.1007/BF00211404</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Morozov VN, Kachalova GS, Evtodienko VU et&#xA0;al (1995) Permeability of lysozyme tetragonal crystals to water. Eur Biophys J 24:93&#x2013;98 </citation>
+      </ref>
+      <ref id="CR30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Morozova</surname>
+              <given-names>TYa</given-names>
+            </name>
+            <name>
+              <surname>Kachalova</surname>
+              <given-names>GS</given-names>
+            </name>
+            <name>
+              <surname>Lanina</surname>
+              <given-names>NF</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Ionic conductivity, transference numbers, composition and mobility of ions in cross-linked lysozyme crystals</article-title>
+          <source>Biophys Chem</source>
+          <year>1996</year>
+          <volume>60</volume>
+          <fpage>1</fpage>
+          <lpage>16</lpage>
+          <pub-id pub-id-type="doi">10.1016/0301-4622(96)00007-5</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Morozova TYa, Kachalova GS, Lanina NF et&#xA0;al (1996) Ionic conductivity, transference numbers, composition and mobility of ions in cross-linked lysozyme crystals. Biophys Chem 60:1&#x2013;16 <pub-id pub-id-type="pmid">8645857</pub-id></citation>
+      </ref>
+      <ref id="CR32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nagendra</surname>
+              <given-names>HG</given-names>
+            </name>
+            <name>
+              <surname>Sukumar</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Vijayan</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Role of water in plasticity, stability, and action of proteins: the crystal structures of lysozyme at very low levels of hydration</article-title>
+          <source>Protein</source>
+          <year>1998</year>
+          <volume>32</volume>
+          <fpage>229</fpage>
+          <lpage>240</lpage>
+          <pub-id pub-id-type="doi">10.1002/(SICI)1097-0134(19980801)32:2&lt;229::AID-PROT9&gt;3.0.CO;2-F</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nagendra HG, Sukumar N, Vijayan M (1998) Role of water in plasticity, stability, and action of proteins: the crystal structures of lysozyme at very low levels of hydration. Protein 32:229&#x2013;240 </citation>
+      </ref>
+      <ref id="CR33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nikaido</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Rosenberg</surname>
+              <given-names>EY</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of solute size on diffusion rates through the transmembrane pores of the outer membrane of <italic>Escherichia coli</italic></article-title>
+          <source>J Gen Physiol</source>
+          <year>1981</year>
+          <volume>77</volume>
+          <fpage>121</fpage>
+          <lpage>135</lpage>
+          <pub-id pub-id-type="doi">10.1085/jgp.77.2.121</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Nikaido H, Rosenberg EY (1981) Effect of solute size on diffusion rates through the transmembrane pores of the outer membrane of Escherichia coli. J Gen Physiol 77:121&#x2013;135 <pub-id pub-id-type="pmid">7021759</pub-id></citation>
+      </ref>
+      <ref id="CR34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>O&#x2019;Hara</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Goodwin</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Stoddard</surname>
+              <given-names>B</given-names>
+            </name>
+          </person-group>
+          <article-title>Direct measurmement of diffusion rates in enzyme crystals by video absorbance spectroscopy</article-title>
+          <source>J Appl Crystallogr</source>
+          <year>1995</year>
+          <volume>28</volume>
+          <fpage>829</fpage>
+          <lpage>834</lpage>
+          <pub-id pub-id-type="doi">10.1107/S0021889895007722</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">O&#x2019;Hara P, Goodwin P, Stoddard B (1995) Direct measurement of diffusion rates in enzyme crystals by video absorbance spectroscopy. J Appl Crystallogr 28:829&#x2013;834 </citation>
+      </ref>
+      <ref id="CR35">
+        <citation citation-type="other">Smart OS, Neduvelil JG, Wang X et&#xA0;al (1996) HOLE: a program for the analysis of the pore dimensions of ion channel structural models. J Mol Graph 14:354&#x2013;360, 376</citation>
+      </ref>
+      <ref id="CR36">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stocker</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Spiegel</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Gunsteren</surname>
+              <given-names>WF</given-names>
+            </name>
+          </person-group>
+          <article-title>On the similarity of properties in solution or in the crystalline state: a molecular dynamics study of hen lysozyme</article-title>
+          <source>J Biomacromol NMR</source>
+          <year>2000</year>
+          <volume>18</volume>
+          <fpage>1</fpage>
+          <lpage>12</lpage>
+          <pub-id pub-id-type="doi">10.1023/A:1008379605403</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Stocker U, Spiegel K, van Gunsteren WF (2000) On the similarity of properties in solution or in the crystalline state: a molecular dynamics study of hen lysozyme. J Biomacromol NMR 18:1&#x2013;12 </citation>
+      </ref>
+      <ref id="CR38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gunsteren</surname>
+              <given-names>WF</given-names>
+            </name>
+            <name>
+              <surname>Berendsen</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Computer-simulation of molecular-dynamics methodology, application and perspectives in chemistry</article-title>
+          <source>Angew Chem Int Ed Engl</source>
+          <year>1990</year>
+          <volume>29</volume>
+          <fpage>992</fpage>
+          <lpage>1023</lpage>
+          <pub-id pub-id-type="doi">10.1002/anie.199009921</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">van Gunsteren WF, Berendsen JC (1990) Computer-simulation of molecular-dynamics methodology, application and perspectives in chemistry. Angew Chem Int Ed Engl 29:992&#x2013;1023 </citation>
+      </ref>
+      <ref id="CR37">
+        <citation citation-type="other">van Gunsteren WF, Kruger P, Billeter SR et&#xA0;al (1996) The GROMOS96 manual and user guide, Biomos and Hochschulverlag AG an der ETH Z&#xC3;1/4rich, Groningen</citation>
+      </ref>
+      <ref id="CR39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Velev</surname>
+              <given-names>OD</given-names>
+            </name>
+            <name>
+              <surname>Kaler</surname>
+              <given-names>EW</given-names>
+            </name>
+            <name>
+              <surname>Lenhoff</surname>
+              <given-names>AM</given-names>
+            </name>
+          </person-group>
+          <article-title>Surfactant diffusion into lysozyme crystal matrices investigated by quantitative flurescence microscopy</article-title>
+          <source>J Phys Chem B</source>
+          <year>2000</year>
+          <volume>104</volume>
+          <fpage>9267</fpage>
+          <lpage>9275</lpage>
+          <pub-id pub-id-type="doi">10.1021/jp000393o</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Velev OD, Kaler EW, Lenhoff AM (2000) Surfactant diffusion into lysozyme crystal matrices investigated by quantitative flurescence microscopy. J Phys Chem B 104:9267&#x2013;9275 </citation>
+      </ref>
+      <ref id="CR40">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vilenchik</surname>
+              <given-names>LZ</given-names>
+            </name>
+            <name>
+              <surname>Griffith</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>St. Clair</surname>
+              <given-names>N</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Protein crystals as novel microporous materials</article-title>
+          <source>J Am Chem Soc</source>
+          <year>1998</year>
+          <volume>120</volume>
+          <fpage>4290</fpage>
+          <lpage>4294</lpage>
+          <pub-id pub-id-type="doi">10.1021/ja973449+</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vilenchik LZ, Griffith JP, St. Clair N et&#xA0;al (1998) Protein crystals as novel microporous materials. J Am Chem Soc 120:4290&#x2013;4294 </citation>
+      </ref>
+      <ref id="CR41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vuolanto</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Leisola</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Jokela</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Enantioselective affinity chromatography of a chiral drug by crystalline and carrier-bound antibody fab fragment</article-title>
+          <source>Biotechnol Prog</source>
+          <year>2004</year>
+          <volume>20</volume>
+          <fpage>771</fpage>
+          <lpage>776</lpage>
+          <pub-id pub-id-type="doi">10.1021/bp034312s</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vuolanto A, Leisola M, Jokela J (2004) Enantioselective affinity chromatography of a chiral drug by crystalline and carrier-bound antibody fab fragment. Biotechnol Prog 20:771&#x2013;776 <pub-id pub-id-type="pmid">15176881</pub-id></citation>
+      </ref>
+      <ref id="CR42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vuolanto</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Pastinen</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Schoemaker</surname>
+              <given-names>HE</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>C-2 epimer formation of tetrose, pentose and hexose sugars by xylose isomerase</article-title>
+          <source>Biocatal Biotransform</source>
+          <year>2002</year>
+          <volume>20</volume>
+          <fpage>235</fpage>
+          <lpage>240</lpage>
+          <pub-id pub-id-type="doi">10.1080/10242420290029463</pub-id>
+        </citation>
+        <citation citation-type="display-unstructured">Vuolanto A, Pastinen O, Schoemaker HE et&#xA0;al (2002) C-2 epimer formation of tetrose, pentose and hexose sugars by xylose isomerase. Biocatal Biotransform 20:235&#x2013;240 </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>

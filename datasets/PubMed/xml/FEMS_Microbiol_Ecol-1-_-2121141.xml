@@ -1,0 +1,1983 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="review-article" xml:lang="EN">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">FEMS Microbiol Ecol</journal-id>
+      <journal-id journal-id-type="publisher-id">fem</journal-id>
+      <journal-title>Fems Microbiology Ecology</journal-title>
+      <issn pub-type="ppub">0168-6496</issn>
+      <issn pub-type="epub">1574-6941</issn>
+      <publisher>
+        <publisher-name>Blackwell Publishing Ltd</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">17892477</article-id>
+      <article-id pub-id-type="pmc">2121141</article-id>
+      <article-id pub-id-type="doi">10.1111/j.1574-6941.2007.00375.x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>MiniReviews</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Multivariate analyses in microbial ecology</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Ramette</surname>
+            <given-names>Alban</given-names>
+          </name>
+        </contrib>
+        <aff>
+          <institution>Microbial habitat group, Max Planck Institute for Marine Microbiology</institution>
+          <addr-line>Bremen, Germany</addr-line>
+        </aff>
+      </contrib-group>
+      <contrib-group>
+        <contrib contrib-type="editor">
+          <name>
+            <surname>Head</surname>
+            <given-names>Ian</given-names>
+          </name>
+        </contrib>
+      </contrib-group>
+      <author-notes>
+        <corresp id="cor1"><bold>Correspondence:</bold> Alban Ramette, Microbial habitat group, Max Planck Institute for Marine Microbiology, Celsiusstrasse 1, 28359 Bremen, Germany. Tel.: +49 421 2028 863; fax: +49 421 2028 690; e-mail: <email>aramette@mpi-bremen.de</email></corresp>
+      </author-notes>
+      <pub-date pub-type="ppub">
+        <month>11</month>
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>25</day>
+        <month>9</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>62</volume>
+      <issue>2</issue>
+      <fpage>142</fpage>
+      <lpage>160</lpage>
+      <history>
+        <date date-type="received">
+          <day>17</day>
+          <month>1</month>
+          <year>2007</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>18</day>
+          <month>7</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>20</day>
+          <month>7</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <copyright-statement>&#xA9; 2007 Max Planck Society Journal compilation &#xA9; 2007 Federation of European Microbiological Societies</copyright-statement>
+      <copyright-year>2007</copyright-year>
+      <abstract>
+        <p>Environmental microbiology is undergoing a dramatic revolution due to the increasing accumulation of biological information and contextual environmental parameters. This will not only enable a better identification of diversity patterns, but will also shed more light on the associated environmental conditions, spatial locations, and seasonal fluctuations, which could explain such patterns. Complex ecological questions may now be addressed using multivariate statistical analyses, which represent a vast potential of techniques that are still underexploited. Here, well-established exploratory and hypothesis-driven approaches are reviewed, so as to foster their addition to the microbial ecologist toolbox. Because such tools aim at reducing data set complexity, at identifying major patterns and putative causal factors, they will certainly find many applications in microbial ecology.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>ordination</kwd>
+        <kwd>multivariate</kwd>
+        <kwd>modeling</kwd>
+        <kwd>statistics</kwd>
+        <kwd>gradient</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Introduction</title>
+      <p>Microbial ecology is undergoing a profound change because structure&#x2013;function relationships between communities and their environment are starting to be investigated at the field, regional, and even continental scales (e.g. <xref ref-type="bibr" rid="b28">Hughes Martiny <italic>et al</italic>., 2006</xref>; <xref ref-type="bibr" rid="b56">Ramette &amp; Tiedje, 2007a</xref>, <xref ref-type="bibr" rid="b57">b</xref>). Because DNA sequences are being accumulated at an unprecedented rate due to high-throughput technologies such as pyrosequencing (<xref ref-type="bibr" rid="b13">Edwards <italic>et al</italic>., 2006a</xref>, <xref ref-type="bibr" rid="b14">b</xref>), single-cell genome sequencing (<xref ref-type="bibr" rid="b79">Zhang <italic>et al</italic>., 2006</xref>), or metagenomics (<xref ref-type="bibr" rid="b75">Venter <italic>et al</italic>., 2004</xref>; <xref ref-type="bibr" rid="b16">Field <italic>et al</italic>., 2006</xref>; <xref ref-type="bibr" rid="b20">Gill <italic>et al</italic>., 2006</xref>), future challenges will very likely consist of interpreting the observed diversity patterns as a function of contextual environmental parameters. This would help answer fundamental questions in microbial ecology such as whether microbial diversity responds qualitatively and quantitatively to the same factors as macroorganism diversity (<xref ref-type="bibr" rid="b26">Horner-Devine <italic>et al</italic>., 2004</xref>; <xref ref-type="bibr" rid="b73">van der Gast <italic>et al</italic>., 2005</xref>; <xref ref-type="bibr" rid="b23">Green &amp; Bohannan, 2006</xref>; <xref ref-type="bibr" rid="b28">Hughes Martiny <italic>et al</italic>., 2006</xref>).</p>
+      <p>Most obstacles encountered by microbial ecologists when they try to summarize and further explore large data sets concern the choice of the adequate numerical tools to further evaluate the data statistically and visually. Such tools, which have been developed by community ecologists to work on distribution and diversity patterns of plants and animals, could be readily applied in microbial ecology. Although multivariate analyses of community diversity patterns are well described in the literature, microbial ecologists have used multivariate analyses either rarely or mostly for exploratory purposes. A brief survey of the literature confirms this trend (<xref ref-type="table" rid="tbl1">Table 1</xref>; <xref ref-type="fig" rid="fig01">Fig. 1</xref>). <xref ref-type="table" rid="tbl1">Table 1</xref> indicates that bacterial studies rank third after plant and fish studies for their use of multivariate analyses. Complex data sets are mostly explored via principal component analysis, or cluster analysis, and hypothesis-driven techniques such as redundancy analysis, canonical correspondence analysis (CCA), or Mantel tests are more rarely used (<xref ref-type="fig" rid="fig01">Fig. 1</xref>). Axis 1 (horizontal) clearly differentiates microscopic (bacteria, microorganisms, fungi) from macroscopic (fish, bird, plant, insect) life, and this may be related to the use of more exploratory methods (e.g. cluster analysis, PCA) in the first group. It is important to state that the figures presented in <xref ref-type="table" rid="tbl1">Table 1</xref> and <xref ref-type="fig" rid="fig01">Fig. 1</xref> have to be taken with caution because many articles do not include a description of statistical approaches in their titles or abstracts, and so the table is certainly biased and incomplete. However, the point of the table was both to identify some general trends in the literature and to give one example of the usefulness of multivariate analysis to analyze a data table.</p>
+      <table-wrap id="tbl1" position="float">
+        <label>Table 1</label>
+        <caption>
+          <p>Usage (%) of multivariate methods in different fields</p>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1"/>
+              <th align="left" colspan="4" rowspan="1">Exploratory analysis</th>
+              <th align="left" colspan="6" rowspan="1">Hypothesis-driven analysis</th>
+              <th rowspan="1" colspan="1"/>
+            </tr>
+            <tr>
+              <th rowspan="1" colspan="1"/>
+              <th colspan="4" rowspan="1">
+                <hr/>
+              </th>
+              <th colspan="6" rowspan="1">
+                <hr/>
+              </th>
+              <th rowspan="1" colspan="1"/>
+            </tr>
+            <tr>
+              <th align="left" rowspan="1" colspan="1">Keywords<xref ref-type="table-fn" rid="tf1-1">&#x2020;</xref></th>
+              <th align="center" rowspan="1" colspan="1">Cluster</th>
+              <th align="center" rowspan="1" colspan="1">PCA</th>
+              <th align="center" rowspan="1" colspan="1">MDS</th>
+              <th align="center" rowspan="1" colspan="1">PCoA</th>
+              <th align="center" rowspan="1" colspan="1">CCA</th>
+              <th align="center" rowspan="1" colspan="1">RDA</th>
+              <th align="center" rowspan="1" colspan="1">
+                <sc>manova</sc>
+              </th>
+              <th align="center" rowspan="1" colspan="1">Mantel</th>
+              <th align="center" rowspan="1" colspan="1">
+                <sc>anosim</sc>
+              </th>
+              <th align="center" rowspan="1" colspan="1">CVA</th>
+              <th align="center" rowspan="1" colspan="1">Total number<xref ref-type="table-fn" rid="tf1-2">&#x2021;</xref></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Bacter<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">48.5</td>
+              <td align="left" rowspan="1" colspan="1">38</td>
+              <td align="left" rowspan="1" colspan="1">4.5</td>
+              <td align="left" rowspan="1" colspan="1">0.4</td>
+              <td align="left" rowspan="1" colspan="1">3.2</td>
+              <td align="left" rowspan="1" colspan="1">1.8</td>
+              <td align="left" rowspan="1" colspan="1">1.3</td>
+              <td align="left" rowspan="1" colspan="1">0.4</td>
+              <td align="left" rowspan="1" colspan="1">0.9</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">1141</td>
+            </tr>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Microb<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">45.8</td>
+              <td align="left" rowspan="1" colspan="1">40.2</td>
+              <td align="left" rowspan="1" colspan="1">3.9</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">2.2</td>
+              <td align="left" rowspan="1" colspan="1">2.2</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">1.7</td>
+              <td align="left" rowspan="1" colspan="1">0.6</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">&#x2002;179</td>
+            </tr>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Plant<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">40.3</td>
+              <td align="left" rowspan="1" colspan="1">28.5</td>
+              <td align="left" rowspan="1" colspan="1">4.6</td>
+              <td align="left" rowspan="1" colspan="1">1.7</td>
+              <td align="left" rowspan="1" colspan="1">15.5</td>
+              <td align="left" rowspan="1" colspan="1">3.7</td>
+              <td align="left" rowspan="1" colspan="1">1.9</td>
+              <td align="left" rowspan="1" colspan="1">2.3</td>
+              <td align="left" rowspan="1" colspan="1">0.6</td>
+              <td align="left" rowspan="1" colspan="1">0.9</td>
+              <td align="left" rowspan="1" colspan="1">3335</td>
+            </tr>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Fung<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">54</td>
+              <td align="left" rowspan="1" colspan="1">27.2</td>
+              <td align="left" rowspan="1" colspan="1">2.8</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">8.5</td>
+              <td align="left" rowspan="1" colspan="1">2.8</td>
+              <td align="left" rowspan="1" colspan="1">0.9</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">0.2</td>
+              <td align="left" rowspan="1" colspan="1">1.4</td>
+              <td align="left" rowspan="1" colspan="1">&#x2002;563</td>
+            </tr>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Fish<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">30.1</td>
+              <td align="left" rowspan="1" colspan="1">33.7</td>
+              <td align="left" rowspan="1" colspan="1">9.8</td>
+              <td align="left" rowspan="1" colspan="1">0.3</td>
+              <td align="left" rowspan="1" colspan="1">13.5</td>
+              <td align="left" rowspan="1" colspan="1">2.7</td>
+              <td align="left" rowspan="1" colspan="1">3.6</td>
+              <td align="left" rowspan="1" colspan="1">2.9</td>
+              <td align="left" rowspan="1" colspan="1">2.3</td>
+              <td align="left" rowspan="1" colspan="1">1.2</td>
+              <td align="left" rowspan="1" colspan="1">1464</td>
+            </tr>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Bird<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">41</td>
+              <td align="left" rowspan="1" colspan="1">20.5</td>
+              <td align="left" rowspan="1" colspan="1">5.4</td>
+              <td align="left" rowspan="1" colspan="1">0.7</td>
+              <td align="left" rowspan="1" colspan="1">21.2</td>
+              <td align="left" rowspan="1" colspan="1">3.5</td>
+              <td align="left" rowspan="1" colspan="1">2.1</td>
+              <td align="left" rowspan="1" colspan="1">4.2</td>
+              <td align="left" rowspan="1" colspan="1">0.5</td>
+              <td align="left" rowspan="1" colspan="1">0.9</td>
+              <td align="left" rowspan="1" colspan="1">&#x2002;429</td>
+            </tr>
+            <tr>
+              <td align="left" rowspan="1" colspan="1">Insect<sup>*</sup></td>
+              <td align="left" rowspan="1" colspan="1">54.3</td>
+              <td align="left" rowspan="1" colspan="1">13.7</td>
+              <td align="left" rowspan="1" colspan="1">6.1</td>
+              <td align="left" rowspan="1" colspan="1">0.8</td>
+              <td align="left" rowspan="1" colspan="1">11.5</td>
+              <td align="left" rowspan="1" colspan="1">4.4</td>
+              <td align="left" rowspan="1" colspan="1">3.5</td>
+              <td align="left" rowspan="1" colspan="1">3</td>
+              <td align="left" rowspan="1" colspan="1">1.1</td>
+              <td align="left" rowspan="1" colspan="1">1.7</td>
+              <td align="left" rowspan="1" colspan="1">&#x2002;637</td>
+            </tr>
+          </tbody>
+        </table>
+        <table-wrap-foot>
+          <fn>
+            <p>A literature search was performed with the Thomson ISI research tool with the following parameters (Doc type, all document types; language, all languages; databases, SCI-EXPANDED, SSCI, A&amp;HCI; Timespan, 1900&#x2013;2006) on December 13, 2006 in the titles and abstracts of the articles only.</p>
+          </fn>
+          <fn id="tf1-1">
+            <label>&#x2020;</label>
+            <p>Asterisks were placed at the end of each keyword to accommodate for variations. Each keyword was additionally combined with the following technical designations: cluster, cluster analysis; PCA, principal component analysis; MDS, multidimensional scaling; PcoA, principal coordinate analysis; CCA, canonical correspondence analysis; RDA, redundancy analysis; Mantel, Mantel test, or CVA, canonical variate analysis.</p>
+          </fn>
+          <fn id="tf1-2">
+            <label>&#x2021;</label>
+            <p>Total number refers to the total number of publications identified by each keyword and all its combinations. The ordination based on correspondence analysis of the raw number is depicted in <xref ref-type="fig" rid="fig01">Fig. 1</xref>.</p>
+          </fn>
+        </table-wrap-foot>
+      </table-wrap>
+      <fig id="fig01" position="float">
+        <label>Fig. 1</label>
+        <caption>
+          <p>Correspondence analysis of method usage in various scientific fields. In this symmetrical scaling of CA scores, the first two axes explained 47.3% and 35.8% of the total inertia of <xref ref-type="table" rid="tbl1">Table 1</xref>, respectively. The gray areas were drawn to facilitate the interpretation. Complete row names (scientific fields; full circles) and column names (methods; white triangles) are given in <xref ref-type="table" rid="tbl1">Table 1</xref>. Methods (triangles) located close to each other correspond to methods often occurring together in studies. The distance between a scientific field point and a method point approximates the probability of method usage in the field.</p>
+        </caption>
+        <graphic xlink:href="fem0062-0142-f1"/>
+      </fig>
+      <p>This review aims at presenting some common multivariate techniques in order to foster their integration into the microbial ecologist's toolbox. Indeed, &#x2018;it is no longer possible to gain a full understanding of Ecology and Systematics without some knowledge of multivariate analysis. Or, contrariwise, misunderstanding of the methods can inhibit advancement of the science&#x2019; (<xref ref-type="bibr" rid="b30">James &amp; McCulloch, 1990</xref>). Such a review is ambitious because it tries to provide a few guidelines for a very vast discipline that is still under development. For this reason, it cannot be exhaustive and does not pretend to offer in-depth coverage of all selected topics. The review is largely inspired by descriptions, comments, and suggestions originating from multiple, highly recommended sources (<xref ref-type="bibr" rid="b70">ter Braak &amp; Prentice, 1988</xref>; <xref ref-type="bibr" rid="b30">James &amp; McCulloch, 1990</xref>; <xref ref-type="bibr" rid="b36">Legendre &amp; Legendre, 1998</xref>; <xref ref-type="bibr" rid="b40">Leps &amp; Smilauer, 1999</xref>; <xref ref-type="bibr" rid="b72">ter Braak &amp; Smilauer, 2002</xref>; <xref ref-type="bibr" rid="b52">Palmer, 2006</xref>), where detailed information about each technique can be obtained.</p>
+      <p>In the first part, data type and preparation are reviewed as a necessary basis for subsequent multivariate analyses. Second, common multivariate methods (i.e. cluster analysis, principal component analysis, correspondence analysis, multidimensional scaling) and a few statistical methods to test for significant differences between groups or clusters are described, focusing on the methods' main objectives, applications, and limitations. Beyond the mere identification of diversity patterns, microbial ecologists may wish to correlate or explain those patterns using measured environmental parameters, and this approach is addressed in the third part. Special emphasis is placed on a few methods that have proven useful in ecological studies, namely redundancy analysis, CCA, linear discriminant analysis, as well as variation partitioning. The final part provides practical considerations to help researchers avoid pitfalls and choose the most appropriate methods.</p>
+    </sec>
+    <sec>
+      <title>Data types and data preparation</title>
+      <sec>
+        <title>Data sets</title>
+        <p>The initial multivariate data set may consist of a table of objects (e.g. samples, sites, time periods) in rows and measured variables for those objects in columns. This table structure is the standard used in the present review. When the latter variables are biological taxa, the columns will simply be designated as &#x2018;species&#x2019; thereafter. It is critical to clearly identify what corresponds to objects and variables in the data set. Indeed, objects in one study may be species or operational taxonomic units (OTU) for which catabolic profiles, gene presence or polymorphism, etc. are measured. In another study where samples from different sites are compared based on, for instance, community fingerprinting techniques, objects can now be samples and species variables. This distinction is important because procedures that analyze relationships among objects or among variables are different. Objects are defined <italic>a priori</italic> by the sampling strategy before making observations and variable measurements. Besides, most multivariate analyses assume independence between objects (or samples), i.e. observations made on an object are not <italic>a priori</italic> dependent on those made on another object. Variables, however, can be found to be intercorrelated to various degrees, but this is not necessarily known in advance. Initial data sets can also consist of distance matrices where pairwise dissimilarities between objects are calculated. The original table of raw data is not always available, e.g. for DNA&#x2013;DNA hybridization values, phylogenetic distances, and thus specific multivariate techniques have to be considered to deal with data matrices.</p>
+      </sec>
+      <sec>
+        <title>Data transformations</title>
+        <p>In multivariate data tables, measured variables can be binary, quantitative, qualitative, rank-ordered, classes, frequencies, or even a mixture of those types. If variables do not have a uniform scale (e.g. environmental parameters measured in different units or scales) or an adequate format, variables have to be transformed before performing further analyses. Each qualitative variable has to be recoded as a set of numerical variables that replace it in the numerical calculations. One way to do so is to create a series of &#x2018;dummy&#x2019; variables that correspond to all the states of the qualitative variable. For instance, if the variable &#x2018;season&#x2019; has to be recoded, four associated variables will be constructed, and for each object the value 1 will be given to the corresponding season when it occurs, and 0 for the three other seasons when it is absent. Many statistical packages automatically perform this recoding.</p>
+        <p><italic>Standardization</italic> provides dimensionless variables and removes the undue influence of magnitude differences between scales or units. A common procedure is to apply the <italic>z</italic>-score transformation to the values of each variable. For each variable, it consists of (1) computing the difference between the original value and the mean of the variable (i.e. centering) and of (2) dividing this difference by the SD of the variable.</p>
+        <p><italic>Normalizing</italic> transformations aim at correcting the distribution shapes of certain variables, which depart from normality. One thus tries to obtain a homogeneous variances for variables, conditions under which multivariate procedures often perform better. Different mathematical transformations can be used to normalize the <italic>x</italic> values of a variable: for instance, the arcsin (&#x221A;<italic>x</italic>) transformation can be applied to percentages or proportions, log(<italic>x</italic>+<italic>c</italic>) to variables departing strongly from a normal distribution, and &#x221A;(<italic>x</italic>+<italic>c</italic>) to less problematic cases, with <italic>c</italic> being a constant that is added to avoid mathematically undefined computations. The <italic>c</italic> constant is generally chosen so that the smallest nonzero value is obtained by computing <italic>x</italic>+<italic>c</italic> in the former functions. The constant should also be of the same order of magnitude as the variable (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        <p>To make community composition (either presence&#x2013;absence or abundance) data containing many zeros suitable for analysis by linear methods such as principal component analysis (PCA) or canonical redundancy analysis (RDA), the Hellinger transformation [<xref ref-type="disp-formula" rid="m1">Eq. (1)</xref>] is one of five transformations that give good results (<xref ref-type="bibr" rid="b37">Legendre &amp; Gallagher, 2001</xref>). The chord transformation is a useful transformation that also gives less weight to rare species in the species table [<xref ref-type="disp-formula" rid="m2">Eq. (2)</xref>]. The transformations are given by <disp-formula id="m1"><graphic xlink:href="fem0062-0142-m1.jpg" mimetype="image" position="float"/><label>(1)</label></disp-formula><disp-formula id="m2"><graphic xlink:href="fem0062-0142-m2.jpg" mimetype="image" position="float"/><label>(2)</label></disp-formula>where <italic>y</italic><sub><italic>ij</italic></sub> is the original species value for site <italic>i</italic> and species <italic>j</italic>, <italic>y</italic><sub><italic>i</italic>+</sub> represents the sum of all species values for site <italic>i</italic> (i.e. sum per row), <italic>p</italic> is the number of species in the table (number of columns), and <inline-graphic xlink:href="fem0062-0142-mu1.jpg" mimetype="image"/> represents the resulting, transformed species value (<xref ref-type="bibr" rid="b37">Legendre &amp; Gallagher, 2001</xref>). These transformations are particularly recommended when rare species are not truly rare, i.e. when they mostly occur because the sampling was performed blindly, as generally done in soil or marine microbial ecology. Further data transformations can be found in <xref ref-type="bibr" rid="b65">Sokal &amp; Rohlf (1995)</xref> and <xref ref-type="bibr" rid="b38">Legendre &amp; Legendre (1998)</xref>.</p>
+        <p>The way to deal with missing data is a discipline on its own (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). Briefly, one can either delete rows or columns containing the missing value(s), or try to replace the missing values by mathematical estimates inferred from values obtained from other objects in the data set. In the latter case, it is still difficult to provide ecologically meaningful explanations for these estimates. In any case, the specific handling of missing data should be reported by the investigator.</p>
+        <p>When dealing with matrices, it is possible to change a similarity matrix (<italic>S</italic>) into a dissimilarity matrix (<italic>D</italic>) by applying the following transformations: <italic>D</italic>=1&#x2212;<italic>S</italic>, <italic>D</italic>=&#x221A;(1&#x2212;<italic>S</italic>), or <italic>D</italic>=&#x221A;(1&#x2212;<italic>S</italic><sup>2</sup>). To normalize any <italic>D</italic> matrix to the interval [0&#x2013;1], one can compute <italic>D</italic>/<italic>D</italic><sub>max</sub>, or (<italic>D</italic>&#x2212;<italic>D</italic><sub>min</sub>)/(<italic>D</italic><sub>max</sub>&#x2212;<italic>D</italic><sub>min</sub>), where <italic>D</italic><sub>max</sub> and <italic>D</italic><sub>min</sub> represent the highest and lowest values of <italic>D</italic>, respectively (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Exploratory analyses</title>
+      <sec>
+        <title>Visualization and exploration of complex data sets</title>
+        <p>The basic aim of ordination and cluster analysis is to represent the (dis)similarity between objects (e.g. samples, sites) based on values of multiple variables (columns) associated with them, so that similar objects are depicted near from each other and dissimilar objects are found further apart from each other. Exploratory multivariate analyses are thus useful to reveal patterns in large data sets, but they do not directly explain why those patterns exist. This latter point is addressed in the third part of the review.</p>
+        <sec>
+          <title>Cluster analysis and association coefficients</title>
+          <p>Cluster analysis encompasses several multivariate techniques that are used to group objects into categories based on their dissimilarities. The aim is both to minimize within-group variation and maximize between-group variation in order to reveal well-defined categories of objects, and therefore reduce the dimensionality of the data set to a few groups of rows (<xref ref-type="bibr" rid="b30">James &amp; McCulloch, 1990</xref>; <xref ref-type="bibr" rid="b36">Legendre &amp; Legendre, 1998</xref>). This approach is thus generally recommended when distinct discontinuities instead of continuous differences (i.e. gradients) are expected between samples (objects) because cluster analysis mostly aims at representing partitions in a data set (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p>Because distance matrices that are based on differences in DNA or amino acid sequences are commonly used to describe microbial diversity, cluster analysis has become very popular in microbial ecology (<xref ref-type="table" rid="tbl1">Table 1</xref>; <xref ref-type="fig" rid="fig01">Fig. 1</xref>). This is not surprising because the grouping of organisms based on their phenotypic or genotypic similarities in order to infer their taxonomic positioning is generally and historically based on cluster analysis (or at least based on a tree-like representation) and, as such, is central to biology and evolution (<xref ref-type="bibr" rid="b3">Avise, 2006</xref>). Typical microbial ecology questions that are addressed by cluster analysis are whether the clustering patterns of molecular sequences reflect sample origin or sampling time in order to reveal specific biogeographical or temporal patterns, respectively (<xref ref-type="bibr" rid="b76">Whitaker <italic>et al</italic>., 2003</xref>; <xref ref-type="bibr" rid="b1">Acinas <italic>et al</italic>., 2004</xref>). Those factors are generally hypothesized to be of a discontinuous nature, but the rationale of generally representing molecular differences as discontinuous clusters in microbial ecology and microbial genomic studies has only started to be questioned (<xref ref-type="bibr" rid="b35">Konstantinidis <italic>et al</italic>., 2006</xref>). Another common application consists of sorting out clones from environmental samples based on specific criteria (e.g. genetic or phenotypic markers) because clones or variants are expected to form tight clusters around their parental strains and to be more distinct from other lineages (<xref ref-type="bibr" rid="b1">Acinas <italic>et al</italic>., 2004</xref>). In microarray data analysis, cluster analysis has helped identify common expression patterns of groups of genes, which may shed light on functionally related genes or pathways (<xref ref-type="bibr" rid="b15">Eisen <italic>et al</italic>., 1998</xref>).</p>
+          <p>Cluster analysis of a data table proceeds in two steps. First, a relevant association coefficient has to be chosen to measure the association (similarity or dissimilarity) among objects or among variables. Second, the calculated association matrix is represented as a horizontal tree (hierarchical clustering) or as distinct groups of objects (<italic>k</italic>-means clustering), based on specific rules to aggregate objects. For ecologists, the power of cluster analysis derives from the existence of different types of (dis)similarity coefficients. The choice of appropriate and ecologically meaningful association coefficients is particularly important because it directly affects the values that are subsequently used for the categorization of objects.</p>
+          <p>The analysis of similarities among objects (rows) is designated as <italic>Q</italic> mode analysis, whereas when relationships among variables (columns) are the focus of the study, this is referred to as <italic>R</italic> mode analysis (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). Noticeably, the two modes of analysis do not generally use the same association coefficients. Although it is not possible to give a full review of all association coefficients here, it is useful to known that, for comparing objects (rows) based on their column attributes in <italic>Q</italic> mode analysis, coefficients may be chosen as a function of data type (quantitative, qualitative, ordinal, or mixed data, normalized data, presence-absence), importance given to rare species, weight given to each object, and calculation of associated probability levels. For comparing objects in a sample-by-environment table (e.g. water, soil chemistry), selection of appropriate coefficients generally depends on data type and unit homogeneity of the measured variables. In <italic>R</italic> mode analyses, in addition to the previously cited criteria, the choice of a coefficient may also depend on how the variables are related to each other (e.g. linearly, monotonically, qualitatively, ordered), and on how species absence is handled in the calculations. In most ecological studies, the absence of a species at two sites being compared is not considered as a measure of similarity between those sites. Indeed, a simultaneous species absence at two sites may be due to different reasons, e.g. the sites offer different physical&#x2013;chemical conditions and the species cannot exist under both conditions, and so there is no straightforward conclusion about site similarity that can be drawn in this case. <italic>Asymmetric</italic> coefficients are coefficients that do not take into account cases of double absences of species (&#x2018;double zeros&#x2019;) in the calculation of pairwise similarities among sites. Moreover, in microbial ecology where environmental communities are generally far from being exhaustively sampled, a double absence of an OTU has to be regarded more as a lack of information rather than a sign of common structure among samples, and asymmetric coefficients such as <xref ref-type="bibr" rid="b29">Jaccard (1901)</xref> or <xref ref-type="bibr" rid="b66">S&#xF8;rensen (1948)</xref> should be preferred. More details about the calculation of association coefficients and their appropriateness can be found, for instance, in Chapter 7 of (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p>When an association matrix is calculated, the relationships between objects or variables can be represented following specific aggregation rules. Three general approaches are commonly used: hierarchical clustering, <italic>k</italic>-means partitioning, and two-way joining. In <italic>hierarchical clustering</italic>, a linkage rule to form clusters and the numbers of clusters that best suit the data have to be determined <italic>a priori</italic>. Clusters, which are nested rather than mutually exclusive here, are either formed by progressively agglomerating objects from high to low similarity cutoff values (forward clustering), or using the converse strategy, i.e. grouping all cases together and progressing from low to high cutoff values in order to merge objects and clusters (backward clustering). These two strategies do not necessarily yield the same clusters. The merging of clusters is visualized using a tree format (generally horizontal) and is successful when well-defined clusters are identified in the data set (<xref ref-type="bibr" rid="b64">Sneath &amp; Sokal, 1973</xref>).</p>
+          <p>Common linkage rules are, e.g. <italic>nearest neighbor</italic> (the distance between two clusters is the distance between their closest neighboring points), <italic>furthest neighbor</italic> (the distance between two clusters is the distance between their two furthest objects), and the widely used unweighted pair-group method using averages (UPGMA; <xref ref-type="bibr" rid="b64">Sneath &amp; Sokal, 1973</xref>), where the distance between two clusters is the average distance between all intercluster pairs. When within-cluster homogeneity is desired, <italic>Ward's method</italic>, which merges clusters only if they increase the within-cluster variation the least, is recommended (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). Finally, equal weight can also be given to clusters that are expected to be of different sizes using the <italic>weighted arithmetic average clustering</italic> (WPGMA), which consists of giving less weight to the original similarities of the largest groups (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p>In <italic>k-means clustering</italic>, objects are assigned to <italic>k</italic> clusters (<italic>k</italic> being defined in advance), based on their nearest Euclidean distance to the mean of the clusters. The mean of the cluster is iteratively recalculated until no more assignments are made and cluster means fall below a predefined cut-off value or until the iteration limit is reached. Different means for each cluster are ideally obtained for each dimension used in the analysis, as indicated by high <italic>F</italic>-values from the respective analyses of variance. Unlike hierarchical clustering, <italic>k</italic>-means clustering does not require prior computation of dissimilarity matrix among objects and is therefore more adapted to large data sets (e.g. few thousand objects) where computing power is an issue. However, the method is quite sensitive to outliers, which are usually removed before performing the analyses (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p><italic>Two-step cluster analysis</italic> may be useful to group objects into clusters when one or more of the variables are categorical (not interval or dichotomous). Objects are first grouped based on the categories, which are themselves hierarchically clustered as single cases. Because neither a proximity table nor iterative steps are required, the method is particularly suited for the analysis of very large data sets (<xref ref-type="bibr" rid="b15">Eisen <italic>et al</italic>., 1998</xref>).</p>
+        </sec>
+        <sec>
+          <title>Principal component analysis (PCA)</title>
+          <p>PCA has been applied to numerous phenotypic and genotypic (e.g. fingerprinting patterns) data sets, and it is one of the most popular exploratory analyses (<xref ref-type="table" rid="tbl1">Table 1</xref>), perhaps because the technique is generally the first multivariate approach to be explained in most data analysis manuals. However, this choice may not always be justified in ecology and recommendations for appropriate applications are provided at the end of this section and in the &#x2018;Practical considerations&#x2019; part of the present review. Examples of use in microbial ecology concern the identification of patterns of microbial community change over seasons or geographic areas (e.g. <xref ref-type="bibr" rid="b44">Merrill &amp; Halverson, 2002</xref>), or as those patterns relate to different plant compartments at different plant developmental stages (<xref ref-type="bibr" rid="b46">Mougel <italic>et al</italic>., 2006</xref>), or the reduction of the complexity of data sets involving hydrochemistry data, bacterial, and archeal community profiles in order to visualize and interpret complex multivariate data sets onto two-dimensional geographic maps of contaminated sites (<xref ref-type="bibr" rid="b47">Mouser <italic>et al</italic>., 2005</xref>).</p>
+          <p>The PCA procedure basically calculates new synthetic variables (principal components), which are linear combinations of the original variables (for instance, the species of a sample-by-species table), and that account for as much of the variance of the original data as possible (<xref ref-type="bibr" rid="b27">Hotelling, 1933</xref>). The aim is to represent the objects (rows) and variables (columns) of the data set in a new system of coordinates (generally on two or three axes or dimensions) where the maximum amount of variation from the original data set can be depicted. In practice, PCA is either performed on a <italic>variance&#x2013;covariance</italic> matrix or on a <italic>correlation matrix</italic>. The first approach is followed when the same units or data types are used (e.g. abundance of different species). The aim is then to preserve and to represent the relative positions of the objects and the magnitude of variation between variables in the reduced space. PCA on a correlation matrix is rather used when descriptor variables are measured in different units or on different scales (e.g. different environmental parameters) or when the aim is to display the correlations among (standardized) descriptor variables. The two approaches lead to different principal components and different distances between projected objects in the ordination; hence, the interpretation of the relationships must be made with care (<xref ref-type="table" rid="tbl2">Table 2</xref>). Indeed, for correlation matrices, variables are first standardized (i.e. they become independent of their original scales), and so distances between objects are also independent from the scales of the original variables. All variables thus contribute to the same extent to the ordination of objects, regardless of their original variance.</p>
+          <table-wrap id="tbl2" position="float">
+            <label>Table 2</label>
+            <caption>
+              <p>Interpretation of ordination diagrams</p>
+            </caption>
+            <table frame="hsides" rules="groups">
+              <thead>
+                <tr>
+                  <th align="center" colspan="4" rowspan="1">Linear methods (PCA, RDA)</th>
+                  <th rowspan="1" colspan="1"/>
+                  <th rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <th colspan="4" rowspan="1">
+                    <hr/>
+                  </th>
+                  <th rowspan="1" colspan="1"/>
+                  <th rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <th align="center" colspan="2" rowspan="1">PCA, RDA</th>
+                  <th align="center" colspan="2" rowspan="1">RDA</th>
+                  <th rowspan="1" colspan="1"/>
+                  <th rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <th colspan="2" rowspan="1">
+                    <hr/>
+                  </th>
+                  <th colspan="2" rowspan="1">
+                    <hr/>
+                  </th>
+                  <th align="left" rowspan="1" colspan="1">Scaling 1</th>
+                  <th align="left" rowspan="1" colspan="1">Scaling 2</th>
+                </tr>
+                <tr>
+                  <th align="left" rowspan="1" colspan="1">Samples</th>
+                  <th align="left" rowspan="1" colspan="1">Species</th>
+                  <th align="left" rowspan="1" colspan="1">ENV</th>
+                  <th align="left" rowspan="1" colspan="1">NENV</th>
+                  <th align="left" rowspan="1" colspan="1">Focus on sample (rows) distance</th>
+                  <th align="left" rowspan="1" colspan="1">Focus on species (columns) correlation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="center" rowspan="1" colspan="1"/>
+                  <td align="center" rowspan="1" colspan="1"/>
+                  <td align="center" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Euclidean distances among samples</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                  <td align="left" rowspan="1" colspan="1">Linear correlations among species</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Marginal effects of ENV on ordination scores</td>
+                  <td align="left" rowspan="1" colspan="1">Correlations among ENV</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">Euclidean distance between sample classes</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="center" colspan="2" rowspan="1">Abundance values in species data</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                  <td align="left" rowspan="1" colspan="1">Values of ENV in the samples</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" colspan="2" rowspan="1">Membership of samples in the classes</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="center" colspan="2" rowspan="1">Linear correlations between species and ENV</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" colspan="2" rowspan="1">Mean species abundance within classes of nominal ENV</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                  <td align="left" rowspan="1" colspan="1">Average of ENV within classes</td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1">
+                    <hr/>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="3" rowspan="1">Unimodal methods (CA, CCA)</td>
+                  <td align="center" rowspan="1" colspan="1"/>
+                  <td align="center" rowspan="1" colspan="1"/>
+                  <td align="center" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td colspan="3" rowspan="1">
+                    <hr/>
+                  </td>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1"/>
+                  <td rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" colspan="2" rowspan="1">CA, CCA</td>
+                  <td align="left" colspan="2" rowspan="1">CCA</td>
+                  <td align="left" rowspan="1" colspan="1">Focus on sample (rows) distance and Hill's scaling</td>
+                  <td align="left" rowspan="1" colspan="1">Focus on species (columns) distances</td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1">
+                    <hr/>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Turnover distances among samples</td>
+                  <td align="left" rowspan="1" colspan="1">&#x3C7;<sup>2</sup> distances between samples</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">-</td>
+                  <td align="left" rowspan="1" colspan="1">&#x3C7;<sup>2</sup> distances among species distributions</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Marginal effects of ENV</td>
+                  <td align="left" rowspan="1" colspan="1">Correlations among ENV</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">Turnover distances between sample classes</td>
+                  <td align="left" rowspan="1" colspan="1">&#x3C7;<sup>2</sup> distances between sample classes</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Relative abundances of the species table</td>
+                  <td align="left" rowspan="1" colspan="1">Relative abundances of the species table</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                  <td align="left" rowspan="1" colspan="1">Values of ENV in the samples</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="center" colspan="2" rowspan="1">Membership of samples in the classes</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="center" colspan="2" rowspan="1">Weighted averages &#x2013; the species optima in respect to particular ENV</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="center" colspan="2" rowspan="1">Relative total abundances in the sample classes</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2713;</td>
+                  <td align="left" rowspan="1" colspan="1">&#x2013;</td>
+                  <td align="left" rowspan="1" colspan="1">ENV averages within sample classes</td>
+                </tr>
+              </tbody>
+            </table>
+            <table-wrap-foot>
+              <fn>
+                <p>The interpretation of ordination diagrams depends on the focus of the study, because sample scores are rescaled as a function of the scaling choice. Approximate relationships between and among the different elements represented in biplots and triplots as species (represented as dots or arrows), samples (dots), environmental variables (ENV; arrows), and nominal (qualitative) environmental variables (NENV; dots). A meaningless interpretation (&#x201C;&#x2013;&#x201D;) happens when the suggested comparison is not optimal because of inappropriate scaling of the ordination scores. Adapted from <xref ref-type="bibr" rid="b70">ter Braak (1994)</xref>; <xref ref-type="bibr" rid="b40">Leps &amp; Smilauer (1999)</xref>; <xref ref-type="bibr" rid="b72">ter Braak &amp; Smilauer (2002)</xref>.</p>
+              </fn>
+            </table-wrap-foot>
+          </table-wrap>
+          <p>PCA results are generally displayed as a biplot (<xref ref-type="bibr" rid="b31">Jolicoeur &amp; Mosimann, 1960</xref>), where the axes correspond to the new system of coordinates, and both samples (dots) and taxa (arrows) are represented (<xref ref-type="fig" rid="fig01">Fig. 1a</xref>). The direction of a species arrow indicates the greatest change in abundance, whereas its length may be related to a rate of change. Depending on whether a distance or a correlation biplot is chosen, different interpretations can be made from the ordination diagram (<xref ref-type="table" rid="tbl2">Table 2</xref>). The interpretation of the relationships between samples and species differs and is directly affected by the scaling chosen, i.e. whether the analysis mainly focuses on intersample relationships (scaling 1) or interspecies correlations (scaling 2). For instance, in scaling 1, the distances between objects are an approximation of their Euclidean distances in the multidimensional space, but this approximation is not valid if scaling 2 is chosen (<xref ref-type="table" rid="tbl2">Table 2</xref>). Projecting an object at a right angle on a species arrow in the ordination diagram approximates the position of the object along that species descriptor. The length of the species descriptor indicates its contribution to the formation of the ordination space. For correlation biplots, the length of the orthogonal projection of a species arrow on the axes approximates its SD on the respective axes. Angles between species arrows reflect their correlations, e.g. putative interactions between species (scaling 2). An erroneous interpretation of the biplot would be to use the proximity of an object point and the tip of a species arrow to deduce a relationship between them. Indeed, only right-angle projections of samples onto species arrows are correct to derive approximated species abundance in the samples.</p>
+          <p>PCA should generally be used when the objects (sites or samples) cover very short gradients, i.e. when the same species are mostly identified everywhere in the study area (i.e., when samples mostly differ in species abundances), and when species linearly respond to environmental gradients. Because those conditions are often not met in ecological studies, other multivariate approaches have been progressively preferred over PCA (as also suggested by <xref ref-type="table" rid="tbl1">Table 1</xref>) such as correspondence analysis or multidimensional scaling.</p>
+          <p>PCA is successful when most of the variance is accounted for by the largest (generally the first two or three) components. The amount of variance accounted for by each principal component is given by its &#x2018;eigenvalue.&#x2019; The mathematical description of eigenvalue calculation steps goes beyond the aim of the present review but can be found in most linear algebra manuals. Eigenvalues derived from a PCA are generally considered to be significant when their values are larger than the average of all eigenvalues (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). The cumulative percentage of variance accounted for by the largest components indicates how much proportion of the total variance is depicted by the actual ordination. High absolute correlation values between the synthetic variables (principal components) and the original variables are useful to identify which variables mainly contribute to the variation in the data set, and this is referred to as the <italic>loading</italic> of the variables on a given axis. However, because the synthetic and original variables are linearly correlated (i.e. they are not independent), standard tests to determine the statistical significance of the correlations between them cannot be used.</p>
+        </sec>
+        <sec>
+          <title>Principal coordinate analysis (PCoA)</title>
+          <p>The technique is more rarely used by microbial ecologists (<xref ref-type="table" rid="tbl1">Table 1</xref>), despite its usefulness at reducing and representing patterns present in distance matrices displaying dissimilarities among objects (<xref ref-type="bibr" rid="b21">Gower, 1966</xref>). Its objectives are very similar to those of PCA in that it uses a linear (Euclidean) mapping of the distance or dissimilarities between objects onto the ordination space (i.e. projection in a Cartesian space), and the algorithm attempts to explain most of the variance in the original data set. In microbial ecology, PCoA has been used, for instance, to test whether virulence profiles (i.e. presence or absence of specific genes) arising from pathogenic strains could differentiate either healthy or contaminated hosts (<xref ref-type="bibr" rid="b7">Chapman <italic>et al</italic>., 2006</xref>), or to determine whether PCoA axes could separate groups of <italic>Staphylococcus aureus</italic> isolates into bovine and human hosts when genetic relationships among them had been established by random amplified polymorphic DNA-PCR analysis (<xref ref-type="bibr" rid="b59">Reinoso <italic>et al</italic>., 2004</xref>).</p>
+          <p>As opposed to PCA, PCoA works with any dissimilarity measure and so specific association coefficients that better deal with the problem of the presence of many double zeros in data sets can be surmounted. Moreover, PCoA does not provide a direct link between the components and the original variables and so the interpretation of variable contribution may be more difficult. This is because PCoA components, instead of being linear combinations of the original variables as in PCA, are complex functions of the original variables depending on the selected dissimilarity measure. Besides, the non-Euclidean nature of some distance measures does not allow for a full representation of the extracted variation into a Euclidean ordination space. In that case, the non-Euclidean variation cannot be represented and the percent of total variance cannot be computed with exactness. The choice of the dissimilarity measure is thus of great importance, and subsequent transformation of the data to correct for negative eigenvalues is sometimes necessary (see <xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>, section 9.2.4. for how to correct for such negative eigenvalues).</p>
+          <p>Objects are represented as points in the ordination space. Eigenvalues are also used here to measure how much variance is accounted for by the largest synthetic variables on each PCoA synthetic axis. Although there is no direct, linear relationship between the components and the original variables, it is still possible to correlate object scores on the main axis (or axes) with the original variables to assess their contribution to the ordination.</p>
+        </sec>
+        <sec>
+          <title>Correspondence analysis (CA)</title>
+          <p>A basic question that ecologists may want to address when facing a multidimensional table of sites (or samples) by species is whether certain species occur at specific sites, as a measure of their ecological preferences. CA has generally been used in microbial ecology to determine whether patterns in microbial OTU distribution could reflect differentiation in community composition as a function of seasons, geographic origin, or habitat structure (<xref ref-type="bibr" rid="b51">Olapade <italic>et al</italic>., 2005</xref>; <xref ref-type="bibr" rid="b13">Edwards <italic>et al</italic>., 2006a</xref>, <xref ref-type="bibr" rid="b14">b</xref>; <xref ref-type="bibr" rid="b32">Kent <italic>et al</italic>., 2007</xref>). The overall aim of the method is to compare the correspondence between samples and species from a table of counted data (or any dimensionally homogenous table) and to represent it in a reduced ordination space (<xref ref-type="bibr" rid="b25">Hill, 1974</xref>). Noticeably, instead of maximizing the amount of variance explained by the ordination, CA maximizes the correspondence between species scores and sample scores. Several algorithms exist and the most commonly described one is <italic>reciprocal averaging</italic>, which consists of (1) assigning arbitrary numbers to all species in the table (these are the initial species scores), (2) for each sample, a sample score is then determined as a weighted average of all species scores (this thus takes into account the abundance of each species at the site and the previously determined species scores), (3) for each species, a new species score is then calculated as the weighted average of all the sample scores, (4) both species scores and sample scores are standardized again to obtain a mean of zero and a SD of one, and (5) steps two to four are repeated until species and site scores converge towards stable solutions in successive iterations (<xref ref-type="bibr" rid="b25">Hill, 1974</xref>). The overall table variance (inertia) based on &#x3C7;<sup>2</sup> distances is decomposed into successive components that are uncorrelated to each other, as in the PCA or PCoA procedures. For each axis, the overall correspondence between species scores and sample scores is summarized by an eigenvalue, and the latter is thus equivalent to a correlation coefficient between species scores and sample scores (<xref ref-type="bibr" rid="b19">Gauch, 1982</xref>).</p>
+          <p>The technique is popular among ecologists because CA is particularly recommended when species display unimodal (bell shaped or Gaussian) relationships with environmental gradients (<xref ref-type="bibr" rid="b67">ter Braak, 1985</xref>), as it happens when a species favors specific values of a given environmental variable, which is revealed by a peak of abundance or presence when the optimal conditions are met (this can be visualized by plotting species abundance against the environmental parameter). The unimodal model that supports the concept of ecological niches has also been shown to be of the right order of complexity for the ordination of most ecological data (<xref ref-type="bibr" rid="b71">ter Braak &amp; Prentice, 1988</xref>). Although examples of unimodal distributions along variables or environmental gradients exist with macroorganisms (<xref ref-type="bibr" rid="b67">ter Braak, 1985</xref>), the shape of the distribution of the abundance of microbial species along environmental parameters or gradients has not been extensively investigated (but see <xref ref-type="bibr" rid="b56">Ramette &amp; Tiedje, 2007a</xref>, <xref ref-type="bibr" rid="b57">b</xref>). This may arise from the fact that, in microbial surveys, environmental sampling is mostly performed blindly in relation to environmental heterogeneity, and the abundance of target species is generally determined without systematically analyzing associated environmental parameters. Finally, another important feature of CA for microbial ecologists is that the reciprocal averaging algorithm disregards species double absences because the relationships between rows and columns of the table are quantified using the &#x3C7;<sup>2</sup> coefficient that excludes double absences (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p>Both samples and taxa are often jointly depicted in the ordination space (i.e. joint plot; <xref ref-type="fig" rid="fig02">Fig. 2b</xref>), where the center of inertia (centroid) of their scores corresponds to the zero for all axes. Depending on the choice of the scaling type, either the ordination of rows (samples) or the columns (species) is meaningful, and can be interpreted as an approximation of the &#x3C7;<sup>2</sup> distances between samples or species, respectively (see <xref ref-type="table" rid="tbl2">Table 2</xref> for more details about interpretation). Sample points that are close to each other are similar with regard to the pattern of relative frequencies across species. It is important to remember that in such joint plots, either distances between sample points or distances between species points can be interpreted, but not the distances between sample and species points. Indeed, these distances are not simple Euclidean distances computed from the relative row or column frequencies, but rather they are weighted distances. The proximity between sample and species points in the plot can thus be understood as a probability of species occurrence or of a high abundance in the samples in the vicinity of a species point.</p>
+          <fig id="fig02" position="float">
+            <label>Fig. 2</label>
+            <caption>
+              <p>Ordination diagrams in two dimensions. (a) In a PCA biplot representation, samples are represented by dots and species by arrows. The arrows point in the direction of maximal variation in the species abundances, and their lengths are proportional to their maximal rate of change. Long arrows correspond to species contributing more to the data set variation. Right-angle projection of a sample dot on a species arrow gives approximate species abundance in the sample. (b) In a CA joint plot representation focusing on species distance, both samples and species are depicted as dots. Species dots correspond to the center of gravity (inertia) of the samples where they mostly occur. Distances between sample and species points give an indication of the probability of species composition in samples (see <xref ref-type="table" rid="tbl2">Table 2</xref> for more details about diagram interpretation).</p>
+            </caption>
+            <graphic xlink:href="fem0062-0142-f2"/>
+          </fig>
+          <p>In scaling 2 (i.e. focus on species), species points found at the center of the ordination space should be carefully checked with the raw data to clarify whether the species ordination really corresponds to the optimal abundance or occurrence of the species, or whether the species is just badly represented by the main axes, as it is the case when other axes are more appropriate to represent the species. Rare species contribute little to the total table inertia (i.e. they only play a minor role in the overall table variance) and are hence positioned at the edges of the plot, next to the site(s) where they occur. In general, only the species points found away from the ordination center and not close to the edges of the ordination have more chances to be related to the ordination axes, i.e. to contribute to the overall variance (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p>When the species composition of the sites progressively changes along the environmental gradient, sample positions may appear in the ordination plot as nonlinear configurations called &#x2018;arch&#x2019; (<xref ref-type="bibr" rid="b19">Gauch, 1982</xref>) (or &#x2018;horseshoe&#x2019; in the case of PCA), which may impair further ecological interpretation. In CA, the arch effect may be mathematically produced as a side-effect of the CA procedure that tries to obtain axes that both maximally separate species and that are uncorrelated to each other (<xref ref-type="bibr" rid="b69">ter Braak, 1987</xref>): when the first axis suffices to correctly order the sites and species, a second axis (uncorrelated with the former) can be obtained by folding the first axis in the middle and bringing its extremities together, thus resulting in an arch configuration. Further axes can be obtained by further dividing and folding the first axis into segments (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). To remove the arch effect in CA, a mathematical procedure, <italic>detrending</italic>, is used to flatten the distribution of the sites along the first CA axis without changing their ordination on that axis. The approach is then designated as detrended correspondence analysis (DCA). The review of different detrending algorithms such as using segments or polynomials goes beyond the scope of this review, but more information can be obtained in (<xref ref-type="bibr" rid="b70">ter Braak &amp; Prentice, 1988</xref>; <xref ref-type="bibr" rid="b36">Legendre &amp; Legendre, 1998</xref>). Some authors have also argued that the arch effect may not be an artifact but an expected feature of the analysis, especially when species turnover is high along environmental gradients (<xref ref-type="bibr" rid="b30">James &amp; McCulloch, 1990</xref>). In that case, if the samples are meaningfully positioned along the arch, the ordination should be accepted as a valid result.</p>
+        </sec>
+        <sec>
+          <title>Nonmetric multidimensional scaling (NMDS)</title>
+          <p>NMDS is generally efficient at identifying underlying gradients and at representing relationships based on various types of distance measures. Not surprisingly, NMDS has found an increasing number of applications in microbial ecology (<xref ref-type="table" rid="tbl1">Table 1</xref>). The technique has been generally applied to identify patterns among multiple samples that were subjected to molecular fingerprinting techniques. For instance, NMDS was used to analyze and to compare the reproducibility of various fingerprinting techniques such as ribosomal internal spacer analysis (RISA), terminal fragment length polymorphism (T-RFLP), and denaturing gradient gel electrophoresis (DGGE) between different laboratories when applied to samples chosen from a salinity gradient (<xref ref-type="bibr" rid="b6">Casamayor <italic>et al</italic>., 2002</xref>). NMDS was also used to compare diversity patterns of microbial communities (as determined by length heterogeneity-PCR) from samples undergoing different land management practices (<xref ref-type="bibr" rid="b45">Mills <italic>et al</italic>., 2006</xref>). Another example is the analysis of the bacterioplankton communities of four shallow eutrophic lakes that differed in nutrient load and food web structure using DGGE profiling, so as to determine the specificity of community signatures in each lake (<xref ref-type="bibr" rid="b74">Van der Gucht <italic>et al</italic>., 2005</xref>).</p>
+          <p>The NMDS algorithm ranks distances between objects, and uses these ranks to map the objects nonlinearly onto a simplified, two-dimensional ordination space so as to preserve their ranked differences, and not the original distances (<xref ref-type="bibr" rid="b63">Shepard, 1966</xref>). The procedure works as follows: the objects are first placed randomly in the ordination space (the desired number of dimensions has to be defined <italic>a priori</italic>), and their distances in this initial configuration are compared by monotonic regression with the distances in the original data matrix based on a stress function (values between 0 and 1). The latter indicates how different the ranks on the ordination configuration are from the ranks in the original distance matrix. Several iterations of the NMDS procedure are generally implemented so as to obtain the lowest stress value possible (i.e. the best goodness of fit) based on different random initial positions of the objects in the ordination space. For sample-by-species tables, simulations have shown that before applying NMDS, a standardization of each species by its maximum abundance, followed by the computation of distances between samples based on the Steinhaus or Kulczinski similarity coefficients yielded informative ordination results (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>, p. 449).</p>
+          <p>In NMDS ordination, the proximity between objects corresponds to their similarity, but the ordination distances do not correspond to the original distances among objects. Because NMDS preserves the order of objects, NMDS ordination axes can be freely rescaled, rotated, or inverted, as needed for a better visualization or interpretation. Because of the iterative procedure, NMDS is more computer intensive than eigenanalyses such as PCoA, PCA, or CA. However, constant improvement in computing power makes this limitation less of a problem for small- to medium-sized matrices.</p>
+        </sec>
+      </sec>
+      <sec>
+        <title>Testing for significant differences between groups</title>
+        <p>In addition to representing objects in an ordination plot or as clusters of similar objects, another objective may be to test whether differences between groups of objects (rows) in a multivariate table are significantly different based on the set of their attributes (columns), i.e. to test whether similarities within groups are higher than those between groups. Here, nonparametric multivariate <sc>anova (npmanova)</sc> and analysis of similarities (<sc>anosim</sc>), which are commonly found in standard statistical packages, are briefly reviewed. It is also possible to use canonical analyses (&#x2018;Testing for significant differences between groups&#x2019;) to test for significant differences between groups of objects. These statistical tests, however, must not be used to assess the statistical difference among groups that were derived from a previous cluster analysis on the same variables because, under those conditions, the two approaches would not be independent from each other. Indeed, the groups derived from cluster analysis (which are themselves made to fit the data) would then be used for testing the null hypothesis that there is no difference among the groups. This hypothesis would then not be independent of the data used to test it, and would nearly always produce significant differences between the groups even if it is not the case (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        <sec>
+          <title>
+            <sc>npmanova</sc>
+          </title>
+          <p>The method can be used to test for significant differences between the means of two or more groups of multivariate, quantitative data (<xref ref-type="bibr" rid="b2">Anderson, 2001</xref>). The null hypothesis of equality of means is tested based on Wilks' &#x39B; (lambda) statistic, which replaces the <italic>F</italic>-test normally used in univariate <sc>anova</sc>. When only two groups are compared, Hotelling's <italic>T</italic><sup>2</sup> test is more appropriate. The latter test can also be used, as a <italic>post hoc</italic> test, to assess the significance of pairwise comparisons statistically between groups, following an overall significant Wilks' test. Significance is generally computed by permutation of group membership, with several thousand replicates, alleviating concerns about multinormality of the data. Because multiple pairwise comparisons are made, the significance level of the pairwise Hotelling's tests needs, however, to be corrected. With the Bonferroni correction, for instance, the <italic>P</italic>-value usually chosen for significant differences between groups (i.e. 0.05) is replaced by a smaller <italic>P</italic>-value calculated by dividing the original <italic>P</italic>-value by the total number of pairwise comparisons that are performed. For instance, for 10 pairwise comparisons, the corrected <italic>P</italic>-value becomes 0.005. This correction is often judged to be rather conservative as it leads to significance for fewer pairwise comparisons (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        </sec>
+        <sec>
+          <title>
+            <sc>anosim</sc>
+          </title>
+          <p>This nonparametric procedure tests for significant difference between two or more groups, based on any distance measure (<xref ref-type="bibr" rid="b9">Clarke, 1993</xref>). It compares the ranks of distances between groups with ranks of distances within groups. The means of those two types of ranks are compared, and the resulting <italic>R</italic> test statistic measures whether separation of community structure is found (<italic>R</italic>=1), or whether no separation occurs (<italic>R</italic>=0). <italic>R</italic> values &gt;0.75 are commonly interpreted as well separated, <italic>R</italic>&gt;0.5 as separated, but overlapping, and <italic>R</italic>&lt;0.25 as barely separable (<xref ref-type="bibr" rid="b10">Clarke &amp; Gorley, 2001</xref>). The test makes fewer assumptions than <sc>manova</sc> because it is based on the ranks of distances, and it is often used for sample-by-species tables, where groups of samples are compared. All groups should have comparable within-group dispersion to avoid finding falsely significant results (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+          <p>Applications in microbial ecology include testing for spatial differences, temporal changes, or environmental impacts on microbial assemblages. For instance, <xref ref-type="bibr" rid="b32">Kent <italic>et al</italic>. (2007)</xref> determined whether bacterial communities from the same lake were more similar in composition to each other than to communities in different lakes. The bacterial composition and diversity of samples from different geographic origins, habitats, and avian hosts were also compared using <sc>anosim</sc> based on a length heterogeneity (LH)-PCR (<xref ref-type="bibr" rid="b4">Bisson <italic>et al</italic>., 2007</xref>). Another example is the application of <sc>anosim</sc> to terminal restriction fragment length polymorphism (T-RFLP)-generated data to determine the impact of B and NaCl on soil microbial community structure in the wheat rhizosphere (<xref ref-type="bibr" rid="b49">Nelson &amp; Mele, 2007</xref>).</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec>
+      <title>Environmental interpretation</title>
+      <p>Exploratory analyses may reveal the existence of clusters or groups of objects in a data set. When a supplementary table or matrix of environmental variables is available for those objects, it is then possible to examine whether the observed patterns are related to environmental gradients. Typical objectives may be, for instance, to reveal the existence of a relationship between community structure and habitat heterogeneity, between community structure and spatial distance, or to identify the main variables affecting bacterial communities when a large set of environmental variables has been conjointly collected.</p>
+      <p>The significance of the relationships between species patterns and environmental variables can generally be assessed by permutation techniques such as Monte Carlo permutation tests, which infer statistical properties from the data themselves. The order of data (generally the rows of one matrix) is permuted and the relationships between the observed patterns and environmental variables can be assessed for randomness. This approach is particularly suitable when variables do not follow a normal distribution (which is often the case with environmental or ecological data), as generally required by traditional statistical procedures (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+      <sec>
+        <title>Indirect gradient analyses</title>
+        <p>Ordination axes or clusters can be interpreted based on additional environmental variables (i.e. variables not used in the ordination or cluster analysis) that provide ecological knowledge about the studied sites or species ecological characteristics. When using exploratory ordination approaches on a sample-by-species table, samples are displayed along the axes of main variation in species composition. These axes are thus constructed without reference to environmental characteristics, but they can be hypothesized to represent underlying environmental gradients (e.g. environmental parameters, spatial or temporal variables, chemical gradients), which need to be subsequently identified. Such an approach is designated as &#x2018;indirect,&#x2019; because synthetic variables (i.e. the axes) are first constructed and thereafter related to environmental variation. For instance, the scores of the objects on PCA or CA main components (axes) can be further related by standard statistical procedures (e.g. <sc>anova</sc>, regression analysis) to environmental variables. Likewise, in PCoA or NMDS, it is possible to statistically compare the ranks obtained by the objects on each axis and the ranks of those objects on additional environmental variables, using Spearman's rank correlation coefficients (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        <p>A convenient method of interpretation is to represent the additional environmental variables as fitted arrows directly on the ordination diagram. These variables are added to the existing ordination by linear regression of their values onto the existing ordination axes. This procedure is implemented in various statistical packages (e.g. <sc>canoco</sc>, R). Hence, it is possible to assess the direction and magnitude of the most rapid change in the environmental variables and to determine whether they correspond to the observed patterns among objects (<xref ref-type="bibr" rid="b50">Oksanen, 2007</xref>). In cluster analysis, the magnitude of the absolute correlation value between an ordered clustering solution and environmental variables may also provide clues about putative environmental causes for the observed discontinuities in the data set.</p>
+        <p>Another convenient way of displaying additional information to help interpret the ordination is to use site symbols whose sizes are proportional to the values of the additional variable. Hence, one can visually assess whether the ordination of objects (samples, sites) matches specific trends in the additional variable. This strategy was, for instance, used on NMDS ordination plots inferred from DGGE profiles on which the values of five additional environmental variables were individually mapped as proportional circles in order to identify the main environmental factors related to the bacterial community structure in four freshwater lakes (<xref ref-type="bibr" rid="b74">Van der Gucht <italic>et al</italic>., 2005</xref>).</p>
+      </sec>
+      <sec>
+        <title>Direct gradient analyses (constrained analyses)</title>
+        <p>In constrained (canonical) ordination analyses, only the variation in the species table that can be explained by the environmental variables is displayed and analyzed, and not all the variation in the species table. Gradients are supposed to be known and represented by the measured variables or their combinations, while species abundance or occurrence is considered to be a response to those gradients. Constrained ordinations are mostly based on multivariate linear models relating principal axes to the observed environmental variables, and the different techniques depend on data types (matrix or table), and on the hypothesis underlying species distribution in the gradients (i.e. linear or unimodal). Their aim is to find the best mathematical relationships between species composition and the measured environmental variables, and to assess whether, statistically, such a relationship could have been produced due to chance alone using permutation tests. The resulting ordination diagrams display samples, species, and environmental variables so that &#x2018;fitted species &#xD7; samples&#x2019; and &#x2018;species &#xD7; environment&#x2019; relationships can be derived as easily as possible from angles between arrows or distances between points and arrows (<xref ref-type="table" rid="tbl2">Table 2</xref>).</p>
+        <sec>
+          <title>Redundancy analysis (RDA)</title>
+          <p>In microbial ecology, RDA has been applied, for instance, to test whether the occurrence of biocontrol bacteria with specific carbon source utilization profiles was related to their origin from different root samples (<xref ref-type="bibr" rid="b17">Folman <italic>et al</italic>., 2003</xref>), to determine which environmental factors were the most significant to explain variation in microbial community composition in undisturbed native prairies and cropped agricultural field (<xref ref-type="bibr" rid="b43">McKinley <italic>et al</italic>., 2005</xref>), to examine the effects of sampling locations (longitude, latitude, altitude) on genetic diversity of plant pathogenic bacteria (<xref ref-type="bibr" rid="b34">Kolliker <italic>et al</italic>., 2006</xref>), or to assess the influence of season, farm management, and soil chemical, physical, and biological properties on nitrogen fluxes and bacterial community structure (<xref ref-type="bibr" rid="b11">Cookson <italic>et al</italic>., 2006</xref>).</p>
+          <p>This method can be considered as an extension of PCA in which the main axes (components) are constrained to be linear combinations of the environmental variables (<xref ref-type="bibr" rid="b58">Rao, 1964</xref>). Two tables are then necessary: one for the species data (&#x2018;dependent&#x2019; variables) and one for the environmental variables (&#x2018;independent&#x2019; variables). Multiple linear regressions are used to &#x2018;explain&#x2019; variation between independent and dependent variables, and these calculations are performed within the iterative procedure to find the best ordination of the objects. The interest of such an approach is to represent not only the main patterns of species variation as much as they can be explained by the measured environmental variables but also to display correlation coefficients between each species and each environmental variable in the data set.</p>
+          <p>When the data set consists of a matrix of distances between objects, distance-based RDA (db-RDA; <xref ref-type="bibr" rid="b36">Legendre &amp; Anderson, 1999</xref>) can be applied to determine how well additional environmental parameters can explain the variation among objects in the matrix. The technique first applies a PCoA on the distance matrix to convert it back to a rectangular table containing rows of objects by columns of PCoA coordinates. Those new, uncorrelated coordinates thus correspond to synthetic &#x2018;species&#x2019; variables that are then related to additional environmental parameters using a classical RDA. For instance, db-RDA was successfully used to determine how the variation in matrices of genomic distances among environmental strains could be explained by factors such as soil parameters, host plant species, and spatial scale, each factor being taken alone or in combination (<xref ref-type="bibr" rid="b57">Ramette &amp; Tiedje, 2007b</xref>).</p>
+          <p>Most software outputs provide the total variation in species composition as explained by the environmental axes, the cumulative percentage of variance of the species&#x2013;environment relationship, and the overall statistical significance of the relationships between the species and environmental tables. RDA can be represented by a triplot of samples (dots), species (arrows), and environmental variables (arrows for quantitative variables and dots for each level of qualitative or nominal variables), or by any combinations thereof (i.e. biplots) (<xref ref-type="bibr" rid="b70">ter Braak, 1994</xref>). Depending on the scaling chosen, i.e. whether the analysis mainly focuses on intersample relationships or interspecies correlations, the interpretation of the relationships between samples, species, and environmental variables differs (<xref ref-type="table" rid="tbl2">Table 2</xref>).</p>
+        </sec>
+        <sec>
+          <title>Canonical correspondence analysis (CCA)</title>
+          <p>The approach is very similar to that of RDA, except that CCA is based on unimodal species&#x2013;environment relationships whereas RDA is based on linear models (<xref ref-type="bibr" rid="b68">ter Braak, 1986</xref>). CCA can be considered as the constrained form of CA in which the axes are linear combinations of the environmental variables. CCA uses the unimodal model to model species response to the environmental variation as a mathematical simplification to enable the estimation of a large number of parameters and the identification of a small number of ordination axes. This species model seems, however, to be robust even when some species display bimodal responses, unequal ranges, or unequal maxima along environmental gradients, and the technique is thus considered to be the method of choice by many ecologists (<xref ref-type="bibr" rid="b72">ter Braak &amp; Smilauer, 2002</xref>). It is therefore particularly adapted for the environmental interpretation of tables of abundance and occurrence of species, and accommodates well the absence of species at certain sites in the data set. CCA is sensitive to rare species that occur in species-poor samples, and down-weighting of such species help reduce the problem (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). Software outputs are very similar to those of RDA and as for RDA, triplot and biplot representations and interpretation depend on the choice of the scaling type (<xref ref-type="table" rid="tbl2">Table 2</xref>). The same interpretation of the relationships between sample and species points is found in CA and CCA. Right-angle projection of these points on the environmental arrows leads to the correct approximation of the ranking of the points along environmental variables.</p>
+          <p>CCA has been used in an increasing number of publications dealing with microbial assemblages in marine and soil ecosystems. Typical questions that are addressed concern the identification of environmental factors that influence the diversity of bacterial assemblages among large sets of candidate environmental parameters measured for the same samples, when the diversity is determined by culture-independent, genetic fingerprinting techniques such as automated ribosomal intergenic spacer analysis (ARISA) (<xref ref-type="bibr" rid="b78">Yannarell &amp; Triplett, 2005</xref>), DGGE (<xref ref-type="bibr" rid="b60">Salles <italic>et al</italic>., 2004</xref>; <xref ref-type="bibr" rid="b61">Sapp <italic>et al</italic>., 2007</xref>), or T-RFLP (<xref ref-type="bibr" rid="b12">C&#xF3;rdova-Kreylos <italic>et al</italic>., 2006</xref>; <xref ref-type="bibr" rid="b33">Klaus <italic>et al</italic>., 2007</xref>). Another interest in the technique comes from the possibility of determining the specific species or OTUs that respond to particular environmental variables, and as such that can be identified as candidate <italic>indicator species</italic>. Those species can then be subjected to further experiments so as to confirm their status of indicator species. For instance, the relationships, as determined by CCA, between bacterial community composition and 11 environmental variables for 30 lakes in Wisconsin, revealed that patterns in bacterial communities were best explained by regional- and landscape-level factors, as well as by specific seasons, pH, and water clarity (<xref ref-type="bibr" rid="b78">Yannarell &amp; Triplett, 2005</xref>). CCA was also successfully used to demonstrate that former land use management affected the composition of the targeted soil microbial community (<italic>Burkholderia</italic>) to a larger extent than did plant species (<xref ref-type="bibr" rid="b60">Salles <italic>et al</italic>., 2004</xref>). Another interesting example in the marine ecosystem is the study of the interactions between various abiotic parameters and phytoplankton community data (biotic parameter) to explain bacterioplankton dynamics in the North Sea and the subsequent identification of the bacterial phylotypes responding more specifically to the factors (<xref ref-type="bibr" rid="b61">Sapp <italic>et al</italic>., 2007</xref>). Another example of using CCA to identify some microbial communities as pollution indicators can be found in (<xref ref-type="bibr" rid="b12">C&#xF3;rdova-Kreylos <italic>et al</italic>., 2006</xref>).</p>
+        </sec>
+        <sec>
+          <title>Partial ordination, variation partitioning</title>
+          <p>When the effects of a particular environmental variable need to be tested after elimination of possible effects due to other (environmental) variables, partial ordination may be used (e.g. partial CCA, partial RDA). Such an approach is also referred to as &#x2018;partialling out&#x2019; or &#x2018;controlling for&#x2019; the effects of specific variables, which are specified as covariables in the constrained analysis. For instance, in a study dealing with the effects of environmental and pollutant variables on microbial communities, <xref ref-type="bibr" rid="b12">C&#xF3;rdova-Kreylos <italic>et al</italic>. (2006)</xref> observed that variation in microbial communities was more due to spatial variation than to pollutants. The use of partial CCA to account for spatial variation in the biological data set revealed that metals had a greater effect on microbial community composition than organic pollutants.</p>
+          <p>This idea of controlling for the effects of specific variables can be extended to evaluate the effects of all the different sets (factors) of environmental variables present in a study so as to determine the relative contribution (amount of variation explained) and significance of each variable set on the total biological variance. The so-called <italic>variation partitioning</italic> procedure (<xref ref-type="bibr" rid="b5">Borcard <italic>et al</italic>., 1992</xref>) partitions the total variance of the species table into the respective contribution of each set of environmental variables and into their covariations using both standard and partial constrained ordinations (<xref ref-type="fig" rid="fig03">Fig. 3</xref>). Two methods have traditionally been used to partition the variation of community composition data, i.e. canonical partitioning and regression on distance matrices based on Mantel tests (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). The canonical approach has been shown to be more appropriate to partition the &#x3B2; diversity correctly among sites and to test hypotheses about the origin and maintenance of its variation (<xref ref-type="bibr" rid="b39">Legendre <italic>et al</italic>., 2005</xref>).</p>
+          <fig id="fig03" position="float">
+            <label>Fig. 3</label>
+            <caption>
+              <p>Partitioning biological variation into the effects of two factors. The large rectangle represents the total variation in the biological data table, which is partitioned among two sets of explanatory variables (a, b). Fraction 4 shows the unexplained part of the biological variation. Fractions 1 and 3 are obtained by partial constrained ordination or partial regression, and can be tested for significance. For instance, fraction 1 corresponds to the amount of biological variation that can be exclusively explained by (a) effects when (b) effects are taken into consideration (i.e., when b is considered as a covariable). Fraction 2 [i.e., variation indifferently attributed to (a) and (b) or a covariation of (a) and (b)] is obtained by subtracting fractions 1 and 3 from the total explained variance, and cannot be tested for statistical significance.</p>
+            </caption>
+            <graphic xlink:href="fem0062-0142-f3"/>
+          </fig>
+          <p>Applications of variation partitioning in microbial ecology include, for instance, the study by <xref ref-type="bibr" rid="b57">Ramette &amp; Tiedje (2007b)</xref>, which applied the technique in the context of RDA to disentangle the effects of space, environmental soil parameters, and plant species on <italic>Burkholderia</italic> community abundance and diversity. By quantifying the amount of biological variation that is left unexplained when all environmental variables had been considered, the study suggested that much less of the biological variation could be predicted at the intraspecific level compared with higher taxonomic levels. Another interesting example is the study of seasonal changes in bacterial community composition in shallow eutrophic lakes, in which top-down regulation (grazers) of bacterial community composition was examined after accounting for bottom-up regulation (resources) (<xref ref-type="bibr" rid="b48">Muylaert <italic>et al</italic>., 2002</xref>).</p>
+        </sec>
+        <sec>
+          <title>Linear discriminant analysis (LDA)</title>
+          <p>When groups or clusters of objects have been obtained by exploratory analyses for instance, LDA can be used to identify linear combinations of additional environmental variables that best discriminate those groups. In that respect, LDA can be seen as an extension of <sc>manova</sc> for two or more groups, in which environmental variables that specifically explain the grouping of objects are identified. Another application consists of assigning new objects to previously defined groups for prediction or classification purposes based on the calculated discriminant function. For instance, <xref ref-type="bibr" rid="b18">Fuhrman <italic>et al</italic>. (2006)</xref> used the technique to evidence the existence of repeatable temporal patterns in the community composition of marine bacterioplankton over 4.5 years.</p>
+          <p>The technique is mostly recommended for multinormal data for which attribute data are linearly related and for which variances and covariances of the variables are good summary statistics. A visual representation of LDA can be performed, and in the resulting ordination, the axes are then the discriminant functions. The distances between objects, which correspond to Mahalanobis distances that take into account the correlations among descriptors (<xref ref-type="bibr" rid="b41">Mahalanobis, 1936</xref>), are independent of the scale of measurement of the various descriptors and are mostly used to compare groups of sites or objects with each other (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        </sec>
+        <sec>
+          <title>Selection of variables in regression models</title>
+          <p>In the previous constrained methods where linear combinations of environmental (explanatory) variables are used, the inclusion of too many explanatory variables to describe species distribution may lead to difficult ecological interpretations and to lower predictability of the models, due to intercorrelations among the explanatory variables (i.e. multicollinearity). Multicollinearity has the effects of inflating the variance of the regression coefficients in the models, leading to reduced precision in the prediction of the response variables (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). In order to only include in the model the environmental variables that mostly and significantly contribute to the variation of the species table, automatic selection procedures (forward selection, backward elimination, or stepwise selection) are often used. The selection depends on whether the partial correlation coefficients of the variables fall below a given significance level, the latter being generally assessed by Monte Carlo permutation tests.</p>
+          <p>In forward selection, the construction of the regression model starts with the variable that explains the most variation in the dependent variables (generally the species table). What remains of the biological variation to explain after fitting the first environmental variable (i.e. of the residual variation) is then used to choose the second environmental variable. The process of selection goes on until no more variables significantly explain the residual variation. In backward elimination, the construction of the regression model starts with all environmental variables and the least significant ones are excluded from the model, one at a time until a group of only &#x2018;significant&#x2019; variables is obtained. To take advantage of the two approaches, stepwise regression mixes forward selection with backward elimination by performing a forward selection, but excluding the variables that no longer become significant after the introduction of new variables into the regression model.</p>
+          <p>Despite the clear advantages of these variable selection strategies, most authors still caution that researchers should not blindly rely on automatic selection procedures to choose the relevant environmental variables in regression models because ecologically irrelevant models may also be obtained, or other variable combinations could also yield better models to explain species variation (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). Noticeably, the three selection strategies do not necessarily yield the same set of significant environmental variables, because they may be seen as heuristic methods to identify a significant model when all possible combinations of significant models are not possible to evaluate computationally. Another approach is thus to combine variables into biologically or environmentally meaningful sets, instead of relying on automatic selection procedures, and then to examine all possible regression models based on the reduced number of variable sets (<xref ref-type="bibr" rid="b30">James &amp; McCulloch, 1990</xref>). For instance, before applying variation partitioning to different groups of variables representing spatial scales (15 variables), host species (four variables), and soil parameters (10 variables), <xref ref-type="bibr" rid="b57">Ramette &amp; Tiedje (2007b)</xref> applied forward selection within each group to determine the variables significantly explaining the variation of microbial diversity and abundance at different taxonomic levels.</p>
+        </sec>
+        <sec>
+          <title>Mantel test</title>
+          <p>This test is appropriate to compare two matrices that were calculated for the same objects but that are based on two independent data sets (e.g. a species dissimilarity matrix and an environmental dissimilarity matrix for the same samples) (<xref ref-type="bibr" rid="b42">Mantel, 1967</xref>). It calculates the correlation coefficient between corresponding positions in the two matrices, and assesses its significance based on permutations of the objects in one of the matrices. In microbial ecology, the Mantel test has become popular especially for testing the relationships between molecular and geographic distance matrixes for a same set of organisms or to relate community diversity to environmental heterogeneity (e.g., <xref ref-type="bibr" rid="b53">Parker &amp; Spoerke, 1998</xref>; <xref ref-type="bibr" rid="b8">Cho &amp; Tiedje, 2000</xref>; <xref ref-type="bibr" rid="b26">Horner-Devine <italic>et al</italic>., 2004</xref>; <xref ref-type="bibr" rid="b62">Scortichini <italic>et al</italic>., 2006</xref>).</p>
+          <p>Another interesting application, called a goodness-of-fit Mantel test, corresponds to the case where one matrix is recoded to represent ecological hypotheses to be tested on the other matrix (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). For instance, if a matrix of molecular data is available for a set of strains and their habitat of origin is known, it is possible to determine whether the genetic distances are related to habitat type using the (goodness-of-fit) Mantel test. The matrix representing the ecological hypotheses should then consist of a series of 1 and 0 for isolates found in the same or different habitats, respectively. The Mantel test can thus determine whether the posited habitat distribution can significantly explain the structure of the molecular matrix. This test cannot be used, however, to test a hypothesis matrix that would be based on the results of a cluster analysis, for instance. Indeed, as indicated in &#x2018;Testing for significant differences between groups,&#x2019; there would be a lack of independence between the hypothesis being tested and the data used to test the hypothesis.</p>
+          <p>Note that the Mantel test is also used to compute Mantel correlograms, which are often found in biogeographical studies (e.g. Mantel correlograms are usually used to detect spatial structure in species assemblages based on grouping of the response data into specific spatial distance classes). Mantel tests are then applied to each group in order to detect significant correlations at a given scale, i.e. the scales at which the data are autocorrelated (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec>
+      <title>Practical considerations</title>
+      <sec>
+        <title>Choice of an ordination method (<xref ref-type="fig" rid="fig04">Fig. 4</xref>)</title>
+        <p>Linear methods such as multiple regression, LDA, PCA, or RDA are generally meant to be applied to continuous data. Their use is thus sometimes limited in Ecology where species generally display nonlinear, nonmonotone responses to environmental variables (<xref ref-type="bibr" rid="b70">ter Braak &amp; Prentice, 1988</xref>; <xref ref-type="bibr" rid="b36">Legendre &amp; Legendre, 1998</xref>). Different approaches can be undertaken to choose the most appropriate ecological model. Plot of species abundances along ordination axes or explanatory variables (also called coenocline) may help visualize whether species responses are linear or unimodal (<xref ref-type="bibr" rid="b72">ter Braak &amp; Smilauer, 2002</xref>). Besides, the choice of linear (PCA, RDA) or unimodal (CA, CCA) species response models can be made on the basis of whether the underlying gradient length is short or long, respectively. Gradient length, as measured in SD units along the first ordination axis, can be estimated by DCA for unconstrained ordination and by detrended CCA (DCCA) for constrained ordination in, e.g. the software <sc>canoco</sc> (<xref ref-type="bibr" rid="b72">ter Braak &amp; Smilauer, 2002</xref>). It is recommended to use linear methods when the gradient length is &lt;3 SD, unimodal methods when it is &gt;4 SD, and any method for intermediate gradient lengths (<xref ref-type="bibr" rid="b72">ter Braak &amp; Smilauer, 2002</xref>).</p>
+        <fig id="fig04" position="float">
+          <label>Fig. 4</label>
+          <caption>
+            <p>Relationships between numerical methods. Exploratory tools such as PCA, CA, PCoA, NMDS, or cluster analysis can be applied to a sample-by-species table to extract the main patterns of variation, to identify groups or clusters of samples, or specific species interactions. Sample scores on the main axes of variation can be related to variation in environmental variables using indirect gradient analyses. When a constrained analysis is desired (i.e. direct gradient analysis), RDA, db-RDA, CCA, or linear discriminant analysis can be used as extensions of the unconstrained methods. Mantel tests are appropriate to test the significance of the correlation between two distance matrices (e.g. one based on species data and the other on environmental variables). Raw data may be transformed, normalised or standardised as appropriate before analysis.</p>
+          </caption>
+          <graphic xlink:href="fem0062-0142-f4"/>
+        </fig>
+        <p>Data type is also another important criterion. To represent absolute abundance values, linear-based methods (PCA, RDA), which produce weighted summations, are appropriate, whereas unimodal techniques (CCA, CA) are rather used to model relative abundances (because species scores are weighted averages of the samples scores, and vice versa), i.e. they model the dissimilarities between samples (&#x3B2; diversity). They also accommodate well the presence of many zeros in the species table, in contrast to linear-based methods for which double zeros lead to inadequate estimates of sample distances.</p>
+        <p>Cluster analysis is the method of choice when relationships between objects are expected to be discontinuous and where defined categories or groups of objects are expected. On the contrary, ordination would be more useful when the variation between objects is posited to be continuous. Although NMDS is more computer intensive than PCoA, it is generally better at compressing the distance relationships among objects into a few dimensions. This is because NMDS can always lead to a Euclidean representation even for non-Euclidean embeddable distances (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>). NMDS and PCoA can be compared using Shepard diagrams to decide which technique better represents the original distances.</p>
+        <p>If one assumes that species do not have a linear response to environmental gradients, NMDS is more appropriate than PCA. CA may also be an alternative to PCA when many zeros populate the data set and one strong gradient is present. With long ecological gradients, however, CA may produce the arch effect that can be corrected for using DCA. In terms of the underlying species model, the main difference between DCA and NMDS is that the former is based on a specific model of species distributions (unimodal model), while NMDS is not. Thus, DCA may be favored by ecologists who assume that the niche theory better fits their data set, while NMDS may be a method of choice if species composition is determined by factors other than position along a gradient (for instance if the habitat is known to be fragmented).</p>
+        <p>In constrained and unconstrained ordinations, all species are posited to react to different extents to the same composite gradients of environmental variables, whereas in a multiple regression approach, a different gradient could be modeled for each species separately. Because most species do not respond linearly to environmental gradients, fitting nonlinear models to individual species may be difficult, especially when dealing with a huge data set. Constrained ordinations thus provide a good summary of species&#x2013;environment relationships and can be very successful in ecological data analysis (<xref ref-type="bibr" rid="b71">ter Braak &amp; Prentice, 1988</xref>). It is also useful to note that RDA is very similar to <sc>manova</sc>, but in contrast to the latter, RDA allows the consideration of any number of species (columns) (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        <p>Constrained and unconstrained (exploratory) methods should be used in parallel (<xref ref-type="fig" rid="fig04">Fig. 4</xref>) because, with the former, only the biological variation that can be explained by the available environmental variables is represented on the main axes, whereas with unconstrained methods, the highest amount of variance is extracted from the biological data alone and represented on a few axes. If the constrained and unconstrained approaches yield the same ordination of the samples (objects), it thus means that the measured environmental variables explain most of the biological variation. In order to compare the results of different ordinations, a useful technique is <italic>Procrustes</italic> analysis (<xref ref-type="bibr" rid="b22">Gower, 1975</xref>), which estimates the concordance of scores in two ordinations after rotating, translating, and dilating them in order to obtain the best fit. A permutation procedure can also be used to test for the significance of the concordance between ordinations or matrices (<xref ref-type="bibr" rid="b55">Peres-Neto &amp; Jackson, 2001</xref>).</p>
+        <p>Cluster analysis and ordination techniques can be combined to provide powerful visualization tools. For instance, hierarchical clustering can help obtain a better interpretation of ordination diagrams (<xref ref-type="fig" rid="fig05">Fig. 5</xref>). Because ordination diagrams represent most of the data set variation into a dimensionally reduced space, some relationships among objects can be distorted because only a few projection axes are considered. The addition of linkage results obtained from cluster analysis may help identify objects belonging to the same clusters even if their relative position in the ordination diagram is not ideal (<xref ref-type="bibr" rid="b38">Legendre &amp; Legendre, 1998</xref>).</p>
+        <fig id="fig05" position="float">
+          <label>Fig. 5</label>
+          <caption>
+            <p>Combination of ordination and cluster analysis. On a same distance matrix, NMDS or PCOA can be applied to represent the major axes of variation among objects in a two-dimensional space. The superimposition of the results of cluster analysis (primary connections) onto the ordination diagram can help identify the structure in the data set as discontinuities (clusters) into a continuous space (ordination). Adapted from <xref ref-type="bibr" rid="b38">Legendre &amp; Legendre (1998)</xref>.</p>
+          </caption>
+          <graphic xlink:href="fem0062-0142-f5"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>Ordination and diversity indices</title>
+        <p>The measurement of diversity is generally performed using indices such as the Shannon or Simpson indices. The latter are often applied to measure different components of the diversity such as &#x3B1;, &#x3B2;, and &#x3B3; diversity, corresponding to diversity within a particular site or ecosystem, to change in species composition from site to site (i.e. species turnover), and to the diversity at the landscape scale, respectively (<xref ref-type="bibr" rid="b76">Whittaker, 1972</xref>). The ordination approach sounds similar, in that variation among samples is compared based on their within-sample composition in species assemblages, and so some of the &#x3B1; and &#x3B2; diversity should be depicted on ordination diagrams. Because diversity indices pool the multispecies information into a single value for each observation, before comparing them, it is not surprising that complex diversity patterns may not be identified sometimes. For instance, <xref ref-type="bibr" rid="b24">Hartman &amp; Widmer (2006)</xref> did not find significant changes in soil bacterial communities submitted to various soil managements when using diversity indices, while community structures were shown to have changed using community fingerprinting analysis.</p>
+        <p>To obtain a consistency between ordination techniques and diversity index measurements, two numerical strategies have been proposed: for species occurrence data, the CA-species richness strategy adapted for data set rich in rare species, and the Nonsymmetric CA &#x2013; Simpson strategy, which is more appropriate for tables dominated by abundant species (<xref ref-type="bibr" rid="b54">Pelissier <italic>et al</italic>., 2003</xref>). These strategies attribute specific weights to the species data so that simple or constrained ordinations of the new species table represent the total inertia as &#x3B1; and &#x3B2; diversity, and would thus be consistent with the measures obtained by common diversity indices.</p>
+      </sec>
+      <sec>
+        <title>Misconceptions about multivariate analyses</title>
+        <p>It is essential to reiterate that multivariate statistical procedures may suggest causes or factors, but investigators should bear in mind that the synthetic variables, axes, or clusters derived do not necessarily correspond to biological or ecological entities in nature (<xref ref-type="bibr" rid="b30">James &amp; McCulloch, 1990</xref>). One should thus not overinterpret the data by relying on unjustified causality, especially in the absence of real experimentation. In theory, it would be necessary to validate the inferences and models made about pattern formation and putative causes by analyzing new data, but this is rarely performed in practice. Moreover, whether the originally collected data are typical of the situation to be described is most of the time not even questioned.</p>
+        <p>Another common misconception is that multivariate analyses alone can sort out all solutions of complex multivariate studies. Although exploratory analyses may help reveal interesting patterns in data sets, the interpretation and explanation of the observations ultimately rely on the researcher's hypotheses and previous knowledge of the ecological situation. Microbial ecologists themselves need to formulate ecologically sound hypotheses and test them.</p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Conclusions</title>
+      <p>Exciting questions in Ecology typically consist of determining whether community patterns are structured across space or time, of explaining how those patterns can be related to environmental heterogeneity, and of quantifying how much still remains unexplained when all significant, measured variables have been considered. Such questions can now start to be addressed in microbial ecology because numerical tools may help explore and test such ecological hypotheses. These are indeed exciting times because even larger and more complex databases are being created and in parallel, computing power gradually becomes less of an issue. If microbial ecologists want to test numerical methods, develop new ecological theories, or validate existing ones for the microbial case, access to diversity data and above all, to the relevant associated environmental parameters, becomes a central issue. It would thus be of great interest to make such complex data sets publicly available, such as microbial ecological databases, so that microbial diversity can be studied in its environmental context. This would indeed be a step toward making microbial ecology a central discipline in Ecology.</p>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The author thanks Ian M. Head and James M. Tiedje for the invitation to write this review, and two anonymous reviewers for helpful suggestions. This work was supported by the Max Planck Society.</p>
+    </ack>
+    <sec>
+      <title>Statement</title>
+      <p>Reuse of this article is permitted in accordance with the Creative Commons Deed, Attribution 2.5, which does not permit commercial exploitation.</p>
+    </sec>
+    <ref-list>
+      <title>References</title>
+      <ref id="b1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Acinas</surname>
+              <given-names>SG</given-names>
+            </name>
+          </person-group>
+          <article-title>Fine-scale phylogenetic architecture of a complex bacterial community</article-title>
+          <source>Nature</source>
+          <year>2004</year>
+          <volume>430</volume>
+          <fpage>551</fpage>
+          <lpage>554</lpage>
+          <pub-id pub-id-type="pmid">15282603</pub-id>
+        </citation>
+      </ref>
+      <ref id="b2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Anderson</surname>
+              <given-names>MJ</given-names>
+            </name>
+          </person-group>
+          <article-title>A new method for non-parametric multivariate analysis of variance</article-title>
+          <source>Aust Ecol</source>
+          <year>2001</year>
+          <volume>26</volume>
+          <fpage>32</fpage>
+          <lpage>46</lpage>
+        </citation>
+      </ref>
+      <ref id="b3">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Avise</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <source>Evolutionary Pathways in Nature: A Phylogenetic Approach</source>
+          <year>2006</year>
+          <publisher-loc>Cambridge, UK</publisher-loc>
+          <publisher-name>Cambridge University Press</publisher-name>
+          <fpage>298pp</fpage>
+        </citation>
+      </ref>
+      <ref id="b4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bisson</surname>
+              <given-names>IA</given-names>
+            </name>
+          </person-group>
+          <article-title>A molecular comparison of plumage and soil bacteria across biogeographic, ecological, and taxonomic scales</article-title>
+          <source>Microb Ecol</source>
+          <year>2007</year>
+          <volume>54</volume>
+          <fpage>65</fpage>
+          <lpage>81</lpage>
+          <pub-id pub-id-type="pmid">17334855</pub-id>
+        </citation>
+      </ref>
+      <ref id="b5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Borcard</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Partialling out the spatial component of ecological variation</article-title>
+          <source>Ecology</source>
+          <year>1992</year>
+          <volume>73</volume>
+          <fpage>1045</fpage>
+          <lpage>1055</lpage>
+        </citation>
+      </ref>
+      <ref id="b6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Casamayor</surname>
+              <given-names>EO</given-names>
+            </name>
+          </person-group>
+          <article-title>Changes in archaeal, bacterial and eukaryal assemblages along a salinity gradient by comparison of genetic fingerprinting methods in a multipond solar saltern</article-title>
+          <source>Environ Microbiol</source>
+          <year>2002</year>
+          <volume>4</volume>
+          <fpage>338</fpage>
+          <lpage>348</lpage>
+          <pub-id pub-id-type="pmid">12071979</pub-id>
+        </citation>
+      </ref>
+      <ref id="b7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chapman</surname>
+              <given-names>TA</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparison of virulence gene profiles of <italic>Escherichia coli</italic> strains isolated from healthy and diarrheic swine</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2006</year>
+          <volume>72</volume>
+          <fpage>4782</fpage>
+          <lpage>4795</lpage>
+          <pub-id pub-id-type="pmid">16820472</pub-id>
+        </citation>
+      </ref>
+      <ref id="b8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cho</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Biogeography and degree of endemicity of fluorescent <italic>Pseudomonas</italic> strains in soil</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2000</year>
+          <volume>66</volume>
+          <fpage>5448</fpage>
+          <lpage>5456</lpage>
+          <pub-id pub-id-type="pmid">11097926</pub-id>
+        </citation>
+      </ref>
+      <ref id="b9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clarke</surname>
+              <given-names>KR</given-names>
+            </name>
+          </person-group>
+          <article-title>Non-parametric multivariate analysis of changes in community structure</article-title>
+          <source>Aust J Ecol</source>
+          <year>1993</year>
+          <volume>18</volume>
+          <fpage>117</fpage>
+          <lpage>143</lpage>
+        </citation>
+      </ref>
+      <ref id="b10">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Clarke</surname>
+              <given-names>KR</given-names>
+            </name>
+          </person-group>
+          <comment>PRIMER v5: User manual/tutorial, PRIMER-E. Plymouth UK, 91</comment>
+        </citation>
+      </ref>
+      <ref id="b11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cookson</surname>
+              <given-names>WR</given-names>
+            </name>
+          </person-group>
+          <article-title>The influence of season, agricultural management, and soil properties on gross nitrogen transformations and bacterial community structure</article-title>
+          <source>Aust J Soil Res</source>
+          <year>2006</year>
+          <volume>44</volume>
+          <fpage>453</fpage>
+          <lpage>465</lpage>
+        </citation>
+      </ref>
+      <ref id="b12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>C&#xF3;rdova-Kreylos</surname>
+              <given-names>AL</given-names>
+            </name>
+          </person-group>
+          <article-title>Diversity, composition, and geographical distribution of microbial communities in California salt marsh sediments</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2006</year>
+          <volume>72</volume>
+          <fpage>3357</fpage>
+          <lpage>3366</lpage>
+          <pub-id pub-id-type="pmid">16672478</pub-id>
+        </citation>
+      </ref>
+      <ref id="b13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edwards</surname>
+              <given-names>IP</given-names>
+            </name>
+          </person-group>
+          <article-title>Variation in microbial community composition and culturability in the rhizosphere of <italic>Leucanthemopsis alpina</italic> (L) heywood and adjacent bare soil along an alpine chronosequence</article-title>
+          <source>Microb Ecol</source>
+          <year>2006a</year>
+          <volume>52</volume>
+          <fpage>679</fpage>
+          <lpage>692</lpage>
+          <pub-id pub-id-type="pmid">16909346</pub-id>
+        </citation>
+      </ref>
+      <ref id="b14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edwards</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>Using pyrosequencing to shed light on deep mine microbial ecology</article-title>
+          <source>BMC Genom</source>
+          <year>2006b</year>
+          <volume>7</volume>
+          <fpage>57</fpage>
+        </citation>
+      </ref>
+      <ref id="b15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eisen</surname>
+              <given-names>MB</given-names>
+            </name>
+          </person-group>
+          <article-title>Cluster analysis and display of genome-wide expression patterns</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>1998</year>
+          <volume>95</volume>
+          <fpage>14863</fpage>
+          <lpage>14868</lpage>
+          <pub-id pub-id-type="pmid">9843981</pub-id>
+        </citation>
+      </ref>
+      <ref id="b16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Field</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>How do we compare hundreds of bacterial genomes?</article-title>
+          <source>Curr Opin Microbiol</source>
+          <year>2006</year>
+          <volume>9</volume>
+          <fpage>499</fpage>
+          <lpage>504</lpage>
+          <pub-id pub-id-type="pmid">16942900</pub-id>
+        </citation>
+      </ref>
+      <ref id="b17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Folman</surname>
+              <given-names>LB</given-names>
+            </name>
+          </person-group>
+          <article-title>Inability to find consistent bacterial biocontrol agents of <italic>Pythium aphanidermatum</italic> in cucumber using screens based on ecophysiological traits</article-title>
+          <source>Microb Ecol</source>
+          <year>2003</year>
+          <volume>45</volume>
+          <fpage>72</fpage>
+          <lpage>87</lpage>
+          <pub-id pub-id-type="pmid">12469246</pub-id>
+        </citation>
+      </ref>
+      <ref id="b18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fuhrman</surname>
+              <given-names>JA</given-names>
+            </name>
+          </person-group>
+          <article-title>Annually reoccurring bacterial communities are predictable from ocean conditions</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2006</year>
+          <volume>103</volume>
+          <fpage>13104</fpage>
+          <lpage>13109</lpage>
+          <pub-id pub-id-type="pmid">16938845</pub-id>
+        </citation>
+      </ref>
+      <ref id="b19">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gauch</surname>
+              <given-names>HGJ</given-names>
+            </name>
+          </person-group>
+          <source>Multivariate Analysis and Community Structure</source>
+          <year>1982</year>
+          <publisher-loc>Cambridge</publisher-loc>
+          <publisher-name>Cambridge University Press</publisher-name>
+          <fpage>298pp</fpage>
+        </citation>
+      </ref>
+      <ref id="b20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gill</surname>
+              <given-names>SR</given-names>
+            </name>
+          </person-group>
+          <article-title>Metagenomic analysis of the human distal gut microbiome</article-title>
+          <source>Science</source>
+          <year>2006</year>
+          <volume>312</volume>
+          <fpage>1355</fpage>
+          <lpage>1359</lpage>
+          <pub-id pub-id-type="pmid">16741115</pub-id>
+        </citation>
+      </ref>
+      <ref id="b21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gower</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Some distance properties of latent root and vector methods used in multivariate analysis</article-title>
+          <source>Biometrika</source>
+          <year>1966</year>
+          <volume>53</volume>
+          <fpage>325</fpage>
+          <lpage>338</lpage>
+        </citation>
+      </ref>
+      <ref id="b22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gower</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Generalized procrustes analysis</article-title>
+          <source>Phychometrika</source>
+          <year>1975</year>
+          <volume>40</volume>
+          <fpage>33</fpage>
+          <lpage>51</lpage>
+        </citation>
+      </ref>
+      <ref id="b23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Green</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Spatial scaling of microbial biodiversity</article-title>
+          <source>Trends Ecol Evol</source>
+          <year>2006</year>
+          <volume>21</volume>
+          <fpage>501</fpage>
+          <lpage>507</lpage>
+          <pub-id pub-id-type="pmid">16815589</pub-id>
+        </citation>
+      </ref>
+      <ref id="b24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hartman</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Community structure analyses are more sensitive to differences in soil bacterial communities than anonymous diversity indices</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2006</year>
+          <volume>72</volume>
+          <fpage>7804</fpage>
+          <lpage>7812</lpage>
+          <pub-id pub-id-type="pmid">17041161</pub-id>
+        </citation>
+      </ref>
+      <ref id="b25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hill</surname>
+              <given-names>MO</given-names>
+            </name>
+          </person-group>
+          <article-title>Correspondence analysis: a neglected multivariate method</article-title>
+          <source>Appl Statis</source>
+          <year>1974</year>
+          <volume>23</volume>
+          <fpage>340</fpage>
+          <lpage>354</lpage>
+        </citation>
+      </ref>
+      <ref id="b26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Horner-Devine</surname>
+              <given-names>MC</given-names>
+            </name>
+          </person-group>
+          <article-title>A taxa-area relationship for bacteria</article-title>
+          <source>Nature</source>
+          <year>2004</year>
+          <volume>432</volume>
+          <fpage>750</fpage>
+          <lpage>753</lpage>
+          <pub-id pub-id-type="pmid">15592412</pub-id>
+        </citation>
+      </ref>
+      <ref id="b27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hotelling</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of a complex of statistical variables into principal components</article-title>
+          <source>Br J Educ Psychol</source>
+          <year>1933</year>
+          <volume>24</volume>
+          <fpage>417</fpage>
+          <lpage>441</lpage>
+        </citation>
+      </ref>
+      <ref id="b28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hughes Martiny</surname>
+              <given-names>JB</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Microbial biogeography: putting microorganisms on the map</article-title>
+          <source>Nat Rev Microbiol</source>
+          <year>2006</year>
+          <volume>4</volume>
+          <fpage>102</fpage>
+          <lpage>112</lpage>
+          <pub-id pub-id-type="pmid">16415926</pub-id>
+        </citation>
+      </ref>
+      <ref id="b29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jaccard</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Bull</article-title>
+          <source>Soc Vaud Sci Nat</source>
+          <year>1901</year>
+          <volume>37</volume>
+          <fpage>241</fpage>
+          <lpage>272</lpage>
+        </citation>
+      </ref>
+      <ref id="b30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>James</surname>
+              <given-names>FC</given-names>
+            </name>
+          </person-group>
+          <article-title>Multivariate analysis in ecology and systematics: panacea or pandora's box?</article-title>
+          <source>Annu Rev Ecolog Syst</source>
+          <year>1990</year>
+          <volume>21</volume>
+          <fpage>129</fpage>
+          <lpage>166</lpage>
+        </citation>
+      </ref>
+      <ref id="b31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jolicoeur</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Size and shape variation in the painted turtle: a principal components analysis</article-title>
+          <source>Growth</source>
+          <year>1960</year>
+          <volume>24</volume>
+          <fpage>339</fpage>
+          <lpage>354</lpage>
+          <pub-id pub-id-type="pmid">13790416</pub-id>
+        </citation>
+      </ref>
+      <ref id="b32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kent</surname>
+              <given-names>AD</given-names>
+            </name>
+          </person-group>
+          <article-title>Synchrony in aquatic microbial community dynamics</article-title>
+          <source>ISME J</source>
+          <year>2007</year>
+          <volume>1</volume>
+          <fpage>38</fpage>
+          <lpage>47</lpage>
+          <pub-id pub-id-type="pmid">18043612</pub-id>
+        </citation>
+      </ref>
+      <ref id="b33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Klaus</surname>
+              <given-names>JS</given-names>
+            </name>
+          </person-group>
+          <article-title>Coral microbial communities, zooxanthellae and mucus along gradients of seawater depth and coastal pollution</article-title>
+          <source>Environ Microbiol</source>
+          <year>2007</year>
+          <volume>9</volume>
+          <fpage>1291</fpage>
+          <lpage>1305</lpage>
+          <pub-id pub-id-type="pmid">17472641</pub-id>
+        </citation>
+      </ref>
+      <ref id="b34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kolliker</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetic diversity and pathogenicity of the grass pathogen <italic>Xanthomonas translucens</italic> pv. <italic>graminis</italic></article-title>
+          <source>Syst Appl Microbiol</source>
+          <year>2006</year>
+          <volume>29</volume>
+          <fpage>109</fpage>
+          <lpage>119</lpage>
+          <pub-id pub-id-type="pmid">16464692</pub-id>
+        </citation>
+      </ref>
+      <ref id="b35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Konstantinidis</surname>
+              <given-names>KT</given-names>
+            </name>
+          </person-group>
+          <article-title>The bacterial species definition in the genomic era</article-title>
+          <source>Philos Trans R Soc Lond B Biol Sci</source>
+          <year>2006</year>
+          <volume>361</volume>
+          <fpage>1929</fpage>
+          <lpage>1940</lpage>
+          <pub-id pub-id-type="pmid">17062412</pub-id>
+        </citation>
+      </ref>
+      <ref id="b36">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Legendre</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Distance-based redundancy analysis: testing multispecies responses in multifactorial ecological experiments</article-title>
+          <source>Ecol Monogr</source>
+          <year>1999</year>
+          <volume>69</volume>
+          <fpage>1</fpage>
+          <lpage>24</lpage>
+        </citation>
+      </ref>
+      <ref id="b37">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Legendre</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Ecologically meaningful transformations for ordination of species data</article-title>
+          <source>Oecologia</source>
+          <year>2001</year>
+          <volume>129</volume>
+          <fpage>271</fpage>
+          <lpage>280</lpage>
+        </citation>
+      </ref>
+      <ref id="b38">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Legendre</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <source>Numerical Ecology</source>
+          <year>1998</year>
+          <publisher-loc>Amsterdam</publisher-loc>
+          <publisher-name>Elsevier Science BV</publisher-name>
+          <fpage>853pp</fpage>
+        </citation>
+      </ref>
+      <ref id="b39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Legendre</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Analyzing beta diversity: partitioning the spatial variation of community composition data</article-title>
+          <source>Ecol Monogr</source>
+          <year>2005</year>
+          <volume>75</volume>
+          <fpage>435</fpage>
+          <lpage>450</lpage>
+        </citation>
+      </ref>
+      <ref id="b40">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leps</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <comment>Multivariate analysis of ecological data 110pp. Available at <ext-link ext-link-type="uri" xlink:href="http://regent.bf.jcu.cz/textbook.pdf">http://regent.bf.jcu.cz/textbook.pdf</ext-link></comment>
+        </citation>
+      </ref>
+      <ref id="b41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mahalanobis</surname>
+              <given-names>PC</given-names>
+            </name>
+          </person-group>
+          <article-title>On the generalised distance in statistics</article-title>
+          <source>Proc Natl Inst Sci India</source>
+          <year>1936</year>
+          <volume>12</volume>
+          <fpage>49</fpage>
+          <lpage>55</lpage>
+        </citation>
+      </ref>
+      <ref id="b42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mantel</surname>
+              <given-names>N</given-names>
+            </name>
+          </person-group>
+          <article-title>The detection of disease clustering and a generalized regression approach</article-title>
+          <source>Cancer Res</source>
+          <year>1967</year>
+          <volume>27</volume>
+          <fpage>209</fpage>
+          <lpage>220</lpage>
+          <pub-id pub-id-type="pmid">6018555</pub-id>
+        </citation>
+      </ref>
+      <ref id="b43">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McKinley</surname>
+              <given-names>VL</given-names>
+            </name>
+          </person-group>
+          <article-title>Microbial community PLFA and PHB responses to ecosystem restoration in tallgrass prairie soils</article-title>
+          <source>Soil Biol Biochem</source>
+          <year>2005</year>
+          <volume>37</volume>
+          <fpage>1946</fpage>
+          <lpage>1958</lpage>
+        </citation>
+      </ref>
+      <ref id="b44">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Merrill</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Seasonal variation in microbial communities and organic malodor indicator compound concentrations in various types of swine manure storage systems</article-title>
+          <source>J Environ Qual</source>
+          <year>2002</year>
+          <volume>31</volume>
+          <fpage>2074</fpage>
+          <lpage>2085</lpage>
+          <pub-id pub-id-type="pmid">12469859</pub-id>
+        </citation>
+      </ref>
+      <ref id="b45">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mills</surname>
+              <given-names>DK</given-names>
+            </name>
+          </person-group>
+          <article-title>An assessment of the hypervariable domains of the 16S rRNA genes for their value in determining microbial community diversity: the paradox of traditional ecological indices</article-title>
+          <source>FEMS Microbiol Ecol</source>
+          <year>2006</year>
+          <volume>57</volume>
+          <fpage>496</fpage>
+          <lpage>503</lpage>
+          <pub-id pub-id-type="pmid">16907762</pub-id>
+        </citation>
+      </ref>
+      <ref id="b46">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mougel</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Dynamic of the genetic structure of bacterial and fungal communities at different developmental stages of <italic>Medicago truncatula</italic> Gaertn. cv. Jemalong line J5</article-title>
+          <source>New Phytol</source>
+          <year>2006</year>
+          <volume>170</volume>
+          <fpage>165</fpage>
+          <lpage>175</lpage>
+          <pub-id pub-id-type="pmid">16539613</pub-id>
+        </citation>
+      </ref>
+      <ref id="b47">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mouser</surname>
+              <given-names>PJ</given-names>
+            </name>
+          </person-group>
+          <article-title>A multivariate statistical approach to spatial representation of groundwater contamination using hydrochemistry and microbial community profiles</article-title>
+          <source>Environ Sci Tech</source>
+          <year>2005</year>
+          <volume>39</volume>
+          <fpage>7551</fpage>
+          <lpage>7559</lpage>
+        </citation>
+      </ref>
+      <ref id="b48">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Muylaert</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Relationship between bacterial community composition and bottom-up versus top-down variables in four eutrophic shallow lakes</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2002</year>
+          <volume>68</volume>
+          <fpage>4740</fpage>
+          <lpage>4750</lpage>
+          <pub-id pub-id-type="pmid">12324315</pub-id>
+        </citation>
+      </ref>
+      <ref id="b49">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nelson</surname>
+              <given-names>DR</given-names>
+            </name>
+          </person-group>
+          <article-title>Subtle changes in rhizosphere microbial community structure in response to increased boron and sodium chloride concentrations</article-title>
+          <source>Soil Biol Biochem</source>
+          <year>2007</year>
+          <volume>39</volume>
+          <fpage>340</fpage>
+          <lpage>351</lpage>
+        </citation>
+      </ref>
+      <ref id="b50">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oksanen</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <comment>Multivariate analyses of ecological communities in R: vegan tutorial. 39pp<ext-link ext-link-type="uri" xlink:href="http://cc.oulu.fi/~jarioksa/opetus/metodi/vegantutor.pdf">http://cc.oulu.fi/~jarioksa/opetus/metodi/vegantutor.pdf</ext-link></comment>
+        </citation>
+      </ref>
+      <ref id="b51">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olapade</surname>
+              <given-names>OA</given-names>
+            </name>
+          </person-group>
+          <article-title>Abundance of three bacterial populations in selected streams</article-title>
+          <source>Microb Ecol</source>
+          <year>2005</year>
+          <volume>49</volume>
+          <fpage>461</fpage>
+          <lpage>467</lpage>
+          <pub-id pub-id-type="pmid">16003475</pub-id>
+        </citation>
+      </ref>
+      <ref id="b52">
+        <citation citation-type="other">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Palmer</surname>
+              <given-names>MW</given-names>
+            </name>
+          </person-group>
+          <comment>Ordination methods for ecologists <ext-link ext-link-type="uri" xlink:href="http://ordination.okstate.edu/">http://ordination.okstate.edu/</ext-link></comment>
+        </citation>
+      </ref>
+      <ref id="b53">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Parker</surname>
+              <given-names>MA</given-names>
+            </name>
+          </person-group>
+          <article-title>Geographic structure of lineage associations in a plant&#x2013;bacterial mutualism</article-title>
+          <source>J Evol Biol</source>
+          <year>1998</year>
+          <volume>11</volume>
+          <fpage>549</fpage>
+          <lpage>562</lpage>
+        </citation>
+      </ref>
+      <ref id="b54">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pelissier</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Consistency between ordination techniques and diversity measurements: two strategies for species occurrence data</article-title>
+          <source>Ecology</source>
+          <year>2003</year>
+          <volume>84</volume>
+          <fpage>242</fpage>
+          <lpage>251</lpage>
+        </citation>
+      </ref>
+      <ref id="b55">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peres-Neto</surname>
+              <given-names>PR</given-names>
+            </name>
+          </person-group>
+          <article-title>How well do multivariate data sets match? The advantages of a procrustean superimposition approach over the Mantel test</article-title>
+          <source>Oecologia</source>
+          <year>2001</year>
+          <volume>129</volume>
+          <fpage>169</fpage>
+          <lpage>178</lpage>
+        </citation>
+      </ref>
+      <ref id="b56">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ramette</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Biogeography: an emerging cornerstone for understanding prokaryotic diversity, ecology and evolution</article-title>
+          <source>Microb Ecol</source>
+          <year>2007a</year>
+          <volume>53</volume>
+          <fpage>197</fpage>
+          <lpage>207</lpage>
+          <pub-id pub-id-type="pmid">17106806</pub-id>
+        </citation>
+      </ref>
+      <ref id="b57">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ramette</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Multiscale responses of microbial life to spatial distance and environmental heterogeneity in a patchy ecosystem</article-title>
+          <source>Proc Natl Acad Sci USA</source>
+          <year>2007b</year>
+          <volume>104</volume>
+          <fpage>2761</fpage>
+          <lpage>2766</lpage>
+          <pub-id pub-id-type="pmid">17296935</pub-id>
+        </citation>
+      </ref>
+      <ref id="b58">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rao</surname>
+              <given-names>CR</given-names>
+            </name>
+          </person-group>
+          <article-title>The use and interpretation of principal component analysis in applied research</article-title>
+          <source>Sankhya A</source>
+          <year>1964</year>
+          <volume>26</volume>
+          <fpage>329</fpage>
+          <lpage>358</lpage>
+        </citation>
+      </ref>
+      <ref id="b59">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Reinoso</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>RAPD-PCR analysis of <italic>Staphylococcus aureus</italic> strains isolated from bovine and human hosts</article-title>
+          <source>Microbiol Res</source>
+          <year>2004</year>
+          <volume>159</volume>
+          <fpage>245</fpage>
+          <lpage>255</lpage>
+          <pub-id pub-id-type="pmid">15462524</pub-id>
+        </citation>
+      </ref>
+      <ref id="b60">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Salles</surname>
+              <given-names>JF</given-names>
+            </name>
+          </person-group>
+          <article-title>Multivariate analyses of <italic>Burkholderia</italic> species in soil: effect of crop and land use history</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2004</year>
+          <volume>70</volume>
+          <fpage>4012</fpage>
+          <lpage>4020</lpage>
+          <pub-id pub-id-type="pmid">15240277</pub-id>
+        </citation>
+      </ref>
+      <ref id="b61">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sapp</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Bacterial community dynamics during the winter-spring transition in the North Sea</article-title>
+          <source>FEMS Microbiol Ecol</source>
+          <year>2007</year>
+          <volume>59</volume>
+          <fpage>622</fpage>
+          <lpage>637</lpage>
+          <pub-id pub-id-type="pmid">17381518</pub-id>
+        </citation>
+      </ref>
+      <ref id="b62">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Scortichini</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Evidence for separate origins of the two <italic>Pseudomonas avellanae</italic> lineages</article-title>
+          <source>Plant Pathol</source>
+          <year>2006</year>
+          <volume>55</volume>
+          <fpage>451</fpage>
+          <lpage>457</lpage>
+        </citation>
+      </ref>
+      <ref id="b63">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shepard</surname>
+              <given-names>RN</given-names>
+            </name>
+          </person-group>
+          <article-title>Metric structures in ordinal data</article-title>
+          <source>J Math Psychol</source>
+          <year>1966</year>
+          <volume>3</volume>
+          <fpage>287</fpage>
+          <lpage>315</lpage>
+        </citation>
+      </ref>
+      <ref id="b64">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sneath</surname>
+              <given-names>PHA</given-names>
+            </name>
+          </person-group>
+          <source>Numerical Taxonomy. The Principles and Practice of Numerical Classification</source>
+          <year>1973</year>
+          <publisher-loc>San Francisco, CA</publisher-loc>
+          <fpage>573pp</fpage>
+        </citation>
+      </ref>
+      <ref id="b65">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sokal</surname>
+              <given-names>RR</given-names>
+            </name>
+          </person-group>
+          <source>Biometry &#x2013; The Principles and Practice of Statistics in Biological Research</source>
+          <year>1995</year>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Freeman, W.H.</publisher-name>
+          <fpage>887pp</fpage>
+        </citation>
+      </ref>
+      <ref id="b66">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>S&#xF8;rensen</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>A method of establishing groups of equal amplitude in plant sociology based on similarity of species content and its application to analyses of the vegetation on Danish commons</article-title>
+          <source>K Dan Vidensk Selsk Biol Skr</source>
+          <year>1948</year>
+          <volume>5</volume>
+          <fpage>1</fpage>
+          <lpage>34</lpage>
+        </citation>
+      </ref>
+      <ref id="b67">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ter Braak</surname>
+              <given-names>CJF</given-names>
+            </name>
+          </person-group>
+          <article-title>Correspondence analysis of incidence and abundance data: properties in terms of a unimodal response model</article-title>
+          <source>Biometrics</source>
+          <year>1985</year>
+          <volume>41</volume>
+          <fpage>859</fpage>
+          <lpage>873</lpage>
+        </citation>
+      </ref>
+      <ref id="b68">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ter Braak</surname>
+              <given-names>CJF</given-names>
+            </name>
+          </person-group>
+          <article-title>Canonical correspondence analysis: a new eigenvector technique for multivariate direct gradient analysis</article-title>
+          <source>Ecology</source>
+          <year>1986</year>
+          <volume>67</volume>
+          <fpage>1167</fpage>
+          <lpage>1179</lpage>
+        </citation>
+      </ref>
+      <ref id="b69">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ter Braak</surname>
+              <given-names>CJF</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Jongman</surname>
+              <given-names>RHG</given-names>
+            </name>
+          </person-group>
+          <article-title>Ordination</article-title>
+          <source>Data Analysis in Community and Landscape Ecology</source>
+          <year>1987</year>
+          <publisher-loc>the Netherlands</publisher-loc>
+          <publisher-name>Pudoc, Wageningen</publisher-name>
+          <fpage>91</fpage>
+          <lpage>173</lpage>
+        </citation>
+      </ref>
+      <ref id="b70">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ter Braak</surname>
+              <given-names>CJF</given-names>
+            </name>
+          </person-group>
+          <article-title>Canonical community ordination. Part I: basic theory and linear methods</article-title>
+          <source>Ecoscience</source>
+          <year>1994</year>
+          <volume>1</volume>
+          <fpage>127</fpage>
+          <lpage>140</lpage>
+        </citation>
+      </ref>
+      <ref id="b71">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ter Braak</surname>
+              <given-names>CJF</given-names>
+            </name>
+          </person-group>
+          <article-title>A theory of gradient analysis</article-title>
+          <source>Adv Ecol Res</source>
+          <year>1988</year>
+          <volume>18</volume>
+          <fpage>271</fpage>
+          <lpage>317</lpage>
+        </citation>
+      </ref>
+      <ref id="b72">
+        <citation citation-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ter Braak</surname>
+              <given-names>CJF</given-names>
+            </name>
+          </person-group>
+          <source>CANOCO Reference Manual and CanoDraw for Windows User's Guide: Software for Canonical Community Ordination (version 4.5)</source>
+          <year>2002</year>
+          <publisher-loc>Ithaca, NY</publisher-loc>
+          <publisher-name>Microcomputer Power</publisher-name>
+          <fpage>500pp</fpage>
+        </citation>
+      </ref>
+      <ref id="b73">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van der Gast</surname>
+              <given-names>CJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Island size and bacterial diversity in an archipelago of engineering machines</article-title>
+          <source>Environ Microbiol</source>
+          <year>2005</year>
+          <volume>7</volume>
+          <fpage>1220</fpage>
+          <lpage>1226</lpage>
+          <pub-id pub-id-type="pmid">16011759</pub-id>
+        </citation>
+      </ref>
+      <ref id="b74">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Van der Gucht</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of bacterial communities in four freshwater lakes differing in nutrient load and food web structure</article-title>
+          <source>FEMS Microbiol Ecol</source>
+          <year>2005</year>
+          <volume>53</volume>
+          <fpage>205</fpage>
+          <lpage>220</lpage>
+          <pub-id pub-id-type="pmid">16329941</pub-id>
+        </citation>
+      </ref>
+      <ref id="b75">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Venter</surname>
+              <given-names>JC</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Environmental genome shotgun sequencing of the Sargasso Sea</article-title>
+          <source>Science</source>
+          <year>2004</year>
+          <volume>304</volume>
+          <fpage>66</fpage>
+          <lpage>74</lpage>
+          <pub-id pub-id-type="pmid">15001713</pub-id>
+        </citation>
+      </ref>
+      <ref id="b76">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Whittaker</surname>
+              <given-names>RH</given-names>
+            </name>
+          </person-group>
+          <article-title>Evolution and measurement of species diversity</article-title>
+          <source>Taxon</source>
+          <year>1972</year>
+          <volume>21</volume>
+          <fpage>213</fpage>
+          <lpage>251</lpage>
+        </citation>
+      </ref>
+      <ref id="b77">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Whitaker</surname>
+              <given-names>RJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Geographic barriers isolate endemic populations of hyperthermophilic archaea</article-title>
+          <source>Science</source>
+          <year>2003</year>
+          <volume>301</volume>
+          <fpage>976</fpage>
+          <lpage>978</lpage>
+          <pub-id pub-id-type="pmid">12881573</pub-id>
+        </citation>
+      </ref>
+      <ref id="b78">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yannarell</surname>
+              <given-names>AC</given-names>
+            </name>
+          </person-group>
+          <article-title>Geographic and environmental sources of variation in lake bacterial community composition</article-title>
+          <source>Appl Environ Microbiol</source>
+          <year>2005</year>
+          <volume>71</volume>
+          <fpage>227</fpage>
+          <lpage>239</lpage>
+          <pub-id pub-id-type="pmid">15640192</pub-id>
+        </citation>
+      </ref>
+      <ref id="b79">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhang</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Sequencing genomes from single cells by polymerase cloning</article-title>
+          <source>Nat Biotech</source>
+          <year>2006</year>
+          <volume>24</volume>
+          <fpage>680</fpage>
+          <lpage>686</lpage>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
+</pmc-articleset>
