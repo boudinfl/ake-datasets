@@ -1,49 +1,55 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""Convert the JSON file to txt files."""
-
-from __future__ import print_function
-from __future__ import division
-from __future__ import unicode_literals
-from __future__ import absolute_import
-from __future__ import with_statement
+"""
+Usage : $0 INPUT SPLIT REF_TYPE
+Given a jsonl file, create a file per document at "./`split`/", and references at "../references/".
+"""
 
 import sys
-import logging
 import json
-import codecs
+from tqdm import tqdm
+import os
+import nltk
 
-from nltk.stem.snowball import SnowballStemmer as Stemmer
+stem = nltk.stem.PorterStemmer().stem
 
-logging.basicConfig(level=logging.INFO)
+ref, ref_s = {}, {}
+# Tokenize, stem, join, lower
+tsjl = lambda x: ' '.join(map(stem, nltk.word_tokenize(x))).lower()
 
-references = {}
-stemmed_references = {}
+root = os.path.dirname(__file__)
 
-with open(sys.argv[1], 'r') as f:
-    for file_number, line in enumerate(f.readlines()):
-        document = json.loads(line)
-        file_id = '{0:05d}'.format(file_number)
-        output_file = sys.argv[2]+'/{}.txt'.format(file_id)
+def process(path, split, ref_type):
+    input_file = path.format(split)
+    references_dir = os.path.join(root, '..', 'references')
+    output_path = references_dir + os.sep + '{}.{}.json'.format(split, ref_type)
+    output_path_stem = references_dir + os.sep + '{}.{}.stem.json'.format(split, ref_type)
+    output_file_name = os.path.join(root, split, '{}.txt')
 
-        logging.info("writting file {}".format(output_file))
-        with codecs.open(output_file, 'w', 'utf-8') as o:
-            o.write(document['title']+"\n\n")
-            o.write(document['abstract'])
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
 
-        references[file_id] = []
-        stemmed_references[file_id] = []
+    with open(input_file) as f:
+        # Get the length of the file for tqdm
+        length = sum(1 for l in f)
+        f.seek(0)
+        for line in tqdm(f, total=length, desc=split):
+            line = json.loads(line)
+            id_ = line['id']
+            file_name = output_file_name.format(id_)
+            keywords = line['keyword']
+            if ';' in keywords:
+                keywords = [kw.split(',') for kw in keywords.split(';')]
+            ref[id_] = keywords
+            ref_s[id_] = [[tsjl(v) for v in kw] for kw in keywords]
+            with open(file_name, 'w') as g:
+                g.write('\n'.join([line['title'], line['abstract']]))
 
-        keyphrases = document['keyword'].split(';')
-        for keyphrase in keyphrases:
-            words = keyphrase.lower().strip().split()
-            stems = [Stemmer('porter').stem(w) for w in words]
-            references[file_id].append([' '.join(words)])
-            stemmed_references[file_id].append([' '.join(stems)])
+    with open(output_path, 'w') as g:
+        json.dump(ref, g, indent=4)
+    with open(output_path_stem, 'w') as g:
+        json.dump(ref_s, g, indent=4)
 
-with open(sys.argv[3], 'w') as o:
-    json.dump(references, o, sort_keys = True, indent = 4)
 
-with open(sys.argv[4], 'w') as o:
-    json.dump(stemmed_references, o, sort_keys = True, indent = 4)
+if __name__ == '__main__':
+    _, file_path, split, ref_type = sys.argv
+    process(file_path, split, ref_type)
+
