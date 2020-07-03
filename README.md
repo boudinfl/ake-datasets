@@ -15,6 +15,9 @@ All datasets are stored according to the following, common structure:
            /src/        <- everything used to build the dataset
            /references/ <- reference keyphrases in json format
 
+Bigger datasets (such as `KP20k`, `KPTimes`) should be downloaded and preprocessed
+using the `dataset/src` directory.
+
 ## Reference (gold annotation) format
 
 Reference keyphrases, used for evaluating automatic keyphrase extraction
@@ -23,8 +26,8 @@ rules: `[split].[annotator].[stem]?.json`
 
 where
 
-* `split` corresponds to the dataset split: test, train or dev
-* `annotator` is the type of annotation: author, reader, combined, contr (controlled vocabulary), uncontr (free annotation)
+* `split` corresponds to the dataset split: test, train, dev or valid
+* `annotator` is the type of annotation: author, reader, editor, combined, contr (controlled vocabulary), uncontr (free annotation)
 * `stem` (optional) indicates that stemming (using nltk Porter algorithm) is applied on reference keyphrases.
 
 Below is a an example of reference file format:
@@ -44,27 +47,29 @@ Below is a an example of reference file format:
 
 ## Available datasets
 
-| dataset                | lang | nature       | train | dev | test | Annotation  | #kp (test) | #words (test) |
-| ---------------------- | ---- | ------------ | ----: | --: | ---: | ----------: | ---------: | ------------: |
-| CSTR [1]               | en   | Full papers  | 130   | -   | 500  | A           | 5.4        | 11501.4       |
-| NUS [3]                | en   | Full papers  | -     | -   | 211  | A+R         | 11.0       | 8398.3        |
-| PubMed [5]             | en   | Full papers  | -     | -   | 1320 | A           | 5.4        | 5322.9        |
-| ACM [6]                | en   | Full papers  | -     | -   | 2304 | A           | 5.3        | 9197.6        |
-| Citeulike-180 [13]     | en   | Full papers  | -     | -   | 182  | R           | 5.4        | 8589.7        |
-| SemEval-2010 [10]      | en   | Full papers  | 144   | -   | 100  | A+R         | 14.7       | 7961.2        |
-| Inspec [2]             | en   | Abstracts    | 1000  | 500 | 500  | I (uncontr) | 9.8        | 134.6         |
-| TALN-Archives [14]     | en/fr | Abstracts   | -     | -   | 521/1207 | A       | 4.0/4.1    | 123.1/141.0   |
-| KDD [9]                | en   | Abstracts    | -     | -   | 755  | A           | 4.1        | 190.7         |
-| WWW [9]                | en   | Abstracts    | -     | -   | 1330 | A           | 4.8        | 163.5         |
-| TermITH-Eval [11]      | fr   | Abstracts    | -     | -   | 400  | I           | 11.8       | 164.7         |
-| DUC-2001 [4]           | en   | News         | -     | -   | 308  | R           | 8.1        | 847.2         |
-| 500N-KPCrowd [7]       | en   | News         | 450   | -   | 50   | R           | 46.2       | 465.3         |
-| 110-PT-BN-KP [12]      | pt   | News         | 100   | -   | 10   | R           | 27.6       | 439.4         |
-| Wikinews-Keyphrase [8] | fr   | News         | -     | -   | 100  | R           | 9.7        | 313.6         |
+| dataset                | lang  | nature       | train   | dev    | test   | Annotation  | #kp (test) | #words (test) |
+| ---------------------- | ----- | ------------ | ------: | -----: | -----: | ----------: | ---------: | ------------: |
+| CSTR [1]               | en    | Full papers  | 130     | -      | 500    | A           | 5.4        | 11501.4       |
+| NUS [3]                | en    | Full papers  | -       | -      | 211    | A+R         | 11.0       | 8398.3        |
+| PubMed [5]             | en    | Full papers  | -       | -      | 1320   | A           | 5.4        | 5322.9        |
+| ACM [6]                | en    | Full papers  | -       | -      | 2304   | A           | 5.3        | 9197.6        |
+| Citeulike-180 [13]     | en    | Full papers  | -       | -      | 182    | R           | 5.4        | 8589.7        |
+| SemEval-2010 [10]      | en    | Full papers  | 144     | -      | 100    | A+R         | 14.7       | 7961.2        |
+| KP20k [15]             | en    | Abstracts    | 527,090 | 20,000 | 20,000 | A           | 176        | 5.3           |
+| Inspec [2]             | en    | Abstracts    | 1000    | 500    | 500    | I (uncontr) | 9.8        | 134.6         |
+| TALN-Archives [14]     | en/fr | Abstracts    | -       | -      | 521/1207 | A         | 4.0/4.1    | 123.1/141.0   |
+| KDD [9]                | en    | Abstracts    | -       | -      | 755    | A           | 4.1        | 190.7         |
+| WWW [9]                | en    | Abstracts    | -       | -      | 1330   | A           | 4.8        | 163.5         |
+| TermITH-Eval [11]      | fr    | Abstracts    | -       | -      | 400    | I           | 11.8       | 164.7         |
+| KPTimes [16]           | en    | News         | 259,923 | 10,000 | 20,000 | E           | 5.0        | 921           |
+| DUC-2001 [4]           | en    | News         | -       | -      | 308    | R           | 8.1        | 847.2         |
+| 500N-KPCrowd [7]       | en    | News         | 450     | -      | 50     | R           | 46.2       | 465.3         |
+| 110-PT-BN-KP [12]      | pt    | News         | 100     | -      | 10     | R           | 27.6       | 439.4         |
+| Wikinews-Keyphrase [8] | fr    | News         | -       | -      | 100    | R           | 9.7        | 313.6         |
 
 
-Annotation for gold keyphrases are performed by authors (A), readers (R) or
-professional indexers (I).
+Annotation for gold keyphrases are performed by authors (A), readers (R),
+editors (E) or professional indexers (I).
 
 
 ## References
@@ -136,3 +141,11 @@ professional indexers (I).
     Language Processing.**
     Florian Boudin.
     *In Proceedings of TALN 2013.*
+
+15. **Deep Keyphrase Generation**
+    R. Meng, S. Zhao, S. Han, D. He, P. Brusilovsky and Y. Chi. 
+    *In Proceedings of ACL 2017.*
+
+16. **KPTimes: A Large-Scale Dataset for Keyphrase Generation on News Documents.**
+    Y. Gallina, F. Boudin and B. Daille.
+    *In Proceedings of INLG 2019.*
